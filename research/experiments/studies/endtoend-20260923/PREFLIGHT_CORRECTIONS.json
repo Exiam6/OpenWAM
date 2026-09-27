@@ -1,0 +1,7 @@
+{
+  "time": "2026-09-23T19:01:41.763071-05:00",
+  "original_profiles": "all3 failed before first optimizer step, full logs retained",
+  "rope": "head_dim64 partitions into22/21/21 real dimensions; complex frequency width31 mismatches32. Use head_dim128 (8heads at width1024), same as native5B head dimension. Common trainable shapes and initialization tensors unchanged.",
+  "causality": "Do not relax original single/batchBF16 tolerance as if it passed. Separate fixed-batch future-frame intervention (<1e-4) and FP32 single/batch check (<1e-4); report BF16 single/batch difference explicitly. No heldout scenes involved.",
+  "compression": "Original reducers fitted stretchedbilinear images. Main training will refit both on native centercrop/Lanczos105training-only scenes, preserving previous weights/results."
+}

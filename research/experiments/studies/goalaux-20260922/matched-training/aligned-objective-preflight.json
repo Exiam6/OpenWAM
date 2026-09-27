@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "encoder_gradient_norm": 6.8709492683410645,
+  "deterministic_backward": true,
+  "training_samples": 3,
+  "checkpoint_saved": false,
+  "goal_input_matches_readout_per_token_norm_eps": 1e-06
+}

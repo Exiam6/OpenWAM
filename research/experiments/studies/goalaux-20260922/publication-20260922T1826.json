@@ -1,0 +1,8 @@
+{
+  "checked_at": "2026-09-22T18:27:48.913895-05:00",
+  "operation": "Sites get_site(existing project)",
+  "result": "SitesConnectorError: Sites project not found",
+  "deployment_attempted": false,
+  "public_version_updated": false,
+  "local_report_updated": true
+}

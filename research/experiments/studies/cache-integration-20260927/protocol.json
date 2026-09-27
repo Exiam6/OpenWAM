@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-09-27T00:04:03.872635-05:00",
+  "deadline": "2026-09-27T00:30:00-05:00",
+  "timeout_seconds": 900,
+  "kind": "isolated technical inference check; not study replay or protocol amendment",
+  "max_gpus": 1,
+  "global_gpu_cap": 8,
+  "gpu_index": 5,
+  "source": "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM",
+  "engine_sha256": "47eb4b84caa12ff9ddc0c1f8c9010afa5b7c4e4c40d4983b9fed9d8ca6c72038",
+  "checkpoint_dir": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25",
+  "training_hdf5": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode10.hdf5",
+  "prompt": "A video recorded from a robot's point of view executing the following instruction: Lift the bottle.",
+  "output": "/data02/zifanz4/openwam-experiments/cache-integration-20260927",
+  "check_script_sha256": "21c71ae2493901b0b75fcb97dfb95a3106c9de9e84df5f1515cc15e7ac7ddd83",
+  "frozen_sources_unchanged": true,
+  "no_retries": true,
+  "heldout_episodes": 0,
+  "acceptance": "All five native action outputs exactly equal with fixed seed; cache is bounded and post-eviction prompt recomputed",
+  "authorization": "Existing full-validation authorization; current next step specifies training-only repair integration before independently registered recovery."
+}

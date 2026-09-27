@@ -1,0 +1,19 @@
+{
+  "as_of": "2026-09-22T17:31:57.612601-05:00",
+  "accepted_counts": {
+    "adjust_bottle": 8,
+    "handover_block": 0,
+    "place_object_basket": 0
+  },
+  "attempts": 8,
+  "last_outcome": "accepted",
+  "collection_deadline": "2026-09-22T19:15:55.548938-05:00",
+  "collection_exit": null,
+  "confirmation_exit": null,
+  "gpu": "881, 9, 0",
+  "jobs": [
+    "wam-goalaux-collect-v2",
+    "wam-goalaux-confirm"
+  ],
+  "scored": false
+}

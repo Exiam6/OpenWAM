@@ -1,0 +1,143 @@
+{
+  "frozen_at": "2026-09-23T19:11:52.028093-05:00",
+  "study": "native-multiview matched representation validation",
+  "routes": [
+    "svae",
+    "pca",
+    "wan"
+  ],
+  "primary_contrast": "PCA48 minus native DINO-SVAE48",
+  "secondary_contrast": "PCA48 minus Wan48",
+  "train": {
+    "tasks": [
+      "adjust_bottle",
+      "handover_block",
+      "place_object_basket"
+    ],
+    "episodes": 105,
+    "policy_seeds": [
+      42,
+      43,
+      44
+    ],
+    "common_initializations": "/data02/zifanz4/openwam-experiments/endtoend-20260923/initialization",
+    "trainable_parameters": 295035604,
+    "world_layers": 12,
+    "world_width": 1024,
+    "action_width": 512,
+    "num_heads": 8,
+    "head_dim": 128,
+    "action_dim": 20,
+    "native_dual_system_joint_attention": true,
+    "multiview": true,
+    "resolution": [
+      384,
+      320
+    ],
+    "raw_window": 33,
+    "video_stride": 4,
+    "optimizer_updates": 6000,
+    "microsteps": 12000,
+    "batch_size": 4,
+    "accumulation_steps": 2,
+    "effective_batch": 8,
+    "learning_rate": 0.0001,
+    "adam_betas": [
+      0.9,
+      0.95
+    ],
+    "weight_decay": 0.01,
+    "gradient_clip": 1.0,
+    "cosine_warmup_fraction": 0.05,
+    "cosine_min_lr_fraction": 0.01,
+    "lambda_video": 1.0,
+    "lambda_action": 1.0,
+    "mixed_precision": "bf16",
+    "noise_sigma": [
+      0,
+      0.04,
+      0.1
+    ],
+    "noise_probability": [
+      0.5,
+      0.25,
+      0.25
+    ],
+    "checkpoint_selection": "fixed final12000microsteps only; intermediate states for infrastructure recovery/diagnosis, no test-based selection",
+    "save_every_microsteps": 4000,
+    "per_run_timeout_seconds": 86400,
+    "total_runs": 9
+  },
+  "compressors": {
+    "time": "2026-09-23T19:07:11.492403-05:00",
+    "episodes": 105,
+    "clips": 1260,
+    "svae_steps": 2000,
+    "svae_seed": 42,
+    "selection": "fixed final step; no checkpoint or representation selection",
+    "pca_sha256": "197276657ff49d08b4b3ea17ad0eaaf66dfa8f14c9c10375f6b58a639a84a47c",
+    "svae_sha256": "898443b0dc03208dbb46cfc26540ebe57d47805719ef170f9331b959a00f2bec",
+    "feature_manifest_sha256": "1bd2f3900d2aafa06222176d9347e29cd42f81511d3ddd20429883d2f9e44467",
+    "policy_seed_effect_separate_from_fixed_reducer_seed": true
+  },
+  "fresh_scenes": {
+    "seed_starts": {
+      "adjust_bottle": 1100000,
+      "handover_block": 1101000,
+      "place_object_basket": 1102000
+    },
+    "max_candidates_per_task": 100,
+    "accepted_per_task": 50,
+    "selection": "first50 native expert-feasible complete replay scenes per task, accepted once before learned-policy testing",
+    "scene_mode": "native eval_mode=True,is_test=True for expert and policy; fixed recorded instruction",
+    "native_null_grasp_sentinel": "prespecified existing exact source/traceback classifier; retain original failures",
+    "infrastructure_failure": "stop and retain; no automatic candidate replacement or retry",
+    "per_candidate_timeout_seconds": 600,
+    "collection_deadline": "2026-09-24T07:11:52.028093-05:00"
+  },
+  "evaluation": {
+    "conditions": [
+      "clean",
+      "gaussian_sigma_0.04",
+      "gaussian_sigma_0.10",
+      "head_camera_yaw_5deg"
+    ],
+    "camera_pose": "deterministic +5/-5deg world-z rotation selected by scene-seed parity; same position, wrists unchanged; record pose matrices",
+    "noise": "fresh deterministic per-pixel noise for all3cameras, seed derived from scene/observation step; identical recipes across methods and policy seeds",
+    "policy_training_seeds": [
+      42,
+      43,
+      44
+    ],
+    "native_task_step_limits": true,
+    "denoise_steps": 10,
+    "inference_horizon": 8,
+    "compile": false,
+    "dit_cache": false,
+    "same_scene_prompt_initial_state": true,
+    "rollouts": 5400,
+    "per_task_condition_job_timeout_seconds": 9000,
+    "per_episode_timeout_seconds": 600,
+    "required_full_matrix": true,
+    "primary_metric": "equal-task mean success rate, each of150scenes crossed with3paired training seeds",
+    "primary_success_rule": "PCA clean noninferiority lower95%CI > -5percentagepoints AND mean of3perturbed-condition paired success delta lower95%CI >0 versus SVAE; intersection rule. Otherwise no accuracy-improvement claim.",
+    "uncertainty": "hierarchical paired bootstrap training seeds and scenes within tasks, preserving method/condition pairing; also all per-task/seed rates. Only3trainingseeds limits seed-distribution inference.",
+    "secondary_metrics": [
+      "success and paired deltas versus Wan",
+      "translation,rotation,gripper action diagnostics on fixed expert states",
+      "real simulator contact records where available; gripper-closing proxy separately labeled",
+      "latency,peak memory,compression train time and parameter count"
+    ],
+    "failures": "technical errors separately counted and retained; an incomplete matrix cannot support the full confirmatory claim",
+    "no_early_stopping_on_success": true
+  },
+  "bounds": {
+    "max_concurrent_owned_gpus": 8,
+    "initial_total_gpu_hours_ceiling": 576,
+    "review_horizon": "2026-09-30T19:11:52.028093-05:00",
+    "no_old80_or_expired56_replay": true,
+    "no_unrelated_job_termination": true,
+    "every_job_prospective_timeout": true
+  },
+  "scale_transfer": "The controlled300M study is not a5B reproduction. Any full-size adaptation needs its own matched fixed protocol before new outcomes; proceed within explicit full-validation authorization and remaining resource ceiling."
+}

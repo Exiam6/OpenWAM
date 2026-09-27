@@ -1,0 +1,23 @@
+{
+  "upstream_eval_sha256": "8b16c766a9c401163418b425e413ebe7f4127d6b132b9c7c4d6b6f8752d57681",
+  "upstream_generator_sha256": "ef428fa9066c3025d41e2fabcbf894d1d4313bd12bee0a300d19d3d7d1158f24",
+  "unseeded_unique_lists": 5,
+  "fixed_unique_lists": 1,
+  "original_hashes": [
+    "50c80b2c2a0ec48cdd134485db7bcaf49257bd5adc771498f184c0d7f8d0e48f",
+    "b2d121789f68a54de2ba88bdbd44f94e75cbe07285fee086e7f4bb991fcbc0fd",
+    "93fd0c8a9c450281cc4249eced35fe9de2e37d431ec6e5d4343a913f6f28f492",
+    "8c4174383eff253660be98dee6e45b5971dce8e6612fc6fe39d2b6dcb7319127",
+    "78f1ce60967ef78a3e20bdb6abbf5f8269fa46b403b87880dd6c21c1a46aa46f"
+  ],
+  "fixed_hashes": [
+    "0282c15cb3243a6b2201ac9f9024586eb52d26055ba5aaed4cca8a2e4ec58aa9",
+    "0282c15cb3243a6b2201ac9f9024586eb52d26055ba5aaed4cca8a2e4ec58aa9",
+    "0282c15cb3243a6b2201ac9f9024586eb52d26055ba5aaed4cca8a2e4ec58aa9",
+    "0282c15cb3243a6b2201ac9f9024586eb52d26055ba5aaed4cca8a2e4ec58aa9",
+    "0282c15cb3243a6b2201ac9f9024586eb52d26055ba5aaed4cca8a2e4ec58aa9"
+  ],
+  "outer_rng_preserved": true,
+  "tested_exact_patched_ast_block": true,
+  "patch_applies_cleanly": true
+}

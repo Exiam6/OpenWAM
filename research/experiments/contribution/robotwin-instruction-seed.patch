@@ -1,0 +1,23 @@
+--- a/script/eval_policy.py
++++ b/script/eval_policy.py
+@@ -1,4 +1,5 @@
+ import sys
++import random
+ import os
+ import subprocess
+ 
+@@ -255,7 +256,13 @@
+ 
+         TASK_ENV.setup_demo(now_ep_num=now_id, seed=now_seed, is_test=True, **args)
+         episode_info_list = [episode_info["info"]]
+-        results = generate_episode_descriptions(args["task_name"], episode_info_list, test_num)
++        # Pair language with the scene seed without changing Python's outer RNG.
++        language_rng_state = random.getstate()
++        try:
++            random.seed(now_seed)
++            results = generate_episode_descriptions(args["task_name"], episode_info_list, test_num)
++        finally:
++            random.setstate(language_rng_state)
+         instruction = np.random.choice(results[0][instruction_type])
+         TASK_ENV.set_instruction(instruction=instruction)  # set language instruction
+ 

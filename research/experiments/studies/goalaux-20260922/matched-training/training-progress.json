@@ -1,0 +1,71 @@
+{
+  "completed": [
+    {
+      "seed": 42,
+      "arm": "reconstruction_only",
+      "steps": 2000,
+      "wall_seconds": 45.59519724547863,
+      "peak_allocated_GB": 6.898712064,
+      "checkpoint_sha256": "1eda19507865ce2e85f9cd0f322127b1531402a544839ce1a23507859ebd5c61",
+      "sample_sequence_sha256": "a5c6bb4cefa08fa63cb271b55fc98562b79344813086d2447cf6e7a40aa6fcc9",
+      "selection": "fixed final step; no development/test scores",
+      "initial_checkpoint_sha256": "24c0646312e3e668972fec64d79162e58d0005c529421eed3d8651998e636415"
+    },
+    {
+      "seed": 42,
+      "arm": "goal_auxiliary",
+      "steps": 2000,
+      "wall_seconds": 60.485431123524904,
+      "peak_allocated_GB": 6.990275584,
+      "checkpoint_sha256": "5ad6e16dafab0e150a08ee93215717ee6f23da2d5026bd65e15f729fb48d8db1",
+      "sample_sequence_sha256": "a5c6bb4cefa08fa63cb271b55fc98562b79344813086d2447cf6e7a40aa6fcc9",
+      "selection": "fixed final step; no development/test scores",
+      "initial_checkpoint_sha256": "24c0646312e3e668972fec64d79162e58d0005c529421eed3d8651998e636415"
+    },
+    {
+      "seed": 43,
+      "arm": "reconstruction_only",
+      "steps": 2000,
+      "wall_seconds": 46.4722852576524,
+      "peak_allocated_GB": 6.902087168,
+      "checkpoint_sha256": "b22f4f380d13ec47699da7e6a49c109cc425263bc9af8ad0b819927872b15298",
+      "sample_sequence_sha256": "2f2e8ad742a1d7d67fffcf1f63acafda477e5e116091691721ed26d0d8895d7e",
+      "selection": "fixed final step; no development/test scores",
+      "initial_checkpoint_sha256": "1230d11086cdfae106339bbe0b59082dafe09c0210c1ce70197076b9ba8d3bda"
+    },
+    {
+      "seed": 43,
+      "arm": "goal_auxiliary",
+      "steps": 2000,
+      "wall_seconds": 60.733393266797066,
+      "peak_allocated_GB": 6.988637184,
+      "checkpoint_sha256": "19e350f93bff77334cb36b7ec3a80f7c00c6e508c3c981fee94b30a1a6767041",
+      "sample_sequence_sha256": "2f2e8ad742a1d7d67fffcf1f63acafda477e5e116091691721ed26d0d8895d7e",
+      "selection": "fixed final step; no development/test scores",
+      "initial_checkpoint_sha256": "1230d11086cdfae106339bbe0b59082dafe09c0210c1ce70197076b9ba8d3bda"
+    },
+    {
+      "seed": 44,
+      "arm": "reconstruction_only",
+      "steps": 2000,
+      "wall_seconds": 44.78751880675554,
+      "peak_allocated_GB": 6.900022784,
+      "checkpoint_sha256": "85d61ae4ee0304b80593744b2070f406dc907ea965fccfe869c5efbeb6bb0ca9",
+      "sample_sequence_sha256": "23181e407fe22978a1eaba39a6bfd93d9a95b4fc561f59cf5e2c945ed7f5c9b0",
+      "selection": "fixed final step; no development/test scores",
+      "initial_checkpoint_sha256": "ae21629bead1277dac5db12a1429047ab92654f9636e529ec7c11ffe04a28305"
+    },
+    {
+      "seed": 44,
+      "arm": "goal_auxiliary",
+      "steps": 2000,
+      "wall_seconds": 60.804478131234646,
+      "peak_allocated_GB": 6.988653568,
+      "checkpoint_sha256": "83fca57be93ecb93aa48362dd4e852c748c91425bb20533b75665759e880ad6d",
+      "sample_sequence_sha256": "23181e407fe22978a1eaba39a6bfd93d9a95b4fc561f59cf5e2c945ed7f5c9b0",
+      "selection": "fixed final step; no development/test scores",
+      "initial_checkpoint_sha256": "ae21629bead1277dac5db12a1429047ab92654f9636e529ec7c11ffe04a28305"
+    }
+  ],
+  "training_only": true
+}

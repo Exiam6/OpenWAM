@@ -1,0 +1,232 @@
+{
+  "passed": true,
+  "time": "2026-09-22T17:12:44.723127-05:00",
+  "training_episodes": 105,
+  "training_rows": 1260,
+  "ridge_groups_checked": 54,
+  "mlp_models_checked": 36,
+  "anchor_hashes_verified": 5,
+  "max_ridge_normal_equation_relative_residual": 1.7491192555288114e-15,
+  "saved_mlp_torch_numpy_parity": true,
+  "no_refit_or_heldout_scoring": true,
+  "complete_manifest_sha256": "9d8e5fd3cbc919eb28579b1d85ff43077fa94612fc872628a00250d25e752c87",
+  "auditor_sha256": "b60bc7b7d37201f2e78a92d903960602f96379d3794717a574574f15d8946e6c",
+  "checks": [
+    {
+      "readout": "state/adjust_bottle/reconstruction_only_svae42/0",
+      "ridge_normal_equation_relative_residual": 1.5739458670296102e-15
+    },
+    {
+      "readout": "state/adjust_bottle/reconstruction_only_svae42/1",
+      "ridge_normal_equation_relative_residual": 6.128966517477783e-16
+    },
+    {
+      "readout": "state/adjust_bottle/reconstruction_only_svae43/0",
+      "ridge_normal_equation_relative_residual": 1.7491192555288114e-15
+    },
+    {
+      "readout": "state/adjust_bottle/reconstruction_only_svae43/1",
+      "ridge_normal_equation_relative_residual": 5.886974240119356e-16
+    },
+    {
+      "readout": "state/adjust_bottle/reconstruction_only_svae44/0",
+      "ridge_normal_equation_relative_residual": 1.7473305362157205e-15
+    },
+    {
+      "readout": "state/adjust_bottle/reconstruction_only_svae44/1",
+      "ridge_normal_equation_relative_residual": 6.218650057649354e-16
+    },
+    {
+      "readout": "state/adjust_bottle/goal_auxiliary_svae42/0",
+      "ridge_normal_equation_relative_residual": 1.5573807485799967e-15
+    },
+    {
+      "readout": "state/adjust_bottle/goal_auxiliary_svae42/1",
+      "ridge_normal_equation_relative_residual": 6.062672346458819e-16
+    },
+    {
+      "readout": "state/adjust_bottle/goal_auxiliary_svae43/0",
+      "ridge_normal_equation_relative_residual": 1.7403349769431838e-15
+    },
+    {
+      "readout": "state/adjust_bottle/goal_auxiliary_svae43/1",
+      "ridge_normal_equation_relative_residual": 6.720207473059137e-16
+    },
+    {
+      "readout": "state/adjust_bottle/goal_auxiliary_svae44/0",
+      "ridge_normal_equation_relative_residual": 1.7363058619513072e-15
+    },
+    {
+      "readout": "state/adjust_bottle/goal_auxiliary_svae44/1",
+      "ridge_normal_equation_relative_residual": 5.182743450809783e-16
+    },
+    {
+      "readout": "state/handover_block/reconstruction_only_svae42/0",
+      "ridge_normal_equation_relative_residual": 1.3545918832801052e-15
+    },
+    {
+      "readout": "state/handover_block/reconstruction_only_svae42/1",
+      "ridge_normal_equation_relative_residual": 6.492455714340231e-16
+    },
+    {
+      "readout": "state/handover_block/reconstruction_only_svae43/0",
+      "ridge_normal_equation_relative_residual": 1.3178499264325157e-15
+    },
+    {
+      "readout": "state/handover_block/reconstruction_only_svae43/1",
+      "ridge_normal_equation_relative_residual": 5.568301833295762e-16
+    },
+    {
+      "readout": "state/handover_block/reconstruction_only_svae44/0",
+      "ridge_normal_equation_relative_residual": 1.2289168246557885e-15
+    },
+    {
+      "readout": "state/handover_block/reconstruction_only_svae44/1",
+      "ridge_normal_equation_relative_residual": 6.42527930939656e-16
+    },
+    {
+      "readout": "state/handover_block/goal_auxiliary_svae42/0",
+      "ridge_normal_equation_relative_residual": 1.3454596603452494e-15
+    },
+    {
+      "readout": "state/handover_block/goal_auxiliary_svae42/1",
+      "ridge_normal_equation_relative_residual": 5.820467549513027e-16
+    },
+    {
+      "readout": "state/handover_block/goal_auxiliary_svae43/0",
+      "ridge_normal_equation_relative_residual": 1.2659022515779807e-15
+    },
+    {
+      "readout": "state/handover_block/goal_auxiliary_svae43/1",
+      "ridge_normal_equation_relative_residual": 6.044774047636255e-16
+    },
+    {
+      "readout": "state/handover_block/goal_auxiliary_svae44/0",
+      "ridge_normal_equation_relative_residual": 1.3238071469991444e-15
+    },
+    {
+      "readout": "state/handover_block/goal_auxiliary_svae44/1",
+      "ridge_normal_equation_relative_residual": 5.674563282802304e-16
+    },
+    {
+      "readout": "state/place_object_basket/reconstruction_only_svae42/0",
+      "ridge_normal_equation_relative_residual": 7.33226753276013e-16
+    },
+    {
+      "readout": "state/place_object_basket/reconstruction_only_svae42/1",
+      "ridge_normal_equation_relative_residual": 6.100856520256934e-16
+    },
+    {
+      "readout": "state/place_object_basket/reconstruction_only_svae43/0",
+      "ridge_normal_equation_relative_residual": 7.547278044778168e-16
+    },
+    {
+      "readout": "state/place_object_basket/reconstruction_only_svae43/1",
+      "ridge_normal_equation_relative_residual": 5.984022645032888e-16
+    },
+    {
+      "readout": "state/place_object_basket/reconstruction_only_svae44/0",
+      "ridge_normal_equation_relative_residual": 6.966646507769519e-16
+    },
+    {
+      "readout": "state/place_object_basket/reconstruction_only_svae44/1",
+      "ridge_normal_equation_relative_residual": 5.914913753526245e-16
+    },
+    {
+      "readout": "state/place_object_basket/goal_auxiliary_svae42/0",
+      "ridge_normal_equation_relative_residual": 7.462858837796134e-16
+    },
+    {
+      "readout": "state/place_object_basket/goal_auxiliary_svae42/1",
+      "ridge_normal_equation_relative_residual": 5.495962418878429e-16
+    },
+    {
+      "readout": "state/place_object_basket/goal_auxiliary_svae43/0",
+      "ridge_normal_equation_relative_residual": 7.34113914046174e-16
+    },
+    {
+      "readout": "state/place_object_basket/goal_auxiliary_svae43/1",
+      "ridge_normal_equation_relative_residual": 6.022074586751643e-16
+    },
+    {
+      "readout": "state/place_object_basket/goal_auxiliary_svae44/0",
+      "ridge_normal_equation_relative_residual": 6.924106562623442e-16
+    },
+    {
+      "readout": "state/place_object_basket/goal_auxiliary_svae44/1",
+      "ridge_normal_equation_relative_residual": 6.486672474584839e-16
+    },
+    {
+      "readout": "goal/adjust_bottle/reconstruction_only_svae42/0",
+      "ridge_normal_equation_relative_residual": 9.111224227703808e-16
+    },
+    {
+      "readout": "goal/adjust_bottle/reconstruction_only_svae43/0",
+      "ridge_normal_equation_relative_residual": 1.2105771343610132e-15
+    },
+    {
+      "readout": "goal/adjust_bottle/reconstruction_only_svae44/0",
+      "ridge_normal_equation_relative_residual": 1.2061937744996891e-15
+    },
+    {
+      "readout": "goal/adjust_bottle/goal_auxiliary_svae42/0",
+      "ridge_normal_equation_relative_residual": 3.286452364415752e-16
+    },
+    {
+      "readout": "goal/adjust_bottle/goal_auxiliary_svae43/0",
+      "ridge_normal_equation_relative_residual": 5.903178513769805e-16
+    },
+    {
+      "readout": "goal/adjust_bottle/goal_auxiliary_svae44/0",
+      "ridge_normal_equation_relative_residual": 4.0262268235694247e-16
+    },
+    {
+      "readout": "goal/handover_block/reconstruction_only_svae42/0",
+      "ridge_normal_equation_relative_residual": 2.8132443958991864e-16
+    },
+    {
+      "readout": "goal/handover_block/reconstruction_only_svae43/0",
+      "ridge_normal_equation_relative_residual": 2.182476705694977e-16
+    },
+    {
+      "readout": "goal/handover_block/reconstruction_only_svae44/0",
+      "ridge_normal_equation_relative_residual": 2.401064492034818e-16
+    },
+    {
+      "readout": "goal/handover_block/goal_auxiliary_svae42/0",
+      "ridge_normal_equation_relative_residual": 3.4051090226014385e-16
+    },
+    {
+      "readout": "goal/handover_block/goal_auxiliary_svae43/0",
+      "ridge_normal_equation_relative_residual": 3.215162350614383e-16
+    },
+    {
+      "readout": "goal/handover_block/goal_auxiliary_svae44/0",
+      "ridge_normal_equation_relative_residual": 4.1020475029381373e-16
+    },
+    {
+      "readout": "goal/place_object_basket/reconstruction_only_svae42/0",
+      "ridge_normal_equation_relative_residual": 7.039725467828667e-16
+    },
+    {
+      "readout": "goal/place_object_basket/reconstruction_only_svae43/0",
+      "ridge_normal_equation_relative_residual": 8.268731973249494e-16
+    },
+    {
+      "readout": "goal/place_object_basket/reconstruction_only_svae44/0",
+      "ridge_normal_equation_relative_residual": 1.1472426423582129e-15
+    },
+    {
+      "readout": "goal/place_object_basket/goal_auxiliary_svae42/0",
+      "ridge_normal_equation_relative_residual": 3.050188523500647e-16
+    },
+    {
+      "readout": "goal/place_object_basket/goal_auxiliary_svae43/0",
+      "ridge_normal_equation_relative_residual": 3.668371870758543e-16
+    },
+    {
+      "readout": "goal/place_object_basket/goal_auxiliary_svae44/0",
+      "ridge_normal_equation_relative_residual": 2.2152645413158459e-16
+    }
+  ]
+}

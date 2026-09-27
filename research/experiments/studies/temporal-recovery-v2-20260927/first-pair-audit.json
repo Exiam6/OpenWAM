@@ -1,0 +1,21 @@
+{
+  "time": "2026-09-27T12:34:42.610478-05:00",
+  "passed": true,
+  "rows": [
+    {
+      "arm": "mean",
+      "steps": 400,
+      "trace_rows": 400,
+      "success": false,
+      "status": "complete"
+    },
+    {
+      "arm": "learned",
+      "steps": 400,
+      "trace_rows": 400,
+      "success": false,
+      "status": "complete"
+    }
+  ],
+  "not_population_evidence": true
+}

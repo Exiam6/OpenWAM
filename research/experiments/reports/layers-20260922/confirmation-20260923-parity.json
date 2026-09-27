@@ -1,0 +1,105 @@
+{
+  "passed": false,
+  "training_only": true,
+  "fixed_indices": [
+    0,
+    35,
+    70
+  ],
+  "RMS_limit": 0.05,
+  "coordinate_limit": 0.5,
+  "routes": {
+    "Wan48_native_scale": {
+      "standardized_RMS": [
+        0.1060334205697208,
+        0.0132000106769646,
+        0.04603549472790215
+      ],
+      "standardized_max": [
+        0.3212619697747806,
+        0.03723835120586223,
+        0.2357156117519585
+      ],
+      "max_abs": 0.008146286010742188
+    },
+    "Wan48_per_token_layernorm": {
+      "standardized_RMS": [
+        0.10194326308473178,
+        0.012868302837031042,
+        0.04637167498458634
+      ],
+      "standardized_max": [
+        0.32477095403351436,
+        0.03732897416127442,
+        0.23087047899913418
+      ],
+      "max_abs": 0.008052527904510498
+    },
+    "L12_raw": {
+      "standardized_RMS": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "standardized_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs": 0.0
+    },
+    "L12_pca": {
+      "standardized_RMS": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "standardized_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs": 0.0
+    },
+    "L12_svae42": {
+      "standardized_RMS": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "standardized_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs": 0.0
+    },
+    "L12_svae43": {
+      "standardized_RMS": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "standardized_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs": 0.0
+    },
+    "L12_svae44": {
+      "standardized_RMS": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "standardized_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs": 0.0
+    }
+  },
+  "time": "2026-09-23T11:52:45.589768-05:00"
+}

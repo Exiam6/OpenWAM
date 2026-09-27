@@ -1,0 +1,15 @@
+{
+  "float32": {
+    "max_abs_identity_residual": 1.71661376953125e-05,
+    "original_tolerance_pass": false,
+    "strict_float64_tolerance_pass": false
+  },
+  "float64": {
+    "max_abs_identity_residual": 1.7763568394002505e-14,
+    "original_tolerance_pass": true,
+    "strict_float64_tolerance_pass": true
+  },
+  "scope": "Same saved predictions, labels and scales; only subtraction arithmetic precision changes",
+  "original_secondary_exit_code": 1,
+  "primary_results_unchanged": true
+}

@@ -1,0 +1,10 @@
+{
+  "time": "2026-09-23T11:55:20.123827-05:00",
+  "reason": "L40S training-fixture Wan normalizedRMS0.106 exceeds frozen0.05; DINOexact. No confirmation features or scores computed. Retry unchanged frozen feature pipeline on idle A40 original architecture only. Preserve entire failed attempt.",
+  "protocol_unchanged": true,
+  "tolerance_unchanged": true,
+  "deadline_unchanged": true,
+  "max_study_gpus": 4,
+  "max_ampere_attempts": 1,
+  "launcher_sha256": "1bdfcf6098069d7dc28d396bb963753bf5496dcf7edd61463b76496391a04184"
+}

@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-09-23T18:57:32.227655-05:00",
+  "stage": "native_training_only_preflight",
+  "routes": [
+    "svae",
+    "pca",
+    "wan"
+  ],
+  "common_policy_seed": 42,
+  "microsteps_per_route": 64,
+  "optimizer_steps_per_route": 16,
+  "batch_size": 2,
+  "accumulation": 4,
+  "timeout_seconds_per_route": 1800,
+  "fresh_initialization_for_main_training": true,
+  "train_only_episodes": 105,
+  "noise_mixture": {
+    "sigma": [
+      0,
+      0.04,
+      0.1
+    ],
+    "probability": [
+      0.5,
+      0.25,
+      0.25
+    ],
+    "scope": "same sigma per clip, independent pixel noise on every observed training frame; actions untouched"
+  },
+  "purposes": [
+    "native encoder checkpoint parity and causality",
+    "finite joint video/action training and parameter updates",
+    "memory/throughput measurement before main budget freeze"
+  ],
+  "evaluation_scenes_accessed": false,
+  "code_sha256": {
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/run_job.py": "c8841e35e1852464322ec127085acc2a12d60af9edb47ebd4e57e48da4c8216b",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/train_native.py": "823a3f069902435e6e9618e731f96fbc1a64d47fd4a8d225aebe0b87fd9419b5",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/test_pca_encoder.py": "d07fba657ea79ddb6491f029b125a8b252b3f46c555c3f74aba28b5a3f2d1126",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/prepare_native.py": "acbdbd925bd848da5279416393631af154d6c13c4baed1b0a3f37c69ddbf23d5",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/dinov3_pca.py": "5daa04141295143d64e4014e7cc8603ec48479acffd5fd39fc4d093f80541de7",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/__init__.py": "76c2a60bd41d15831a73dd61e9617212ea251760dc6a11138b4cfb69ab4287a3"
+  }
+}

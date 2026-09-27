@@ -1,0 +1,9 @@
+{
+  "completed_at": "2026-09-22T23:41:42.033957-05:00",
+  "repo": "Wan-AI/Wan2.2-TI2V-5B",
+  "revision": "921dbaf3f1674a56f47e83fb80a34bac8a8f203e",
+  "bytes": 2818839170,
+  "sha256": "20eb789667fa5e60e7516bf509512f6cb61f01b0aa0695eadaea930c13892b36",
+  "seconds": 54.65836080908775,
+  "source_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/resolve/921dbaf3f1674a56f47e83fb80a34bac8a8f203e/Wan2.2_VAE.pth"
+}

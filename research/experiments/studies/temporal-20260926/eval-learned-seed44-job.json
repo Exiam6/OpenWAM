@@ -1,0 +1,15 @@
+{
+  "host": "cm001",
+  "gpu_index": 2,
+  "gpu_uuid": "GPU-025b7fc9-8f25-5467-5c28-8e59884ab6d3",
+  "run_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/evaluation/learned-seed44",
+  "manifest": "/home/zifanz4/openwam-experiments/studies/temporal-20260926/evaluation-code-manifest.json",
+  "timeout_seconds": 64800,
+  "command": [
+    "/data02/zifanz4/openwam-experiments/policy-env/bin/python",
+    "-u",
+    "/home/zifanz4/openwam-experiments/scripts/temporal/evaluate_arm.py",
+    "learned",
+    "44"
+  ]
+}

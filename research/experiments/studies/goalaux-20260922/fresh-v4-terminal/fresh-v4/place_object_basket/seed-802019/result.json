@@ -1,0 +1,27 @@
+{
+  "task": "place_object_basket",
+  "seed": 802019,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-22T19:07:35.701148-05:00",
+  "expert_plan_success": true,
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 251,
+  "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v4/place_object_basket/seed-802019/data/episode0.hdf5",
+  "hdf5_sha256": "1d7cf80435c60f3defae595a67c5a5babe42ab29d2a7a099544237a55b4b8f56",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "057_toycar/base4",
+      "{B}": "110_basket/base1",
+      "{a}": "left",
+      "{b}": "right"
+    }
+  },
+  "elapsed_seconds": 103.56525693461299
+}

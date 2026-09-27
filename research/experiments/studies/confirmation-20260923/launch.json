@@ -1,0 +1,27 @@
+{
+  "started_at": "2026-09-23T11:38:51.767900-05:00",
+  "deadline": "2026-09-23T15:38:51.767900-05:00",
+  "collection_deadline": "2026-09-23T14:38:51.767900-05:00",
+  "status": "preparing",
+  "authorization": "User: \u5141\u8bb8\u5ef6\u957f\u9884\u7b97 \u591a\u7528\u5361",
+  "prior_window_unchanged": true,
+  "max_concurrent_gpus": 4,
+  "max_gpu_hours": 16,
+  "gpu_strategy": "3 task-disjoint collectors and up to1 feature/parity worker; idle ECC-clean devices only",
+  "host_candidate": "cm009",
+  "task_order": [
+    "adjust_bottle",
+    "handover_block",
+    "place_object_basket"
+  ],
+  "new_seed_starts": {
+    "adjust_bottle": 900000,
+    "handover_block": 901000,
+    "place_object_basket": 902000
+  },
+  "accepted_per_task": 20,
+  "max_candidates_per_task": 40,
+  "source_draft": "/home/zifanz4/openwam-experiments/studies/rae-state-control-20260923/NEXT_CONFIRMATION_DRAFT.md",
+  "old56_unscored": true,
+  "old80_not_repeated": true
+}

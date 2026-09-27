@@ -1,0 +1,1360 @@
+{
+  "attempts": [
+    {
+      "task": "adjust_bottle",
+      "seed": 800000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:18:49.829724-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800000/data/episode0.hdf5",
+      "hdf5_sha256": "391ba130006155520e86d1ca9cdf8843b6347fe4876edefcaa31ab3c6cd6cc98",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 99.35201554000378,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:20:31.473760-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 137,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800001/data/episode0.hdf5",
+      "hdf5_sha256": "443c5a51104178198ab58009d65f5ee04188455e69b49b89ba833e2c70946a3a",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 94.57959485985339,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:22:09.376533-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 143,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800002/data/episode0.hdf5",
+      "hdf5_sha256": "c10962f2b994bbf15a373c97bd7e78e02219d8513601fbc17d921d3efb84fca5",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 90.93378847464919,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:23:43.552435-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800003/data/episode0.hdf5",
+      "hdf5_sha256": "83a6a5cba7ece598aa293089a633d51445dc78be86ed1808831da8abe82d5ee1",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 89.82566259242594,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800004,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:25:16.834139-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 145,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800004/data/episode0.hdf5",
+      "hdf5_sha256": "9d27c7f4f92c2f51e6db326eaf71e58bb3ee4ce9e1479178bddb89e870455937",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 87.57276750542223,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800005,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:26:47.216504-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 135,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800005/data/episode0.hdf5",
+      "hdf5_sha256": "ed77968b8b0708adac28d5469ab1795cebda27c22185e6bb00209bc22d5728c5",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 91.02005337923765,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800006,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:28:20.796139-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800006/data/episode0.hdf5",
+      "hdf5_sha256": "58ca21ccd0dfb48663ad16d93bc2a076230175ab77a895d228590713bb0f0183",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 93.0050580650568,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800007,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:29:56.245382-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800007/data/episode0.hdf5",
+      "hdf5_sha256": "029f0ce96e6b2b578dde5946f2b50c61c6100cea8fda4bbcccf5051f0ebc4326",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 92.53433700837195,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800008,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:31:30.938642-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 143,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800008/data/episode0.hdf5",
+      "hdf5_sha256": "0a60337090dde19862c1a663a688aa864291f3904a89dae8fdc7c5907694c536",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 93.48504207283258,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800009,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:33:08.421986-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 150,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800009/data/episode0.hdf5",
+      "hdf5_sha256": "0c7ce2877d30fafc1adc87a3983411187ea42994435afc83f7bae02b5fbc8942",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 91.05696172080934,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800010,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-22T17:34:42.517254-05:00",
+      "outcome": "unstable_scene",
+      "error": "UnStableError('Objects is unstable in seed(800010), unstable objects: 001_bottle')",
+      "traceback": "Traceback (most recent call last):\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_reference.py\", line 24, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args)\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation_v2.py\", line 25, in checked_setup\n    value=setup(*aa,**kw)\n  File \"/vol13/zifanz4/openwam-experiments/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(800010), unstable objects: 001_bottle\n",
+      "elapsed_seconds": 41.07006557285786,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800011,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:35:26.584334-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 149,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800011/data/episode0.hdf5",
+      "hdf5_sha256": "7cbcf7ccc305a0ca3e69ba6b76efe7a38e06b7c52576da14cbaf34c11ff5e5c1",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 88.60980681329966,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800012,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:36:57.220810-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 138,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800012/data/episode0.hdf5",
+      "hdf5_sha256": "301fb2308b96a18d2f1840d6b0bcb99e24a05123b2000d9690d73b5f7f611a00",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 94.1068556457758,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800013,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-22T17:38:33.724759-05:00",
+      "outcome": "unstable_scene",
+      "error": "UnStableError('Objects is unstable in seed(800013), unstable objects: 001_bottle')",
+      "traceback": "Traceback (most recent call last):\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_reference.py\", line 24, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args)\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation_v2.py\", line 25, in checked_setup\n    value=setup(*aa,**kw)\n  File \"/vol13/zifanz4/openwam-experiments/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(800013), unstable objects: 001_bottle\n",
+      "elapsed_seconds": 39.20955020934343,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800014,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:39:14.517848-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 147,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800014/data/episode0.hdf5",
+      "hdf5_sha256": "e10b192ae30a8f5b3037b4caa1e72ee90534b63ab8e79178f328e1319eb1d489",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 88.00482510775328,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800015,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:40:45.748910-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 151,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800015/data/episode0.hdf5",
+      "hdf5_sha256": "1496537071c6f82341737498d1fc23c8762e3a82aeaefad0e7b40d848646aff1",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 95.46955423615873,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800016,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:42:23.396580-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 188,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800016/data/episode0.hdf5",
+      "hdf5_sha256": "cd19f15d483de2b799e8a45d751ee051ec038399daf0697ab75571cd9f04616f",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 98.46224771253765,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800017,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:44:04.086133-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 138,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800017/data/episode0.hdf5",
+      "hdf5_sha256": "604f7d1be0ee470c55aeab808b823e9d0bfbd8226973e28ade73f0b3b1bc3b65",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 94.44574219733477,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800018,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-22T17:45:40.598864-05:00",
+      "outcome": "unstable_scene",
+      "error": "UnStableError('Objects is unstable in seed(800018), unstable objects: 001_bottle')",
+      "traceback": "Traceback (most recent call last):\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_reference.py\", line 24, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args)\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation_v2.py\", line 25, in checked_setup\n    value=setup(*aa,**kw)\n  File \"/vol13/zifanz4/openwam-experiments/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(800018), unstable objects: 001_bottle\n",
+      "elapsed_seconds": 40.025735422968864,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800019,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-22T17:46:22.720767-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 40.463008327409625,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800020,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:47:05.161748-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 141,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800020/data/episode0.hdf5",
+      "hdf5_sha256": "70eddd1ec4e33edf270021e2ea253c0fd7764a37081e5664500e313e9468b2b3",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 89.57205777615309,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800021,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:48:37.209080-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 141,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800021/data/episode0.hdf5",
+      "hdf5_sha256": "98c57e5ea09d59ab57f897a6988dded5b8aa5a729932f136c74176b5275e93f7",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 91.78721802867949,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800022,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:50:11.822043-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 147,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800022/data/episode0.hdf5",
+      "hdf5_sha256": "b1ae787682973322486bb66ed6e64dcbfe3b65c5e3a7551f0087bcc5caf9ff84",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 93.89832978323102,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800023,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:51:47.863393-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800023/data/episode0.hdf5",
+      "hdf5_sha256": "04f77fbaf9ba19713c0acc0ae78c62181a551735eb359381e4819d6b1cb88661",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 88.9639666620642,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:53:18.435379-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 323,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801000/data/episode0.hdf5",
+      "hdf5_sha256": "f92fefeb3408fe800ef2a8650a8cee095fd98ce524126d77b49bc51621acf57a",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 119.27845518663526,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:55:20.238600-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 283,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801001/data/episode0.hdf5",
+      "hdf5_sha256": "b60fae5a44552ce3fe59ed41154e35ec333266bd1d725de69deafcd82745cb88",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 108.09289715625346,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:57:10.425658-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 293,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801002/data/episode0.hdf5",
+      "hdf5_sha256": "0b94ef23a9e66a8b5629f60157056a09d89badbf3c1471d65bb655d1ff801cab",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 110.55696899071336,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:59:03.138586-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 287,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801003/data/episode0.hdf5",
+      "hdf5_sha256": "83370c0681119f4bd10a3bd4c475c6986832b937c64b61bfc4c204b6d5234fb0",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 106.20001818239689,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801004,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:00:51.585751-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 290,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801004/data/episode0.hdf5",
+      "hdf5_sha256": "ba6dbe60f06411d0b95049b5cc6f32c0e4818d716de2e0234a869f4c298d5d64",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 109.49201365932822,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801005,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:02:43.226437-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 278,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801005/data/episode0.hdf5",
+      "hdf5_sha256": "5d9f1718872da01e968edb316809ad23d506d68e705c73c7a018000e2b3e66ce",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 113.92154482752085,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801006,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-22T18:04:39.538452-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 51.74238684028387,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801007,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:05:33.107894-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 279,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801007/data/episode0.hdf5",
+      "hdf5_sha256": "74cccd2d8369f2dc879b834f1a70f409e7b9ef0b8ef8f2a365bdc91bb9620e1a",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 100.82919793762267,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801008,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:07:15.889557-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 278,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801008/data/episode0.hdf5",
+      "hdf5_sha256": "4a1f1146af159493665f7654592e5111f1ff5615c28cab6f49ef0961552c7eb0",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 103.27209337055683,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801009,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:09:01.274760-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 278,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801009/data/episode0.hdf5",
+      "hdf5_sha256": "0d2a0aeec2560b6e18388cffe957f488a678aa4c7595e456bd59ddb9e88909a0",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 112.78352998197079,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801010,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:10:55.899661-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 283,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801010/data/episode0.hdf5",
+      "hdf5_sha256": "72dcd8e3d9e533055af2a401957a7752bca0d1c1fc28ed612b52ad9c93659c9b",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 113.35769797675312,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801011,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:12:52.756032-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 286,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801011/data/episode0.hdf5",
+      "hdf5_sha256": "f7a3231284bf37de0b4c0c8def2c65a3a466a07ae334c751aa5df60d97a37527",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 112.1688290014863,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801012,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:14:47.056969-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 288,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801012/data/episode0.hdf5",
+      "hdf5_sha256": "c12c5c8a58a8581f927c38360c6b9c06a0c5118483d40d847bb995b19d4bb480",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 116.95261860080063,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801013,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:16:46.215360-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 284,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801013/data/episode0.hdf5",
+      "hdf5_sha256": "8c7e4d76439ec2eb731ac766c056ddd1528e1559b773e5d36ae5d82d958b42a1",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 107.54191551357508,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801014,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:18:35.982874-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 282,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801014/data/episode0.hdf5",
+      "hdf5_sha256": "e76d58250cc756fa73690c0bca59dc59af6833460faa6b3e02a57312090a5f29",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 109.11385001800954,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801015,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:20:27.214468-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 284,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801015/data/episode0.hdf5",
+      "hdf5_sha256": "6a061c3e22012b569115e7c9895e39e3de0ad6f8b297f74c4786f006f1171aec",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 108.92356643266976,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801016,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:22:18.312893-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 289,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801016/data/episode0.hdf5",
+      "hdf5_sha256": "6d32fcf7b1517c386f351b8f66facb46b2825c26d7c8658d1a3ff8e74c5fab3b",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 115.41907363198698,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801017,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:24:15.388166-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 294,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801017/data/episode0.hdf5",
+      "hdf5_sha256": "c1a5646534d06b649e34fe06a9a23f58b75934acc207a77a5b21200e83753d24",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 110.2967489529401,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801018,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:26:09.231198-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 280,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801018/data/episode0.hdf5",
+      "hdf5_sha256": "f602f0e7e71adcb78f50dd53d6e6cbe20aad25c5e0dcb0d050321dcabb798388",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 113.50498696416616,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801019,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:28:06.410244-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 289,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801019/data/episode0.hdf5",
+      "hdf5_sha256": "e4fcfd52587555f06903bcbfb4b26f706b8f7267e77d4f0b99cfecb167dfec44",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 113.67789066582918,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 801020,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:30:03.227674-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 288,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801020/data/episode0.hdf5",
+      "hdf5_sha256": "3ed87478cc4e7d883b6046b6ffe1e702ed295281b9ff9add7372129e76c04934",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 107.07335228845477,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:31:52.627780-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 253,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/place_object_basket/seed-802000/data/episode0.hdf5",
+      "hdf5_sha256": "680e2945421566eac9e707569e6454d764d474bfb2647cd7b1ae9e030181ce48",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 104.75967109575868,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:33:39.504008-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 249,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/place_object_basket/seed-802001/data/episode0.hdf5",
+      "hdf5_sha256": "2213562798748f8cc144b0a83df4169f0a1132ea7c74bac29f6c857bd81bdbfa",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 107.79704189673066,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:35:30.332866-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 236,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/place_object_basket/seed-802002/data/episode0.hdf5",
+      "hdf5_sha256": "3111220b74cb3d5fa7d5dc809fe673289e35ba8f0b0ee233eaec697f64ca46f2",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 101.07240581698716,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:37:15.093635-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 251,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/place_object_basket/seed-802003/data/episode0.hdf5",
+      "hdf5_sha256": "219abf88d9a5d97799d5d334ed6fd86c65fb524ce685f701a78d38a6e8766116",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 101.89596619643271,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802004,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:38:59.576519-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 275,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/place_object_basket/seed-802004/data/episode0.hdf5",
+      "hdf5_sha256": "da46d2c1caed14b302bd7101479833dae0dc11851e7a14af04cf83e5a1783462",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 106.26563284173608,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802005,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:40:49.569943-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 249,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/place_object_basket/seed-802005/data/episode0.hdf5",
+      "hdf5_sha256": "78772812a2d04b77b71fc3c8e047659ac6d3228e0289b8567ef26c87a03a563f",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 102.17992184311152,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802006,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:42:34.537568-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 236,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/place_object_basket/seed-802006/data/episode0.hdf5",
+      "hdf5_sha256": "62dbd4f7a192d1231c1dddcb57bc898ed4c3bf2d5a0ce319bc45df76293d5add",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 105.54575119912624,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802007,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-22T18:44:21.899587-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 49.81655538268387,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802008,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-22T18:45:13.530140-05:00",
+      "outcome": "expert_infeasible",
+      "error": "AssertionError('target_pose cannot be None for move action.')",
+      "traceback": "Traceback (most recent call last):\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_reference.py\", line 25, in worker\n    info=env.play_once();ok=bool(env.plan_success and env.check_success());result['expert_plan_success']=ok\n  File \"/vol13/zifanz4/openwam-experiments/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/place_object_basket.py\", line 73, in play_once\n    self.move(self.grasp_actor(self.object, arm_tag=self.arm_tag))\n  File \"/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+      "elapsed_seconds": 36.169496001675725,
+      "exit_code": 0,
+      "original_outcome": "infrastructure_failure",
+      "classification_amendment": "native initial basket grasp returned no candidate; exact pre-score source/traceback class; original result retained; no retry"
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802009,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-22T18:50:35.582788-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 48.98221980780363,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802010,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-22T18:51:27.207547-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 41.83177216351032,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802011,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:52:11.763870-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 242,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v3/place_object_basket/seed-802011/data/episode0.hdf5",
+      "hdf5_sha256": "13643bafe4446fd73261fee0c9416a39281a43a3403ccc82f04c722babfaf87f",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 96.19140187092125,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802012,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T18:53:50.276465-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 258,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v3/place_object_basket/seed-802012/data/episode0.hdf5",
+      "hdf5_sha256": "8fb6964c846f2889b6101cf4062265605e64bd5e7fc62f0772f60f1c7320fcde",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 102.48005727678537,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802013,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-22T18:55:34.551868-05:00",
+      "outcome": "infrastructure_failure",
+      "error": "AssertionError('target_pose cannot be None for move action.')",
+      "traceback": "Traceback (most recent call last):\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_reference.py\", line 25, in worker\n    info=env.play_once();ok=bool(env.plan_success and env.check_success());result['expert_plan_success']=ok\n  File \"/vol13/zifanz4/openwam-experiments/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/place_object_basket.py\", line 122, in play_once\n    self.grasp_actor(self.basket, arm_tag=self.arm_tag.opposite, pre_grasp_dis=0.08),\n  File \"/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+      "elapsed_seconds": 40.84802870824933,
+      "exit_code": 0
+    }
+  ],
+  "accepted_counts": {
+    "adjust_bottle": 20,
+    "handover_block": 20,
+    "place_object_basket": 9
+  },
+  "elapsed_seconds": 6021.519415,
+  "collection_deadline": "2026-09-22T19:15:55.548938-05:00"
+}

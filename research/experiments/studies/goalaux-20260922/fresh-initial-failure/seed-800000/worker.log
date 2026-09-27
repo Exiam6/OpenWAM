@@ -1,0 +1,32 @@
+[eval_policy_wrapper] RoboTwin commit=0aeea2d669c0 eval_policy.py sha256=8b16c766a9c40116
+[eval_policy_wrapper] runtime_root=/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh/adjust_bottle/seed-800000/runtime
+[eval_policy_wrapper] prewarmed CUDA/Curobo before SAPIEN import
+[eval_policy_wrapper] patched warp.torch compatibility namespace
+/vol13/zifanz4/openwam-experiments/goalaux-native/benchmark-env/lib/python3.10/site-packages/sapien/_vulkan_tricks.py:37: UserWarning: Failed to find Vulkan ICD file. This is probably due to an incorrect or partial installation of the NVIDIA driver. SAPIEN will attempt to provide an ICD file anyway but it may not work.
+  warn(
+missing pytorch3d
+[eval_policy_wrapper] planner fallback engaged: FileNotFoundError: [Errno 2] No such file or directory: '/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/assets/embodiments/aloha-agilex/collision_aloha_left.yml'
+Traceback (most recent call last):
+  File "/vol13/zifanz4/openwam-experiments/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py", line 284, in safe_set_planner
+    return orig_set_planner(self, scene=scene)
+  File "/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/robot/robot.py", line 268, in set_planner
+    self.left_planner = CuroboPlanner(self.left_entity_origion_pose,
+  File "/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/robot/planner.py", line 74, in __init__
+    motion_gen_config = MotionGenConfig.load_from_robot_config(
+  File "/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/curobo/src/curobo/wrap/reacher/motion_gen.py", line 612, in load_from_robot_config
+    robot_cfg = RobotConfig.from_dict(robot_cfg, tensor_args)
+  File "/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/curobo/src/curobo/types/robot.py", line 51, in from_dict
+    CudaRobotGeneratorConfig(**data_dict_in["kinematics"], tensor_args=tensor_args)
+  File "<string>", line 34, in __init__
+  File "/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/curobo/src/curobo/cuda_robot_model/cuda_robot_generator.py", line 214, in __post_init__
+    coll_params = load_yaml(coll_yml)
+  File "/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/curobo/src/curobo/util_file.py", line 125, in load_yaml
+    with open(file_path) as file_p:
+FileNotFoundError: [Errno 2] No such file or directory: '/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/assets/embodiments/aloha-agilex/collision_aloha_left.yml'
+Traceback (most recent call last):
+  File "/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_reference.py", line 24, in worker
+    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args)
+  File "/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation.py", line 31, in checked_setup
+    if kw.get('need_plan'):assert all(name=='CuroboPlanner' for name in planners.values()),'Planner backend mismatch; stop before actions'
+AssertionError: Planner backend mismatch; stop before actions
+{"task": "adjust_bottle", "seed": 800000, "role": "expert_only_independent_confirmation", "accepted": false, "started_at": "2026-09-22T17:15:56.576990-05:00", "outcome": "infrastructure_failure", "error": "AssertionError('Planner backend mismatch; stop before actions')", "traceback": "Traceback (most recent call last):\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_reference.py\", line 24, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args)\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation.py\", line 31, in checked_setup\n    if kw.get('need_plan'):assert all(name=='CuroboPlanner' for name in planners.values()),'Planner backend mismatch; stop before actions'\nAssertionError: Planner backend mismatch; stop before actions\n", "elapsed_seconds": 19.07174197770655}

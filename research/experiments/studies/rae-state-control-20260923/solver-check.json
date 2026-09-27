@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "max_abs_prediction_difference_vs_direct_solve": 3.019806626980426e-14,
+  "cases": "wide dual and narrow primal, all4frozen alphas,8outputs",
+  "no_actual_readouts_fitted": true
+}

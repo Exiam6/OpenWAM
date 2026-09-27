@@ -1,0 +1,20 @@
+{
+  "completed_at": "2026-09-22T16:54:27.552130-05:00",
+  "wall_seconds": 55.724012499675155,
+  "reducer_models": 6,
+  "ridge_endpoint_fits": 36,
+  "ridge_group_fits": 54,
+  "mlp_fits": 36,
+  "training_episodes": 105,
+  "fresh_scored": false,
+  "development_scored": false,
+  "sha256": {
+    "training-vectors.npz": "da6fb2fa583f584026a2f15d440579c7174f718457b13a3dabaab931604416fb",
+    "training-manifest.json": "2daf7fc7b9950d7550e7d50a58cf66b4184596a174cc70c105c0dfbd4dade1c5",
+    "coefficients.npz": "ec141a38af28b801b3d300c2a7a77c6b60e75222cc2eae21ba2ee8d1a50a7a8b",
+    "mlp.pt": "19bd2d9463a47a3629b64e02f44807e7fad8f08bca1403a6e2d5b579c6146c3f",
+    "selection.json": "ebe4db7e7c64b1ddd7c16d57d1bbc8252539cab913adf4c10cc78100dbb4d1e5",
+    "training.json": "657eedd25000e4a02be2d69dde659ac34eb9481b14a4b695f2a787f222c97f12",
+    "anchors.json": "b2e98156f49e137e9d612a4ef47d336f4fb7cfa2b3144a3caf867c83e858607c"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "runtime": {
+    "solver-check.json": {
+      "bytes": 202,
+      "sha256": "e9abf9bb4fcec9a08eaaa784485626a6f88f015315b418ca42f9d255722af918"
+    },
+    "result.json": {
+      "bytes": 171355,
+      "sha256": "daa828224a1de4a14184cf227e29388a260d1375c1b8a72e7a5d17e7558af0df"
+    },
+    "exit.json": {
+      "bytes": 74,
+      "sha256": "3eee2220b09b532d0ab36837d1e20263db61b14c282ae3ed73916a2bb6789137"
+    },
+    "clean-rows.json": {
+      "bytes": 1091510,
+      "sha256": "60281e738db1c7c3d63556bf54ed2589bad8dae4c5c2d1f2a7ae50b63c526e5a"
+    },
+    "audit.json": {
+      "bytes": 515,
+      "sha256": "a84f6f926498ec67d63d2694c135142e631c8df3e618bc9d851603d09611ef44"
+    },
+    "proprio-rounding-diagnostic.json": {
+      "bytes": 1202,
+      "sha256": "0d9292703c157cf4d5f079feaacdf1732b553b4ea3af522b808a088f40439496"
+    },
+    "coefficients.npz": {
+      "bytes": 1314294,
+      "sha256": "6622dc9cac8955850a2071b547f5b18514b8a1ed60c30045653be52e2ebde031"
+    },
+    "predictions.npz": {
+      "bytes": 2277274,
+      "sha256": "dcb1b04f56ace9eeee0023f86a86aeac1342f9063d48661ef70491b46e88df98"
+    },
+    "clean-dino-state-vectors.npz": {
+      "bytes": 19354870,
+      "sha256": "9d54495cbae174a661334c42ff1ef3519956c22280a5a1adc94e948e46930132"
+    },
+    "proprio-reference-declaration.json": {
+      "bytes": 463,
+      "sha256": "41b376e0f0fb797d37f67dc0c19af6b24a700503ae7a9507e3ae4fdafb033fd1"
+    },
+    "training-vectors.npz": {
+      "bytes": 149413120,
+      "sha256": "bfc45f9c43301821d83e4a83e7e0a15e3a4d15193e36b307c1e1746449f2b7e2"
+    },
+    "fit-complete.json": {
+      "bytes": 121,
+      "sha256": "60af4a2c3bade2f58cf773312516d12f935480527771e1e65c66d36f4290bb9b"
+    },
+    "launch.json": {
+      "bytes": 309,
+      "sha256": "e6975d1e4f252ed0259465f44eadf6c113f74043e7daceb6a0cc33e308adcd6f"
+    },
+    "asset-check.json": {
+      "bytes": 139,
+      "sha256": "64f66f290149e92ca3634d215755a93dcc0c64f3e4b47f610e80ae283b19cbac"
+    },
+    "component-summary.json": {
+      "bytes": 47419,
+      "sha256": "43546faa75345a87e047250722936a11411add693382f317815294567a67ceb8"
+    },
+    "progress.json": {
+      "bytes": 131,
+      "sha256": "6dff3d4bd5ed61428525d61737a3464e380bc90441691bb9c3131e04c0b53dc2"
+    },
+    "feature-complete.json": {
+      "bytes": 11784,
+      "sha256": "4db3bc5930df0b4504ef77b86e1010d1cbfa1dedb6fbde003ca6bef9cd95ceac"
+    },
+    "run.log": {
+      "bytes": 8953,
+      "sha256": "ef7fd26a2989c560ce43fe92fca0de3b74fb83ea52e454815d9deb5cc8191184"
+    },
+    "selection.json": {
+      "bytes": 74916,
+      "sha256": "4181927d31ec0d1cebc5dbea5e756761dbfbcd1fe15ef5e1aad63e142a031184"
+    },
+    "freeze.json": {
+      "bytes": 6934,
+      "sha256": "12f865ea9aa20edceabebbab6607f60fc39ad82404fd5ce7a55b39a47995861a"
+    },
+    "protocol.json": {
+      "bytes": 3143,
+      "sha256": "f53709932b10c0f6f884f91ae8472e619950219ca83ca95b13168c204395f2c8"
+    }
+  },
+  "note": "Full vector/coefficient arrays remain in existing runtime. This index records exact bytes; metadata/logs are archived beside it."
+}

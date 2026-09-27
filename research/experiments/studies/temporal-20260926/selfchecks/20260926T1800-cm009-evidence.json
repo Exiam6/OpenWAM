@@ -1,0 +1,61 @@
+{
+  "time": "2026-09-26T18:10:43.563235-05:00",
+  "processes": [
+    {
+      "pid": 2447502,
+      "exists": true,
+      "uid": 2093,
+      "state": "S",
+      "start_ticks": "1117643798",
+      "identity_match": true,
+      "cmdline": "python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 1 "
+    },
+    {
+      "pid": 2447565,
+      "exists": true,
+      "uid": 2093,
+      "state": "S",
+      "start_ticks": "1117643821",
+      "identity_match": true,
+      "cmdline": "python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 2 "
+    },
+    {
+      "pid": 2447628,
+      "exists": true,
+      "uid": 2093,
+      "state": "S",
+      "start_ticks": "1117643846",
+      "identity_match": true,
+      "cmdline": "python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 3 "
+    },
+    {
+      "pid": 2447691,
+      "exists": true,
+      "uid": 2093,
+      "state": "S",
+      "start_ticks": "1117643869",
+      "identity_match": true,
+      "cmdline": "python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 4 "
+    },
+    {
+      "pid": 2447754,
+      "exists": true,
+      "uid": 2093,
+      "state": "S",
+      "start_ticks": "1117643889",
+      "identity_match": true,
+      "cmdline": "python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 5 "
+    },
+    {
+      "pid": 2447818,
+      "exists": true,
+      "uid": 2093,
+      "state": "S",
+      "start_ticks": "1117643911",
+      "identity_match": true,
+      "cmdline": "python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 6 "
+    }
+  ],
+  "gpu": "0, GPU-c7d96da5-a1ae-e1ed-de5d-03f35e550da2, 1, 0, 2\n1, GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 25971, 91, 0\n2, GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 26641, 99, 0\n3, GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 25755, 75, 0\n4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 11787, 53, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 26415, 69, 0\n6, GPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 23823, 67, 0\n7, GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 24495, 100, 0\n",
+  "compute_processes": "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 2421367, 25964\nGPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 2437330, 26634\nGPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 2427495, 25736\nGPU-33861458-0994-99a7-7457-6fceb49c229c, 2077942, 11747\nGPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 2442870, 26408\nGPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 2699472, 23816\nGPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 2430315, 24488\n"
+}

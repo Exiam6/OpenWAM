@@ -1,0 +1,305 @@
+{
+  "time": "2026-09-26T22:14:53.660644-05:00",
+  "training": [
+    {
+      "arm": "mean",
+      "seed": 42,
+      "exit.json": {
+        "time": "2026-09-26T20:32:50.924147-05:00",
+        "returncode": 0,
+        "error": null,
+        "seconds": 9469.84500194341,
+        "child_returncode": 0
+      },
+      "runner-started.json": {
+        "time": "2026-09-26T17:55:01.078525-05:00",
+        "pid": 2681351,
+        "host": "cm001",
+        "job": {
+          "host": "cm001",
+          "gpu_index": 4,
+          "gpu_uuid": "GPU-e7aef4c0-2628-b4f8-34f4-579d62b7feb6",
+          "run_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed42",
+          "manifest": "/home/zifanz4/openwam-experiments/studies/temporal-20260926/training-code-manifest.json",
+          "timeout_seconds": 18000,
+          "command": [
+            "/data02/zifanz4/openwam-experiments/policy-env/bin/python",
+            "-m",
+            "torch.distributed.run",
+            "--standalone",
+            "--nproc_per_node=1",
+            "/home/zifanz4/openwam-experiments/scripts/temporal/train_policy.py",
+            "--config-path",
+            "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed42",
+            "--config-name",
+            "config"
+          ]
+        }
+      },
+      "encoder-parity.json": {
+        "passed": true,
+        "native_save_reload_max_abs": 0.0,
+        "later_group_causality_max_abs": 0.0,
+        "shape": [
+          1,
+          48,
+          3,
+          4,
+          4
+        ],
+        "saved_sidecar_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed42/output/2026-09-26_17-56-53",
+        "input": "synthetic9frames64x64; no test data"
+      },
+      "last_metric": {
+        "global_step": 4000,
+        "opt_step": 2000,
+        "steps_per_sec": 0.449804847764161,
+        "batch_size": 4,
+        "lr": 3.0000000000000004e-07,
+        "metrics": {
+          "loss_total": 0.23701539635658264,
+          "loss_video": 0.229297935962677,
+          "loss_action": 0.00771745340898633,
+          "grad_norm": 0.5015104413032532
+        },
+        "time": "2026-09-26T20:31:28.159511-05:00",
+        "peak_cuda_bytes": 18170073600
+      },
+      "metric_count": 4000,
+      "age_seconds": 6205.507845401764,
+      "all_metrics_finite": true
+    },
+    {
+      "arm": "learned",
+      "seed": 42,
+      "exit.json": {
+        "time": "2026-09-26T20:34:12.955020-05:00",
+        "returncode": 0,
+        "error": null,
+        "seconds": 9444.079100582749,
+        "child_returncode": 0
+      },
+      "runner-started.json": {
+        "time": "2026-09-26T17:56:48.875118-05:00",
+        "pid": 2682965,
+        "host": "cm001",
+        "job": {
+          "host": "cm001",
+          "gpu_index": 2,
+          "gpu_uuid": "GPU-025b7fc9-8f25-5467-5c28-8e59884ab6d3",
+          "run_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed42",
+          "manifest": "/home/zifanz4/openwam-experiments/studies/temporal-20260926/learned-training-code-manifest.json",
+          "timeout_seconds": 18000,
+          "command": [
+            "/data02/zifanz4/openwam-experiments/policy-env/bin/python",
+            "-m",
+            "torch.distributed.run",
+            "--standalone",
+            "--nproc_per_node=1",
+            "/home/zifanz4/openwam-experiments/scripts/temporal/train_policy.py",
+            "--config-path",
+            "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed42",
+            "--config-name",
+            "config"
+          ]
+        }
+      },
+      "encoder-parity.json": {
+        "passed": true,
+        "native_save_reload_max_abs": 0.0,
+        "later_group_causality_max_abs": 0.0,
+        "shape": [
+          1,
+          48,
+          3,
+          4,
+          4
+        ],
+        "saved_sidecar_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed42/output/2026-09-26_17-58-29",
+        "input": "synthetic9frames64x64; no test data"
+      },
+      "last_metric": {
+        "global_step": 4000,
+        "opt_step": 2000,
+        "steps_per_sec": 0.3838620051132732,
+        "batch_size": 4,
+        "lr": 3.0000000000000004e-07,
+        "metrics": {
+          "loss_total": 0.23786543309688568,
+          "loss_video": 0.23015891015529633,
+          "loss_action": 0.007706526666879654,
+          "grad_norm": 0.5031799674034119
+        },
+        "time": "2026-09-26T20:32:48.532441-05:00",
+        "peak_cuda_bytes": 18170073600
+      },
+      "metric_count": 4000,
+      "age_seconds": 6125.155869722366,
+      "all_metrics_finite": true
+    },
+    {
+      "arm": "mean",
+      "seed": 43,
+      "runner-started.json": {
+        "time": "2026-09-26T20:33:08.034760-05:00",
+        "pid": 2773951,
+        "host": "cm001",
+        "job": {
+          "host": "cm001",
+          "gpu_index": 4,
+          "gpu_uuid": "GPU-e7aef4c0-2628-b4f8-34f4-579d62b7feb6",
+          "run_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed43",
+          "manifest": "/home/zifanz4/openwam-experiments/studies/temporal-20260926/training-code-manifest.json",
+          "timeout_seconds": 18000,
+          "command": [
+            "/data02/zifanz4/openwam-experiments/policy-env/bin/python",
+            "-m",
+            "torch.distributed.run",
+            "--standalone",
+            "--nproc_per_node=1",
+            "/home/zifanz4/openwam-experiments/scripts/temporal/train_policy.py",
+            "--config-path",
+            "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed43",
+            "--config-name",
+            "config"
+          ]
+        }
+      },
+      "encoder-parity.json": {
+        "passed": true,
+        "native_save_reload_max_abs": 0.0,
+        "later_group_causality_max_abs": 0.0,
+        "shape": [
+          1,
+          48,
+          3,
+          4,
+          4
+        ],
+        "saved_sidecar_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed43/output/2026-09-26_20-35-15",
+        "input": "synthetic9frames64x64; no test data"
+      },
+      "last_metric": {
+        "global_step": 2760,
+        "opt_step": 1380,
+        "steps_per_sec": 0.4964229774081964,
+        "batch_size": 4,
+        "lr": 7.443301829348949e-06,
+        "metrics": {
+          "loss_total": 0.1971317082643509,
+          "loss_video": 0.1925986111164093,
+          "loss_action": 0.004533091560006142,
+          "grad_norm": 0.38217639923095703
+        },
+        "time": "2026-09-26T22:14:52.268778-05:00",
+        "peak_cuda_bytes": 18170073600
+      },
+      "metric_count": 2760,
+      "age_seconds": 1.4373626708984375,
+      "all_metrics_finite": true
+    },
+    {
+      "arm": "learned",
+      "seed": 43,
+      "runner-started.json": {
+        "time": "2026-09-26T20:34:27.890527-05:00",
+        "pid": 2774756,
+        "host": "cm001",
+        "job": {
+          "host": "cm001",
+          "gpu_index": 2,
+          "gpu_uuid": "GPU-025b7fc9-8f25-5467-5c28-8e59884ab6d3",
+          "run_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed43",
+          "manifest": "/home/zifanz4/openwam-experiments/studies/temporal-20260926/learned-training-code-manifest.json",
+          "timeout_seconds": 18000,
+          "command": [
+            "/data02/zifanz4/openwam-experiments/policy-env/bin/python",
+            "-m",
+            "torch.distributed.run",
+            "--standalone",
+            "--nproc_per_node=1",
+            "/home/zifanz4/openwam-experiments/scripts/temporal/train_policy.py",
+            "--config-path",
+            "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed43",
+            "--config-name",
+            "config"
+          ]
+        }
+      },
+      "encoder-parity.json": {
+        "passed": true,
+        "native_save_reload_max_abs": 0.0,
+        "later_group_causality_max_abs": 0.0,
+        "shape": [
+          1,
+          48,
+          3,
+          4,
+          4
+        ],
+        "saved_sidecar_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed43/output/2026-09-26_20-36-12",
+        "input": "synthetic9frames64x64; no test data"
+      },
+      "last_metric": {
+        "global_step": 2716,
+        "opt_step": 1358,
+        "steps_per_sec": 0.47581053269712986,
+        "batch_size": 4,
+        "lr": 7.910047606755191e-06,
+        "metrics": {
+          "loss_total": 0.1943339705467224,
+          "loss_video": 0.1903904229402542,
+          "loss_action": 0.00394355459138751,
+          "grad_norm": 0.342731773853302
+        },
+        "time": "2026-09-26T22:14:52.984022-05:00",
+        "peak_cuda_bytes": 18170073600
+      },
+      "metric_count": 2716,
+      "age_seconds": 0.7384824752807617,
+      "all_metrics_finite": true
+    },
+    {
+      "arm": "mean",
+      "seed": 44
+    },
+    {
+      "arm": "learned",
+      "seed": 44
+    }
+  ],
+  "results": 0,
+  "lanes": {
+    "mean": {
+      "started.json": {
+        "time": "2026-09-26T18:01:58.937335-05:00",
+        "arm": "mean"
+      }
+    },
+    "learned": {
+      "started.json": {
+        "time": "2026-09-26T18:01:58.938125-05:00",
+        "arm": "learned"
+      }
+    }
+  },
+  "processes": {
+    "returncode": 0,
+    "stdout": "1930711 2466506  1-02:28:08 bash -c timeout --signal=TERM --kill-after=90s 237315 python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --controller > /data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/controller.log 2>&1\n1930713 1930711  1-02:28:08 timeout --signal=TERM --kill-after=90s 237315 python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --controller\n1930714 1930713  1-02:28:08 python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --controller\n2685600 2466506    04:12:54 bash -c python3 /home/zifanz4/openwam-experiments/scripts/temporal/lane.py mean > /data02/zifanz4/openwam-experiments/temporal-20260926/lane-mean.log 2>&1\n2685602 2685600    04:12:54 python3 /home/zifanz4/openwam-experiments/scripts/temporal/lane.py mean\n2685603 2466506    04:12:54 bash -c python3 /home/zifanz4/openwam-experiments/scripts/temporal/lane.py learned > /data02/zifanz4/openwam-experiments/temporal-20260926/lane-learned.log 2>&1\n2685605 2685603    04:12:54 python3 /home/zifanz4/openwam-experiments/scripts/temporal/lane.py learned\n2773951 2685602    01:41:45 /usr/bin/python3 /home/zifanz4/openwam-experiments/scripts/temporal/run_owned.py /home/zifanz4/openwam-experiments/studies/temporal-20260926/mean-seed43-job.json\n2774131 2773951    01:41:18 /data02/zifanz4/openwam-experiments/policy-env/bin/python -m torch.distributed.run --standalone --nproc_per_node=1 /home/zifanz4/openwam-experiments/scripts/temporal/train_policy.py --config-path /data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed43 --config-name config\n2774204 2774131    01:41:05 /data02/zifanz4/openwam-experiments/policy-env/bin/python -u /home/zifanz4/openwam-experiments/scripts/temporal/train_policy.py --config-path /data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed43 --config-name config\n2774756 2685605    01:40:25 /usr/bin/python3 /home/zifanz4/openwam-experiments/scripts/temporal/run_owned.py /home/zifanz4/openwam-experiments/studies/temporal-20260926/learned-seed43-job.json\n2774890 2774756    01:40:04 /data02/zifanz4/openwam-experiments/policy-env/bin/python -m torch.distributed.run --standalone --nproc_per_node=1 /home/zifanz4/openwam-experiments/scripts/temporal/train_policy.py --config-path /data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed43 --config-name config\n2774909 2774890    01:40:03 /data02/zifanz4/openwam-experiments/policy-env/bin/python -u /home/zifanz4/openwam-experiments/scripts/temporal/train_policy.py --config-path /data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed43 --config-name config\n2775304 2774204    01:39:25 /data02/zifanz4/openwam-experiments/policy-env/bin/python -u /home/zifanz4/openwam-experiments/scripts/temporal/train_policy.py --config-path /data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed43 --config-name config\n2775305 2774204    01:39:25 /data02/zifanz4/openwam-experiments/policy-env/bin/python -u /home/zifanz4/openwam-experiments/scripts/temporal/train_policy.py --config-path /data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed43 --config-name config\n2775711 2774909    01:38:31 /data02/zifanz4/openwam-experiments/policy-env/bin/python -u /home/zifanz4/openwam-experiments/scripts/temporal/train_policy.py --config-path /data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed43 --config-name config\n2775712 2774909    01:38:30 /data02/zifanz4/openwam-experiments/policy-env/bin/python -u /home/zifanz4/openwam-experiments/scripts/temporal/train_policy.py --config-path /data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed43 --config-name config\n2818043 2467654       00:00 /bin/bash -c python3 - <<'PY' from pathlib import Path import json,datetime,time,math,subprocess,shutil r=Path('/data02/zifanz4/openwam-experiments/temporal-20260926');out={'time':datetime.datetime.now().astimezone().isoformat(),'training':[]} for seed in [42,43,44]:  for arm in ['mean','learned']:   p=r/'training'/f'{arm}-seed{seed}';row={'arm':arm,'seed':seed}   for n in ['exit.json','runner-started.json','encoder-parity.json']:    if (p/n).exists():row[n]=json.loads((p/n).read_text())   f=p/'metrics.jsonl'   if f.exists():    lines=f.read_text().splitlines();row['last_metric']=json.loads(lines[-1]);row['metric_count']=len(lines);row['age_seconds']=time.time()-f.stat().st_mtime    row['all_metrics_finite']=all(all(math.isfinite(v) for v in json.loads(s).get('metrics',{}).values() if isinstance(v,(float,int))) for s in lines)   out['training'].append(row) out['results']=len(list((r/'evaluation').glob('*/**/seed-*/result.json'))) out['lanes']={a:{n:json.loads((r/'lanes'/a/n).read_text()) for n in ['started.json','progress.json','exit.json'] if (r/'lanes'/a/n).exists()} for a in ['mean','learned']} for name,cmd in [('processes',['ps','-u','zifanz4','-o','pid,ppid,etime,args']),('gpu',['nvidia-smi','--query-gpu=index,uuid,memory.used,utilization.gpu,ecc.errors.uncorrected.volatile.total','--format=csv,noheader']),('gpu_processes',['nvidia-smi','--query-compute-apps=gpu_uuid,pid,used_memory','--format=csv,noheader'])]:  p=subprocess.run(cmd,capture_output=True,text=True);out[name]={'returncode':p.returncode,'stdout':'\\n'.join(x for x in p.stdout.splitlines() if name!='processes' or any(k in x for k in ['temporal','recovery','torchrun'])),'stderr':p.stderr} out['disk_free_gib']={x:shutil.disk_usage(x).free/2**30 for x in ['/data02','/home/zifanz4']} s=Path('/home/zifanz4/openwam-experiments/studies/temporal-20260926/selfchecks');s.mkdir(exist_ok=True);(s/'20260926T2100-local-evidence.json').write_text(json.dumps(out,indent=2)+'\\n') for row in out['training']:print(json.dumps(row)) print(json.dumps({k:v for k,v in out.items() if k not in ['training','processes']})) print(out['processes']['stdout']) PY",
+    "stderr": ""
+  },
+  "gpu": {
+    "returncode": 0,
+    "stdout": "0, GPU-c83b7d25-753e-2eae-f13b-8f9c3df9fa4b, 22759 MiB, 98 %, 0\n1, GPU-67b700c2-eb7a-93aa-28dd-57e8b2711926, 23113 MiB, 100 %, 0\n2, GPU-025b7fc9-8f25-5467-5c28-8e59884ab6d3, 21995 MiB, 3 %, 0\n3, GPU-bba13bfa-9dd6-0956-0e4e-122950cd69fe, 6 MiB, 0 %, 0\n4, GPU-e7aef4c0-2628-b4f8-34f4-579d62b7feb6, 21997 MiB, 3 %, 0\n5, GPU-1758045c-5a5e-3661-bb58-a786fa745a17, 4 MiB, 0 %, 0\n6, GPU-91a9a93b-b386-82f0-3009-88cc9bb79d06, 4 MiB, 0 %, 0\n7, GPU-3624eff9-444b-b72c-e32e-2bae7acbb8cb, 25615 MiB, 96 %, 0",
+    "stderr": ""
+  },
+  "gpu_processes": {
+    "returncode": 0,
+    "stdout": "GPU-c83b7d25-753e-2eae-f13b-8f9c3df9fa4b, 2615974, 22670 MiB\nGPU-67b700c2-eb7a-93aa-28dd-57e8b2711926, 2615975, 23022 MiB\nGPU-025b7fc9-8f25-5467-5c28-8e59884ab6d3, 2774909, 21986 MiB\nGPU-e7aef4c0-2628-b4f8-34f4-579d62b7feb6, 2774204, 21986 MiB\nGPU-3624eff9-444b-b72c-e32e-2bae7acbb8cb, 1842294, 25608 MiB",
+    "stderr": ""
+  },
+  "disk_free_gib": {
+    "/data02": 93.9794921875,
+    "/home/zifanz4": 0.1650390625
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "time": "2026-09-22T17:11:28.640556-05:00",
+  "native_source_files_verified": 273,
+  "changes_only_copied_environment_paths": [
+    {
+      "file": "goalaux-native/benchmark-env/lib/python3.10/site-packages/__editable__.nvidia_curobo-0.7.8.pth",
+      "before": "f3ad7c3db64c31c5a462d7a70bbb348afc41c0dfb0a7343d0bccc6f74e79d0d4",
+      "after": "4e2653849f5e278285f26e811bec0fa0b8da13acb44104cbf3594246c581b54a"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/activate.csh",
+      "before": "a51f1f524e4d28e745eaa5845b1cb7bf1979610138f2a89d8853f4d50aea2cfb",
+      "after": "818297d88237fbd576776771586b45586c2906684ae1ca2bbe7be538210b2c6c"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/plotly_get_chrome",
+      "before": "f759c224cb75d94722e31e1f351e319638134b1008267c304655d8be4f7d05dd",
+      "after": "fdc5a43816500ba98292eaa368a600ee6b7a722594466a4fe02f4dee40e4282b"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/tiffcomment",
+      "before": "d1288b367088842838e74da42d19f94f0369574db32b22fe4933b4a2b21b227c",
+      "after": "6aadd6817ae5bf5c687486d5f1fd0f1b4ff0a837a72173f6df13bf8472015fcc"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/pip",
+      "before": "e60b7b4584d82e2ae1f3d3fa16f27862b8b12c5b03fc0c35b72b08807f4262d4",
+      "after": "99aebbcd03213b5ec95c4fbeb45d1ef165c4b017fbbc2275096c112a22006833"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/dash-update-components",
+      "before": "089eedc6e1e00846aef89e08823f491129fd7d4365ebb1b91bb4ba4e91881736",
+      "after": "fadc06bc9ba591a7d5087a99883995b94b35599bad5e46dc61939b46527c2412"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/renderer",
+      "before": "2ec7e6d85aa7d86e43ba7464291684b1ff99946b9584cba0b42ece1fe8208e97",
+      "after": "72790255f3ce809a5240c631b3a3610a75a99774a4ebd54d54c83ad01c22d484"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/jupyter-migrate",
+      "before": "ec91bfc916d254a7ad321dbd31e9d1de04d817e7e02549b7cb67cf79f1e87733",
+      "after": "a43b79060a34cb037fa9d3e753f2fe32f69bc666dee48e68d8523438ffb26742"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/vcs-versioning",
+      "before": "dee84c145ddbde6d99ec2299f3e9d0e7872ae5ffb89f707ffa0a0eb738a3cb27",
+      "after": "f4f262eefd3fa7add350c0f155a52a4d21294f43736b5859c1b8a22bac4c5f95"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/jupyter-troubleshoot",
+      "before": "6490956db7b272e251748035b0e665cf7623833f6baf2081623b9e091ed9cd70",
+      "after": "0ea6bbd220ea108153d984f66c9221e414bb4889f0cebab03ed85af32901e98e"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/proton",
+      "before": "caf1c1aff54ec481d26522ad2e49ad7ea7cacf312c063c9d2deb1010a5f431fd",
+      "after": "ee4945e29e02f20793b569149bfe64c860adb9954a0fce090e91ac2b402b2f7d"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/convert-onnx-to-caffe2",
+      "before": "f0d3fc2929f317d6cf33de8e1c7a8c31129cc53eb914d2ae691869dacdab87e7",
+      "after": "b16c433e0f105c86055d0620603bbf3a6751ce70c8eab55ecf38ffd2df68363e"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/chardetect",
+      "before": "d68223af6a5ec4a50f19e644a60230663a546f41b4c0bdb298453ab272268e47",
+      "after": "4896ace47aa0d28945cbcc988aed497f5a46c35b717ebc8766f697a5b776d7cb"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/yourdfpy",
+      "before": "8580329921cd17ecd19f7ad805a051a36374a162cbc3b53003282ae69a25e4f7",
+      "after": "1fa91d08f49fd8f8a4095f26e17fc955fd020cc95371ccb73974a48f8954a0a9"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/ttx",
+      "before": "a4a70cb1c16c9db075ea5e12e5b2c243f79d4cd193380439756838f4ece2d787",
+      "after": "eca723efd5bac96905dceb85c4ab19ff0388cbe987ed75ad321ea03a91f29fef"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/pyftsubset",
+      "before": "3b0bbc3a601d41c52ead44256b01e49d7b03a50a57f099da4e10b2e44282c79f",
+      "after": "024792e27bc8a6fb541bc3c8a732114a205971bd115d64d9129fa4bded1cc36e"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/pybind11-config",
+      "before": "b1bf32512f9d80592da3e8da8309917609cf3dfe1a8e79f7efe41d4d3514601c",
+      "after": "3907f4eeb630d9a78247380b9b9398595220ce6fb9ec361facfb8249120d932d"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/pygmentize",
+      "before": "7eddfeecefd57dd3272df2c6f42b0ae83fff21e0cb30d0b3692421c859854aab",
+      "after": "34715b4ce8bdfe89d78f7092612a27d3a6f24ea15ef9314c80daa21e03b4a0b2"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/jupyter-trust",
+      "before": "50f1a240125f0159d266f1eeb3690ce990e83ba88100add4e88c2752d9e3f574",
+      "after": "f3dab0186c62d693273009fbaf63908459c5f4e95c9f15550e898c6202d58326"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/httpx",
+      "before": "943a9909547e01b0524dc8cced493ab3efc11abd51205b86d1c111f3624d389a",
+      "after": "589290abeb43cfaf15bb2ef7818011bf0b3183202ae3fedbf604d5a86609dc1f"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/wheel",
+      "before": "2a8d07b2f7628a8fbb0d2c40924e374a648c9b90f029640b80e67532f2b9affe",
+      "after": "c7d2df1202de3a7ccce04651ef7d4ba8049e2692f0ac0d9bfe8f247f80311be3"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/setuptools-scm",
+      "before": "dee84c145ddbde6d99ec2299f3e9d0e7872ae5ffb89f707ffa0a0eb738a3cb27",
+      "after": "f4f262eefd3fa7add350c0f155a52a4d21294f43736b5859c1b8a22bac4c5f95"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/dash-generate-components",
+      "before": "49a01314ef66c6e4a8d7b925e7232a8d283dfbe257272ac659c4aec5d6f31168",
+      "after": "7dca199976da6802c1320647aada6e3771ccefb47123d2b5f4e0c239d4605ff1"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/flask",
+      "before": "4478486afe1c37c8b494c2db96a69231309144a4d185a16600badc363f86797f",
+      "after": "84b396c8db3496c5c8c00dd44af18e4f1cdce2e7a446eb43b4292da3152f4d39"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/isympy",
+      "before": "025bd6864af16d9a6589793a9f57a6a2ec390d27b30d94ccceb03df3fe6f28bd",
+      "after": "b8d08f957a134465c1da6423d8d7209738cb5f70135edd565e058e30d0147380"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/fonttools",
+      "before": "6da163be15754f71e5e41edc1bb0ee6d447785deeca07c02064764076a81d638",
+      "after": "a40f46e468843139b69c0bba59dc9ea8009f252e0444bad2d92fd797835e427f"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/pip3",
+      "before": "e60b7b4584d82e2ae1f3d3fa16f27862b8b12c5b03fc0c35b72b08807f4262d4",
+      "after": "99aebbcd03213b5ec95c4fbeb45d1ef165c4b017fbbc2275096c112a22006833"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/idna",
+      "before": "38354e86caf89dabbcd874c58849d18ce699b41aab5a1f554ac3bc127aaa987b",
+      "after": "e1f69e724a3062f1e8237f278d356415c6a8a8c877bc0f4640f54a40a4ff3f26"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/imageio_download_bin",
+      "before": "80817800ae9f84b02d445982874c79944a3f207b599657e523644f1c2dbd8c8a",
+      "after": "8c51a048c0e91ebeb56d676ed627cfeaee4bd2c9a058f3550e5d0e0af98138df"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/plotly",
+      "before": "6422676f43476ff6bb590e39bc65480e977b4e63c92da53003b533310c8e5c38",
+      "after": "7b7d9884405bc6927d15f2d317057ca693258548cda51050036e37322e901c86"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/tqdm",
+      "before": "6e3ef4a4c2fee5f1170687fdf102165e40bfc604477e7a185e3a9cfaf255be03",
+      "after": "072cd77fe55bdc15e8068cab3a86eefb80790182c89108c0ce62785191245660"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/convert-caffe2-to-onnx",
+      "before": "b0a2179ddb50e761589cb498454b15eb74aa93c8b72434d361de4d01749c74eb",
+      "after": "df09d980769f29c24db17c4d6329df1aa50c0e3d4b9e3c5d73aabfcde6d05d50"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/proton-viewer",
+      "before": "031ad51abe2ccfd75741f026c77d039c42922c77e317c3c411c624d051b49701",
+      "after": "38e4d9b1d3a3f64bf348b46667a44114ce4e09646d92b817b4c9b3ae2b89fc43"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/tifffile",
+      "before": "4183ad73cef22d50639de97d333404e77bd8e3c573300b4cf563b7be948303cc",
+      "after": "6991da0a7061fbaa2c4f0e5a66c11ad902a0d2fbbf394617597e951927ffe0ac"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/websockets",
+      "before": "d3b6098b07bf6910842caa4946d122982c02021166e2c1b10f85f5aa7ad30c54",
+      "after": "a5b2d9b77a8476669b096534cdef80ef70de9f9bf7f53ddef761a3f5434c6381"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/open3d",
+      "before": "b275dd4f27d106bb078ba121e47716094afc92caff39f6be7e3ba727a79e9146",
+      "after": "453f187a3541b4e9c48f69b6bdaec270cfa20aa9e5c0cf249bea2bd41e0743d4"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/lsm2bin",
+      "before": "ff832ec4271f9bb71f1092f0fb01ade914033d0ffcf83946a9535acf474f494c",
+      "after": "2d8b905f19d6dc22b0cc797619bef7323b499f71e327153fdb2c596ca7cad010"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/activate.fish",
+      "before": "5fd44959ce406c4ca4277a0df9a11fcc3da07ea3f179726f4fb6f24d33e5a420",
+      "after": "893aee794a8337f7c847add06f498063caa146f02d98fd33272d1d3eddd1c8b1"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/torchrun",
+      "before": "e96f95ef9cea63f238866ec8779350430ce178ab378b988b3e2d7c322148547d",
+      "after": "43a8daf39014918596bc274cde2aba8c5a1800180eeeb0288b3d707399a7dad1"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/sapien",
+      "before": "ee0164b861e3324062631b5fd699a33888bf8edb12361ee8d5d17989b95703ed",
+      "after": "077e5ad215c66fc15dd4b62254ca7948c5a284cf6df32854c05fbae4073392ab"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/activate",
+      "before": "70bced1aa8a74a587d22fce6d6c755bd2e19251ab5303f5ad4fa7b0f7ae1f058",
+      "after": "cbd174e559a4e9aa82b994f293ffd38a4bd3c7c1263270b5d35b5b527aac4264"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/imageio_remove_bin",
+      "before": "547b1eb5cdf08d4a8ae5cf43c212fa8dfe8abe2e55fda9d310aa9f5e77017c03",
+      "after": "7f7629d17169008cb616da70ded131a882128509c26bb8edf6582ac5190de35e"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/pyav",
+      "before": "db8b21337934f4e3c8699a3370f5a43ea6e4d70aafcbae89e922b825fe51b663",
+      "after": "e255ae5c0a1b4aeb51192859d42afdf9cf1067bf74d7e2f045a3a28a2e38aa8e"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/jsonschema",
+      "before": "cfc8aea5c68474d1c8b977257fa30f6289e9ef6569723df32b3e20efcf4e01c3",
+      "after": "e66220599515b7ecd603f8a9cfd7ca4c08be2bfa4a031bdd4b0eb95ea2bc1527"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/f2py",
+      "before": "fe8bdfd3716d942c831143c0dc9cf96d3a5dc10ce515d90998237ce966625800",
+      "after": "40a308e76854e0443da8eb185a6e752aa12ca00411f5503aa9b418ca50983398"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/ipython3",
+      "before": "8a37d78b6430333d8c7e70b5f3090cd30a708b209e5bc7e06f74359c153a4f89",
+      "after": "07b0b8f2658424e058ac38b326051fc79b74afc34780cabcffdb920c58fd90c2"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/pyftmerge",
+      "before": "12fe4c032614be503f9ff4435000e6981b448dcaedd10be21f0b1de72b3b72ff",
+      "after": "02703b78233404592994dddff73f311572e4e96542d25151229f2327a8f835f8"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/tiff2fsspec",
+      "before": "352342a080b4f84b821168567c84c551d7bcaeb0b353e0dbe97059e440160c67",
+      "after": "49074a41cab6f7d5da614371b6c7bea660a860b2ee343ac468486535772ffa05"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/pip3.10",
+      "before": "e60b7b4584d82e2ae1f3d3fa16f27862b8b12c5b03fc0c35b72b08807f4262d4",
+      "after": "99aebbcd03213b5ec95c4fbeb45d1ef165c4b017fbbc2275096c112a22006833"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/jupyter",
+      "before": "434c3a7c75434e0cd916dfa0bda0e9ade4be9b0ae3fc62fb0fad1a2ebb782456",
+      "after": "a630dbd8b4f0e421014024b4b071b0c83c299679c628a9610b512846d5fc4d89"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/ipython",
+      "before": "8a37d78b6430333d8c7e70b5f3090cd30a708b209e5bc7e06f74359c153a4f89",
+      "after": "07b0b8f2658424e058ac38b326051fc79b74afc34780cabcffdb920c58fd90c2"
+    },
+    {
+      "file": "goalaux-native/benchmark-env/bin/normalizer",
+      "before": "d99c4c2e10ca91475a4b13fc243977332fb562a9fc9828728b025cfe574fa68e",
+      "after": "a5a926434f06695e2a67b932e05c34973445735b51edfa05d26047a3c205aa07"
+    }
+  ],
+  "original_environment_unchanged": true
+}

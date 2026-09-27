@@ -1,0 +1,67 @@
+{
+  "as_of": "2026-09-22T18:53:32.552933-05:00",
+  "counts": {
+    "adjust_bottle": 20,
+    "handover_block": 20,
+    "place_object_basket": 7
+  },
+  "attempts": 56,
+  "outcomes": {
+    "accepted": 47,
+    "unstable_scene": 3,
+    "expert_infeasible": 6
+  },
+  "classification_repairs": [
+    {
+      "task": "place_object_basket",
+      "seed": 802008,
+      "original_outcome": "infrastructure_failure"
+    }
+  ],
+  "collection_deadline": "2026-09-22T19:15:55.548938-05:00",
+  "active": [
+    {
+      "task": "place_object_basket",
+      "seed": 802011,
+      "pid": 1495688,
+      "alive": true,
+      "log_time": "2026-09-22T18:53:32.546003-05:00"
+    }
+  ],
+  "collector_exit": null,
+  "confirmation_exit": null,
+  "new_summary_exists": false,
+  "gpu": "5502, 0, 0",
+  "tmux": [
+    "wam-goalaux-collect-v3 1494947 0 python3",
+    "wam-goalaux-confirm-v2 1495496 0 python3"
+  ],
+  "latest_accepted": {
+    "task": "place_object_basket",
+    "seed": 802006,
+    "role": "expert_only_independent_confirmation",
+    "accepted": true,
+    "started_at": "2026-09-22T18:42:34.537568-05:00",
+    "expert_plan_success": true,
+    "expert_replay_success": true,
+    "outcome": "accepted",
+    "frames": 236,
+    "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/place_object_basket/seed-802006/data/episode0.hdf5",
+    "hdf5_sha256": "62dbd4f7a192d1231c1dddcb57bc898ed4c3bf2d5a0ce319bc45df76293d5add",
+    "scene_info": {
+      "cluttered_table_info": [],
+      "texture_info": {
+        "wall_texture": null,
+        "table_texture": null
+      },
+      "info": {
+        "{A}": "081_playingcards/base0",
+        "{B}": "110_basket/base0",
+        "{a}": "left",
+        "{b}": "right"
+      }
+    },
+    "elapsed_seconds": 105.54575119912624,
+    "exit_code": 0
+  }
+}

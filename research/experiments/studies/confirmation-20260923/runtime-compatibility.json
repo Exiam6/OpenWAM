@@ -1,0 +1,9 @@
+{
+  "time": "2026-09-23T12:07:10.956485-05:00",
+  "reason": "rainier Ubuntu20.04glibc2.31 cannot start existing Ubuntu22.04-built Python3.10.12; no Python code executed in failed Ampere dispatch",
+  "change": "private copied cm001glibc2.35 loader/dependencies for this subprocess; no system changes; original Python and installed packages retained bytewise",
+  "scientific_protocol_code_tolerance_deadline_unchanged": true,
+  "cpu_import_check": "Python3.10.12 torch2.7.0+cu126 numpy2.2.6 h5py3.16.0 transformers5.17.0 cv2-5.0.0 imported onrainier; noGPU or confirmation data used",
+  "launch_bound": "one startup repair, then frozen training-only parity gate before any new-scene features",
+  "launcher_sha256": "ec27c70e1cc7e5bba25d100ef5be929fe0466348742d55dc0d85ac430af4162d"
+}

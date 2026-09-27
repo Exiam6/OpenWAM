@@ -1,0 +1,19 @@
+{
+  "time": "2026-09-24T03:16:36.091362-05:00",
+  "run": "wan-seed42",
+  "exit": {
+    "time": "2026-09-24T03:09:02.445341-05:00",
+    "returncode": 0
+  },
+  "metrics_rows": 12000,
+  "batch_stream_rows": 12000,
+  "global_step": 12000,
+  "optimizer_updates": 6000,
+  "all_logged_metrics_finite": true,
+  "checkpoint": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/checkpoint_step_12000.safetensors",
+  "bytes": 13361411736,
+  "tensor_count": 1117,
+  "header_sha256": "544ef222ad66a439c068208541561bc0dcb48b2b9f220e978ac137f893906642",
+  "checkpoint_structure_valid": true,
+  "scope": "Header dimensions, tensor byte counts/offsets and file length checked after exit0; full payload hash and deployment verification pending. No policy scoring."
+}

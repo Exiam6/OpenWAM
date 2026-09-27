@@ -1,0 +1,58 @@
+"""Opt-in temporal kernel; mean initialization, independent first frame, same tokens."""
+from pathlib import Path
+import json
+import torch
+from torch import nn
+from .dinov3 import DinoV3VideoEncoder
+from .registry import register_video_encoder
+
+class ConvexTemporalPool(nn.Module):
+    def __init__(self, channels):
+        super().__init__()
+        self.logits = nn.Parameter(torch.zeros(channels, 4))
+
+    def weights(self):
+        # A fixed uniform mixture limits each weight to [1/8,5/8].
+        return .125 + .5 * self.logits.float().softmax(-1)
+
+    def forward(self, x):
+        if x.ndim != 5 or x.shape[1] != self.logits.shape[0] or x.shape[2] < 1 or (x.shape[2]-1) % 4:
+            raise ValueError('Expected B,C,1+4k,H,W with matching channels')
+        b,c,t,h,w = x.shape
+        if t == 1:
+            return x
+        groups = x[:,:,1:].reshape(b,c,(t-1)//4,4,h,w)
+        delta = (self.weights() - .25).to(x.dtype)[None,:,None,:,None,None]
+        # At zero logits the added term is exactly zero, preserving native mean.
+        pooled = groups.mean(3) + (groups * delta).sum(3)
+        return torch.cat((x[:,:,:1], pooled), 2)
+
+@register_video_encoder('dinov3_temporal')
+class TemporalDinoV3VideoEncoder(DinoV3VideoEncoder):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._temporal = ConvexTemporalPool(self._raw_embed_dim)
+
+    def _batch_encode_pooled_raw(self, video):
+        return self._temporal(self._batch_encode_frame_grid(video))
+
+    @classmethod
+    def from_pretrained(cls, model_path, *, temporal_path=None, **kwargs):
+        enc = super().from_pretrained(model_path, **kwargs)
+        if temporal_path is not None:
+            saved = torch.load(temporal_path, map_location='cpu', weights_only=True)
+            enc._temporal.load_state_dict(saved['pool_state_dict'], strict=True)
+        return enc
+
+    @classmethod
+    def from_skeleton(cls, components_entry, *, device='cpu', encoder_cfg=None, ckpt_dir=None):
+        p = Path(ckpt_dir or '') / 'temporal_pool.json'
+        meta = json.loads(p.read_text())
+        if meta != {'format_version':1, 'kind':'convex_channelwise_4', 'uniform_mixture':.5}:
+            raise ValueError('Unsupported temporal-pool sidecar')
+        return super().from_skeleton(components_entry, device=device, encoder_cfg=encoder_cfg, ckpt_dir=ckpt_dir)
+
+    def save_deploy_assets(self, output_dir, cfg):
+        super().save_deploy_assets(output_dir, cfg)
+        (Path(output_dir)/'temporal_pool.json').write_text(json.dumps(
+            {'format_version':1,'kind':'convex_channelwise_4','uniform_mixture':.5}, indent=2)+'\n')

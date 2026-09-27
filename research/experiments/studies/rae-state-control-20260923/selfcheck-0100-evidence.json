@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-09-23T01:01:01.726889-05:00",
+  "trigger": "2026-09-23T01:00:01.380970-05:00",
+  "terminal": {
+    "rae-noise-control-20260922": {
+      "exit": {
+        "finished_at": "2026-09-23T00:05:20.246213-05:00",
+        "exit_code": 0
+      },
+      "saved_audit_passed": true,
+      "result_completed_at": "2026-09-23T00:05:19.333558-05:00",
+      "final_log_starts_COMPLETE": true,
+      "log_bytes": 4014
+    },
+    "rae-state-control-20260923": {
+      "exit": {
+        "finished_at": "2026-09-23T00:24:31.313997-05:00",
+        "exit_code": 0
+      },
+      "saved_audit_passed": true,
+      "result_completed_at": "2026-09-23T00:24:29.856138-05:00",
+      "final_log_starts_COMPLETE": true,
+      "log_bytes": 8953
+    }
+  },
+  "unchanged_files": {
+    "result.json": true,
+    "exit.json": true,
+    "audit.json": true,
+    "protocol.json": true,
+    "freeze.json": true,
+    "run.log": true
+  },
+  "completed_at": "2026-09-23T01:02:04.425692-05:00",
+  "scientific_state_changed": false,
+  "no_pause_markers": true,
+  "resource": {
+    "host": "glacier",
+    "gpu": "GPU-d13929da-086d-1be5-6414-dbf6aeded08e",
+    "memory_MiB": 9477,
+    "utilization_percent": 51,
+    "uncorrected_volatile_ECC": 0,
+    "compute_processes": [
+      {
+        "pid": 4184055,
+        "owner_verified_by_ps": "kagaram2",
+        "process": "python",
+        "used_memory_MiB": 9464
+      }
+    ],
+    "owned_experiment_processes": [],
+    "interpretation": "Another user is now using the GPU after our completed job released it; not reserved or available for our work; no process signaled."
+  },
+  "next_step": "Completed goal/state controls, independent audits, local report, confirmation draft and documentation patch are archived in c4255fa. No new experiment fits inside the remaining original01:15:12CDTwindow on the validated full60scene collection path. Preserve all terminal results and check only for material state changes or deadline closure. The next scientific uncertainty is independent-scene reproducibility of compact-feature goal/translation gains and gripper tradeoffs; the prepared new60scene draft is not launched and would require a separate fixed budget. No old80 or expired56/60 replay, no extension.",
+  "original_deadline": "2026-09-23T01:15:12-05:00",
+  "publication_attempted": false,
+  "last_publication_lookup": "2026-09-23T00:29:47-05:00",
+  "last_publication_error": "SitesConnectorError: Sites project not found",
+  "notification": "none; scientific state unchanged, new other-user allocation requires no action"
+}

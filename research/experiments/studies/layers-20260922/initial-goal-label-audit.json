@@ -1,0 +1,1965 @@
+{
+  "checked_at": "2026-09-22T14:58:18.176511-05:00",
+  "scope": "training-only label/state structural audit for a possible future probe; not a trained/evaluated new method",
+  "predicate": "earliest downward native gripper crossing0.5 across botharms",
+  "contact_label_claim": false,
+  "future_task_definition_not_finalized": true,
+  "dev_or_confirmation_read": false,
+  "summary": {
+    "adjust_bottle": {
+      "train_episodes": 35,
+      "valid_first_downward_crossing": 35,
+      "initial_proprio_std": [
+        0.0,
+        0.0,
+        0.0,
+        3.3306690738754696e-16,
+        5.293955920339377e-22,
+        0.0,
+        5.551115123125783e-16,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        3.3306690738754696e-16,
+        0.0,
+        0.0
+      ],
+      "initial_proprio_range": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "event_position_std_native": [
+        0.02090386238136963,
+        0.031079087560436994,
+        0.001087395591245651
+      ],
+      "event_position_range_native": [
+        0.080474141985178,
+        0.13234741613268852,
+        0.0037229061126708984
+      ],
+      "event_frame_min_max": [
+        57,
+        80
+      ],
+      "left_events": 20,
+      "right_events": 15
+    },
+    "handover_block": {
+      "train_episodes": 35,
+      "valid_first_downward_crossing": 35,
+      "initial_proprio_std": [
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        5.082197683525802e-21,
+        0.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        3.3306690738754696e-16,
+        0.0,
+        0.0,
+        3.3306690738754696e-16,
+        0.0,
+        0.0
+      ],
+      "initial_proprio_range": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "event_position_std_native": [
+        0.05504927032970224,
+        0.07169106830715542,
+        0.00042098806423082884
+      ],
+      "event_position_range_native": [
+        0.19973255693912506,
+        0.22931650280952454,
+        0.002212047576904297
+      ],
+      "event_frame_min_max": [
+        54,
+        72
+      ],
+      "left_events": 35,
+      "right_events": 0
+    },
+    "place_object_basket": {
+      "train_episodes": 35,
+      "valid_first_downward_crossing": 35,
+      "initial_proprio_std": [
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        5.082197683525802e-21,
+        0.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        3.3306690738754696e-16,
+        0.0,
+        0.0,
+        3.3306690738754696e-16,
+        0.0,
+        0.0
+      ],
+      "initial_proprio_range": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "event_position_std_native": [
+        0.22764628386172625,
+        0.055274405369842974,
+        0.00039605355471966994
+      ],
+      "event_position_range_native": [
+        0.5019685328006744,
+        0.1715073063969612,
+        0.0013889670372009277
+      ],
+      "event_frame_min_max": [
+        56,
+        73
+      ],
+      "left_events": 17,
+      "right_events": 18
+    }
+  },
+  "records": [
+    {
+      "task": "adjust_bottle",
+      "episode": 10,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 61,
+      "arm": "left",
+      "native_endpose_position": [
+        0.028282973915338516,
+        -0.11840066313743591,
+        0.8976632952690125
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 15,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 60,
+      "arm": "right",
+      "native_endpose_position": [
+        -0.045624785125255585,
+        -0.11483915895223618,
+        0.8972029685974121
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 16,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 80,
+      "arm": "left",
+      "native_endpose_position": [
+        0.009824764914810658,
+        -0.12590435147285461,
+        0.8993849754333496
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 17,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 63,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.012239646166563034,
+        -0.06233980879187584,
+        0.8967496752738953
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 18,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 65,
+      "arm": "right",
+      "native_endpose_position": [
+        -0.010384591296315193,
+        -0.09435797482728958,
+        0.8985137939453125
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 20,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 59,
+      "arm": "right",
+      "native_endpose_position": [
+        -0.013270710594952106,
+        -0.09727960079908371,
+        0.8990795612335205
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 21,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 62,
+      "arm": "left",
+      "native_endpose_position": [
+        0.031193919479846954,
+        -0.14159612357616425,
+        0.8957327604293823
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 23,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 67,
+      "arm": "left",
+      "native_endpose_position": [
+        0.011042620055377483,
+        -0.05431376025080681,
+        0.8967127799987793
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 24,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 60,
+      "arm": "left",
+      "native_endpose_position": [
+        0.0014423283282667398,
+        -0.12317223101854324,
+        0.8973636627197266
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 25,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 57,
+      "arm": "right",
+      "native_endpose_position": [
+        -0.0028906019870191813,
+        -0.15142668783664703,
+        0.8982718586921692
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 26,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 63,
+      "arm": "left",
+      "native_endpose_position": [
+        0.026604855433106422,
+        -0.08846364915370941,
+        0.8973228931427002
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 27,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 62,
+      "arm": "left",
+      "native_endpose_position": [
+        0.02423461712896824,
+        -0.11896593123674393,
+        0.8957258462905884
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 28,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 60,
+      "arm": "right",
+      "native_endpose_position": [
+        -0.030863314867019653,
+        -0.08636290580034256,
+        0.8967704176902771
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 29,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 64,
+      "arm": "left",
+      "native_endpose_position": [
+        0.0038842943031340837,
+        -0.029614407569169998,
+        0.8965006470680237
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 3,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 61,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.005204030312597752,
+        -0.08494704216718674,
+        0.8965272307395935
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 30,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 65,
+      "arm": "right",
+      "native_endpose_position": [
+        -0.013768209144473076,
+        -0.07657197117805481,
+        0.8981542587280273
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 31,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 61,
+      "arm": "left",
+      "native_endpose_position": [
+        0.0035972229670733213,
+        -0.13021662831306458,
+        0.8956661224365234
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 32,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 58,
+      "arm": "right",
+      "native_endpose_position": [
+        -0.007508228998631239,
+        -0.14022688567638397,
+        0.8977203369140625
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 34,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 63,
+      "arm": "left",
+      "native_endpose_position": [
+        0.015337376855313778,
+        -0.13411831855773926,
+        0.8957100510597229
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 37,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 65,
+      "arm": "right",
+      "native_endpose_position": [
+        -0.018620291724801064,
+        -0.09755223989486694,
+        0.8981145024299622
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 38,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 63,
+      "arm": "left",
+      "native_endpose_position": [
+        0.007897717878222466,
+        -0.09238851815462112,
+        0.896613597869873
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 39,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 57,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.003680148394778371,
+        -0.15423719584941864,
+        0.8956620693206787
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 4,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 68,
+      "arm": "left",
+      "native_endpose_position": [
+        0.028762318193912506,
+        -0.08262652903795242,
+        0.8957497477531433
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 40,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 64,
+      "arm": "right",
+      "native_endpose_position": [
+        -0.012522469274699688,
+        -0.14498427510261536,
+        0.8980094194412231
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 41,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 66,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.0007561456877738237,
+        -0.05420643463730812,
+        0.8968526124954224
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 42,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 66,
+      "arm": "right",
+      "native_endpose_position": [
+        -0.04928022250533104,
+        -0.08782769739627838,
+        0.8978270888328552
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 43,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 61,
+      "arm": "left",
+      "native_endpose_position": [
+        0.007609042339026928,
+        -0.10680760443210602,
+        0.8965626358985901
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 44,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 64,
+      "arm": "right",
+      "native_endpose_position": [
+        -0.031002581119537354,
+        -0.08883224427700043,
+        0.8990134000778198
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 45,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 63,
+      "arm": "left",
+      "native_endpose_position": [
+        0.025926809757947922,
+        -0.12150821834802628,
+        0.8956947326660156
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 46,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 65,
+      "arm": "right",
+      "native_endpose_position": [
+        -0.03014967404305935,
+        -0.16196182370185852,
+        0.8982499837875366
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 47,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 64,
+      "arm": "right",
+      "native_endpose_position": [
+        -0.022764503955841064,
+        -0.1109950989484787,
+        0.898090124130249
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 49,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 63,
+      "arm": "right",
+      "native_endpose_position": [
+        -0.018667520955204964,
+        -0.09332218766212463,
+        0.8981486558914185
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 5,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 66,
+      "arm": "left",
+      "native_endpose_position": [
+        0.015670018270611763,
+        -0.10062597692012787,
+        0.8957279324531555
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 7,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 58,
+      "arm": "right",
+      "native_endpose_position": [
+        -0.015599649399518967,
+        -0.1270768642425537,
+        0.8973941802978516
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 9,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 68,
+      "arm": "left",
+      "native_endpose_position": [
+        0.02000507339835167,
+        -0.05799521133303642,
+        0.8964551687240601
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 10,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 60,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.2099044919013977,
+        0.1539531648159027,
+        0.9109881520271301
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 15,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 58,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.18959301710128784,
+        0.10881336033344269,
+        0.9109719395637512
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 16,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 60,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.36220577359199524,
+        0.16626912355422974,
+        0.9108834862709045
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 17,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 56,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.2501718997955322,
+        0.026541313156485558,
+        0.910452127456665
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 18,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 61,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.20935972034931183,
+        0.16190382838249207,
+        0.9109984636306763
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 20,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 54,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.21255874633789062,
+        -0.027523130178451538,
+        0.9103595614433289
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 21,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 63,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.19129547476768494,
+        0.16318394243717194,
+        0.9111354947090149
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 23,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 57,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.30432915687561035,
+        0.06970126181840897,
+        0.9104456901550293
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 24,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 57,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.16397197544574738,
+        -0.013826982118189335,
+        0.9105627536773682
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 25,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 56,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.222459614276886,
+        0.01119938399642706,
+        0.9105708003044128
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 26,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 57,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.18278779089450836,
+        0.026980970054864883,
+        0.9106849431991577
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 27,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 57,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.2835416793823242,
+        0.08940453827381134,
+        0.9108114838600159
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 28,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 55,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.2828783392906189,
+        -0.042354367673397064,
+        0.9103088974952698
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 29,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 72,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.24959492683410645,
+        0.18307678401470184,
+        0.9089635014533997
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 3,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 55,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.2779737710952759,
+        -0.04606194794178009,
+        0.9102659225463867
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 30,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 61,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.24267403781414032,
+        0.16348007321357727,
+        0.9109721779823303
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 31,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 61,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.21782775223255157,
+        0.12259402871131897,
+        0.911175549030304
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 32,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 61,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.2153852880001068,
+        0.13728183507919312,
+        0.9111217260360718
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 34,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 62,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.18302364647388458,
+        0.14677971601486206,
+        0.911142885684967
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 37,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 55,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.3325679302215576,
+        0.02412852831184864,
+        0.9104558229446411
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 38,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 57,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.21731162071228027,
+        0.0387798547744751,
+        0.9107138514518738
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 39,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 64,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.23538443446159363,
+        0.18325455486774445,
+        0.9110226631164551
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 4,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 61,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.1949334293603897,
+        0.09929178655147552,
+        0.911094069480896
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 40,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 57,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.2736733555793762,
+        0.06569552421569824,
+        0.9107787013053894
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 41,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 56,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.29963016510009766,
+        -0.016445795074105263,
+        0.9102749824523926
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 42,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 61,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.1877402663230896,
+        0.12232385575771332,
+        0.9111029505729675
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 43,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 55,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.3004659414291382,
+        0.022893527522683144,
+        0.9105716347694397
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 44,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 55,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.27490097284317017,
+        0.0019058235920965672,
+        0.9103991985321045
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 45,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 61,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.21214821934700012,
+        0.1292102038860321,
+        0.9111088514328003
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 46,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 55,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.30329471826553345,
+        -0.007006386760622263,
+        0.9102510213851929
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 47,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 56,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.36370453238487244,
+        0.04504833370447159,
+        0.9104869961738586
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 49,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 55,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.29030537605285645,
+        0.029055537655949593,
+        0.9105561375617981
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 5,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 55,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.3238877058029175,
+        -0.042971011251211166,
+        0.9102616310119629
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 7,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 56,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.21624523401260376,
+        0.06404473632574081,
+        0.9107269644737244
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "handover_block",
+      "episode": 9,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 57,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.34937024116516113,
+        0.11059470474720001,
+        0.9108927845954895
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 10,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 60,
+      "arm": "right",
+      "native_endpose_position": [
+        0.20729131996631622,
+        0.031169336289167404,
+        0.8956494331359863
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 15,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 68,
+      "arm": "right",
+      "native_endpose_position": [
+        0.22443458437919617,
+        0.07709898054599762,
+        0.8956425189971924
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 16,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 60,
+      "arm": "right",
+      "native_endpose_position": [
+        0.2058950662612915,
+        0.0037269815802574158,
+        0.8956482410430908
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 17,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 57,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.24521343410015106,
+        -0.04216790944337845,
+        0.8961866497993469
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 18,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 57,
+      "arm": "right",
+      "native_endpose_position": [
+        0.20706874132156372,
+        -0.03765474632382393,
+        0.896213710308075
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 20,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 57,
+      "arm": "right",
+      "native_endpose_position": [
+        0.22321483492851257,
+        -0.04677017405629158,
+        0.8956463932991028
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 21,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 60,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.2337600141763687,
+        0.05305706337094307,
+        0.8957246541976929
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 23,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 62,
+      "arm": "right",
+      "native_endpose_position": [
+        0.21126040816307068,
+        0.06332170963287354,
+        0.8965133428573608
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 24,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 63,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.23978911340236664,
+        0.08661254495382309,
+        0.8951432108879089
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 25,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 58,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.21314717829227448,
+        -0.05864747613668442,
+        0.8956088423728943
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 26,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 58,
+      "arm": "right",
+      "native_endpose_position": [
+        0.1994386613368988,
+        -0.07448989152908325,
+        0.8956482410430908
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 27,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 64,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.2173212319612503,
+        0.0787392109632492,
+        0.8952108025550842
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 28,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 56,
+      "arm": "right",
+      "native_endpose_position": [
+        0.22037741541862488,
+        -0.07852388918399811,
+        0.8961708545684814
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 29,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 58,
+      "arm": "right",
+      "native_endpose_position": [
+        0.23273463547229767,
+        -0.03817496448755264,
+        0.8956469297409058
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 3,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 59,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.21800324320793152,
+        -0.01590472087264061,
+        0.8956435918807983
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 30,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 58,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.22688743472099304,
+        -0.07011397927999496,
+        0.8956488370895386
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 31,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 57,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.21418516337871552,
+        -0.053272705525159836,
+        0.8956498503684998
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 32,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 60,
+      "arm": "right",
+      "native_endpose_position": [
+        0.2460646778345108,
+        0.03402569144964218,
+        0.8956364393234253
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 34,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 57,
+      "arm": "right",
+      "native_endpose_position": [
+        0.2178652286529541,
+        -0.06371313333511353,
+        0.8964546918869019
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 37,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 59,
+      "arm": "right",
+      "native_endpose_position": [
+        0.24356526136398315,
+        0.033013906329870224,
+        0.8965321779251099
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 38,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 59,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.24095529317855835,
+        0.01264131162315607,
+        0.8956030607223511
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 39,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 73,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.22781960666179657,
+        0.08274029195308685,
+        0.896334707736969
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 4,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 67,
+      "arm": "right",
+      "native_endpose_position": [
+        0.22153258323669434,
+        0.07068697363138199,
+        0.8964430689811707
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 40,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 58,
+      "arm": "right",
+      "native_endpose_position": [
+        0.2469506561756134,
+        -0.0007353508262895048,
+        0.8956490755081177
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 41,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 57,
+      "arm": "right",
+      "native_endpose_position": [
+        0.22083096206188202,
+        -0.08228683471679688,
+        0.8964340686798096
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 42,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 64,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.2223779261112213,
+        0.07500545680522919,
+        0.8951888680458069
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 43,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 60,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.23499846458435059,
+        0.028777973726391792,
+        0.8956075310707092
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 44,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 58,
+      "arm": "right",
+      "native_endpose_position": [
+        0.23377756774425507,
+        -0.020888885483145714,
+        0.8963626623153687
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 45,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 59,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.21686232089996338,
+        -0.009245437569916248,
+        0.895648717880249
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 46,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 58,
+      "arm": "right",
+      "native_endpose_position": [
+        0.199604332447052,
+        -0.061220403760671616,
+        0.8961788415908813
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 47,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 62,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.2414034754037857,
+        0.01918255165219307,
+        0.8963071703910828
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 49,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 65,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.24743182957172394,
+        0.06865306198596954,
+        0.8956192135810852
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 5,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 71,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.25501787662506104,
+        0.08922047168016434,
+        0.8956478238105774
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 7,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 63,
+      "arm": "left",
+      "native_endpose_position": [
+        -0.24919018149375916,
+        0.023948807269334793,
+        0.8962922692298889
+      ],
+      "simultaneous_crossing": false
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 9,
+      "first_gripper": [
+        1.0,
+        1.0
+      ],
+      "valid": true,
+      "event_frame": 58,
+      "arm": "right",
+      "native_endpose_position": [
+        0.24406790733337402,
+        -0.026632146909832954,
+        0.8956441879272461
+      ],
+      "simultaneous_crossing": false
+    }
+  ]
+}

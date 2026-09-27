@@ -1,0 +1,17 @@
+{
+  "time": "2026-09-26T18:06:11.189903-05:00",
+  "processes": [
+    {
+      "pid": 2685602,
+      "args": "python3 /home/zifanz4/openwam-experiments/scripts/temporal/lane.py mean",
+      "uid": 2093,
+      "start_ticks": "2636874507"
+    },
+    {
+      "pid": 2685605,
+      "args": "python3 /home/zifanz4/openwam-experiments/scripts/temporal/lane.py learned",
+      "uid": 2093,
+      "start_ticks": "2636874508"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "rows": 735,
+  "new_noisy_training_images": 630,
+  "cache_clean_images_reused": 105,
+  "peak_allocated_GB": 1.872072192,
+  "hardware_parity_passed": true
+}

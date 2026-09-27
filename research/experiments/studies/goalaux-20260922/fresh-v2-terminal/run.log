@@ -1,0 +1,60 @@
+adjust_bottle 800000 accepted {'adjust_bottle': 1, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800001 accepted {'adjust_bottle': 2, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800002 accepted {'adjust_bottle': 3, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800003 accepted {'adjust_bottle': 4, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800004 accepted {'adjust_bottle': 5, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800005 accepted {'adjust_bottle': 6, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800006 accepted {'adjust_bottle': 7, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800007 accepted {'adjust_bottle': 8, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800008 accepted {'adjust_bottle': 9, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800009 accepted {'adjust_bottle': 10, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800010 unstable_scene {'adjust_bottle': 10, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800011 accepted {'adjust_bottle': 11, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800012 accepted {'adjust_bottle': 12, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800013 unstable_scene {'adjust_bottle': 12, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800014 accepted {'adjust_bottle': 13, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800015 accepted {'adjust_bottle': 14, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800016 accepted {'adjust_bottle': 15, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800017 accepted {'adjust_bottle': 16, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800018 unstable_scene {'adjust_bottle': 16, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800019 expert_infeasible {'adjust_bottle': 16, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800020 accepted {'adjust_bottle': 17, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800021 accepted {'adjust_bottle': 18, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800022 accepted {'adjust_bottle': 19, 'handover_block': 0, 'place_object_basket': 0}
+adjust_bottle 800023 accepted {'adjust_bottle': 20, 'handover_block': 0, 'place_object_basket': 0}
+handover_block 801000 accepted {'adjust_bottle': 20, 'handover_block': 1, 'place_object_basket': 0}
+handover_block 801001 accepted {'adjust_bottle': 20, 'handover_block': 2, 'place_object_basket': 0}
+handover_block 801002 accepted {'adjust_bottle': 20, 'handover_block': 3, 'place_object_basket': 0}
+handover_block 801003 accepted {'adjust_bottle': 20, 'handover_block': 4, 'place_object_basket': 0}
+handover_block 801004 accepted {'adjust_bottle': 20, 'handover_block': 5, 'place_object_basket': 0}
+handover_block 801005 accepted {'adjust_bottle': 20, 'handover_block': 6, 'place_object_basket': 0}
+handover_block 801006 expert_infeasible {'adjust_bottle': 20, 'handover_block': 6, 'place_object_basket': 0}
+handover_block 801007 accepted {'adjust_bottle': 20, 'handover_block': 7, 'place_object_basket': 0}
+handover_block 801008 accepted {'adjust_bottle': 20, 'handover_block': 8, 'place_object_basket': 0}
+handover_block 801009 accepted {'adjust_bottle': 20, 'handover_block': 9, 'place_object_basket': 0}
+handover_block 801010 accepted {'adjust_bottle': 20, 'handover_block': 10, 'place_object_basket': 0}
+handover_block 801011 accepted {'adjust_bottle': 20, 'handover_block': 11, 'place_object_basket': 0}
+handover_block 801012 accepted {'adjust_bottle': 20, 'handover_block': 12, 'place_object_basket': 0}
+handover_block 801013 accepted {'adjust_bottle': 20, 'handover_block': 13, 'place_object_basket': 0}
+handover_block 801014 accepted {'adjust_bottle': 20, 'handover_block': 14, 'place_object_basket': 0}
+handover_block 801015 accepted {'adjust_bottle': 20, 'handover_block': 15, 'place_object_basket': 0}
+handover_block 801016 accepted {'adjust_bottle': 20, 'handover_block': 16, 'place_object_basket': 0}
+handover_block 801017 accepted {'adjust_bottle': 20, 'handover_block': 17, 'place_object_basket': 0}
+handover_block 801018 accepted {'adjust_bottle': 20, 'handover_block': 18, 'place_object_basket': 0}
+handover_block 801019 accepted {'adjust_bottle': 20, 'handover_block': 19, 'place_object_basket': 0}
+handover_block 801020 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 0}
+place_object_basket 802000 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 1}
+place_object_basket 802001 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 2}
+place_object_basket 802002 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 3}
+place_object_basket 802003 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 4}
+place_object_basket 802004 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 5}
+place_object_basket 802005 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 6}
+place_object_basket 802006 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 7}
+place_object_basket 802007 expert_infeasible {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 7}
+place_object_basket 802008 infrastructure_failure {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 7}
+Traceback (most recent call last):
+  File "/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation_v2.py", line 73, in <module>
+    else:parent()
+  File "/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation_v2.py", line 67, in parent
+    if code or res.get('outcome')=='infrastructure_failure':raise RuntimeError(f'Infrastructure failure retained: {task} {seed}; no retry')
+RuntimeError: Infrastructure failure retained: place_object_basket 802008; no retry

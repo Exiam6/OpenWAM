@@ -1,0 +1,260 @@
+{
+  "time": "2026-09-27T12:12:34.294371-05:00",
+  "study": "/home/zifanz4/openwam-experiments/studies/temporal-20260926",
+  "deadline": "2026-09-29T17:48:49.941691-05:00",
+  "fit": {
+    "time": "2026-09-26T17:55:34.335579-05:00",
+    "steps": 1500,
+    "episodes": 105,
+    "clips": 630,
+    "fixed_final": true,
+    "pool_sha256": "7926f9b2851c29edf5dac5fa84f3048918423d85ef602ead216a982fa39f639a",
+    "pool_parameters": 3072,
+    "last_training_metrics": [
+      {
+        "loss": 0.5638185739517212,
+        "reconstruction": 0.2666885256767273,
+        "motion": 0.29701557755470276,
+        "anchor": 0.0002492954954504967,
+        "kl": 0.010198280215263367,
+        "gradient_norm": 0.02397586777806282
+      },
+      {
+        "loss": 0.5640692114830017,
+        "reconstruction": 0.2668081223964691,
+        "motion": 0.2972610890865326,
+        "anchor": 0.0,
+        "kl": 0.0,
+        "gradient_norm": 0.02395269088447094
+      }
+    ],
+    "policy_success_measured": false,
+    "heads_removed_from_policy": true
+  },
+  "fit_exit": {
+    "time": "2026-09-26T17:55:40.192578-05:00",
+    "returncode": 0,
+    "error": null,
+    "seconds": 171.51330454275012,
+    "child_returncode": 0
+  },
+  "training": [
+    {
+      "arm": "mean",
+      "seed": 42,
+      "microsteps": 4000,
+      "total_microsteps": 4000,
+      "status": "complete",
+      "exit": {
+        "time": "2026-09-26T20:32:50.924147-05:00",
+        "returncode": 0,
+        "error": null,
+        "seconds": 9469.84500194341,
+        "child_returncode": 0
+      },
+      "parity": {
+        "passed": true,
+        "native_save_reload_max_abs": 0.0,
+        "later_group_causality_max_abs": 0.0,
+        "shape": [
+          1,
+          48,
+          3,
+          4,
+          4
+        ],
+        "saved_sidecar_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed42/output/2026-09-26_17-56-53",
+        "input": "synthetic9frames64x64; no test data"
+      }
+    },
+    {
+      "arm": "learned",
+      "seed": 42,
+      "microsteps": 4000,
+      "total_microsteps": 4000,
+      "status": "complete",
+      "exit": {
+        "time": "2026-09-26T20:34:12.955020-05:00",
+        "returncode": 0,
+        "error": null,
+        "seconds": 9444.079100582749,
+        "child_returncode": 0
+      },
+      "parity": {
+        "passed": true,
+        "native_save_reload_max_abs": 0.0,
+        "later_group_causality_max_abs": 0.0,
+        "shape": [
+          1,
+          48,
+          3,
+          4,
+          4
+        ],
+        "saved_sidecar_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed42/output/2026-09-26_17-58-29",
+        "input": "synthetic9frames64x64; no test data"
+      }
+    },
+    {
+      "arm": "mean",
+      "seed": 43,
+      "microsteps": 4000,
+      "total_microsteps": 4000,
+      "status": "complete",
+      "exit": {
+        "time": "2026-09-26T22:59:33.982526-05:00",
+        "returncode": 0,
+        "error": null,
+        "seconds": 8785.890330750495,
+        "child_returncode": 0
+      },
+      "parity": {
+        "passed": true,
+        "native_save_reload_max_abs": 0.0,
+        "later_group_causality_max_abs": 0.0,
+        "shape": [
+          1,
+          48,
+          3,
+          4,
+          4
+        ],
+        "saved_sidecar_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed43/output/2026-09-26_20-35-15",
+        "input": "synthetic9frames64x64; no test data"
+      }
+    },
+    {
+      "arm": "learned",
+      "seed": 43,
+      "microsteps": 4000,
+      "total_microsteps": 4000,
+      "status": "complete",
+      "exit": {
+        "time": "2026-09-26T23:01:07.664915-05:00",
+        "returncode": 0,
+        "error": null,
+        "seconds": 8799.773664969951,
+        "child_returncode": 0
+      },
+      "parity": {
+        "passed": true,
+        "native_save_reload_max_abs": 0.0,
+        "later_group_causality_max_abs": 0.0,
+        "shape": [
+          1,
+          48,
+          3,
+          4,
+          4
+        ],
+        "saved_sidecar_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed43/output/2026-09-26_20-36-12",
+        "input": "synthetic9frames64x64; no test data"
+      }
+    },
+    {
+      "arm": "mean",
+      "seed": 44,
+      "microsteps": 4000,
+      "total_microsteps": 4000,
+      "status": "complete",
+      "exit": {
+        "time": "2026-09-27T01:19:09.044001-05:00",
+        "returncode": 0,
+        "error": null,
+        "seconds": 8375.024090051651,
+        "child_returncode": 0
+      },
+      "parity": {
+        "passed": true,
+        "native_save_reload_max_abs": 0.0,
+        "later_group_causality_max_abs": 0.0,
+        "shape": [
+          1,
+          48,
+          3,
+          4,
+          4
+        ],
+        "saved_sidecar_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed44/output/2026-09-26_23-01-46",
+        "input": "synthetic9frames64x64; no test data"
+      }
+    },
+    {
+      "arm": "learned",
+      "seed": 44,
+      "microsteps": 4000,
+      "total_microsteps": 4000,
+      "status": "complete",
+      "exit": {
+        "time": "2026-09-27T01:22:02.224185-05:00",
+        "returncode": 0,
+        "error": null,
+        "seconds": 8454.522878173739,
+        "child_returncode": 0
+      },
+      "parity": {
+        "passed": true,
+        "native_save_reload_max_abs": 0.0,
+        "later_group_causality_max_abs": 0.0,
+        "shape": [
+          1,
+          48,
+          3,
+          4,
+          4
+        ],
+        "saved_sidecar_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed44/output/2026-09-26_23-02-44",
+        "input": "synthetic9frames64x64; no test data"
+      }
+    }
+  ],
+  "rollouts_complete": 0,
+  "rollouts_total": 1080,
+  "rollout_technical_failures": 0,
+  "lanes": {
+    "mean": {
+      "time": "2026-09-27T01:24:10.450615-05:00",
+      "returncode": 1,
+      "error": "AssertionError()"
+    },
+    "learned": {
+      "time": "2026-09-27T01:24:23.473369-05:00",
+      "returncode": 1,
+      "error": "AssertionError()"
+    }
+  },
+  "results_audit": null,
+  "next": "Preserve both failed starts. Resolve disk capacity and validate multi-prompt deployment in a separately frozen recovery plan, without automatic replay or deadline extension. No policy benefit established.",
+  "evaluation_technical_blocker": {
+    "time": "2026-09-26T22:23:24.668422-05:00",
+    "kind": "confirmed_shared_prompt_cache_eviction_failure",
+    "source_sha256": "47eb4b84caa12ff9ddc0c1f8c9010afa5b7c4e4c40d4983b9fed9d8ca6c72038",
+    "affects": [
+      "prior endtoend evaluation",
+      "temporal evaluation has identical cache implementation"
+    ],
+    "reproduction": "Same experiment Python3.10.12 raises KeyError on 33rd distinct prompt insertion at capacity32",
+    "candidate_patch": "/home/zifanz4/openwam-experiments/contributions/prompt-cache-eviction-20260926/engine.patch",
+    "regression": "/home/zifanz4/openwam-experiments/contributions/prompt-cache-eviction-20260926/regression.json",
+    "applied_to_frozen_code": false,
+    "policy_inference_validation": {
+      "passed": true,
+      "scope": "One S-VAE295M training frame; five native first-action predictions; original cold/hit and fixed cold/hit/post-eviction; exact equality",
+      "result": "/home/zifanz4/openwam-experiments/studies/cache-integration-20260927/progress.json",
+      "heldout_episodes": 0,
+      "full_websocket_or_simulator_validation": false
+    },
+    "next_step": "Keep existing frozen jobs and failures intact. Prepare a separately versioned recovery protocol and multi-prompt deployment checks; do not automatically replay failed queues or extend original deadlines.",
+    "integration_verified_at": "2026-09-27T00:07:29.783084-05:00"
+  },
+  "status": "training_complete_evaluation_prelaunch_failed",
+  "training_audit_passed": true,
+  "evaluation_prelaunch_failures": 2,
+  "prelaunch_failure": {
+    "returncode": 1,
+    "error": "AssertionError()",
+    "child_returncode": null,
+    "root_cause": "not conclusively logged; current free disk below fixed32GiB guard; compatible with disk assertion after three idle samples",
+    "no_automatic_retry": true
+  }
+}

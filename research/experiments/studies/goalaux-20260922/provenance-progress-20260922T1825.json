@@ -1,0 +1,16 @@
+{
+  "time": "2026-09-22T18:26:21.831416-05:00",
+  "passed": true,
+  "all_completed_candidates_consecutive": true,
+  "completed_candidate_exit_codes_all_zero": true,
+  "accepted_native_backend_records_checked": 36,
+  "per_task": {
+    "adjust_bottle": 20,
+    "handover_block": 16
+  },
+  "apparent_bytes": {
+    "goalaux-native": 17750064178,
+    "goalaux-20260922": 1281275647
+  },
+  "scope": "read-only runtime provenance and storage; no representations/labels/predictions scored"
+}

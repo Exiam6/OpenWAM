@@ -1,0 +1,80 @@
+{
+  "checked_at": "2026-09-22T19:31:53.728175-05:00",
+  "logs": [
+    {
+      "path": "fresh-v4/place_object_basket/seed-802018/worker.log",
+      "bytes": 10088,
+      "raw_sha256": "e540733c2fe780ab7f9e9e5d5af135e6fdfc88bc8d616d492164bbe458c3fdb7",
+      "text_readback_sha256": "1dc16ddba5d180cedf608f5b94a374ff29b68cd6c0a9968d15ac9e73581eec07",
+      "carriage_returns": 240,
+      "source_mtime": "2026-09-22T19:07:35.212172-05:00",
+      "archived_text_sha256": "1dc16ddba5d180cedf608f5b94a374ff29b68cd6c0a9968d15ac9e73581eec07",
+      "only_text_readback_normalization": true
+    },
+    {
+      "path": "fresh-v4/place_object_basket/seed-802017/worker.log",
+      "bytes": 10053,
+      "raw_sha256": "97f6c11282c24fe01f1d8a1d29c4b3b41ec4f690f737f0ab6817e642dcb54931",
+      "text_readback_sha256": "cbc1a96c2f330ca7dd989a2810d45ec26e15c9f17328f2576946c621f1b06f4c",
+      "carriage_returns": 239,
+      "source_mtime": "2026-09-22T19:05:50.189777-05:00",
+      "archived_text_sha256": "cbc1a96c2f330ca7dd989a2810d45ec26e15c9f17328f2576946c621f1b06f4c",
+      "only_text_readback_normalization": true
+    },
+    {
+      "path": "fresh-v4/place_object_basket/seed-802019/worker.log",
+      "bytes": 10473,
+      "raw_sha256": "f7a1ac5570eb0311cb3679f7fa1f1d562a793489003f7aa4053f8be798fdd62b",
+      "text_readback_sha256": "fc6f691b788ad723695774826feb6dffa6463d5fef34714fabd245c11c088840",
+      "carriage_returns": 251,
+      "source_mtime": "2026-09-22T19:09:21.495572-05:00",
+      "archived_text_sha256": "fc6f691b788ad723695774826feb6dffa6463d5fef34714fabd245c11c088840",
+      "only_text_readback_normalization": true
+    },
+    {
+      "path": "fresh-v4/place_object_basket/seed-802023/worker.log",
+      "bytes": 10158,
+      "raw_sha256": "44a65a40225ff668bed48c62ea4235b06c3f43301aecaa845b4e8927f1cb2388",
+      "text_readback_sha256": "8b5836014ed904b386302a5cbe4bc09f2e37e7cb3b2ef55c69a3256af121e1d3",
+      "carriage_returns": 242,
+      "source_mtime": "2026-09-22T19:15:27.109969-05:00",
+      "archived_text_sha256": "8b5836014ed904b386302a5cbe4bc09f2e37e7cb3b2ef55c69a3256af121e1d3",
+      "only_text_readback_normalization": true
+    },
+    {
+      "path": "fresh-v4/place_object_basket/seed-802021/worker.log",
+      "bytes": 9708,
+      "raw_sha256": "91a7fc526f762fe9971ad2fdf8e21be803b16e1efdfd130074c31520c60b5696",
+      "text_readback_sha256": "38da409e9994033c286b2f52a7b67cbd15b8e1432313a278d63f2e2072e786d3",
+      "carriage_returns": 229,
+      "source_mtime": "2026-09-22T19:11:57.630159-05:00",
+      "archived_text_sha256": "38da409e9994033c286b2f52a7b67cbd15b8e1432313a278d63f2e2072e786d3",
+      "only_text_readback_normalization": true
+    },
+    {
+      "path": "fresh-v4/place_object_basket/seed-802022/worker.log",
+      "bytes": 10654,
+      "raw_sha256": "b953148b7866d6331ea2e05df233575f708f06efb998bbc2c1432943ec6741ce",
+      "text_readback_sha256": "0175334cc26e202352e54611d419057c8dd89e2fb43acd5f3357128897215f11",
+      "carriage_returns": 256,
+      "source_mtime": "2026-09-22T19:13:43.101556-05:00",
+      "archived_text_sha256": "0175334cc26e202352e54611d419057c8dd89e2fb43acd5f3357128897215f11",
+      "only_text_readback_normalization": true
+    },
+    {
+      "path": "fresh-v4/place_object_basket/seed-802016/worker.log",
+      "bytes": 11383,
+      "raw_sha256": "16b1e659f77fe44a56be051a4547a8f013319dbb18f0df09995af4f11e9d6938",
+      "text_readback_sha256": "006476b556909f8cf8c652fda193118083507d52a99b482c9b0bf0d3ef574cbd",
+      "carriage_returns": 277,
+      "source_mtime": "2026-09-22T19:04:01.620368-05:00",
+      "archived_text_sha256": "006476b556909f8cf8c652fda193118083507d52a99b482c9b0bf0d3ef574cbd",
+      "only_text_readback_normalization": true
+    }
+  ],
+  "new_gpu_process_owner": "1511221 1511212 jw116    python",
+  "owner_query_exit": 0,
+  "explanation": "Initial text-based archival normalized progress-bar carriage returns in seven worker logs. Original remote log bytes were unchanged; all other42metadata/logfiles matched byte hashes. Seven byte-exact log copies now retained separately; earlier text copies preserved.",
+  "scientific_data_changed": false,
+  "scores_computed": false
+}

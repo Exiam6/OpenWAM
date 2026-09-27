@@ -1,0 +1,119 @@
+{
+  "time": "2026-09-23T18:15:54.218053-05:00",
+  "byte_checks": {
+    "result.json": {
+      "matches_archive": true,
+      "sha256": "efa7f786381e9890c28401652fc2145a628938e3bc2ef381391b171d493b3366"
+    },
+    "sample-manifest.json": {
+      "matches_archive": true,
+      "sha256": "1dff688bc3c1935575e8e509411123087a65eec0413b3b7ce01763c17ff64d7f"
+    },
+    "identity-audit.json": {
+      "matches_archive": true,
+      "sha256": "a45414ebf05064ddccabb7aab1c590fc3d33bcd89fe18920925c91dc545a6263"
+    },
+    "features/exit.json": {
+      "matches_archive": true,
+      "sha256": "f51d29f9b238b1cc79635046b3c9ddf047f669a11c0be4be92042ce326ec378f"
+    },
+    "features/run.log": {
+      "matches_archive": true,
+      "sha256": "f43faf79480b36f133a0493b2a20d7a013ac96fcf440cea18b12ad26d61838bd"
+    },
+    "features/hardware-parity.json": {
+      "matches_archive": true,
+      "sha256": "fb4b2426644cef40f83381faa7a53fb6ad5c30b1767f1001262365980cdc2b52"
+    },
+    "fresh/adjust_bottle/manifest.json": {
+      "matches_archive": true,
+      "sha256": "ecd2b3a29f5d6c6a88c0cd28758f4c48787a08de6df119d89ed4151330931349"
+    },
+    "fresh/adjust_bottle/exit.json": {
+      "matches_archive": true,
+      "sha256": "8f7cf250092cd87743e7a62fcef72c490e1f9729a27e5f7c54a8f9aa26c1249e"
+    },
+    "fresh/adjust_bottle/run.log": {
+      "matches_archive": true,
+      "sha256": "9e5b842e432f1f623835f91a8885d082c8a884ed724423c4583ae97fd3551769"
+    },
+    "fresh/handover_block/manifest.json": {
+      "matches_archive": true,
+      "sha256": "24322e0aedbb3ce2a017c458353c43a50490ab85f145548956f1082ff252e347"
+    },
+    "fresh/handover_block/exit.json": {
+      "matches_archive": true,
+      "sha256": "1d0325d0099984c52530e0f215b21aa899404c8789dbf31cc69167e8303c681d"
+    },
+    "fresh/handover_block/run.log": {
+      "matches_archive": true,
+      "sha256": "4f3eae84e41bab3a1997bff193279c604a8838257d07a217f77cb33300abfcff"
+    },
+    "fresh/place_object_basket/manifest.json": {
+      "matches_archive": true,
+      "sha256": "f983ecccb790d4d5f4f72c724fe25927b68e8cd7b9c3d91456c59246b8e4f232"
+    },
+    "fresh/place_object_basket/exit.json": {
+      "matches_archive": true,
+      "sha256": "5618099909c0fc74c2d0c16a45fa97308b34e434544db7c994b1a02a56f3befa"
+    },
+    "fresh/place_object_basket/run.log": {
+      "matches_archive": true,
+      "sha256": "473955a04cbc28326ea621b0a73646e46a516b8fca72b99b7574ef4631aaca34"
+    }
+  },
+  "result_matches_closure": true,
+  "exits": {
+    "features/exit.json": {
+      "finished_at": "2026-09-23T12:20:42.933858-05:00",
+      "exit_code": 0
+    },
+    "fresh/adjust_bottle/exit.json": {
+      "finished_at": "2026-09-23T12:11:44.509823-05:00",
+      "exit_code": 0
+    },
+    "fresh/handover_block/exit.json": {
+      "finished_at": "2026-09-23T12:14:25.555557-05:00",
+      "exit_code": 0
+    },
+    "fresh/place_object_basket/exit.json": {
+      "finished_at": "2026-09-23T12:20:06.039883-05:00",
+      "exit_code": 0
+    }
+  },
+  "log_completion_present": true,
+  "accepted_counts": {
+    "adjust_bottle": 20,
+    "handover_block": 20,
+    "place_object_basket": 20
+  },
+  "attempt_counts": {
+    "adjust_bottle": 20,
+    "handover_block": 22,
+    "place_object_basket": 36
+  },
+  "independent_audit_exists": false,
+  "deadline": "2026-09-23T15:38:51.767900-05:00",
+  "resources": [
+    {
+      "host": "cm009",
+      "time": "2026-09-23T18:15:53.318209-05:00",
+      "gpu_query": "0, GPU-c7d96da5-a1ae-e1ed-de5d-03f35e550da2, 1, 0, 2\n1, GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 1, 0, 0\n2, GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 1, 0, 0\n3, GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 1, 0, 0\n4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 1, 0, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 1, 0, 0\n6, GPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 1, 0, 0\n7, GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 1, 0, 0\n",
+      "owned_study_workers": []
+    },
+    {
+      "host": "rainier",
+      "time": "2026-09-23T18:15:52.531244-05:00",
+      "gpu_query": "4, GPU-38557357-3f58-c864-2f53-8b14087b5e8c, 1, 0, 0\n",
+      "owned_study_workers": []
+    }
+  ],
+  "trigger": "2026-09-23T18:15:01.290271-05:00",
+  "finished_at": "2026-09-23T18:16:24.162415-05:00",
+  "status": "unchanged_window_closed_audit_pending",
+  "pause_markers": [],
+  "next_step": "The unresolved validation is independent numerical checking of raw labels, 135 saved prediction conditions and 99 paired component intervals. Keep findings provisional and preserve the closed study window; the prepared bounded CPU artifact audit awaits separate authorization. Do not bypass the expired guard or relaunch experiments.",
+  "notification_required": false,
+  "public_report_retried": false,
+  "new_experiments": 0
+}

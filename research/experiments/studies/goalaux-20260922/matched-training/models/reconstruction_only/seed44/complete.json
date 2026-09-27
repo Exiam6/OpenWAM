@@ -1,0 +1,11 @@
+{
+  "seed": 44,
+  "arm": "reconstruction_only",
+  "steps": 2000,
+  "wall_seconds": 44.78751880675554,
+  "peak_allocated_GB": 6.900022784,
+  "checkpoint_sha256": "85d61ae4ee0304b80593744b2070f406dc907ea965fccfe869c5efbeb6bb0ca9",
+  "sample_sequence_sha256": "23181e407fe22978a1eaba39a6bfd93d9a95b4fc561f59cf5e2c945ed7f5c9b0",
+  "selection": "fixed final step; no development/test scores",
+  "initial_checkpoint_sha256": "ae21629bead1277dac5db12a1429047ab92654f9636e529ec7c11ffe04a28305"
+}

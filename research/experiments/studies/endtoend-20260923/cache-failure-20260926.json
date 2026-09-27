@@ -1,0 +1,22 @@
+{
+  "time": "2026-09-26T22:23:24.668422-05:00",
+  "kind": "confirmed_shared_prompt_cache_eviction_failure",
+  "source_sha256": "47eb4b84caa12ff9ddc0c1f8c9010afa5b7c4e4c40d4983b9fed9d8ca6c72038",
+  "affects": [
+    "prior endtoend evaluation",
+    "temporal evaluation has identical cache implementation"
+  ],
+  "reproduction": "Same experiment Python3.10.12 raises KeyError on 33rd distinct prompt insertion at capacity32",
+  "candidate_patch": "/home/zifanz4/openwam-experiments/contributions/prompt-cache-eviction-20260926/engine.patch",
+  "regression": "/home/zifanz4/openwam-experiments/contributions/prompt-cache-eviction-20260926/regression.json",
+  "applied_to_frozen_code": false,
+  "policy_inference_validation": {
+    "passed": true,
+    "scope": "One S-VAE295M training frame; five native first-action predictions; original cold/hit and fixed cold/hit/post-eviction; exact equality",
+    "result": "/home/zifanz4/openwam-experiments/studies/cache-integration-20260927/progress.json",
+    "heldout_episodes": 0,
+    "full_websocket_or_simulator_validation": false
+  },
+  "next_step": "Keep existing frozen jobs and failures intact. Prepare a separately versioned recovery protocol and multi-prompt deployment checks; do not automatically replay failed queues or extend original deadlines.",
+  "integration_verified_at": "2026-09-27T00:07:29.783084-05:00"
+}

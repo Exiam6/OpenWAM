@@ -1,0 +1,193 @@
+{
+  "attempts": [
+    {
+      "task": "handover_block",
+      "seed": 901000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:52:31.045332-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 277,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901000/data/episode0.hdf5",
+      "hdf5_sha256": "c2c31df99c07fc0e4e07380fa10ae1e370dbf64ad9a98705258a7710d357e4ed",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 66.12140445224941,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:53:38.493041-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 286,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901001/data/episode0.hdf5",
+      "hdf5_sha256": "71a9017e2e36b0bd81e1c42f6a9014ccd692003001a121f73925494e49e0bc33",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 63.85125130414963,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:54:43.763572-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 286,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901002/data/episode0.hdf5",
+      "hdf5_sha256": "c960a9ff292ea88ea7e1fb7b4da64e82fdfaaaa8d3af32dc3a981bbc8a3c03c9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 62.982650339603424,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:55:48.395441-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 279,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901003/data/episode0.hdf5",
+      "hdf5_sha256": "88782222eabc2fc94ca8ebbc45816d8441ec1a38e20c98cd9395092443b51d7e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 61.141232740134,
+      "exit_code": 0
+    }
+  ],
+  "accepted": [
+    {
+      "task": "handover_block",
+      "seed": 901000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:52:31.045332-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 277,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901000/data/episode0.hdf5",
+      "hdf5_sha256": "c2c31df99c07fc0e4e07380fa10ae1e370dbf64ad9a98705258a7710d357e4ed",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 66.12140445224941,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:53:38.493041-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 286,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901001/data/episode0.hdf5",
+      "hdf5_sha256": "71a9017e2e36b0bd81e1c42f6a9014ccd692003001a121f73925494e49e0bc33",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 63.85125130414963,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:54:43.763572-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 286,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901002/data/episode0.hdf5",
+      "hdf5_sha256": "c960a9ff292ea88ea7e1fb7b4da64e82fdfaaaa8d3af32dc3a981bbc8a3c03c9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 62.982650339603424,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:55:48.395441-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 279,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901003/data/episode0.hdf5",
+      "hdf5_sha256": "88782222eabc2fc94ca8ebbc45816d8441ec1a38e20c98cd9395092443b51d7e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 61.141232740134,
+      "exit_code": 0
+    }
+  ],
+  "accepted_count": 4,
+  "elapsed_seconds": 259.8495063390583,
+  "collection_deadline": "2026-09-23T14:38:51.767900-05:00"
+}

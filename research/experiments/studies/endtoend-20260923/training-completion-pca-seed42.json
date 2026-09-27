@@ -1,0 +1,19 @@
+{
+  "time": "2026-09-24T02:33:28.646686-05:00",
+  "run": "pca-seed42",
+  "exit": {
+    "time": "2026-09-24T02:19:59.258742-05:00",
+    "returncode": 0
+  },
+  "metrics_rows": 12000,
+  "batch_stream_rows": 12000,
+  "global_step": 12000,
+  "optimizer_updates": 6000,
+  "all_logged_metrics_finite": true,
+  "checkpoint": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_12000.safetensors",
+  "bytes": 12123507288,
+  "tensor_count": 1136,
+  "header_sha256": "c96aff330c3704844b7842bc44ac58af6fc2de42ac8e8877a6ddcfdd313e242e",
+  "checkpoint_structure_valid": true,
+  "scope": "Header dimensions, tensor byte counts/offsets and file length checked after exit0; full payload hash and deployment verification pending. No policy scoring."
+}

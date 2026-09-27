@@ -1,0 +1,1 @@
+{"passed": true, "checks": ["projection_and_whitening", "frozen_fp32_statistics", "no_trainable_pca_parameters", "first_frame_causality", "single_frame_equivalence", "batch_invariance", "latent_normalization", "registry", "strict_reload", "invalid_stats_and_sidecars"]}

@@ -1,0 +1,153 @@
+{
+  "passed": true,
+  "labels_and_images_rechecked": 720,
+  "fresh_unique_episodes": 60,
+  "prediction_conditions_recomputed": {
+    "ridge": 192,
+    "mlp": 192
+  },
+  "max_prediction_recompute_abs": 0.0,
+  "primary_bootstrap_recomputed": {
+    "ridge": {
+      "clean": {
+        "relative_percent": 1.7815246109026246,
+        "relative_percent95": [
+          -0.5474271091983491,
+          4.592588102098556
+        ]
+      },
+      "noise0.10": {
+        "relative_percent": 45.674998457167185,
+        "relative_percent95": [
+          38.02285343987232,
+          53.58756025380105
+        ]
+      },
+      "noise0.04": {
+        "relative_percent": 15.207195749919059,
+        "relative_percent95": [
+          11.349971673527227,
+          19.059207968736636
+        ]
+      },
+      "left_transfer": {
+        "relative_percent": -0.07238037169128686,
+        "relative_percent95": [
+          -4.046400424269654,
+          5.157946172544576
+        ]
+      }
+    },
+    "mlp": {
+      "clean": {
+        "relative_percent": -9.627089848487334,
+        "relative_percent95": [
+          -15.393708624558384,
+          -1.9557982293817784
+        ]
+      },
+      "noise0.10": {
+        "relative_percent": 16.93210986448882,
+        "relative_percent95": [
+          10.919751575566995,
+          23.558603939755788
+        ]
+      },
+      "noise0.04": {
+        "relative_percent": 7.8499070493171335,
+        "relative_percent95": [
+          3.559321371968134,
+          12.776879096408797
+        ]
+      },
+      "left_transfer": {
+        "relative_percent": 35.72631601356395,
+        "relative_percent95": [
+          31.566095565005305,
+          40.69855823315189
+        ]
+      }
+    }
+  },
+  "source_compression_interaction_descriptive": {
+    "ridge": {
+      "raw": {
+        "clean": {
+          "L12_E": 0.2169490608518404,
+          "K4_E": 0.19188697732147192,
+          "relative_change_percent": -11.552059009595794
+        },
+        "noise0.10": {
+          "L12_E": 0.794317808772116,
+          "K4_E": 0.6586589404946569,
+          "relative_change_percent": -17.078663826908937
+        }
+      },
+      "pca": {
+        "clean": {
+          "L12_E": 0.1857220146173439,
+          "K4_E": 0.19111278024534825,
+          "relative_change_percent": 2.902599155577401
+        },
+        "noise0.10": {
+          "L12_E": 0.3682424414885596,
+          "K4_E": 0.512172014424135,
+          "relative_change_percent": 39.085547106890694
+        }
+      },
+      "svae": {
+        "clean": {
+          "L12_E": 0.18210145600977595,
+          "K4_E": 0.18534563826540207,
+          "relative_change_percent": 1.7815246109025962
+        },
+        "noise0.10": {
+          "L12_E": 0.373628818181002,
+          "K4_E": 0.5442837751207067,
+          "relative_change_percent": 45.674998457167185
+        }
+      }
+    },
+    "mlp": {
+      "raw": {
+        "clean": {
+          "L12_E": 0.16179010727598023,
+          "K4_E": 0.1434070812421851,
+          "relative_change_percent": -11.362268276661391
+        },
+        "noise0.10": {
+          "L12_E": 0.5678568578635653,
+          "K4_E": 0.4060867140069604,
+          "relative_change_percent": -28.487838372724596
+        }
+      },
+      "pca": {
+        "clean": {
+          "L12_E": 0.1209847377341551,
+          "K4_E": 0.11451968684947739,
+          "relative_change_percent": -5.343691283510199
+        },
+        "noise0.10": {
+          "L12_E": 0.3427793711113433,
+          "K4_E": 0.3684947737803062,
+          "relative_change_percent": 7.502027495292274
+        }
+      },
+      "svae": {
+        "clean": {
+          "L12_E": 0.12392631301966807,
+          "K4_E": 0.11199581551934695,
+          "relative_change_percent": -9.627089848487348
+        },
+        "noise0.10": {
+          "L12_E": 0.3699197964225378,
+          "K4_E": 0.4325550227632953,
+          "relative_change_percent": 16.93210986448883
+        }
+      }
+    }
+  },
+  "predeclared_primary_success": false,
+  "frozen_assets_unchanged": true,
+  "refits": 0
+}

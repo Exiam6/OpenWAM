@@ -1,0 +1,44 @@
+{
+  "as_of": "2026-09-22T19:01:55.506504-05:00",
+  "counts": {
+    "adjust_bottle": 20,
+    "handover_block": 20,
+    "place_object_basket": 9
+  },
+  "attempts": 60,
+  "outcomes": {
+    "accepted": 49,
+    "unstable_scene": 3,
+    "expert_infeasible": 8
+  },
+  "classification_repairs": [
+    {
+      "task": "place_object_basket",
+      "seed": 802008,
+      "original_outcome": "infrastructure_failure"
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802013,
+      "original_outcome": "infrastructure_failure"
+    }
+  ],
+  "collection_deadline": "2026-09-22T19:15:55.548938-05:00",
+  "active": [
+    {
+      "task": "place_object_basket",
+      "seed": 802015,
+      "pid": 1500076,
+      "alive": true,
+      "log_time": "2026-09-22T19:01:43.765850-05:00"
+    }
+  ],
+  "collector_exit": null,
+  "scorer_status": "stopped dependency failure; no scoring started; do not relaunch until full60verified",
+  "confirmation_v2_exit": "1",
+  "gpu": "845, 3, 0",
+  "tmux": [
+    "wam-goalaux-collect-v4 1499524 0 python3"
+  ],
+  "new_summary_exists": false
+}

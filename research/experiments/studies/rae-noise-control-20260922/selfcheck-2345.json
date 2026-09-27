@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-09-23T00:10:25.810495-05:00",
+  "trigger": "2026-09-22T23:45:01.494044-05:00",
+  "actual_start": "2026-09-22T23:57:41.959221-05:00",
+  "summary": "Equal-noise goal control completed00:05:20 exit0;21newridgefits/63predictionconditions independently audited.105training scenes,7matched variants, per-scene regularization, cached exposed60eval. Wan noise.10goalE182.631\u21920.41479(native),314.540\u21920.43234(LN); DINOraw/PCA48/SVAE48afteradaptation0.11391/0.11069/0.11603. Wan cleanEworsens0.23838\u21920.36845and0.23708\u21920.27619; retained. DINOadvantage survives same augmentation and matched192D PCA control; not proof of fullRAE, causalpretraining, shortstate or policygain. Across-device DINO parity approximate (maxRMS0.04597trainSD), within predeclared bound. GPUreleased. See studies/rae-noise-control-20260922/FINDINGS.md. Public publication again failed: Sites project not found; local HTML updated.",
+  "next_step": "Within the unchanged01:15:12CDTdeadline, prospectively freeze the short-horizon state counterpart of the equal-noise control: identical105training episodes and12fixed current frames per scene, all frozen representations, noise0.04/.10 draws, episode-disjoint CV and alpha_eff=7*alpha relative to the original12-frame-per-scene fit (not84*alpha). Reuse already extracted initial-frame noisy vectors from this run and all original clean/evaluation vectors; only encode missing training-frame variants. Retain all translation/gripper, clean/noisy, task and seed results. This resolves whether the goal-information advantage also preserves short-state information. No world/action-policy gain is claimed; no expired56/60 or old80 replays. No launch follows automatically from this report; freeze and validate code/resources first.",
+  "deadline": "2026-09-23T01:15:12-05:00",
+  "old_goalaux": "terminalexit1/incomplete56unscored, no confirmationv3",
+  "gpu_released": true,
+  "resource_after": "A40 0MiB,0percent,0ECC, no process on selected UUID",
+  "no_pause_markers": true
+}

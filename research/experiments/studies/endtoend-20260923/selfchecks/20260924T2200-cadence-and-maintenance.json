@@ -1,0 +1,108 @@
+{
+  "time": "2026-09-24T22:21:24.845299-05:00",
+  "status": "cadence_changed_and_storage_maintenance_verified",
+  "schedule": {
+    "time": "2026-09-24T22:20:21.416049-05:00",
+    "user_instruction": "降至每3小时检查一次",
+    "host": "cm001",
+    "timezone": "America/Chicago",
+    "cron_expression": "0 */3 * * *",
+    "previous_cron_expression": "*/15 * * * *",
+    "active_matching_cron_entries": 1,
+    "script": "/home/zifanz4/openwam-experiments/scripts/selfcheck_15m.py",
+    "script_sha256": "e384ecb85b8e67df2c26ed0af24afcaa8b34917eaaf8946a8437e7105732cfb2",
+    "crontab_backup": "/home/zifanz4/.local/state/openwam-selfcheck/crontab-before-3h-20260924-222021.txt",
+    "script_backup": "/home/zifanz4/.local/state/openwam-selfcheck/selfcheck-before-3h-20260924-222021.py",
+    "notification_policy": "Only substantive progress, completion, failure or required decision; quiet otherwise",
+    "next_scheduled_times": [
+      "2026-09-25T00:00:00-05:00",
+      "2026-09-25T03:00:00-05:00",
+      "2026-09-25T06:00:00-05:00"
+    ],
+    "future_actual_delivery_verified": false,
+    "extra_test_wake_sent": false,
+    "preexisting_pending_selfcheck_ids": [],
+    "old_and_new_markers_deduplicated": true
+  },
+  "cache_relocation": {
+    "time": "2026-09-24T22:04:37.995488-05:00",
+    "status": "completed",
+    "source_path_preserved_as_symlink": "/home/zifanz4/.cache/pip",
+    "destination": "/data02/zifanz4/openwam-experiments/cache/pip-home-20260924",
+    "files_verified_sha256": 262,
+    "bytes_preserved": 2063175690,
+    "before_available_bytes": {
+      "home": 16777216,
+      "data02": 170587586560
+    },
+    "after_available_bytes": {
+      "home": 2083520512,
+      "data02": 168519794688
+    },
+    "redundant_source_copy_removed_after_double_hash_verification": true,
+    "installed_environments_or_frozen_experiment_files_modified": false
+  },
+  "current_available_gib": {
+    "/home": 1.9326171875,
+    "/data02": 156.916015625
+  },
+  "resource_wait_heartbeat": {
+    "time": "2026-09-24T22:21:15.642347-05:00",
+    "status": "waiting_for_original_six_slots",
+    "controller_held": true,
+    "consecutive_idle": 0,
+    "snapshot": {
+      "gpu": {
+        "1": [
+          "1",
+          "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85",
+          "9291",
+          "81",
+          "0"
+        ],
+        "2": [
+          "2",
+          "GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e",
+          "1",
+          "0",
+          "0"
+        ],
+        "3": [
+          "3",
+          "GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db",
+          "12",
+          "0",
+          "0"
+        ],
+        "4": [
+          "4",
+          "GPU-33861458-0994-99a7-7457-6fceb49c229c",
+          "11787",
+          "52",
+          "0"
+        ],
+        "5": [
+          "5",
+          "GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3",
+          "1",
+          "0",
+          "0"
+        ],
+        "6": [
+          "6",
+          "GPU-f341a0af-5cd4-9d17-e701-31f4530522ae",
+          "1",
+          "0",
+          "0"
+        ]
+      },
+      "compute_uuids": [
+        "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85",
+        "GPU-33861458-0994-99a7-7457-6fceb49c229c"
+      ]
+    },
+    "deadline": "2026-09-25T19:11:52.028093-05:00"
+  },
+  "last_full_experiment_audit": "2026-09-24T22:01:47.850044-05:00",
+  "note": "22:15 trigger arrived while prior work was active; no duplicate audit or experiment launched. User then reduced cadence to3hours. No later full-training audit claimed."
+}

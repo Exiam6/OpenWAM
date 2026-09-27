@@ -1,0 +1,837 @@
+{
+  "passed": true,
+  "episodes_checked": 165,
+  "training": 105,
+  "fresh": 60,
+  "all3camera_shapes_intrinsics_initial_extrinsics_match_within_task": true,
+  "initial16Dproprio_exactly_equal_within_task_across_train_and_fresh": true,
+  "postrun_readonly_check": true,
+  "limitation": "Does not certify every historical data-generator or physics parameter; does not change selection",
+  "records": [
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 10
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 15
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 16
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 17
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 18
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 20
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 21
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 23
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 24
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 25
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 26
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 27
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 28
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 29
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 3
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 30
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 31
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 32
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 34
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 37
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 38
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 39
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 4
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 40
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 41
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 42
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 43
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 44
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 45
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 46
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 47
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 49
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 5
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 7
+    },
+    {
+      "role": "training",
+      "task": "adjust_bottle",
+      "episode": 9
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 10
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 15
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 16
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 17
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 18
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 20
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 21
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 23
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 24
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 25
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 26
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 27
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 28
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 29
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 3
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 30
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 31
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 32
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 34
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 37
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 38
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 39
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 4
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 40
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 41
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 42
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 43
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 44
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 45
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 46
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 47
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 49
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 5
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 7
+    },
+    {
+      "role": "training",
+      "task": "handover_block",
+      "episode": 9
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 10
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 15
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 16
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 17
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 18
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 20
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 21
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 23
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 24
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 25
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 26
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 27
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 28
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 29
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 3
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 30
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 31
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 32
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 34
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 37
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 38
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 39
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 4
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 40
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 41
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 42
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 43
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 44
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 45
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 46
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 47
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 49
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 5
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 7
+    },
+    {
+      "role": "training",
+      "task": "place_object_basket",
+      "episode": 9
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600000
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600001
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600003
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600004
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600005
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600006
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600007
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600008
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600009
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600010
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600011
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600012
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600013
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600015
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600016
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600018
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600019
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600020
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600021
+    },
+    {
+      "role": "fresh",
+      "task": "adjust_bottle",
+      "episode": 600022
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601000
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601001
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601002
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601003
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601004
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601005
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601006
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601007
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601008
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601009
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601010
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601011
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601012
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601014
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601015
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601016
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601017
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601018
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601019
+    },
+    {
+      "role": "fresh",
+      "task": "handover_block",
+      "episode": 601020
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602000
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602001
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602002
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602003
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602004
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602005
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602006
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602007
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602008
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602011
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602014
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602015
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602017
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602018
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602020
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602021
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602022
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602024
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602026
+    },
+    {
+      "role": "fresh",
+      "task": "place_object_basket",
+      "episode": 602027
+    }
+  ]
+}

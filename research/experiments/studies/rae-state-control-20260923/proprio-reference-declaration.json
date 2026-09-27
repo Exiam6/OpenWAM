@@ -1,0 +1,8 @@
+{
+  "declared_at": "2026-09-23T00:17:54.910964-05:00",
+  "reference": "original frozen proprio-only ridge conditions, alltasks andallclean/noise",
+  "purpose": "Check whether robust state scores add information beyond current proprioception. Do not mistake proprio-only performance for a visual-representation benefit.",
+  "new_fits": 0,
+  "primary_protocol_changed": false,
+  "source_sha256": "2e11cef5a09f7f924d9fd8717b676d4579f077b5a0907a0f6140e272782ac609"
+}

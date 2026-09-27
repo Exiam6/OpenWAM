@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-09-23T00:34:01.562350-05:00",
+  "trigger": "2026-09-23T00:00:01.504356-05:00",
+  "summary": "Equal-noise short-state control completed00:24:31 exit0,42fits/63prediction conditions independently audited;105train/exposed60eval. Noise.10stateE: Wan native0.308657/LN0.307048, DINOraw0.137719/PCA480.173212/SVAE480.173965, cachedproprio0.347911. PCAvsnativeWan -43.88% descriptive95[-52.42,-33.87]; same pooled192D visual input. RawDINO gripper+63.91% vsWan despite besttotalE. CompactPCA/SVAE gripper pointgains~11%, intervals crosszero; adjust_bottlegripper+3.56%/+2.29%vsproprio. Wan cleanregression~5.7%retained. No independent/fullRAE/closedloopgain. GPUreleased; no pause; originaldeadline unchanged. PublicSites lookup again failed projectnotfound; portableHTML updated.",
+  "next_step": "Archive the equal-noise goal/state findings and prepare an independent confirmation protocol with frozen preprocessing, all routes, both Wan norms, clean/noisy conditions, and separate translation/gripper endpoints. The remaining original window cannot accommodate the measured roughly94-minute native60scene collection plus scoring; do not launch a knowingly over-budget cohort or shrink it after observing results. No extension past01:15:12CDT, no expired56/60collection reuse, no old80replay. Independent sample validation and fullRAE/world-action training remain future work, not completed gains. Finish the small reproducibility/input-range documentation contribution and preserve the deadline.",
+  "deadline": "2026-09-23T01:15:12-05:00",
+  "gpu_released": true,
+  "resource_after": "A40 0MiB,0percent,0ECC, no compute process on selected GPU",
+  "no_pause_markers": true,
+  "protocol_sha256": "f53709932b10c0f6f884f91ae8472e619950219ca83ca95b13168c204395f2c8"
+}

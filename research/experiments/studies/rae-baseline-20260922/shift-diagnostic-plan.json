@@ -1,0 +1,11 @@
+{
+  "recorded_before_diagnostic": "2026-09-22T23:53:49.794359-05:00",
+  "scope": "Post-hoc explanation of unusually large noise errors. All routes/tasks/noise levels, no selected examples, no benefit claim.",
+  "measures": [
+    "training feature std distribution",
+    "clean/noisy standardized feature RMS",
+    "paired noise feature delta RMS and mean-shift energy fraction",
+    "noise-induced normalized output shift and mean-bias energy fraction from fixed linear coefficients"
+  ],
+  "prohibition": "No encoder inference, refitting, corrected test scores, heldout-statistic calibration, or change to original result."
+}

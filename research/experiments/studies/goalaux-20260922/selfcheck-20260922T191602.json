@@ -1,0 +1,73 @@
+{
+  "as_of": "2026-09-22T19:16:02.178458-05:00",
+  "counts": {
+    "adjust_bottle": 20,
+    "handover_block": 20,
+    "place_object_basket": 16
+  },
+  "attempts": 70,
+  "outcomes": {
+    "accepted": 56,
+    "unstable_scene": 3,
+    "expert_infeasible": 10,
+    "infrastructure_failure": 1
+  },
+  "last_attempts": [
+    {
+      "task": "place_object_basket",
+      "seed": 802023,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T19:13:43.418719-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 242,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v4/place_object_basket/seed-802023/data/episode0.hdf5",
+      "hdf5_sha256": "b46bee53344ae2d57408c76b8e558a3ac61365ff5dcd647ab79f0a6ce24b9936",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 101.40818428620696,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802024,
+      "accepted": false,
+      "outcome": "infrastructure_failure",
+      "error": "worker produced no result",
+      "exit_code": 124
+    }
+  ],
+  "active": [],
+  "collector_exit": "1",
+  "run_log_tail": "place_object_basket 802014 expert_infeasible {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 9}\nplace_object_basket 802015 expert_infeasible {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 9}\nplace_object_basket 802016 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 10}\nplace_object_basket 802017 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 11}\nplace_object_basket 802018 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 12}\nplace_object_basket 802019 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 13}\nplace_object_basket 802020 expert_infeasible {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 13}\nplace_object_basket 802021 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 14}\nplace_object_basket 802022 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 15}\nplace_object_basket 802023 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 16}\nplace_object_basket 802024 infrastructure_failure {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 16}\nTraceback (most recent call last):\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation_v4.py\", line 43, in <module>\n    else:parent()\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation_v4.py\", line 37, in parent\n    if code or res['outcome']=='infrastructure_failure':raise RuntimeError('Unclassified failure retained; no retry')\nRuntimeError: Unclassified failure retained; no retry\n",
+  "gpu": "1, 0, 0",
+  "tmux": [],
+  "paused_markers": [],
+  "score_summaries": [],
+  "launch": {
+    "started_at": "2026-09-22T19:00:42.466954-05:00",
+    "collection_deadline": "2026-09-22T19:15:55.548938-05:00",
+    "study_deadline": "2026-09-23T01:15:12-05:00",
+    "wall_cap_seconds": 913,
+    "gpu_uuid": "GPU-dee01971-fb13-ae53-0d7f-ebe6c6149087",
+    "resource_state": "1, 0, 0",
+    "cpu_threads": 4,
+    "expert_only": true,
+    "max_seeds_per_task": 40,
+    "scenes_per_task": 20,
+    "watchdog_cleanup_grace_seconds": 30
+  }
+}

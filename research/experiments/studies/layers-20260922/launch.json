@@ -1,0 +1,10 @@
+{
+  "started_at": "2026-09-22T13:15:12-05:00",
+  "deadline": "2026-09-23T01:15:12-05:00",
+  "status": "preflight",
+  "primary_contrast": "K4-SVAE48 vs L12-SVAE48",
+  "gpu_concurrency_cap": 4,
+  "gpu_hours_cap": 48,
+  "source_plan_commit": "1fb2f2e",
+  "old_evaluations_not_repeated": true
+}

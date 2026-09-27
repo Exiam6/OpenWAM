@@ -1,0 +1,8 @@
+{
+  "started_at": "2026-09-23T12:03:28.132285-05:00",
+  "host": "rainier",
+  "gpu_query": "GPU-38557357-3f58-c864-2f53-8b14087b5e8c, NVIDIA A40, 1, 0, 0",
+  "timeout_seconds": 12903,
+  "deadline": "2026-09-23T15:38:51.767900-05:00",
+  "reason": "same frozen feature code and tolerance on original Ampere architecture; L40S fixture failure retained"
+}

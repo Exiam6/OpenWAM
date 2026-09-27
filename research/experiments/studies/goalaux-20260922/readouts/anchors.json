@@ -1,0 +1,18 @@
+{
+  "source": "completed original layer study; no anchor fit repeated",
+  "names": [
+    "proprio",
+    "L12_raw",
+    "L12_pca",
+    "L12_svae42",
+    "L12_svae43",
+    "L12_svae44"
+  ],
+  "sha256": {
+    "results/layers-20260922/readout/coefficients.npz": "d5bc7544f8b47cc6cc76e005e6a8413f68a1728224a4e88e24e056c874de2e19",
+    "results/layers-20260922/readout/mlp/models.pt": "a59ad2035567144ae45958f297a4eb7493f4fad663e449951e4cd9e40e765e8c",
+    "results/layers-20260922/initial-goal/coefficients.npz": "449377500a50562cf0df7225779cdc8202a098ae706faf3bcbb36421b1ac0a2d",
+    "results/layers-20260922/initial-goal/models.pt": "e3aa787eeb1a4d40bf6659432eff383372b5c6374a8c030fbb8ca7b1689e37d7",
+    "results/layers-20260922/initial-goal/constants.json": "c8e2bb554b419d4b35d7c97b03d6683b54df3b5f5c7895cd01ee760ec57f12d1"
+  }
+}

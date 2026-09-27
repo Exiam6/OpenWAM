@@ -1,0 +1,55 @@
+{
+  "frozen_at": "2026-09-22T16:26:25.602394-05:00",
+  "deadline": "2026-09-23T01:15:12-05:00",
+  "status": "fixed_prospective_protocol_before_any_retained_fit",
+  "arms": {
+    "reconstruction_only": 0.0,
+    "goal_auxiliary": 0.1
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "updates_per_fit": 2000,
+  "training_wall_seconds_cap": 1800,
+  "training_gpus": 1,
+  "training_cpu_threads": 4,
+  "auxiliary_normalization": "per-token LayerNorm eps1e-6, same as existing readout interface; deterministic even-grid2x2mean",
+  "sampler": "one clip per task each update; identical per-seed sequences across arms; auxiliary frame0 from same episode",
+  "source": "original105trainingepisodes only; existingfrozenL12features",
+  "new_confirmation_seeds": {
+    "adjust_bottle": 800000,
+    "handover_block": 801000,
+    "place_object_basket": 802000
+  },
+  "confirmation_accepted_per_task": 20,
+  "confirmation_max_attempts_per_task": 40,
+  "collector_wall_seconds_cap": 7200,
+  "confirmation_old60_excluded": true,
+  "primary_ridge_joint_criteria": {
+    "noise_goal_point_relative_percent_at_most": -10,
+    "noise_goal_upper95_below_percent": 0,
+    "noise_and_clean_state_upper95_below_percent": 5,
+    "clean_goal_upper95_below_percent": 5,
+    "each_task_noise_goal_and_state_point_relative_percent_at_most": 10
+  },
+  "source_sha256": {
+    "scripts/goalaux/objective_aligned.py": "d43d9166b62a1000ca515135df5ee1607835c261f3c9e57e6fd9e88da2a6cacb",
+    "scripts/goalaux/train_matched.py": "6a50610f9383a8dc22386556c1cb020e6738cfa58fc6a43732caa0fcada54831",
+    "OpenWAM/openwam/model/video_backbone/encoder/svae/model.py": "3f042c5d19bed2d0c8e7f385af0266aea73b8bd49f37736c3356e5044997dfd1",
+    "results/goalaux-20260922/MATCHED_PROTOCOL.md": "1372d41f026fc3f3d1b32f39431799aad90244e821b6849d6ba2421c7a83ab0d",
+    "results/goalaux-20260922/gpu-preflight-v2/result.json": "e5f0394c830bcfe0e370cc2abe0c4db2a5a6ac15b49f626924bffc24e00295d3",
+    "results/layers-20260922/features/manifest.json": "f31f5bffc3841327b5b3a02fc73f74afad1ffe0a86e7024ff8a6740f349e8a79",
+    "results/layers-20260922/initial-goal-training-labels.json": "cae551cd7c5c5c2fc3e3b14f93fdec2ca85327f8b53eaff5df728876a4b02261",
+    "results/layers-20260922/L12/seed42/final.pt": "24c0646312e3e668972fec64d79162e58d0005c529421eed3d8651998e636415",
+    "results/layers-20260922/L12/seed43/final.pt": "1230d11086cdfae106339bbe0b59082dafe09c0210c1ce70197076b9ba8d3bda",
+    "results/layers-20260922/L12/seed44/final.pt": "ae21629bead1277dac5db12a1429047ab92654f9636e529ec7c11ffe04a28305",
+    "scripts/layers/readout_v2.py": "696468bec68e1a22001301624a06fdef4a5351f584eebac471ecbbb192f39283",
+    "scripts/layers/mlp_readout.py": "c9cc4a6c71328fe4faf0152651397d2ee23fb076e4106ce21e032511645dab06",
+    "scripts/layers/fit_initial_goal.py": "d40116f2cc7955963a73aa34e3ae930758043b01fbca9989bf1b16de16b3831d"
+  },
+  "plan_document": "MATCHED_PROTOCOL.md",
+  "retain": "final2000only; no best checkpoint,weight sweep or posthoc winner promotion",
+  "policy_adaptation": false
+}

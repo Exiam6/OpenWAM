@@ -1,0 +1,30 @@
+{
+  "time": "2026-09-26T18:01:58.900695-05:00",
+  "deadline": "2026-09-29T17:48:49.941691-05:00",
+  "max_new_gpus": 2,
+  "fit_exit": {
+    "time": "2026-09-26T17:55:40.192578-05:00",
+    "returncode": 0,
+    "error": null,
+    "seconds": 171.51330454275012,
+    "child_returncode": 0
+  },
+  "lanes": {
+    "mean": {
+      "host": "cm001",
+      "gpu": 4
+    },
+    "learned": {
+      "host": "cm001",
+      "gpu": 2
+    }
+  },
+  "training_seeds": [
+    42,
+    43,
+    44
+  ],
+  "evaluation_total": 1080,
+  "phase": "seed42_running; finite continuation and evaluation lanes prepared",
+  "protocol_sha256": "3b6ff4d087676a968e743d9f6456ad26f18475f9f2d51462367313caf21d73f6"
+}

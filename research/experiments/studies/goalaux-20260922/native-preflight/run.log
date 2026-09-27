@@ -1,0 +1,13 @@
+[eval_policy_wrapper] RoboTwin commit=0aeea2d669c0 eval_policy.py sha256=8b16c766a9c40116
+[eval_policy_wrapper] runtime_root=/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/native-preflight/runtime
+[eval_policy_wrapper] prewarmed CUDA/Curobo before SAPIEN import
+[eval_policy_wrapper] patched warp.torch compatibility namespace
+/vol13/zifanz4/openwam-experiments/goalaux-native/benchmark-env/lib/python3.10/site-packages/sapien/_vulkan_tricks.py:37: UserWarning: Failed to find Vulkan ICD file. This is probably due to an incorrect or partial installation of the NVIDIA driver. SAPIEN will attempt to provide an ICD file anyway but it may not work.
+  warn(
+/vol13/zifanz4/openwam-experiments/scripts/goalaux/native_preflight.py:21: DeprecationWarning: Engine is deprecated. use sapien.Scene() directly.
+  engine=sapien.Engine();renderer=sapien.SapienRenderer();engine.set_renderer(renderer)
+/vol13/zifanz4/openwam-experiments/scripts/goalaux/native_preflight.py:21: DeprecationWarning: SapienRenderer is no no longer needed.
+  engine=sapien.Engine();renderer=sapien.SapienRenderer();engine.set_renderer(renderer)
+/vol13/zifanz4/openwam-experiments/scripts/goalaux/native_preflight.py:25: DeprecationWarning: component.set_pose can be ambiguous thus deprecated. It is equivalent to component.set_entity_pose, which should be used instead
+  scene.set_ambient_light([.5,.5,.5]);scene.add_ground(0);camera=scene.add_camera('preflight',64,64,1,.1,10);camera.set_pose(sapien.Pose([0,0,1]));scene.step();scene.update_render();camera.take_picture();rgba=camera.get_picture('Color');assert rgba.shape==(64,64,4) and np.isfinite(rgba).all()
+NATIVE_PREFLIGHT_PASS

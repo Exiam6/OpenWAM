@@ -1,0 +1,81 @@
+{
+  "checked_at": "2026-09-22T13:57:59.206363-05:00",
+  "passed": true,
+  "fits": [
+    {
+      "source": "L12",
+      "seed": 42,
+      "steps": 2000,
+      "checkpoint_sha256": "24c0646312e3e668972fec64d79162e58d0005c529421eed3d8651998e636415",
+      "seconds": 75.15031075105071,
+      "peak_allocated_GB": 1.273040896
+    },
+    {
+      "source": "L12",
+      "seed": 43,
+      "steps": 2000,
+      "checkpoint_sha256": "1230d11086cdfae106339bbe0b59082dafe09c0210c1ce70197076b9ba8d3bda",
+      "seconds": 75.54397897422314,
+      "peak_allocated_GB": 1.279315968
+    },
+    {
+      "source": "L12",
+      "seed": 44,
+      "steps": 2000,
+      "checkpoint_sha256": "ae21629bead1277dac5db12a1429047ab92654f9636e529ec7c11ffe04a28305",
+      "seconds": 74.2128940820694,
+      "peak_allocated_GB": 1.278562304
+    },
+    {
+      "source": "L6",
+      "seed": 42,
+      "steps": 2000,
+      "checkpoint_sha256": "f626837f86a78bc71b305053093896a5cf29d557df822beb2112f7c13ca27ac4",
+      "seconds": 75.2593089826405,
+      "peak_allocated_GB": 1.273040896
+    },
+    {
+      "source": "L6",
+      "seed": 43,
+      "steps": 2000,
+      "checkpoint_sha256": "4b7d58ef692c8ef60d664afb7098748b1bc6590e8bd86785fd8cde0d7b8a850f",
+      "seconds": 74.55545273795724,
+      "peak_allocated_GB": 1.279315968
+    },
+    {
+      "source": "L6",
+      "seed": 44,
+      "steps": 2000,
+      "checkpoint_sha256": "ffa2c2ed74cc8f6aef02407fbb39dc986497ab39236208d7d507216c87e6433c",
+      "seconds": 77.41637391969562,
+      "peak_allocated_GB": 1.278562304
+    },
+    {
+      "source": "K4",
+      "seed": 42,
+      "steps": 2000,
+      "checkpoint_sha256": "cdd27ea7ee3270c552e5dfa7fed9e68efa80107a71922a9b0269a9d6b083a9c1",
+      "seconds": 73.93704986199737,
+      "peak_allocated_GB": 1.273040896
+    },
+    {
+      "source": "K4",
+      "seed": 43,
+      "steps": 2000,
+      "checkpoint_sha256": "9cdbb993a5f1f36d131c97cb9535afa06527453b8f1eeda8bf6df1a77ca388dc",
+      "seconds": 75.04373283684254,
+      "peak_allocated_GB": 1.279315968
+    },
+    {
+      "source": "K4",
+      "seed": 44,
+      "steps": 2000,
+      "checkpoint_sha256": "0d1b5788484fd2bd38bd112322c52bd842d29550b02d54053781f16b346becf6",
+      "seconds": 72.98188916221261,
+      "peak_allocated_GB": 1.278562304
+    }
+  ],
+  "fit_count": 9,
+  "fresh_scores": 0,
+  "scope": "checkpoint completeness and hashes, not control outcome audit"
+}

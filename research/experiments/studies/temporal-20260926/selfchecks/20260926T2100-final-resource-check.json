@@ -1,0 +1,34 @@
+{
+  "time": "2026-09-26T22:26:47.058318-05:00",
+  "queue_exits": {
+    "1": {
+      "time": "2026-09-26T20:05:15.659156-05:00",
+      "returncode": 1,
+      "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+      "admitted": true,
+      "no_automatic_retry": true
+    },
+    "2": null,
+    "3": null,
+    "4": {
+      "time": "2026-09-26T20:02:50.210159-05:00",
+      "returncode": 1,
+      "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+      "admitted": true,
+      "no_automatic_retry": true
+    },
+    "5": null,
+    "6": {
+      "time": "2026-09-26T19:32:45.229302-05:00",
+      "returncode": 1,
+      "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+      "admitted": true,
+      "no_automatic_retry": true
+    }
+  },
+  "free_gib": {
+    "/": 0.093,
+    "/home/zifanz4": 0.157,
+    "/data02/zifanz4": 92.755
+  }
+}

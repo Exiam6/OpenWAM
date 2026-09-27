@@ -1,0 +1,11 @@
+{
+  "frozen_at": "2026-09-22T16:12:21.827604-05:00",
+  "original_protocol_sha256": "7bfef725f564afee18d3338fc62fd932148962b32f676f0c17d90cc1776c61fc",
+  "original_host": "cm004",
+  "original_gpu_uuid": "GPU-0c486005-5f03-f4da-5f3a-e67def845364",
+  "host": "cm002",
+  "gpu_uuid": "GPU-b5dd9913-a939-d3a1-c593-e11140a0e8aa",
+  "gpu_name": "NVIDIA L40S",
+  "reason": "Initial GPU became occupied before launch; no model code executed. Choose lexicographically first idle L40S from fixed Group2 scan. Same shared files, source hashes,precision,batch,criteria and600s cap.",
+  "original_model_run_occurred": false
+}

@@ -1,0 +1,8 @@
+{
+  "recorded_at": "2026-09-22T16:37:38.606396-05:00",
+  "lookup_observed_during": "16:00 selfcheck processing",
+  "result": "Sites get_site NOT_FOUND404",
+  "deployment_attempted": false,
+  "existing_public_version_unchanged": true,
+  "local_report_updated": true
+}

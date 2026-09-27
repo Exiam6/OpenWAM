@@ -1,0 +1,36 @@
+{
+  "sha256": {
+    "transfer/parity-fixture.pt": "a89f7193dcd381362be880c2bec146751a42e244c11045b286f71e7c62f5131d",
+    "transfer/old-corpus-identities.json": "45669231e9bf420802e5d5772d1f45f9d83c7ca0c86e954097daa1811f33bf6c",
+    "readout/coefficients.npz": "d5bc7544f8b47cc6cc76e005e6a8413f68a1728224a4e88e24e056c874de2e19",
+    "readout/mlp/models.pt": "a59ad2035567144ae45958f297a4eb7493f4fad663e449951e4cd9e40e765e8c",
+    "readout/manifest.json": "f31f5bffc3841327b5b3a02fc73f74afad1ffe0a86e7024ff8a6740f349e8a79",
+    "L12/pca.pt": "dd95154ca0f8e385ff3892f47b673d7b27d19311b2052aa30e228d219765a8b6",
+    "L12/seed42/final.pt": "24c0646312e3e668972fec64d79162e58d0005c529421eed3d8651998e636415",
+    "L12/seed43/final.pt": "1230d11086cdfae106339bbe0b59082dafe09c0210c1ce70197076b9ba8d3bda",
+    "L12/seed44/final.pt": "ae21629bead1277dac5db12a1429047ab92654f9636e529ec7c11ffe04a28305",
+    "L6/pca.pt": "a8d7a866b6cce5ac669f0870ba7496ea54bc23df160403311bcd59e9ad41259c",
+    "L6/seed42/final.pt": "f626837f86a78bc71b305053093896a5cf29d557df822beb2112f7c13ca27ac4",
+    "L6/seed43/final.pt": "4b7d58ef692c8ef60d664afb7098748b1bc6590e8bd86785fd8cde0d7b8a850f",
+    "L6/seed44/final.pt": "ffa2c2ed74cc8f6aef02407fbb39dc986497ab39236208d7d507216c87e6433c",
+    "K4/pca.pt": "8b93d7f3f92ca8b74096e049745287e44c6ed60ad1091309ceafdf603d34a3e2",
+    "K4/seed42/final.pt": "cdd27ea7ee3270c552e5dfa7fed9e68efa80107a71922a9b0269a9d6b083a9c1",
+    "K4/seed43/final.pt": "9cdbb993a5f1f36d131c97cb9535afa06527453b8f1eeda8bf6df1a77ca388dc",
+    "K4/seed44/final.pt": "0d1b5788484fd2bd38bd112322c52bd842d29550b02d54053781f16b346becf6"
+  },
+  "encoder_sha256": "d84eabf6b6e01f58dd4a2d93af0eb426191a595ebaba1f43c47caa5feaefeef7",
+  "parity_fixture": "first8trainingframes; no new inference or model fitting",
+  "existing_corpus_episodes": 150,
+  "source_sha256": {
+    "scripts/layers/common.py": "87a54d28304292a12f1cb62d579b66920b032876e6e098a30897aee818e60e2d",
+    "scripts/layers/extract_train.py": "e07badffa5c864a59c5ae7048f051a83d6fd38fba5d52c6b9a0dbe1c21dc22e1",
+    "scripts/layers/readout_v2.py": "696468bec68e1a22001301624a06fdef4a5351f584eebac471ecbbb192f39283",
+    "scripts/layers/confirm_fresh.py": "adf63ff52f407afa8c6fff5e63d789fe9cebbdcebf068e65197ddac3275c5443",
+    "scripts/layers/confirmation_gates.py": "963bbbada1a5671c0528be150ff1c3166221dc666c1c64a7ea0b6cd51042e7f1",
+    "scripts/layers/audit_confirmation.py": "265fdd02aff7b5b1b629223139086872ffe338fcf66792b280f5dfda66469c1c",
+    "scripts/layers/run-confirmation.sh": "bc672b45177337294366faa64c9166a25f5d95acc0f8df3822b1189a3e5781d5"
+  },
+  "frozen_at": "2026-09-22T14:21:20.173747-05:00",
+  "source_commit": "ecea01257c769f4635031d8eb1f04dccf244bc60",
+  "refits": 0
+}

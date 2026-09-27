@@ -1,0 +1,166 @@
+{
+  "passed": true,
+  "finished_at": "2026-09-22T16:18:57.441568-05:00",
+  "elapsed_seconds": 9.490051886066794,
+  "dtype": "CUDA autocast BF16; FP32 parameters",
+  "deterministic_algorithms": true,
+  "gpu_name": "NVIDIA L40S",
+  "torch_version": "2.7.0+cu126",
+  "device_count": 1,
+  "cpu_threads": 4,
+  "peak_cpu_rss_MiB": 1901.828125,
+  "batch_shape": [
+    3,
+    768,
+    3,
+    24,
+    20
+  ],
+  "auxiliary_batch_shape": [
+    3,
+    768,
+    1,
+    24,
+    20
+  ],
+  "records": [
+    {
+      "task": "adjust_bottle",
+      "episode": 3,
+      "frame": 0,
+      "split": "train"
+    },
+    {
+      "task": "handover_block",
+      "episode": 3,
+      "frame": 0,
+      "split": "train"
+    },
+    {
+      "task": "place_object_basket",
+      "episode": 3,
+      "frame": 0,
+      "split": "train"
+    }
+  ],
+  "cache_sha256": {
+    "results/layers-20260922/features/adjust_bottle/episode3.pt": "f38950b4d4e46740d93dcebac15f07f8a226fc72c74a18408b909c8e96be2d26",
+    "results/layers-20260922/features/handover_block/episode3.pt": "018584b6c202a735074131a89c1b13def687e9e0fed8f86e6e79986c3ab939e4",
+    "results/layers-20260922/features/place_object_basket/episode3.pt": "c8e4f7c0fd53ff154a39e1ca0e90200bfb6898453940089871aa7d91e1d6b8c7"
+  },
+  "zero_weight_parity": {
+    "exact": true,
+    "parameter_gradients": 80,
+    "cpu_and_cuda_rng_equal": true,
+    "one_adamw_update_equal": true,
+    "inherited_from": "gpu-preflight/run.log",
+    "rerun": false,
+    "reason": "Zero-weight wrapper source identical; only positive-weight pooling implementation changed"
+  },
+  "pooling_equivalence": {
+    "cpu_fp32_forward_max_abs": 1.1920928955078125e-07,
+    "cpu_fp32_gradient_max_abs": 1.862645149230957e-09,
+    "gpu_bf16_forward_max_abs": 0.0,
+    "cpu_rtol": 1e-06,
+    "cpu_atol": 1e-06,
+    "cpu_gradient_atol": 1e-07,
+    "gpu_rtol": 0.015625,
+    "gpu_atol": 0.0009765625
+  },
+  "auxiliary_encoder_gradient_norm": 17.78721809387207,
+  "auxiliary_head_gradient_norm": 13.23532485961914,
+  "profiles": {
+    "reconstruction_only": {
+      "weight": 0.0,
+      "warmup_updates": 10,
+      "timed_updates": 30,
+      "timed_seconds": [
+        0.026963260024785995,
+        0.027898432686924934,
+        0.026067323982715607,
+        0.026788413524627686,
+        0.027487359941005707,
+        0.025379424914717674,
+        0.025232071056962013,
+        0.02782520093023777,
+        0.02714507095515728,
+        0.025435063987970352,
+        0.02549123577773571,
+        0.02547750249505043,
+        0.025309551507234573,
+        0.025281041860580444,
+        0.03206571936607361,
+        0.025591926649212837,
+        0.025541136041283607,
+        0.02541334554553032,
+        0.02529994212090969,
+        0.0252581425011158,
+        0.025358421728014946,
+        0.026878707110881805,
+        0.025170886889100075,
+        0.025142697617411613,
+        0.025152990594506264,
+        0.025146670639514923,
+        0.025164039805531502,
+        0.025162439793348312,
+        0.025145377963781357,
+        0.028099196031689644
+      ],
+      "median_seconds_per_update": 0.025424204766750336,
+      "p95_seconds_per_update": 0.028008852526545523,
+      "peak_allocated_GB": 1.483794944,
+      "last_loss_diagnostic_only": 0.21061839163303375,
+      "rough_2000_update_seconds": 50.84840953350067
+    },
+    "goal_auxiliary": {
+      "weight": 0.1,
+      "warmup_updates": 10,
+      "timed_updates": 30,
+      "timed_seconds": [
+        0.035432955250144005,
+        0.03552272357046604,
+        0.03548762388527393,
+        0.03531136363744736,
+        0.03537779301404953,
+        0.03540937416255474,
+        0.035267751663923264,
+        0.03535227105021477,
+        0.035970691591501236,
+        0.03802948631346226,
+        0.0382386464625597,
+        0.0387325044721365,
+        0.048149244859814644,
+        0.03528673201799393,
+        0.03672555275261402,
+        0.0326551403850317,
+        0.03164202347397804,
+        0.03183400444686413,
+        0.032051458954811096,
+        0.03193771652877331,
+        0.030697617679834366,
+        0.030142420902848244,
+        0.028044745326042175,
+        0.028021013364195824,
+        0.027965284883975983,
+        0.02804899401962757,
+        0.027996335178613663,
+        0.02802928537130356,
+        0.028104357421398163,
+        0.02795708365738392
+      ],
+      "median_seconds_per_update": 0.03396144602447748,
+      "p95_seconds_per_update": 0.038510268367826936,
+      "peak_allocated_GB": 1.57072128,
+      "last_loss_diagnostic_only": 0.19973216950893402,
+      "rough_2000_update_seconds": 67.92289204895496
+    }
+  },
+  "checkpoint_unchanged": true,
+  "new_checkpoint_saved": false,
+  "dev_or_confirmation_scored": false,
+  "limits": [
+    "Timing uses three existing training episodes, resident feature cache, oneGPU; excludes extraction/IO/collection/readout",
+    "Temporary profiling updates are discarded; no fitted representation or policy gain claim",
+    "One checkpoint seed; no all-seed or distributed parity claim"
+  ]
+}

@@ -1,0 +1,285 @@
+From eb31a97c4baa7dc5c4511a14f1f6c9b32795a5fd Mon Sep 17 00:00:00 2001
+From: Codex <codex@localhost>
+Date: Mon, 21 Sep 2026 01:30:34 -0500
+Subject: [PATCH] Add held-out S-VAE reconstruction diagnostics by temporal
+ role
+
+---
+ README.md                           |   2 +
+ scripts/svae_train/EVALUATION.md    |  17 +++++
+ scripts/svae_train/evaluate_svae.py | 110 ++++++++++++++++++++++++++++
+ tests/test_svae_evaluation.py       | 108 +++++++++++++++++++++++++++
+ 4 files changed, 237 insertions(+)
+ create mode 100644 scripts/svae_train/EVALUATION.md
+ create mode 100644 scripts/svae_train/evaluate_svae.py
+ create mode 100644 tests/test_svae_evaluation.py
+
+diff --git a/README.md b/README.md
+index dfcf31e..d82e474 100644
+--- a/README.md
++++ b/README.md
+@@ -253,6 +253,8 @@ python scripts/download_assets/download_visual_encoder.py
+ Weights are saved under `assets/visual_encoder_ckpt/`, and the selected encoder configuration is
+ updated.
+ 
++For external encoders with an S-VAE reducer, see the [held-out reconstruction evaluation guide](scripts/svae_train/EVALUATION.md) to evaluate current conditioning and pooled target frames separately.
++
+ ### 5. Released OpenWAM Checkpoints
+ 
+ Use this downloader to obtain OpenWAM-Alpha releases or OpenWAM-Study
+diff --git a/scripts/svae_train/EVALUATION.md b/scripts/svae_train/EVALUATION.md
+new file mode 100644
+index 0000000..9aa9ffb
+--- /dev/null
++++ b/scripts/svae_train/EVALUATION.md
+@@ -0,0 +1,17 @@
++# Held-out S-VAE reconstruction evaluation
++
++After fitting an S-VAE, evaluate a separate feature cache with:
++
++```bash
++python scripts/svae_train/evaluate_svae.py \
++  --checkpoint /path/to/svae.pt \
++  --features-dir /path/to/heldout_features \
++  --output /path/to/evaluation.json \
++  --device cuda --batch-size 2
++```
++
++Use the same frozen encoder, image preprocessing and temporal pooling as in training. Split **episodes before feature collection**. The collector's shards do not encode episode identities, so selecting different shards from a shuffled collection does not guarantee a held-out split. Retain the episode manifest alongside your collection. The evaluator deliberately uses the checkpoint's training normalization buffers, never statistics fitted on the held-out cache.
++
++The evaluator streams the existing `features_rank*_part*.pt` format, runs the reducer deterministically in evaluation mode, and reports standardized MSE for all frames, the first conditioning frame, and the remaining pooled target frames. It weights by element count, so an incomplete final batch is handled correctly. A single-frame cache has no pooled-target metric (`null`). This can reveal current-frame / future-target tradeoffs that one aggregate hides. These metrics are **not policy success rates**; downstream control quality requires separate evaluation.
++
++Temporal pooling can reduce target variance, so a larger conditioning MSE alone is not evidence that the model underweights observations. The evaluator also reports each squared-error sum divided by its standardized target energy (`*_relative_mse`), relative to predicting the checkpoint training mean. Zero-energy targets yield `null`; this ratio is not an R-squared score fitted around the held-out mean.
+diff --git a/scripts/svae_train/evaluate_svae.py b/scripts/svae_train/evaluate_svae.py
+new file mode 100644
+index 0000000..031c099
+--- /dev/null
++++ b/scripts/svae_train/evaluate_svae.py
+@@ -0,0 +1,110 @@
++"""Evaluate a saved S-VAE on separately collected, held-out feature shards.
++
++No statistics are fitted: the checkpoint's training mean/std are used. Split
++by episode BEFORE collection; different shard files alone do not prove that
++training and evaluation episodes are disjoint. This measures reconstruction,
++not downstream policy success.
++"""
++
++from __future__ import annotations
++
++import argparse
++import json
++import sys
++from pathlib import Path
++
++import torch
++
++
++def iter_feature_batches(features_dir: Path, batch_size: int):
++    """Stream the collector's native shards without materializing the cache."""
++    if batch_size < 1:
++        raise ValueError("batch_size must be positive")
++    shards = sorted(features_dir.glob("features_rank*_part*.pt"))
++    if not shards:
++        raise FileNotFoundError(f"No feature shards under {features_dir}")
++    raw_dim = None
++    for path in shards:
++        shard = torch.load(path, map_location="cpu", mmap=True, weights_only=True)
++        features = shard["features"]
++        if features.ndim != 5 or features.shape[1] != int(shard["raw_dim"]):
++            raise ValueError(f"Invalid feature shape / raw_dim in {path}")
++        if raw_dim is not None and features.shape[1] != raw_dim:
++            raise ValueError(f"raw_dim mismatch in {path}")
++        raw_dim = features.shape[1]
++        for batch in features.split(batch_size):
++            if len(batch):
++                yield batch.float()
++
++
++@torch.inference_mode()
++def evaluate_svae(model, batches):
++    """Element-weighted, deterministic MSE in checkpoint-standardized space.
++
++    The first latent frame conditions the policy; subsequent latents are pooled
++    video targets. Keep them separate so the aggregate cannot hide a tradeoff.
++    A one-frame cache reports no pooled-target metric (JSON null).
++    """
++    device = next(model.parameters()).device
++    sums = torch.zeros(3, device=device, dtype=torch.float64)
++    energies = torch.zeros_like(sums)
++    counts = [0, 0, 0]
++    clips = 0
++    was_training = model.training
++    model.eval()
++    try:
++        for batch in batches:
++            if batch.ndim != 5 or batch.shape[2] < 1:
++                raise ValueError("Expected nonempty temporal dimension in (B,C,T,H,W)")
++            if batch.shape[0] == 0:
++                continue
++            out = model(batch.to(device))
++            target = out["target"].float()
++            err = (out["recon"].float() - target).square()
++            energy = target.square()
++            for i, part in enumerate((err, err[:, :, :1], err[:, :, 1:])):
++                sums[i] += part.sum(dtype=torch.float64)
++                counts[i] += part.numel()
++            for i, part in enumerate((energy, energy[:, :, :1], energy[:, :, 1:])):
++                energies[i] += part.sum(dtype=torch.float64)
++            clips += len(batch)
++        if not counts[0]:
++            raise ValueError("No feature elements to evaluate")
++        if not (torch.isfinite(sums).all() and torch.isfinite(energies).all()):
++            raise ValueError("Non-finite reconstruction error")
++        names = ("all_mse", "condition_mse", "pooled_target_mse")
++        return {
++            "num_clips": clips,
++            "metric_space": "checkpoint_training_standardized_features",
++            **{name: float(sums[i] / counts[i]) if counts[i] else None for i, name in enumerate(names)},
++            # Relative to predicting the checkpoint training mean (zero in this space).
++            **{
++                name.replace("_mse", "_relative_mse"): float(sums[i] / energies[i]) if energies[i] > 0 else None
++                for i, name in enumerate(names)
++            },
++        }
++    finally:
++        model.train(was_training)
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--checkpoint", type=Path, required=True)
++    parser.add_argument("--features-dir", type=Path, required=True)
++    parser.add_argument("--output", type=Path, required=True)
++    parser.add_argument("--batch-size", type=int, default=2)
++    parser.add_argument("--device", default="cpu")
++    args = parser.parse_args()
++    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
++    from openwam.model.video_backbone.encoder.svae import load_svae
++
++    model = load_svae(str(args.checkpoint)).to(args.device)
++    metrics = evaluate_svae(model, iter_feature_batches(args.features_dir, args.batch_size))
++    metrics.update({"checkpoint": str(args.checkpoint), "features_dir": str(args.features_dir)})
++    args.output.parent.mkdir(parents=True, exist_ok=True)
++    args.output.write_text(json.dumps(metrics, indent=2) + "\n")
++    print(json.dumps(metrics, indent=2))
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/tests/test_svae_evaluation.py b/tests/test_svae_evaluation.py
+new file mode 100644
+index 0000000..546de4d
+--- /dev/null
++++ b/tests/test_svae_evaluation.py
+@@ -0,0 +1,108 @@
++"""S-VAE held-out metrics: ragged batches, temporal slices, deterministic eval."""
++
++import importlib.util
++from pathlib import Path
++
++import pytest
++import torch
++
++_SOURCE = Path(__file__).resolve().parents[1] / "scripts/svae_train/evaluate_svae.py"
++_SPEC = importlib.util.spec_from_file_location("evaluate_svae_script", _SOURCE)
++_MODULE = importlib.util.module_from_spec(_SPEC)
++_SPEC.loader.exec_module(_MODULE)
++evaluate_svae = _MODULE.evaluate_svae
++iter_feature_batches = _MODULE.iter_feature_batches
++
++
++class _ReconstructionFixture(torch.nn.Module):
++    def __init__(self):
++        super().__init__()
++        self.anchor = torch.nn.Parameter(torch.zeros(()))
++
++    def forward(self, x):
++        assert not self.training
++        return {"recon": x + self.anchor, "target": torch.zeros_like(x)}
++
++
++def test_element_weighting_and_temporal_decomposition():
++    model = _ReconstructionFixture().train()
++    # Per-clip errors 1, 4, 9. The last batch has one clip: batch-mean
++    # averaging would incorrectly return 5.75 instead of 14/3.
++    x = torch.tensor([1.0, 2.0, 3.0]).reshape(3, 1, 1, 1, 1).expand(-1, 2, 3, 2, 2).clone()
++    x[:, :, 0] *= 2
++    result = evaluate_svae(model, x.split(2))
++    assert result["num_clips"] == 3
++    assert result["condition_mse"] == pytest.approx(56 / 3)
++    assert result["pooled_target_mse"] == pytest.approx(14 / 3)
++    assert result["all_mse"] == pytest.approx(28 / 3)
++    assert model.training  # utility restores its caller's model mode
++
++
++def test_single_frame_and_empty_input():
++    model = _ReconstructionFixture()
++    result = evaluate_svae(model, [torch.ones(2, 1, 1, 2, 2)])
++    assert result["all_mse"] == result["condition_mse"] == 1
++    assert result["pooled_target_mse"] is None
++    assert result["condition_relative_mse"] is None
++    with pytest.raises(ValueError, match="No feature"):
++        evaluate_svae(model, [])
++    with pytest.raises(ValueError, match="temporal"):
++        evaluate_svae(model, [torch.empty(1, 2, 0, 2, 2)])
++    with pytest.raises(ValueError, match="Non-finite"):
++        evaluate_svae(model, [torch.full((1, 1, 1, 1, 1), float("nan"))])
++    assert model.training
++
++
++def test_shards_ragged_batch_and_dimension_validation(tmp_path):
++    for i, n in enumerate((3, 1)):
++        torch.save(
++            {"features": torch.full((n, 2, 3, 2, 2), float(i)), "raw_dim": 2}, tmp_path / f"features_rank0_part{i}.pt"
++        )
++    batches = list(iter_feature_batches(tmp_path, 2))
++    assert [len(x) for x in batches] == [2, 1, 1]
++    result = evaluate_svae(_ReconstructionFixture(), batches)
++    assert result["num_clips"] == 4
++    assert result["all_mse"] == 0.25
++    torch.save({"features": torch.zeros(1, 3, 3, 2, 2), "raw_dim": 3}, tmp_path / "features_rank0_part2.pt")
++    with pytest.raises(ValueError, match="raw_dim mismatch"):
++        list(iter_feature_batches(tmp_path, 2))
++    with pytest.raises(ValueError, match="positive"):
++        list(iter_feature_batches(tmp_path, 0))
++
++
++def test_real_svae_checkpoint_normalization_and_repeatability(tmp_path):
++    # Load only the leaf module: these CPU metric tests need no full WAM stack.
++    model_path = _SOURCE.parents[2] / "openwam/model/video_backbone/encoder/svae/model.py"
++    spec = importlib.util.spec_from_file_location("svae_model_evaluation_test", model_path)
++    module = importlib.util.module_from_spec(spec)
++    spec.loader.exec_module(module)
++    torch.manual_seed(7)
++    model = module.SVAE(input_dim=8, latent_dim=4, num_heads=2, num_layers=1, intermediate_size=16, dropout=0.2)
++    model.set_input_stats(torch.arange(8).float(), torch.full((8,), 2.0))
++    checkpoint = tmp_path / "svae.pt"
++    torch.save({"format_version": 2, "model_config": model.config_dict(), "state_dict": model.state_dict()}, checkpoint)
++    restored = module.load_svae(str(checkpoint))
++    x = torch.randn(3, 8, 3, 2, 2)
++    first = evaluate_svae(restored, x.split(2))
++    second = evaluate_svae(restored, x.split(1))
++    assert first["all_mse"] == pytest.approx(second["all_mse"], rel=1e-6)
++    assert torch.equal(restored.input_mean, model.input_mean)
++    assert torch.equal(restored.input_std, model.input_std)
++    restored.eval()
++    with torch.no_grad():
++        out = restored(x)
++    assert first["all_mse"] == pytest.approx(float((out["recon"] - out["target"]).square().mean()), rel=1e-6)
++
++
++def test_relative_error_uses_training_standardized_target_energy():
++    class MeanPredictor(_ReconstructionFixture):
++        def forward(self, x):
++            return {"recon": torch.zeros_like(x), "target": x}
++
++    model = MeanPredictor()
++    x = torch.ones(3, 2, 3, 2, 2)
++    x[:, :, 0] *= 4
++    result = evaluate_svae(model, x.split(2))
++    assert result["condition_mse"] == 16
++    assert result["pooled_target_mse"] == 1
++    assert result["condition_relative_mse"] == result["pooled_target_relative_mse"] == 1
+-- 
+2.34.1
+

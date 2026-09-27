@@ -1,0 +1,57 @@
+{
+  "time": "2026-09-26T22:20:25.877217-05:00",
+  "temporal_integrity": {
+    "count": 224,
+    "mismatches": [],
+    "reporter_frozen": false
+  },
+  "prior_integrity": {
+    "count": 20,
+    "mismatches": [],
+    "reporter_frozen": false
+  },
+  "pairs": {
+    "42": {
+      "lengths": [
+        4000,
+        4000
+      ],
+      "shared_prefix_length": 4000,
+      "paired": true,
+      "same_initial": true
+    },
+    "43": {
+      "lengths": [
+        2920,
+        2874
+      ],
+      "shared_prefix_length": 2874,
+      "paired": true,
+      "same_initial": true
+    }
+  },
+  "owned_lanes": {
+    "2685602": {
+      "uid": 2093,
+      "start_ticks": "2636874507",
+      "cmd": "python3 /home/zifanz4/openwam-experiments/scripts/temporal/lane.py mean "
+    },
+    "2685605": {
+      "uid": 2093,
+      "start_ticks": "2636874508",
+      "cmd": "python3 /home/zifanz4/openwam-experiments/scripts/temporal/lane.py learned "
+    },
+    "1930714": {
+      "uid": 2093,
+      "start_ticks": "2628863133",
+      "cmd": "python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --controller "
+    }
+  },
+  "pause_markers": {
+    "/home/zifanz4/.local/state/openwam-selfcheck/paused.json": false,
+    "/home/zifanz4/openwam-experiments/studies/layers-20260922/paused.json": false,
+    "/home/zifanz4/openwam-experiments/studies/temporal-20260926/paused.json": false,
+    "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/paused.json": false,
+    "/home/zifanz4/openwam-experiments/studies/control-svae-20260926/paused.json": false
+  }
+}

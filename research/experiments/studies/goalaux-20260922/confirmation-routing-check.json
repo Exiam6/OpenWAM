@@ -1,0 +1,14 @@
+{
+  "time": "2026-09-22T18:51:40.631445-05:00",
+  "numeric_scoring_source_unchanged": true,
+  "routing_wrappers": [
+    "confirmation_gates_v2.py",
+    "score_confirmation_v2.py"
+  ],
+  "audit_exact_after_reversing_two_directory_literals": true,
+  "original_and_new_audit_sha256": [
+    "27edf814cba3a7137dfda11290ab94e4910667f4d8b08b4f91a5d1736e39e0c2",
+    "e8ca093f6bb6ce30e117bfe413b1be4807ab43cf5947fc31c009af18cc2ed43f"
+  ],
+  "no_completed_stage_replayed": true
+}

@@ -1,0 +1,100 @@
+{
+  "checked_at": "2026-09-23T19:57:09.514564-05:00",
+  "delivered_trigger": "2026-09-23T18:45:01.264740-05:00",
+  "active_study": "endtoend-20260923",
+  "authorization_source": "latest direct user request: complete representation training and verification",
+  "old_layers_deadline": "2026-09-23T01:15:12-05:00",
+  "old_deadline_unchanged": true,
+  "pause_markers": [],
+  "training": {
+    "pca-seed42": {
+      "status": "started",
+      "opt_step": 531,
+      "all_logged_losses_finite": true
+    },
+    "pca-seed43": {
+      "status": "started",
+      "opt_step": 523,
+      "all_logged_losses_finite": true
+    },
+    "pca-seed44": {
+      "status": "queued",
+      "opt_step": 0,
+      "all_logged_losses_finite": true
+    },
+    "svae-seed42": {
+      "status": "started",
+      "opt_step": 524,
+      "all_logged_losses_finite": true
+    },
+    "svae-seed43": {
+      "status": "started",
+      "opt_step": 533,
+      "all_logged_losses_finite": true
+    },
+    "svae-seed44": {
+      "status": "queued",
+      "opt_step": 0,
+      "all_logged_losses_finite": true
+    },
+    "wan-seed42": {
+      "status": "started",
+      "opt_step": 478,
+      "all_logged_losses_finite": true
+    },
+    "wan-seed43": {
+      "status": "started",
+      "opt_step": 494,
+      "all_logged_losses_finite": true
+    },
+    "wan-seed44": {
+      "status": "queued",
+      "opt_step": 0,
+      "all_logged_losses_finite": true
+    }
+  },
+  "paired_microbatches": {
+    "42": 957,
+    "43": 989
+  },
+  "scenes": {
+    "adjust_bottle": {
+      "accepted": 22,
+      "attempted": 27,
+      "complete": false
+    },
+    "handover_block": {
+      "accepted": 0,
+      "attempted": 0,
+      "complete": false
+    },
+    "place_object_basket": {
+      "accepted": 17,
+      "attempted": 28,
+      "complete": false
+    }
+  },
+  "owned_gpu_slots": {
+    "cm009": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "cm001": [
+      5,
+      7
+    ]
+  },
+  "used_gpu_ecc_uncorrected": 0,
+  "cm009_gpu0_excluded_ecc": 2,
+  "source_hashes_unchanged": true,
+  "new_policy_outcomes": 0,
+  "new_experiments_launched": false,
+  "existing_dependency_jobs": "alive, waiting for training/collection/simulator gates",
+  "public_report": "No material new scientific result; last publication attempt NOT_FOUND404 retained. Local status page refreshed.",
+  "decision": "Healthy ongoing work, no new failure or completion; keep existing bounded jobs running and notify no new scientific claim.",
+  "next_step": "Finish all nine matched fixed-budget native training runs and collect first50 expert-feasible fresh scenes/task. Run the training-only simulator/camera/contact preflight after one collection slot releases its GPU; complete the paired 5400-rollout matrix only after all integrity gates pass. Resolve whether offline accessibility gains translate into native task success without clean regression."
+}

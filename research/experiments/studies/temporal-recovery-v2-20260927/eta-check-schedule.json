@@ -1,0 +1,33 @@
+{
+  "estimated_at": "2026-09-27T12:47:23.166749-05:00",
+  "completed": 20,
+  "total": 1080,
+  "counts": {
+    "mean": 10,
+    "learned": 10
+  },
+  "observed_mean_episode_seconds": 97.63993473276496,
+  "remaining_at_current_first_task_rate_hours": 14.430580805589756,
+  "task_step_caps": [
+    400,
+    800,
+    700
+  ],
+  "caveat": "Only first task clean condition sampled; future task/perturbation mix unobserved.20-30h is a planning range, not confidence interval or completion guarantee.",
+  "planning_remaining_hours": [
+    20,
+    30
+  ],
+  "one_time_check_at": "2026-09-28T12:00:00-05:00",
+  "timezone": "America/Chicago",
+  "original_deadline_unchanged": "2026-09-29T17:48:49.941691-05:00",
+  "check_script": "/home/zifanz4/.local/state/openwam-selfcheck/check_at_eta.py",
+  "scheduler": "systemd_user_timer",
+  "timer_unit": "openwam-eta-check-20260928.timer",
+  "timer_verified_active": true,
+  "queue_probe_accepted": true,
+  "queue_probe_id": "01a0e3f8-d30b-7013-8448-a3685956e679",
+  "future_agent_execution_verified": false,
+  "systemd_service_execution_validated": true,
+  "requires": "Machine and user systemd manager running; persistent timer catches missed time on next user-manager start"
+}

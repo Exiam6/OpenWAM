@@ -1,0 +1,10 @@
+{
+  "attempted_at": "2026-09-22T13:52:14.237290-05:00",
+  "status": "failed",
+  "stage": "get_site_and_write_credential",
+  "error": "SitesConnectorError: Sites project not found",
+  "http_status": 404,
+  "existing_project_id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3",
+  "no_new_site_created": true,
+  "no_source_edit_or_push": true
+}

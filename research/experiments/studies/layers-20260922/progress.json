@@ -1,0 +1,254 @@
+{
+  "started_at": "2026-09-22T13:19:04.114780-05:00",
+  "updated_at": "2026-09-23T01:19:04.719517-05:00",
+  "trigger": "user: resume, continue",
+  "status": "budget_window_closed_with_mixed_outcomes",
+  "next_step": "The original12hour window ended2026-09-23T01:15:12-05:00. No new experiment, training, collection, inference, confirmation scoring or automatic budget extension is authorized by later timer messages. Preserve completed and negative results, keep expiredgoalaux56/60 unscored, and do not repeatold80. The next scientific uncertainty is whether compact-feature goal/translation gains and gripper tradeoffs reproduce on new scenes. The prepared independent60scene draft estimates about3hours with one idle ECC-cleanGPU and requires a separately fixed, newly authorized experiment budget before implementation/launch. FullRAE decoder/world-action training and policy gains remain untested. Subsequent selfchecks should reconcile terminal state quietly unless a material change occurs.",
+  "deadline": "2026-09-23T01:15:12-05:00",
+  "interface_preflight": "passed; exactK1, no future leakage;150episodes structurally complete",
+  "fresh_initial_failure": "nativeUnStableError wrongly classified infrastructure; original artifacts preserved; amended classifier v2",
+  "readout": "frozen10f9b0c; exactzero-noise gate before scoring",
+  "native_profile": {
+    "checked_at": "2026-09-22T14:05:15.539937-05:00",
+    "exit_code": 124,
+    "microsteps": 68,
+    "optimizer_updates": 8,
+    "planned_optimizer_updates": 70,
+    "full_profile_complete": false,
+    "single_gpu_global_batch": 8,
+    "observed_median_seconds_per_microstep": 12.086118012666702,
+    "rough_1000_optimizer_update_hours_at_observed_median": 26.858040028148228,
+    "peak_allocated_GB": 25.625363456,
+    "reason": "20-minute bound reached; insufficient warmup and timed steps for planned complete profile",
+    "policy_stage": "not_launched; independent primary development gate also failed",
+    "warning": "single-card early timing, not measured two-card throughput"
+  },
+  "compression_completed": 9,
+  "compression_exit_code": 0,
+  "fresh_counts": {
+    "adjust_bottle": 20,
+    "handover_block": 20,
+    "place_object_basket": 20
+  },
+  "fresh_attempts": 72,
+  "public_report_update": {
+    "checked_at": "2026-09-23T01:17:01-05:00",
+    "project_id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3",
+    "status": "blocked",
+    "error": "SitesConnectorError: Sites project not found",
+    "deployed": false,
+    "new_site_created": false,
+    "local_report": "/home/zifanz4/openwam-experiments/reports/layers-20260922/index.html"
+  },
+  "development_audit": "passed;282ridge+192MLP prediction conditions",
+  "policy_adaptation": "not launched; primary development gate failed",
+  "ridge_primary_noise_E_change_percent": 45.773,
+  "mlp_primary_noise_E_change_percent": 14.79,
+  "confirmation": "COMPLETE exit0;60fresh scenes; primary acceptance failed; independent audit passed",
+  "cross_host_parity": "exact across3source encoder features and15reducer/readout vector paths on8trainingframes",
+  "frozen_source": "ecea01257c769f4635031d8eb1f04dccf244bc60",
+  "wrist_baseline": "completed exit0;45paired ridge+45MLP,174.8s; all5copied asset hashes match, frozen14:37:34 before confirmation",
+  "provenance_patch": "a030f01,5files+199/-2 including114testlines;4CPUchecks andRuffpass; no upstream submission",
+  "local_report": "/home/zifanz4/openwam-experiments/reports/layers-20260922/index.html",
+  "secondary_initial_goal": "COMPLETE exit0; same60fresh scenes; independent270prediction/6interval audit passed; mixed task effects",
+  "fresh_outcomes": {
+    "accepted": 60,
+    "unstable_scene": 3,
+    "expert_infeasible": 9
+  },
+  "confirmation_exit_code": 0,
+  "primary_success": false,
+  "primary_noisy_ridge_change_percent": 45.674998457167185,
+  "secondary_goal_noisy_ridge_change_percent": -36.26463257003438,
+  "secondary_goal_audit_passed": true,
+  "secondary_original_exit_code": 1,
+  "secondary_postprocessing_resolution": "descriptive_v1 FP32 cancellation;v2 JSON float32 serialization;v3 complete0; original failures retained, primary unchanged",
+  "goal_aux_model_training_started": true,
+  "superseded_progress_fields": [
+    {
+      "recorded_at": "2026-09-22T16:02:10.232384-05:00",
+      "confirmation": "single bounded launcher waiting without GPU allocation;60complete required",
+      "secondary_initial_goal": "f73df07 frozen; original train initialframes only,constant-proprio audit105/105;45ridge+45MLP with frozen representations, single10minGPUcap, no fresh scores seen"
+    },
+    {
+      "recorded_at": "2026-09-23T01:19:04.719517-05:00",
+      "status": "goalaux_confirmation_incomplete_at_original_deadline_archived",
+      "current_phase": "completed_noise_controls_archived_independent_confirmation_draft_not_launched",
+      "reason": "original12hourwindowclosed; nested experimental outcomes retained unchanged"
+    }
+  ],
+  "goal_aux_cpu_contract": {
+    "passed": true,
+    "path": "/home/zifanz4/openwam-experiments/studies/goalaux-20260922/attempt2/contract-result.json",
+    "scope": "one training frame;CPU fp32; no model fit or benefit measurement",
+    "attempt1_exit": 1,
+    "attempt2_exit": 0
+  },
+  "goal_aux_training": {
+    "models_completed": 6,
+    "planned": 6,
+    "exit_code": "0",
+    "fixed_additional_updates_per_model": 2000,
+    "state": "six_matched_goal_aux_fits_complete_pending_new_confirmation",
+    "fresh_confirmation_scored": false,
+    "protocol_sha256": "ac87b2067ad7e66f372fddfdda31818abcc1b3ef5e9f0ae70c92de672e6fc0a6",
+    "independent_artifact_audit_passed": true
+  },
+  "goal_aux_gpu_preflight": {
+    "passed": true,
+    "original_exit": 1,
+    "continuation_exit": 0,
+    "zero_weight_parity": "exact and not replayed",
+    "pooling_fix": "deterministic block mean; equivalents checked",
+    "timing_scope": "training-resident3episodecompute only",
+    "path": "/home/zifanz4/openwam-experiments/studies/goalaux-20260922/gpu-preflight-v2/result.json"
+  },
+  "goal_aux_readouts": {
+    "completed": true,
+    "exit_code": 0,
+    "training_episodes": 105,
+    "training_clips": 1260,
+    "ridge_endpoint_fits": 36,
+    "ridge_groups": 54,
+    "mlp_fits": 36,
+    "independent_saved_artifact_audit_passed": true,
+    "new_confirmation_scored": false
+  },
+  "goal_aux_confirmation": {
+    "as_of": "2026-09-22T19:17:48.667533-05:00",
+    "accepted_counts": {
+      "adjust_bottle": 20,
+      "handover_block": 20,
+      "place_object_basket": 16
+    },
+    "accepted_total": 56,
+    "distinct_attempts_completed": 69,
+    "planned_accepted_total": 60,
+    "original_failed_setups": 1,
+    "initial_failure": "missing old-root collision asset paths caused planner fallback, stopped before any actions/trajectory",
+    "documented_repair": "only two copied YAML asset prefixes; same native geometry, physics, planner, cameras, seed sequence, originaldeadline",
+    "current_actual_planner": "CuroboPlanner; checked in both arms per scene",
+    "collection_deadline": "2026-09-22T19:15:55.548938-05:00",
+    "collection_exit_code": 1,
+    "confirmation_job": "stopped; archived incomplete without scoring",
+    "confirmation_exit_code": 1,
+    "new_scores_observed": false,
+    "frozen_confirmation_files": 69,
+    "outcomes": {
+      "accepted": 56,
+      "unstable_scene": 3,
+      "expert_infeasible": 10,
+      "infrastructure_failure": 1
+    },
+    "active_seed": null,
+    "active_worker_alive": false,
+    "last_check": "terminal56/60; no owned jobs remain; GPU released; integrity audit passed",
+    "runtime_provenance_checked": 36,
+    "goalaux_environment_and_result_apparent_bytes": {
+      "goalaux-native": 17750064178,
+      "goalaux-20260922": 1281275647
+    },
+    "collector_directory": "fresh-v4",
+    "confirmation_directory": "confirmation-v2 (stopped; no scoring started)",
+    "previous_collector_exit_code": 1,
+    "previous_waiting_job_exit_code": 1,
+    "classification_amendment": "NULL_GRASP_ALL_CALLS_AMENDMENT.md",
+    "reclassified_candidates": [
+      {
+        "task": "place_object_basket",
+        "seed": 802008,
+        "original_outcome": "infrastructure_failure"
+      },
+      {
+        "task": "place_object_basket",
+        "seed": 802013,
+        "original_outcome": "infrastructure_failure"
+      }
+    ],
+    "retained_completed_candidates": 59,
+    "retained_accepted_scenes": 49,
+    "completed_seeds_replayed": 0,
+    "numeric_scorer_changed": false,
+    "original_failed_initializations": 1,
+    "raw_null_grasp_failures_preserved": 2,
+    "distinct_candidates_started": 70,
+    "collection_complete": false,
+    "terminal_worker_exit_code": 124,
+    "terminal_reason": "original collection deadline interrupted current owned worker; worker exit124; parent exit1",
+    "archive_integrity_passed": true
+  },
+  "last_selfcheck": {
+    "checked_at": "2026-09-23T11:31:57.266985-05:00",
+    "trigger": "2026-09-23T11:30:01.325087-05:00",
+    "status": "closed_window_unchanged",
+    "scientific_state_changed": false,
+    "owned_jobs_running": false,
+    "evidence": "/home/zifanz4/openwam-experiments/studies/layers-20260922/selfcheck-1130-evidence.json"
+  },
+  "rae_followup_scope": {
+    "recorded_at": "2026-09-22T23:28:11.609894-05:00",
+    "status": "matched_probe_completed_audited_distribution_shift_control_next",
+    "path": "/home/zifanz4/openwam-experiments/studies/RAE_FOLLOWUP_SCOPE.md",
+    "frozen_protocol_changed": false,
+    "interface_result": "/home/zifanz4/openwam-experiments/studies/rae-baseline-20260922/interface-result.json",
+    "probe_protocol": "/home/zifanz4/openwam-experiments/studies/rae-baseline-20260922/matched-probe-protocol.json",
+    "probe_launch": {
+      "started_at": "2026-09-22T23:49:47.646711-05:00",
+      "host": "glacier",
+      "gpu": "GPU-d13929da-086d-1be5-6414-dbf6aeded08e, NVIDIA A40, 0, 0, 0",
+      "timeout_seconds": 1200,
+      "protocol_sha256": "0acd1bf00039075221f0be095418111e8fd7ac297bf40db14e67050b26d4680e",
+      "deadline": "2026-09-23T01:15:12-05:00"
+    },
+    "matched_probe_result": "/home/zifanz4/openwam-experiments/studies/rae-baseline-20260922/probe-result.json",
+    "matched_probe_audit": "/home/zifanz4/openwam-experiments/studies/rae-baseline-20260922/probe-audit.json",
+    "probe_exit_code": 0,
+    "full_RAE_reproduced": false,
+    "policy_gain_measured": false
+  },
+  "rae_noise_control": {
+    "status": "completed_audited",
+    "result": "/home/zifanz4/openwam-experiments/studies/rae-noise-control-20260922/result.json",
+    "audit": "/home/zifanz4/openwam-experiments/studies/rae-noise-control-20260922/audit.json",
+    "exit_code": 0,
+    "closed_loop_evaluated": false,
+    "next_stage": "short_state_equal_noise_control_completed_audited"
+  },
+  "rae_state_control": {
+    "status": "completed_audited",
+    "launch": {
+      "started_at": "2026-09-23T00:17:59.035082-05:00",
+      "host": "glacier",
+      "gpu": "GPU-d13929da-086d-1be5-6414-dbf6aeded08e, NVIDIA A40, 0, 0, 0",
+      "timeout_seconds": 1800,
+      "deadline": "2026-09-23T01:15:12-05:00",
+      "protocol_sha256": "f53709932b10c0f6f884f91ae8472e619950219ca83ca95b13168c204395f2c8"
+    },
+    "protocol": "/home/zifanz4/openwam-experiments/studies/rae-state-control-20260923/protocol.json",
+    "reuse": "1260cachedclean and630noisyinitial vectors;6930newnoninitialnoisytrainingimages only",
+    "evaluation_encoder_reruns": 0,
+    "result": "/home/zifanz4/openwam-experiments/studies/rae-state-control-20260923/result.json",
+    "audit": "/home/zifanz4/openwam-experiments/studies/rae-state-control-20260923/audit.json",
+    "component_summary": "/home/zifanz4/openwam-experiments/studies/rae-state-control-20260923/component-summary.json",
+    "exit_code": 0,
+    "closed_loop_evaluated": false,
+    "full_RAE_reproduced": false,
+    "gpu_released": true,
+    "confirmation_draft": "/home/zifanz4/openwam-experiments/studies/rae-state-control-20260923/NEXT_CONFIRMATION_DRAFT.md",
+    "doc_contribution": "/home/zifanz4/openwam-experiments/contribution/WAN_INPUT_RANGE_PR_DRAFT.md",
+    "latest_resource_note": "2026-09-23T11:31:13.612980-05:00: former glacier A40 39505 MiB, 65% utilization, 0 uncorrected volatile ECC; PID144641 owner kagaram2 freshly verified; no owned experiment worker. Original budget remains closed."
+  },
+  "current_phase": "budget_window_closed",
+  "budget_window_closed": {
+    "ended_at": "2026-09-23T01:15:12-05:00",
+    "recorded_at": "2026-09-23T01:19:04.719517-05:00",
+    "extended": false,
+    "evidence": "/home/zifanz4/openwam-experiments/studies/layers-20260922/budget-window-closed.json"
+  },
+  "authorized_followup": {
+    "study": "studies/confirmation-20260923",
+    "authorized_at": "2026-09-23T11:38:51.767900-05:00",
+    "deadline": "2026-09-23T15:38:51.767900-05:00",
+    "reason": "Explicit user authorization to extend budget and use more GPUs"
+  }
+}

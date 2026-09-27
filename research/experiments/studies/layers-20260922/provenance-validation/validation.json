@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-09-22T14:49:09.983054-05:00",
+  "base": "7c5861e45cfe1339a0323f0e0b03a3316c37971c",
+  "commit": "a030f01f4ddcc268db89522a1b416925c61cc0ca",
+  "scope": "optional source identity + preprocessed-input hash; no model/default or frozen experiment change",
+  "targeted_cpu_tests": 4,
+  "test_duration_seconds": 1.52,
+  "ruff": "passed after import sorting",
+  "initial_failure": "pytest absent from policy-env; existing isolated tools used; log retained",
+  "live_distributed_or_gpu_collection_tested": false,
+  "full_upstream_suite_run": false,
+  "sent_upstream": false,
+  "patch_sha256": "0aa1f94ddafc83c3847313baf5ed547e8c135043732baf58b1b1344f37f901ba"
+}

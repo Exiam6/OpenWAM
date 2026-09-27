@@ -1,0 +1,5 @@
+Computing joint+eef stats across 3 task-variant pairs for embodiment=aloha-agilex
+  [1/3 adjust_bottle][35/35] processed; total timesteps so far: 5071
+  [2/3 handover_block][35/35] processed; total timesteps so far: 14973
+  [3/3 place_object_basket][35/35] processed; total timesteps so far: 23624
+SETUP COMPLETE

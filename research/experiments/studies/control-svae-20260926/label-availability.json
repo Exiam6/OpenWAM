@@ -1,0 +1,1801 @@
+{
+  "time": "2026-09-27T00:06:21.667505-05:00",
+  "scope": "Read-only training label availability audit; not a fit or heldout evaluation",
+  "episodes": 105,
+  "valid_pairs": 23204,
+  "output_contract": "deltaXYZ6 plus future_gripper2 at t+4 recorded frames",
+  "rows": [
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode10.hdf5",
+      "frames": 136,
+      "valid_four_frame_pairs": 132,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode15.hdf5",
+      "frames": 139,
+      "valid_four_frame_pairs": 135,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode16.hdf5",
+      "frames": 174,
+      "valid_four_frame_pairs": 170,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode17.hdf5",
+      "frames": 148,
+      "valid_four_frame_pairs": 144,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode18.hdf5",
+      "frames": 144,
+      "valid_four_frame_pairs": 140,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode20.hdf5",
+      "frames": 136,
+      "valid_four_frame_pairs": 132,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode21.hdf5",
+      "frames": 144,
+      "valid_four_frame_pairs": 140,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode23.hdf5",
+      "frames": 157,
+      "valid_four_frame_pairs": 153,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode24.hdf5",
+      "frames": 145,
+      "valid_four_frame_pairs": 141,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode25.hdf5",
+      "frames": 134,
+      "valid_four_frame_pairs": 130,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode26.hdf5",
+      "frames": 148,
+      "valid_four_frame_pairs": 144,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode27.hdf5",
+      "frames": 144,
+      "valid_four_frame_pairs": 140,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode28.hdf5",
+      "frames": 139,
+      "valid_four_frame_pairs": 135,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode29.hdf5",
+      "frames": 153,
+      "valid_four_frame_pairs": 149,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode3.hdf5",
+      "frames": 149,
+      "valid_four_frame_pairs": 145,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode30.hdf5",
+      "frames": 144,
+      "valid_four_frame_pairs": 140,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode31.hdf5",
+      "frames": 142,
+      "valid_four_frame_pairs": 138,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode32.hdf5",
+      "frames": 136,
+      "valid_four_frame_pairs": 132,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode34.hdf5",
+      "frames": 145,
+      "valid_four_frame_pairs": 141,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode37.hdf5",
+      "frames": 144,
+      "valid_four_frame_pairs": 140,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode38.hdf5",
+      "frames": 145,
+      "valid_four_frame_pairs": 141,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode39.hdf5",
+      "frames": 139,
+      "valid_four_frame_pairs": 135,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode4.hdf5",
+      "frames": 152,
+      "valid_four_frame_pairs": 148,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode40.hdf5",
+      "frames": 143,
+      "valid_four_frame_pairs": 139,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode41.hdf5",
+      "frames": 150,
+      "valid_four_frame_pairs": 146,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode42.hdf5",
+      "frames": 143,
+      "valid_four_frame_pairs": 139,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode43.hdf5",
+      "frames": 147,
+      "valid_four_frame_pairs": 143,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode44.hdf5",
+      "frames": 143,
+      "valid_four_frame_pairs": 139,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode45.hdf5",
+      "frames": 145,
+      "valid_four_frame_pairs": 141,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode46.hdf5",
+      "frames": 143,
+      "valid_four_frame_pairs": 139,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode47.hdf5",
+      "frames": 140,
+      "valid_four_frame_pairs": 136,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode49.hdf5",
+      "frames": 142,
+      "valid_four_frame_pairs": 138,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode5.hdf5",
+      "frames": 148,
+      "valid_four_frame_pairs": 144,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode7.hdf5",
+      "frames": 137,
+      "valid_four_frame_pairs": 133,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode9.hdf5",
+      "frames": 153,
+      "valid_four_frame_pairs": 149,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode10.hdf5",
+      "frames": 291,
+      "valid_four_frame_pairs": 287,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode15.hdf5",
+      "frames": 281,
+      "valid_four_frame_pairs": 277,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode16.hdf5",
+      "frames": 289,
+      "valid_four_frame_pairs": 285,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode17.hdf5",
+      "frames": 278,
+      "valid_four_frame_pairs": 274,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode18.hdf5",
+      "frames": 289,
+      "valid_four_frame_pairs": 285,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode20.hdf5",
+      "frames": 273,
+      "valid_four_frame_pairs": 269,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode21.hdf5",
+      "frames": 293,
+      "valid_four_frame_pairs": 289,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode23.hdf5",
+      "frames": 283,
+      "valid_four_frame_pairs": 279,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode24.hdf5",
+      "frames": 274,
+      "valid_four_frame_pairs": 270,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode25.hdf5",
+      "frames": 275,
+      "valid_four_frame_pairs": 271,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode26.hdf5",
+      "frames": 279,
+      "valid_four_frame_pairs": 275,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode27.hdf5",
+      "frames": 276,
+      "valid_four_frame_pairs": 272,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode28.hdf5",
+      "frames": 279,
+      "valid_four_frame_pairs": 275,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode29.hdf5",
+      "frames": 315,
+      "valid_four_frame_pairs": 311,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode3.hdf5",
+      "frames": 278,
+      "valid_four_frame_pairs": 274,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode30.hdf5",
+      "frames": 290,
+      "valid_four_frame_pairs": 286,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode31.hdf5",
+      "frames": 290,
+      "valid_four_frame_pairs": 286,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode32.hdf5",
+      "frames": 286,
+      "valid_four_frame_pairs": 282,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode34.hdf5",
+      "frames": 288,
+      "valid_four_frame_pairs": 284,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode37.hdf5",
+      "frames": 278,
+      "valid_four_frame_pairs": 274,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode38.hdf5",
+      "frames": 277,
+      "valid_four_frame_pairs": 273,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode39.hdf5",
+      "frames": 301,
+      "valid_four_frame_pairs": 297,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode4.hdf5",
+      "frames": 287,
+      "valid_four_frame_pairs": 283,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode40.hdf5",
+      "frames": 279,
+      "valid_four_frame_pairs": 275,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode41.hdf5",
+      "frames": 278,
+      "valid_four_frame_pairs": 274,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode42.hdf5",
+      "frames": 284,
+      "valid_four_frame_pairs": 280,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode43.hdf5",
+      "frames": 279,
+      "valid_four_frame_pairs": 275,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode44.hdf5",
+      "frames": 276,
+      "valid_four_frame_pairs": 272,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode45.hdf5",
+      "frames": 285,
+      "valid_four_frame_pairs": 281,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode46.hdf5",
+      "frames": 277,
+      "valid_four_frame_pairs": 273,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode47.hdf5",
+      "frames": 281,
+      "valid_four_frame_pairs": 277,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode49.hdf5",
+      "frames": 276,
+      "valid_four_frame_pairs": 272,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode5.hdf5",
+      "frames": 280,
+      "valid_four_frame_pairs": 276,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode7.hdf5",
+      "frames": 277,
+      "valid_four_frame_pairs": 273,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode9.hdf5",
+      "frames": 280,
+      "valid_four_frame_pairs": 276,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode10.hdf5",
+      "frames": 249,
+      "valid_four_frame_pairs": 245,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode15.hdf5",
+      "frames": 233,
+      "valid_four_frame_pairs": 229,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode16.hdf5",
+      "frames": 246,
+      "valid_four_frame_pairs": 242,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode17.hdf5",
+      "frames": 240,
+      "valid_four_frame_pairs": 236,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode18.hdf5",
+      "frames": 246,
+      "valid_four_frame_pairs": 242,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode20.hdf5",
+      "frames": 246,
+      "valid_four_frame_pairs": 242,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode21.hdf5",
+      "frames": 258,
+      "valid_four_frame_pairs": 254,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode23.hdf5",
+      "frames": 233,
+      "valid_four_frame_pairs": 229,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode24.hdf5",
+      "frames": 230,
+      "valid_four_frame_pairs": 226,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode25.hdf5",
+      "frames": 248,
+      "valid_four_frame_pairs": 244,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode26.hdf5",
+      "frames": 270,
+      "valid_four_frame_pairs": 266,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode27.hdf5",
+      "frames": 238,
+      "valid_four_frame_pairs": 234,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode28.hdf5",
+      "frames": 293,
+      "valid_four_frame_pairs": 289,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode29.hdf5",
+      "frames": 245,
+      "valid_four_frame_pairs": 241,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode3.hdf5",
+      "frames": 254,
+      "valid_four_frame_pairs": 250,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode30.hdf5",
+      "frames": 247,
+      "valid_four_frame_pairs": 243,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode31.hdf5",
+      "frames": 240,
+      "valid_four_frame_pairs": 236,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode32.hdf5",
+      "frames": 251,
+      "valid_four_frame_pairs": 247,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode34.hdf5",
+      "frames": 246,
+      "valid_four_frame_pairs": 242,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode37.hdf5",
+      "frames": 250,
+      "valid_four_frame_pairs": 246,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode38.hdf5",
+      "frames": 246,
+      "valid_four_frame_pairs": 242,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode39.hdf5",
+      "frames": 238,
+      "valid_four_frame_pairs": 234,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode4.hdf5",
+      "frames": 232,
+      "valid_four_frame_pairs": 228,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode40.hdf5",
+      "frames": 246,
+      "valid_four_frame_pairs": 242,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode41.hdf5",
+      "frames": 248,
+      "valid_four_frame_pairs": 244,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode42.hdf5",
+      "frames": 228,
+      "valid_four_frame_pairs": 224,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode43.hdf5",
+      "frames": 247,
+      "valid_four_frame_pairs": 243,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode44.hdf5",
+      "frames": 264,
+      "valid_four_frame_pairs": 260,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode45.hdf5",
+      "frames": 249,
+      "valid_four_frame_pairs": 245,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode46.hdf5",
+      "frames": 250,
+      "valid_four_frame_pairs": 246,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode47.hdf5",
+      "frames": 254,
+      "valid_four_frame_pairs": 250,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode49.hdf5",
+      "frames": 239,
+      "valid_four_frame_pairs": 235,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode5.hdf5",
+      "frames": 244,
+      "valid_four_frame_pairs": 240,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode7.hdf5",
+      "frames": 258,
+      "valid_four_frame_pairs": 254,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode9.hdf5",
+      "frames": 245,
+      "valid_four_frame_pairs": 241,
+      "excluded_tail_frames": 4,
+      "gripper_range": [
+        0.0,
+        1.0
+      ],
+      "root_keys": [
+        "endpose",
+        "joint_action",
+        "observation",
+        "pointcloud"
+      ],
+      "attributes": {}
+    }
+  ],
+  "finite_and_aligned": true,
+  "physical_horizon_verified": false,
+  "remaining": [
+    "Recorded frame physical timing and coordinate units require verified collection configuration",
+    "Freeze episode split before fitting statistics",
+    "Audit checkpoint exposure and current-only gradient path"
+  ]
+}

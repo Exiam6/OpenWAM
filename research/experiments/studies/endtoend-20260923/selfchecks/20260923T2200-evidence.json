@@ -1,0 +1,576 @@
+{
+  "checked_at": "2026-09-23T23:30:23.361917-05:00",
+  "trigger": "2026-09-23T22:00:02.013505-05:00",
+  "training": {
+    "pca-seed42": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 7181,
+        "opt_step": 3590,
+        "steps_per_sec": 0.48346792187682797,
+        "batch_size": 4,
+        "lr": 3.861312583615002e-05,
+        "metrics": {
+          "loss_total": 0.06485535204410553,
+          "loss_video": 0.03848300874233246,
+          "loss_action": 0.02637234330177307,
+          "grad_norm": 0.0
+        },
+        "allocated_bytes": 18103425024,
+        "wall_time": 1790224221.8535988,
+        "rank": 0
+      },
+      "metric_age_s": 1.5530095100402832,
+      "all_metrics_finite": true,
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_4000.safetensors",
+          "bytes": 12123507288
+        }
+      ],
+      "log_tail": "   | 7180/12000 [4:09:50<2:54:29,  2.17s/step, loss=0.1982, video=0.1883, action=0.0099, lr=3.86e-05, epoch=1]\rTraining:  60%|\u2588\u2588\u2588\u2588\u2588\u2589    | 7180/12000 [4:09:52<2:54:29,  2.17s/step, loss=0.0649, video=0.0385, action=0.0264, lr=3.86e-05, epoch=1]\rTraining:  60%|\u2588\u2588\u2588\u2588\u2588\u2589    | 7181/12000 [4:09:52<2:51:57,  2.14s/step, loss=0.0649, video=0.0385, action=0.0264, lr=3.86e-05, epoch=1]"
+    },
+    "pca-seed43": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 7114,
+        "opt_step": 3557,
+        "steps_per_sec": 0.48324943877671933,
+        "batch_size": 4,
+        "lr": 3.9489013550297685e-05,
+        "metrics": {
+          "loss_total": 0.15748299658298492,
+          "loss_video": 0.14913803339004517,
+          "loss_action": 0.00834495760500431,
+          "grad_norm": 0.5359968543052673
+        },
+        "allocated_bytes": 18103425024,
+        "wall_time": 1790224221.5148993,
+        "rank": 0
+      },
+      "metric_age_s": 1.9428529739379883,
+      "all_metrics_finite": true,
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_4000.safetensors",
+          "bytes": 12123507288
+        }
+      ],
+      "log_tail": "   | 7113/12000 [4:09:37<2:47:57,  2.06s/step, loss=0.1244, video=0.0950, action=0.0294, lr=3.95e-05, epoch=1]\rTraining:  59%|\u2588\u2588\u2588\u2588\u2588\u2589    | 7113/12000 [4:09:39<2:47:57,  2.06s/step, loss=0.1575, video=0.1491, action=0.0083, lr=3.95e-05, epoch=1]\rTraining:  59%|\u2588\u2588\u2588\u2588\u2588\u2589    | 7114/12000 [4:09:39<2:48:06,  2.06s/step, loss=0.1575, video=0.1491, action=0.0083, lr=3.95e-05, epoch=1]"
+    },
+    "pca-seed44": {
+      "status": "queued",
+      "exit": null,
+      "last_metric": {},
+      "metric_age_s": null,
+      "all_metrics_finite": true,
+      "checkpoints": [],
+      "log_tail": null
+    },
+    "svae-seed42": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 7117,
+        "opt_step": 3558,
+        "steps_per_sec": 0.49153510546420903,
+        "batch_size": 4,
+        "lr": 3.946241651717619e-05,
+        "metrics": {
+          "loss_total": 0.2209867238998413,
+          "loss_video": 0.1962505728006363,
+          "loss_action": 0.02473614364862442,
+          "grad_norm": 0.0
+        },
+        "allocated_bytes": 18170329600,
+        "wall_time": 1790224221.9280305,
+        "rank": 0
+      },
+      "metric_age_s": 1.5803844928741455,
+      "all_metrics_finite": true,
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_4000.safetensors",
+          "bytes": 12189767400
+        }
+      ],
+      "log_tail": "   | 7116/12000 [4:09:47<2:52:57,  2.12s/step, loss=0.1988, video=0.1837, action=0.0151, lr=3.95e-05, epoch=1]\rTraining:  59%|\u2588\u2588\u2588\u2588\u2588\u2589    | 7116/12000 [4:09:49<2:52:57,  2.12s/step, loss=0.2210, video=0.1963, action=0.0247, lr=3.95e-05, epoch=1]\rTraining:  59%|\u2588\u2588\u2588\u2588\u2588\u2589    | 7117/12000 [4:09:49<2:50:42,  2.10s/step, loss=0.2210, video=0.1963, action=0.0247, lr=3.95e-05, epoch=1]"
+    },
+    "svae-seed43": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 7235,
+        "opt_step": 3617,
+        "steps_per_sec": 0.516191536754197,
+        "batch_size": 4,
+        "lr": 3.789940217636807e-05,
+        "metrics": {
+          "loss_total": 0.2981310486793518,
+          "loss_video": 0.2926235795021057,
+          "loss_action": 0.0055074733681976795,
+          "grad_norm": 0.0
+        },
+        "allocated_bytes": 18170329600,
+        "wall_time": 1790224221.7940512,
+        "rank": 0
+      },
+      "metric_age_s": 1.7641136646270752,
+      "all_metrics_finite": true,
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_4000.safetensors",
+          "bytes": 12189767400
+        }
+      ],
+      "log_tail": "   | 7234/12000 [4:09:49<2:41:04,  2.03s/step, loss=0.1392, video=0.1258, action=0.0134, lr=3.79e-05, epoch=1]\rTraining:  60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 7234/12000 [4:09:51<2:41:04,  2.03s/step, loss=0.2981, video=0.2926, action=0.0055, lr=3.79e-05, epoch=1]\rTraining:  60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 7235/12000 [4:09:51<2:38:53,  2.00s/step, loss=0.2981, video=0.2926, action=0.0055, lr=3.79e-05, epoch=1]"
+    },
+    "svae-seed44": {
+      "status": "queued",
+      "exit": null,
+      "last_metric": {},
+      "metric_age_s": null,
+      "all_metrics_finite": true,
+      "checkpoints": [],
+      "log_tail": null
+    },
+    "wan-seed42": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 6451,
+        "opt_step": 3225,
+        "steps_per_sec": 0.45275183921130374,
+        "batch_size": 4,
+        "lr": 4.84544137746838e-05,
+        "metrics": {
+          "loss_total": 0.252694696187973,
+          "loss_video": 0.24861887097358704,
+          "loss_action": 0.004075815435498953,
+          "grad_norm": 0.0
+        },
+        "allocated_bytes": 19760472576,
+        "wall_time": 1790224221.9576957,
+        "rank": 0
+      },
+      "metric_age_s": 1.6424860954284668,
+      "all_metrics_finite": true,
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/checkpoint_step_4000.safetensors",
+          "bytes": 13361411736
+        }
+      ],
+      "log_tail": "   | 6450/12000 [4:09:39<3:39:47,  2.38s/step, loss=0.2237, video=0.1862, action=0.0374, lr=4.85e-05, epoch=1]\rTraining:  54%|\u2588\u2588\u2588\u2588\u2588\u258d    | 6450/12000 [4:09:42<3:39:47,  2.38s/step, loss=0.2527, video=0.2486, action=0.0041, lr=4.85e-05, epoch=1]\rTraining:  54%|\u2588\u2588\u2588\u2588\u2588\u258d    | 6451/12000 [4:09:42<3:35:06,  2.33s/step, loss=0.2527, video=0.2486, action=0.0041, lr=4.85e-05, epoch=1]"
+    },
+    "wan-seed43": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 6718,
+        "opt_step": 3359,
+        "steps_per_sec": 0.44429529268360535,
+        "batch_size": 4,
+        "lr": 4.481061105060315e-05,
+        "metrics": {
+          "loss_total": 0.31039193272590637,
+          "loss_video": 0.30216503143310547,
+          "loss_action": 0.008226911537349224,
+          "grad_norm": 0.6145509481430054
+        },
+        "allocated_bytes": 19760472576,
+        "wall_time": 1790224222.9903898,
+        "rank": 0
+      },
+      "metric_age_s": 0.6584744453430176,
+      "all_metrics_finite": true,
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/checkpoint_step_4000.safetensors",
+          "bytes": 13361411736
+        }
+      ],
+      "log_tail": "   | 6716/12000 [4:09:40<3:20:50,  2.28s/step, loss=0.4007, video=0.3713, action=0.0293, lr=4.48e-05, epoch=1]\rTraining:  56%|\u2588\u2588\u2588\u2588\u2588\u258c    | 6716/12000 [4:09:42<3:20:50,  2.28s/step, loss=0.2455, video=0.2024, action=0.0430, lr=4.48e-05, epoch=1]\rTraining:  56%|\u2588\u2588\u2588\u2588\u2588\u258c    | 6717/12000 [4:09:42<3:19:23,  2.26s/step, loss=0.2455, video=0.2024, action=0.0430, lr=4.48e-05, epoch=1]"
+    },
+    "wan-seed44": {
+      "status": "queued",
+      "exit": null,
+      "last_metric": {},
+      "metric_age_s": null,
+      "all_metrics_finite": true,
+      "checkpoints": [],
+      "log_tail": null
+    }
+  },
+  "scenes": {
+    "adjust_bottle": {
+      "time": "2026-09-23T20:39:16.259497-05:00",
+      "accepted_count": 50,
+      "attempted_count": 63,
+      "complete": true
+    },
+    "handover_block": {
+      "time": "2026-09-23T22:05:36.877965-05:00",
+      "accepted_count": 50,
+      "attempted_count": 57,
+      "complete": true
+    },
+    "place_object_basket": {
+      "time": "2026-09-23T21:03:54.392164-05:00",
+      "accepted_count": 50,
+      "attempted_count": 84,
+      "complete": true
+    }
+  },
+  "frozen_hash_mismatches": [],
+  "pipeline": {
+    "time": "2026-09-23T23:30:02.450256-05:00",
+    "stage": "waiting_for_all_training_collection_smoke",
+    "all_ready": false
+  },
+  "pipeline_exit": null,
+  "slot5_exit": {
+    "time": "2026-09-23T22:05:36.904975-05:00",
+    "returncode": 0
+  },
+  "slot7_exit": {
+    "time": "2026-09-23T21:03:54.426294-05:00",
+    "returncode": 0
+  },
+  "simulation_exit": {
+    "time": "2026-09-23T21:08:15.726521-05:00",
+    "returncode": 0
+  },
+  "fresh_cohort_gate": null,
+  "cm001_gpu": {
+    "returncode": 0,
+    "stdout": "0, GPU-c83b7d25-753e-2eae-f13b-8f9c3df9fa4b, 32223, 5, 0\n1, GPU-67b700c2-eb7a-93aa-28dd-57e8b2711926, 37991, 28, 0\n2, GPU-025b7fc9-8f25-5467-5c28-8e59884ab6d3, 31989, 52, 0\n3, GPU-bba13bfa-9dd6-0956-0e4e-122950cd69fe, 24407, 13, 0\n4, GPU-e7aef4c0-2628-b4f8-34f4-579d62b7feb6, 25251, 36, 0\n5, GPU-1758045c-5a5e-3661-bb58-a786fa745a17, 1, 0, 0\n6, GPU-91a9a93b-b386-82f0-3009-88cc9bb79d06, 19527, 73, 0\n7, GPU-3624eff9-444b-b72c-e32e-2bae7acbb8cb, 18641, 50, 0\n",
+    "stderr": ""
+  },
+  "cm001_tmux": {
+    "returncode": 0,
+    "stdout": "exp\now-e2e-pipeline\n",
+    "stderr": ""
+  },
+  "free_disk_gib": {
+    "/data02": 216.676,
+    "/home": 0.175
+  },
+  "handover_cohort_audit": {
+    "time": "2026-09-23T23:31:26.271333-05:00",
+    "passed": true,
+    "task": "handover_block",
+    "accepted": 50,
+    "attempted": 57,
+    "manifest_sha256": "04122c608e11de012820f0e10f21ececbe88e4a9fca12790672a533eb47e016e",
+    "hdf5_hashes_verified": 50,
+    "selection_matches_first50_accepted": true,
+    "no_learned_policy_outcomes": true,
+    "scenes": [
+      {
+        "seed": 1101000,
+        "frames": 278,
+        "sha256": "e61fbfb922c0547e857e5e9ee9422b71460c8d94b515de5be95fe058b58a8f22"
+      },
+      {
+        "seed": 1101001,
+        "frames": 281,
+        "sha256": "a699fc4994cbbba9fba910c55c4bfcc762fd9f31e74f1d24561ac2ffcc700421"
+      },
+      {
+        "seed": 1101002,
+        "frames": 281,
+        "sha256": "e843d52834686508e85c69991c7896ec61b65ca43fc5ead354e24abcac753efb"
+      },
+      {
+        "seed": 1101003,
+        "frames": 276,
+        "sha256": "f57a8493fd80f0966dd55fee2a1d7cc9c1c2eda599c7c4af7bec0aab9116a686"
+      },
+      {
+        "seed": 1101004,
+        "frames": 293,
+        "sha256": "9d9a329b36e8ae84370434a69ac3e5960e025aa901fb63f59a9606c46801d834"
+      },
+      {
+        "seed": 1101005,
+        "frames": 277,
+        "sha256": "7a5ea63ee3e6b790c8bac12e036d456cf8751b2ad1d03ca5ec7bf09e23c8b509"
+      },
+      {
+        "seed": 1101006,
+        "frames": 293,
+        "sha256": "9845285c048adf001f7b355eb5c84e8d73912bebd09c70a2ab8c45d678d04de5"
+      },
+      {
+        "seed": 1101007,
+        "frames": 280,
+        "sha256": "46acf8968f59ce18f572a5cbd0a6ae495ceed296ad4bc8032e7cb8aac12636da"
+      },
+      {
+        "seed": 1101008,
+        "frames": 281,
+        "sha256": "b3740c0477ac52d445d4484e0e59ba50dd9cb5f67609d3a7f25b2b6f91b32a81"
+      },
+      {
+        "seed": 1101009,
+        "frames": 291,
+        "sha256": "9bb9797913a0b01c84c398a633c528b172d2565cd3aa09546d810d9aec7647ba"
+      },
+      {
+        "seed": 1101010,
+        "frames": 302,
+        "sha256": "bc7e7921cf9b08ce968656966b050046d81bad42779be532d10a9fdf0a53b6dd"
+      },
+      {
+        "seed": 1101011,
+        "frames": 319,
+        "sha256": "a6cea9facdf9347499cc10e1f937dce72a9179af1ea5bbd81a99bf20ace10c41"
+      },
+      {
+        "seed": 1101012,
+        "frames": 278,
+        "sha256": "08ecc4152050271fd501be4d23333a9e2d10de91983b310afb9ec1b4c8d2d67e"
+      },
+      {
+        "seed": 1101013,
+        "frames": 279,
+        "sha256": "a8df32d8f7a87c2f656cc66d104f2ba91686adfe05f086c4cfbc3a3d58866176"
+      },
+      {
+        "seed": 1101014,
+        "frames": 276,
+        "sha256": "93c8f449a79796754de3af73bd7654bcd55e030def4a9e87584c944a5dca3886"
+      },
+      {
+        "seed": 1101015,
+        "frames": 278,
+        "sha256": "1103f9282ba1a1baf5626355d7931679b85e4209c980a9316dc0995b471c88b8"
+      },
+      {
+        "seed": 1101016,
+        "frames": 282,
+        "sha256": "46650c8702dd35c227a112312f45861a248ad0d5218fb0f2e7704d683dba0673"
+      },
+      {
+        "seed": 1101017,
+        "frames": 291,
+        "sha256": "6ab03ced0f077b5778dd5d6745bf15936c69e399559670ee5a368cc799df1ac7"
+      },
+      {
+        "seed": 1101018,
+        "frames": 280,
+        "sha256": "69b458bd76398fe76b6c30bdeda3c18efbffef3d9e63b55e20e400b621ccaa47"
+      },
+      {
+        "seed": 1101019,
+        "frames": 280,
+        "sha256": "d6a89ae0ec5fcb181231cb69dad28f042bade616f0fcddcd4e302c4679e3ece0"
+      },
+      {
+        "seed": 1101020,
+        "frames": 274,
+        "sha256": "39cd00bf6f13110d212f2b03913ff652d0a022890709d8b208333ee394ce3420"
+      },
+      {
+        "seed": 1101021,
+        "frames": 277,
+        "sha256": "695502142dda7b656c3cbfd2baac4dd7729fa4625e2e2f406c71f8c7cca1086d"
+      },
+      {
+        "seed": 1101022,
+        "frames": 303,
+        "sha256": "35fc2562a724ef448394ecc2f4a52425a0f859c142d5810f07d49304b2742278"
+      },
+      {
+        "seed": 1101023,
+        "frames": 281,
+        "sha256": "450e6c9a8fed6b3b3199aa5f3e2b7adca7e4c07903d8f364ec6afd9c6501e096"
+      },
+      {
+        "seed": 1101024,
+        "frames": 279,
+        "sha256": "ed3b66e69839c5b50ed210eab3d03a1710fd7e5e2e3abeb3e0cdaf9a83b6821a"
+      },
+      {
+        "seed": 1101025,
+        "frames": 278,
+        "sha256": "eac2ef707787856e034a3eb50edaf889f758d5d2352d441178df85c488d3eb18"
+      },
+      {
+        "seed": 1101026,
+        "frames": 293,
+        "sha256": "c79141427f0ab328d50fb92bddd3809c67cc7c570da28d585917632f71b557ae"
+      },
+      {
+        "seed": 1101027,
+        "frames": 287,
+        "sha256": "8e60833fdc122681523b7b25aac28f86f966f74beb221e8a1f0f86b59724d2dc"
+      },
+      {
+        "seed": 1101029,
+        "frames": 281,
+        "sha256": "e2873ea2d77f325488dbd0b0b368e994468d004901d343221f027febb60e4068"
+      },
+      {
+        "seed": 1101030,
+        "frames": 276,
+        "sha256": "516174e7d5fd7acf7c12af8479023b5580e37c305f89f6888e754062cb61a42c"
+      },
+      {
+        "seed": 1101031,
+        "frames": 280,
+        "sha256": "f53d92aa82284d70e7a4914cacf416c77ea465aa51d73f74aa760f1538cb1cf0"
+      },
+      {
+        "seed": 1101032,
+        "frames": 286,
+        "sha256": "3a3598af7f5344934158dff58d6a6fa642974850a922d4e8e86824ca0031d8a3"
+      },
+      {
+        "seed": 1101033,
+        "frames": 281,
+        "sha256": "e7b76860578d9403994397bc9dc703c857df8df3c7b06c629615aec21b526e56"
+      },
+      {
+        "seed": 1101034,
+        "frames": 288,
+        "sha256": "2f40bcaf86c2cc13230b5875edb9e19fe396895c50f581d7925460b043286aea"
+      },
+      {
+        "seed": 1101035,
+        "frames": 274,
+        "sha256": "b36ac6167f3ae2133cf55267ed4a8e77d405d06594da7f58475e4536f7ce118d"
+      },
+      {
+        "seed": 1101037,
+        "frames": 277,
+        "sha256": "66d7d93ce00c9b7170fec365044b1a3d17245f11f4db2850b750e940000c2964"
+      },
+      {
+        "seed": 1101038,
+        "frames": 287,
+        "sha256": "48d2d9c74bf7735af40b388591d698f0894c17fcbf3af21746e548ef48e055aa"
+      },
+      {
+        "seed": 1101039,
+        "frames": 308,
+        "sha256": "6162331352a440ab5129fc032b70bd9f881a956f3eb20678d9b065132cf8ad16"
+      },
+      {
+        "seed": 1101041,
+        "frames": 285,
+        "sha256": "5734c79ef5b5b1d83b4f38b66a1ff6006dcec5db0c92737be353ca2456187bcd"
+      },
+      {
+        "seed": 1101042,
+        "frames": 283,
+        "sha256": "171394880e89f931756cc9b1d84e2ef946da6c54e7fa8a169ea4a244b2669aa8"
+      },
+      {
+        "seed": 1101044,
+        "frames": 281,
+        "sha256": "eb47804577120c679963814e8c98d4073055720764a12ab60a487c4edd4a472b"
+      },
+      {
+        "seed": 1101045,
+        "frames": 284,
+        "sha256": "42e957ca21fc98d4153faa3b6ba66787025201ec670e93422d961d21dceacd00"
+      },
+      {
+        "seed": 1101046,
+        "frames": 297,
+        "sha256": "1a3df0409e32a09802bc38354343ec7418b330a93a5df278e66f440711f66ffe"
+      },
+      {
+        "seed": 1101047,
+        "frames": 278,
+        "sha256": "eea92361c8dcf06b05e6caea855567567f13df93adc644f12aa0967480678d2e"
+      },
+      {
+        "seed": 1101048,
+        "frames": 275,
+        "sha256": "5a0c49c57e7c6eeeaf3f16d8d0917981c6b1e6f4712d00dda3adf8c0d10738e7"
+      },
+      {
+        "seed": 1101050,
+        "frames": 282,
+        "sha256": "5029bbf8fcedde65fc9d3cd8293cd7ebed815db50641de59acb783a27895a36b"
+      },
+      {
+        "seed": 1101053,
+        "frames": 280,
+        "sha256": "a060464af494ddc467d508b0e861abd93f86f461eed2beb01a823c501b96296e"
+      },
+      {
+        "seed": 1101054,
+        "frames": 281,
+        "sha256": "1775c471c459b667edbf5703140ceca4e55ae7028713337c0c5d71a1d0a35620"
+      },
+      {
+        "seed": 1101055,
+        "frames": 301,
+        "sha256": "39d17978190ac92e82cb4274720a8edb6ef683a74e505c1ddf953e5a4970f609"
+      },
+      {
+        "seed": 1101056,
+        "frames": 276,
+        "sha256": "d52cc2d7d082609cf5db0f3070ffb349e08aa868919a2be4c36bd84cbfd783bd"
+      }
+    ]
+  },
+  "wan_first_checkpoint_structure_checks": [
+    {
+      "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/checkpoint_step_4000.safetensors",
+      "bytes": 13361411736,
+      "tensors": 1117,
+      "header_and_tensor_spans_valid": true,
+      "payload_hashed": false,
+      "policy_scored": false
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/checkpoint_step_4000.safetensors",
+      "bytes": 13361411736,
+      "tensors": 1117,
+      "header_and_tensor_spans_valid": true,
+      "payload_hashed": false,
+      "policy_scored": false
+    }
+  ],
+  "cm009": {
+    "time": "2026-09-23T23:30:21.662651-05:00",
+    "gpu": {
+      "returncode": 0,
+      "stdout": "0, GPU-c7d96da5-a1ae-e1ed-de5d-03f35e550da2, 1, 0, 2\n1, GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 22251, 3, 0\n2, GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 21935, 3, 0\n3, GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 24531, 3, 0\n4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 22251, 3, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 21935, 75, 0\n6, GPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 24531, 3, 0\n7, GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 9101, 20, 0\n",
+      "stderr": ""
+    },
+    "tmux": {
+      "returncode": 0,
+      "stdout": "ow-e2e-train-1\now-e2e-train-2\now-e2e-train-3\now-e2e-train-4\now-e2e-train-5\now-e2e-train-6\n",
+      "stderr": ""
+    }
+  },
+  "judgment": "Handover50/57 completed at22:05:36 with collector exit0; all150 fresh expert scenes now complete and each cohort passed all50 HDF5 hashes plus fixed first50 acceptance order. Six active trainings at3225\u20133617/6000 updates have finite metrics and logs fresher than2s; three seed44 runs queued. Two first Wan checkpoints passed structural file checks; four other first checkpoints previously passed. No learned-policy evaluation result yet.",
+  "next_step": "Finish all nine matched native training runs at the fixed6000 optimizer updates. All150 expert scenes and the development simulator preflight are complete; all three individual cohorts passed raw HDF5 hash and first50 expert-accepted selection audits. After all nine trainings finish, the existing finite controller must run the full cross-cohort novelty/initial-pose audit, paired training-stream audit and final12000-microstep checkpoint hashes before launching the complete5400-rollout matrix. This resolves whether representation accessibility improves native task success without clean regression. Do not create the exclusive fresh-cohort-integrity gate early or score intermediate checkpoints.",
+  "completed_at": "2026-09-23T23:33:36.426979-05:00",
+  "meaningful_change": true,
+  "resource_judgment": "Six study GPUs active oncm009; assigned GPUs0uncorrectedECC; cm009GPU0with2ECC still excluded. /data02 free216.676GiB, /home free0.175GiB. All artifacts/checkpoints remain on/data02; small metadata only on/home. Fixed job budgets and review horizon unchanged despite delayed22:00message.",
+  "publication_skill_used": "/home/zifanz4/.codex/plugins/cache/openai-bundled/sites/0.1.57/skills/sites-hosting/SKILL.md",
+  "publication_skill_catalog_path_missing": true,
+  "publication": {
+    "checked_at": "2026-09-23T19:05:40.528036-05:00",
+    "status": "failed",
+    "error": "SitesConnectorError: Sites project not found",
+    "code": 404,
+    "project_id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3",
+    "public_url": "https://embodied-research-notebook.exiamzifan.chatgpt.site",
+    "new_public_version_deployed": false,
+    "last_attempt_at": "2026-09-23T23:33:36.426979-05:00",
+    "error_code": "NOT_FOUND",
+    "http_status": 404,
+    "local_report": "/home/zifanz4/openwam-experiments/reports/endtoend-20260923/index.html",
+    "public_version_created": false
+  }
+}

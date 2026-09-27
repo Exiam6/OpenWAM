@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-09-22T16:00:50.477262-05:00",
+  "gpu": {
+    "exit_code": 0,
+    "stdout": "0, 32223 MiB, 52 %\n1, 4437 MiB, 29 %\n2, 6 MiB, 0 %\n3, 34557 MiB, 100 %\n4, 34575 MiB, 100 %\n5, 34573 MiB, 100 %\n6, 34573 MiB, 100 %\n7, 34571 MiB, 100 %\n",
+    "stderr": ""
+  },
+  "tmux": {
+    "exit_code": 0,
+    "stdout": "exp: 3 windows (created Sat Sep 19 20:14:57 2026)\n",
+    "stderr": ""
+  },
+  "actual_exit_codes": {
+    "confirmation-exit-code.txt": "0",
+    "score_initial_goal-exit-code.txt": "0",
+    "score_wrist-exit-code.txt": "0",
+    "describe_confirmation_v3-exit-code.txt": "0",
+    "fresh/continuation-exit-code.txt": "0"
+  },
+  "contract_exit_codes": {
+    "attempt1": "1",
+    "attempt2": "0"
+  },
+  "confirmation_log_tail": "     }\n      }\n    },\n    \"mlp\": {\n      \"raw\": {\n        \"clean\": {\n          \"L12_E\": 0.16179010727598023,\n          \"K4_E\": 0.1434070812421851,\n          \"relative_change_percent\": -11.362268276661391\n        },\n        \"noise0.10\": {\n          \"L12_E\": 0.5678568578635653,\n          \"K4_E\": 0.4060867140069604,\n          \"relative_change_percent\": -28.487838372724596\n        }\n      },\n      \"pca\": {\n        \"clean\": {\n          \"L12_E\": 0.1209847377341551,\n          \"K4_E\": 0.11451968684947739,\n          \"relative_change_percent\": -5.343691283510199\n        },\n        \"noise0.10\": {\n          \"L12_E\": 0.3427793711113433,\n          \"K4_E\": 0.3684947737803062,\n          \"relative_change_percent\": 7.502027495292274\n        }\n      },\n      \"svae\": {\n        \"clean\": {\n          \"L12_E\": 0.12392631301966807,\n          \"K4_E\": 0.11199581551934695,\n          \"relative_change_percent\": -9.627089848487348\n        },\n        \"noise0.10\": {\n          \"L12_E\": 0.3699197964225378,\n          \"K4_E\": 0.4325550227632953,\n          \"relative_change_percent\": 16.93210986448883\n        }\n      }\n    }\n  },\n  \"predeclared_primary_success\": false,\n  \"frozen_assets_unchanged\": true,\n  \"refits\": 0\n}\n",
+  "contract_log_tail": ": \"2026-09-22T15:59:37.470675-05:00\",\n  \"elapsed_seconds\": 6.234767969697714,\n  \"peak_rss_MiB\": 1794.5859375,\n  \"fixture\": {\n    \"task\": \"adjust_bottle\",\n    \"episode\": 3,\n    \"frame\": 0,\n    \"split\": \"train\",\n    \"shape\": [\n      1,\n      768,\n      1,\n      24,\n      20\n    ]\n  },\n  \"input_image_hash_matches_raw_hdf5\": true,\n  \"zero_weight_loss_rng_gradients_and_adamw_update_exact\": true,\n  \"gradient_tensors_compared\": 80,\n  \"auxiliary_encoder_gradient_norm\": 9.724735260009766,\n  \"active_head_gradient_norm\": 8.349590301513672,\n  \"auxiliary_decoder_gradients_absent\": true,\n  \"future_frame_change_leaves_initial_latent_exact\": true,\n  \"future_input_gradient_exact_zero\": true,\n  \"checkpoint_unchanged\": true,\n  \"training_checkpoint_saved\": false,\n  \"fresh_or_development_scores_read\": false,\n  \"limitations\": [\n    \"One seed42 training sample; CPU fp32 only\",\n    \"No BF16/GPU update parity or throughput test\",\n    \"No performance gain measured; no new held-out data or compressor fit\"\n  ]\n}\n"
+}

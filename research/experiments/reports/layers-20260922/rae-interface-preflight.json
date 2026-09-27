@@ -1,0 +1,250 @@
+{
+  "protocol_sha256": "473c6fe10616ba9d80782630e0438b23fb611c2b033f68a109f4e11f7a15e01a",
+  "asset_sha256": "20eb789667fa5e60e7516bf509512f6cb61f01b0aa0695eadaea930c13892b36",
+  "properties": {
+    "z_dim": 48,
+    "spatial_compression": 16,
+    "temporal_compression": 4,
+    "causal_temporal": true,
+    "pixel_decode": true,
+    "dit_patch_size": [
+      1,
+      2,
+      2
+    ]
+  },
+  "torch": "2.7.0+cu126",
+  "device": "NVIDIA A40",
+  "model_load_seconds": 7.075024241581559,
+  "operations": [
+    {
+      "name": "frame0",
+      "seconds": 2.5357299111783504,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.8828125,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.07112736254930496,
+      "latent_std": 0.8809797167778015
+    },
+    {
+      "name": "frame1",
+      "seconds": 0.017262596637010574,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.875,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.07304082065820694,
+      "latent_std": 0.8794944882392883
+    },
+    {
+      "name": "frame2",
+      "seconds": 0.0161834005266428,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.9453125,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.04754160717129707,
+      "latent_std": 0.7935523986816406
+    },
+    {
+      "name": "frame3",
+      "seconds": 0.016244051977992058,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.9453125,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.04236247017979622,
+      "latent_std": 0.7451677322387695
+    },
+    {
+      "name": "frame4",
+      "seconds": 0.01615143194794655,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.96875,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.04157329350709915,
+      "latent_std": 0.7383225560188293
+    },
+    {
+      "name": "frame5",
+      "seconds": 0.016117021441459656,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.984375,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.0385398343205452,
+      "latent_std": 0.7345479130744934
+    },
+    {
+      "name": "frame6",
+      "seconds": 0.016071410849690437,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.953125,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.039537373930215836,
+      "latent_std": 0.7368831634521484
+    },
+    {
+      "name": "frame7",
+      "seconds": 0.01607351191341877,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.9375,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.03686973452568054,
+      "latent_std": 0.7352213859558105
+    },
+    {
+      "name": "nine_repeats",
+      "seconds": 0.11853384226560593,
+      "shape": [
+        1,
+        48,
+        3,
+        24,
+        20
+      ],
+      "pixel_min": -0.8828125,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.962196992,
+      "latent_mean": -0.10468684881925583,
+      "latent_std": 1.2705879211425781
+    },
+    {
+      "name": "future_changed",
+      "seconds": 0.10099289566278458,
+      "shape": [
+        1,
+        48,
+        3,
+        24,
+        20
+      ],
+      "pixel_min": -1.0,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.96395008,
+      "latent_mean": 0.09496167302131653,
+      "latent_std": 1.1990160942077637
+    },
+    {
+      "name": "cache_reset",
+      "seconds": 0.015925919637084007,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.8828125,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.07112736254930496,
+      "latent_std": 0.8809797167778015
+    }
+  ],
+  "task_scores": null,
+  "passed": true,
+  "causal_deltas": {
+    "single_vs_video": 0.0,
+    "future_leak": 0.0,
+    "cache_reset": 0.0,
+    "future_sensitivity": 8.75
+  },
+  "pixel_decode": {
+    "shape": [
+      1,
+      3,
+      1,
+      384,
+      320
+    ],
+    "seconds": 0.09657657705247402,
+    "peak_allocated_GB": 1.885490176,
+    "training_frame_MSE_minus1_plus1": 0.00014878172078169882
+  },
+  "readout_geometry": {
+    "wan_and_svae_pooled_dim": 192,
+    "raw_dino_pooled_dim": 3072,
+    "native_pooled_norms": [
+      11.259224891662598,
+      11.18463134765625,
+      9.113317489624023,
+      8.009686470031738,
+      7.956089973449707,
+      7.950584411621094,
+      7.987373352050781,
+      7.970925807952881
+    ],
+    "layernorm_pooled_norms": [
+      12.544678688049316,
+      12.423026084899902,
+      10.801424026489258,
+      10.439584732055664,
+      10.551746368408203,
+      10.390888214111328,
+      10.398837089538574,
+      10.404192924499512
+    ],
+    "existing_DINO_shape": [
+      8,
+      768,
+      1,
+      24,
+      20
+    ]
+  },
+  "total_seconds": 10.17167166620493,
+  "scope": "Training-only8frames from one episode; geometry/causality/resource preflight, no task benefit claim."
+}

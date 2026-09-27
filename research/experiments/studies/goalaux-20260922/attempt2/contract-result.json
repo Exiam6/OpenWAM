@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "finished_at": "2026-09-22T15:59:37.470675-05:00",
+  "elapsed_seconds": 6.234767969697714,
+  "peak_rss_MiB": 1794.5859375,
+  "fixture": {
+    "task": "adjust_bottle",
+    "episode": 3,
+    "frame": 0,
+    "split": "train",
+    "shape": [
+      1,
+      768,
+      1,
+      24,
+      20
+    ]
+  },
+  "input_image_hash_matches_raw_hdf5": true,
+  "zero_weight_loss_rng_gradients_and_adamw_update_exact": true,
+  "gradient_tensors_compared": 80,
+  "auxiliary_encoder_gradient_norm": 9.724735260009766,
+  "active_head_gradient_norm": 8.349590301513672,
+  "auxiliary_decoder_gradients_absent": true,
+  "future_frame_change_leaves_initial_latent_exact": true,
+  "future_input_gradient_exact_zero": true,
+  "checkpoint_unchanged": true,
+  "training_checkpoint_saved": false,
+  "fresh_or_development_scores_read": false,
+  "limitations": [
+    "One seed42 training sample; CPU fp32 only",
+    "No BF16/GPU update parity or throughput test",
+    "No performance gain measured; no new held-out data or compressor fit"
+  ]
+}

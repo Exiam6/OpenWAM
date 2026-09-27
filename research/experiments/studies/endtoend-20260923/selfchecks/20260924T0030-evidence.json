@@ -1,0 +1,282 @@
+{
+  "checked_at": "2026-09-24T00:31:45.204615-05:00",
+  "trigger": "2026-09-24T00:30:01.296751-05:00",
+  "training": {
+    "pca-seed42": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 8933,
+        "opt_step": 4466,
+        "steps_per_sec": 0.4915499118201956,
+        "batch_size": 4,
+        "lr": 1.7662863499920416e-05,
+        "metrics": {
+          "loss_total": 0.20923955738544464,
+          "loss_video": 0.18947802484035492,
+          "loss_action": 0.01976153627038002,
+          "grad_norm": 0.0
+        },
+        "allocated_bytes": 18103425024,
+        "wall_time": 1790227903.9312315,
+        "rank": 0
+      },
+      "metric_age_s": 1.3270957469940186,
+      "all_metrics_finite": true,
+      "log_tail": "/12000 [5:11:14<1:52:16,  2.20s/step, loss=0.2092, video=0.1895, action=0.0198, lr=1.77e-05, epoch=1]\rTraining:  74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 8933/12000 [5:11:14<1:49:46,  2.15s/step, loss=0.2092, video=0.1895, action=0.0198, lr=1.77e-05, epoch=1]",
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_8000.safetensors",
+          "bytes": 12123507288
+        }
+      ]
+    },
+    "pca-seed43": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 8850,
+        "opt_step": 4425,
+        "steps_per_sec": 0.4753154284265428,
+        "batch_size": 4,
+        "lr": 1.8508187725883364e-05,
+        "metrics": {
+          "loss_total": 0.3111054003238678,
+          "loss_video": 0.30794328451156616,
+          "loss_action": 0.0031621200032532215,
+          "grad_norm": 0.47964513301849365
+        },
+        "allocated_bytes": 18103425024,
+        "wall_time": 1790227903.5691626,
+        "rank": 0
+      },
+      "metric_age_s": 1.7610077857971191,
+      "all_metrics_finite": true,
+      "log_tail": "/12000 [5:11:01<1:49:23,  2.08s/step, loss=0.3111, video=0.3079, action=0.0032, lr=1.85e-05, epoch=1]\rTraining:  74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 8850/12000 [5:11:01<1:49:40,  2.09s/step, loss=0.3111, video=0.3079, action=0.0032, lr=1.85e-05, epoch=1]",
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_8000.safetensors",
+          "bytes": 12123507288
+        }
+      ]
+    },
+    "pca-seed44": {
+      "status": "queued",
+      "exit": null,
+      "last_metric": {},
+      "metric_age_s": null,
+      "all_metrics_finite": true,
+      "log_tail": null,
+      "checkpoints": []
+    },
+    "svae-seed42": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 8859,
+        "opt_step": 4429,
+        "steps_per_sec": 0.47559178215364745,
+        "batch_size": 4,
+        "lr": 1.842499093209658e-05,
+        "metrics": {
+          "loss_total": 0.17796316742897034,
+          "loss_video": 0.13594336807727814,
+          "loss_action": 0.0420198030769825,
+          "grad_norm": 0.0
+        },
+        "allocated_bytes": 18170329600,
+        "wall_time": 1790227905.2872436,
+        "rank": 0
+      },
+      "metric_age_s": 0.1185159683227539,
+      "all_metrics_finite": true,
+      "log_tail": "/12000 [5:11:10<1:50:03,  2.10s/step, loss=0.0567, video=0.0418, action=0.0148, lr=1.84e-05, epoch=1]\rTraining:  74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 8858/12000 [5:11:10<1:51:08,  2.12s/step, loss=0.0567, video=0.0418, action=0.0148, lr=1.84e-05, epoch=1]",
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_8000.safetensors",
+          "bytes": 12189767400
+        }
+      ]
+    },
+    "svae-seed43": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 9006,
+        "opt_step": 4503,
+        "steps_per_sec": 0.4684937097371804,
+        "batch_size": 4,
+        "lr": 1.6914391445215544e-05,
+        "metrics": {
+          "loss_total": 0.2500278949737549,
+          "loss_video": 0.24053256213665009,
+          "loss_action": 0.009495344944298267,
+          "grad_norm": 0.9562324285507202
+        },
+        "allocated_bytes": 18170329600,
+        "wall_time": 1790227904.0277019,
+        "rank": 0
+      },
+      "metric_age_s": 1.4535458087921143,
+      "all_metrics_finite": true,
+      "log_tail": "/12000 [5:11:13<1:44:52,  2.10s/step, loss=0.2500, video=0.2405, action=0.0095, lr=1.69e-05, epoch=1]\rTraining:  75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 9006/12000 [5:11:13<1:45:20,  2.11s/step, loss=0.2500, video=0.2405, action=0.0095, lr=1.69e-05, epoch=1]",
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_8000.safetensors",
+          "bytes": 12189767400
+        }
+      ]
+    },
+    "svae-seed44": {
+      "status": "queued",
+      "exit": null,
+      "last_metric": {},
+      "metric_age_s": null,
+      "all_metrics_finite": true,
+      "log_tail": null,
+      "checkpoints": []
+    },
+    "wan-seed42": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 8031,
+        "opt_step": 4015,
+        "steps_per_sec": 0.434398381547027,
+        "batch_size": 4,
+        "lr": 2.778472617562437e-05,
+        "metrics": {
+          "loss_total": 0.18167363107204437,
+          "loss_video": 0.16834692656993866,
+          "loss_action": 0.013326708227396011,
+          "grad_norm": 0.0
+        },
+        "allocated_bytes": 19760472576,
+        "wall_time": 1790227904.926925,
+        "rank": 0
+      },
+      "metric_age_s": 0.6228806972503662,
+      "all_metrics_finite": true,
+      "log_tail": "30/12000 [5:11:05<2:32:56,  2.31s/step, loss=0.1817, video=0.1683, action=0.0133, lr=2.78e-05, epoch=1]\rTraining:  67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 8031/12000 [5:11:05<2:32:42,  2.31s/step, loss=0.1817, video=0.1683, action=0.0133, lr=2.78e-05, epoch=1]",
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/checkpoint_step_8000.safetensors",
+          "bytes": 13361411736
+        }
+      ]
+    },
+    "wan-seed43": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 8354,
+        "opt_step": 4177,
+        "steps_per_sec": 0.43302846926385125,
+        "batch_size": 4,
+        "lr": 2.395354251103697e-05,
+        "metrics": {
+          "loss_total": 0.27566298842430115,
+          "loss_video": 0.2614605128765106,
+          "loss_action": 0.014202478341758251,
+          "grad_norm": 0.5183880925178528
+        },
+        "allocated_bytes": 19760472576,
+        "wall_time": 1790227904.0714345,
+        "rank": 0
+      },
+      "metric_age_s": 1.559086799621582,
+      "all_metrics_finite": true,
+      "log_tail": "53/12000 [5:11:06<2:18:34,  2.28s/step, loss=0.2757, video=0.2615, action=0.0142, lr=2.40e-05, epoch=1]\rTraining:  70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 8354/12000 [5:11:06<2:19:04,  2.29s/step, loss=0.2757, video=0.2615, action=0.0142, lr=2.40e-05, epoch=1]",
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/checkpoint_step_8000.safetensors",
+          "bytes": 13361411736
+        }
+      ]
+    },
+    "wan-seed44": {
+      "status": "queued",
+      "exit": null,
+      "last_metric": {},
+      "metric_age_s": null,
+      "all_metrics_finite": true,
+      "log_tail": null,
+      "checkpoints": []
+    }
+  },
+  "exits": {
+    "pipeline": null,
+    "collector5": {
+      "time": "2026-09-23T22:05:36.904975-05:00",
+      "returncode": 0
+    },
+    "collector7": {
+      "time": "2026-09-23T21:03:54.426294-05:00",
+      "returncode": 0
+    },
+    "simulation": {
+      "time": "2026-09-23T21:08:15.726521-05:00",
+      "returncode": 0
+    }
+  },
+  "frozen_hash_mismatches": [],
+  "new_second_checkpoint_checks": [
+    {
+      "run": "wan-seed42",
+      "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/checkpoint_step_8000.safetensors",
+      "structurally_complete": true,
+      "tensors": 1117,
+      "payload_hashed": false,
+      "policy_scored": false,
+      "checkpoint_count": 1
+    },
+    {
+      "run": "wan-seed43",
+      "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/checkpoint_step_8000.safetensors",
+      "structurally_complete": true,
+      "tensors": 1117,
+      "payload_hashed": false,
+      "policy_scored": false,
+      "checkpoint_count": 1
+    }
+  ],
+  "pipeline_progress": {
+    "time": "2026-09-24T00:31:38.859707-05:00",
+    "stage": "waiting_for_all_training_collection_smoke",
+    "all_ready": false
+  },
+  "free_disk_gib": {
+    "/data02": 215.961,
+    "/home": 0.979
+  },
+  "cm001_gpu": {
+    "returncode": 0,
+    "stdout": "0, 32223, 21, 0\n1, 37991, 36, 0\n2, 31989, 96, 0\n3, 24407, 39, 0\n4, 25251, 67, 0\n5, 9387, 44, 0\n6, 19527, 51, 0\n7, 18641, 35, 0\n",
+    "stderr": ""
+  },
+  "cm001_tmux": {
+    "returncode": 0,
+    "stdout": "exp\now-e2e-pipeline\n",
+    "stderr": ""
+  },
+  "pause_markers": [],
+  "cm009": {
+    "time": "2026-09-24T00:31:42.870319-05:00",
+    "gpu": {
+      "returncode": 0,
+      "stdout": "0, GPU-c7d96da5-a1ae-e1ed-de5d-03f35e550da2, 1, 0, 2\n1, GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 22251, 3, 0\n2, GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 21935, 3, 0\n3, GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 24531, 84, 0\n4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 22251, 3, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 21935, 3, 0\n6, GPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 24531, 3, 0\n7, GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 9591, 79, 0\n",
+      "stderr": ""
+    },
+    "tmux": {
+      "returncode": 0,
+      "stdout": "ow-e2e-train-1\now-e2e-train-2\now-e2e-train-3\now-e2e-train-4\now-e2e-train-5\now-e2e-train-6\n",
+      "stderr": ""
+    }
+  },
+  "judgment": "No new failure, completed training run or scientific result. Six trainings at4015\u20134503/6000 optimizer updates, all logged metrics finite and latest metric age below1.8s; three seed44 runs queued. Both Wan second checkpoints passed header/tensor-span/file-length checks; all six runs now retain only their8000microstep checkpoint. No payload rehash, strict model reload or policy scoring performed. All150expert completion and simulator preflight unchanged; existing finite controller correctly waits.",
+  "next_step": "Finish all nine matched native training runs at the fixed6000 optimizer updates. All150 expert scenes and the development simulator preflight are complete; all three individual cohorts passed raw HDF5 hash and first50 expert-accepted selection audits. After all nine trainings finish, the existing finite controller must run the full cross-cohort novelty/initial-pose audit, paired training-stream audit and final12000-microstep checkpoint hashes before launching the complete5400-rollout matrix. This resolves whether representation accessibility improves native task success without clean regression. Do not create the exclusive fresh-cohort-integrity gate early or score intermediate checkpoints.",
+  "completed_at": "2026-09-24T00:32:38.400677-05:00",
+  "meaningful_change": false,
+  "public_retry_performed": false,
+  "resource_judgment": "Six assignedcm009GPUs have0uncorrectedECC; GPU0with2ECC excluded. cm001GPU5 andcm009GPU7 now occupied again after prior release/idle; not assigned to this study and untouched. /data02free215.961GiB, /home0.979GiB; no cleanup or unrelated modification by this selfcheck. keep_last retention is working. Next inspect final12000microstep saves/exit0 and seed44 queue transitions; preserve all-nine-runs prerequisite and fixed budgets."
+}

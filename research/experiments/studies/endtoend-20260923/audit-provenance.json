@@ -1,0 +1,6 @@
+{
+  "original_script": "/home/zifanz4/openwam-experiments/scripts/confirmation/audit.py",
+  "original_sha256": "5e57bb8a00fe4443731569b627c8713351277e95a725f58b10940de78bcc70ce",
+  "audit_copy_sha256": "5c64eae182d2147183bf6a748a07ea03c4e9731f439007fd8a5cf610104c0771",
+  "changes": "Only newly authorized audit deadline/pause guard, output destination and duplicate audit protection; numerical checks unchanged."
+}

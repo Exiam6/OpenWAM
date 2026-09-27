@@ -1,0 +1,460 @@
+{
+  "time": "2026-09-26T15:01:26.039973-05:00",
+  "trigger": "2026-09-26T15:00:01.570890-05:00",
+  "latest_monitor_time": "2026-09-26T15:00:01.570890-05:00",
+  "missed_checks_backfilled": false,
+  "pause_markers": {
+    "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/paused.json": false,
+    "/home/zifanz4/.local/state/openwam-selfcheck/paused.json": false,
+    "/home/zifanz4/openwam-experiments/studies/layers-20260922/paused.json": false
+  },
+  "remaining_evaluation_hours": 43.67588898388889,
+  "evaluation_deadline": "2026-09-28T10:41:59.240315-05:00",
+  "stage_deadline": "2026-09-28T13:41:59.240315-05:00",
+  "controller": {
+    "recorded": {
+      "time": "2026-09-25T19:46:45.337653-05:00",
+      "pid": 1930714,
+      "uid": 2093,
+      "host": "cm001",
+      "start_ticks": "2628863133",
+      "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+      "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+    },
+    "exists": true,
+    "uid": 2093,
+    "start_ticks": "2628863133",
+    "state": "S",
+    "matches": true
+  },
+  "controller_progress": {
+    "time": "2026-09-26T15:01:03.607834-05:00",
+    "stage": "independent_slot_admission_or_evaluation",
+    "terminal_slots": {},
+    "evaluation_deadline": "2026-09-28T10:41:59.240315-05:00"
+  },
+  "controller_exit": null,
+  "queues": {
+    "1": {
+      "started": {
+        "time": "2026-09-25T19:49:29.861809-05:00",
+        "pid": 2447502,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643798",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-26T15:01:09.797703-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85",
+          "00000000:21:00.0",
+          "25971",
+          "71",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null
+    },
+    "2": {
+      "started": {
+        "time": "2026-09-25T19:49:30.075167-05:00",
+        "pid": 2447565,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643821",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-26T15:01:09.794289-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e",
+          "00000000:41:00.0",
+          "26641",
+          "100",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null
+    },
+    "3": {
+      "started": {
+        "time": "2026-09-25T19:49:30.327129-05:00",
+        "pid": 2447628,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643846",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-26T15:01:09.813241-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db",
+          "00000000:61:00.0",
+          "25755",
+          "99",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null
+    },
+    "4": {
+      "started": {
+        "time": "2026-09-25T19:49:30.569000-05:00",
+        "pid": 2447691,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643869",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-26T15:01:09.794313-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-33861458-0994-99a7-7457-6fceb49c229c",
+          "00000000:81:00.0",
+          "11787",
+          "62",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null
+    },
+    "5": {
+      "started": {
+        "time": "2026-09-25T19:49:30.759333-05:00",
+        "pid": 2447754,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643889",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-26T15:01:09.825083-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3",
+          "00000000:A1:00.0",
+          "26415",
+          "68",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null
+    },
+    "6": {
+      "started": {
+        "time": "2026-09-25T19:49:30.979285-05:00",
+        "pid": 2447818,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643911",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-26T15:01:09.780110-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-f341a0af-5cd4-9d17-e701-31f4530522ae",
+          "00000000:C1:00.0",
+          "23823",
+          "99",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null
+    }
+  },
+  "remote": {
+    "queues": {
+      "1": {
+        "recorded": {
+          "time": "2026-09-25T19:49:29.861809-05:00",
+          "pid": 2447502,
+          "uid": 2093,
+          "host": "cm009",
+          "start_ticks": "1117643798",
+          "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+          "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+        },
+        "exists": true,
+        "uid": 2093,
+        "start_ticks": "1117643798",
+        "state": "S",
+        "matches": true
+      },
+      "2": {
+        "recorded": {
+          "time": "2026-09-25T19:49:30.075167-05:00",
+          "pid": 2447565,
+          "uid": 2093,
+          "host": "cm009",
+          "start_ticks": "1117643821",
+          "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+          "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+        },
+        "exists": true,
+        "uid": 2093,
+        "start_ticks": "1117643821",
+        "state": "S",
+        "matches": true
+      },
+      "3": {
+        "recorded": {
+          "time": "2026-09-25T19:49:30.327129-05:00",
+          "pid": 2447628,
+          "uid": 2093,
+          "host": "cm009",
+          "start_ticks": "1117643846",
+          "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+          "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+        },
+        "exists": true,
+        "uid": 2093,
+        "start_ticks": "1117643846",
+        "state": "S",
+        "matches": true
+      },
+      "4": {
+        "recorded": {
+          "time": "2026-09-25T19:49:30.569000-05:00",
+          "pid": 2447691,
+          "uid": 2093,
+          "host": "cm009",
+          "start_ticks": "1117643869",
+          "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+          "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+        },
+        "exists": true,
+        "uid": 2093,
+        "start_ticks": "1117643869",
+        "state": "S",
+        "matches": true
+      },
+      "5": {
+        "recorded": {
+          "time": "2026-09-25T19:49:30.759333-05:00",
+          "pid": 2447754,
+          "uid": 2093,
+          "host": "cm009",
+          "start_ticks": "1117643889",
+          "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+          "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+        },
+        "exists": true,
+        "uid": 2093,
+        "start_ticks": "1117643889",
+        "state": "S",
+        "matches": true
+      },
+      "6": {
+        "recorded": {
+          "time": "2026-09-25T19:49:30.979285-05:00",
+          "pid": 2447818,
+          "uid": 2093,
+          "host": "cm009",
+          "start_ticks": "1117643911",
+          "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+          "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+        },
+        "exists": true,
+        "uid": 2093,
+        "start_ticks": "1117643911",
+        "state": "S",
+        "matches": true
+      }
+    },
+    "gpu": {
+      "returncode": 0,
+      "stdout": "0, GPU-c7d96da5-a1ae-e1ed-de5d-03f35e550da2, 1, 0, 2\n1, GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 25971, 70, 0\n2, GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 26641, 80, 0\n3, GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 25755, 99, 0\n4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 11787, 50, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 26415, 100, 0\n6, GPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 23823, 95, 0\n7, GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 24495, 74, 0\n",
+      "stderr": ""
+    },
+    "compute_apps": {
+      "returncode": 0,
+      "stdout": "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 2421367, 25964\nGPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 2437330, 26634\nGPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 2427495, 25736\nGPU-33861458-0994-99a7-7457-6fceb49c229c, 2077942, 11747\nGPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 2442870, 26408\nGPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 2417675, 23816\nGPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 2430315, 24488\n",
+      "stderr": ""
+    },
+    "owners": [
+      {
+        "gpu": "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85",
+        "pid": 2421367,
+        "user": "kagaram2"
+      },
+      {
+        "gpu": "GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e",
+        "pid": 2437330,
+        "user": "kagaram2"
+      },
+      {
+        "gpu": "GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db",
+        "pid": 2427495,
+        "user": "kagaram2"
+      },
+      {
+        "gpu": "GPU-33861458-0994-99a7-7457-6fceb49c229c",
+        "pid": 2077942,
+        "user": "bhavyaa2"
+      },
+      {
+        "gpu": "GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3",
+        "pid": 2442870,
+        "user": "kagaram2"
+      },
+      {
+        "gpu": "GPU-f341a0af-5cd4-9d17-e701-31f4530522ae",
+        "pid": 2417675,
+        "user": "kagaram2"
+      },
+      {
+        "gpu": "GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e",
+        "pid": 2430315,
+        "user": "kagaram2"
+      }
+    ]
+  },
+  "frozen_checks": {
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_common.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/run_simulation_preflight.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/simulation_preflight.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/serve_policy.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluate_policy.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/verify_fresh_cohort.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_controller.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_queue.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/action_diagnostics.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/analyze_closed_loop.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/audit_closed_loop.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/summarize_diagnostics.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/update_status.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/dinov3_pca.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/__init__.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/deploy/server.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/openwam2robotwin_interface.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/protocol.json": true,
+    "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/EVALUATION_IMPLEMENTATION.md": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py": true,
+    "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/evaluation-recovery-20260925.json": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed44/output/2026-09-24_13-51-17/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed44/output/2026-09-24_13-51-17/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed44/output/2026-09-24_13-51-20/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed44/output/2026-09-24_13-51-20/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/manifest.json": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/manifest.json": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/manifest.json": true
+  },
+  "training_exits": {
+    "training/pca-seed42/exit.json": {
+      "time": "2026-09-24T02:19:59.258742-05:00",
+      "returncode": 0
+    },
+    "training/pca-seed43/exit.json": {
+      "time": "2026-09-24T02:23:54.989991-05:00",
+      "returncode": 0
+    },
+    "training/pca-seed44/exit.json": {
+      "time": "2026-09-24T21:11:26.411245-05:00",
+      "returncode": 0
+    },
+    "training/svae-seed42/exit.json": {
+      "time": "2026-09-24T02:23:39.720465-05:00",
+      "returncode": 0
+    },
+    "training/svae-seed43/exit.json": {
+      "time": "2026-09-24T02:16:27.723352-05:00",
+      "returncode": 0
+    },
+    "training/svae-seed44/exit.json": {
+      "time": "2026-09-24T21:09:10.637020-05:00",
+      "returncode": 0
+    },
+    "training/wan-seed42/exit.json": {
+      "time": "2026-09-24T03:09:02.445341-05:00",
+      "returncode": 0
+    },
+    "training/wan-seed43/exit.json": {
+      "time": "2026-09-24T02:51:13.836803-05:00",
+      "returncode": 0
+    },
+    "training/wan-seed44/exit.json": {
+      "time": "2026-09-24T21:41:40.015348-05:00",
+      "returncode": 0
+    }
+  },
+  "evaluation_artifact_paths": [],
+  "log_tails": {
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/controller.log": {
+      "bytes": 0,
+      "tail": ""
+    },
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/queue-1.log": {
+      "bytes": 0,
+      "tail": ""
+    },
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/queue-4.log": {
+      "bytes": 0,
+      "tail": ""
+    },
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/queue-2.log": {
+      "bytes": 0,
+      "tail": ""
+    },
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/queue-6.log": {
+      "bytes": 0,
+      "tail": ""
+    },
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/queue-5.log": {
+      "bytes": 0,
+      "tail": ""
+    },
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/queue-3.log": {
+      "bytes": 0,
+      "tail": ""
+    }
+  },
+  "available_gib": {
+    "/home/zifanz4": 0.2841796875,
+    "/data02/zifanz4": 139.6474609375
+  }
+}

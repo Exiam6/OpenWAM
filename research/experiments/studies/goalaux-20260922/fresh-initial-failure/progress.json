@@ -1,0 +1,23 @@
+{
+  "attempts": [
+    {
+      "task": "adjust_bottle",
+      "seed": 800000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-22T17:15:56.576990-05:00",
+      "outcome": "infrastructure_failure",
+      "error": "AssertionError('Planner backend mismatch; stop before actions')",
+      "traceback": "Traceback (most recent call last):\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_reference.py\", line 24, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args)\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation.py\", line 31, in checked_setup\n    if kw.get('need_plan'):assert all(name=='CuroboPlanner' for name in planners.values()),'Planner backend mismatch; stop before actions'\nAssertionError: Planner backend mismatch; stop before actions\n",
+      "elapsed_seconds": 19.07174197770655,
+      "exit_code": 0
+    }
+  ],
+  "accepted_counts": {
+    "adjust_bottle": 0,
+    "handover_block": 0,
+    "place_object_basket": 0
+  },
+  "elapsed_seconds": 20.916327131912112,
+  "collection_deadline": "2026-09-22T19:15:55.548938-05:00"
+}

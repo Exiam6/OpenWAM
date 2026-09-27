@@ -1,0 +1,10 @@
+{
+  "frozen_at": "2026-09-22T23:40:40.466806-05:00",
+  "files": {
+    "/home/zifanz4/openwam-experiments/scripts/rae_interface_preflight.py": "3dec9840f1e53b6094529dc22f81807b3d337d59582da2d8335dc0e5a42aee19",
+    "/data02/zifanz4/openwam-experiments/OpenWAM/openwam/model/video_backbone/encoder/wan22_vae.py": "d64b5a1bf61358205e99bf955c9fcd03b9002dcdef1b0265c2555060f4198f6e",
+    "/data02/zifanz4/openwam-experiments/OpenWAM/openwam/model/video_backbone/wan/models/vae.py": "2821a28dc146f57b1cf73a555da516f5a5e37436b8f044a52fcba947d89a8bd5",
+    "/data02/zifanz4/openwam-experiments/OpenWAM/openwam/model/video_backbone/encoder/base.py": "1880d59a83ddaa00eeec509e8a3890df12aa73bf8256412f0d29b8c502745c87"
+  },
+  "protocol_sha256": "473c6fe10616ba9d80782630e0438b23fb611c2b033f68a109f4e11f7a15e01a"
+}

@@ -1,0 +1,121 @@
+{
+  "time": "2026-09-23T20:46:43.835071-05:00",
+  "trigger": "2026-09-23T20:45:01.465940-05:00",
+  "training": {
+    "pca-seed42": {
+      "opt_step": 1250,
+      "metric_age_s": 0.8341619968414307,
+      "finite": true,
+      "exit": null
+    },
+    "pca-seed43": {
+      "opt_step": 1237,
+      "metric_age_s": 0.09245777130126953,
+      "finite": true,
+      "exit": null
+    },
+    "pca-seed44": {
+      "opt_step": 0,
+      "metric_age_s": null,
+      "finite": true,
+      "exit": null
+    },
+    "svae-seed42": {
+      "opt_step": 1236,
+      "metric_age_s": 0.5198752880096436,
+      "finite": true,
+      "exit": null
+    },
+    "svae-seed43": {
+      "opt_step": 1257,
+      "metric_age_s": 0.2951362133026123,
+      "finite": true,
+      "exit": null
+    },
+    "svae-seed44": {
+      "opt_step": 0,
+      "metric_age_s": null,
+      "finite": true,
+      "exit": null
+    },
+    "wan-seed42": {
+      "opt_step": 1126,
+      "metric_age_s": 1.770911455154419,
+      "finite": true,
+      "exit": null
+    },
+    "wan-seed43": {
+      "opt_step": 1165,
+      "metric_age_s": 0.31342220306396484,
+      "finite": true,
+      "exit": null
+    },
+    "wan-seed44": {
+      "opt_step": 0,
+      "metric_age_s": null,
+      "finite": true,
+      "exit": null
+    }
+  },
+  "scenes": {
+    "adjust_bottle": {
+      "accepted": 50,
+      "attempted": 63,
+      "updated": "2026-09-23T20:39:16.259497-05:00",
+      "complete": true,
+      "last_outcome": "accepted"
+    },
+    "handover_block": {
+      "accepted": 4,
+      "attempted": 4,
+      "updated": "2026-09-23T20:45:23.223019-05:00",
+      "complete": false,
+      "last_outcome": "accepted"
+    },
+    "place_object_basket": {
+      "accepted": 41,
+      "attempted": 70,
+      "updated": "2026-09-23T20:46:43.859499-05:00",
+      "complete": false,
+      "last_outcome": "expert_infeasible"
+    }
+  },
+  "exits": {
+    "collection-slots/5": null,
+    "collection-slots/7": null,
+    "simulation-preflight": null,
+    "pipeline": null
+  },
+  "frozen_mismatches": [],
+  "pipeline": {
+    "time": "2026-09-23T20:46:15.131020-05:00",
+    "stage": "waiting_for_all_training_collection_smoke",
+    "all_ready": false
+  },
+  "free_gib": 291.150390625,
+  "cm001_gpu": "0, GPU-c83b7d25-753e-2eae-f13b-8f9c3df9fa4b, 32223 MiB, 38 %, 0\n1, GPU-67b700c2-eb7a-93aa-28dd-57e8b2711926, 37991 MiB, 39 %, 0\n2, GPU-025b7fc9-8f25-5467-5c28-8e59884ab6d3, 31989 MiB, 89 %, 0\n3, GPU-bba13bfa-9dd6-0956-0e4e-122950cd69fe, 16 MiB, 0 %, 0\n4, GPU-e7aef4c0-2628-b4f8-34f4-579d62b7feb6, 5 MiB, 0 %, 0\n5, GPU-1758045c-5a5e-3661-bb58-a786fa745a17, 5245 MiB, 40 %, 0\n6, GPU-91a9a93b-b386-82f0-3009-88cc9bb79d06, 1 MiB, 0 %, 0\n7, GPU-3624eff9-444b-b72c-e32e-2bae7acbb8cb, 1 MiB, 22 %, 0\n",
+  "tmux": "exp\now-e2e-pipeline\now-e2e-scenes-5\now-e2e-scenes-7\now-e2e-smoke\n",
+  "decision": "Meaningful milestone: bottle50/50 expert cohort completed20:39:16 from63attempts; independent manifest/order/raw-file checks passed20:47. Other work healthy, no policy outcomes yet.",
+  "bottle_completion_audit": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/bottle-cohort-completion.json",
+  "next_step": "The first task cohort is complete and all50 HDF5 hashes match. Preserve its fixed manifest and let existing GPU5 collect handover scenes; let GPU7 finish basket then run the already queued development simulator/camera/contact/RNG preflight. This gate distinguishes pipeline errors from representation effects before new learned-policy evaluation. Keep all nine training jobs and remaining collection within the unchanged protocol; no old evaluation replay.",
+  "owned_gpu_slots": {
+    "cm009": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "cm001": [
+      5,
+      7
+    ]
+  },
+  "used_gpu_uncorrected_ecc": 0,
+  "excluded_gpu": "cm009GPU0 ECC2 unchanged",
+  "old_layers_deadline_unchanged": true,
+  "new_experiments_launched": false,
+  "publication": "Existing Sites get_site againNOT_FOUND404; local report updated, no deployed version.",
+  "notification": "brief completion milestone only; no representation-benefit claim"
+}

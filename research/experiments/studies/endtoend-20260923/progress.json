@@ -1,0 +1,624 @@
+{
+  "updated_at": "2026-09-27T12:12:34.345362-05:00",
+  "status": "evaluation_partial_infrastructure_failure",
+  "training": {
+    "pca-seed42": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:19:59.258742-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.13786819577217102,
+        "loss_video": 0.13136054575443268,
+        "loss_action": 0.006507657468318939,
+        "grad_norm": 0.44345977902412415
+      },
+      "last_metric_time": 1790234324.9809947,
+      "all_logged_losses_finite": true
+    },
+    "pca-seed43": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:23:54.989991-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.29911789298057556,
+        "loss_video": 0.2854231894016266,
+        "loss_action": 0.013694703578948975,
+        "grad_norm": 0.4666437804698944
+      },
+      "last_metric_time": 1790234554.153833,
+      "all_logged_losses_finite": true
+    },
+    "pca-seed44": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T21:11:26.411245-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.33998098969459534,
+        "loss_video": 0.28467512130737305,
+        "loss_action": 0.05530587211251259,
+        "grad_norm": 0.8676789999008179
+      },
+      "last_metric_time": 1790302211.5778666,
+      "all_logged_losses_finite": true
+    },
+    "svae-seed42": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:23:39.720465-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.12422701716423035,
+        "loss_video": 0.11894958466291428,
+        "loss_action": 0.0052774325013160706,
+        "grad_norm": 0.38373449444770813
+      },
+      "last_metric_time": 1790234535.674543,
+      "all_logged_losses_finite": true
+    },
+    "svae-seed43": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:16:27.723352-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.28846943378448486,
+        "loss_video": 0.27400118112564087,
+        "loss_action": 0.01446824986487627,
+        "grad_norm": 0.4534133970737457
+      },
+      "last_metric_time": 1790234114.992426,
+      "all_logged_losses_finite": true
+    },
+    "svae-seed44": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T21:09:10.637020-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.30734753608703613,
+        "loss_video": 0.2680494785308838,
+        "loss_action": 0.039298057556152344,
+        "grad_norm": 0.8073057532310486
+      },
+      "last_metric_time": 1790302076.433825,
+      "all_logged_losses_finite": true
+    },
+    "wan-seed42": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T03:09:02.445341-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.18728265166282654,
+        "loss_video": 0.17978183925151825,
+        "loss_action": 0.007500807289034128,
+        "grad_norm": 0.36119961738586426
+      },
+      "last_metric_time": 1790237256.928238,
+      "all_logged_losses_finite": true
+    },
+    "wan-seed43": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:51:13.836803-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.39004501700401306,
+        "loss_video": 0.37430840730667114,
+        "loss_action": 0.015736602246761322,
+        "grad_norm": 0.43820375204086304
+      },
+      "last_metric_time": 1790236189.6906774,
+      "all_logged_losses_finite": true
+    },
+    "wan-seed44": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T21:41:40.015348-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.5353524088859558,
+        "loss_video": 0.47207069396972656,
+        "loss_action": 0.06328170001506805,
+        "grad_norm": 1.0690838098526
+      },
+      "last_metric_time": 1790304015.59202,
+      "all_logged_losses_finite": true
+    }
+  },
+  "scenes": {
+    "adjust_bottle": {
+      "accepted": 50,
+      "attempted": 63,
+      "complete": true
+    },
+    "handover_block": {
+      "accepted": 50,
+      "attempted": 57,
+      "complete": true
+    },
+    "place_object_basket": {
+      "accepted": 50,
+      "attempted": 84,
+      "complete": true
+    }
+  },
+  "simulation_preflight": {
+    "passed": true,
+    "time": "2026-09-23T21:08:15.156304-05:00",
+    "artifact": "/data02/zifanz4/openwam-experiments/endtoend-20260923/simulation-preflight/result.json",
+    "code_sha256": {
+      "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluate_policy.py": "cd021e40f79d104dfa1e6bd86337d3dd7ff0bcc815943ac971b6e4f9f2988708",
+      "/home/zifanz4/openwam-experiments/scripts/endtoend/serve_policy.py": "476608ccf2e9de0aa804e4388d71ba51969e98a188f92b8738d77821f5fa5e7d",
+      "/home/zifanz4/openwam-experiments/scripts/endtoend/simulation_preflight.py": "4edc5629b5c3941fd9e9a8558fa17689b9f10e2baea4f76fd7264a9eaffbb1b9"
+    },
+    "heldout_policy_outcomes_used": false
+  },
+  "audit_passed": true,
+  "native_deployment_preflights_passed": true,
+  "controlled_native295M_primary_passed": false,
+  "closed_loop": null,
+  "closed_loop_audit": null,
+  "pipeline": {
+    "time": "2026-09-24T21:36:52.725747-05:00",
+    "stage": "terminal_dependency_timeout",
+    "all_ready": false,
+    "terminal_exit": {
+      "time": "2026-09-25T19:12:21.310476-05:00",
+      "returncode": 1
+    },
+    "last_pre_failure_heartbeat_is_stale": true
+  },
+  "pipeline_exit": {
+    "time": "2026-09-25T19:12:21.310476-05:00",
+    "returncode": 1
+  },
+  "next_step": "Inspect the complete terminal evidence and retain every failure. No automatic replay or deadline extension. A primary benefit claim requires all 5400 rollouts plus the independent audit.",
+  "public_report_status": "Existing public site access restored Sep25; see publication.json for actual deployment status.",
+  "selfcheck_reasoned_at": "2026-09-27T12:12:34.345362-05:00",
+  "resource_note": "Six original cm009GPU1-6 queues independently check resources; no simultaneous-idle barrier. No GPU is claimed reserved merely because a queue exists. GPU0 ECC failure remains excluded.",
+  "verified_training_completions": {
+    "pca-seed42": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/training-completion-pca-seed42.json",
+    "pca-seed43": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/training-completion-pca-seed43.json",
+    "svae-seed42": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/training-completion-svae-seed42.json",
+    "svae-seed43": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/training-completion-svae-seed43.json",
+    "wan-seed43": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/training-completion-wan-seed43.json",
+    "wan-seed42": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/training-completion-wan-seed42.json",
+    "pca-seed44": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/training-completion-pca-seed44.json",
+    "svae-seed44": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/training-completion-svae-seed44.json",
+    "wan-seed44": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/training-completion-wan-seed44.json"
+  },
+  "recovery": {
+    "plan": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/preflight-recovery-20260924T1348.json",
+    "supersedes_unexecuted": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/preflight-recovery-20260924T0315.json",
+    "executed": true,
+    "authorized_by": "User continue after the concrete three-job recovery request",
+    "approval": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/preflight-recovery-20260924T1348-approved.json",
+    "execution_archive": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/preflight-20260924T1348",
+    "status": "launched_once_no_automatic_retry",
+    "runs": [
+      "pca-seed44",
+      "svae-seed44",
+      "wan-seed44"
+    ],
+    "resource_slots": {
+      "svae-seed44": 3,
+      "pca-seed44": 5,
+      "wan-seed44": 6
+    },
+    "original_failures_retained": true
+  },
+  "last_selfcheck": {
+    "time": "2026-09-26T15:02:12.206772-05:00",
+    "trigger": "2026-09-26T15:00:01.570890-05:00",
+    "evidence": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/selfchecks/20260926T1500-local-evidence.json",
+    "meaningful_state_change": false,
+    "missed_checks_backfilled": false,
+    "public_retry_performed": false,
+    "publication_unchanged": "endtoend page v27 content; site v28 includes contribution ledger"
+  },
+  "completed_seed_pairing_checks": {
+    "43": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/paired-training-seed43.json",
+    "42": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/paired-training-seed42.json",
+    "44": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/paired-training-seed44.json"
+  },
+  "owned_gpu_workers": 0,
+  "original_pipeline_exit": {
+    "time": "2026-09-24T02:20:20.249820-05:00",
+    "returncode": 1
+  },
+  "seed44_pairing_prefix": {
+    "checked_at": "2026-09-24T21:42:25.641472-05:00",
+    "rows": 12000,
+    "sha256": "4482cb38104572da44bfffc725d936d4891b97135ad46203fe7c8ad847317714",
+    "initialization_equal": true,
+    "complete": true
+  },
+  "resource_wait": {
+    "plan": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/evaluation-resource-wait-20260924.json",
+    "directory": "/data02/zifanz4/openwam-experiments/endtoend-20260923/evaluation-resource-wait-20260924",
+    "status": "expired_original_dependency_deadline",
+    "controller_held": false,
+    "controller_pid": 1075445,
+    "controller_state": "exited",
+    "last_heartbeat": "2026-09-24T22:21:15.642347-05:00",
+    "deadline": "2026-09-25T19:11:52.028093-05:00",
+    "exit": {
+      "time": "2026-09-25T19:12:05.164949-05:00",
+      "returncode": 1,
+      "status": "original_dependency_deadline_reached",
+      "controller_resumed_if_alive": true,
+      "original_deadlines_unchanged": true
+    },
+    "frozen_scientific_sources_unchanged": true
+  },
+  "monitoring_schedule": {
+    "interval_hours": 3,
+    "cron": "0 */3 * * *",
+    "timezone": "America/Chicago",
+    "schedule_record": "/home/zifanz4/.local/state/openwam-selfcheck/schedule.json",
+    "delivery_note": "3-hour cron retained. Sep25 00:00 trigger was processed at19:35 after a direct continue; queued triggers do not prove timely reasoning."
+  },
+  "storage_maintenance": {
+    "record": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/cache-relocation-20260924.json",
+    "status": "completed",
+    "cache_files_preserved": 262,
+    "installed_environments_unchanged": true,
+    "available_gib": {
+      "/home": 1.9326171875,
+      "/data02": 156.916015625
+    }
+  },
+  "evaluation_recovery": {
+    "plan": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/evaluation-recovery-20260925.json",
+    "output": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925",
+    "started_at": "2026-09-25T19:46:45.337653-05:00",
+    "original_scientific_sources_unchanged": true,
+    "controller": {
+      "time": "2026-09-27T02:22:47.815236-05:00",
+      "stage": "independent_slot_admission_or_evaluation",
+      "terminal_slots": {
+        "1": {
+          "time": "2026-09-26T20:05:15.659156-05:00",
+          "returncode": 1,
+          "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+          "admitted": true,
+          "no_automatic_retry": true
+        },
+        "2": {
+          "time": "2026-09-27T02:22:42.231992-05:00",
+          "returncode": 1,
+          "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+          "admitted": true,
+          "no_automatic_retry": true
+        },
+        "3": {
+          "time": "2026-09-26T22:27:38.615718-05:00",
+          "returncode": 1,
+          "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+          "admitted": true,
+          "no_automatic_retry": true
+        },
+        "4": {
+          "time": "2026-09-26T20:02:50.210159-05:00",
+          "returncode": 1,
+          "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+          "admitted": true,
+          "no_automatic_retry": true
+        },
+        "5": {
+          "time": "2026-09-27T01:35:11.767381-05:00",
+          "returncode": 1,
+          "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+          "admitted": true,
+          "no_automatic_retry": true
+        },
+        "6": {
+          "time": "2026-09-26T19:32:45.229302-05:00",
+          "returncode": 1,
+          "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+          "admitted": true,
+          "no_automatic_retry": true
+        }
+      },
+      "evaluation_deadline": "2026-09-28T10:41:59.240315-05:00"
+    },
+    "exit": {
+      "time": "2026-09-27T02:22:47.846268-05:00",
+      "returncode": 1,
+      "reason": "AssertionError('Full matrix incomplete; all failures retained')"
+    },
+    "queues": {
+      "1": {
+        "started": {
+          "time": "2026-09-25T19:49:29.861809-05:00",
+          "pid": 2447502,
+          "uid": 2093,
+          "host": "cm009",
+          "start_ticks": "1117643798",
+          "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+          "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+        },
+        "progress": {
+          "time": "2026-09-26T19:16:28.328391-05:00",
+          "stage": "waiting_for_own_slot",
+          "row": [
+            "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85",
+            "00000000:21:00.0",
+            "1",
+            "0",
+            "0"
+          ],
+          "idle_samples": 3,
+          "deadline": "2026-09-28T10:41:59.240315-05:00"
+        },
+        "admitted": {
+          "time": "2026-09-26T19:16:28.464585-05:00",
+          "gpu": [
+            "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85",
+            "00000000:21:00.0",
+            "1",
+            "0",
+            "0"
+          ],
+          "timeout_seconds": 141930.775747
+        },
+        "exit": {
+          "time": "2026-09-26T20:05:15.659156-05:00",
+          "returncode": 1,
+          "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+          "admitted": true,
+          "no_automatic_retry": true
+        }
+      },
+      "2": {
+        "started": {
+          "time": "2026-09-25T19:49:30.075167-05:00",
+          "pid": 2447565,
+          "uid": 2093,
+          "host": "cm009",
+          "start_ticks": "1117643821",
+          "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+          "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+        },
+        "progress": {
+          "time": "2026-09-27T01:37:58.489525-05:00",
+          "stage": "waiting_for_own_slot",
+          "row": [
+            "GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e",
+            "00000000:41:00.0",
+            "1",
+            "0",
+            "0"
+          ],
+          "idle_samples": 3,
+          "deadline": "2026-09-28T10:41:59.240315-05:00"
+        },
+        "admitted": {
+          "time": "2026-09-27T01:37:58.644534-05:00",
+          "gpu": [
+            "GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e",
+            "00000000:41:00.0",
+            "1",
+            "0",
+            "0"
+          ],
+          "timeout_seconds": 119040.595805
+        },
+        "exit": {
+          "time": "2026-09-27T02:22:42.231992-05:00",
+          "returncode": 1,
+          "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+          "admitted": true,
+          "no_automatic_retry": true
+        }
+      },
+      "3": {
+        "started": {
+          "time": "2026-09-25T19:49:30.327129-05:00",
+          "pid": 2447628,
+          "uid": 2093,
+          "host": "cm009",
+          "start_ticks": "1117643846",
+          "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+          "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+        },
+        "progress": {
+          "time": "2026-09-26T21:31:51.292190-05:00",
+          "stage": "waiting_for_own_slot",
+          "row": [
+            "GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db",
+            "00000000:61:00.0",
+            "1",
+            "0",
+            "0"
+          ],
+          "idle_samples": 3,
+          "deadline": "2026-09-28T10:41:59.240315-05:00"
+        },
+        "admitted": {
+          "time": "2026-09-26T21:31:51.486808-05:00",
+          "gpu": [
+            "GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db",
+            "00000000:61:00.0",
+            "1",
+            "0",
+            "0"
+          ],
+          "timeout_seconds": 133807.753535
+        },
+        "exit": {
+          "time": "2026-09-26T22:27:38.615718-05:00",
+          "returncode": 1,
+          "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+          "admitted": true,
+          "no_automatic_retry": true
+        }
+      },
+      "4": {
+        "started": {
+          "time": "2026-09-25T19:49:30.569000-05:00",
+          "pid": 2447691,
+          "uid": 2093,
+          "host": "cm009",
+          "start_ticks": "1117643869",
+          "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+          "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+        },
+        "progress": {
+          "time": "2026-09-26T19:08:55.372429-05:00",
+          "stage": "waiting_for_own_slot",
+          "row": [
+            "GPU-33861458-0994-99a7-7457-6fceb49c229c",
+            "00000000:81:00.0",
+            "1",
+            "0",
+            "0"
+          ],
+          "idle_samples": 3,
+          "deadline": "2026-09-28T10:41:59.240315-05:00"
+        },
+        "admitted": {
+          "time": "2026-09-26T19:08:55.515447-05:00",
+          "gpu": [
+            "GPU-33861458-0994-99a7-7457-6fceb49c229c",
+            "00000000:81:00.0",
+            "1",
+            "0",
+            "0"
+          ],
+          "timeout_seconds": 142383.724897
+        },
+        "exit": {
+          "time": "2026-09-26T20:02:50.210159-05:00",
+          "returncode": 1,
+          "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+          "admitted": true,
+          "no_automatic_retry": true
+        }
+      },
+      "5": {
+        "started": {
+          "time": "2026-09-25T19:49:30.759333-05:00",
+          "pid": 2447754,
+          "uid": 2093,
+          "host": "cm009",
+          "start_ticks": "1117643889",
+          "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+          "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+        },
+        "progress": {
+          "time": "2026-09-27T00:42:35.152461-05:00",
+          "stage": "waiting_for_own_slot",
+          "row": [
+            "GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3",
+            "00000000:A1:00.0",
+            "1",
+            "0",
+            "0"
+          ],
+          "idle_samples": 3,
+          "deadline": "2026-09-28T10:41:59.240315-05:00"
+        },
+        "admitted": {
+          "time": "2026-09-27T00:42:35.312027-05:00",
+          "gpu": [
+            "GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3",
+            "00000000:A1:00.0",
+            "1",
+            "0",
+            "0"
+          ],
+          "timeout_seconds": 122363.928308
+        },
+        "exit": {
+          "time": "2026-09-27T01:35:11.767381-05:00",
+          "returncode": 1,
+          "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+          "admitted": true,
+          "no_automatic_retry": true
+        }
+      },
+      "6": {
+        "started": {
+          "time": "2026-09-25T19:49:30.979285-05:00",
+          "pid": 2447818,
+          "uid": 2093,
+          "host": "cm009",
+          "start_ticks": "1117643911",
+          "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+          "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+        },
+        "progress": {
+          "time": "2026-09-26T18:22:36.052998-05:00",
+          "stage": "waiting_for_own_slot",
+          "row": [
+            "GPU-f341a0af-5cd4-9d17-e701-31f4530522ae",
+            "00000000:C1:00.0",
+            "1",
+            "0",
+            "0"
+          ],
+          "idle_samples": 3,
+          "deadline": "2026-09-28T10:41:59.240315-05:00"
+        },
+        "admitted": {
+          "time": "2026-09-26T18:22:36.193273-05:00",
+          "gpu": [
+            "GPU-f341a0af-5cd4-9d17-e701-31f4530522ae",
+            "00000000:C1:00.0",
+            "1",
+            "0",
+            "0"
+          ],
+          "timeout_seconds": 145163.047057
+        },
+        "exit": {
+          "time": "2026-09-26T19:32:45.229302-05:00",
+          "returncode": 1,
+          "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+          "admitted": true,
+          "no_automatic_retry": true
+        }
+      }
+    },
+    "gate_passed": true,
+    "cohort_integrity_passed": true,
+    "complete_rollouts": 270,
+    "technical_failures": 6,
+    "diagnostic_predictions": 0,
+    "stage_deadline": "2026-09-28T13:41:59.240315-05:00",
+    "evaluation_deadline": "2026-09-28T10:41:59.240315-05:00",
+    "remaining_evaluation_hours_at_selfcheck": 43.67588898388889
+  }
+}

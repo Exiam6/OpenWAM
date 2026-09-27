@@ -1,0 +1,47 @@
+{
+  "time": "2026-09-27T00:10:16.705845-05:00",
+  "status": "succeeded",
+  "version": {
+    "id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3~appgver_3622e345fd208191a6a982462c612a10",
+    "project_id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3",
+    "version_number": 32,
+    "source": {
+      "commit_sha": "fed1f46213703c5a218d60780839e33cad935820"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_00000000dff481f9be2d6e490fc7d200",
+      "content_hash": "sha256:d01791785f3a25da9ed27dcfaf087296f65c1b76369b0a574ae1218a7efb5442",
+      "size_bytes": 62597120,
+      "file_count": 654
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6ab8a50fb86c8191831da3ebc09001ea",
+    "project_id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3",
+    "title": "Embodied Research Notebook",
+    "version_id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3~appgver_3622e345fd208191a6a982462c612a10",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://embodied-research-notebook.exiamzifan.chatgpt.site",
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6ab06a7c072481919a12cc100f8e9fa3",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-09-27T05:09:41.626463+00:00"
+  },
+  "source_commit": "fed1f46213703c5a218d60780839e33cad935820",
+  "url": "https://embodied-research-notebook.exiamzifan.chatgpt.site",
+  "snapshot": "2026-09-27T00:07:29-05:00",
+  "recovery_update_20260927": {
+    "checked_at": "2026-09-27T17:16:36.665Z",
+    "status": "succeeded",
+    "url": "https://embodied-research-notebook.exiamzifan.chatgpt.site",
+    "version_number": 33,
+    "version_id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3~appgver_bf49d24e94d881919e016d581588aa0f",
+    "deployment_id": "appgdep_6ab94f51a958819186a46e2cb0e83731",
+    "source_commit": "d96126ab1b04ddb8356a79a32c5c376c174ee237"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "frozen_at": "2026-09-22T23:46:26.432926-05:00",
+  "study": "Matched Wan pixel-VAE baseline against previously cached DINO representations",
+  "scope": "Exploratory follow-up on exposed old layer-study60; NOT independent confirmation, full RAE reproduction or policy evaluation",
+  "deadline": "2026-09-23T01:15:12-05:00",
+  "max_wall_seconds": 1200,
+  "gpu_count": 1,
+  "threads": 4,
+  "new_cache_limit_bytes": 100000000,
+  "tasks": [
+    "adjust_bottle",
+    "handover_block",
+    "place_object_basket"
+  ],
+  "train": "all105 original training episodes,12 fixed existing current frames per episode; goal only frame0",
+  "evaluation": "all60 completed layer-study episodes seeds600000/601000/602000 blocks,12 fixed current frames; goal only frame0; old incomplete goalaux56 excluded",
+  "representations": [
+    "Wan48_native_scale",
+    "Wan48_per_token_layernorm",
+    "cached_L12_DINO_raw768",
+    "cached_L12_DINO_PCA48",
+    "cached_L12_DINO_SVAE48_seeds42_43_44_mean_errors"
+  ],
+  "norm_selection": "Report both Wan normalizations in full; no selecting a winner post-hoc. Per-token LN follows original readout eps1e-6; native preserves official Wan scale. All readouts train-standardized separately.",
+  "pool": "current latent only, spatial adaptive2x2 average; Wan/PCA/SVAE192D; raw DINO3072D. State models append identical existing proprioception. Equal dimension comparisons and native-width comparisons reported separately; ridge capacity differs despite fixed algorithm.",
+  "conditions": [
+    "clean",
+    "noise0.10",
+    "noise0.04"
+  ],
+  "noise": "same existing PCG64 formula seed20260922+episode_seed*100000+frame*10+draw; draws0,1,2; sigma pixel255; clip[0,255], uint8 AFTER PIL bilinear320x384; preserve originalcv2 channel convention",
+  "fit": "only new Wan readouts: task-specific ridge, same training-episode5fold seed20260922, alpha[1e-4,.01,1,100], same input/output train scales and input/sqrt(dim). Short-state translation6 and gripper2 separately selected; visual initial-goal XY separate. No hyperparameter search beyond original fixed grid, no DINO refits.",
+  "endpoints": [
+    "short-horizon state: mean of episode translation NMSE and gripper NMSE, same frozen training scales",
+    "initial-image expert first-gripper-downcrossing XY waypoint NMSE; not physical contact/object pose"
+  ],
+  "statistics": "all3tasks equal weight, all20episodes/task;3noise copies within episode averaged;3SVAE seeds averaged errors per episode;2000 paired task-stratified episode bootstraps seed20260922; descriptive95% intervals, no confirmatory significance claim",
+  "report": "all5representation routes, bothendpoints, all3conditions and task breakdown; relative DINO-minus-Wan errors for BOTH Wan norms; no success gate or selective endpoint",
+  "staging": "training image hashes match existing manifest; eval hashes and labels from old audited artifacts; no collection, no old model inference/evaluation replay",
+  "dependency": "interface preflight passed with zero causal/cache mismatch; official pinned checkpoint in interface-protocol; code/input hash freeze before GPU execution",
+  "pause_and_resource": "same original deadline, idleECCcleanGPUonly, cooperative lock, abort on pause before launch; no interruption of others",
+  "reference_hashes": {
+    "readout/manifest.json": "f31f5bffc3841327b5b3a02fc73f74afad1ffe0a86e7024ff8a6740f349e8a79",
+    "confirmation/sample-manifest.json": "bff7691a011614878475d802a289b0cc442f3ed437c4513b577b917ccecde358",
+    "confirmation/summary.json": "2e11cef5a09f7f924d9fd8717b676d4579f077b5a0907a0f6140e272782ac609",
+    "initial-goal/fresh-summary.json": "79de81242487cc19d66a76c296e39e379c67ccb67d16f8c23fb2cf20825d128a",
+    "initial-goal/training-samples.json": "222ca03a38cddc62808c061acad294292db1cb89f2105faae2b5524b9696c62b",
+    "initial-goal/fresh-labels.json": "057f855ef7397e2bc1b39cdc2aa379526fd2fbe962263742e8e87fca167ce48c"
+  }
+}

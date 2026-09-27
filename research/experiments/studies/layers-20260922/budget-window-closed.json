@@ -1,0 +1,59 @@
+{
+  "recorded_at": "2026-09-23T01:19:04.719517-05:00",
+  "window_ended_at": "2026-09-23T01:15:12-05:00",
+  "started_at": "2026-09-22T13:15:12-05:00",
+  "status": "budget_window_closed_with_mixed_outcomes",
+  "deadline_extended": false,
+  "last_experiment_finished_at": "2026-09-23T00:24:31.313997-05:00",
+  "all_current_owned_study_workers_stopped": true,
+  "paused_markers_found": false,
+  "after_deadline_actions": "terminal file/process/resource verification, local archival and report publication lookup only; no experiments",
+  "outcomes": {
+    "layer_primary": "completed60scene confirmation; K4SVAE vs L12SVAE noisy state error+45.675percent; acceptance failed",
+    "layer_secondary": "goal error-36.265percent on same60; secondary tradeoff, not new independent confirmation",
+    "goalaux": "56/60accepted (20/20/16); originaldeadline expired; parent/scorerexit1, lastworker124; unscored; no confirmationv3",
+    "matched_Wan_baseline": "completedexit0;18newfits, bothnorms/allconditions audited",
+    "equal_noise_goal": "completedexit0;21newfits/63predictions audited; compactDINO advantage survives adaptation, cleanWan regression retained",
+    "equal_noise_state": "completedexit0;42groupfits/63predictions audited; PCA48stateEvsnativeWan -43.88percent, exposed60; rawDINOgripper+63.91percent; compactgripper benefit uncertain",
+    "full_RAE": "not reproduced: no trained pixel decoder in frozenDINOpath",
+    "closed_loop_gain": "not established; no encoder default change"
+  },
+  "resources": {
+    "cm001_owned_gpu_processes": [],
+    "glacier_owned_study_processes": [],
+    "glacier_previous_gpu": {
+      "uuid": "GPU-d13929da-086d-1be5-6414-dbf6aeded08e",
+      "memory_MiB": 9477,
+      "utilization_percent": 40,
+      "uncorrected_volatile_ECC": 0,
+      "other_user_compute_pid": 4184055,
+      "owner_verified_on_prior_check": "kagaram2",
+      "interference": false,
+      "ownership_verification_source": "Previous01:00selfcheck: separate ps call verified owner; same PID observed at deadline closure."
+    },
+    "cm002_owned_study_processes": []
+  },
+  "goalaux_terminal_recheck": {
+    "checked_at": "2026-09-23T01:17:01.151019-05:00",
+    "accepted_counts": {
+      "adjust_bottle": 20,
+      "handover_block": 20,
+      "place_object_basket": 16
+    },
+    "progress_attempt_rows": 70,
+    "last_candidate": 802024,
+    "last_worker_exit": 124,
+    "collector_exit": 1,
+    "scorer_exit": 1,
+    "confirmation_v3_exists": false
+  },
+  "publication": {
+    "checked_at": "2026-09-23T01:17:01-05:00",
+    "project_id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3",
+    "status": "blocked",
+    "error": "SitesConnectorError: Sites project not found",
+    "deployed": false,
+    "new_site_created": false
+  },
+  "next_step": "The original12hour window ended2026-09-23T01:15:12-05:00. No new experiment, training, collection, inference, confirmation scoring or automatic budget extension is authorized by later timer messages. Preserve completed and negative results, keep expiredgoalaux56/60 unscored, and do not repeatold80. The next scientific uncertainty is whether compact-feature goal/translation gains and gripper tradeoffs reproduce on new scenes. The prepared independent60scene draft estimates about3hours with one idle ECC-cleanGPU and requires a separately fixed, newly authorized experiment budget before implementation/launch. FullRAE decoder/world-action training and policy gains remain untested. Subsequent selfchecks should reconcile terminal state quietly unless a material change occurs."
+}

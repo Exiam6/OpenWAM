@@ -1,0 +1,26 @@
+{
+  "time": "2026-09-24T02:38:23.703709-05:00",
+  "read_only": true,
+  "passed": true,
+  "idle_checks": [
+    {
+      "time": "2026-09-24T02:38:18.607777-05:00",
+      "gpu_rows": "4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 1, 0, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 1, 0, 0\n",
+      "compute_uuids": "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85\nGPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e\nGPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db\nGPU-f341a0af-5cd4-9d17-e701-31f4530522ae\nGPU-eaa5f86a-162d-657b-c1ae-6e67e986253e\n"
+    },
+    {
+      "time": "2026-09-24T02:38:21.175960-05:00",
+      "gpu_rows": "4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 1, 0, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 1, 0, 0\n",
+      "compute_uuids": "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85\nGPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e\nGPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db\nGPU-f341a0af-5cd4-9d17-e701-31f4530522ae\nGPU-eaa5f86a-162d-657b-c1ae-6e67e986253e\n"
+    },
+    {
+      "time": "2026-09-24T02:38:23.703667-05:00",
+      "gpu_rows": "4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 1, 0, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 1, 0, 0\n",
+      "compute_uuids": "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85\nGPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e\nGPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db\nGPU-f341a0af-5cd4-9d17-e701-31f4530522ae\nGPU-eaa5f86a-162d-657b-c1ae-6e67e986253e\n"
+    }
+  ],
+  "runs": [
+    "pca-seed44",
+    "svae-seed44"
+  ]
+}

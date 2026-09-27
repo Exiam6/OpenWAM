@@ -1,0 +1,8 @@
+{
+  "time": "2026-09-27T12:22:11.765993-05:00",
+  "passed": true,
+  "frozen_files": 639,
+  "cpu_runtime_import": "/data01/zifanz4/openwam-experiments/temporal-recovery-20260927/OpenWAM/openwam/deploy/engine.py",
+  "original_sources_unchanged": true,
+  "launches": 0
+}

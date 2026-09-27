@@ -1,0 +1,416 @@
+{
+  "time": "2026-09-26T00:01:30.258147-05:00",
+  "controller": {
+    "started": {
+      "time": "2026-09-25T19:46:45.337653-05:00",
+      "pid": 1930714,
+      "uid": 2093,
+      "host": "cm001",
+      "start_ticks": "2628863133",
+      "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+      "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+    },
+    "progress": {
+      "time": "2026-09-26T00:01:27.328082-05:00",
+      "stage": "independent_slot_admission_or_evaluation",
+      "terminal_slots": {},
+      "evaluation_deadline": "2026-09-28T10:41:59.240315-05:00"
+    },
+    "exit": null
+  },
+  "queues": {
+    "1": {
+      "started": {
+        "time": "2026-09-25T19:49:29.861809-05:00",
+        "pid": 2447502,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643798",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-26T00:01:16.889983-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85",
+          "00000000:21:00.0",
+          "25971",
+          "75",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null,
+      "log_tail": ""
+    },
+    "2": {
+      "started": {
+        "time": "2026-09-25T19:49:30.075167-05:00",
+        "pid": 2447565,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643821",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-26T00:01:16.858949-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e",
+          "00000000:41:00.0",
+          "26641",
+          "74",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null,
+      "log_tail": ""
+    },
+    "3": {
+      "started": {
+        "time": "2026-09-25T19:49:30.327129-05:00",
+        "pid": 2447628,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643846",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-26T00:01:16.890873-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db",
+          "00000000:61:00.0",
+          "25755",
+          "77",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null,
+      "log_tail": ""
+    },
+    "4": {
+      "started": {
+        "time": "2026-09-25T19:49:30.569000-05:00",
+        "pid": 2447691,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643869",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-26T00:01:16.891158-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-33861458-0994-99a7-7457-6fceb49c229c",
+          "00000000:81:00.0",
+          "11787",
+          "58",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null,
+      "log_tail": ""
+    },
+    "5": {
+      "started": {
+        "time": "2026-09-25T19:49:30.759333-05:00",
+        "pid": 2447754,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643889",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-26T00:01:16.885070-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3",
+          "00000000:A1:00.0",
+          "26415",
+          "100",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null,
+      "log_tail": ""
+    },
+    "6": {
+      "started": {
+        "time": "2026-09-25T19:49:30.979285-05:00",
+        "pid": 2447818,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643911",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-26T00:01:16.877970-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-f341a0af-5cd4-9d17-e701-31f4530522ae",
+          "00000000:C1:00.0",
+          "23823",
+          "56",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null,
+      "log_tail": ""
+    }
+  },
+  "results": [],
+  "evaluation_groups": {},
+  "diagnostics": {},
+  "training": {
+    "wan-seed43": {
+      "exit": {
+        "time": "2026-09-24T02:51:13.836803-05:00",
+        "returncode": 0
+      },
+      "checkpoint_files": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/checkpoint_step_12000.safetensors",
+          "bytes": 13361411736,
+          "mtime": 1790236252.4267924
+        }
+      ]
+    },
+    "pca-seed42": {
+      "exit": {
+        "time": "2026-09-24T02:19:59.258742-05:00",
+        "returncode": 0
+      },
+      "checkpoint_files": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_12000.safetensors",
+          "bytes": 12123507288,
+          "mtime": 1790234379.375979
+        }
+      ]
+    },
+    "svae-seed42": {
+      "exit": {
+        "time": "2026-09-24T02:23:39.720465-05:00",
+        "returncode": 0
+      },
+      "checkpoint_files": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_12000.safetensors",
+          "bytes": 12189767400,
+          "mtime": 1790234595.7283013
+        }
+      ]
+    },
+    "wan-seed42": {
+      "exit": {
+        "time": "2026-09-24T03:09:02.445341-05:00",
+        "returncode": 0
+      },
+      "checkpoint_files": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/checkpoint_step_12000.safetensors",
+          "bytes": 13361411736,
+          "mtime": 1790237323.2843995
+        }
+      ]
+    },
+    "svae-seed43": {
+      "exit": {
+        "time": "2026-09-24T02:16:27.723352-05:00",
+        "returncode": 0
+      },
+      "checkpoint_files": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_12000.safetensors",
+          "bytes": 12189767400,
+          "mtime": 1790234168.6916647
+        }
+      ]
+    },
+    "svae-seed44": {
+      "exit": {
+        "time": "2026-09-24T21:09:10.637020-05:00",
+        "returncode": 0
+      },
+      "checkpoint_files": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed44/output/2026-09-24_13-51-17/checkpoint_step_12000.safetensors",
+          "bytes": 12189767400,
+          "mtime": 1790302132.403568
+        }
+      ]
+    },
+    "pca-seed43": {
+      "exit": {
+        "time": "2026-09-24T02:23:54.989991-05:00",
+        "returncode": 0
+      },
+      "checkpoint_files": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_12000.safetensors",
+          "bytes": 12123507288,
+          "mtime": 1790234614.5043292
+        }
+      ]
+    },
+    "pca-seed44": {
+      "exit": {
+        "time": "2026-09-24T21:11:26.411245-05:00",
+        "returncode": 0
+      },
+      "checkpoint_files": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/checkpoint_step_12000.safetensors",
+          "bytes": 12123507288,
+          "mtime": 1790302266.0477722
+        }
+      ]
+    },
+    "wan-seed44": {
+      "exit": {
+        "time": "2026-09-24T21:41:40.015348-05:00",
+        "returncode": 0
+      },
+      "checkpoint_files": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed44/output/2026-09-24_13-51-20/checkpoint_step_12000.safetensors",
+          "bytes": 13361411736,
+          "mtime": 1790304077.3864744
+        }
+      ]
+    }
+  },
+  "frozen_files_match": {
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_common.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/run_simulation_preflight.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/simulation_preflight.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/serve_policy.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluate_policy.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/verify_fresh_cohort.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_controller.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_queue.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/action_diagnostics.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/analyze_closed_loop.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/audit_closed_loop.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/summarize_diagnostics.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/update_status.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/dinov3_pca.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/__init__.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/deploy/server.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/openwam2robotwin_interface.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/protocol.json": true,
+    "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/EVALUATION_IMPLEMENTATION.md": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py": true,
+    "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/evaluation-recovery-20260925.json": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed44/output/2026-09-24_13-51-17/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed44/output/2026-09-24_13-51-17/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed44/output/2026-09-24_13-51-20/config.yaml": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed44/output/2026-09-24_13-51-20/normalization_stats.npy": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/manifest.json": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/manifest.json": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/manifest.json": true
+  },
+  "disk_gib": {
+    "/home": 0.2236328125,
+    "/data02": 144.14453125
+  },
+  "local_controller_identity_matches": true,
+  "controller_log_tail": "",
+  "remote_resource_and_process_check": {
+    "time": "2026-09-26T00:01:30.777015-05:00",
+    "gpu": "0, GPU-c7d96da5-a1ae-e1ed-de5d-03f35e550da2, 1, 0, 2\n1, GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 25971, 99, 0\n2, GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 26641, 100, 0\n3, GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 25755, 99, 0\n4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 11787, 53, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 26415, 68, 0\n6, GPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 23823, 67, 0\n7, GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 24495, 67, 0\n",
+    "apps": "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 2421367, 25964\nGPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 2437330, 26634\nGPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 2427495, 25736\nGPU-33861458-0994-99a7-7457-6fceb49c229c, 2077942, 11747\nGPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 2442870, 26408\nGPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 2417675, 23816\nGPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 2430315, 24488\n",
+    "queues": {
+      "1": {
+        "alive": true,
+        "start_ticks_match": true,
+        "uid_match": true,
+        "command": "python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 1 "
+      },
+      "2": {
+        "alive": true,
+        "start_ticks_match": true,
+        "uid_match": true,
+        "command": "python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 2 "
+      },
+      "3": {
+        "alive": true,
+        "start_ticks_match": true,
+        "uid_match": true,
+        "command": "python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 3 "
+      },
+      "4": {
+        "alive": true,
+        "start_ticks_match": true,
+        "uid_match": true,
+        "command": "python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 4 "
+      },
+      "5": {
+        "alive": true,
+        "start_ticks_match": true,
+        "uid_match": true,
+        "command": "python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 5 "
+      },
+      "6": {
+        "alive": true,
+        "start_ticks_match": true,
+        "uid_match": true,
+        "command": "python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 6 "
+      }
+    },
+    "owners": [
+      "kagaram2 2421367    06:02:39 python",
+      "kagaram2 2437330    05:10:32 python",
+      "kagaram2 2427495    05:42:37 python",
+      "bhavyaa2 2077942  1-11:20:26 python3",
+      "kagaram2 2442870    04:51:29 python",
+      "kagaram2 2417675    06:11:42 python",
+      "kagaram2 2430315    05:34:34 python"
+    ]
+  },
+  "trigger_time": "2026-09-25T21:00:01.928058-05:00",
+  "actual_processing_began": "2026-09-26T00:00:38.890231-05:00",
+  "missed_checks_backfilled": false,
+  "meaningful_state_change": false,
+  "decision": "Keep existing six finite independent queues under their original absolute deadline; no new job, replay, schedule, signal or protocol change.",
+  "next_uncertainty": "Whether paired native closed-loop success supports PCA robustness versus S-VAE without clean regression; training and offline probes cannot resolve this."
+}

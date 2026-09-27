@@ -1,0 +1,1050 @@
+{
+  "task": "adjust_bottle",
+  "accepted": [
+    {
+      "task": "adjust_bottle",
+      "seed": 900000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:52:31.045026-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 147,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900000/data/episode0.hdf5",
+      "hdf5_sha256": "87eabfd02128f547e998f72dabe828e20a598eb22b2ffb60d10c280e06722cf1",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 59.62156716734171,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:53:32.014020-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900001/data/episode0.hdf5",
+      "hdf5_sha256": "1e1a8e847984ef9aeec7ca7b5f2e2a4401ef8ab92202cb6acdd618a9312b8ab8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 56.45867255888879,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:54:29.828759-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 154,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900002/data/episode0.hdf5",
+      "hdf5_sha256": "b451231ed51931acb3ac44ab1674e747f489a875237c5eafbc14204a9962a101",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 55.366347808390856,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:55:26.670429-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 147,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900003/data/episode0.hdf5",
+      "hdf5_sha256": "32aba148b0a45ac86b17880de6f82c738fd93217974b07f26541cf33cd34f05b",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 53.67984440177679,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900004,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:56:22.091476-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 147,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900004/data/episode0.hdf5",
+      "hdf5_sha256": "6f6f27e7ac7ccd63f318302ac039e77c51156a6bc06bdbd9121b1a0849d6b731",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 54.74409671314061,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900005,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:57:18.591376-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 192,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900005/data/episode0.hdf5",
+      "hdf5_sha256": "61bf011c78775f6c16b1022b3d4aaa03f0cc0b2da3f93719fb9466a498b6fb5c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 58.38691687211394,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900006,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:58:18.474722-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 150,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900006/data/episode0.hdf5",
+      "hdf5_sha256": "7424c82a55232512b461e143eb738087e03fc0cf31d6a12564d63d005ecdd69c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 56.263998879119754,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900007,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:59:16.182562-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 138,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900007/data/episode0.hdf5",
+      "hdf5_sha256": "b01459bdc2b48ac1a22f3cd09184cae7ea85d3beabeaa076f044143c6203e954",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 55.891833083704114,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900008,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:00:13.845668-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900008/data/episode0.hdf5",
+      "hdf5_sha256": "d2471d264f8dfd089e8f7dbad70517fbb51633a210f07375d1ff44d3a781c75e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 58.85431611537933,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900009,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:01:14.127088-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 143,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900009/data/episode0.hdf5",
+      "hdf5_sha256": "3ea26b38fd50746684630b16d2ffd8d18c37cedcbf5a9135eab09c64f9618d3c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 57.493381068110466,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900010,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:02:13.098467-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 138,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900010/data/episode0.hdf5",
+      "hdf5_sha256": "7f551010781e00b9c992fee9ee1bda1dcd29670e8362a2d2e3878991c93bab36",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 54.47310983389616,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900011,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:03:09.034999-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900011/data/episode0.hdf5",
+      "hdf5_sha256": "473d148e0a6896b963c5726310f7fac36c101d60313eb73954d73be950c84706",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 54.69797298312187,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900012,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:04:06.209626-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900012/data/episode0.hdf5",
+      "hdf5_sha256": "87d8885761dcb9b904cf8ee19e9248ecc3e9d76627f32bf452d8c4c2049f2669",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 55.285626919940114,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900013,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:05:02.779675-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 138,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900013/data/episode0.hdf5",
+      "hdf5_sha256": "64e2158686e9a9ee9c44f60bf12dafe93046a7f323375a36453d48dd3a60f043",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 57.82917311228812,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900014,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:06:02.126353-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 138,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900014/data/episode0.hdf5",
+      "hdf5_sha256": "1bbc6d968b59271f30ee9435d5babe6913cc8045e5f14c790efe6c387d4d3025",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 54.74940691143274,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900015,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:06:58.342066-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 161,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900015/data/episode0.hdf5",
+      "hdf5_sha256": "f02a8ea947c28d55641554ef63501ff432d3a40aea8297172b68c1f1e0002d95",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 56.35771840810776,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900016,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:07:56.281742-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 152,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900016/data/episode0.hdf5",
+      "hdf5_sha256": "6a28f86b897291df4486257addea9e4d2c57e774fa58a1d53d0f3bd4fc03b445",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 56.35456776432693,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900017,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:08:54.413563-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 143,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900017/data/episode0.hdf5",
+      "hdf5_sha256": "b8e87f88d918dbb66f30dcd775d11292ba812255225a166178752615cf0ae103",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 53.58161197975278,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900018,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:09:49.485719-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900018/data/episode0.hdf5",
+      "hdf5_sha256": "c76a78ff7be71e5f20630f03ab807268af662ffb14f9f0e39cefe9d90468629c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 55.8172195404768,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900019,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:10:46.762532-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 147,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900019/data/episode0.hdf5",
+      "hdf5_sha256": "a0a2c20ecdeed9679710affa05242b5b03b8e701162f4f5017f1c86ab97cfdd9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 56.178755639120936,
+      "exit_code": 0
+    }
+  ],
+  "attempts": [
+    {
+      "task": "adjust_bottle",
+      "seed": 900000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:52:31.045026-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 147,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900000/data/episode0.hdf5",
+      "hdf5_sha256": "87eabfd02128f547e998f72dabe828e20a598eb22b2ffb60d10c280e06722cf1",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 59.62156716734171,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:53:32.014020-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900001/data/episode0.hdf5",
+      "hdf5_sha256": "1e1a8e847984ef9aeec7ca7b5f2e2a4401ef8ab92202cb6acdd618a9312b8ab8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 56.45867255888879,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:54:29.828759-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 154,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900002/data/episode0.hdf5",
+      "hdf5_sha256": "b451231ed51931acb3ac44ab1674e747f489a875237c5eafbc14204a9962a101",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 55.366347808390856,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:55:26.670429-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 147,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900003/data/episode0.hdf5",
+      "hdf5_sha256": "32aba148b0a45ac86b17880de6f82c738fd93217974b07f26541cf33cd34f05b",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 53.67984440177679,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900004,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:56:22.091476-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 147,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900004/data/episode0.hdf5",
+      "hdf5_sha256": "6f6f27e7ac7ccd63f318302ac039e77c51156a6bc06bdbd9121b1a0849d6b731",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 54.74409671314061,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900005,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:57:18.591376-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 192,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900005/data/episode0.hdf5",
+      "hdf5_sha256": "61bf011c78775f6c16b1022b3d4aaa03f0cc0b2da3f93719fb9466a498b6fb5c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 58.38691687211394,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900006,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:58:18.474722-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 150,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900006/data/episode0.hdf5",
+      "hdf5_sha256": "7424c82a55232512b461e143eb738087e03fc0cf31d6a12564d63d005ecdd69c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 56.263998879119754,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900007,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:59:16.182562-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 138,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900007/data/episode0.hdf5",
+      "hdf5_sha256": "b01459bdc2b48ac1a22f3cd09184cae7ea85d3beabeaa076f044143c6203e954",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 55.891833083704114,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900008,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:00:13.845668-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900008/data/episode0.hdf5",
+      "hdf5_sha256": "d2471d264f8dfd089e8f7dbad70517fbb51633a210f07375d1ff44d3a781c75e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 58.85431611537933,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900009,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:01:14.127088-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 143,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900009/data/episode0.hdf5",
+      "hdf5_sha256": "3ea26b38fd50746684630b16d2ffd8d18c37cedcbf5a9135eab09c64f9618d3c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 57.493381068110466,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900010,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:02:13.098467-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 138,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900010/data/episode0.hdf5",
+      "hdf5_sha256": "7f551010781e00b9c992fee9ee1bda1dcd29670e8362a2d2e3878991c93bab36",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 54.47310983389616,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900011,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:03:09.034999-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900011/data/episode0.hdf5",
+      "hdf5_sha256": "473d148e0a6896b963c5726310f7fac36c101d60313eb73954d73be950c84706",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 54.69797298312187,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900012,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:04:06.209626-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900012/data/episode0.hdf5",
+      "hdf5_sha256": "87d8885761dcb9b904cf8ee19e9248ecc3e9d76627f32bf452d8c4c2049f2669",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 55.285626919940114,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900013,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:05:02.779675-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 138,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900013/data/episode0.hdf5",
+      "hdf5_sha256": "64e2158686e9a9ee9c44f60bf12dafe93046a7f323375a36453d48dd3a60f043",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 57.82917311228812,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900014,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:06:02.126353-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 138,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900014/data/episode0.hdf5",
+      "hdf5_sha256": "1bbc6d968b59271f30ee9435d5babe6913cc8045e5f14c790efe6c387d4d3025",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 54.74940691143274,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900015,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:06:58.342066-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 161,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900015/data/episode0.hdf5",
+      "hdf5_sha256": "f02a8ea947c28d55641554ef63501ff432d3a40aea8297172b68c1f1e0002d95",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 56.35771840810776,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900016,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:07:56.281742-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 152,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900016/data/episode0.hdf5",
+      "hdf5_sha256": "6a28f86b897291df4486257addea9e4d2c57e774fa58a1d53d0f3bd4fc03b445",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 56.35456776432693,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900017,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:08:54.413563-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 143,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900017/data/episode0.hdf5",
+      "hdf5_sha256": "b8e87f88d918dbb66f30dcd775d11292ba812255225a166178752615cf0ae103",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 53.58161197975278,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900018,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:09:49.485719-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900018/data/episode0.hdf5",
+      "hdf5_sha256": "c76a78ff7be71e5f20630f03ab807268af662ffb14f9f0e39cefe9d90468629c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 55.8172195404768,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900019,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:10:46.762532-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 147,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900019/data/episode0.hdf5",
+      "hdf5_sha256": "a0a2c20ecdeed9679710affa05242b5b03b8e701162f4f5017f1c86ab97cfdd9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 56.178755639120936,
+      "exit_code": 0
+    }
+  ],
+  "complete": true,
+  "completed_at": "2026-09-23T12:11:44.501554-05:00",
+  "collection_deadline": "2026-09-23T14:38:51.767900-05:00"
+}

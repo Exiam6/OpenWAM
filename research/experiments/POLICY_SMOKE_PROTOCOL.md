@@ -1,0 +1,11 @@
+# Published policy integration smoke — 2026-09-21
+
+Purpose: establish that the released DINO/S-VAE Study policy can receive real RoboTwin observations, output its 20D EEF actions, and execute through the official evaluation adapter. The newly trained per-task compressors are NOT substituted, because their latent coordinates are not matched to the released action/world model.
+
+Phase 1 completed: two observations (frames 0 and 62) from a TRAIN split pick_dual_bottles demonstration, independent policy reset between observations. Finite 20D outputs, conversion to 16D execution format, normalized output quaternions. No executed actions. Peak PyTorch allocated 23.916 GB. These two observations do not measure latency distribution or success rate.
+
+Phase 2 fixed before any rollout: 5 clean-mode pick_dual_bottles episodes, official seed0 entry point and expert feasibility filtering, official unseen instruction templates, original task step limit, no planner fallback, unchanged published policy/checkpoint. Ten synchronous denoising steps, DiT cache on (threshold .99, max skips3), compile off. Compile differs from the official benchmark protocol; five episodes are a setup smoke test, not a paper reproduction or a test of the auxiliary-loss change. All attempted setup errors and final episodes retained. Cap client process at 30 minutes. If the environment cannot execute, report the exact blocker; do not fabricate a success rate or silently enable planner fallback.
+
+Runtime: policy-env (torch2.7/cu126) and benchmark-env (torch2.4.1/cu124) are separate. RoboTwin commit0aeea2d669c0f8516f4d5785f0aa33ba812c14b4; cuRobo0.7.8, SAPIEN3.0.0b1, mplib.2.1, warp1.13.0. Two dependency edits match RoboTwin script/_install.sh exactly. Setuptools78.1.0 retained because SAPIEN imports pkg_resources. RGB-only; optional point-cloud sampling package pytorch3d omitted. Clean mode does not use randomized background assets.
+
+Bind the policy server to localhost only, port18848. Both processes use the same previously idle GPU2; SAPIEN default renderer was verified to resolve to the selected CUDA device, and rendered a finite 64x64x4 image. Shutdown the server started by this launcher after the client exits. Preserve existing jobs and logs.

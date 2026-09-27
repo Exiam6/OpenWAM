@@ -1,0 +1,21 @@
+{
+  "seed": 44,
+  "rows": 12000,
+  "streams": {
+    "pca": {
+      "bytes": 8579754,
+      "sha256": "4482cb38104572da44bfffc725d936d4891b97135ad46203fe7c8ad847317714"
+    },
+    "svae": {
+      "bytes": 8579754,
+      "sha256": "4482cb38104572da44bfffc725d936d4891b97135ad46203fe7c8ad847317714"
+    },
+    "wan": {
+      "bytes": 8579754,
+      "sha256": "4482cb38104572da44bfffc725d936d4891b97135ad46203fe7c8ad847317714"
+    }
+  },
+  "all_equal": true,
+  "time": "2026-09-24T21:42:25.641472-05:00",
+  "scope": "Complete per-seed paired training-stream integrity; no control outcome claim."
+}

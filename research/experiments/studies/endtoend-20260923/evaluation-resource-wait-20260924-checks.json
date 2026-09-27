@@ -1,0 +1,19 @@
+{
+  "time": "2026-09-24T21:40:04.434380-05:00",
+  "selftest_passed": true,
+  "live_check_passed": true,
+  "controller_hold_verified": true,
+  "original_frozen_hashes_verified": 39,
+  "plan_sha256": "e2650cc1428ed2799962d14f18eb0a96b6085dc257debc1b6384a5b42fd788d8",
+  "tests": [
+    "reject GPU memory>=100MiB",
+    "reject nonzero utilization",
+    "reject uncorrectedECC",
+    "reject compute owner",
+    "reject missing required slot",
+    "accept all idle slots",
+    "pidfd stop/resume exact owned disposable process",
+    "exact live controller UID/argv/start ticks"
+  ],
+  "scope": "Operational scheduling only; no scoring or experimental replay."
+}

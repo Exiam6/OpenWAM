@@ -1,0 +1,15 @@
+{
+  "host": "cm001",
+  "gpu_index": 4,
+  "gpu_uuid": "GPU-e7aef4c0-2628-b4f8-34f4-579d62b7feb6",
+  "run_dir": "/data01/zifanz4/openwam-experiments/temporal-recovery-20260927/evaluation/mean-seed42",
+  "manifest": "/home/zifanz4/openwam-experiments/studies/temporal-recovery-20260927/evaluation-code-manifest.json",
+  "timeout_seconds": 64800,
+  "command": [
+    "/data02/zifanz4/openwam-experiments/policy-env/bin/python",
+    "-u",
+    "/home/zifanz4/openwam-experiments/studies/temporal-recovery-20260927/scripts/evaluate_arm.py",
+    "mean",
+    "42"
+  ]
+}

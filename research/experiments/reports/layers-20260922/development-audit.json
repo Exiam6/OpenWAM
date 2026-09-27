@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "prediction_conditions_recomputed": {
+    "ridge": 282,
+    "mlp": 192
+  },
+  "source_compression_interaction_descriptive": {
+    "ridge": {
+      "raw": {
+        "clean": {
+          "L12_E": 0.13581176760602248,
+          "K4_E": 0.11638153997362743,
+          "relative_change_percent": -14.306733484804024
+        },
+        "noise0.10": {
+          "L12_E": 0.7780727561778034,
+          "K4_E": 0.594557202747695,
+          "relative_change_percent": -23.585911725223273
+        }
+      },
+      "pca": {
+        "clean": {
+          "L12_E": 0.13580324847765596,
+          "K4_E": 0.1276928214619183,
+          "relative_change_percent": -5.972189256630411
+        },
+        "noise0.10": {
+          "L12_E": 0.3768998454700538,
+          "K4_E": 0.5208009953119948,
+          "relative_change_percent": 38.180209297372734
+        }
+      },
+      "svae": {
+        "clean": {
+          "L12_E": 0.13000617018604066,
+          "K4_E": 0.1338582547250833,
+          "relative_change_percent": 2.963001320268299
+        },
+        "noise0.10": {
+          "L12_E": 0.3528778202396874,
+          "K4_E": 0.514401455864305,
+          "relative_change_percent": 45.773246818092694
+        }
+      }
+    },
+    "mlp": {
+      "raw": {
+        "clean": {
+          "L12_E": 0.10021811056261261,
+          "K4_E": 0.0829551967792213,
+          "relative_change_percent": -17.225343489793776
+        },
+        "noise0.10": {
+          "L12_E": 0.4843461329738299,
+          "K4_E": 0.3557706497609615,
+          "relative_change_percent": -26.546197948031423
+        }
+      },
+      "pca": {
+        "clean": {
+          "L12_E": 0.07237567217089236,
+          "K4_E": 0.06133347502909601,
+          "relative_change_percent": -15.256780090033129
+        },
+        "noise0.10": {
+          "L12_E": 0.30324184546868005,
+          "K4_E": 0.3167797376712163,
+          "relative_change_percent": 4.4643878820921135
+        }
+      },
+      "svae": {
+        "clean": {
+          "L12_E": 0.06368332184437249,
+          "K4_E": 0.05861365460894174,
+          "relative_change_percent": -7.960745590218831
+        },
+        "noise0.10": {
+          "L12_E": 0.33128011748194697,
+          "K4_E": 0.38027531421846816,
+          "relative_change_percent": 14.789658102313119
+        }
+      }
+    }
+  },
+  "all15source_compressor_seed_zero_noise_paths_exact": true,
+  "fresh_confirmation_scored": 0,
+  "limitations": [
+    "development reuse",
+    "raw-vs48 absolute comparisons differ in readout dimension; within-raw source contrast is dimension matched",
+    "no irreversible-information-loss or policy-benefit claim"
+  ]
+}

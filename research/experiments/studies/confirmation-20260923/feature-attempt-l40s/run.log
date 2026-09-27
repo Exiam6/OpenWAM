@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/data02/zifanz4/openwam-experiments/scripts/confirmation/features.py", line 171, in <module>
+    if __name__=='__main__':main()
+  File "/data02/zifanz4/openwam-experiments/scripts/confirmation/features.py", line 143, in main
+    wan,dino=models();parity(wan,dino);seen=set();start=time.monotonic()
+  File "/data02/zifanz4/openwam-experiments/scripts/confirmation/features.py", line 36, in parity
+    assert passed,'Hardware parity failed; no tolerance change'
+AssertionError: Hardware parity failed; no tolerance change

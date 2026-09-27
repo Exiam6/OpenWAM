@@ -1,0 +1,508 @@
+{
+  "time": "2026-09-24T14:17:16.429985-05:00",
+  "trigger": "2026-09-24T14:15:02.012941-05:00",
+  "pause_paths": {
+    "/home/zifanz4/.local/state/openwam-selfcheck/paused.json": false,
+    "/home/zifanz4/openwam-experiments/studies/layers-20260922/paused.json": false,
+    "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/paused.json": false
+  },
+  "dependency_deadline": "2026-09-25T19:11:52.028093-05:00",
+  "original_controller_deadline": "2026-09-28T13:41:59.240315-05:00",
+  "training": {
+    "pca-seed42": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:19:59.258742-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.13786819577217102,
+        "loss_video": 0.13136054575443268,
+        "loss_action": 0.006507657468318939,
+        "grad_norm": 0.44345977902412415
+      },
+      "last_metric_time": 1790234324.9809947,
+      "all_logged_losses_finite": true,
+      "launcher_error": null,
+      "rows": 12000,
+      "log_tail": "n=0.0065, lr=1.00e-06, epoch=2]\nTraining: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12000/12000 [6:58:45<00:00,  2.09s/step, loss=0.1379, video=0.1314, action=0.0065, lr=1.00e-06, epoch=2]\n[checkpoint] Saving final step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_12000.safetensors\n"
+    },
+    "pca-seed43": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:23:54.989991-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.29911789298057556,
+        "loss_video": 0.2854231894016266,
+        "loss_action": 0.013694703578948975,
+        "grad_norm": 0.4666437804698944
+      },
+      "last_metric_time": 1790234554.153833,
+      "all_logged_losses_finite": true,
+      "launcher_error": null,
+      "rows": 12000,
+      "log_tail": "n=0.0137, lr=1.00e-06, epoch=2]\nTraining: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12000/12000 [7:02:25<00:00,  2.11s/step, loss=0.2991, video=0.2854, action=0.0137, lr=1.00e-06, epoch=2]\n[checkpoint] Saving final step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_12000.safetensors\n"
+    },
+    "pca-seed44": {
+      "status": "running",
+      "exit": null,
+      "global_step": 706,
+      "opt_step": 353,
+      "latest_metrics": {
+        "loss_total": 0.9623457193374634,
+        "loss_video": 0.8306931257247925,
+        "loss_action": 0.1316525787115097,
+        "grad_norm": 2.030351161956787
+      },
+      "last_metric_time": 1790277435.6699867,
+      "all_logged_losses_finite": true,
+      "launcher_error": null,
+      "rows": 706,
+      "log_tail": "      | 704/12000 [25:48<6:51:01,  2.18s/step, loss=0.5519, video=0.4338, action=0.1181, lr=1.00e-04, epoch=0]\nTraining:   6%|\u258c         | 705/12000 [25:48<6:43:50,  2.15s/step, loss=0.5519, video=0.4338, action=0.1181, lr=1.00e-04, epoch=0]\nTraining:   6%|\u258c         | 705/12000 [25:50<6:43:50,  2.15s/step, loss=0.9623, video=0.8307, action=0.1317, lr=1.00e-04, epoch=0]\nTraining:   6%|\u258c         | 706/12000 [25:50<6:46:39,  2.16s/step, loss=0.9623, video=0.8307, action=0.1317, lr=1.00e-04, epoch=0]"
+    },
+    "svae-seed42": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:23:39.720465-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.12422701716423035,
+        "loss_video": 0.11894958466291428,
+        "loss_action": 0.0052774325013160706,
+        "grad_norm": 0.38373449444770813
+      },
+      "last_metric_time": 1790234535.674543,
+      "all_logged_losses_finite": true,
+      "launcher_error": null,
+      "rows": 12000,
+      "log_tail": "0.0053, lr=1.00e-06, epoch=2]\nTraining: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12000/12000 [7:02:13<00:00,  2.11s/step, loss=0.1242, video=0.1189, action=0.0053, lr=1.00e-06, epoch=2]\n[checkpoint] Saving final step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_12000.safetensors\n"
+    },
+    "svae-seed43": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:16:27.723352-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.28846943378448486,
+        "loss_video": 0.27400118112564087,
+        "loss_action": 0.01446824986487627,
+        "grad_norm": 0.4534133970737457
+      },
+      "last_metric_time": 1790234114.992426,
+      "all_logged_losses_finite": true,
+      "launcher_error": null,
+      "rows": 12000,
+      "log_tail": "0.0145, lr=1.00e-06, epoch=2]\nTraining: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12000/12000 [6:55:13<00:00,  2.08s/step, loss=0.2885, video=0.2740, action=0.0145, lr=1.00e-06, epoch=2]\n[checkpoint] Saving final step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_12000.safetensors\n"
+    },
+    "svae-seed44": {
+      "status": "running",
+      "exit": null,
+      "global_step": 703,
+      "opt_step": 351,
+      "latest_metrics": {
+        "loss_total": 0.6575247049331665,
+        "loss_video": 0.5040684938430786,
+        "loss_action": 0.15345624089241028,
+        "grad_norm": 0
+      },
+      "last_metric_time": 1790277435.7163243,
+      "all_logged_losses_finite": true,
+      "launcher_error": null,
+      "rows": 703,
+      "log_tail": "      | 701/12000 [25:47<6:41:25,  2.13s/step, loss=0.3131, video=0.2568, action=0.0562, lr=1.00e-04, epoch=0]\nTraining:   6%|\u258c         | 702/12000 [25:47<6:46:04,  2.16s/step, loss=0.3131, video=0.2568, action=0.0562, lr=1.00e-04, epoch=0]\nTraining:   6%|\u258c         | 702/12000 [25:49<6:46:04,  2.16s/step, loss=0.6575, video=0.5041, action=0.1535, lr=1.00e-04, epoch=0]\nTraining:   6%|\u258c         | 703/12000 [25:49<6:47:50,  2.17s/step, loss=0.6575, video=0.5041, action=0.1535, lr=1.00e-04, epoch=0]"
+    },
+    "wan-seed42": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T03:09:02.445341-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.18728265166282654,
+        "loss_video": 0.17978183925151825,
+        "loss_action": 0.007500807289034128,
+        "grad_norm": 0.36119961738586426
+      },
+      "last_metric_time": 1790237256.928238,
+      "all_logged_losses_finite": true,
+      "launcher_error": null,
+      "rows": 12000,
+      "log_tail": "n=0.0075, lr=1.00e-06, epoch=2]\nTraining: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12000/12000 [7:47:34<00:00,  2.34s/step, loss=0.1873, video=0.1798, action=0.0075, lr=1.00e-06, epoch=2]\n[checkpoint] Saving final step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/checkpoint_step_12000.safetensors\n"
+    },
+    "wan-seed43": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:51:13.836803-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.39004501700401306,
+        "loss_video": 0.37430840730667114,
+        "loss_action": 0.015736602246761322,
+        "grad_norm": 0.43820375204086304
+      },
+      "last_metric_time": 1790236189.6906774,
+      "all_logged_losses_finite": true,
+      "launcher_error": null,
+      "rows": 12000,
+      "log_tail": "n=0.0157, lr=1.00e-06, epoch=2]\nTraining: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12000/12000 [7:29:46<00:00,  2.25s/step, loss=0.3900, video=0.3743, action=0.0157, lr=1.00e-06, epoch=2]\n[checkpoint] Saving final step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/checkpoint_step_12000.safetensors\n"
+    },
+    "wan-seed44": {
+      "status": "running",
+      "exit": null,
+      "global_step": 652,
+      "opt_step": 326,
+      "latest_metrics": {
+        "loss_total": 0.6984079480171204,
+        "loss_video": 0.5529019832611084,
+        "loss_action": 0.14550596475601196,
+        "grad_norm": 1.7074620723724365
+      },
+      "last_metric_time": 1790277436.1954353,
+      "all_logged_losses_finite": true,
+      "launcher_error": null,
+      "rows": 652,
+      "log_tail": "      | 649/12000 [25:38<7:32:32,  2.39s/step, loss=0.6258, video=0.4573, action=0.1686, lr=1.00e-04, epoch=0]\nTraining:   5%|\u258c         | 650/12000 [25:38<7:34:01,  2.40s/step, loss=0.6258, video=0.4573, action=0.1686, lr=1.00e-04, epoch=0]\nTraining:   5%|\u258c         | 650/12000 [25:41<7:34:01,  2.40s/step, loss=0.4621, video=0.4194, action=0.0427, lr=1.00e-04, epoch=0]\nTraining:   5%|\u258c         | 651/12000 [25:41<7:26:45,  2.36s/step, loss=0.4621, video=0.4194, action=0.0427, lr=1.00e-04, epoch=0]"
+    }
+  },
+  "completed_checkpoint_sizes": {
+    "pca-seed42": 12123507288,
+    "pca-seed43": 12123507288,
+    "svae-seed42": 12189767400,
+    "svae-seed43": 12189767400,
+    "wan-seed42": 13361411736,
+    "wan-seed43": 13361411736
+  },
+  "hashes": [
+    {
+      "original": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/pipeline-plan.json",
+      "verified_at": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/pipeline-plan.json",
+      "sha256": "37330d780b9df112e1aa33aea5e77a1adbb0f3e7895927b9ff4d339866a2d115"
+    },
+    {
+      "original": "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_common.py",
+      "verified_at": "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_common.py",
+      "sha256": "03b9df65807fe2e7764ae569e4c600f69717e1ce754cf3644f2e30b316be0e9a"
+    },
+    {
+      "original": "/home/zifanz4/openwam-experiments/scripts/endtoend/run_simulation_preflight.py",
+      "verified_at": "/home/zifanz4/openwam-experiments/scripts/endtoend/run_simulation_preflight.py",
+      "sha256": "e327cb4b41602bd4e347ce60f0dbc2f46df277ca0ed796881bf26cce89550862"
+    },
+    {
+      "original": "/home/zifanz4/openwam-experiments/scripts/endtoend/simulation_preflight.py",
+      "verified_at": "/home/zifanz4/openwam-experiments/scripts/endtoend/simulation_preflight.py",
+      "sha256": "4edc5629b5c3941fd9e9a8558fa17689b9f10e2baea4f76fd7264a9eaffbb1b9"
+    },
+    {
+      "original": "/home/zifanz4/openwam-experiments/scripts/endtoend/serve_policy.py",
+      "verified_at": "/home/zifanz4/openwam-experiments/scripts/endtoend/serve_policy.py",
+      "sha256": "476608ccf2e9de0aa804e4388d71ba51969e98a188f92b8738d77821f5fa5e7d"
+    },
+    {
+      "original": "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluate_policy.py",
+      "verified_at": "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluate_policy.py",
+      "sha256": "cd021e40f79d104dfa1e6bd86337d3dd7ff0bcc815943ac971b6e4f9f2988708"
+    },
+    {
+      "original": "/home/zifanz4/openwam-experiments/scripts/endtoend/verify_fresh_cohort.py",
+      "verified_at": "/home/zifanz4/openwam-experiments/scripts/endtoend/verify_fresh_cohort.py",
+      "sha256": "6b5999af7cd30d4a410ef43b1d77e668814c6b186e8567ad3b8954aee59657ef"
+    },
+    {
+      "original": "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_controller.py",
+      "verified_at": "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_controller.py",
+      "sha256": "04c8cb2002d6a2907666eff024776256a3f276df0875ca8922e65a674482b7f8"
+    },
+    {
+      "original": "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_queue.py",
+      "verified_at": "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_queue.py",
+      "sha256": "c17b4f589a60840540056c7db11f7a0bdcee877a8d6699bd18dd3bcd09723572"
+    },
+    {
+      "original": "/home/zifanz4/openwam-experiments/scripts/endtoend/action_diagnostics.py",
+      "verified_at": "/home/zifanz4/openwam-experiments/scripts/endtoend/action_diagnostics.py",
+      "sha256": "4a38f096cca963733b031f7477ae5290936c14604847655600a273423fa31fb0"
+    },
+    {
+      "original": "/home/zifanz4/openwam-experiments/scripts/endtoend/analyze_closed_loop.py",
+      "verified_at": "/home/zifanz4/openwam-experiments/scripts/endtoend/analyze_closed_loop.py",
+      "sha256": "f576f32798ac02c5518466411774955900375a430dbef2e041bfa530d8dbea95"
+    },
+    {
+      "original": "/home/zifanz4/openwam-experiments/scripts/endtoend/audit_closed_loop.py",
+      "verified_at": "/home/zifanz4/openwam-experiments/scripts/endtoend/audit_closed_loop.py",
+      "sha256": "2b9cb18971e3339334cbde0253ae18335cf2da614e955f7c50a38817d7b714ad"
+    },
+    {
+      "original": "/home/zifanz4/openwam-experiments/scripts/endtoend/summarize_diagnostics.py",
+      "verified_at": "/home/zifanz4/openwam-experiments/scripts/endtoend/summarize_diagnostics.py",
+      "sha256": "f7a007a8addf68288781ef180b5e7d55526e71015d6b463c3f2febf2bf2818a2"
+    },
+    {
+      "original": "/home/zifanz4/openwam-experiments/scripts/endtoend/update_status.py",
+      "verified_at": "/home/zifanz4/openwam-experiments/scripts/endtoend/update_status.py",
+      "sha256": "13143dd36b76f988b8bd28ad1a23cc54b3c74646e74ed76de211cb6e594b4da8"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/dinov3_pca.py",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/dinov3_pca.py",
+      "sha256": "5daa04141295143d64e4014e7cc8603ec48479acffd5fd39fc4d093f80541de7"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/__init__.py",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/__init__.py",
+      "sha256": "76c2a60bd41d15831a73dd61e9617212ea251760dc6a11138b4cfb69ab4287a3"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/deploy/server.py",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/deploy/server.py",
+      "sha256": "0aa4e1b6ff231e90fabcd0ef44b871cb5a51843ea09a531ca9c8c2fcaa6f7378"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/openwam2robotwin_interface.py",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/openwam2robotwin_interface.py",
+      "sha256": "3329d6b1c559646395d65f6d4521720ac83ce95a7f8ebbdfecf486a254e423b7"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py",
+      "sha256": "7b56c45b89a845b4ff264907bcac7f183a71894d74f4b90753fda69d254cedda"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/protocol.json",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/protocol.json",
+      "sha256": "9821536558ee158735a24e2caa8b394dfb46723269586cf4acc66c4b9b2cd7b6"
+    },
+    {
+      "original": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/EVALUATION_IMPLEMENTATION.md",
+      "verified_at": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/EVALUATION_IMPLEMENTATION.md",
+      "sha256": "e53b3e8ac24a9cb4e11f7ad7b04947a10cd76d569d8c4077ad46e918864aa52e"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/exit.json",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/preflight-20260924T1348/pca-seed44/exit.json",
+      "sha256": "8c74a9ed6e8c9b076656fa200c49ba9f80e06040b99d7cf779e431f9102ea342"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/launcher-error.json",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/preflight-20260924T1348/pca-seed44/launcher-error.json",
+      "sha256": "51a2345af5dfc5ba0858a29eee8c1690b192d01316afacbf9cfeddeee724b468"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/job.json",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/job.json",
+      "sha256": "db72d2be40a1d340ff4d4cecb3cbb08b60c90e9273b15d499d588e279ce84358"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/config.yaml",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/config.yaml",
+      "sha256": "6bff16fa22a6f06b51dfd1c4a64990f76fa7fa95bd3ab60a185eb2642e98e2dd"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed44/exit.json",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/preflight-20260924T1348/svae-seed44/exit.json",
+      "sha256": "1fd5d221c319eea3a48c92de11ce0210d442b481030baf3670630abb3ec5ab09"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed44/launcher-error.json",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/preflight-20260924T1348/svae-seed44/launcher-error.json",
+      "sha256": "b8e34404f5be9e00596e9cece8fb947a8b263b59918f6cc190acd2a1d42527b0"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed44/job.json",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed44/job.json",
+      "sha256": "2eed45c93218554ad7ff66bbb0bcfec1c1d6f5e6332d10e6a3032a83fe31c414"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed44/config.yaml",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed44/config.yaml",
+      "sha256": "1f81d370248ee08dd7fe4e898f8d58decdd8547e97946f4ff21c44a880bea661"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/pipeline/exit.json",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/preflight-20260924T1348/pipeline/exit.json",
+      "sha256": "64436c6091d2330867dd86bff5b3fe847dc913aba72b735d76b701ad84c94d2f"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/pipeline/started.json",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/preflight-20260924T1348/pipeline/started.json",
+      "sha256": "476e56303a1235a1f2d21fb3017e3dfdce7305b4d595168fb522153a68506b18"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/pipeline/progress.json",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/preflight-20260924T1348/pipeline/progress.json",
+      "sha256": "2ca631af5fa8d70fcabf739b72060b40bc8de4b8845152b9e1f0f36c8fd47f52"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/pipeline-controller.log",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/preflight-20260924T1348/pipeline-controller.log",
+      "sha256": "dcadfd2596b547332e6137c90b05003ed34f688141bdd785f75cf7985b9b7671"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed44/exit.json",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/preflight-20260924T1348/wan-seed44/exit.json",
+      "sha256": "185bbefb44cee51934c193953597a7437038e21354dd601a953b32ad7bed6e76"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed44/launcher-error.json",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/preflight-20260924T1348/wan-seed44/launcher-error.json",
+      "sha256": "cc0be7aceacfe343a1fea9125629c7cbd13b817ca7fd45b91fa6efc44a1c2ab1"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed44/job.json",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed44/job.json",
+      "sha256": "356fbccf5f5c6feddb649e0850f33d84fb6d37763fbd2c41ded3460e3b0c6b70"
+    },
+    {
+      "original": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed44/config.yaml",
+      "verified_at": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed44/config.yaml",
+      "sha256": "844256c0407179879c686841d71be4ae18d5a68bd7bad48081e4de5689581767"
+    },
+    {
+      "original": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/preflight-recovery-20260924T0315.json",
+      "verified_at": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/preflight-recovery-20260924T0315.json",
+      "sha256": "ee2665df92578da788bc34702c64536683da5cbe2a7f1ab06d7d8ba112609168"
+    },
+    {
+      "original": "/home/zifanz4/openwam-experiments/scripts/endtoend/recover_preflight_20260924T1348.py",
+      "verified_at": "/home/zifanz4/openwam-experiments/scripts/endtoend/recover_preflight_20260924T1348.py",
+      "sha256": "0367cb889e39300634191f8f841e880df84e5210879c7815a22f28395d886b8e"
+    }
+  ],
+  "disk": {
+    "/home": {
+      "available_gib": 0.125,
+      "free_gib": 1788.4384765625
+    },
+    "/data02": {
+      "available_gib": 209.3134765625,
+      "free_gib": 1997.626953125
+    }
+  },
+  "paired_seed44": {
+    "rows_compared": 653,
+    "prefix_sha256": "630eeb8c08da857563297518522fda5ec41bbafa03a4a5dc17985478553d102b",
+    "all_equal": true,
+    "initializations": [
+      {
+        "route": "pca",
+        "seed": 44,
+        "common_sha256": "31636d8c9741b6a365eb2116321f37226a0534a16d08db4992a06ae438c181d8",
+        "equal_common_tensors": 679,
+        "trainable_parameters": 295035604,
+        "frozen_text_tensors": 242,
+        "published_world_action_weights_loaded": false
+      },
+      {
+        "route": "svae",
+        "seed": 44,
+        "common_sha256": "31636d8c9741b6a365eb2116321f37226a0534a16d08db4992a06ae438c181d8",
+        "equal_common_tensors": 679,
+        "trainable_parameters": 295035604,
+        "frozen_text_tensors": 242,
+        "published_world_action_weights_loaded": false
+      },
+      {
+        "route": "wan",
+        "seed": 44,
+        "common_sha256": "31636d8c9741b6a365eb2116321f37226a0534a16d08db4992a06ae438c181d8",
+        "equal_common_tensors": 679,
+        "trainable_parameters": 295035604,
+        "frozen_text_tensors": 242,
+        "published_world_action_weights_loaded": false
+      }
+    ]
+  },
+  "pipeline": {
+    "time": "2026-09-24T14:17:05.624600-05:00",
+    "stage": "waiting_for_all_training_collection_smoke",
+    "all_ready": false
+  },
+  "pipeline_exit": null,
+  "prerequisite_exits": {
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/collection-slots/5/exit.json": {
+      "time": "2026-09-23T22:05:36.904975-05:00",
+      "returncode": 0
+    },
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/collection-slots/7/exit.json": {
+      "time": "2026-09-23T21:03:54.426294-05:00",
+      "returncode": 0
+    },
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/simulation-preflight/exit.json": {
+      "time": "2026-09-23T21:08:15.726521-05:00",
+      "returncode": 0
+    }
+  },
+  "evaluation_ready_present": false,
+  "fresh_cohort_gate_present": false,
+  "local_tmux": {
+    "exit": 0,
+    "stdout": "exp\now-e2e-pipeline\n"
+  },
+  "remote_resource_check": {
+    "time": "2026-09-24T14:17:17.972706-05:00",
+    "commands": [
+      {
+        "command": [
+          "nvidia-smi",
+          "--query-gpu=index,uuid,memory.used,utilization.gpu,ecc.errors.uncorrected.volatile.total",
+          "--format=csv,noheader,nounits"
+        ],
+        "returncode": 0,
+        "stdout": "0, GPU-c7d96da5-a1ae-e1ed-de5d-03f35e550da2, 1, 0, 2\n1, GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 9291, 78, 0\n2, GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 8651, 67, 0\n3, GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 22263, 33, 0\n4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 11787, 53, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 21935, 3, 0\n6, GPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 24531, 3, 0\n7, GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 9593, 90, 0\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "nvidia-smi",
+          "--query-compute-apps=gpu_uuid,pid,used_memory",
+          "--format=csv,noheader,nounits"
+        ],
+        "returncode": 0,
+        "stdout": "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 2029857, 9284\nGPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 2029929, 8644\nGPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 2095508, 22244\nGPU-33861458-0994-99a7-7457-6fceb49c229c, 2077942, 11747\nGPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 2095502, 21928\nGPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 2095515, 24524\nGPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 2018198, 9586\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "tmux",
+          "list-sessions",
+          "-F",
+          "#{session_name}"
+        ],
+        "returncode": 0,
+        "stdout": "ow-recovery-pca-seed44\now-recovery-svae-seed44\now-recovery-wan-seed44\n",
+        "stderr": ""
+      }
+    ],
+    "owners": [
+      "kagaram2 2029857    11:42:45 python",
+      "kagaram2 2029929    11:42:45 python",
+      "zifanz4  2095508       27:14 python",
+      "bhavyaa2 2077942    01:36:13 python3",
+      "zifanz4  2095502       27:14 python",
+      "zifanz4  2095515       27:14 python",
+      "kagaram2 2018198    13:47:49 python"
+    ]
+  },
+  "meaningful_state_change": false,
+  "public_retry_performed": false,
+  "judgment": "The same three recovered seed44 trainings continue normally with finite metrics and no new exit/error. Six completed trainings and39 bound file hashes remain unchanged. No policy outcomes or new scientific result.",
+  "next_step": "Complete the three seed44 runs at the fixed12000 microsteps/6000 updates and final checkpoints; then apply all-nine paired-stream/checkpoint/fresh-cohort integrity gates before the full5400-rollout/48600-action-diagnostic comparison. Recheck cm009GPU1-6 before transition because1/2/4 remain occupied by other users and frozen reservation does not wait. Retain original dependency/controller deadlines. This resolves whether representation advantages translate into native closed-loop robustness without clean-success regression."
+}

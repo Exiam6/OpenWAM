@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "time": "2026-09-22T17:15:53.359899-05:00",
+  "inventories": [
+    {
+      "time": "2026-09-22T17:14:01.806612-05:00",
+      "passed": true,
+      "scanned_root": "/data02/zifanz4/openwam-experiments",
+      "json_seed_fields_and_seed_directories": true,
+      "known_seed_count": 148,
+      "known_seed_min_max": [
+        0,
+        602027
+      ],
+      "proposed_ranges": [
+        [
+          800000,
+          800039
+        ],
+        [
+          801000,
+          801039
+        ],
+        [
+          802000,
+          802039
+        ]
+      ],
+      "files_checked": 776,
+      "inventory_sha256": "bdfa9ae0397acd41da07abe7272445bb7d6a9a32947badc2bdae8d6b31dc7faf",
+      "matches": [],
+      "errors": [],
+      "scope": "existing results/data; this prospective goalaux plan excluded; content-identity check separately required before scoring"
+    },
+    {
+      "time": "2026-09-22T17:14:04.012713-05:00",
+      "passed": true,
+      "scanned_root": "/vol13/zifanz4/openwam-experiments",
+      "json_seed_fields_and_seed_directories": true,
+      "known_seed_count": 68,
+      "known_seed_min_max": [
+        0,
+        67
+      ],
+      "proposed_ranges": [
+        [
+          800000,
+          800039
+        ],
+        [
+          801000,
+          801039
+        ],
+        [
+          802000,
+          802039
+        ]
+      ],
+      "files_checked": 533,
+      "inventory_sha256": "999a7f7bfed7e56e643ad8c3e7ff17486e2d60041388eeee995e97ee023c6c83",
+      "matches": [],
+      "errors": [],
+      "scope": "existing results/data; this prospective goalaux plan excluded; content-identity check separately required before scoring"
+    }
+  ]
+}

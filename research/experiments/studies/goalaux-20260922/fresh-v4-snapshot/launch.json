@@ -1,0 +1,13 @@
+{
+  "started_at": "2026-09-22T19:00:42.466954-05:00",
+  "collection_deadline": "2026-09-22T19:15:55.548938-05:00",
+  "study_deadline": "2026-09-23T01:15:12-05:00",
+  "wall_cap_seconds": 913,
+  "gpu_uuid": "GPU-dee01971-fb13-ae53-0d7f-ebe6c6149087",
+  "resource_state": "1, 0, 0",
+  "cpu_threads": 4,
+  "expert_only": true,
+  "max_seeds_per_task": 40,
+  "scenes_per_task": 20,
+  "watchdog_cleanup_grace_seconds": 30
+}

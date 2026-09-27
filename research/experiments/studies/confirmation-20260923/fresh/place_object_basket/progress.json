@@ -1,0 +1,1311 @@
+{
+  "attempts": [
+    {
+      "task": "place_object_basket",
+      "seed": 902000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T11:52:31.044317-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 30.202808938920498,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:53:02.397560-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 237,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902001/data/episode0.hdf5",
+      "hdf5_sha256": "06d197be5e7dfa73a3ab9b73b929e1c2ca57d7b36b1345a5354552b3fa0d1dec",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 61.86268273182213,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T11:54:05.770698-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 27.290194883942604,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:54:35.080412-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 241,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902003/data/episode0.hdf5",
+      "hdf5_sha256": "904e85d3c548bec752ecf2558eb3b24b3223c0a2ee9bfe7760529d11a90f2ba3",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 60.517835604026914,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902004,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:55:36.936104-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 270,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902004/data/episode0.hdf5",
+      "hdf5_sha256": "613b3a1bac65bb4506b4bef91eb89c223cc47c123292334d628eacf08cc9916c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 62.55131748877466,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902005,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:56:41.104955-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 242,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902005/data/episode0.hdf5",
+      "hdf5_sha256": "1b0b78f8810569e2a76ce53661c70eea64211b57c0b8627dd28bb050d28d55e9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 58.918306877836585,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902006,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:57:41.600673-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 247,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902006/data/episode0.hdf5",
+      "hdf5_sha256": "f4a29a528e0348fec09d418f2bf9f0de910cdc1ef1eb43a1aade6d6d68fc1083",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 60.52392438426614,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902007,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:58:43.563869-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 232,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902007/data/episode0.hdf5",
+      "hdf5_sha256": "36c9444e886449bf09b4eeb8e06c56c97580d78f8c4208b5b122cfbfc539ae5e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 57.33111469820142,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902008,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T11:59:42.495027-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 26.968148915097117,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902009,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T12:00:10.722360-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 27.035530768334866,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902010,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T12:00:38.938820-05:00",
+      "outcome": "expert_infeasible",
+      "error": "AssertionError('target_pose cannot be None for move action.')",
+      "traceback": "Traceback (most recent call last):\n  File \"/data02/zifanz4/openwam-experiments/scripts/goalaux/collect_reference.py\", line 25, in worker\n    info=env.play_once();ok=bool(env.plan_success and env.check_success());result['expert_plan_success']=ok\n  File \"/data02/zifanz4/openwam-experiments/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/place_object_basket.py\", line 122, in play_once\n    self.grasp_actor(self.basket, arm_tag=self.arm_tag.opposite, pre_grasp_dis=0.08),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+      "elapsed_seconds": 23.50481921620667,
+      "exit_code": 0,
+      "original_outcome": "infrastructure_failure",
+      "classification_amendment": "native basket grasp returned no candidate at an AST-enumerated call site; exact pre-score source/traceback class; original result retained; no retry"
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902011,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T12:01:03.698284-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 27.108885291963816,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902012,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:01:32.070418-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902012/data/episode0.hdf5",
+      "hdf5_sha256": "d864f6a966301f35118812dca05e70a73f3820ca7fb40b786d23f640153bf26d",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 58.40948025509715,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902013,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:02:31.770261-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 230,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902013/data/episode0.hdf5",
+      "hdf5_sha256": "24cae5c1608886b03797657ed3c737cf036968dfcf1b15ef52aaf4b999f64f2e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 59.32087506912649,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902014,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T12:03:32.604247-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 26.738130243495107,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902015,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T12:04:00.770786-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 26.57421261817217,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902016,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T12:04:28.582196-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 24.6773891877383,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902017,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T12:04:54.494226-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 26.273285996168852,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902018,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:05:22.056809-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 247,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902018/data/episode0.hdf5",
+      "hdf5_sha256": "435d6ba09d8b25afb6ab02b73aef89affe471ecbcb2e6761595d1a931b2446ac",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 61.70035751722753,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902019,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:06:25.127849-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 241,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902019/data/episode0.hdf5",
+      "hdf5_sha256": "c04764e5c33ef2e069973c0c14152b00e0046e06a163cabee4fbfecd01264b06",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 59.73933291994035,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902020,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:07:26.279366-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 248,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902020/data/episode0.hdf5",
+      "hdf5_sha256": "eb930782f1c025279070598850f85ea25cf8bad674f2f9dc08db6622defdc59e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 59.99034416489303,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902021,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:08:28.039723-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 232,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902021/data/episode0.hdf5",
+      "hdf5_sha256": "fbab60bde2991343c9b4479a0bc53e7ff5714a6ec7176d27507521ab51e17514",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 60.03599254973233,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902022,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T12:09:29.495317-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 25.87416901625693,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902023,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:09:56.641510-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902023/data/episode0.hdf5",
+      "hdf5_sha256": "5fcd31e4e753759b50dbdf022d2b425a7e47f645a3505d1ecd5584fd23e2cc42",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 59.786388639360666,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902024,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:10:57.990034-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 269,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902024/data/episode0.hdf5",
+      "hdf5_sha256": "98e341bab85f7af8145fc9be6aedeba03b8574d3e0d40677f53d668272a759df",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 60.52731444127858,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902025,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T12:12:00.140782-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 24.631595082581043,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902026,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:12:26.724791-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 244,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902026/data/episode0.hdf5",
+      "hdf5_sha256": "98c98fafe68dbbccf38f14b79f2821ba5fbcd9ddd2930eb176cd70fb52433aa0",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base5",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 58.787865199148655,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902027,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:13:27.782215-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 242,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902027/data/episode0.hdf5",
+      "hdf5_sha256": "32a8bfd796027f28ff35a27d3f197406e95dbf98edb76aa51b338112e7972dba",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 55.978396059945226,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902028,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:14:25.378514-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 229,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902028/data/episode0.hdf5",
+      "hdf5_sha256": "bd93e8fcd4f3d73eaf7fd2a78291ed4e7710c93a6fff36025d1f0d2635a2ea5d",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 58.779623944312334,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902029,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T12:15:25.769126-05:00",
+      "outcome": "expert_infeasible",
+      "error": "AssertionError('target_pose cannot be None for move action.')",
+      "traceback": "Traceback (most recent call last):\n  File \"/data02/zifanz4/openwam-experiments/scripts/goalaux/collect_reference.py\", line 25, in worker\n    info=env.play_once();ok=bool(env.plan_success and env.check_success());result['expert_plan_success']=ok\n  File \"/data02/zifanz4/openwam-experiments/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/place_object_basket.py\", line 122, in play_once\n    self.grasp_actor(self.basket, arm_tag=self.arm_tag.opposite, pre_grasp_dis=0.08),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+      "elapsed_seconds": 24.022436371073127,
+      "exit_code": 0,
+      "original_outcome": "infrastructure_failure",
+      "classification_amendment": "native basket grasp returned no candidate at an AST-enumerated call site; exact pre-score source/traceback class; original result retained; no retry"
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902030,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T12:15:51.045702-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 25.33618918992579,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902031,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T12:16:17.757930-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 24.036958726122975,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902032,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T12:16:43.170827-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 25.48449938185513,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902033,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:17:09.985459-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 248,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902033/data/episode0.hdf5",
+      "hdf5_sha256": "8b4d2bea44a461ff669fcf5af8307db009471149325c52b01acc434f6107e5c6",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 55.69376828894019,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902034,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:18:07.290628-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902034/data/episode0.hdf5",
+      "hdf5_sha256": "a99efe36fa2e6fb44e661f7c9b4ee4c4d4af33a3699313be753b39796beb4923",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 57.22594862058759,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902035,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:19:06.134112-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 247,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902035/data/episode0.hdf5",
+      "hdf5_sha256": "2a4a238fff4bac4af68b093c6a79a79d297b59ca71917b65b3a00832fc418f5c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 58.39262078329921,
+      "exit_code": 0
+    }
+  ],
+  "accepted": [
+    {
+      "task": "place_object_basket",
+      "seed": 902001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:53:02.397560-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 237,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902001/data/episode0.hdf5",
+      "hdf5_sha256": "06d197be5e7dfa73a3ab9b73b929e1c2ca57d7b36b1345a5354552b3fa0d1dec",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 61.86268273182213,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:54:35.080412-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 241,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902003/data/episode0.hdf5",
+      "hdf5_sha256": "904e85d3c548bec752ecf2558eb3b24b3223c0a2ee9bfe7760529d11a90f2ba3",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 60.517835604026914,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902004,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:55:36.936104-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 270,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902004/data/episode0.hdf5",
+      "hdf5_sha256": "613b3a1bac65bb4506b4bef91eb89c223cc47c123292334d628eacf08cc9916c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 62.55131748877466,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902005,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:56:41.104955-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 242,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902005/data/episode0.hdf5",
+      "hdf5_sha256": "1b0b78f8810569e2a76ce53661c70eea64211b57c0b8627dd28bb050d28d55e9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 58.918306877836585,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902006,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:57:41.600673-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 247,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902006/data/episode0.hdf5",
+      "hdf5_sha256": "f4a29a528e0348fec09d418f2bf9f0de910cdc1ef1eb43a1aade6d6d68fc1083",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 60.52392438426614,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902007,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:58:43.563869-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 232,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902007/data/episode0.hdf5",
+      "hdf5_sha256": "36c9444e886449bf09b4eeb8e06c56c97580d78f8c4208b5b122cfbfc539ae5e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 57.33111469820142,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902012,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:01:32.070418-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902012/data/episode0.hdf5",
+      "hdf5_sha256": "d864f6a966301f35118812dca05e70a73f3820ca7fb40b786d23f640153bf26d",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 58.40948025509715,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902013,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:02:31.770261-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 230,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902013/data/episode0.hdf5",
+      "hdf5_sha256": "24cae5c1608886b03797657ed3c737cf036968dfcf1b15ef52aaf4b999f64f2e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 59.32087506912649,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902018,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:05:22.056809-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 247,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902018/data/episode0.hdf5",
+      "hdf5_sha256": "435d6ba09d8b25afb6ab02b73aef89affe471ecbcb2e6761595d1a931b2446ac",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 61.70035751722753,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902019,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:06:25.127849-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 241,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902019/data/episode0.hdf5",
+      "hdf5_sha256": "c04764e5c33ef2e069973c0c14152b00e0046e06a163cabee4fbfecd01264b06",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 59.73933291994035,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902020,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:07:26.279366-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 248,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902020/data/episode0.hdf5",
+      "hdf5_sha256": "eb930782f1c025279070598850f85ea25cf8bad674f2f9dc08db6622defdc59e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 59.99034416489303,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902021,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:08:28.039723-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 232,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902021/data/episode0.hdf5",
+      "hdf5_sha256": "fbab60bde2991343c9b4479a0bc53e7ff5714a6ec7176d27507521ab51e17514",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 60.03599254973233,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902023,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:09:56.641510-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902023/data/episode0.hdf5",
+      "hdf5_sha256": "5fcd31e4e753759b50dbdf022d2b425a7e47f645a3505d1ecd5584fd23e2cc42",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 59.786388639360666,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902024,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:10:57.990034-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 269,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902024/data/episode0.hdf5",
+      "hdf5_sha256": "98e341bab85f7af8145fc9be6aedeba03b8574d3e0d40677f53d668272a759df",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 60.52731444127858,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902026,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:12:26.724791-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 244,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902026/data/episode0.hdf5",
+      "hdf5_sha256": "98c98fafe68dbbccf38f14b79f2821ba5fbcd9ddd2930eb176cd70fb52433aa0",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base5",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 58.787865199148655,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902027,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:13:27.782215-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 242,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902027/data/episode0.hdf5",
+      "hdf5_sha256": "32a8bfd796027f28ff35a27d3f197406e95dbf98edb76aa51b338112e7972dba",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 55.978396059945226,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902028,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:14:25.378514-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 229,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902028/data/episode0.hdf5",
+      "hdf5_sha256": "bd93e8fcd4f3d73eaf7fd2a78291ed4e7710c93a6fff36025d1f0d2635a2ea5d",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 58.779623944312334,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902033,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:17:09.985459-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 248,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902033/data/episode0.hdf5",
+      "hdf5_sha256": "8b4d2bea44a461ff669fcf5af8307db009471149325c52b01acc434f6107e5c6",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 55.69376828894019,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902034,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:18:07.290628-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902034/data/episode0.hdf5",
+      "hdf5_sha256": "a99efe36fa2e6fb44e661f7c9b4ee4c4d4af33a3699313be753b39796beb4923",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 57.22594862058759,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902035,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:19:06.134112-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 247,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902035/data/episode0.hdf5",
+      "hdf5_sha256": "2a4a238fff4bac4af68b093c6a79a79d297b59ca71917b65b3a00832fc418f5c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 58.39262078329921,
+      "exit_code": 0
+    }
+  ],
+  "accepted_count": 20,
+  "elapsed_seconds": 1654.885382251814,
+  "collection_deadline": "2026-09-23T14:38:51.767900-05:00"
+}

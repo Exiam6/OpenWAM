@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-09-23T00:34:01.562350-05:00",
+  "project_id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3",
+  "status": "blocked",
+  "error": "SitesConnectorError: Sites project not found",
+  "lookup_observed_at": "2026-09-23T00:29:47-05:00",
+  "new_site_created": false,
+  "deployed": false
+}

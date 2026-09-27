@@ -1,0 +1,5 @@
+{
+  "time": "2026-09-22T18:46:04.047827-05:00",
+  "traceback": "Traceback (most recent call last):\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/launch_confirmation.py\", line 39, in <module>\n    try:code=main()\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/launch_confirmation.py\", line 14, in main\n    assert (F/'exit-code.txt').read_text().strip()=='0','Collection failed; do not run confirmation';assert json.loads((F/'manifest.json').read_text())['complete'],'Incomplete fixed cohort; no scoring'\nAssertionError: Collection failed; do not run confirmation\n",
+  "completed_stages_not_replayed": true
+}

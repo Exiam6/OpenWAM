@@ -1,0 +1,30 @@
+{
+  "frozen_at": "2026-09-22T15:56:59.520444-05:00",
+  "deadline": "2026-09-23T01:15:12-05:00",
+  "status": "engineering_contract_only",
+  "wall_seconds_cap": 300,
+  "cpu_threads_cap": 2,
+  "gpu_count": 0,
+  "fixture_selection": "first split=train frame=0 in existing eight-frame parity fixture",
+  "checks": [
+    "exact lambda0 native loss/RNG/gradient/one AdamW update parity",
+    "positive finite auxiliary encoder and head gradients; no decoder gradient",
+    "initial posterior mean unchanged by later feature input, zero future input gradient",
+    "training-only provenance and checkpoint unchanged"
+  ],
+  "not_claimed": [
+    "No improved representation or policy performance",
+    "No new training checkpoint",
+    "No held-out evaluation",
+    "No GPU or BF16 parity"
+  ],
+  "sha256": {
+    "/home/zifanz4/openwam-experiments/scripts/goalaux/objective.py": "edfe6dde20bd82ed96e748f4bee3b532cecba297cd72dd78d42c815a847c0fb0",
+    "/home/zifanz4/openwam-experiments/scripts/goalaux/check_contract.py": "9b6078283b73ffbcdeed8b147e9fdb7abad44c9a1bff199ef1dafd6ecfe60aea",
+    "/data02/zifanz4/openwam-experiments/results/layers-20260922/L12/seed42/final.pt": "24c0646312e3e668972fec64d79162e58d0005c529421eed3d8651998e636415",
+    "/data02/zifanz4/openwam-experiments/results/layers-20260922/transfer/parity-fixture.pt": "a89f7193dcd381362be880c2bec146751a42e244c11045b286f71e7c62f5131d",
+    "/data02/zifanz4/openwam-experiments/results/layers-20260922/initial-goal/training-samples.json": "222ca03a38cddc62808c061acad294292db1cb89f2105faae2b5524b9696c62b",
+    "/data02/zifanz4/openwam-experiments/results/layers-20260922/initial-goal/constants.json": "c8e2bb554b419d4b35d7c97b03d6683b54df3b5f5c7895cd01ee760ec57f12d1",
+    "/data02/zifanz4/openwam-experiments/OpenWAM/openwam/model/video_backbone/encoder/svae/model.py": "3f042c5d19bed2d0c8e7f385af0266aea73b8bd49f37736c3356e5044997dfd1"
+  }
+}

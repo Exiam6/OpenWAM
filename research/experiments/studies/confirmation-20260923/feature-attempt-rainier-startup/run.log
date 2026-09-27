@@ -1,0 +1,4 @@
+/data02/zifanz4/openwam-experiments/env/bin/python: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.35' not found (required by /data02/zifanz4/openwam-experiments/env/bin/python)
+/data02/zifanz4/openwam-experiments/env/bin/python: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.33' not found (required by /data02/zifanz4/openwam-experiments/env/bin/python)
+/data02/zifanz4/openwam-experiments/env/bin/python: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /data02/zifanz4/openwam-experiments/env/bin/python)
+/data02/zifanz4/openwam-experiments/env/bin/python: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /data02/zifanz4/openwam-experiments/env/bin/python)

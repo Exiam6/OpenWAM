@@ -1,0 +1,1603 @@
+{
+  "scope": "Post-hoc explanation of unusually large noise errors. All routes/tasks/noise levels, no selected examples, no benefit claim.",
+  "conditions": {
+    "state/Wan48_native_scale/adjust_bottle/noise0.10": {
+      "training_std_min_median_max": [
+        0.04378356517270601,
+        0.14318161178140854,
+        0.3533884805759315
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0067840202098794,
+      "noisy_train_standardized_RMS": 6.216775612158888,
+      "paired_standardized_feature_delta": {
+        "RMS": 6.198638833039681,
+        "mean_shift_energy_fraction": 0.9886875982566196
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 6.163735802233347,
+        "mean_shift_energy_fraction": 0.987385541002824
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/Wan48_native_scale/adjust_bottle/noise0.04": {
+      "training_std_min_median_max": [
+        0.04378356517270601,
+        0.14318161178140854,
+        0.3533884805759315
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0067840202098794,
+      "noisy_train_standardized_RMS": 5.064252196289283,
+      "paired_standardized_feature_delta": {
+        "RMS": 5.019148569787081,
+        "mean_shift_energy_fraction": 0.985008114997222
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 5.920246311683798,
+        "mean_shift_energy_fraction": 0.9874021757795343
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/Wan48_native_scale/handover_block/noise0.10": {
+      "training_std_min_median_max": [
+        0.03629255698462886,
+        0.14036204436087868,
+        0.37359754832793807
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.016766075617184,
+      "noisy_train_standardized_RMS": 8.031562734398808,
+      "paired_standardized_feature_delta": {
+        "RMS": 8.039945028653394,
+        "mean_shift_energy_fraction": 0.992085489940399
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 9.26038631601911,
+        "mean_shift_energy_fraction": 0.9867976882097923
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/Wan48_native_scale/handover_block/noise0.04": {
+      "training_std_min_median_max": [
+        0.03629255698462886,
+        0.14036204436087868,
+        0.37359754832793807
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.016766075617184,
+      "noisy_train_standardized_RMS": 6.598238957577808,
+      "paired_standardized_feature_delta": {
+        "RMS": 6.584508826865337,
+        "mean_shift_energy_fraction": 0.9901060076392354
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 6.790578804219025,
+        "mean_shift_energy_fraction": 0.9743324401896565
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/Wan48_native_scale/place_object_basket/noise0.10": {
+      "training_std_min_median_max": [
+        0.05062623120944527,
+        0.12512357235452576,
+        0.3477856886496318
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0072874063403572,
+      "noisy_train_standardized_RMS": 5.777925123891192,
+      "paired_standardized_feature_delta": {
+        "RMS": 5.78872488926135,
+        "mean_shift_energy_fraction": 0.9890377222748452
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 5.008927759483375,
+        "mean_shift_energy_fraction": 0.9958157004629077
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/Wan48_native_scale/place_object_basket/noise0.04": {
+      "training_std_min_median_max": [
+        0.05062623120944527,
+        0.12512357235452576,
+        0.3477856886496318
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0072874063403572,
+      "noisy_train_standardized_RMS": 4.592387867069134,
+      "paired_standardized_feature_delta": {
+        "RMS": 4.572821311603489,
+        "mean_shift_energy_fraction": 0.9866162936591378
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 3.565165150632409,
+        "mean_shift_energy_fraction": 0.992835704105194
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/Wan48_native_scale/adjust_bottle/noise0.10": {
+      "training_std_min_median_max": [
+        0.007089381704436398,
+        0.030789318871104573,
+        0.1589755840120281
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9565279442009837,
+      "noisy_train_standardized_RMS": 26.509883222233032,
+      "paired_standardized_feature_delta": {
+        "RMS": 26.578085745454896,
+        "mean_shift_energy_fraction": 0.9974070274372534
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 21.20641924718799,
+        "mean_shift_energy_fraction": 0.9983567677612517
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/Wan48_native_scale/adjust_bottle/noise0.04": {
+      "training_std_min_median_max": [
+        0.007089381704436398,
+        0.030789318871104573,
+        0.1589755840120281
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9565279442009837,
+      "noisy_train_standardized_RMS": 22.169304613671937,
+      "paired_standardized_feature_delta": {
+        "RMS": 22.224621185040387,
+        "mean_shift_energy_fraction": 0.996733320783654
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 15.827113167015193,
+        "mean_shift_energy_fraction": 0.997411220318236
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/Wan48_native_scale/handover_block/noise0.10": {
+      "training_std_min_median_max": [
+        0.01196188728745992,
+        0.0368021975921336,
+        0.10352598097153314
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.994437633691908,
+      "noisy_train_standardized_RMS": 21.559350803079973,
+      "paired_standardized_feature_delta": {
+        "RMS": 21.6270520806504,
+        "mean_shift_energy_fraction": 0.9969829192534212
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 8.236864229036662,
+        "mean_shift_energy_fraction": 0.9972444186378483
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/Wan48_native_scale/handover_block/noise0.04": {
+      "training_std_min_median_max": [
+        0.01196188728745992,
+        0.0368021975921336,
+        0.10352598097153314
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.994437633691908,
+      "noisy_train_standardized_RMS": 17.797657664411965,
+      "paired_standardized_feature_delta": {
+        "RMS": 17.846836857419756,
+        "mean_shift_energy_fraction": 0.996239570200328
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 5.98323156049214,
+        "mean_shift_energy_fraction": 0.9967156082504979
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/Wan48_native_scale/place_object_basket/noise0.10": {
+      "training_std_min_median_max": [
+        0.02182790832604248,
+        0.06664031907496694,
+        0.2735720020964514
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0614018047537053,
+      "noisy_train_standardized_RMS": 9.802049103593818,
+      "paired_standardized_feature_delta": {
+        "RMS": 9.850764571581225,
+        "mean_shift_energy_fraction": 0.9939049394940209
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 4.652220351233825,
+        "mean_shift_energy_fraction": 0.9860237470422534
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/Wan48_native_scale/place_object_basket/noise0.04": {
+      "training_std_min_median_max": [
+        0.02182790832604248,
+        0.06664031907496694,
+        0.2735720020964514
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0614018047537053,
+      "noisy_train_standardized_RMS": 7.896525971935935,
+      "paired_standardized_feature_delta": {
+        "RMS": 7.933044064616239,
+        "mean_shift_energy_fraction": 0.993019716176573
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 4.138056543414658,
+        "mean_shift_energy_fraction": 0.9870431466387412
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/Wan48_per_token_layernorm/adjust_bottle/noise0.10": {
+      "training_std_min_median_max": [
+        0.06335351380408345,
+        0.16255708875712593,
+        0.4160414816567725
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0041235276788452,
+      "noisy_train_standardized_RMS": 5.589329658488203,
+      "paired_standardized_feature_delta": {
+        "RMS": 5.574099975807065,
+        "mean_shift_energy_fraction": 0.9844131219549648
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 4.028453237932976,
+        "mean_shift_energy_fraction": 0.9672053264204212
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/Wan48_per_token_layernorm/adjust_bottle/noise0.04": {
+      "training_std_min_median_max": [
+        0.06335351380408345,
+        0.16255708875712593,
+        0.4160414816567725
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0041235276788452,
+      "noisy_train_standardized_RMS": 4.751345226306959,
+      "paired_standardized_feature_delta": {
+        "RMS": 4.707050951509041,
+        "mean_shift_energy_fraction": 0.9825431910675586
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 3.6803466687051727,
+        "mean_shift_energy_fraction": 0.9662047514354839
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/Wan48_per_token_layernorm/handover_block/noise0.10": {
+      "training_std_min_median_max": [
+        0.038531838099020464,
+        0.14600869915581544,
+        0.47567836003154185
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0319140722611349,
+      "noisy_train_standardized_RMS": 7.956591666283736,
+      "paired_standardized_feature_delta": {
+        "RMS": 7.962833620807982,
+        "mean_shift_energy_fraction": 0.9896999263152512
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 8.283838459129955,
+        "mean_shift_energy_fraction": 0.9790357230430451
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/Wan48_per_token_layernorm/handover_block/noise0.04": {
+      "training_std_min_median_max": [
+        0.038531838099020464,
+        0.14600869915581544,
+        0.47567836003154185
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0319140722611349,
+      "noisy_train_standardized_RMS": 6.779042696957985,
+      "paired_standardized_feature_delta": {
+        "RMS": 6.767045921054904,
+        "mean_shift_energy_fraction": 0.987978118079429
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 6.213603455928399,
+        "mean_shift_energy_fraction": 0.9639518407904852
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/Wan48_per_token_layernorm/place_object_basket/noise0.10": {
+      "training_std_min_median_max": [
+        0.06539667110117657,
+        0.15163033792571173,
+        0.4300202203209606
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9981763999088149,
+      "noisy_train_standardized_RMS": 5.576592681508113,
+      "paired_standardized_feature_delta": {
+        "RMS": 5.609006762065609,
+        "mean_shift_energy_fraction": 0.986824015766093
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 4.337745227400113,
+        "mean_shift_energy_fraction": 0.9937577903798989
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/Wan48_per_token_layernorm/place_object_basket/noise0.04": {
+      "training_std_min_median_max": [
+        0.06539667110117657,
+        0.15163033792571173,
+        0.4300202203209606
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9981763999088149,
+      "noisy_train_standardized_RMS": 4.630589079165076,
+      "paired_standardized_feature_delta": {
+        "RMS": 4.632980598867445,
+        "mean_shift_energy_fraction": 0.985796629608669
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 3.1494643200472443,
+        "mean_shift_energy_fraction": 0.9904714761877693
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/Wan48_per_token_layernorm/adjust_bottle/noise0.10": {
+      "training_std_min_median_max": [
+        0.007976778449937222,
+        0.034907955516626094,
+        0.2423043711163106
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.964728714712575,
+      "noisy_train_standardized_RMS": 26.384226870442383,
+      "paired_standardized_feature_delta": {
+        "RMS": 26.446154841725214,
+        "mean_shift_energy_fraction": 0.9973980677933487
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 22.241476423977836,
+        "mean_shift_energy_fraction": 0.9987961026902952
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/Wan48_per_token_layernorm/adjust_bottle/noise0.04": {
+      "training_std_min_median_max": [
+        0.007976778449937222,
+        0.034907955516626094,
+        0.2423043711163106
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.964728714712575,
+      "noisy_train_standardized_RMS": 22.062032762381502,
+      "paired_standardized_feature_delta": {
+        "RMS": 22.109474741117648,
+        "mean_shift_energy_fraction": 0.9966829130968313
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 16.954588789736004,
+        "mean_shift_energy_fraction": 0.99814669637529
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/Wan48_per_token_layernorm/handover_block/noise0.10": {
+      "training_std_min_median_max": [
+        0.007693297685155909,
+        0.038485976149826934,
+        0.10067640349712424
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9831895677676764,
+      "noisy_train_standardized_RMS": 23.160713419033186,
+      "paired_standardized_feature_delta": {
+        "RMS": 23.21415637868069,
+        "mean_shift_energy_fraction": 0.9973430536107231
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 20.71803392900479,
+        "mean_shift_energy_fraction": 0.9992773309581128
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/Wan48_per_token_layernorm/handover_block/noise0.04": {
+      "training_std_min_median_max": [
+        0.007693297685155909,
+        0.038485976149826934,
+        0.10067640349712424
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9831895677676764,
+      "noisy_train_standardized_RMS": 18.839776182070548,
+      "paired_standardized_feature_delta": {
+        "RMS": 18.877552378028966,
+        "mean_shift_energy_fraction": 0.9965573535475808
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 16.432908573168877,
+        "mean_shift_energy_fraction": 0.9991188894031306
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/Wan48_per_token_layernorm/place_object_basket/noise0.10": {
+      "training_std_min_median_max": [
+        0.026649710854607767,
+        0.0774109341027904,
+        0.35456024207468684
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.074198966108943,
+      "noisy_train_standardized_RMS": 9.599877510506602,
+      "paired_standardized_feature_delta": {
+        "RMS": 9.658231920082734,
+        "mean_shift_energy_fraction": 0.9934993867316801
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 3.6146744729031375,
+        "mean_shift_energy_fraction": 0.9764202804764501
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/Wan48_per_token_layernorm/place_object_basket/noise0.04": {
+      "training_std_min_median_max": [
+        0.026649710854607767,
+        0.0774109341027904,
+        0.35456024207468684
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.074198966108943,
+      "noisy_train_standardized_RMS": 7.912950562454988,
+      "paired_standardized_feature_delta": {
+        "RMS": 7.95299368143433,
+        "mean_shift_energy_fraction": 0.9928741028581044
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 3.023472450818546,
+        "mean_shift_energy_fraction": 0.9758571393458572
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_raw/adjust_bottle/noise0.10": {
+      "training_std_min_median_max": [
+        0.046608288820303205,
+        0.3090637025789589,
+        2.269258841451997
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.003462294703983,
+      "noisy_train_standardized_RMS": 1.4012264553138774,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.3095370931065595,
+        "mean_shift_energy_fraction": 0.48229659515468903
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.8058928568400064,
+        "mean_shift_energy_fraction": 0.4712604088268908
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_raw/adjust_bottle/noise0.04": {
+      "training_std_min_median_max": [
+        0.046608288820303205,
+        0.3090637025789589,
+        2.269258841451997
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.003462294703983,
+      "noisy_train_standardized_RMS": 1.1955293464387888,
+      "paired_standardized_feature_delta": {
+        "RMS": 0.9844482409871252,
+        "mean_shift_energy_fraction": 0.46979067408203345
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.5875363324936562,
+        "mean_shift_energy_fraction": 0.3279996955552617
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_raw/handover_block/noise0.10": {
+      "training_std_min_median_max": [
+        0.04802469820600199,
+        0.30536569150983034,
+        1.2794035596910691
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0133335793961935,
+      "noisy_train_standardized_RMS": 1.4101015473910523,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.355995002871781,
+        "mean_shift_energy_fraction": 0.45071956690488585
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.8320071810090583,
+        "mean_shift_energy_fraction": 0.5091150254566364
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_raw/handover_block/noise0.04": {
+      "training_std_min_median_max": [
+        0.04802469820600199,
+        0.30536569150983034,
+        1.2794035596910691
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0133335793961935,
+      "noisy_train_standardized_RMS": 1.2219784502977076,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.0396992128632485,
+        "mean_shift_energy_fraction": 0.44447258963380415
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.5638535124422295,
+        "mean_shift_energy_fraction": 0.38034348150255665
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_raw/place_object_basket/noise0.10": {
+      "training_std_min_median_max": [
+        0.05428140170805218,
+        0.2809630648491743,
+        1.548216104380845
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9962436700297879,
+      "noisy_train_standardized_RMS": 1.4204725968284202,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.3441874531583389,
+        "mean_shift_energy_fraction": 0.47925359758886915
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.8881893269332508,
+        "mean_shift_energy_fraction": 0.36272844328324577
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_raw/place_object_basket/noise0.04": {
+      "training_std_min_median_max": [
+        0.05428140170805218,
+        0.2809630648491743,
+        1.548216104380845
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9962436700297879,
+      "noisy_train_standardized_RMS": 1.1985239693231413,
+      "paired_standardized_feature_delta": {
+        "RMS": 0.9876678289445336,
+        "mean_shift_energy_fraction": 0.47186847473612986
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.6303710549623018,
+        "mean_shift_energy_fraction": 0.3607205008612959
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_raw/adjust_bottle/noise0.10": {
+      "training_std_min_median_max": [
+        0.02806303118208956,
+        0.1671355778591887,
+        0.4612835253070609
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0666907034220336,
+      "noisy_train_standardized_RMS": 2.564979227593286,
+      "paired_standardized_feature_delta": {
+        "RMS": 2.6424731901867387,
+        "mean_shift_energy_fraction": 0.7527108163976423
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.4295752535090064,
+        "mean_shift_energy_fraction": 0.31105718737333765
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_raw/adjust_bottle/noise0.04": {
+      "training_std_min_median_max": [
+        0.02806303118208956,
+        0.1671355778591887,
+        0.4612835253070609
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0666907034220336,
+      "noisy_train_standardized_RMS": 2.1754979317739895,
+      "paired_standardized_feature_delta": {
+        "RMS": 2.208064256584847,
+        "mean_shift_energy_fraction": 0.7681873207686939
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.33247569282041595,
+        "mean_shift_energy_fraction": 0.1806644252000595
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_raw/handover_block/noise0.10": {
+      "training_std_min_median_max": [
+        0.02375216770825456,
+        0.16961781700242928,
+        0.5719012348199579
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0291083175310947,
+      "noisy_train_standardized_RMS": 2.511810460445677,
+      "paired_standardized_feature_delta": {
+        "RMS": 2.6050862764640623,
+        "mean_shift_energy_fraction": 0.7715310327567652
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.538418177901876,
+        "mean_shift_energy_fraction": 0.2519801856831397
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_raw/handover_block/noise0.04": {
+      "training_std_min_median_max": [
+        0.02375216770825456,
+        0.16961781700242928,
+        0.5719012348199579
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0291083175310947,
+      "noisy_train_standardized_RMS": 2.152868886466206,
+      "paired_standardized_feature_delta": {
+        "RMS": 2.2425201453296673,
+        "mean_shift_energy_fraction": 0.7807070054504616
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.5443446519529248,
+        "mean_shift_energy_fraction": 0.5633415348333409
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_raw/place_object_basket/noise0.10": {
+      "training_std_min_median_max": [
+        0.02839007722213441,
+        0.19387693744532414,
+        0.9144936150064311
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0589912239033947,
+      "noisy_train_standardized_RMS": 2.097269949502233,
+      "paired_standardized_feature_delta": {
+        "RMS": 2.10516998851162,
+        "mean_shift_energy_fraction": 0.6341030928302481
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.4860190010272533,
+        "mean_shift_energy_fraction": 0.4214543394033249
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_raw/place_object_basket/noise0.04": {
+      "training_std_min_median_max": [
+        0.02839007722213441,
+        0.19387693744532414,
+        0.9144936150064311
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0589912239033947,
+      "noisy_train_standardized_RMS": 1.5833258395098138,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.5208592066481692,
+        "mean_shift_energy_fraction": 0.6068844457526434
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.2668324578846665,
+        "mean_shift_energy_fraction": 0.26325574440480415
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_pca/adjust_bottle/noise0.10": {
+      "training_std_min_median_max": [
+        0.16918965578328643,
+        0.3784308685124672,
+        2.0327092246662275
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0049434906147765,
+      "noisy_train_standardized_RMS": 1.2042670317996376,
+      "paired_standardized_feature_delta": {
+        "RMS": 0.9507047296729106,
+        "mean_shift_energy_fraction": 0.408356448777708
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.5882510949052164,
+        "mean_shift_energy_fraction": 0.20059972421092498
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_pca/adjust_bottle/noise0.04": {
+      "training_std_min_median_max": [
+        0.16918965578328643,
+        0.3784308685124672,
+        2.0327092246662275
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0049434906147765,
+      "noisy_train_standardized_RMS": 1.0357319580969688,
+      "paired_standardized_feature_delta": {
+        "RMS": 0.6734275726591685,
+        "mean_shift_energy_fraction": 0.3241900728121602
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.46322266465434825,
+        "mean_shift_energy_fraction": 0.32871911687667765
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_pca/handover_block/noise0.10": {
+      "training_std_min_median_max": [
+        0.15188595627903434,
+        0.4022168453421643,
+        1.9091798886958058
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0010659973969867,
+      "noisy_train_standardized_RMS": 1.1530477331576725,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.0031155282458935,
+        "mean_shift_energy_fraction": 0.3416450190947576
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.677362544352398,
+        "mean_shift_energy_fraction": 0.36885415173629577
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_pca/handover_block/noise0.04": {
+      "training_std_min_median_max": [
+        0.15188595627903434,
+        0.4022168453421643,
+        1.9091798886958058
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0010659973969867,
+      "noisy_train_standardized_RMS": 1.0635494797110407,
+      "paired_standardized_feature_delta": {
+        "RMS": 0.7791441198917484,
+        "mean_shift_energy_fraction": 0.44263649353543943
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.49060380170529205,
+        "mean_shift_energy_fraction": 0.3367778150696544
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_pca/place_object_basket/noise0.10": {
+      "training_std_min_median_max": [
+        0.16938767569543683,
+        0.3380979827552913,
+        1.705397869808825
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9812661564600355,
+      "noisy_train_standardized_RMS": 1.137496031418778,
+      "paired_standardized_feature_delta": {
+        "RMS": 0.9148179079204971,
+        "mean_shift_energy_fraction": 0.3502523674864958
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.36918115336067875,
+        "mean_shift_energy_fraction": 0.20439695568887828
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_pca/place_object_basket/noise0.04": {
+      "training_std_min_median_max": [
+        0.16938767569543683,
+        0.3380979827552913,
+        1.705397869808825
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9812661564600355,
+      "noisy_train_standardized_RMS": 1.0076199904689211,
+      "paired_standardized_feature_delta": {
+        "RMS": 0.6729344556610686,
+        "mean_shift_energy_fraction": 0.3444628176660688
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.2846605242207544,
+        "mean_shift_energy_fraction": 0.1646359079328753
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_pca/adjust_bottle/noise0.10": {
+      "training_std_min_median_max": [
+        0.05966148978886012,
+        0.1334205739721076,
+        0.40405352421538426
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.1060028454807784,
+      "noisy_train_standardized_RMS": 2.434170213036034,
+      "paired_standardized_feature_delta": {
+        "RMS": 2.4003045539472287,
+        "mean_shift_energy_fraction": 0.7253990734692143
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.7201231398588167,
+        "mean_shift_energy_fraction": 0.5902396446228388
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_pca/adjust_bottle/noise0.04": {
+      "training_std_min_median_max": [
+        0.05966148978886012,
+        0.1334205739721076,
+        0.40405352421538426
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.1060028454807784,
+      "noisy_train_standardized_RMS": 2.00607000494817,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.9675273093552839,
+        "mean_shift_energy_fraction": 0.738839035383587
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.6416406438842457,
+        "mean_shift_energy_fraction": 0.6473322385631332
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_pca/handover_block/noise0.10": {
+      "training_std_min_median_max": [
+        0.06627797928938448,
+        0.15426373133010296,
+        0.4452610772643651
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0739137162755765,
+      "noisy_train_standardized_RMS": 2.506829983919672,
+      "paired_standardized_feature_delta": {
+        "RMS": 2.496042395336012,
+        "mean_shift_energy_fraction": 0.7835685435338515
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.7225433373098756,
+        "mean_shift_energy_fraction": 0.4361348381033783
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_pca/handover_block/noise0.04": {
+      "training_std_min_median_max": [
+        0.06627797928938448,
+        0.15426373133010296,
+        0.4452610772643651
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0739137162755765,
+      "noisy_train_standardized_RMS": 2.1767599773107453,
+      "paired_standardized_feature_delta": {
+        "RMS": 2.2285634682832245,
+        "mean_shift_energy_fraction": 0.7974730572472745
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 1.0532604671192,
+        "mean_shift_energy_fraction": 0.7970268131838689
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_pca/place_object_basket/noise0.10": {
+      "training_std_min_median_max": [
+        0.07772304929962148,
+        0.18103325421307087,
+        0.9339211171345764
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.022542263380125,
+      "noisy_train_standardized_RMS": 1.6929424111899005,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.6680033065092148,
+        "mean_shift_energy_fraction": 0.5577186727562414
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.8209083923407721,
+        "mean_shift_energy_fraction": 0.7343023222411327
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_pca/place_object_basket/noise0.04": {
+      "training_std_min_median_max": [
+        0.07772304929962148,
+        0.18103325421307087,
+        0.9339211171345764
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.022542263380125,
+      "noisy_train_standardized_RMS": 1.2463101450084977,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.1534736788930084,
+        "mean_shift_energy_fraction": 0.46643555112384805
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.5248225996096064,
+        "mean_shift_energy_fraction": 0.7590195858344925
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae42/adjust_bottle/noise0.10": {
+      "training_std_min_median_max": [
+        0.2619328212096128,
+        0.41990255355224354,
+        0.8513324329390916
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9943321149392639,
+      "noisy_train_standardized_RMS": 1.2208773679943972,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.0268951756247382,
+        "mean_shift_energy_fraction": 0.4171189349903191
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.5596450265298145,
+        "mean_shift_energy_fraction": 0.1840508551499647
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae42/adjust_bottle/noise0.04": {
+      "training_std_min_median_max": [
+        0.2619328212096128,
+        0.41990255355224354,
+        0.8513324329390916
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9943321149392639,
+      "noisy_train_standardized_RMS": 1.0585967500208162,
+      "paired_standardized_feature_delta": {
+        "RMS": 0.7407125133878962,
+        "mean_shift_energy_fraction": 0.3751835220251736
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.463432424104767,
+        "mean_shift_energy_fraction": 0.2427070182977859
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae42/handover_block/noise0.10": {
+      "training_std_min_median_max": [
+        0.245023033203191,
+        0.43367682917253614,
+        0.9165064135947032
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.003849390592277,
+      "noisy_train_standardized_RMS": 1.2408152335907023,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.106299317752327,
+        "mean_shift_energy_fraction": 0.35601429814301716
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.6523191354903236,
+        "mean_shift_energy_fraction": 0.2599364134080522
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae42/handover_block/noise0.04": {
+      "training_std_min_median_max": [
+        0.245023033203191,
+        0.43367682917253614,
+        0.9165064135947032
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.003849390592277,
+      "noisy_train_standardized_RMS": 1.0983662670939922,
+      "paired_standardized_feature_delta": {
+        "RMS": 0.8323490752405265,
+        "mean_shift_energy_fraction": 0.3755490592066072
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.38760778911295735,
+        "mean_shift_energy_fraction": 0.14674638718920588
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae42/place_object_basket/noise0.10": {
+      "training_std_min_median_max": [
+        0.21919829991202433,
+        0.3787166265004044,
+        0.6891734222495051
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9828965843745128,
+      "noisy_train_standardized_RMS": 1.1854495137890644,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.0217593719685976,
+        "mean_shift_energy_fraction": 0.38076267545034076
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.417680504305662,
+        "mean_shift_energy_fraction": 0.19821483092493072
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae42/place_object_basket/noise0.04": {
+      "training_std_min_median_max": [
+        0.21919829991202433,
+        0.3787166265004044,
+        0.6891734222495051
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9828965843745128,
+      "noisy_train_standardized_RMS": 1.0446180739642479,
+      "paired_standardized_feature_delta": {
+        "RMS": 0.7391858538915103,
+        "mean_shift_energy_fraction": 0.36709897964134164
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.29639788415572893,
+        "mean_shift_energy_fraction": 0.1314742743753999
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae42/adjust_bottle/noise0.10": {
+      "training_std_min_median_max": [
+        0.09512730938206271,
+        0.217994336740747,
+        0.3807537577455281
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0404156256455122,
+      "noisy_train_standardized_RMS": 1.9401157796490978,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.9759948223768042,
+        "mean_shift_energy_fraction": 0.6928488499325919
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.41065347147400555,
+        "mean_shift_energy_fraction": 0.24827304949476778
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae42/adjust_bottle/noise0.04": {
+      "training_std_min_median_max": [
+        0.09512730938206271,
+        0.217994336740747,
+        0.3807537577455281
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0404156256455122,
+      "noisy_train_standardized_RMS": 1.599688384026552,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.5874247502340957,
+        "mean_shift_energy_fraction": 0.6811019558259732
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.3274371728675336,
+        "mean_shift_energy_fraction": 0.07520317981776964
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae42/handover_block/noise0.10": {
+      "training_std_min_median_max": [
+        0.11757890959249714,
+        0.22379046298712463,
+        0.5982215960253424
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.988524564837283,
+      "noisy_train_standardized_RMS": 2.1476432144189053,
+      "paired_standardized_feature_delta": {
+        "RMS": 2.2175401841105193,
+        "mean_shift_energy_fraction": 0.737694412891548
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.4796755215774679,
+        "mean_shift_energy_fraction": 0.4486854496178829
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae42/handover_block/noise0.04": {
+      "training_std_min_median_max": [
+        0.11757890959249714,
+        0.22379046298712463,
+        0.5982215960253424
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.988524564837283,
+      "noisy_train_standardized_RMS": 1.8169295006208466,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.8773153748065408,
+        "mean_shift_energy_fraction": 0.7460047258951769
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.3102124022599186,
+        "mean_shift_energy_fraction": 0.36065809515231784
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae42/place_object_basket/noise0.10": {
+      "training_std_min_median_max": [
+        0.11623092164013919,
+        0.2424981440705108,
+        0.7015887594339482
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.016651957253819,
+      "noisy_train_standardized_RMS": 1.6362023871340565,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.6277077335289707,
+        "mean_shift_energy_fraction": 0.5236351366347948
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.47672214751368214,
+        "mean_shift_energy_fraction": 0.18339997432474608
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae42/place_object_basket/noise0.04": {
+      "training_std_min_median_max": [
+        0.11623092164013919,
+        0.2424981440705108,
+        0.7015887594339482
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.016651957253819,
+      "noisy_train_standardized_RMS": 1.277072040637173,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.1802711642054504,
+        "mean_shift_energy_fraction": 0.5233566878524349
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.3161136226487045,
+        "mean_shift_energy_fraction": 0.3310207597298165
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae43/adjust_bottle/noise0.10": {
+      "training_std_min_median_max": [
+        0.22295528238128584,
+        0.40003680970206046,
+        0.8966554136917794
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.990416844419996,
+      "noisy_train_standardized_RMS": 1.235222650070284,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.063670015003275,
+        "mean_shift_energy_fraction": 0.42477826621708636
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.6279483550719478,
+        "mean_shift_energy_fraction": 0.18979021812697247
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae43/adjust_bottle/noise0.04": {
+      "training_std_min_median_max": [
+        0.22295528238128584,
+        0.40003680970206046,
+        0.8966554136917794
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.990416844419996,
+      "noisy_train_standardized_RMS": 1.0807768558966935,
+      "paired_standardized_feature_delta": {
+        "RMS": 0.7779245606966332,
+        "mean_shift_energy_fraction": 0.40039431214225796
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.4886367419800525,
+        "mean_shift_energy_fraction": 0.27769760736044224
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae43/handover_block/noise0.10": {
+      "training_std_min_median_max": [
+        0.24154801892642752,
+        0.4369701579621413,
+        0.7408233423317103
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0071738088016988,
+      "noisy_train_standardized_RMS": 1.2368208647916195,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.1193654678937313,
+        "mean_shift_energy_fraction": 0.367210575346681
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.5997818899254018,
+        "mean_shift_energy_fraction": 0.09078369799377646
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae43/handover_block/noise0.04": {
+      "training_std_min_median_max": [
+        0.24154801892642752,
+        0.4369701579621413,
+        0.7408233423317103
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0071738088016988,
+      "noisy_train_standardized_RMS": 1.1017745268607515,
+      "paired_standardized_feature_delta": {
+        "RMS": 0.8555269918063408,
+        "mean_shift_energy_fraction": 0.38833822669289864
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.41477287827314036,
+        "mean_shift_energy_fraction": 0.10504528201185623
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae43/place_object_basket/noise0.10": {
+      "training_std_min_median_max": [
+        0.2586298384477949,
+        0.37948056390033436,
+        0.696317438727954
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9773429069404758,
+      "noisy_train_standardized_RMS": 1.1867920449135587,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.0253561178401007,
+        "mean_shift_energy_fraction": 0.38471947487428637
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.43520219821981176,
+        "mean_shift_energy_fraction": 0.23690507901870952
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae43/place_object_basket/noise0.04": {
+      "training_std_min_median_max": [
+        0.2586298384477949,
+        0.37948056390033436,
+        0.696317438727954
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9773429069404758,
+      "noisy_train_standardized_RMS": 1.0623760680197165,
+      "paired_standardized_feature_delta": {
+        "RMS": 0.7638110016802515,
+        "mean_shift_energy_fraction": 0.41513939990843224
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.33806126993257535,
+        "mean_shift_energy_fraction": 0.24449558666940124
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae43/adjust_bottle/noise0.10": {
+      "training_std_min_median_max": [
+        0.12491266775937646,
+        0.21261788165936793,
+        0.3846189491580538
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0175185518230438,
+      "noisy_train_standardized_RMS": 2.138218663748333,
+      "paired_standardized_feature_delta": {
+        "RMS": 2.1557867526594277,
+        "mean_shift_energy_fraction": 0.717618213523084
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.921908962990141,
+        "mean_shift_energy_fraction": 0.7180897389940631
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae43/adjust_bottle/noise0.04": {
+      "training_std_min_median_max": [
+        0.12491266775937646,
+        0.21261788165936793,
+        0.3846189491580538
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0175185518230438,
+      "noisy_train_standardized_RMS": 1.887093003864692,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.8275426948079914,
+        "mean_shift_energy_fraction": 0.7483514166921998
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.7986173923955017,
+        "mean_shift_energy_fraction": 0.7530055679960153
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae43/handover_block/noise0.10": {
+      "training_std_min_median_max": [
+        0.09862972584797143,
+        0.22753527504163418,
+        0.7229186103645658
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9981216631660403,
+      "noisy_train_standardized_RMS": 2.180483054173827,
+      "paired_standardized_feature_delta": {
+        "RMS": 2.2258413599528692,
+        "mean_shift_energy_fraction": 0.7554721462489093
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.4070626190981586,
+        "mean_shift_energy_fraction": 0.24457312292928396
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae43/handover_block/noise0.04": {
+      "training_std_min_median_max": [
+        0.09862972584797143,
+        0.22753527504163418,
+        0.7229186103645658
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9981216631660403,
+      "noisy_train_standardized_RMS": 1.9849116400360787,
+      "paired_standardized_feature_delta": {
+        "RMS": 2.0162750230804476,
+        "mean_shift_energy_fraction": 0.7830477472490956
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.3014122894713189,
+        "mean_shift_energy_fraction": 0.31270782236093086
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae43/place_object_basket/noise0.10": {
+      "training_std_min_median_max": [
+        0.13598871348233374,
+        0.24289078030619793,
+        0.4476929774491017
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0395320313680572,
+      "noisy_train_standardized_RMS": 1.6320335888610327,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.6415610850186821,
+        "mean_shift_energy_fraction": 0.5329634075769417
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.525785044127968,
+        "mean_shift_energy_fraction": 0.6246904242063107
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae43/place_object_basket/noise0.04": {
+      "training_std_min_median_max": [
+        0.13598871348233374,
+        0.24289078030619793,
+        0.4476929774491017
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0395320313680572,
+      "noisy_train_standardized_RMS": 1.3017276802022744,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.2167257019218458,
+        "mean_shift_energy_fraction": 0.5486937514458196
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.3273018994112014,
+        "mean_shift_energy_fraction": 0.41470301079382293
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae44/adjust_bottle/noise0.10": {
+      "training_std_min_median_max": [
+        0.24483450415751248,
+        0.4098088928733744,
+        0.8707112715583406
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9953382618385708,
+      "noisy_train_standardized_RMS": 1.258437929711696,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.0734030631902045,
+        "mean_shift_energy_fraction": 0.4559727611530087
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.6985972836719367,
+        "mean_shift_energy_fraction": 0.28219545013220687
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae44/adjust_bottle/noise0.04": {
+      "training_std_min_median_max": [
+        0.24483450415751248,
+        0.4098088928733744,
+        0.8707112715583406
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9953382618385708,
+      "noisy_train_standardized_RMS": 1.0950186326322517,
+      "paired_standardized_feature_delta": {
+        "RMS": 0.7884344089280493,
+        "mean_shift_energy_fraction": 0.4259791220891309
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.5500595369803055,
+        "mean_shift_energy_fraction": 0.3042929741141683
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae44/handover_block/noise0.10": {
+      "training_std_min_median_max": [
+        0.23400028021406055,
+        0.4262700830292696,
+        0.8840175642250525
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0059233356814692,
+      "noisy_train_standardized_RMS": 1.275082644228218,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.1716216046730672,
+        "mean_shift_energy_fraction": 0.405989481881601
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.6034793869404814,
+        "mean_shift_energy_fraction": 0.2615027380366774
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae44/handover_block/noise0.04": {
+      "training_std_min_median_max": [
+        0.23400028021406055,
+        0.4262700830292696,
+        0.8840175642250525
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0059233356814692,
+      "noisy_train_standardized_RMS": 1.117540428149013,
+      "paired_standardized_feature_delta": {
+        "RMS": 0.8767272158218576,
+        "mean_shift_energy_fraction": 0.40564057969239914
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.39341344875190465,
+        "mean_shift_energy_fraction": 0.12013435272334085
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae44/place_object_basket/noise0.10": {
+      "training_std_min_median_max": [
+        0.23666235653996498,
+        0.380108252134599,
+        0.7322551348293903
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9843536189643427,
+      "noisy_train_standardized_RMS": 1.1916535066216054,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.0267213817572005,
+        "mean_shift_energy_fraction": 0.38027240776421306
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.4476751504929041,
+        "mean_shift_energy_fraction": 0.2599538089442014
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "state/L12_svae44/place_object_basket/noise0.04": {
+      "training_std_min_median_max": [
+        0.23666235653996498,
+        0.380108252134599,
+        0.7322551348293903
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9843536189643427,
+      "noisy_train_standardized_RMS": 1.0599144621925867,
+      "paired_standardized_feature_delta": {
+        "RMS": 0.7634805242138503,
+        "mean_shift_energy_fraction": 0.39735202190509006
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.3442431886148036,
+        "mean_shift_energy_fraction": 0.21972381243234623
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae44/adjust_bottle/noise0.10": {
+      "training_std_min_median_max": [
+        0.1062939059565214,
+        0.21404321863135223,
+        0.3729222468006814
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0072464139232555,
+      "noisy_train_standardized_RMS": 1.889727995104281,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.918371740969045,
+        "mean_shift_energy_fraction": 0.6692757941080039
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.6036495882190314,
+        "mean_shift_energy_fraction": 0.5043456539145584
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae44/adjust_bottle/noise0.04": {
+      "training_std_min_median_max": [
+        0.1062939059565214,
+        0.21404321863135223,
+        0.3729222468006814
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0072464139232555,
+      "noisy_train_standardized_RMS": 1.75655485528523,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.7276710194599185,
+        "mean_shift_energy_fraction": 0.7350215897865028
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.7794410945693648,
+        "mean_shift_energy_fraction": 0.7941037719546994
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae44/handover_block/noise0.10": {
+      "training_std_min_median_max": [
+        0.12443946223264962,
+        0.21974228806173884,
+        0.5086697676760595
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9828569711958589,
+      "noisy_train_standardized_RMS": 2.24735437942169,
+      "paired_standardized_feature_delta": {
+        "RMS": 2.324046765724362,
+        "mean_shift_energy_fraction": 0.7786665018736205
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.43719609813203525,
+        "mean_shift_energy_fraction": 0.35869844550707486
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae44/handover_block/noise0.04": {
+      "training_std_min_median_max": [
+        0.12443946223264962,
+        0.21974228806173884,
+        0.5086697676760595
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 0.9828569711958589,
+      "noisy_train_standardized_RMS": 1.9194922495380247,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.9903234460427712,
+        "mean_shift_energy_fraction": 0.7899035404415039
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.3431756261132814,
+        "mean_shift_energy_fraction": 0.4818846381124991
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae44/place_object_basket/noise0.10": {
+      "training_std_min_median_max": [
+        0.1251964247033983,
+        0.23726769024756345,
+        0.5398682646075901
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0265009921174446,
+      "noisy_train_standardized_RMS": 1.6800344478703628,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.6912095863904528,
+        "mean_shift_energy_fraction": 0.5390643857575608
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 1.280327767193036,
+        "mean_shift_energy_fraction": 0.8991668824645438
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    },
+    "goal/L12_svae44/place_object_basket/noise0.04": {
+      "training_std_min_median_max": [
+        0.1251964247033983,
+        0.23726769024756345,
+        0.5398682646075901
+      ],
+      "training_std_floor_count": 0,
+      "clean_train_standardized_RMS": 1.0265009921174446,
+      "noisy_train_standardized_RMS": 1.3280850875662584,
+      "paired_standardized_feature_delta": {
+        "RMS": 1.2625563073283033,
+        "mean_shift_energy_fraction": 0.5514356280382493
+      },
+      "paired_normalized_output_shift": {
+        "RMS": 0.6225997465266134,
+        "mean_shift_energy_fraction": 0.7725202258074131
+      },
+      "output_note": "state concatenates6translation and2gripper coordinates for this diagnostic; published state score weights the2groups equally"
+    }
+  },
+  "measures_only_saved_vectors_and_coefficients": true,
+  "no_correction_or_fit": true
+}

@@ -1,0 +1,117 @@
+{
+  "time": "2026-09-23T20:16:03.714539-05:00",
+  "trigger": "2026-09-23T20:15:01.254334-05:00",
+  "training": {
+    "pca-seed42": {
+      "opt_step": 805,
+      "metric_age_s": 1.810058832168579,
+      "finite": true,
+      "exit": null
+    },
+    "pca-seed43": {
+      "opt_step": 795,
+      "metric_age_s": 1.1930744647979736,
+      "finite": true,
+      "exit": null
+    },
+    "pca-seed44": {
+      "opt_step": 0,
+      "metric_age_s": null,
+      "finite": true,
+      "exit": null
+    },
+    "svae-seed42": {
+      "opt_step": 795,
+      "metric_age_s": 1.976813793182373,
+      "finite": true,
+      "exit": null
+    },
+    "svae-seed43": {
+      "opt_step": 809,
+      "metric_age_s": 0.9803833961486816,
+      "finite": true,
+      "exit": null
+    },
+    "svae-seed44": {
+      "opt_step": 0,
+      "metric_age_s": null,
+      "finite": true,
+      "exit": null
+    },
+    "wan-seed42": {
+      "opt_step": 726,
+      "metric_age_s": 0.49118924140930176,
+      "finite": true,
+      "exit": null
+    },
+    "wan-seed43": {
+      "opt_step": 750,
+      "metric_age_s": 0.6800796985626221,
+      "finite": true,
+      "exit": null
+    },
+    "wan-seed44": {
+      "opt_step": 0,
+      "metric_age_s": null,
+      "finite": true,
+      "exit": null
+    }
+  },
+  "scenes": {
+    "adjust_bottle": {
+      "accepted": 33,
+      "attempted": 44,
+      "updated": "2026-09-23T20:14:48.888152-05:00",
+      "last_outcome": "unstable_scene"
+    },
+    "handover_block": {
+      "accepted": 0,
+      "attempted": 0,
+      "updated": null,
+      "last_outcome": null
+    },
+    "place_object_basket": {
+      "accepted": 27,
+      "attempted": 43,
+      "updated": "2026-09-23T20:15:47.073176-05:00",
+      "last_outcome": "accepted"
+    }
+  },
+  "exits": {
+    "collection-slots/5": null,
+    "collection-slots/7": null,
+    "simulation-preflight": null,
+    "pipeline": null
+  },
+  "frozen_mismatches": [],
+  "pipeline": {
+    "time": "2026-09-23T20:15:41.938732-05:00",
+    "stage": "waiting_for_all_training_collection_smoke",
+    "all_ready": false
+  },
+  "free_gib": 292.9794921875,
+  "cm001_gpu": "0, GPU-c83b7d25-753e-2eae-f13b-8f9c3df9fa4b, 32223 MiB, 47 %, 0\n1, GPU-67b700c2-eb7a-93aa-28dd-57e8b2711926, 37991 MiB, 96 %, 0\n2, GPU-025b7fc9-8f25-5467-5c28-8e59884ab6d3, 31989 MiB, 89 %, 0\n3, GPU-bba13bfa-9dd6-0956-0e4e-122950cd69fe, 26 MiB, 0 %, 0\n4, GPU-e7aef4c0-2628-b4f8-34f4-579d62b7feb6, 5 MiB, 0 %, 0\n5, GPU-1758045c-5a5e-3661-bb58-a786fa745a17, 5245 MiB, 77 %, 0\n6, GPU-91a9a93b-b386-82f0-3009-88cc9bb79d06, 1 MiB, 0 %, 0\n7, GPU-3624eff9-444b-b72c-e32e-2bae7acbb8cb, 833 MiB, 26 %, 0\n",
+  "tmux": "exp\now-e2e-pipeline\now-e2e-scenes-5\now-e2e-scenes-7\now-e2e-smoke\n",
+  "decision": "Healthy ongoing work; finite fresh training metrics, expected expert rejection outcomes retained, no new terminal failure or completion. No experiment started or repeated this selfcheck.",
+  "next_step": "Continue the already launched frozen training/collection schedule. The next executable gate is the development simulator smoke after collection GPU7 release: verify that camera yaw changes rendered observations without changing scene state, that RNG resets are reproducible, and that native action/contact interfaces match. Only after it and all training/cohort integrity gates pass may paired learned-policy evaluation answer whether representation gains improve closed-loop success.",
+  "old_layers_window": "closed unchanged at2026-09-23T01:15:12-05:00",
+  "active_scope": "endtoend-20260923 authorized by latest direct user instruction",
+  "owned_gpu_slots": {
+    "cm009": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "cm001": [
+      5,
+      7
+    ]
+  },
+  "used_gpu_uncorrected_ecc": 0,
+  "excluded_gpu": "cm009GPU0 has2uncorrectedECC errors and remains unused",
+  "publication": "No new substantive result; existing NOT_FOUND404 retained, localHTML refreshed.",
+  "user_notification": "quiet"
+}

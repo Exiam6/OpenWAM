@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-09-23T00:45:58.062908-05:00",
+  "trigger": "2026-09-23T00:45:01.957947-05:00",
+  "terminal": {
+    "rae-noise-control-20260922": {
+      "exit": {
+        "finished_at": "2026-09-23T00:05:20.246213-05:00",
+        "exit_code": 0
+      },
+      "saved_audit_passed": true,
+      "result_completed_at": "2026-09-23T00:05:19.333558-05:00",
+      "result_scope": "Exploratory noise-adapted goal readouts on exposed60; full RAE and closed-loop control not evaluated",
+      "log_bytes": 4014,
+      "last_log_line_prefix": "COMPLETE {\"clean\": {\"Wan48_native_scale\": {\"noise_adapted_E\": 0.3684542366571268, \"original_clean_tr"
+    },
+    "rae-state-control-20260923": {
+      "exit": {
+        "finished_at": "2026-09-23T00:24:31.313997-05:00",
+        "exit_code": 0
+      },
+      "saved_audit_passed": true,
+      "result_completed_at": "2026-09-23T00:24:29.856138-05:00",
+      "result_scope": "Exploratory equal-noise short-state control on exposed60; no fullRAE or closedloop claims",
+      "log_bytes": 8953,
+      "last_log_line_prefix": "COMPLETE {\"clean\": {\"Wan48_native_scale\": {\"noise_adapted_E\": 0.31114385567654673, \"original_clean_t"
+    }
+  },
+  "unchanged_files": {
+    "result.json": true,
+    "exit.json": true,
+    "audit.json": true,
+    "protocol.json": true,
+    "freeze.json": true,
+    "run.log": true
+  },
+  "no_new_scores": true,
+  "completed_at": "2026-09-23T00:46:31.881533-05:00",
+  "scientific_state_changed": false,
+  "no_pause_markers": true,
+  "resource": {
+    "host": "glacier",
+    "gpu": "GPU-d13929da-086d-1be5-6414-dbf6aeded08e",
+    "memory_MiB": 0,
+    "utilization_percent": 0,
+    "uncorrected_volatile_ECC": 0,
+    "compute_processes": [],
+    "owned_experiment_processes": []
+  },
+  "next_step": "Completed goal/state controls, independent audits, local report, confirmation draft and documentation patch are archived in c4255fa. No new experiment fits inside the remaining original01:15:12CDTwindow on the validated full60scene collection path. Preserve all terminal results and check only for material state changes or deadline closure. The next scientific uncertainty is independent-scene reproducibility of compact-feature goal/translation gains and gripper tradeoffs; the prepared new60scene draft is not launched and would require a separate fixed budget. No old80 or expired56/60 replay, no extension.",
+  "original_deadline": "2026-09-23T01:15:12-05:00",
+  "publication_attempted": false,
+  "last_publication_lookup": "2026-09-23T00:29:47-05:00",
+  "last_publication_error": "SitesConnectorError: Sites project not found",
+  "notification": "none; unchanged"
+}

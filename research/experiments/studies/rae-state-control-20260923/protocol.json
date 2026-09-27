@@ -1,0 +1,37 @@
+{
+  "frozen_at": "2026-09-23T00:14:10.105971-05:00",
+  "scope": "Exploratory short-horizon state counterpart to completed equal-noise goal control, frozen native representations, same105train and exposed60eval; no fullRAE or policy benefit claim",
+  "question": "Does the goal-information advantage coexist with short-horizon state information after equal noise training?",
+  "deadline": "2026-09-23T01:15:12-05:00",
+  "max_wall_seconds": 1800,
+  "gpu_count": 1,
+  "cpu_threads": 8,
+  "max_new_cache_bytes": 1600000000,
+  "tasks": [
+    "adjust_bottle",
+    "handover_block",
+    "place_object_basket"
+  ],
+  "training": "same105episodes,12fixed current frames/episode,1260clean original frames;7variants each=8820rows; episode5fold seed20260922, all84rows/scene grouped",
+  "reuse": "all1260clean Wan/DINO vectors; all630completed initial-frame noisy vectors from goal control; all evaluation vectors; no oldencoder/policy evaluation replay",
+  "new_encoding": "only1155noninitial training frames x6noisedraws=6930images, same frozen encoder/reducer checkpoints, preprocessing, native DINO repeated9/currentlatent and Wan1frame",
+  "noise": "exact prior PCG64 seed20260922+original_episode_uid*100000+frame*10+draw, draw0..2 for sigma.10 and.04; one clean plus6noise eachframe, same draws acrossroutes",
+  "routes": [
+    "Wan48_native_scale",
+    "Wan48_per_token_layernorm",
+    "L12_raw",
+    "L12_pca",
+    "L12_svae42",
+    "L12_svae43",
+    "L12_svae44"
+  ],
+  "inputs": "same current visual pooled2x2 + identical current proprioception;192visual dims for Wan/PCA/SVAE,3072for rawDINO",
+  "target": "existing8dim4-frame-forward end-effector deltaXYZ6 and future gripper2; not controller-command/physical-contact ground truth",
+  "fit": "training-only per-feature and per-output mean/std; input/sqrt(dim); alpha[1e-4,.01,1,100], alpha_eff=7*alpha relative original12-frame clean fit, NOT84; separate translation/gripper alpha selected from same scene5fold CV",
+  "solver": "algebraically equivalent float64 primal/dual eigendecomposition reused acrossalpha and both outputgroups to avoid repeated large solves; prospective synthetic parity vs direct solve <=1e-9 prediction, mandatory residual audit after fit",
+  "hardware_gate": "reuse completed three-training-frame A40 parity and numerical limitations with unchanged frozen code/assets; no repeat of passed gate",
+  "scoring": "same all60old scenes,12frames/scene,clean and3drawseach sigma.04/.10; equal translation/gripper group means within episode,20episodes/task; alltask/seed/clean regressions retained;3SVAEseeds average per-episode error",
+  "statistics": "2000pairedtask-stratified episode bootstrap seed20260922; descriptive intervals only; allroutes vs BOTH Wan norms and each vs own originalcleantraining; no winner selection or new confirmatory threshold",
+  "resource": "same idleA40 uuid GPU-d13929da-086d-1be5-6414-dbf6aeded08e, mem<100MiB,util0,ECC0,no processes,cooperative lock; pause/deadline checked before launch",
+  "failure": "preserve any failure; no partial result scoring or silent tolerance changes; no old80/expired56replay; originaldeadline unchanged"
+}

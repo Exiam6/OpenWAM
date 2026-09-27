@@ -1,0 +1,27 @@
+{
+  "time": "2026-09-23T19:52:05.710381-05:00",
+  "passed": true,
+  "pipeline_hashes_unchanged": true,
+  "paired_training_prefix": {
+    "42": {
+      "matched_microbatches": 825,
+      "routes": [
+        "svae",
+        "pca",
+        "wan"
+      ]
+    },
+    "43": {
+      "matched_microbatches": 852,
+      "routes": [
+        "svae",
+        "pca",
+        "wan"
+      ]
+    }
+  },
+  "upstream_cpu_contract": "passed direct invocation; pytest unavailable",
+  "patch_apply_check": true,
+  "closed_loop_outcomes": 0,
+  "simulation_gate": "pending collection slot7 release"
+}

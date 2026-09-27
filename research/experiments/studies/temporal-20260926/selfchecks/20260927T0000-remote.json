@@ -1,0 +1,72 @@
+{
+  "time": "2026-09-27T00:05:11.448252-05:00",
+  "queues": {
+    "1": {
+      "terminal": {
+        "time": "2026-09-26T20:05:15.659156-05:00",
+        "returncode": 1,
+        "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+        "admitted": true,
+        "no_automatic_retry": true
+      },
+      "live_identity": null,
+      "expected_uid": 2093,
+      "expected_start_ticks": "1117643798"
+    },
+    "2": {
+      "terminal": null,
+      "live_identity": {
+        "uid": 2093,
+        "start_ticks": "1117643821"
+      },
+      "expected_uid": 2093,
+      "expected_start_ticks": "1117643821"
+    },
+    "3": {
+      "terminal": {
+        "time": "2026-09-26T22:27:38.615718-05:00",
+        "returncode": 1,
+        "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+        "admitted": true,
+        "no_automatic_retry": true
+      },
+      "live_identity": null,
+      "expected_uid": 2093,
+      "expected_start_ticks": "1117643846"
+    },
+    "4": {
+      "terminal": {
+        "time": "2026-09-26T20:02:50.210159-05:00",
+        "returncode": 1,
+        "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+        "admitted": true,
+        "no_automatic_retry": true
+      },
+      "live_identity": null,
+      "expected_uid": 2093,
+      "expected_start_ticks": "1117643869"
+    },
+    "5": {
+      "terminal": null,
+      "live_identity": {
+        "uid": 2093,
+        "start_ticks": "1117643889"
+      },
+      "expected_uid": 2093,
+      "expected_start_ticks": "1117643889"
+    },
+    "6": {
+      "terminal": {
+        "time": "2026-09-26T19:32:45.229302-05:00",
+        "returncode": 1,
+        "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+        "admitted": true,
+        "no_automatic_retry": true
+      },
+      "live_identity": null,
+      "expected_uid": 2093,
+      "expected_start_ticks": "1117643911"
+    }
+  },
+  "gpu": "0, 1 MiB, 0 %, 2\n1, 1 MiB, 0 %, 0\n2, 26641 MiB, 78 %, 0\n3, 1 MiB, 0 %, 0\n4, 1 MiB, 0 %, 0\n5, 26415 MiB, 78 %, 0\n6, 1 MiB, 0 %, 0\n7, 1 MiB, 0 %, 0\n"
+}

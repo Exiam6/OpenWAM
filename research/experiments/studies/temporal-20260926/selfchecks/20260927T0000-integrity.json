@@ -1,0 +1,27 @@
+{
+  "42": {
+    "lengths": [
+      4000,
+      4000
+    ],
+    "matching_prefix": true
+  },
+  "43": {
+    "lengths": [
+      4000,
+      4000
+    ],
+    "matching_prefix": true
+  },
+  "44": {
+    "lengths": [
+      1831,
+      1780
+    ],
+    "matching_prefix": true
+  },
+  "frozen": {
+    "count": 224,
+    "changed": []
+  }
+}

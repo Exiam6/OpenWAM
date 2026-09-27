@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-09-22T23:43:14.976353-05:00",
+  "reason": "glacier exposes Python3.14 system standard library; shared venv copied Python3.10 binary cannot locate matching encodings",
+  "scope": "private copied system standard library only, no global environment changes, no scientific threshold/source change",
+  "stdlib_bytes": 47716768,
+  "PYTHONHOME": "/data02/zifanz4/openwam-experiments/assets/python310-runtime",
+  "PYTHONPATH": "/data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages",
+  "check_before_gpu": "import native preflight module with this process-local environment"
+}

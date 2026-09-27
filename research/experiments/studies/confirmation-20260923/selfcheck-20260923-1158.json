@@ -1,0 +1,70 @@
+{
+  "time": "2026-09-23T11:59:24.082959-05:00",
+  "tasks": {
+    "adjust_bottle": {
+      "accepted": 7,
+      "attempts": 7,
+      "outcomes": {
+        "accepted": 7
+      },
+      "latest_worker": {
+        "seed": "seed-900007",
+        "tail": "wrapper] prewarmed CUDA/Curobo before SAPIEN import\n[eval_policy_wrapper] patched warp.torch compatibility namespace\n/data02/zifanz4/openwam-experiments/benchmark-env/lib/python3.10/site-packages/sapien/_vulkan_tricks.py:37: UserWarning: Failed to find Vulkan ICD file. This is probably due to an incorrect or partial installation of the NVIDIA driver. SAPIEN will attempt to provide an ICD file anyway but it may not work.\n  warn(\nmissing pytorch3d\n"
+      },
+      "exit": null
+    },
+    "handover_block": {
+      "accepted": 6,
+      "attempts": 6,
+      "outcomes": {
+        "accepted": 6
+      },
+      "latest_worker": {
+        "seed": "seed-901006",
+        "tail": "wrapper] prewarmed CUDA/Curobo before SAPIEN import\n[eval_policy_wrapper] patched warp.torch compatibility namespace\n/data02/zifanz4/openwam-experiments/benchmark-env/lib/python3.10/site-packages/sapien/_vulkan_tricks.py:37: UserWarning: Failed to find Vulkan ICD file. This is probably due to an incorrect or partial installation of the NVIDIA driver. SAPIEN will attempt to provide an ICD file anyway but it may not work.\n  warn(\nmissing pytorch3d\n"
+      },
+      "exit": null
+    },
+    "place_object_basket": {
+      "accepted": 5,
+      "attempts": 7,
+      "outcomes": {
+        "expert_infeasible": 2,
+        "accepted": 5
+      },
+      "latest_worker": {
+        "seed": "seed-902007",
+        "tail": "wrapper] prewarmed CUDA/Curobo before SAPIEN import\n[eval_policy_wrapper] patched warp.torch compatibility namespace\n/data02/zifanz4/openwam-experiments/benchmark-env/lib/python3.10/site-packages/sapien/_vulkan_tricks.py:37: UserWarning: Failed to find Vulkan ICD file. This is probably due to an incorrect or partial installation of the NVIDIA driver. SAPIEN will attempt to provide an ICD file anyway but it may not work.\n  warn(\nmissing pytorch3d\n"
+      },
+      "exit": null
+    }
+  },
+  "resource-wait.json": {
+    "stage": "waiting_for_idle_A40",
+    "time": "2026-09-23T11:57:22.956899-05:00",
+    "last_dispatch_by": "2026-09-23T15:08:51.767900-05:00",
+    "observations": [
+      {
+        "host": "glacier",
+        "code": 0,
+        "gpu_query": "0, GPU-6a6324e0-0a00-29ee-b97b-ac3f8f9f688a, NVIDIA A40, 12425, 54, 0\n1, GPU-13e6be41-76f8-f7d0-ab13-ced674017284, NVIDIA A40, 10889, 74, 0\n2, GPU-c262283b-05b4-2c08-5206-4ec80c2bb01e, NVIDIA A40, 16259, 31, 0\n3, GPU-e972dd11-d273-1203-407f-41d2e884c395, NVIDIA A40, 32515, 94, 0\n4, GPU-f7c4080e-5101-5bbc-3631-99436d965a31, NVIDIA A40, 11645, 52, 0\n5, GPU-67f21e31-99a6-c673-4d86-99e494ec6bee, NVIDIA A40, 35703, 29, 0\n6, GPU-df0a77a8-18e8-19a7-477e-9bc18eb3399d, NVIDIA A40, 37369, 0, 0\n7, GPU-d13929da-086d-1be5-6414-dbf6aeded08e, NVIDIA A40, 39505, 89, 0\n",
+        "stderr": ""
+      },
+      {
+        "host": "rainier",
+        "code": 0,
+        "gpu_query": "0, GPU-60fcdbc9-b00f-c826-0d7f-fa187979fece, NVIDIA RTX A6000, 10972, 73, [N/A]\n1, GPU-5ec3854b-a610-1cfa-3a9e-b545f4473454, NVIDIA RTX A6000, 39220, 90, [N/A]\n2, GPU-532627bc-bc96-255d-49be-c5a59458f2e9, NVIDIA RTX A6000, 39124, 93, [N/A]\n3, GPU-00100f82-96c4-2d58-596b-e7aa920bd7f0, NVIDIA RTX A6000, 39080, 90, [N/A]\n4, GPU-38557357-3f58-c864-2f53-8b14087b5e8c, NVIDIA A40, 45347, 59, 0\n5, GPU-28deebb2-4134-9693-52fb-ec77479de990, NVIDIA A40, 2617, 0, 0\n6, GPU-6d91e9ba-b6f4-9a0d-90b9-cb0fa9c04b4f, NVIDIA A40, 10961, 0, 0\n7, GPU-0e9dd22e-16aa-9560-3782-9e9a3f7d691b, NVIDIA A40, 24815, 59, 0\n",
+        "stderr": ""
+      }
+    ],
+    "no_confirmation_scores_seen": true
+  },
+  "feature_exit": {
+    "finished_at": "2026-09-23T11:52:46.546324-05:00",
+    "exit_code": 1
+  },
+  "confirmation_result_exists": false,
+  "confirmed_feature_scenes": 0,
+  "frozen_code_protocol_intact": true,
+  "local_waiter_tmux_exists": true
+}

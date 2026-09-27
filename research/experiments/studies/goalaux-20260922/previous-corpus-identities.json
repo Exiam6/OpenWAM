@@ -1,0 +1,1472 @@
+[
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode0.hdf5",
+    "hdf5_sha256": "6e5a49e2a1fefc405680cea04b338701dbf203724375336bce8e375260756181",
+    "first_head_encoded_sha256": "484a5c4cd6d5cbd4642875fc290e49b7db8dfe1b3fa572d8484106daf9ed97da",
+    "frames": 140
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode1.hdf5",
+    "hdf5_sha256": "2a3df78ff054f169329526aaaf78285101436b144c0eb0fd38d7b96a2bd7b95a",
+    "first_head_encoded_sha256": "67a699818eae7a213104c0e66df30aa89686f5661a6f0f169fcf11bdfebe476e",
+    "frames": 144
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode10.hdf5",
+    "hdf5_sha256": "dcc7e71ffcdf322e5f3e625e4a56ace8c2898dbceec35f4d31bd081c912af80d",
+    "first_head_encoded_sha256": "a25a811102c0546698a9b79e3fa6fcaaf7111f1eeb3d7fdbd64d8e2f2a98ab67",
+    "frames": 136
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode11.hdf5",
+    "hdf5_sha256": "58ef958f3eb06aaef020b09e571e978f8d167a1b15a9e15e8777892dafd25c76",
+    "first_head_encoded_sha256": "ffc007a4548d844a171e6d874614158ad15a0e56a32c7095aa2b006560bf0c0a",
+    "frames": 144
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode12.hdf5",
+    "hdf5_sha256": "ea1e92226fe7116858d22a9b145a8ac1cd5348fd778ec560f53ec0bfe9413f39",
+    "first_head_encoded_sha256": "c962e8e10cc5a6c7eeaf9c196bef4aa17d82a3fa70b9f2777a2993ad1d805b14",
+    "frames": 140
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode13.hdf5",
+    "hdf5_sha256": "2bf43480ecb717a38e66fb167a460e895a2d7cb56a04da1f8c47936d15030efb",
+    "first_head_encoded_sha256": "3282b995e6e38caa622679dd8836db18ff2ba78dea6b1c14ffe1aa6c0b816e02",
+    "frames": 140
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode14.hdf5",
+    "hdf5_sha256": "cc7db1c96e73e16af618b9d6f19f744da888934838f68e204d8e13dbdd443a8a",
+    "first_head_encoded_sha256": "f882a6aa4df82ea63bfd358d4f7d16ddf5d1723501bec5e88fcdca5e47fe72fc",
+    "frames": 144
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode15.hdf5",
+    "hdf5_sha256": "19b914c0e7f0b56301b1a500a8c43006ccbbf5ebf9bd233c51cd4dc096ca6a57",
+    "first_head_encoded_sha256": "a1845e3a5f15e5263001cef2c214e995d2d58a7b09ad5741e350d9db450af653",
+    "frames": 139
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode16.hdf5",
+    "hdf5_sha256": "a10a88fb2a88298214d850afa5aab699233be4ef6224e73616560f9e4101056a",
+    "first_head_encoded_sha256": "11bcfa08897c8a161c18c009c8686282ed3226be7ffa57825f1a9a02ab1f2903",
+    "frames": 174
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode17.hdf5",
+    "hdf5_sha256": "18a321ba617ac9526ccb0c3846ba71198568a1ea4bea178c35781b22ccb5bb14",
+    "first_head_encoded_sha256": "24528b3ab6120b4712b92230fa45658bd83b8274761baa43b15b4d40b8572545",
+    "frames": 148
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode18.hdf5",
+    "hdf5_sha256": "aa2868b3e43ea906e4697f7bbe03b49ff25414650628d634817f9d7a1b209ff1",
+    "first_head_encoded_sha256": "0b898d510064ade681a2ea13a6a9446d441752d3787b183ad4ffff2521c006ec",
+    "frames": 144
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode19.hdf5",
+    "hdf5_sha256": "9e090d9fe491c6ad15a542e93559bfaa771c061d1669aee3a05a33653cc655af",
+    "first_head_encoded_sha256": "6a3212d9147f8aabcc7cc16a396701235050142eebd324f7eae18d7592df86d5",
+    "frames": 144
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode2.hdf5",
+    "hdf5_sha256": "182d5751500e7fa4ac6551c1fc00e06339a39e7e2757b60b003fad15038adf3f",
+    "first_head_encoded_sha256": "c965d18cfaf9c9aff7cf838c7e3fbba62b65ad8e2825c0eb9b94c8acb045fc54",
+    "frames": 150
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode20.hdf5",
+    "hdf5_sha256": "433df61b8da0533eeecfb116dbf773955d196e8916fe689f76ad7172e94f0327",
+    "first_head_encoded_sha256": "d8faff7ec3756fe877cfa000e74509db875e53f3167586632f6b14f974763a35",
+    "frames": 136
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode21.hdf5",
+    "hdf5_sha256": "c4abd3108ce701e543103edadf247bbcde50f0d1ab0a1525c920c28a0bdc6db6",
+    "first_head_encoded_sha256": "48c034e5300e470a9a016bd96f8ed40e0f2298908ce746e1961bda1c87090484",
+    "frames": 144
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode22.hdf5",
+    "hdf5_sha256": "4b721139f50ceea746eaba00821afb0d7f2598da079a8e4fdbe4f9ad7fee1f67",
+    "first_head_encoded_sha256": "3647b9cfc0758acbfaf5cf165791b204d2dd11606a78966ad581b4cad9255395",
+    "frames": 141
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode23.hdf5",
+    "hdf5_sha256": "b72d8dd7c77f019da348e395a58b558efaae6508ca993e5d9693ee611b27bab6",
+    "first_head_encoded_sha256": "c0973c5faff612a126ccd0a97df3e127725b3110cde9d8484b278fb917c5d8cc",
+    "frames": 157
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode24.hdf5",
+    "hdf5_sha256": "f6c54275c18f41dd99477c10a500d21f03a90003de9faf862e313763d716a327",
+    "first_head_encoded_sha256": "90a74b97e5a2928d74d33d8ae2273e6137625e2577151a9b7daa863c8f3780c8",
+    "frames": 145
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode25.hdf5",
+    "hdf5_sha256": "629133cdb14e451545a18fe942e4909c568219b04482e717a1ce5fd1b963f89d",
+    "first_head_encoded_sha256": "ac257df19338d15ec91484134b56812c60791baf30318d0063e2759ee230364e",
+    "frames": 134
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode26.hdf5",
+    "hdf5_sha256": "40f98b159a59ca4a9486e2cf90dd0ab4762307a01aeababe2c5c49c174170f65",
+    "first_head_encoded_sha256": "7af9f65dc59cb93af164c439f7887542a0a3e10c435231c243357f612daedc4e",
+    "frames": 148
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode27.hdf5",
+    "hdf5_sha256": "e3d8007db7f30a3a08e9b30f8544609b957dc5d4442c655d301eed322fba4061",
+    "first_head_encoded_sha256": "69b3b7346d91785989662b75b22483497bbd4e780ab775bd22aa3e7cfc925d95",
+    "frames": 144
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode28.hdf5",
+    "hdf5_sha256": "effb91395ea6efd3cc094a2663539ed25adc36e30ee15c16e6d526b3e2347650",
+    "first_head_encoded_sha256": "cbebe8e59205585ec73027cb644421ef4c63cd983199d7c95a7e5bd9fd359ffc",
+    "frames": 139
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode29.hdf5",
+    "hdf5_sha256": "701ee22c8d5beef052dd446ad403af1a3f0a3567a7865bca27e8360fd6001795",
+    "first_head_encoded_sha256": "0ed69f8b71b2a4036eac2d9f5715500e010441db26f34e657d8c03908e9e39c9",
+    "frames": 153
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode3.hdf5",
+    "hdf5_sha256": "a18f04f185e7dae7eab2761ae4626c81e35ceb97d6922c97b0e70015607a7e9a",
+    "first_head_encoded_sha256": "7d8bcb4e06573f49c882b3100bbe50e0a93c48baa63aded1ea365c0f0557dc8d",
+    "frames": 149
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode30.hdf5",
+    "hdf5_sha256": "8ec727f57c8c8fd98b305f336b847c18e7665e5af4b04b892154e7cee6676ce5",
+    "first_head_encoded_sha256": "03686a00cd8b5f6b84759607b9bb093cfe4c5ee8dbf886c3fc3cdfa5c25203dc",
+    "frames": 144
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode31.hdf5",
+    "hdf5_sha256": "0640c576d8437e220600c005479a22744646da6dbcdb4f536f19c8d067844af6",
+    "first_head_encoded_sha256": "e38016f34635c19d83e2397d7a977e70428a9a3c24c9daf5c618d985c58c8f2f",
+    "frames": 142
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode32.hdf5",
+    "hdf5_sha256": "b8598e99a8d31f4f55f8549d7a1024810410d6c72b9cdf1ff86cc6beac040edd",
+    "first_head_encoded_sha256": "cd272688094ec3c4ba254040b54a9d350df8b46ac5c720993dd707b5aff09f9f",
+    "frames": 136
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode33.hdf5",
+    "hdf5_sha256": "21204d9200c1c09faaaabaf66dabb4542231c53d612b74e3164e36f5f0649f9d",
+    "first_head_encoded_sha256": "f943973f6fc6ed42c4177ee8ce2fb15e8b33e0d4878918ff522e345d3e45ce7b",
+    "frames": 140
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode34.hdf5",
+    "hdf5_sha256": "7969fc13254bab10d088d7993246a4849568378ac533a41ec442c6c5d7421fbe",
+    "first_head_encoded_sha256": "2a26dea51fd92dc2aadcb5432b31748d70e6ceb5db2a91696b5222a2270cde75",
+    "frames": 145
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode35.hdf5",
+    "hdf5_sha256": "c8144b6e31fe1fa0d69046f58f5034e330de02809ee24b17e0bfff5b8d7c245a",
+    "first_head_encoded_sha256": "89b434ba2402a28dfe7cfdb54ed91307364ffc5886b5d35488e7f6537a0c51ce",
+    "frames": 151
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode36.hdf5",
+    "hdf5_sha256": "4119fcd92c0ea5fac3defed666f29554cd312ba3ee8739200c2173e85b8c26ce",
+    "first_head_encoded_sha256": "04e081ef424d9a302e43a8def4e18f4a35ef82f54e084ed7f0f1dbfad84381bd",
+    "frames": 153
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode37.hdf5",
+    "hdf5_sha256": "796f0ac55ba5397df7a07b57ce312452759a29adf07dda9a896ed8f3876b35a8",
+    "first_head_encoded_sha256": "44ed05ee118a32c574a640256766dce808ea861ab1b21f872da6d52e6b38c3e5",
+    "frames": 144
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode38.hdf5",
+    "hdf5_sha256": "df5611f4316c0ce395aa502ecdebaf44f26eb28267b72895ce09f07738e595ce",
+    "first_head_encoded_sha256": "3e07ef435a33b14f84bfa87b02dc44fd62388bf1ca1b863027d96d37fdd1a79e",
+    "frames": 145
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode39.hdf5",
+    "hdf5_sha256": "8c0f4e595e5a570815c124d3f372d31e3ca5a0e168aeef508301f33b78e158b2",
+    "first_head_encoded_sha256": "8d12ab6e2de7f5daf146fda4e2bce53027b0b3b59f6251724fa859fd64f4410e",
+    "frames": 139
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode4.hdf5",
+    "hdf5_sha256": "4a0174a5d778f8eb134ff94bc5fee9fd326cbe3c85c233c703a089ea47f5cd45",
+    "first_head_encoded_sha256": "95af133b7217a7b512fdbd4e23b4247aed1268f48e83bf888dff1cc9297f6e4f",
+    "frames": 152
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode40.hdf5",
+    "hdf5_sha256": "a872ec1d6dc3b3b29a9ec707dbb968582e2d01eada2c7f37faef0a4c73722c12",
+    "first_head_encoded_sha256": "be18764800ff0d026bc5bfb5b0ba80537fa2bc4fb15a517c77186a20e092fc01",
+    "frames": 143
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode41.hdf5",
+    "hdf5_sha256": "3724e586fdd07da0754c0848f850b00bc7f8575c51a20a855c1fdd67b4cbe70c",
+    "first_head_encoded_sha256": "d921462284de5b806adb1d053cc29b63306d54bc779b9be993fd21fb2310adb1",
+    "frames": 150
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode42.hdf5",
+    "hdf5_sha256": "97e4c841b6eaded301725c9100ce6d3b821d6746024c523e60f8760ea2768619",
+    "first_head_encoded_sha256": "62a51e8df46c4a136a4dc37a8b9404ce5232a3b1413f679add8fa0c1ded6043f",
+    "frames": 143
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode43.hdf5",
+    "hdf5_sha256": "2e08469b185eb70649c15b475415ce9cb74f0de7b55500623261cafcd977ad50",
+    "first_head_encoded_sha256": "82fbc32ccd39b74f81b1cb7a07988a709e2da987b06b994d515ba7f607b8d608",
+    "frames": 147
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode44.hdf5",
+    "hdf5_sha256": "b5c9ec4572853ddc220be2c8c1991bc6b7503638b325f619efd15ecff24ade37",
+    "first_head_encoded_sha256": "bdf36fa0b392837b0ede1fe4c87347c383f857cc0b535c35555e9089ab98f4ee",
+    "frames": 143
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode45.hdf5",
+    "hdf5_sha256": "acf76dfb7cdd19662cca62dd231b154ff1130ac56068075178958039fcb8ff1f",
+    "first_head_encoded_sha256": "cc8016efaad2630d56751e1f2eb976a470c33ff0132e70595f60f6260a59ff86",
+    "frames": 145
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode46.hdf5",
+    "hdf5_sha256": "4c27b1b980832618d708f4c4a3212bdfc1db76d6fadb11d11a06d150d94f6626",
+    "first_head_encoded_sha256": "c6a82a8a86395edb17ea07c7ad9634317bbc2b9c1f548b769d931a89e7d3a127",
+    "frames": 143
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode47.hdf5",
+    "hdf5_sha256": "fa679c184b74cf692750c860457878e45ee83d5127c77de7e6e5cd9ce0492486",
+    "first_head_encoded_sha256": "0dd027d3123b79325139752fe308a5db79fe4d1c2add63dc22b21a8aeb48dbb9",
+    "frames": 140
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode48.hdf5",
+    "hdf5_sha256": "e2059bb5e7c823b2eefda2d3a8a848b7728cb4bc8e59fa770ab8e0ae367f7c55",
+    "first_head_encoded_sha256": "d99f4909dee77125a33b2f85f78fd5157a79b518ee22c64670427ed18d590df4",
+    "frames": 145
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode49.hdf5",
+    "hdf5_sha256": "a47c5d4afb41c4852da050b0f7844741b66aa052661b07a2cfb10d3e0a674081",
+    "first_head_encoded_sha256": "7902b6602ff7432e80a786013956091a5b31518faf955a6621769b1a10cb89db",
+    "frames": 142
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode5.hdf5",
+    "hdf5_sha256": "f03361c298897e6b10e924e13d45f57d23b8d6add6966249ef078e8418b4dc6f",
+    "first_head_encoded_sha256": "3dd6250a11aaff5b2317a850468793faeb6dcf4cda0cd96b9b89f7740986b645",
+    "frames": 148
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode6.hdf5",
+    "hdf5_sha256": "7923d4afe210ff9c14a7c7314c68c9d8daf1f0da48fe32b322815ad67764aea7",
+    "first_head_encoded_sha256": "e70e720ed134381bc907b0d9f2f9907183135edf8716ff60a64af124c2940608",
+    "frames": 138
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode7.hdf5",
+    "hdf5_sha256": "c02b7ff0a62564be92d436e42ce3eade652cf74af80e3334a5a10781dcd22404",
+    "first_head_encoded_sha256": "518b231e711456d760105f795df658e32b03b56d6cba516f201d42415403c060",
+    "frames": 137
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode8.hdf5",
+    "hdf5_sha256": "38a6f3528c5d26905f03ace7e3ce659dbe1e447c8ecd5fe131646adc749f59b2",
+    "first_head_encoded_sha256": "c2650b026c5dad934a7f2f95e83d4fc70a693249f8121db2d754f2163438d613",
+    "frames": 153
+  },
+  {
+    "task": "adjust_bottle",
+    "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode9.hdf5",
+    "hdf5_sha256": "7cc9e7fb699a61c7b4c8d99237bdfb0dd80eee2651bafb57cbe05f127f181f41",
+    "first_head_encoded_sha256": "ab5e8d9ac6a84e25bdcfda221735c8852c02480392a5e61ecf2417d6b224f923",
+    "frames": 153
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode0.hdf5",
+    "hdf5_sha256": "419abe95f2ad2910b19aef1de61c2374e76cbfe5e7a9eb5c26f137ee4f144ee2",
+    "first_head_encoded_sha256": "5ff46d62653006508a000be91d6ef4fa3f8c97a093286f71e78017cd9b90334d",
+    "frames": 295
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode1.hdf5",
+    "hdf5_sha256": "0b46329e6cef1f36627f23fdfdaf56c1b53bfcdd6807e23a2267e3c968396202",
+    "first_head_encoded_sha256": "f00e3c7276f74ec0ed7bde55011414bd4e42cd5257db0a0b7d8efeb23bcd23cf",
+    "frames": 277
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode10.hdf5",
+    "hdf5_sha256": "3c7b080ca4bb3f7299018597db5c423160f33116a6215c0592cce6359715b07b",
+    "first_head_encoded_sha256": "b35360665d55095e977775b5a58e42af17095e21fa455d9b551bd7bf4af81cf5",
+    "frames": 291
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode11.hdf5",
+    "hdf5_sha256": "44f1d4dac6de71cc42938bee9649dab9dd6da40d76bf8e011230ea9a2658d292",
+    "first_head_encoded_sha256": "99ae0b2758dc385e21a02cafd3e5600b7ad64697ae5f4838877b27fcfa471b56",
+    "frames": 275
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode12.hdf5",
+    "hdf5_sha256": "7cc2ed2e5687e1b6d469df6d8d42884465dd61fb602e76521766373edb2193dd",
+    "first_head_encoded_sha256": "c48657cc080a75231fed90b93557ec0b782359199e38c517c60778197d7f9814",
+    "frames": 294
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode13.hdf5",
+    "hdf5_sha256": "d45dca28922d101eab98389f698f6589f97f62b7817bea084ca9dcbeb946057c",
+    "first_head_encoded_sha256": "a42ee64489392ac537983efba9408cda1f82dd125385de61c982e7ddad84732e",
+    "frames": 278
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode14.hdf5",
+    "hdf5_sha256": "09d0d5b9ee12845c8aff566f5cec45400a3316a9599315a852ac184469c2c6f1",
+    "first_head_encoded_sha256": "0507f3ad964042b2b1adb2748dd880baf0fc302bd91851d838bf30804c7a2b60",
+    "frames": 287
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode15.hdf5",
+    "hdf5_sha256": "f7bed17d9eaec19a061d053268e711f0af8efddee3320c6402dfff2b6c2a48a1",
+    "first_head_encoded_sha256": "86f2a5d82e766943433c757ee4f7abbe9ddf59934ded1c681c762cd40df695c6",
+    "frames": 281
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode16.hdf5",
+    "hdf5_sha256": "e566c5f218cd3147203b47fd59b7b896a38ea6dfa4a2a0051e5dbaaa58a549e8",
+    "first_head_encoded_sha256": "cca106d351c8ad5484ff15cd15181b3daa043bfe94f78580cbb583102af13b92",
+    "frames": 289
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode17.hdf5",
+    "hdf5_sha256": "b9e9811b2b810d3a7b25a3dd37ef6488523cb0c16dca2d2ae7f3280935009c42",
+    "first_head_encoded_sha256": "5837b00445485305e2d702852f4add3c7af3125ec55749db66849616785f5b53",
+    "frames": 278
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode18.hdf5",
+    "hdf5_sha256": "63709d5c3edbac34498e739aa4d8e685731b4957fca808345c524aa771b3e61c",
+    "first_head_encoded_sha256": "94c1c3d74258f66dbec1c380622ab54008a99cfe78ab82d7bf6ca25b6850d76a",
+    "frames": 289
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode19.hdf5",
+    "hdf5_sha256": "b5c8bfcbf27bbc420ea0c4be1dabe7bd2aa8d1808c0902d38fb88f75b87dbbeb",
+    "first_head_encoded_sha256": "ec88794fbaa6b868d8150b2bdff1dc43d70ad4d3724bc7ccd2fc7c9d43f56908",
+    "frames": 275
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode2.hdf5",
+    "hdf5_sha256": "e4de42700f3d4f66f9ac0e875760b099aa11bce240482e99a21f1cf0254d283b",
+    "first_head_encoded_sha256": "a2f2862fbaca5799f2aebe5aa04e331a29ad9cf8de6d83db429f259f426a7c37",
+    "frames": 282
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode20.hdf5",
+    "hdf5_sha256": "f0e7c2b06f2cd9838f23fec1703fc9e4a6ecac84bdbd90399cd2023ea514b47a",
+    "first_head_encoded_sha256": "85cb5ba9e74d834caa04298308e42e26a47ec97894aa14611334492da1229328",
+    "frames": 273
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode21.hdf5",
+    "hdf5_sha256": "42b355925411e1c9ce7c162d96150bd3057ee59f4bcc0f46d37c8fd36c042acd",
+    "first_head_encoded_sha256": "0403c77a0f1e351bd049a98a312fa501364efb09155651e96f134731ca68adb6",
+    "frames": 293
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode22.hdf5",
+    "hdf5_sha256": "8e1ee41e60e14d2abd0e1cef36e46545cbfe71e790f7267c1e5fd01adcf0fb5a",
+    "first_head_encoded_sha256": "18455ca4956bd6bb60746c392c976f6b16d20766acb53a3fe9eda9398d4537c6",
+    "frames": 282
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode23.hdf5",
+    "hdf5_sha256": "052f4bf62910865585b72d48473b00df9a4ef550388aa7d6cc84ec7fb840201f",
+    "first_head_encoded_sha256": "be08490b18b840f1d9073e2fc48ad7b6f76eefcedb24bf132b3c6d4e1b14e9c6",
+    "frames": 283
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode24.hdf5",
+    "hdf5_sha256": "1b123a40ad6a3078b6887d6e215565710c9e605323dfe4e68fcb4c73354003c5",
+    "first_head_encoded_sha256": "746f851a62dfd3532711c0ec067d2382e1637c1c3363259f88e33ace9f13a9fb",
+    "frames": 274
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode25.hdf5",
+    "hdf5_sha256": "15b69b58af33d7a44ecf567541f545cc69d891f1f47c303c05dec466e226b059",
+    "first_head_encoded_sha256": "33408dcd73742508511f30e48037438ae26aa4daf0d50125281d856a02ec5fe0",
+    "frames": 275
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode26.hdf5",
+    "hdf5_sha256": "92f40d1af73a6b4125137f5f50307ba1efc0568b77cf429c01150b94cb3d314a",
+    "first_head_encoded_sha256": "01817f2674963b367097d0ede60636d0f100f47ed99555baa6fdbf89f9e4b019",
+    "frames": 279
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode27.hdf5",
+    "hdf5_sha256": "06ab3b667262d08c8ff8000f7c9d47301ababb92b9f4da78a5d706464756f946",
+    "first_head_encoded_sha256": "16a076b7f8e2a87d7833499d2bc60d930710d1e8c6faec6782c74b2d449d0270",
+    "frames": 276
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode28.hdf5",
+    "hdf5_sha256": "1b3ec6e881cbf2337bf7cb74ecd87d33c9d7e3981c6039d09ef54e0b1d70d99c",
+    "first_head_encoded_sha256": "f5faf7e32c796c075e009297a6860159952cd7bee541a8efc57c8efc2d7a19c2",
+    "frames": 279
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode29.hdf5",
+    "hdf5_sha256": "a720f5b80f240da7b797eb468f0013f29a6923844f588ae57ae79566057f8d7c",
+    "first_head_encoded_sha256": "a6cd11f0feb035ea4e89610200943be1db4f95a9c32f114e6da33fa672148b75",
+    "frames": 315
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode3.hdf5",
+    "hdf5_sha256": "f582bbe813e6ff350ab80da6211f2e626dad32a36db32e0c3fdfeee2bf1ec97c",
+    "first_head_encoded_sha256": "e2c475ed1f597a21015e8e5cfa6eb91960f7a14cfa85f8cb310182cda4206819",
+    "frames": 278
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode30.hdf5",
+    "hdf5_sha256": "623f280909780fe9ad7fa3f9f36c81b257fbf5df5f37f255abaab0078e469c5c",
+    "first_head_encoded_sha256": "a5e5f5d8165091c709a84fe26f85094824eb65fb4c27486ca60f3ff2a6693120",
+    "frames": 290
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode31.hdf5",
+    "hdf5_sha256": "e0401d013618a81893ed0be7c9c7f514ffbc68f8bb41d6da9f15a1770a113110",
+    "first_head_encoded_sha256": "e703f7f784d5b80e39ed95ecab13f9ff393c0cbb84aa9c3932ce4f37c5d24178",
+    "frames": 290
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode32.hdf5",
+    "hdf5_sha256": "abaf3596f8dba4e70c789bfed1553d65f4a5f7fe291a70918089879725e6e33b",
+    "first_head_encoded_sha256": "42be9febfede8f4d400f783d4addadd2d34edb5ea26eabed4bdb0854116ebbb4",
+    "frames": 286
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode33.hdf5",
+    "hdf5_sha256": "032fe01aefcdc68f472a9be827b21c41ed754220d2025df6e8b236634116318d",
+    "first_head_encoded_sha256": "aa47b880dec0f920a35b942c6211970c9ecb6a0b73e435988eee158a0151149b",
+    "frames": 278
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode34.hdf5",
+    "hdf5_sha256": "080ec6d696fb350696861d928fc83f91ff3584d43deda0528e14c0fa32763e46",
+    "first_head_encoded_sha256": "abc636dea816dde417fa48b58a78cce7eafa1c414c8d6ac12bbf213d989d0af7",
+    "frames": 288
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode35.hdf5",
+    "hdf5_sha256": "782786a92bd5868e24cdcb977947044de1d4b37165f79d0260ffc45dda10721f",
+    "first_head_encoded_sha256": "869d3bbf16ca3ea972d91d875d6f3399d537cf20b723e9d74bd292dabb975b2e",
+    "frames": 288
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode36.hdf5",
+    "hdf5_sha256": "672c91aa60d74169a95f9ac963f45d83fa2d593f3628dbf14912354f3d9d686e",
+    "first_head_encoded_sha256": "484900e18b816614d5ecf43a0b3ba3b0b017ecc5e1eebce5816e196721574b7b",
+    "frames": 278
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode37.hdf5",
+    "hdf5_sha256": "90de9b6762e18a88310da8838201c0b365404d59c8b37019243d6430bf1ce65d",
+    "first_head_encoded_sha256": "d5a4b00e28a6f15947eefe107b8bc321aa6aef7e81e2f47b34cb71df681fef89",
+    "frames": 278
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode38.hdf5",
+    "hdf5_sha256": "f950eec69e93178cd189a9c24d6eb34d80ae8101ace392162efd75ae435692d1",
+    "first_head_encoded_sha256": "38b18b35d962834dbcf3d43ed6d35f2562fc3585c4e9025c457abc0a03046270",
+    "frames": 277
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode39.hdf5",
+    "hdf5_sha256": "02082173df065366697820228693ff1237a32baaf312c72b02e7662e18f28825",
+    "first_head_encoded_sha256": "bc5db2fb23b1afe1cb492c7e1c1558a4c694e749c5d88d8983dc63a586aea123",
+    "frames": 301
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode4.hdf5",
+    "hdf5_sha256": "be040dce1e5a2c04b962b11433ccb5b94e55b7a8f7c0e21bc039fc2636d05190",
+    "first_head_encoded_sha256": "02218a13e61ea9b155c12af4b9bf4dfd920f847074a80a6e3872a11dcc2ec486",
+    "frames": 287
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode40.hdf5",
+    "hdf5_sha256": "42d0033921e461e644863dadfb558b22ac1019409b512d954ad7247fac490167",
+    "first_head_encoded_sha256": "ac0e14cb18776119be5c6954fcccb3ab78793eb654ee228e51cc23562afafceb",
+    "frames": 279
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode41.hdf5",
+    "hdf5_sha256": "47f55e705b9b422e721b366c3fa29d7d8826139743addf8f8a6319a1e2cf1956",
+    "first_head_encoded_sha256": "23b0e3eda05dbbfa480a9b10f77e5199d69881eea46a8e40c717e429faf9d67e",
+    "frames": 278
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode42.hdf5",
+    "hdf5_sha256": "03f6a9c2bfe416ff57b10b4785d63ea5eef24bb332651a42ecd2e888c5e05a32",
+    "first_head_encoded_sha256": "479348d849942aa4862e0b92a3490679a1bee5bd655a55630a9a45c31556d0fc",
+    "frames": 284
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode43.hdf5",
+    "hdf5_sha256": "a39dff611510772a223322ea0e3d67383410230b3e646339fccdde7cf10c95d9",
+    "first_head_encoded_sha256": "be9a75ff99cbb64992817b2e1c90ca266e34a49a1158da829108ccb3fff58c50",
+    "frames": 279
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode44.hdf5",
+    "hdf5_sha256": "f4e9b3d9dda9829a820de4c3e7c0896dc64f195b274d309612b3a0572c6ea972",
+    "first_head_encoded_sha256": "f7a0fac4eb6e80ecd0f78e693a033acf42fa4bcbf0cd648e494de4f61234df26",
+    "frames": 276
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode45.hdf5",
+    "hdf5_sha256": "4b6cce624c592708e16307d50f4a24b213911a02c2f4080881c6692017f9d32c",
+    "first_head_encoded_sha256": "4ef0ff4f42fc9489b4bf4b5ddece61051289ab2bd2cfb01e798ce80b0ad04fbd",
+    "frames": 285
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode46.hdf5",
+    "hdf5_sha256": "49964dc12673837c9beb9abd1dbfb963a3563bb3541c590333765c8a301609c7",
+    "first_head_encoded_sha256": "e95c000a0e862a0d8056aaabc8f021d8f38586fc3c0d40cd461f0ae0fce4ca98",
+    "frames": 277
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode47.hdf5",
+    "hdf5_sha256": "1fecce74f3d6ae9bb9006a0e6d7516ee611e63fc691aeb992fb388291a025773",
+    "first_head_encoded_sha256": "5d934131bd5c613511619f1727c652c4c359d06090890b8f0b55d78a51e58085",
+    "frames": 281
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode48.hdf5",
+    "hdf5_sha256": "ca200933f4c59e55129e8a01613293dd5dc1c3d72c7624f5c6e543498b8c6845",
+    "first_head_encoded_sha256": "f49416276c61285e9d62131464d8b6b57f3e2bc9d026b278d82012b5d6d20783",
+    "frames": 277
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode49.hdf5",
+    "hdf5_sha256": "d975d76e03fd86ca882fe42f90e588baaf711825c6a1c0ec114dc49a6a8034f7",
+    "first_head_encoded_sha256": "0f1831268dc172b689f7c1aec41b63636a7a143410ece37b5216011b5bd75e8a",
+    "frames": 276
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode5.hdf5",
+    "hdf5_sha256": "cd1a877024455cc5b29d12c9847f119a5ff07342ffbea03ea698629a1fd58117",
+    "first_head_encoded_sha256": "46818f9fdc4cf252f4227d844bc791b982e6aecb89f04451b5525ca3525af91b",
+    "frames": 280
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode6.hdf5",
+    "hdf5_sha256": "39ae879c36ffdbb9f2b2b5c0221bfc9bdea048ee8b87c8ec1c07bb9c026808d3",
+    "first_head_encoded_sha256": "7a496a2fc05792397497970710121809214c2900a605a1ca1d66733ae86fc495",
+    "frames": 280
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode7.hdf5",
+    "hdf5_sha256": "985f93093dd5555e528c0ded78dd9b0354f909f68dd138dff19e3a7f02bb9ee8",
+    "first_head_encoded_sha256": "04b72f180ed18a6067e31630e2bff534e95730817767e593d77ca602175c04a5",
+    "frames": 277
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode8.hdf5",
+    "hdf5_sha256": "e60b14c702afc06e79d916f0ce174fa2738dd4782579faf6c65d184672e943e1",
+    "first_head_encoded_sha256": "ed694c6d7b25792ce7297127ee0fe4d038721295a0debc25c00607fb98f3cb73",
+    "frames": 286
+  },
+  {
+    "task": "handover_block",
+    "path": "data/handover_block/aloha-agilex_clean_50/data/episode9.hdf5",
+    "hdf5_sha256": "0baea19e2e5e1d29371e417d60cf5f9b233b8c9300097b9a03c19c7456136143",
+    "first_head_encoded_sha256": "3db5d5f2a6a533d839270a880a53f9ce1657d236876120856371d0596dad7fa9",
+    "frames": 280
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode0.hdf5",
+    "hdf5_sha256": "1b4144f50992566539b0d417932f3abd55bf49e2a3e80781563b56e5c8b2096b",
+    "first_head_encoded_sha256": "a76ccfdc80e295e5662109816e7ce2e8811159e3d6db0d0525dfc44b7111df0b",
+    "frames": 255
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode1.hdf5",
+    "hdf5_sha256": "ab51b82a238444a2038661f7d6f41c3a3309faa1b42792590607f11626f46a50",
+    "first_head_encoded_sha256": "25b50383d1c5fcc086daebefc390ce6eb5f4ec3aca9782c4819b933afd599a6a",
+    "frames": 261
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode10.hdf5",
+    "hdf5_sha256": "5eb9507fe2577bc471179de3329f5f892adb80c51b720f1c37ce6222e44eb003",
+    "first_head_encoded_sha256": "2e180808c41c6404261385d0f4e92d7ee0c5c75da9c594e45b3c324d73fae7da",
+    "frames": 249
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode11.hdf5",
+    "hdf5_sha256": "a1a6208c8eb6861b9a0e7122e7c08d985196937f7a7ecafe6a5e86ed76b19d17",
+    "first_head_encoded_sha256": "da0f6843d81f94e8bd365c2a98587b3f9b3d8609e9c0054161bb026337e43830",
+    "frames": 245
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode12.hdf5",
+    "hdf5_sha256": "062f19aa72f8eb764f799a7014c6d5e06eef00d6c4685e4f5aa82d48f2fd51d7",
+    "first_head_encoded_sha256": "e50b9fade19f8ce13f46dac4075de12370f0c71a2522fce4296da6d9a1cc46f7",
+    "frames": 244
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode13.hdf5",
+    "hdf5_sha256": "f29a7a503dce6d149e17487664e72a2d4d7eb4b4aa5843ae57ee730c7af77a11",
+    "first_head_encoded_sha256": "7844e2fa72fd3cd5eaec18c02d44f87384faafd5fdb9a10bf61ad3741ba51f2c",
+    "frames": 250
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode14.hdf5",
+    "hdf5_sha256": "ebeeb01a4baae0d6f22ade8386b8368e05a06af73d05668cf0f855b049a7e6dd",
+    "first_head_encoded_sha256": "6854f8fcefc6ab64a6efbe5ec3b2f4f62b07041b2b436088fa209991f3933ca5",
+    "frames": 254
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode15.hdf5",
+    "hdf5_sha256": "3fb46585d630b75801d53dfd6482d92c7e02a071de471979563aa3ba666a1f05",
+    "first_head_encoded_sha256": "ee91b95355f89f66875338c0fcc5e06c5de91f31fb2496e770ff4b984d27b17e",
+    "frames": 233
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode16.hdf5",
+    "hdf5_sha256": "479a62e6bd8b4af723f50fc86d62e406e6b9b38658f206efb723d05046067c71",
+    "first_head_encoded_sha256": "e7a8d708523f01424ba391fd9b48660415ad5db9629fb912cfd068e00671e388",
+    "frames": 246
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode17.hdf5",
+    "hdf5_sha256": "c2beb0ec4c6c5fff3d18db39c8354d1004718e724aa53c83d29c1bbd951c87e9",
+    "first_head_encoded_sha256": "a3751819fc66f2f544f1859c783752baee7227f10ff01880f42a47fd3c16f831",
+    "frames": 240
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode18.hdf5",
+    "hdf5_sha256": "5b822e1f5afb9838239f912cd55abd45e305079105a16e6093e3504d251a7fe7",
+    "first_head_encoded_sha256": "f706d277e47df0b21d9969ff4b12bd4e9b8cb7085db0c9df3777a5f733568407",
+    "frames": 246
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode19.hdf5",
+    "hdf5_sha256": "99a736621fabd0c2e3ad8993d43b6bca4a34a573355fc4ba2127c6e272866e93",
+    "first_head_encoded_sha256": "9b1ff71fe1f45fa6ca60c1f642af44217135daa6172bcd0cca42259a897ad0e9",
+    "frames": 240
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode2.hdf5",
+    "hdf5_sha256": "eaa3bcc7f64251601bfc287e15ec94a5e093168b040d0b2b356dd48b952cfa9e",
+    "first_head_encoded_sha256": "168875d52a04f9d8b06151d4eed26fc7a7f13876c38c00e34487641fce0d0232",
+    "frames": 244
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode20.hdf5",
+    "hdf5_sha256": "6b3b6b698b6186b02370aca0eab2fbf2e874d20fb034aa3f40f47d9bec4a52b1",
+    "first_head_encoded_sha256": "1a34ae0a6989f6ea6ad0738e3ba195943bbbdde660c2e2c69299453f69cca0a2",
+    "frames": 246
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode21.hdf5",
+    "hdf5_sha256": "b0279e605d6fa2ed9a50a9e0116ae534249de619eaea289f3e020170ef2b14d0",
+    "first_head_encoded_sha256": "0b7a6f2fd7b6137b1f82a796a61cd374990f46eba88c115919febab7734ff054",
+    "frames": 258
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode22.hdf5",
+    "hdf5_sha256": "a0956ca65ddce085a736633dbb0bdcca330f8a25f785d608cc57cc3104238bfe",
+    "first_head_encoded_sha256": "4fe3ccf5ba0acc24e07af7c87bfb6ac0d369af4953bbd4debf6280699edac7f2",
+    "frames": 244
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode23.hdf5",
+    "hdf5_sha256": "f610025a9500bb2fc1aed04f1477688211ee9eb8453d071f6117bedfa31f692c",
+    "first_head_encoded_sha256": "0591f429587912d046183519ba04d425344b06363111a3e447723c3ed0ca1cb5",
+    "frames": 233
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode24.hdf5",
+    "hdf5_sha256": "c707854ba9c2902308113840daf2f2f028ac427161e3b05034b369cf9fba3dda",
+    "first_head_encoded_sha256": "f0d8c3875112e8bba6218986715d562c12dcaaa296886f7854e6a30f35a13685",
+    "frames": 230
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode25.hdf5",
+    "hdf5_sha256": "720ad2d86797fb558aed9fe5ceecbb7bf001acf99fbebf02e8d653e5926aec6e",
+    "first_head_encoded_sha256": "7c9a757894ce919dc5dd619bc296c1c98009afc64eb689b8bd4a5ed5a1086368",
+    "frames": 248
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode26.hdf5",
+    "hdf5_sha256": "b372128a055cbedb60b2cd7302778eeeaa7f4ffb4d00ec7ac54b62bb8ef72cbb",
+    "first_head_encoded_sha256": "dc3ce8abe270ff96f8dc671a32092b39da250cbe95d24cd9b1267f7077d553e6",
+    "frames": 270
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode27.hdf5",
+    "hdf5_sha256": "cfb8280da9371f89d355c8c3c6a065f13d3193c4145a5a19c6bc44080446be78",
+    "first_head_encoded_sha256": "87ee903c686676c42e737d79de3663e54467b2256fda410c60b8a46c30937082",
+    "frames": 238
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode28.hdf5",
+    "hdf5_sha256": "c50d14db900c29bcb397606f541858bad0ab02dface137e9eb7064bab886fde9",
+    "first_head_encoded_sha256": "a994af90a490c57ea2e44f2d0ef981b0a303f7904068442381243b9f9a455171",
+    "frames": 293
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode29.hdf5",
+    "hdf5_sha256": "2f165eabc356b5ecaa4605672e538b5eee13ff2645b57ca0a2eb8c3d9147827e",
+    "first_head_encoded_sha256": "200530eee1a298056a3ec7b873630ef12a2dd34c899c3e6a89319e7b96a6b0d6",
+    "frames": 245
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode3.hdf5",
+    "hdf5_sha256": "f795d6cb7925ecb6ea66afce8978b6146ba851de044feed0ae90983a2cb1263f",
+    "first_head_encoded_sha256": "3a266f62bc33cccd2d1aa905194d83d5a5122e7ec8812f5fb8ce77af77688cc3",
+    "frames": 254
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode30.hdf5",
+    "hdf5_sha256": "5aa593422d499861bde76fd4a6b52fa4f38913462d9e0a8f674dafc40ede6e0c",
+    "first_head_encoded_sha256": "46e232b1679091222ca1d82aac0f682a00c5d89f239eb6a6b69ab7b3a4ffa49b",
+    "frames": 247
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode31.hdf5",
+    "hdf5_sha256": "fcb9cb74685127aefac94d0c74dd5ff3670e9a48a8bdb7dd360a11cbd6e4f11c",
+    "first_head_encoded_sha256": "a33c8324dc222f335d38a7c51caf0ba95347a245ee04c6692a0d05f0d2826f27",
+    "frames": 240
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode32.hdf5",
+    "hdf5_sha256": "d6f79fe0d004f67727fac8fd7dbb0afa43423c87c8a14c9140a1279a3a395fbc",
+    "first_head_encoded_sha256": "d19f2fec845dc2d952dd7b7258f5666544f57db193435b8965c924471146545a",
+    "frames": 251
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode33.hdf5",
+    "hdf5_sha256": "3e1f6de26425d0c01b7c4cc140e6fe7c39e95758e9a9a5dccaa8e7c1792bc806",
+    "first_head_encoded_sha256": "d2a117209fc7430346f6bce4919913d14f3c70a380a37a369f32f45e2e969b79",
+    "frames": 228
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode34.hdf5",
+    "hdf5_sha256": "7a966bbd8017992ff50a5e0f0249d9a784d590f180727a3e566617ecccbf1f79",
+    "first_head_encoded_sha256": "5f361249fd0be1d3706fb0e2a3f0b9657caeea0849c5fdd52dfdef6a0831604b",
+    "frames": 246
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode35.hdf5",
+    "hdf5_sha256": "baa00c25ad5e2ccb1a12d5b46e77551de5afcedd00b9b12c089632f54e4dcc35",
+    "first_head_encoded_sha256": "69587b05fa8014c5f87fe206221634db97bd4cfc8c70b8bb07b046670ed1f1c4",
+    "frames": 246
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode36.hdf5",
+    "hdf5_sha256": "a37fda910e46bd818bd91448cf38d0e8a18758e2121f13f5ca8c2d35b25308e9",
+    "first_head_encoded_sha256": "cdc7677aa2146ed336c4f2fff1a4816b44170dbebcd48a8dc871fc49d4c0a81e",
+    "frames": 249
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode37.hdf5",
+    "hdf5_sha256": "1e75464aa31e5fa6952f0c97936b590e18c237fb1935b2ba50a6390ae25be2b6",
+    "first_head_encoded_sha256": "0b25ca13c5a6a7574ad2fa8d8cd4acf3149724c936921804deba5903d4e1953d",
+    "frames": 250
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode38.hdf5",
+    "hdf5_sha256": "9668925fb3ad94286ffa510183778ad2f6a5802bc6df9bed654e1d2e859f0e67",
+    "first_head_encoded_sha256": "2743a4e85c851609b55151fade676ec3fe80d51d5a21003580cb4bfeb66e5dae",
+    "frames": 246
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode39.hdf5",
+    "hdf5_sha256": "9f732cdf6838a000c3553a350df353f439346969fcc9a70287e50212231a1513",
+    "first_head_encoded_sha256": "208c3725cacfc78303eebcecf650b3a68a535060fe771b25ce5368f8cd4524a7",
+    "frames": 238
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode4.hdf5",
+    "hdf5_sha256": "927263f993375775ab949121bdc8ba363b80efdf902de3ba32a4c290e5b520c8",
+    "first_head_encoded_sha256": "b56ec191b5cb9e89758526a392874f7edba71bd9fe6f96ad4bb2899126a90667",
+    "frames": 232
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode40.hdf5",
+    "hdf5_sha256": "f0537dddfaaab3a9752e0155200a9d3e1cf4789d6dedf829a0920f2304ae2749",
+    "first_head_encoded_sha256": "f8ac3491f2bce581dfc67a42a73bbe1f57b35a3124e0002b320bc9a2b70b2c06",
+    "frames": 246
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode41.hdf5",
+    "hdf5_sha256": "956f040cb6aa30c7bcb4e2719ec6f7b6c826ec41c0df0a4517ddbd89a4c37349",
+    "first_head_encoded_sha256": "c28d46b09afd4ad830160cce7686eb282a4d8b6bf5ac3a04b9e509a936b14d26",
+    "frames": 248
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode42.hdf5",
+    "hdf5_sha256": "b5fd29f1b29842271f4b190ddc3f88c97ef5fd633d4779a5ab2f3ed43d7f0113",
+    "first_head_encoded_sha256": "3875170abc1f14e9dfb52176f149341b8914016797f4b3cea22549315a3d8e34",
+    "frames": 228
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode43.hdf5",
+    "hdf5_sha256": "78fb85def30a8acc26451808576bfae8b444f26914d093716fef8adaf6c01572",
+    "first_head_encoded_sha256": "344643fe4c737c3036dc2af3ee6128155dc9e335a61fd7cf40d63cc1f734ab60",
+    "frames": 247
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode44.hdf5",
+    "hdf5_sha256": "7f38fc72d1ad0fa344b8bd48f42eee50216f5f502c19f2e245dce85823267adc",
+    "first_head_encoded_sha256": "f6215e75554eb2085df70cf1e4d78bd93753796c5a84666d4ad53ef810842489",
+    "frames": 264
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode45.hdf5",
+    "hdf5_sha256": "90ba1a013ba54f7488100f9e048542a959c6b059c3928328f83179d8006586ff",
+    "first_head_encoded_sha256": "9e446640dba1a8afa0d9c12a1e60cb07efa26acd24aec790773b5423e355718a",
+    "frames": 249
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode46.hdf5",
+    "hdf5_sha256": "023ee1a02dfc35cb7a5abb6716c82e1400d452317f5f96c2de51b13e2c8698f8",
+    "first_head_encoded_sha256": "43c24cee653560fb999f3f5e879fd9527c877ba5befdbf4be1dda69c396cc5c4",
+    "frames": 250
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode47.hdf5",
+    "hdf5_sha256": "0e2d884f7f7e4be705448fe92ee9fd1bb0495b7b0e82bfb24dc33e5309117320",
+    "first_head_encoded_sha256": "5d7d00e4eeceb9f584056551686dca58e195e895f9e7dd21a9daa438898401df",
+    "frames": 254
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode48.hdf5",
+    "hdf5_sha256": "e176dc22d338f2ad80e29678034cc511f7921bbb8565d02de90cc634b625c70a",
+    "first_head_encoded_sha256": "0a1349a8c69c7266a8681551424335262eac7b49c1fffc42f21e14c6818c6870",
+    "frames": 246
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode49.hdf5",
+    "hdf5_sha256": "bf1542dccbef081417f7e431003e517cba16138b82291f132e2a1b76601b8ab2",
+    "first_head_encoded_sha256": "a3ce747b76a19479b9148fd941896cd0ca8c431817c33790d4d829b906c32a25",
+    "frames": 239
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode5.hdf5",
+    "hdf5_sha256": "ecca0f39bf4634f22735148df37ce2b7403f8f5875231743c36862e8a2ceeb97",
+    "first_head_encoded_sha256": "e84377bbc6e37ab9eb01ab6acc63d915b0111b3cd56c14102cf455b11a3fc7f6",
+    "frames": 244
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode6.hdf5",
+    "hdf5_sha256": "5732b72f7a90cbb805adb1aba827905373cb3c826b6eb49103ba66a31368a685",
+    "first_head_encoded_sha256": "3b32df02e5355b10e728ae8e705d93fe1752a285f4c039dbbea5e134408a0128",
+    "frames": 244
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode7.hdf5",
+    "hdf5_sha256": "f0f9cad266ab6f1cedaf3433fc6bc880a7bc6fcad29292426bc9af2a4cf5b974",
+    "first_head_encoded_sha256": "1f68b19d98231880ff11d94a11f95d82186cdda67e14f7161e5f41567fabd916",
+    "frames": 258
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode8.hdf5",
+    "hdf5_sha256": "b3df79c65e7d630aaaef5c5c86a2c41ca86aac43dd0c10aae04b84c6830a33a5",
+    "first_head_encoded_sha256": "bfed6aa8c471a4dcc9cec38c1aae312c59079d55295361caa84ea0047f2f7ce0",
+    "frames": 247
+  },
+  {
+    "task": "place_object_basket",
+    "path": "data/place_object_basket/aloha-agilex_clean_50/data/episode9.hdf5",
+    "hdf5_sha256": "45879c7fca87e5dbd2cff1d6cdd04933f9d4689a4b70e00a19ea1720da76826a",
+    "first_head_encoded_sha256": "e1d8e62a8f4b6dfeca22d903f592ae136c6ee65a88609feb9a8c40b498033c06",
+    "frames": 245
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600000,
+    "hdf5_sha256": "fe7f1f8aa08b90adba8e102211d3c3dbc1fbdf938f7f26596b64bdc12613cb8a",
+    "first_head_encoded_sha256": "7b37bc0d2510adf4ddfe492514599a6394d6a6c3529ad9c2f4dcd720204ea9cf",
+    "frames": 145
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600001,
+    "hdf5_sha256": "f132a80ee731a3d068d1cc2eece10cd5ecf739d88d61d473161c5034ad3c50f5",
+    "first_head_encoded_sha256": "761611d0a25eaa7ae3489ca484f4c42a43f25eecf2fb4f8bf313c07b253ab63f",
+    "frames": 149
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600003,
+    "hdf5_sha256": "a9c4aa5af018e3bb2cd8e1d18e8ccfb21c2b4218d72605dadce4be18805d53f1",
+    "first_head_encoded_sha256": "7032bdcd0dab5b72e3aa7cdd2928f5d9fa0b41e3cfcd8aa2c32ca6df64e0b270",
+    "frames": 144
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600004,
+    "hdf5_sha256": "974191c3dc6bb1116385c40747e06fa9a36245e83403147e53cd66b84ecdf0f4",
+    "first_head_encoded_sha256": "828ac8e416089530c14890cf84eab69faf152d4bc421f71e74e6ff502520b7e3",
+    "frames": 152
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600005,
+    "hdf5_sha256": "29437422539b70cddb48beea8c695efeac955f58c3108679e1aa4c4be09d5318",
+    "first_head_encoded_sha256": "dcc1108798c53d075170df3b060f72f68f7a3a1ed765c3a26392e9232f2b17f8",
+    "frames": 139
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600006,
+    "hdf5_sha256": "a6b45794a467858e567398fb2cd784e00ac60bc01e4b249693f61c8c8c67555b",
+    "first_head_encoded_sha256": "1316ba4fa93f679819f03ea6c4b35195df4c7410431d437f1d9f72d5ef2c3b49",
+    "frames": 139
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600007,
+    "hdf5_sha256": "43ca4235206225b512faf31e69c421e23675d19299b7ebb70028d6008182f15d",
+    "first_head_encoded_sha256": "ba7c902856c00c873a54b2b6f9358a8709e4c3a2c7d0677fec1cb404d9d8a2a4",
+    "frames": 139
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600008,
+    "hdf5_sha256": "f5a04cbc8d602d30d53402ad30d58f18bcd3b40f40b076a3ff1467c1b29c5352",
+    "first_head_encoded_sha256": "8eb1c347cde382b9a3d63d0e9666088757266d6159420d17362963c23ea82ac9",
+    "frames": 131
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600009,
+    "hdf5_sha256": "23be875696fe81529f70d75805072e4e8dcffe6fff3b7f106bf77daf0b44afcb",
+    "first_head_encoded_sha256": "f7ed71d552a2a416491916c75a1ea9f14ae2b0701f6fe09d2b3dfc5c69fc989a",
+    "frames": 140
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600010,
+    "hdf5_sha256": "7b4b05a393846107aca666b20731c53c109eb01f65a8983b4c2111c3bf9b61a5",
+    "first_head_encoded_sha256": "10e0facc068f6a794097e75fe865255f7eb8b5923b2b9d5d97753c8d57c39761",
+    "frames": 140
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600011,
+    "hdf5_sha256": "fccf369ae26221df7331d0c9e36982677e78f2226bc53b60ddb7399d5baa2c17",
+    "first_head_encoded_sha256": "de97332f7b0b6fd32ea29968ab245543fe7897106e53bb5ee55f013dcdef0bf5",
+    "frames": 142
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600012,
+    "hdf5_sha256": "54c02c8612d841063fa91b8d439a508eb024ef2f1cd9d070d24d3c9be47276cc",
+    "first_head_encoded_sha256": "04022b826921788d18ad90ce9dfa8ae95a951e5235e86c7a7ca785024da87947",
+    "frames": 141
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600013,
+    "hdf5_sha256": "36701c69554aec47a238fe6a6f6e5708cc3156922d06294f912cd8191ef4e642",
+    "first_head_encoded_sha256": "efb63b6e61a53077979958008daee6627c57c5ddab0fdd089c0b050a584a9745",
+    "frames": 139
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600015,
+    "hdf5_sha256": "158791133073987d2638f8284aacf51c65ac7ac6a4ca2c7b12d68abf45ee857d",
+    "first_head_encoded_sha256": "df13a661dceb138785f222285fe2db83c1839f019e75bb7d1570778e5cd5f292",
+    "frames": 142
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600016,
+    "hdf5_sha256": "54c767ec372f78c3afcc2c3e416b0966c34c7c39b5b2703b789b9e3046920d33",
+    "first_head_encoded_sha256": "038f3ef64d647dda0694217dda4ea993f281bd87f68feb20f5f0f85e7a82948b",
+    "frames": 140
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600018,
+    "hdf5_sha256": "5ef846d148db8cda27313acade871341695b09e81bc1ed50987b0d1de673dbb7",
+    "first_head_encoded_sha256": "7fdf7533fcfef755c16d40695472a0e304cdc811f0ec27c387d8ace55ca2a989",
+    "frames": 147
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600019,
+    "hdf5_sha256": "b774bd1a3e0378ae8bc2e520f84b94a1d0099c47c96bf28127e9c56467c00d4a",
+    "first_head_encoded_sha256": "1201335594bae64144db6bbe9c6a4e9c711ce4d67b3cd28350ed274c476705a1",
+    "frames": 139
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600020,
+    "hdf5_sha256": "35701207d48c305c97f9786e0746163e4cf10190e7a6d34160d0443696353c12",
+    "first_head_encoded_sha256": "e4a762e25163233f5f010fe22153a5646959e09eeb7f8482540cffdd94eb2a10",
+    "frames": 139
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600021,
+    "hdf5_sha256": "610bf48acb7884ce66021079f69029e852d28ae91b7bd41daf1bc0376c7c4477",
+    "first_head_encoded_sha256": "c33e6ebe6a983d81358c3573260900d43ad09d5c4ced8e0622a3f86d541e2dc1",
+    "frames": 141
+  },
+  {
+    "task": "adjust_bottle",
+    "seed": 600022,
+    "hdf5_sha256": "074bfa5da8ad97a19f4d439becf6b4a600601a7d42b0748d0ef8b8ec4a0cea46",
+    "first_head_encoded_sha256": "22dcc6333837b2734d2ebb477ce3a221d893431d20d5ba3923722ee3f1437f8a",
+    "frames": 148
+  },
+  {
+    "task": "handover_block",
+    "seed": 601000,
+    "hdf5_sha256": "7cecc3caeba681fcc94b6675d300ffb16dd72c3c8a1e96aab38250a26564d628",
+    "first_head_encoded_sha256": "a5ece1958e071eebe5bb277e37d762d3c8cd2312791b1ed1639c3cc577269ee4",
+    "frames": 286
+  },
+  {
+    "task": "handover_block",
+    "seed": 601001,
+    "hdf5_sha256": "58f7fa93a5bd4e8752aaa4e656b19a203fe2be8e98dfdff727ecbad8003fa8dc",
+    "first_head_encoded_sha256": "b5c382d774f5dc8079e2a79d7806437cbf042916d18d761e343457a226d3c41d",
+    "frames": 276
+  },
+  {
+    "task": "handover_block",
+    "seed": 601002,
+    "hdf5_sha256": "4ac0250d4296e366b03d968a22cd5dce38ab0eea0096f5440669fad171407610",
+    "first_head_encoded_sha256": "d0547186e58230663a1bfa769ec231ca96d22cde5fefdbcfabcde7c441730547",
+    "frames": 290
+  },
+  {
+    "task": "handover_block",
+    "seed": 601003,
+    "hdf5_sha256": "de35aacd46208c3dfa364529c729d6defb52f2a6487e17927a2589a9d777fd94",
+    "first_head_encoded_sha256": "25b00850bc13c8d14aa46d552717177cd8b5bd932fe47615828d7e6bb53d33e8",
+    "frames": 285
+  },
+  {
+    "task": "handover_block",
+    "seed": 601004,
+    "hdf5_sha256": "af1f891885dbe6c12d44b780480ec651d5183551c5d9824cbe94be7547b56c95",
+    "first_head_encoded_sha256": "d0fcfd404a00a4a2e37c46744f6941f9b8186003ffb37fd52315ecf39b86b41e",
+    "frames": 294
+  },
+  {
+    "task": "handover_block",
+    "seed": 601005,
+    "hdf5_sha256": "afe87acb0e0fb5cae5fdef78bd6c74ba8ea1156d3203e5f0e4d5797461b59577",
+    "first_head_encoded_sha256": "ea975c2fd556af5c757acf516caef28173763bceeedfc28d6e418750995e8b43",
+    "frames": 294
+  },
+  {
+    "task": "handover_block",
+    "seed": 601006,
+    "hdf5_sha256": "b1e2c8249b6d33361001fea7cc45e730c6447319234e6f38c24b1a358ba44791",
+    "first_head_encoded_sha256": "1aff531fec76a2facea33cf4b9f92b9c601e7d7619526eec812afc6e00a13b28",
+    "frames": 278
+  },
+  {
+    "task": "handover_block",
+    "seed": 601007,
+    "hdf5_sha256": "c35891949092f78a7608ee2e61a6d5cfa3a21b909391f667388488005ec5b956",
+    "first_head_encoded_sha256": "f0cf3e30098f0bb9e64a57e55c564ec3a31c8bef96411e977642126694065369",
+    "frames": 280
+  },
+  {
+    "task": "handover_block",
+    "seed": 601008,
+    "hdf5_sha256": "2978dbcbb945453a386868454cc34fb07ec20f4e0787c315e73c15665b434487",
+    "first_head_encoded_sha256": "c7be835ccec6f33be0e46ad83f2f1f4496968d0be0b71714e7f326ebca21e84b",
+    "frames": 333
+  },
+  {
+    "task": "handover_block",
+    "seed": 601009,
+    "hdf5_sha256": "5a9bfc144a806c8e0b9974c9b4bcfd2eb220cd2ea8b0d8bcee540bdc910047e4",
+    "first_head_encoded_sha256": "e45666de470963dcbf39d10f5bf440223ae3a7c901ab3a6e732db3d641052d1b",
+    "frames": 282
+  },
+  {
+    "task": "handover_block",
+    "seed": 601010,
+    "hdf5_sha256": "f8e16840ae71553c21719e08b2be0c50b9cf74d576b82a63bcb2cff795c8cc89",
+    "first_head_encoded_sha256": "53cf4362780158317846bf149b49dc07a7a4ce02d6f6ffbfd928155ef115cdf5",
+    "frames": 280
+  },
+  {
+    "task": "handover_block",
+    "seed": 601011,
+    "hdf5_sha256": "ba7f84967326c68d1cf6fb8d0f682c1734293f789786a5812d647686b10e70b4",
+    "first_head_encoded_sha256": "24dd222bb4481e5d25fa3e4d33b395cfed9bf95db2c1558a3f6bf07e7ddd1327",
+    "frames": 293
+  },
+  {
+    "task": "handover_block",
+    "seed": 601012,
+    "hdf5_sha256": "9b2ef55274431e1025f6398e8674380139f4aee3d3b7c1e7165223e23a076812",
+    "first_head_encoded_sha256": "a6c7328ef4980a19e302c7bb826f65e6f72937bfda9c729f4c1683aaf41a896b",
+    "frames": 278
+  },
+  {
+    "task": "handover_block",
+    "seed": 601014,
+    "hdf5_sha256": "48bdaddb4768efe547970a48945915b9884814cec0c87cf7af0762a7de1e7881",
+    "first_head_encoded_sha256": "d2c500e19275de8450b02d6a2ef5931f5b80cca2bd288846afe163b4b72546b4",
+    "frames": 282
+  },
+  {
+    "task": "handover_block",
+    "seed": 601015,
+    "hdf5_sha256": "c0d2a6219d7cb91973f58010944b3228f4461d85581e7b479568d14c340a0789",
+    "first_head_encoded_sha256": "345e4ea0744a7f5f23c40c78a37651f83a182204a5e46bb6bc3cb16cd69e58a7",
+    "frames": 280
+  },
+  {
+    "task": "handover_block",
+    "seed": 601016,
+    "hdf5_sha256": "79aa681bf6443663aae7867dbf2a012b466b77725f8ec39e262e46fb7734f4aa",
+    "first_head_encoded_sha256": "10af4438bc7fd7935a704ae7a1913aea364dc85d03de2b55a005a3168ad05101",
+    "frames": 303
+  },
+  {
+    "task": "handover_block",
+    "seed": 601017,
+    "hdf5_sha256": "c55b31e8ba2e0674c0bcd1e3783775cb667cae5af8522a186f46ddd73d4887c1",
+    "first_head_encoded_sha256": "0328f010d6b600950477b1a696f2db35f31418c24b0502a24a48dbe910c473a6",
+    "frames": 284
+  },
+  {
+    "task": "handover_block",
+    "seed": 601018,
+    "hdf5_sha256": "839c66e0ca936efe0158c85b7b1fd3f4f0e2093e277ec6fc9194095b6ad867f1",
+    "first_head_encoded_sha256": "2f289051bee2d7abf09092b4d46c18fdda2f11e9795caf7358e682d3681e56dc",
+    "frames": 291
+  },
+  {
+    "task": "handover_block",
+    "seed": 601019,
+    "hdf5_sha256": "48d080e1c6dadcf8fa099c007cbfc115e58d9f406215744851dc483fa685cd00",
+    "first_head_encoded_sha256": "2ffbdd1404e3109252297e23d6db6ed769256ba2fa1d8f41b8cb02b82e2e7509",
+    "frames": 280
+  },
+  {
+    "task": "handover_block",
+    "seed": 601020,
+    "hdf5_sha256": "afcdc7646e2ae0c4b72e381475d9130d80229d1946207555e081feebc861606a",
+    "first_head_encoded_sha256": "403c978e6250ed7d2f0ca3f59cb7ffe98d408941c4f5b07d55b8d287fcf872bd",
+    "frames": 304
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602000,
+    "hdf5_sha256": "ea5e0ed1bddd5c20ddd1a1493b8f2d287ee7b27ff295438be05c48c70bb5731a",
+    "first_head_encoded_sha256": "86708e7f76f79ef5da1334d1f7792716805417a999dbbad116eca01f261c76c9",
+    "frames": 248
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602001,
+    "hdf5_sha256": "9a3839be9c37b998cecef847caa42be92be94bd23ebe5deac204b3a391f1a3a2",
+    "first_head_encoded_sha256": "33da4f7937009b07239c925a6aea8383343836c8748233f01756d957c3864283",
+    "frames": 247
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602002,
+    "hdf5_sha256": "34fd8b27055d71da84e4d451fffed17f9f9974f38363f1c44c0fc4a16ce1465d",
+    "first_head_encoded_sha256": "958f7e59f63d8df9b236d7e0747b1e13655dc2453cc27a358e5ad46820f74b8d",
+    "frames": 250
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602003,
+    "hdf5_sha256": "3b23f24018f9965df06e8d4b6edae93e85c00c12ea68128141fde032b84b9201",
+    "first_head_encoded_sha256": "6102d446e5a40c9856227775707455e41c0632b8a30c3dbdcbd5e2ad34cac60a",
+    "frames": 228
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602004,
+    "hdf5_sha256": "ea47c7c70add489f81b875b63b1cd81bc50ef29be05c74ad7aedf199a97394e0",
+    "first_head_encoded_sha256": "35d5a05f574f5233d326ed33f7f6a185a242bf5634f02f55fd71178e92266914",
+    "frames": 245
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602005,
+    "hdf5_sha256": "05867897d9aea7b86a6a068e458cb6272372cf0bdc7bcc37fd876b59ea1b9a97",
+    "first_head_encoded_sha256": "1fd827b9b8a628d12828ddc24f28b6ac2555fe86de012d0dbaf0805df5fa237c",
+    "frames": 247
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602006,
+    "hdf5_sha256": "58820000ef08dc4dc230d269ec04614e04b38ebf185f8f6e7ca15fdef4ba9037",
+    "first_head_encoded_sha256": "22170e0f759bb3f6832597dd7171634d4b26d790fdefe58ef826492b72f7d3e5",
+    "frames": 259
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602007,
+    "hdf5_sha256": "f026f2555ced300552afffb46af7d1eb3fd44bf592ed1e05678bd13c56220afe",
+    "first_head_encoded_sha256": "6fc9608867546a53e6efdca7d96af3ac821643297bef3a11ea37207eef518025",
+    "frames": 245
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602008,
+    "hdf5_sha256": "cee72a7311447dd83e51267048f04ead3e36db89ed54df74d17fdc4b39bd801f",
+    "first_head_encoded_sha256": "e98718a1f39890fe99042c2c1d9833c8daf061ca7765481f8605b41d6ba7f3b4",
+    "frames": 244
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602011,
+    "hdf5_sha256": "62fea9e0e47d947637d3927bd216599ac28584e26f0f446dbd81d04ebde66985",
+    "first_head_encoded_sha256": "7c60309a2202fce63ec311c75b8ae4815ad3d7aa613ccd98d7335ded7b85795c",
+    "frames": 248
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602014,
+    "hdf5_sha256": "ec5bf4a6970083794fd2825589273f154441dc2b70ffad8010b8263466a115aa",
+    "first_head_encoded_sha256": "cf7452928377aab4010b7a85c96b955fa105e4eaf9f1847cae2cdc72958e2bd1",
+    "frames": 243
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602015,
+    "hdf5_sha256": "0fa50f29012b13390716c49336b23ec5fad0c873358285a6ce0c90777629dade",
+    "first_head_encoded_sha256": "27c5e5f174a4aac2aed014a3a2087179fe6fcc6343362572062eb678b31cf1cc",
+    "frames": 246
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602017,
+    "hdf5_sha256": "f817c6b9740675dda8ad8e32496d92508ce8b8d7bca62148f88cc9205f18c647",
+    "first_head_encoded_sha256": "4119bdbfc6825ae95278522237fcf4ffa5bde7d3faa72111602b6226ccef3f93",
+    "frames": 249
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602018,
+    "hdf5_sha256": "59d694dc35a0c898b95560a163fe71842fde71bdf41914dfdbdf3dc196480a0a",
+    "first_head_encoded_sha256": "4eae1ff41830d11187f1de7d3f0517169cef92f906da75d6382c4c6ae4ed9a4c",
+    "frames": 245
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602020,
+    "hdf5_sha256": "331016cdf907019f14deaf2866a2dd3bc2454f29aced8111d314f73ee31c2115",
+    "first_head_encoded_sha256": "ec73e00b5eaa2fcdc73114cbeb38791c711d3f4e870f0a16d14f019f6fcefa3b",
+    "frames": 243
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602021,
+    "hdf5_sha256": "459ccf7875868628ecd97d3af9bf6f8f1a3f3b6746cc5848744d57143e6abeb2",
+    "first_head_encoded_sha256": "0ee85f6cc1d42060eccf3959301977896ef8e60fdf25015dffe5d35320ae2abb",
+    "frames": 246
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602022,
+    "hdf5_sha256": "1c878e5dcf888fb5f5dcecf077667e24a78731667a396481bd6b077a5f0afc47",
+    "first_head_encoded_sha256": "0c5d571af403fe0cdb784ecfaf2991e05f4445f242074111879e81ac4896d521",
+    "frames": 253
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602024,
+    "hdf5_sha256": "b1a05cd402fdc81b01d4d83e2e120d4ef818431b4238305d795c0bb84a0b1cc1",
+    "first_head_encoded_sha256": "1d93247ccaeeb32b0335fc0bebaa6efd07fa666a53f2a6d870aab17c60d38a14",
+    "frames": 246
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602026,
+    "hdf5_sha256": "758612964987230ec96e7dcd124499549f35ed06d558ac86e1fa3b855ce2eb89",
+    "first_head_encoded_sha256": "c84cef1b9bfeb1ce5f2ae3922d24a596a5fb856ac02252f9e93e15ef179a11dc",
+    "frames": 260
+  },
+  {
+    "task": "place_object_basket",
+    "seed": 602027,
+    "hdf5_sha256": "dcc552ee2ddf59f7057e2e3f136cde962cf548c6a573378f0182dac1a47c219c",
+    "first_head_encoded_sha256": "e571aa0c5139b6ac2e6b189f1ef9f8c8d997fe7c014d76fed2dbb893f7774848",
+    "frames": 243
+  }
+]

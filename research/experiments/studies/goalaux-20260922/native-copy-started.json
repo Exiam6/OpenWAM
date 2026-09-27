@@ -1,0 +1,12 @@
+{
+  "started_at": "2026-09-22T16:55:12.759617-05:00",
+  "scope": "two new directories only",
+  "source": [
+    "/data02/zifanz4/openwam-experiments/benchmark-env",
+    "/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin"
+  ],
+  "destination": "/vol13/zifanz4/openwam-experiments/goalaux-native",
+  "apparent_bytes": 17750067545,
+  "wall_seconds_cap": 900,
+  "deadline": "2026-09-23T01:15:12-05:00"
+}

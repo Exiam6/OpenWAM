@@ -1,0 +1,275 @@
+{
+  "time": "2026-09-24T01:46:13.517152-05:00",
+  "trigger": "2026-09-24T01:45:01.131105-05:00",
+  "training": {
+    "pca-seed42": {
+      "status": "started",
+      "exit": null,
+      "metrics_rows": 11068,
+      "global_step": 11068,
+      "opt_step": 5534,
+      "latest_metrics": {
+        "loss_total": 0.1307477205991745,
+        "loss_video": 0.12077540904283524,
+        "loss_action": 0.009972311556339264,
+        "grad_norm": 0.5216806530952454
+      },
+      "last_metric_time": 1790232372.877904,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_8000.safetensors",
+          "bytes": 12123507288
+        }
+      ],
+      "last_metric_age_seconds": 0.7417356967926025,
+      "run_log_tail": "5:39<32:10,  2.06s/step, loss=0.1459, video=0.1225, action=0.0234, lr=2.63e-06, epoch=1]\rTraining:  92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 11066/12000 [6:25:39<32:03,  2.06s/step, loss=0.1459, video=0.1225, action=0.0234, lr=2.63e-06, epoch=1]"
+    },
+    "pca-seed43": {
+      "status": "started",
+      "exit": null,
+      "metrics_rows": 10968,
+      "global_step": 10968,
+      "opt_step": 5484,
+      "latest_metrics": {
+        "loss_total": 0.10181953758001328,
+        "loss_video": 0.08871279656887054,
+        "loss_action": 0.013106739148497581,
+        "grad_norm": 0.5317561030387878
+      },
+      "last_metric_time": 1790232373.2799933,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_8000.safetensors",
+          "bytes": 12123507288
+        }
+      ],
+      "last_metric_age_seconds": 0.41506457328796387,
+      "run_log_tail": "5:27<36:50,  2.14s/step, loss=0.0855, video=0.0701, action=0.0154, lr=3.00e-06, epoch=1]\rTraining:  91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 10966/12000 [6:25:27<36:57,  2.14s/step, loss=0.0855, video=0.0701, action=0.0154, lr=3.00e-06, epoch=1]"
+    },
+    "pca-seed44": {
+      "status": "queued",
+      "exit": null,
+      "metrics_rows": 0,
+      "global_step": 0,
+      "opt_step": 0,
+      "latest_metrics": null,
+      "last_metric_time": null,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [],
+      "last_metric_age_seconds": null
+    },
+    "svae-seed42": {
+      "status": "started",
+      "exit": null,
+      "metrics_rows": 10977,
+      "global_step": 10977,
+      "opt_step": 5488,
+      "latest_metrics": {
+        "loss_total": 0.1147150844335556,
+        "loss_video": 0.10562410950660706,
+        "loss_action": 0.009090978652238846,
+        "grad_norm": 0.0
+      },
+      "last_metric_time": 1790232371.8598535,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_8000.safetensors",
+          "bytes": 12189767400
+        }
+      ],
+      "last_metric_age_seconds": 1.9148330688476562,
+      "run_log_tail": "5:37<36:08,  2.12s/step, loss=0.2973, video=0.2913, action=0.0060, lr=2.96e-06, epoch=1]\rTraining:  91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 10976/12000 [6:25:37<36:06,  2.12s/step, loss=0.2973, video=0.2913, action=0.0060, lr=2.96e-06, epoch=1]"
+    },
+    "svae-seed43": {
+      "status": "started",
+      "exit": null,
+      "metrics_rows": 11161,
+      "global_step": 11161,
+      "opt_step": 5580,
+      "latest_metrics": {
+        "loss_total": 0.12677627801895142,
+        "loss_video": 0.11156558990478516,
+        "loss_action": 0.015210683457553387,
+        "grad_norm": 0.0
+      },
+      "last_metric_time": 1790232371.8229873,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_8000.safetensors",
+          "bytes": 12189767400
+        }
+      ],
+      "last_metric_age_seconds": 2.034776210784912,
+      "run_log_tail": "5:39<28:32,  2.04s/step, loss=0.2641, video=0.2206, action=0.0435, lr=2.32e-06, epoch=1]\rTraining:  93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 11160/12000 [6:25:39<28:41,  2.05s/step, loss=0.2641, video=0.2206, action=0.0435, lr=2.32e-06, epoch=1]"
+    },
+    "svae-seed44": {
+      "status": "queued",
+      "exit": null,
+      "metrics_rows": 0,
+      "global_step": 0,
+      "opt_step": 0,
+      "latest_metrics": null,
+      "last_metric_time": null,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [],
+      "last_metric_age_seconds": null
+    },
+    "wan-seed42": {
+      "status": "started",
+      "exit": null,
+      "metrics_rows": 9945,
+      "global_step": 9945,
+      "opt_step": 4972,
+      "latest_metrics": {
+        "loss_total": 0.14097940921783447,
+        "loss_video": 0.12488038837909698,
+        "loss_action": 0.01609901711344719,
+        "grad_norm": 0.0
+      },
+      "last_metric_time": 1790232371.4950352,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/checkpoint_step_8000.safetensors",
+          "bytes": 13361411736
+        }
+      ],
+      "last_metric_age_seconds": 2.4344303607940674,
+      "run_log_tail": ":29<1:18:31,  2.29s/step, loss=0.3237, video=0.3138, action=0.0099, lr=8.74e-06, epoch=1]\rTraining:  83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 9944/12000 [6:25:29<1:18:55,  2.30s/step, loss=0.3237, video=0.3138, action=0.0099, lr=8.74e-06, epoch=1]"
+    },
+    "wan-seed43": {
+      "status": "started",
+      "exit": null,
+      "metrics_rows": 10329,
+      "global_step": 10329,
+      "opt_step": 5164,
+      "latest_metrics": {
+        "loss_total": 0.3601822257041931,
+        "loss_video": 0.35861295461654663,
+        "loss_action": 0.001569276675581932,
+        "grad_norm": 0.0
+      },
+      "last_metric_time": 1790232372.419725,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/checkpoint_step_8000.safetensors",
+          "bytes": 13361411736
+        }
+      ],
+      "last_metric_age_seconds": 1.580472469329834,
+      "run_log_tail": "30<1:02:55,  2.26s/step, loss=0.3610, video=0.3585, action=0.0024, lr=6.17e-06, epoch=1]\rTraining:  86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 10327/12000 [6:25:30<1:02:36,  2.25s/step, loss=0.3610, video=0.3585, action=0.0024, lr=6.17e-06, epoch=1]"
+    },
+    "wan-seed44": {
+      "status": "queued",
+      "exit": null,
+      "metrics_rows": 0,
+      "global_step": 0,
+      "opt_step": 0,
+      "latest_metrics": null,
+      "last_metric_time": null,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [],
+      "last_metric_age_seconds": null
+    }
+  },
+  "pause_markers": [],
+  "pipeline_exit": null,
+  "pipeline_progress": {
+    "time": "2026-09-24T01:45:46.666747-05:00",
+    "stage": "waiting_for_all_training_collection_smoke",
+    "all_ready": false
+  },
+  "collection5_exit": {
+    "time": "2026-09-23T22:05:36.904975-05:00",
+    "returncode": 0
+  },
+  "collection7_exit": {
+    "time": "2026-09-23T21:03:54.426294-05:00",
+    "returncode": 0
+  },
+  "simulation_exit": {
+    "time": "2026-09-23T21:08:15.726521-05:00",
+    "returncode": 0
+  },
+  "pipeline_code_hash_mismatches": [],
+  "disk_free_gib": {
+    "/home/zifanz4": 0.948,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923": 215.072
+  },
+  "cm001_gpus": {
+    "returncode": 0,
+    "stdout": "0, 32223, 52, 0\n1, 37991, 28, 0\n2, 31989, 61, 0\n3, 24407, 48, 0\n4, 25251, 42, 0\n5, 9387, 76, 0\n6, 19527, 32, 0\n7, 18641, 39, 0\n",
+    "stderr": ""
+  },
+  "cm001_tmux": {
+    "returncode": 0,
+    "stdout": "exp\now-e2e-pipeline\n",
+    "stderr": ""
+  },
+  "cohort_progress": {
+    "adjust_bottle": {
+      "time": "2026-09-23T20:39:16.259497-05:00",
+      "accepted_count": 50,
+      "attempted_count": 63,
+      "complete": null
+    },
+    "handover_block": {
+      "time": "2026-09-23T22:05:36.877965-05:00",
+      "accepted_count": 50,
+      "attempted_count": 57,
+      "complete": null
+    },
+    "place_object_basket": {
+      "time": "2026-09-23T21:03:54.392164-05:00",
+      "accepted_count": 50,
+      "attempted_count": 84,
+      "complete": null
+    }
+  },
+  "selfcheck_monitor": {
+    "checked_at": "2026-09-24T01:45:01.131105-05:00",
+    "summary_sha256": "8cfe950524e64a33c64ea18adc5aa37fc667713525c044383652ac647a18a12d",
+    "integrity_passed": true,
+    "exit_codes": {
+      "adapter-exit-code.txt": "0",
+      "resume-exit-code.txt": "0",
+      "adapter_renorm-exit-code.txt": "0",
+      "renorm-exit-code.txt": "0",
+      "identity-exit-code.txt": "0",
+      "study-exit-code.txt": "0"
+    }
+  },
+  "cm009": {
+    "time": "2026-09-24T01:46:09.745590-05:00",
+    "gpus": {
+      "returncode": 0,
+      "stdout": "0, GPU-c7d96da5-a1ae-e1ed-de5d-03f35e550da2, 1, 0, 2\n1, GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 22251, 3, 0\n2, GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 21935, 3, 0\n3, GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 24531, 94, 0\n4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 22251, 17, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 21935, 3, 0\n6, GPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 24531, 3, 0\n7, GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 9591, 59, 0\n",
+      "stderr": ""
+    },
+    "tmux": {
+      "returncode": 0,
+      "stdout": "ow-e2e-train-1\now-e2e-train-2\now-e2e-train-3\now-e2e-train-4\now-e2e-train-5\now-e2e-train-6\n",
+      "stderr": ""
+    }
+  },
+  "reasoned_at": "2026-09-24T01:47:01.870463-05:00",
+  "judgment": "No new failure, completed training or scientific result. Six active native trainings reached 4972\u20135580/6000 optimizer updates; all logged metrics finite and metric ages below 2.5s. Three seed44 runs are queued. All150 expert scenes and the simulator preflight remain complete; the existing finite controller is alive and waits for all nine final training runs. No new heldout policy outcomes.",
+  "resource_note": "Six assigned cm009 GPUs1\u20136 have0 uncorrected volatile ECC; GPU0 with2 ECC remains excluded. All six training tmux sessions and the cm001 controller are present. Other GPU occupations untouched. Free space: /data02 215.072GiB, /home 0.948GiB. All six runs retain one8000-microstep checkpoint.",
+  "next_step": "Finish all nine matched native training runs at the fixed6000 optimizer updates. All150 expert scenes and the development simulator preflight are complete; all three individual cohorts passed raw HDF5 hash and first50 expert-accepted selection audits. After all nine trainings finish, the existing finite controller must run the full cross-cohort novelty/initial-pose audit, paired training-stream audit and final12000-microstep checkpoint hashes before launching the complete5400-rollout matrix. This resolves whether representation accessibility improves native task success without clean regression. Do not create the exclusive fresh-cohort-integrity gate early or score intermediate checkpoints.",
+  "meaningful_state_change": false,
+  "public_retry_performed": false
+}

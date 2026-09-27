@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-09-25T19:57:22.911633-05:00",
+  "status": "published",
+  "error": null,
+  "code": 200,
+  "project_id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3",
+  "public_url": "https://embodied-research-notebook.exiamzifan.chatgpt.site/endtoend.html",
+  "new_public_version_deployed": true,
+  "last_attempt_at": "2026-09-25T19:57:22.911633-05:00",
+  "error_code": null,
+  "http_status": 200,
+  "local_report": "/home/zifanz4/openwam-experiments/reports/endtoend-20260923/index.html",
+  "public_version_created": true,
+  "attempt_note": "Same existing public site restored. Exact committed source pushed, packaged, version27 deployed successfully; anonymous browser-user-agent HTTP verification succeeded. No replacement site or audience change. No preview handoff tool was available.",
+  "previous_failure": {
+    "last_attempt_at": "2026-09-24T21:44:30.763637-05:00",
+    "status": "failed",
+    "http_status": 404
+  },
+  "version_number": 27,
+  "version_id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3~appgver_f5fb1cb7d97c8191bb6f00455fce1bc9",
+  "deployment_id": "appgdep_6ab717d9ea9881918f4c97a5ec4f2616",
+  "deployment_status": "succeeded",
+  "source_commit": "fcd45f144d98c77cfe5bfb7f3a7e75b8f70816a6",
+  "deployment_time": "2026-09-26T00:54:57.313319+00:00",
+  "http_verification": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/publication/http-verification.json"
+}

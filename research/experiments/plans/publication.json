@@ -1,0 +1,22 @@
+{
+  "version": 26,
+  "commit_sha": "64e0005b6af3ae9d3a12a2f17084521998a82286",
+  "version_id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3~appgver_58cf2ff984c8819198f824efe92b6657",
+  "deployment": {
+    "id": "appgdep_6ab2230409088191a27a3f999811a901",
+    "project_id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3",
+    "title": "Embodied Research Notebook",
+    "version_id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3~appgver_58cf2ff984c8819198f824efe92b6657",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://embodied-research-notebook.exiamzifan.chatgpt.site",
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6ab06a7c072481919a12cc100f8e9fa3",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-09-22T06:41:14.625414+00:00"
+  },
+  "public_plan": "https://embodied-research-notebook.exiamzifan.chatgpt.site/plan12h.html",
+  "public_artifacts_sanitized": true,
+  "no_new_experiments_launched": true
+}

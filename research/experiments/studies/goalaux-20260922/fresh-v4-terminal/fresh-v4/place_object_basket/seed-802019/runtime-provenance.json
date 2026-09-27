@@ -1,0 +1,22 @@
+[
+  {
+    "need_plan": true,
+    "renderer_name": "NVIDIA L40S",
+    "renderer_cuda_id": 0,
+    "renderer_pci": "0000:a1:00.0",
+    "planners": {
+      "left": "CuroboPlanner",
+      "right": "CuroboPlanner"
+    }
+  },
+  {
+    "need_plan": false,
+    "renderer_name": "NVIDIA L40S",
+    "renderer_cuda_id": 0,
+    "renderer_pci": "0000:a1:00.0",
+    "planners": {
+      "left": "CuroboPlanner",
+      "right": "CuroboPlanner"
+    }
+  }
+]

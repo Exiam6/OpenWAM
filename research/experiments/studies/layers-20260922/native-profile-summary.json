@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-09-22T14:05:15.539937-05:00",
+  "exit_code": 124,
+  "microsteps": 68,
+  "optimizer_updates": 8,
+  "planned_optimizer_updates": 70,
+  "full_profile_complete": false,
+  "single_gpu_global_batch": 8,
+  "observed_median_seconds_per_microstep": 12.086118012666702,
+  "rough_1000_optimizer_update_hours_at_observed_median": 26.858040028148228,
+  "peak_allocated_GB": 25.625363456,
+  "reason": "20-minute bound reached; insufficient warmup and timed steps for planned complete profile",
+  "policy_stage": "not_launched; independent primary development gate also failed",
+  "warning": "single-card early timing, not measured two-card throughput"
+}

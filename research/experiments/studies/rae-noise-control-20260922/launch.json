@@ -1,0 +1,8 @@
+{
+  "started_at": "2026-09-23T00:04:27.370420-05:00",
+  "host": "glacier",
+  "gpu": "GPU-d13929da-086d-1be5-6414-dbf6aeded08e, NVIDIA A40, 0, 0, 0",
+  "timeout_seconds": 1200,
+  "deadline": "2026-09-23T01:15:12-05:00",
+  "protocol_sha256": "51443e9604b7edd1aaa3861dc6a75831b529bbcde42f506825aaf97d7b17d483"
+}

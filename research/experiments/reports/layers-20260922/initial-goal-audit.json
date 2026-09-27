@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "checked_at": "2026-09-22T15:21:57.980882-05:00",
+  "raw_hdf5_event_labels_recomputed": 60,
+  "train_only_initial_samples_verified": 105,
+  "prediction_conditions_recomputed": 270,
+  "prediction_forward_max_abs": 8.940696716308594e-08,
+  "paired_intervals_recomputed": {
+    "ridge/clean": [
+      -43.433738124573814,
+      -8.960942802226757
+    ],
+    "ridge/noise0.10": [
+      -48.000801301060406,
+      -22.566950262489808
+    ],
+    "ridge/noise0.04": [
+      -30.171370304691028,
+      -0.03491902252692836
+    ],
+    "mlp/clean": [
+      -47.98080453521023,
+      -11.137314095710797
+    ],
+    "mlp/noise0.10": [
+      -44.371991563861535,
+      -1.425783158874016
+    ],
+    "mlp/noise0.04": [
+      -14.250739052989186,
+      18.976777768850244
+    ]
+  },
+  "constant_baselines_recomputed": 3,
+  "primary_protocol_unchanged": true,
+  "scope": "secondary probe audit, not a new independent replication or policy benefit"
+}

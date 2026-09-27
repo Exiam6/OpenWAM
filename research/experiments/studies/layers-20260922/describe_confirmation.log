@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/data02/zifanz4/openwam-experiments/scripts/layers/describe_confirmation.py", line 23, in <module>
+    assert np.allclose(drift+cross,increase,rtol=3e-5,atol=3e-6),key
+AssertionError: mlp/place_object_basket/L12_pca/noise0.10

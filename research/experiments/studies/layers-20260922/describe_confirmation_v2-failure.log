@@ -1,0 +1,1 @@
+Arithmetic precision correction passed all decomposition identities. JSON serialization then failed before writing any descriptive result: TypeError: Object of type float32 is not JSON serializable. V3 converts phase-record arrays to built-in float lists; prediction values and primary results unchanged.

@@ -1,0 +1,11 @@
+{
+  "seed": 42,
+  "arm": "goal_auxiliary",
+  "steps": 2000,
+  "wall_seconds": 60.485431123524904,
+  "peak_allocated_GB": 6.990275584,
+  "checkpoint_sha256": "5ad6e16dafab0e150a08ee93215717ee6f23da2d5026bd65e15f729fb48d8db1",
+  "sample_sequence_sha256": "a5c6bb4cefa08fa63cb271b55fc98562b79344813086d2447cf6e7a40aa6fcc9",
+  "selection": "fixed final step; no development/test scores",
+  "initial_checkpoint_sha256": "24c0646312e3e668972fec64d79162e58d0005c529421eed3d8651998e636415"
+}

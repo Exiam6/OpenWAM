@@ -1,0 +1,36 @@
+{
+  "phase_counts": {
+    "adjust_bottle": {
+      "change": {
+        "frames": 28,
+        "episodes": 20
+      },
+      "stable": {
+        "frames": 212,
+        "episodes": 20
+      }
+    },
+    "handover_block": {
+      "change": {
+        "frames": 25,
+        "episodes": 13
+      },
+      "stable": {
+        "frames": 215,
+        "episodes": 20
+      }
+    },
+    "place_object_basket": {
+      "change": {
+        "frames": 54,
+        "episodes": 20
+      },
+      "stable": {
+        "frames": 186,
+        "episodes": 20
+      }
+    }
+  },
+  "prediction_conditions": 384,
+  "decomposition_identities_passed": 192
+}

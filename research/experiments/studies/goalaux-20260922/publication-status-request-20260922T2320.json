@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-09-22T23:21:13.786920-05:00",
+  "reason": "user requested progress report",
+  "operation": "Sites get_site existing project",
+  "error": "SitesConnectorError: Sites project not found",
+  "error_code": "NOT_FOUND",
+  "http_status": 404,
+  "deployment_attempted": false,
+  "public_version_updated": false
+}

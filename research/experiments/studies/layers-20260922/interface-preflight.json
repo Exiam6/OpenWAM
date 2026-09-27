@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "strict_weights": true,
+  "K1_exact": true,
+  "condition_future_invariance_all_sources": true,
+  "source_shapes": {
+    "L12": [
+      1,
+      768,
+      3,
+      24,
+      20
+    ],
+    "L6": [
+      1,
+      768,
+      3,
+      24,
+      20
+    ],
+    "K4": [
+      1,
+      768,
+      3,
+      24,
+      20
+    ]
+  },
+  "seconds_per_9frame_clip": 0.008850567787885667,
+  "peak_allocated_GB": 0.374222848,
+  "input": "head_only_384x320_native_single_view",
+  "normalization": "same learned final norm once per selected block; K4 fp32 mean cast to bf16",
+  "encoder_sha256": "d84eabf6b6e01f58dd4a2d93af0eb426191a595ebaba1f43c47caa5feaefeef7",
+  "files": {
+    "common.py": "87a54d28304292a12f1cb62d579b66920b032876e6e098a30897aee818e60e2d",
+    "preflight.py": "d651890fc42929054c5eee647b3e62fdb2bfaea2e9511b641474b3139fa2478f"
+  },
+  "no_model_fit": true,
+  "no_heldout_scoring": true
+}

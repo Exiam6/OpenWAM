@@ -1,0 +1,222 @@
+{
+  "queues/1/started.json": {
+    "time": "2026-09-25T19:49:29.861809-05:00",
+    "pid": 2447502,
+    "uid": 2093,
+    "host": "cm009",
+    "start_ticks": "1117643798",
+    "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+    "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+  },
+  "queues/1/progress.json": {
+    "time": "2026-09-26T18:11:31.016814-05:00",
+    "stage": "waiting_for_own_slot",
+    "row": [
+      "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85",
+      "00000000:21:00.0",
+      "25971",
+      "75",
+      "0"
+    ],
+    "idle_samples": 0,
+    "deadline": "2026-09-28T10:41:59.240315-05:00"
+  },
+  "queues/4/started.json": {
+    "time": "2026-09-25T19:49:30.569000-05:00",
+    "pid": 2447691,
+    "uid": 2093,
+    "host": "cm009",
+    "start_ticks": "1117643869",
+    "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+    "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+  },
+  "queues/4/progress.json": {
+    "time": "2026-09-26T18:11:31.035934-05:00",
+    "stage": "waiting_for_own_slot",
+    "row": [
+      "GPU-33861458-0994-99a7-7457-6fceb49c229c",
+      "00000000:81:00.0",
+      "11787",
+      "50",
+      "0"
+    ],
+    "idle_samples": 0,
+    "deadline": "2026-09-28T10:41:59.240315-05:00"
+  },
+  "queues/5/started.json": {
+    "time": "2026-09-25T19:49:30.759333-05:00",
+    "pid": 2447754,
+    "uid": 2093,
+    "host": "cm009",
+    "start_ticks": "1117643889",
+    "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+    "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+  },
+  "queues/5/progress.json": {
+    "time": "2026-09-26T18:11:31.015154-05:00",
+    "stage": "waiting_for_own_slot",
+    "row": [
+      "GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3",
+      "00000000:A1:00.0",
+      "26415",
+      "77",
+      "0"
+    ],
+    "idle_samples": 0,
+    "deadline": "2026-09-28T10:41:59.240315-05:00"
+  },
+  "queues/2/started.json": {
+    "time": "2026-09-25T19:49:30.075167-05:00",
+    "pid": 2447565,
+    "uid": 2093,
+    "host": "cm009",
+    "start_ticks": "1117643821",
+    "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+    "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+  },
+  "queues/2/progress.json": {
+    "time": "2026-09-26T18:11:31.007972-05:00",
+    "stage": "waiting_for_own_slot",
+    "row": [
+      "GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e",
+      "00000000:41:00.0",
+      "26641",
+      "99",
+      "0"
+    ],
+    "idle_samples": 0,
+    "deadline": "2026-09-28T10:41:59.240315-05:00"
+  },
+  "queues/6/started.json": {
+    "time": "2026-09-25T19:49:30.979285-05:00",
+    "pid": 2447818,
+    "uid": 2093,
+    "host": "cm009",
+    "start_ticks": "1117643911",
+    "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+    "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+  },
+  "queues/6/progress.json": {
+    "time": "2026-09-26T18:11:31.014260-05:00",
+    "stage": "waiting_for_own_slot",
+    "row": [
+      "GPU-f341a0af-5cd4-9d17-e701-31f4530522ae",
+      "00000000:C1:00.0",
+      "23823",
+      "56",
+      "0"
+    ],
+    "idle_samples": 0,
+    "deadline": "2026-09-28T10:41:59.240315-05:00"
+  },
+  "queues/3/started.json": {
+    "time": "2026-09-25T19:49:30.327129-05:00",
+    "pid": 2447628,
+    "uid": 2093,
+    "host": "cm009",
+    "start_ticks": "1117643846",
+    "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+    "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+  },
+  "queues/3/progress.json": {
+    "time": "2026-09-26T18:11:31.016183-05:00",
+    "stage": "waiting_for_own_slot",
+    "row": [
+      "GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db",
+      "00000000:61:00.0",
+      "25755",
+      "75",
+      "0"
+    ],
+    "idle_samples": 0,
+    "deadline": "2026-09-28T10:41:59.240315-05:00"
+  },
+  "gate/exit.json": {
+    "time": "2026-09-25T19:49:28.258292-05:00",
+    "returncode": 0
+  },
+  "gate/started.json": {
+    "time": "2026-09-25T19:46:45.504706-05:00",
+    "pid": 1930728,
+    "uid": 2093,
+    "host": "cm001",
+    "start_ticks": "2628863150",
+    "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+    "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+  },
+  "gate/progress.json": {
+    "time": "2026-09-25T19:49:28.222689-05:00",
+    "full_payloads_hashed": [
+      "svae-seed42",
+      "svae-seed43",
+      "svae-seed44",
+      "pca-seed42",
+      "pca-seed43",
+      "pca-seed44",
+      "wan-seed42",
+      "wan-seed43",
+      "wan-seed44"
+    ],
+    "total": 9
+  },
+  "controller/started.json": {
+    "time": "2026-09-25T19:46:45.337653-05:00",
+    "pid": 1930714,
+    "uid": 2093,
+    "host": "cm001",
+    "start_ticks": "2628863133",
+    "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+    "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+  },
+  "controller/progress.json": {
+    "time": "2026-09-26T18:11:24.407367-05:00",
+    "stage": "independent_slot_admission_or_evaluation",
+    "terminal_slots": {},
+    "evaluation_deadline": "2026-09-28T10:41:59.240315-05:00"
+  },
+  "controller_identity": {
+    "pid": 1930714,
+    "uid": 2093,
+    "start_ticks": "2628863133",
+    "match": true
+  },
+  "training_exits": {
+    "wan-seed43": {
+      "time": "2026-09-24T02:51:13.836803-05:00",
+      "returncode": 0
+    },
+    "pca-seed42": {
+      "time": "2026-09-24T02:19:59.258742-05:00",
+      "returncode": 0
+    },
+    "svae-seed42": {
+      "time": "2026-09-24T02:23:39.720465-05:00",
+      "returncode": 0
+    },
+    "wan-seed42": {
+      "time": "2026-09-24T03:09:02.445341-05:00",
+      "returncode": 0
+    },
+    "svae-seed43": {
+      "time": "2026-09-24T02:16:27.723352-05:00",
+      "returncode": 0
+    },
+    "svae-seed44": {
+      "time": "2026-09-24T21:09:10.637020-05:00",
+      "returncode": 0
+    },
+    "pca-seed43": {
+      "time": "2026-09-24T02:23:54.989991-05:00",
+      "returncode": 0
+    },
+    "pca-seed44": {
+      "time": "2026-09-24T21:11:26.411245-05:00",
+      "returncode": 0
+    },
+    "wan-seed44": {
+      "time": "2026-09-24T21:41:40.015348-05:00",
+      "returncode": 0
+    }
+  },
+  "checked_at": "2026-09-26T18:11:31.753703-05:00"
+}

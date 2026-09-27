@@ -1,0 +1,28 @@
+{
+  "time": "2026-09-22T15:49:38.450305-05:00",
+  "tmux": {
+    "exit": 0,
+    "stdout": "exp: 3 windows (created Sat Sep 19 20:14:57 2026)",
+    "stderr": ""
+  },
+  "gpu": {
+    "exit": 0,
+    "stdout": "0, 32223 MiB, 38 %\n1, 7 MiB, 0 %\n2, 6 MiB, 0 %\n3, 34557 MiB, 99 %\n4, 34575 MiB, 100 %\n5, 34573 MiB, 100 %\n6, 34573 MiB, 100 %\n7, 34571 MiB, 99 %",
+    "stderr": ""
+  },
+  "gpu_processes": {
+    "exit": 0,
+    "stdout": "4177682, /data11/rahulr12/envs/sapg/bin/python, 32208 MiB\n2536646, /home/haoyuyh3/miniconda3/envs/unite/bin/python3, 34534 MiB\n2536647, /home/haoyuyh3/miniconda3/envs/unite/bin/python3, 34552 MiB\n2536648, /home/haoyuyh3/miniconda3/envs/unite/bin/python3, 34552 MiB\n2536649, /home/haoyuyh3/miniconda3/envs/unite/bin/python3, 34552 MiB\n2536650, /home/haoyuyh3/miniconda3/envs/unite/bin/python3, 34550 MiB",
+    "stderr": ""
+  },
+  "own_processes": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "cron": {
+    "exit": 0,
+    "stdout": "*/15 * * * * /usr/bin/python3 /home/zifanz4/openwam-experiments/scripts/selfcheck_15m.py >> /home/zifanz4/.local/state/openwam-selfcheck/cron.log 2>&1",
+    "stderr": ""
+  }
+}

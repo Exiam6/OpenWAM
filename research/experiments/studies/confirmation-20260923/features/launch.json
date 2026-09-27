@@ -1,0 +1,13 @@
+{
+  "started_at": "2026-09-23T12:07:11.805029-05:00",
+  "host": "rainier",
+  "gpu_query": "GPU-38557357-3f58-c864-2f53-8b14087b5e8c, NVIDIA A40, 1, 0, 0, 550.78",
+  "timeout_seconds": 12679,
+  "deadline": "2026-09-23T15:38:51.767900-05:00",
+  "runtime_manifest_sha256": "30f7fd352382c1879fcc3249c2ffd3341343fd7dd4716553bdc66bd1bfcad358",
+  "reason": "Prior process failed in dynamic loader before Python; identical interpreter/package/code/weight bytes, private glibc2.35 compatibility, unchanged numerical parity required",
+  "failed_attempts_preserved": [
+    "feature-attempt-l40s",
+    "feature-attempt-rainier-startup"
+  ]
+}

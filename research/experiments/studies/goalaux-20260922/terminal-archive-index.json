@@ -1,0 +1,301 @@
+{
+  "created_at": "2026-09-22T19:33:12.709614-05:00",
+  "files": [
+    {
+      "source_relative_to_runtime_study": "fresh-v4/exit-code.txt",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/exit-code.txt",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/implementation-freeze.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/implementation-freeze.json",
+      "sha256": "17a7098d217de8e07cebf7b479581cf937d127fa1450ff5be159a900d004e934",
+      "bytes": 44979
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/launch.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/launch.json",
+      "sha256": "43f18eace2f3e8922b86c107632ae7e5dadd02dba242d593280f13f0c076018e",
+      "bytes": 417
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802014/owned-worker.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802014/owned-worker.json",
+      "sha256": "afdfc3ab3dc38e68995098cc3eb5a391dd2aca6ca7d469f7690d4a344d88a6f6",
+      "bytes": 100
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802014/result.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802014/result.json",
+      "sha256": "bd77fc4113e66933c2aa5f8d0635d2fe73759f658eb25b13c95de419a48fb9e9",
+      "bytes": 284
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802014/runtime-provenance.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802014/runtime-provenance.json",
+      "sha256": "fae0550274cd6bb66d2f89426d496f3c184b12a9ac0d7eaa3eccc377b7e45213",
+      "bytes": 220
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802014/worker.log",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802014/worker.log",
+      "sha256": "0de7e1dce28dd0bcc810b07e32d40076015bc6307ca63888f98bfc266bcdd30a",
+      "bytes": 977
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802015/owned-worker.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802015/owned-worker.json",
+      "sha256": "7cb1a8e45f1d1fa39e939ddf83375138b7972880dfa4961964ca701fd6039781",
+      "bytes": 100
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802015/result.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802015/result.json",
+      "sha256": "48a0a8de801dcbc98a8b89aca13e3c9438d2c445fe0e7f02e09ce59b09824206",
+      "bytes": 283
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802015/runtime-provenance.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802015/runtime-provenance.json",
+      "sha256": "fae0550274cd6bb66d2f89426d496f3c184b12a9ac0d7eaa3eccc377b7e45213",
+      "bytes": 220
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802015/worker.log",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802015/worker.log",
+      "sha256": "7db22c38a71a264f6dc30c0f7d4bd33da5c469843ddf3f30ecaaecf10d0e15ab",
+      "bytes": 976
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802016/owned-worker.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802016/owned-worker.json",
+      "sha256": "12a566b8841ffe31f6800a48699ab18cf99c9d74f6285a5fb58ca015a5bd61b2",
+      "bytes": 100
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802016/result.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802016/result.json",
+      "sha256": "9262c72f3bd64fc9559edae957825b5f331a534d5f0095bcecf8a5d8adadd807",
+      "bytes": 809
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802016/runtime-provenance.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802016/runtime-provenance.json",
+      "sha256": "1e89a2708d74af553d2ab949467f49811f3fc772e48d8b48db096c1a736ae282",
+      "bytes": 438
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802016/worker.log",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/terminal-log-byte-archive/fresh-v4/place_object_basket/seed-802016/worker.log",
+      "sha256": "16b1e659f77fe44a56be051a4547a8f013319dbb18f0df09995af4f11e9d6938",
+      "bytes": 11383
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802017/owned-worker.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802017/owned-worker.json",
+      "sha256": "2a215b27caf6a625f34253de5dc6fab25052f847c5153828134836d89b57c603",
+      "bytes": 100
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802017/result.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802017/result.json",
+      "sha256": "18672d59bc1b79431e22fbdbf7a7c2f004f100ddb7c3abe14ab138e969865d91",
+      "bytes": 809
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802017/runtime-provenance.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802017/runtime-provenance.json",
+      "sha256": "1e89a2708d74af553d2ab949467f49811f3fc772e48d8b48db096c1a736ae282",
+      "bytes": 438
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802017/worker.log",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/terminal-log-byte-archive/fresh-v4/place_object_basket/seed-802017/worker.log",
+      "sha256": "97f6c11282c24fe01f1d8a1d29c4b3b41ec4f690f737f0ab6817e642dcb54931",
+      "bytes": 10053
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802018/owned-worker.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802018/owned-worker.json",
+      "sha256": "7ee89623c40e4a8c9047555b379462df83bb30ed46c80322cea2e2a26a275061",
+      "bytes": 100
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802018/result.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802018/result.json",
+      "sha256": "cd92a17afef736e3bb395d29d88635489ffd8256f3d35666a1d907a15eaa5a42",
+      "bytes": 809
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802018/runtime-provenance.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802018/runtime-provenance.json",
+      "sha256": "1e89a2708d74af553d2ab949467f49811f3fc772e48d8b48db096c1a736ae282",
+      "bytes": 438
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802018/worker.log",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/terminal-log-byte-archive/fresh-v4/place_object_basket/seed-802018/worker.log",
+      "sha256": "e540733c2fe780ab7f9e9e5d5af135e6fdfc88bc8d616d492164bbe458c3fdb7",
+      "bytes": 10088
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802019/owned-worker.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802019/owned-worker.json",
+      "sha256": "00475073cb5840ae7ca8d3b922f9861f5fa98679556931a2e916249cf1dfa4ba",
+      "bytes": 100
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802019/result.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802019/result.json",
+      "sha256": "b12c46704d4271f4bedcfac7f9d8f88da154b38c39da29c42c9e4ecc461ab9d4",
+      "bytes": 809
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802019/runtime-provenance.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802019/runtime-provenance.json",
+      "sha256": "1e89a2708d74af553d2ab949467f49811f3fc772e48d8b48db096c1a736ae282",
+      "bytes": 438
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802019/worker.log",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/terminal-log-byte-archive/fresh-v4/place_object_basket/seed-802019/worker.log",
+      "sha256": "f7a1ac5570eb0311cb3679f7fa1f1d562a793489003f7aa4053f8be798fdd62b",
+      "bytes": 10473
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802020/owned-worker.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802020/owned-worker.json",
+      "sha256": "f12a76fd21761b592af183b6bcd0bbf3ce79d52a93c0b39adfceadd514970f0c",
+      "bytes": 100
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802020/result.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802020/result.json",
+      "sha256": "a1a541256dfbc138aea085c4fbde53c401e1677c55f73194f9e9b002d720c2bf",
+      "bytes": 284
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802020/runtime-provenance.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802020/runtime-provenance.json",
+      "sha256": "fae0550274cd6bb66d2f89426d496f3c184b12a9ac0d7eaa3eccc377b7e45213",
+      "bytes": 220
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802020/worker.log",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802020/worker.log",
+      "sha256": "be5aa481e6f84faa87b04d0843f4a1f835e2083d10c65765cb12194538ff85ac",
+      "bytes": 977
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802021/owned-worker.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802021/owned-worker.json",
+      "sha256": "e7fa8d8010106806ce5be90e9e7fb039cdbcc3d853952f846b9e092971475900",
+      "bytes": 100
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802021/result.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802021/result.json",
+      "sha256": "5b1b491e9a67ad7621c04ed7845a172515c36a16a94f9dbb14a1e9be2094a8f7",
+      "bytes": 814
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802021/runtime-provenance.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802021/runtime-provenance.json",
+      "sha256": "1e89a2708d74af553d2ab949467f49811f3fc772e48d8b48db096c1a736ae282",
+      "bytes": 438
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802021/worker.log",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/terminal-log-byte-archive/fresh-v4/place_object_basket/seed-802021/worker.log",
+      "sha256": "91a7fc526f762fe9971ad2fdf8e21be803b16e1efdfd130074c31520c60b5696",
+      "bytes": 9708
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802022/owned-worker.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802022/owned-worker.json",
+      "sha256": "e0f697404dad86b0ae56ae3f093fcf0d10990f55a9ffa06eee7341dbc570af2a",
+      "bytes": 100
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802022/result.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802022/result.json",
+      "sha256": "1c220ba673be7c02acf4a47bd488949afa90adf567c4ba050d7ba7355bb4fbfe",
+      "bytes": 815
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802022/runtime-provenance.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802022/runtime-provenance.json",
+      "sha256": "1e89a2708d74af553d2ab949467f49811f3fc772e48d8b48db096c1a736ae282",
+      "bytes": 438
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802022/worker.log",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/terminal-log-byte-archive/fresh-v4/place_object_basket/seed-802022/worker.log",
+      "sha256": "b953148b7866d6331ea2e05df233575f708f06efb998bbc2c1432943ec6741ce",
+      "bytes": 10654
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802023/owned-worker.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802023/owned-worker.json",
+      "sha256": "8111e89ac37fc4a758738d7399d6451d9bcb7ec0ea3282578050a4d5675367c4",
+      "bytes": 100
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802023/result.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802023/result.json",
+      "sha256": "dd16eda2c99a5002268e4f5555357a7fcbf34ba05735e4909d976a256f8fbe79",
+      "bytes": 809
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802023/runtime-provenance.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802023/runtime-provenance.json",
+      "sha256": "1e89a2708d74af553d2ab949467f49811f3fc772e48d8b48db096c1a736ae282",
+      "bytes": 438
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802023/worker.log",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/terminal-log-byte-archive/fresh-v4/place_object_basket/seed-802023/worker.log",
+      "sha256": "44a65a40225ff668bed48c62ea4235b06c3f43301aecaa845b4e8927f1cb2388",
+      "bytes": 10158
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802024/owned-worker.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802024/owned-worker.json",
+      "sha256": "893d30517df2e6890f8201e73c8d39f8ffd32f68b75dc3d1107b16591cf40b87",
+      "bytes": 100
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/place_object_basket/seed-802024/worker.log",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/place_object_basket/seed-802024/worker.log",
+      "sha256": "f1624096f5032e80f1e5b1e0b28f677c13900928f7046bbec3906f97c406fe9e",
+      "bytes": 711
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/progress.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/progress.json",
+      "sha256": "15baee1b7a34195d711aac1fc87c99c381bd5f6b817ec938a432ac579684040a",
+      "bytes": 58948
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/run.log",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/run.log",
+      "sha256": "49b3c338616ab407c2381fb3aadef45a2fb5680bec0e7a0f4ee81f276f7fc16f",
+      "bytes": 1657
+    },
+    {
+      "source_relative_to_runtime_study": "fresh-v4/started.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/fresh-v4/started.json",
+      "sha256": "fa23e9b39614827ca61fe1fcf49d4350341f427fd172ae853b1f4f3db46e50c4",
+      "bytes": 208
+    },
+    {
+      "source_relative_to_runtime_study": "matched-protocol.json",
+      "local_relative_to_control_repository": "studies/goalaux-20260922/fresh-v4-terminal/matched-protocol.json",
+      "sha256": "ac87b2067ad7e66f372fddfdda31818abcc1b3ef5e9f0ae70c92de672e6fc0a6",
+      "bytes": 3038
+    }
+  ],
+  "complete_byte_exact_archive": true,
+  "earlier_normalized_log_copies_preserved": true
+}

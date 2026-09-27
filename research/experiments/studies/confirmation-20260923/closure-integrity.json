@@ -1,0 +1,9 @@
+{
+  "time": "2026-09-23T15:51:01.566309-05:00",
+  "passed": true,
+  "frozen_files_checked": 370,
+  "mismatches": [],
+  "result_sha256": "efa7f786381e9890c28401652fc2145a628938e3bc2ef381391b171d493b3366",
+  "scope": "post-window byte-integrity only; not independent numerical audit",
+  "independent_numerical_audit_completed": false
+}

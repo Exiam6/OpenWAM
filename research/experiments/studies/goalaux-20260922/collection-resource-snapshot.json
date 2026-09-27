@@ -1,0 +1,218 @@
+{
+  "checked_at": "2026-09-22T16:43:01.827908-05:00",
+  "hosts": [
+    {
+      "host": "cm001",
+      "exit": 0,
+      "gpus": [
+        {
+          "index": 0,
+          "uuid": "GPU-c83b7d25-753e-2eae-f13b-8f9c3df9fa4b",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 32223,
+          "util": 92,
+          "ecc": 0
+        },
+        {
+          "index": 1,
+          "uuid": "GPU-67b700c2-eb7a-93aa-28dd-57e8b2711926",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 4769,
+          "util": 23,
+          "ecc": 0
+        },
+        {
+          "index": 2,
+          "uuid": "GPU-025b7fc9-8f25-5467-5c28-8e59884ab6d3",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 31987,
+          "util": 3,
+          "ecc": 0
+        },
+        {
+          "index": 3,
+          "uuid": "GPU-bba13bfa-9dd6-0956-0e4e-122950cd69fe",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 34557,
+          "util": 100,
+          "ecc": 0
+        },
+        {
+          "index": 4,
+          "uuid": "GPU-e7aef4c0-2628-b4f8-34f4-579d62b7feb6",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 34575,
+          "util": 100,
+          "ecc": 0
+        },
+        {
+          "index": 5,
+          "uuid": "GPU-1758045c-5a5e-3661-bb58-a786fa745a17",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 34573,
+          "util": 100,
+          "ecc": 0
+        },
+        {
+          "index": 6,
+          "uuid": "GPU-91a9a93b-b386-82f0-3009-88cc9bb79d06",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 34573,
+          "util": 100,
+          "ecc": 0
+        },
+        {
+          "index": 7,
+          "uuid": "GPU-3624eff9-444b-b72c-e32e-2bae7acbb8cb",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 34571,
+          "util": 100,
+          "ecc": 0
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "host": "cm008",
+      "exit": 0,
+      "gpus": [
+        {
+          "index": 0,
+          "uuid": "GPU-f4358e67-5d2d-875e-4d4d-d5498e241ea6",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 18006,
+          "util": 76,
+          "ecc": 0
+        },
+        {
+          "index": 1,
+          "uuid": "GPU-398f75e1-9c76-7919-fd6d-ef871167e061",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 17982,
+          "util": 69,
+          "ecc": 0
+        },
+        {
+          "index": 2,
+          "uuid": "GPU-336bd8f1-0708-a24e-ff75-e358f6485f37",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 25033,
+          "util": 34,
+          "ecc": 0
+        },
+        {
+          "index": 3,
+          "uuid": "GPU-bed9a26b-8f1c-4ae3-093b-b90520b09798",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 20971,
+          "util": 95,
+          "ecc": 0
+        },
+        {
+          "index": 4,
+          "uuid": "GPU-b751c9b7-3cb7-42c7-1f3a-746e08a19d12",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 23629,
+          "util": 40,
+          "ecc": 0
+        },
+        {
+          "index": 5,
+          "uuid": "GPU-65bc3a35-16ee-3e23-c7c5-865d27f67e5e",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 17394,
+          "util": 66,
+          "ecc": 0
+        },
+        {
+          "index": 6,
+          "uuid": "GPU-a050719f-ae33-2953-9608-b83ff0d54a83",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 22198,
+          "util": 76,
+          "ecc": 0
+        },
+        {
+          "index": 7,
+          "uuid": "GPU-02fe99d4-84dd-ef97-02b9-0639645b795e",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 27785,
+          "util": 40,
+          "ecc": 0
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "host": "cm009",
+      "exit": 0,
+      "gpus": [
+        {
+          "index": 0,
+          "uuid": "GPU-c7d96da5-a1ae-e1ed-de5d-03f35e550da2",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 1,
+          "util": 0,
+          "ecc": 2
+        },
+        {
+          "index": 1,
+          "uuid": "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 33259,
+          "util": 100,
+          "ecc": 0
+        },
+        {
+          "index": 2,
+          "uuid": "GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 33341,
+          "util": 100,
+          "ecc": 0
+        },
+        {
+          "index": 3,
+          "uuid": "GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 32421,
+          "util": 100,
+          "ecc": 0
+        },
+        {
+          "index": 4,
+          "uuid": "GPU-33861458-0994-99a7-7457-6fceb49c229c",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 32479,
+          "util": 100,
+          "ecc": 0
+        },
+        {
+          "index": 5,
+          "uuid": "GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 32733,
+          "util": 100,
+          "ecc": 0
+        },
+        {
+          "index": 6,
+          "uuid": "GPU-f341a0af-5cd4-9d17-e701-31f4530522ae",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 32457,
+          "util": 100,
+          "ecc": 0
+        },
+        {
+          "index": 7,
+          "uuid": "GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e",
+          "name": "NVIDIA L40S",
+          "memory_MiB": 31737,
+          "util": 100,
+          "ecc": 0
+        }
+      ],
+      "stderr": ""
+    }
+  ]
+}

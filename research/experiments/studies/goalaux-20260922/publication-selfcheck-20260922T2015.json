@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-09-22T20:17:10.889472-05:00",
+  "operation": "Sites get_site existing project",
+  "project_id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3",
+  "error": "SitesConnectorError: Sites project not found",
+  "error_code": "NOT_FOUND",
+  "http_status": 404,
+  "deployment_attempted": false,
+  "public_version_updated": false
+}

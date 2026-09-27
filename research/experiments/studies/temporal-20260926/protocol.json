@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "created_at": "2026-09-26T17:48:49.941691-05:00",
+  "authorization": "User go 2026-09-26 after prioritizing a small representation intervention judged by policy success. Earlier complete training/evaluation authorization remains.",
+  "deadline": "2026-09-29T17:48:49.941691-05:00",
+  "question": "Does train-only learned four-frame temporal compression improve native295M3-task policy success over matched mean-pool continuation?",
+  "primary_baseline": "Frozen DINOv3 + existing frozen S-VAE48; original mean pooling",
+  "candidate": "Per-channel four-frame convex weights: w=.125+.5*softmax(logits);3072 parameters initialized at zero; frame0 identity; frozen after offline fit",
+  "offline": {
+    "episodes": 105,
+    "clips_per_episode": 6,
+    "clip_starts": "unique linspace(0,episode_length-33,6).astype(int)",
+    "input_frames": 9,
+    "source": "same native training-only105 episodes; no test frames",
+    "seed": 426,
+    "steps": 1500,
+    "batch_size": 3,
+    "optimizer": "AdamW lr0.001 betas(0.9,0.99) wd0; gradclip1",
+    "objective": "standardized4-frame feature MSE + temporal first-difference MSE +0.05 normalized48-latent anchor MSE +0.01 KL(weights||uniform)",
+    "decoder": "frozen original S-VAE decoder plus zero-initialized linear48->4*768 temporal residual head, residual centered over4frames",
+    "selection": "fixed final step; no sweep or best-checkpoint selection",
+    "shadow_control": "independent identically initialized residual head trained with frozen mean pool on identical batches; diagnostic only"
+  },
+  "policy": {
+    "initialization": "same existing full S-VAE6000-update final checkpoint within each seed",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "routes": [
+      "mean",
+      "learned"
+    ],
+    "microsteps": 4000,
+    "optimizer_updates": 2000,
+    "batch_size": 4,
+    "accumulation": 2,
+    "lr": 3e-05,
+    "augmentation": "same fixed clean/.04/.10 mixture and paired batch order; new-stream salt9826",
+    "encoder": "DINO,S-VAE,and final temporal kernel frozen; temporary decoder head removed",
+    "checkpoint": "fixed final4000, no selection; compare both equal continuation budgets"
+  },
+  "evaluation": {
+    "tasks": [
+      "adjust_bottle",
+      "handover_block",
+      "place_object_basket"
+    ],
+    "cohort": "first20 accepted entries per task from existing sealed endtoend150scene cohort; not a new independent cohort",
+    "conditions": [
+      "clean",
+      "gaussian_sigma_0.10",
+      "head_camera_yaw_5deg"
+    ],
+    "episodes_per_route_seed_condition": 60,
+    "total_rollouts": 1080,
+    "primary": "task-balanced success difference learned-minus-mean on Gaussian.10",
+    "clean_guard": "report clean difference and95%interval; no claim of preserving clean if noninferiority -5pp not supported",
+    "secondary": "yaw success, each task and each training seed; inference latency; weights and latent drift",
+    "statistics": "paired scene and training-seed crossed bootstrap10000 draws seed426, tasks fixed equally weighted; report all3 seed effects; limited3seed precision. No averaging only favorable cells.",
+    "claim_rule": "complete1080 valid outcomes, no technical failures silently counted/dropped, primary95%CI lower>0 and all3 seed effects>0, clean guard supported. Otherwise report limited/negative/inconclusive; no5B or fullRAE claim",
+    "test_use": "prospectively fixed candidate; no tuning using these tests even if old study reveals them first"
+  },
+  "bounds": {
+    "max_concurrent_new_gpus": 2,
+    "combined_with_old_max": 8,
+    "offline_timeout_seconds": 7200,
+    "per_training_timeout_seconds": 18000,
+    "overall_gpu_hours_upper": 144,
+    "disk_floor_gib": 32,
+    "no_auto_retry": true,
+    "do_not_change_existing_study": true
+  },
+  "gates": [
+    "mean-initialization equality",
+    "first-frame and completed-group causality",
+    "finite gradients to kernel through frozen reducer",
+    "strict native save/reload parity",
+    "one training-only simulator rollout before test",
+    "paired batches/common initialization/fixed checkpoints audit",
+    "pause/deadline/idleGPU/ECC/lock admission"
+  ]
+}

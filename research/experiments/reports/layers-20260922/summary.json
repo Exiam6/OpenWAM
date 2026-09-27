@@ -1,0 +1,323 @@
+{
+  "updated_at": "2026-09-22T15:35:46-05:00",
+  "status": "\u65b0\u8f68\u8ff9\u8bc4\u5206\u5b8c\u6210\uff0c\u72ec\u7acb\u5ba1\u8ba1\u901a\u8fc7\u3002",
+  "primary": "K4-SVAE48 versus L12-SVAE48",
+  "development": {
+    "ridge": {
+      "clean": {
+        "E_relative_change_percent": 2.9630013202683263,
+        "E_delta": 0.0038520845390426716,
+        "delta95": [
+          -0.004311253879449168,
+          0.01285165767964068
+        ],
+        "per_task_relative_percent": [
+          16.93529668025291,
+          2.373720940941815,
+          -2.379361133017705
+        ],
+        "task_order": [
+          "adjust_bottle",
+          "handover_block",
+          "place_object_basket"
+        ],
+        "independent_episodes": 15,
+        "seed_average_not_independent_replication": true
+      },
+      "noise0.10": {
+        "E_relative_change_percent": 45.77324681809266,
+        "E_delta": 0.16152363562461744,
+        "delta95": [
+          0.1276157357845118,
+          0.19436078055388728
+        ],
+        "per_task_relative_percent": [
+          39.1322730515426,
+          108.44611386366097,
+          9.648296266908611
+        ],
+        "task_order": [
+          "adjust_bottle",
+          "handover_block",
+          "place_object_basket"
+        ],
+        "independent_episodes": 15,
+        "seed_average_not_independent_replication": true
+      },
+      "noise0.04": {
+        "E_relative_change_percent": 24.770582387219143,
+        "E_delta": 0.056209425587451,
+        "delta95": [
+          0.04398592384547112,
+          0.06794004323890845
+        ],
+        "per_task_relative_percent": [
+          49.21658016156389,
+          43.71691763469702,
+          0.4060771024759616
+        ],
+        "task_order": [
+          "adjust_bottle",
+          "handover_block",
+          "place_object_basket"
+        ],
+        "independent_episodes": 15,
+        "seed_average_not_independent_replication": true
+      }
+    },
+    "mlp": {
+      "clean": {
+        "E_relative_change_percent": -7.960745590218825,
+        "delta95": [
+          -0.012099850094463262,
+          0.0024087079805839378
+        ],
+        "per_task_relative_percent": [
+          -2.246650839861886,
+          -19.949483672397527,
+          -7.804164720701332
+        ]
+      },
+      "noise0.10": {
+        "E_relative_change_percent": 14.78965810231312,
+        "delta95": [
+          0.027429802386711038,
+          0.07065143841836186
+        ],
+        "per_task_relative_percent": [
+          27.87393831840358,
+          28.436493741037047,
+          -5.850080824251164
+        ]
+      },
+      "noise0.04": {
+        "E_relative_change_percent": 16.32577366856679,
+        "delta95": [
+          0.008101745031567086,
+          0.049689419789032796
+        ],
+        "per_task_relative_percent": [
+          38.05415838236619,
+          19.765493892609985,
+          -9.185992745626706
+        ]
+      }
+    },
+    "crossover": {
+      "ridge": {
+        "raw": {
+          "clean": {
+            "L12_E": 0.13581176760602248,
+            "K4_E": 0.11638153997362743,
+            "relative_change_percent": -14.306733484804024
+          },
+          "noise0.10": {
+            "L12_E": 0.7780727561778034,
+            "K4_E": 0.594557202747695,
+            "relative_change_percent": -23.585911725223273
+          }
+        },
+        "pca": {
+          "clean": {
+            "L12_E": 0.13580324847765596,
+            "K4_E": 0.1276928214619183,
+            "relative_change_percent": -5.972189256630411
+          },
+          "noise0.10": {
+            "L12_E": 0.3768998454700538,
+            "K4_E": 0.5208009953119948,
+            "relative_change_percent": 38.180209297372734
+          }
+        },
+        "svae": {
+          "clean": {
+            "L12_E": 0.13000617018604066,
+            "K4_E": 0.1338582547250833,
+            "relative_change_percent": 2.963001320268299
+          },
+          "noise0.10": {
+            "L12_E": 0.3528778202396874,
+            "K4_E": 0.514401455864305,
+            "relative_change_percent": 45.773246818092694
+          }
+        }
+      },
+      "mlp": {
+        "raw": {
+          "clean": {
+            "L12_E": 0.10021811056261261,
+            "K4_E": 0.0829551967792213,
+            "relative_change_percent": -17.225343489793776
+          },
+          "noise0.10": {
+            "L12_E": 0.4843461329738299,
+            "K4_E": 0.3557706497609615,
+            "relative_change_percent": -26.546197948031423
+          }
+        },
+        "pca": {
+          "clean": {
+            "L12_E": 0.07237567217089236,
+            "K4_E": 0.06133347502909601,
+            "relative_change_percent": -15.256780090033129
+          },
+          "noise0.10": {
+            "L12_E": 0.30324184546868005,
+            "K4_E": 0.3167797376712163,
+            "relative_change_percent": 4.4643878820921135
+          }
+        },
+        "svae": {
+          "clean": {
+            "L12_E": 0.06368332184437249,
+            "K4_E": 0.05861365460894174,
+            "relative_change_percent": -7.960745590218831
+          },
+          "noise0.10": {
+            "L12_E": 0.33128011748194697,
+            "K4_E": 0.38027531421846816,
+            "relative_change_percent": 14.789658102313119
+          }
+        }
+      }
+    },
+    "audit_passed": true,
+    "independent_episodes": 15,
+    "previously_exposed": true
+  },
+  "fresh_collected": {
+    "adjust_bottle": 20,
+    "handover_block": 20,
+    "place_object_basket": 20
+  },
+  "fresh_attempts": 72,
+  "fresh_refits": 0,
+  "policy_stage": "not launched: development gate failed; native bounded throughput profile incomplete",
+  "publication": "existing public project unavailable to current Sites connector; local report only",
+  "primary_audit": "passed384conditions",
+  "secondary_waypoint_audit": "passed270conditions",
+  "original_primary_passed": false,
+  "waypoint_secondary_K4_SVAE_vs_L12_SVAE": {
+    "ridge": {
+      "clean": {
+        "E_relative_change_percent": -26.17238456201699,
+        "relative_percent95": [
+          -43.433738124573814,
+          -8.960942802226757
+        ],
+        "per_task_relative_percent": [
+          -40.83019408836138,
+          -9.842291840574394,
+          -48.04886289477484
+        ],
+        "task_order": [
+          "adjust_bottle",
+          "handover_block",
+          "place_object_basket"
+        ]
+      },
+      "noise0.10": {
+        "E_relative_change_percent": -36.26463257003438,
+        "relative_percent95": [
+          -48.00080130106044,
+          -22.5669502624898
+        ],
+        "per_task_relative_percent": [
+          0.9511637089493533,
+          -30.35987420781765,
+          -62.87706795177965
+        ],
+        "task_order": [
+          "adjust_bottle",
+          "handover_block",
+          "place_object_basket"
+        ]
+      },
+      "noise0.04": {
+        "E_relative_change_percent": -15.569951501892211,
+        "relative_percent95": [
+          -30.171370304691028,
+          -0.03491902252692454
+        ],
+        "per_task_relative_percent": [
+          -19.775458319959988,
+          -12.799597531872875,
+          -12.699367719305135
+        ],
+        "task_order": [
+          "adjust_bottle",
+          "handover_block",
+          "place_object_basket"
+        ]
+      }
+    },
+    "mlp": {
+      "clean": {
+        "E_relative_change_percent": -29.511725147960032,
+        "relative_percent95": [
+          -47.98080453521023,
+          -11.137314095710796
+        ],
+        "per_task_relative_percent": [
+          -36.260454504262185,
+          11.1848429608377,
+          -64.88051249454631
+        ],
+        "task_order": [
+          "adjust_bottle",
+          "handover_block",
+          "place_object_basket"
+        ]
+      },
+      "noise0.10": {
+        "E_relative_change_percent": -24.54099025343619,
+        "relative_percent95": [
+          -44.37199156386153,
+          -1.425783158874018
+        ],
+        "per_task_relative_percent": [
+          -11.927698019614942,
+          10.912418924083218,
+          -69.12025208776188
+        ],
+        "task_order": [
+          "adjust_bottle",
+          "handover_block",
+          "place_object_basket"
+        ]
+      },
+      "noise0.04": {
+        "E_relative_change_percent": 3.934285361785779,
+        "relative_percent95": [
+          -14.250739052989188,
+          18.976777768850237
+        ],
+        "per_task_relative_percent": [
+          3.652035640255998,
+          46.37327131524992,
+          -52.31660494415746
+        ],
+        "task_order": [
+          "adjust_bottle",
+          "handover_block",
+          "place_object_basket"
+        ]
+      }
+    }
+  },
+  "source_choice_not_universal": true,
+  "view_baseline_completed": true,
+  "phase_decomposition": "v3complete; v1precision/v2serialization failures retained",
+  "goal_auxiliary_followup": {
+    "as_of": "2026-09-22T19:17:48.667533-05:00",
+    "status": "goalaux_confirmation_incomplete_at_original_deadline_archived",
+    "accepted_counts": {
+      "adjust_bottle": 20,
+      "handover_block": 20,
+      "place_object_basket": 16
+    },
+    "new_confirmation_scored": false,
+    "incomplete_confirmation": true,
+    "policy_benefit_established": false
+  }
+}

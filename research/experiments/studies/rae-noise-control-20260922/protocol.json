@@ -1,0 +1,45 @@
+{
+  "frozen_at": "2026-09-22T23:59:51.544517-05:00",
+  "scope": "Exploratory equal-noise-training control for initial-image expert waypoint XY, same exposed60 as baseline; not new independent confirmation, full RAE or policy gain",
+  "question": "Does DINO-vs-Wan goal-readout advantage survive training-only noise adaptation, rather than reflect clean-trained ridge distribution shift?",
+  "deadline": "2026-09-23T01:15:12-05:00",
+  "max_wall_seconds": 1200,
+  "max_gpus": 1,
+  "cpu_threads": 4,
+  "max_new_cache_bytes": 1600000000,
+  "tasks": [
+    "adjust_bottle",
+    "handover_block",
+    "place_object_basket"
+  ],
+  "training": "same105episodes frame0 only,35/task, no other images or labels",
+  "variants": "one cached clean vector plus3new independent noise.10 and3noise.04 per episode; uniform7 variants,735rows total; clean1/7 each noise3/7",
+  "noise": "PCG64 seed20260922+original_episode_uid*100000+frame*10+draw; draw0,1,2; exact original uint8 noise, clipping and320x384PILbilinear convention; common images for all routes",
+  "routes": [
+    "Wan48_native_scale",
+    "Wan48_per_token_layernorm",
+    "L12_raw768",
+    "L12_PCA48",
+    "L12_SVAE48_seed42",
+    "L12_SVAE48_seed43",
+    "L12_SVAE48_seed44"
+  ],
+  "encoder_update": false,
+  "encoder_processing": "native Wan single frame as already parity-checked; DINO same image repeated9 as existing extraction, current latent only. Frozen native L12 only, frozen PCA and SVAE means. Reuse clean training vectors and ALL eval vectors.",
+  "readout": "task-specific ridge, train-only normalization, five episode-disjoint folds seed20260922; alpha[1e-4,.01,1,100]; fit alpha_eff=alpha*(num_augmented_rows/num_independent_episodes) in each fold and final fit, preserving regularization per independent scene. No hyperparameter expansion. No holdout-statistic offset correction.",
+  "sanity": [
+    "CPU synthetic repeated-clean fixture verifies7repeat normalized regularization reproduces original ridge",
+    "training-only hardware/codec parity on first frame of first training episode for each task, all routes; differences standardized by clean training feature std: RMS<=.05 and max<=.5; record actual residuals. This is an engineering check, not rerunning evaluations."
+  ],
+  "evaluation": "reuse old60goal frame0 features: clean andsigma.04/.10,3draws each; all20/task; threeSVAE errors averaged per episode, not independent scenes",
+  "outputs": [
+    "all7individual routes and5route summaries x3tasks x3conditions",
+    "paired within-route augmented-minus-originalcleantrained changes",
+    "all DINO routes versus BOTH Wan norms after adaptation",
+    "2000task-stratified paired episode bootstrap seed20260922, descriptive95percent intervals only",
+    "all clean regressions retained, no selection or significance gate"
+  ],
+  "failure_policy": "stop and preserve failure if parity/integrity gate fails; no silent tolerance change or hidden retry",
+  "resource": "glacier GPU7 UUID GPU-d13929da-086d-1be5-6414-dbf6aeded08e, memory<100MiB,util0,ECC0,no compute jobs; cooperative lock; check pause/deadline immediately before launch; no other task signals",
+  "old_runs": "no old80, incomplete56scoring, oldfit replays, or deadline extensions"
+}

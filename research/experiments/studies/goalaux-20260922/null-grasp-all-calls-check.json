@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "time": "2026-09-22T18:59:53.251818-05:00",
+  "native_basket_grasp_call_lines": [
+    73,
+    112,
+    122
+  ],
+  "source_sha256": "e809bd3eabac48cb34589f164291b04b9e2fbf6cc1ebd8c4024c0af8e265ed48",
+  "native_null_body_check_reused": "null-grasp-check.json",
+  "same_null_grasp_body_all_calls": "no native source change; no simulation or completed candidate replay",
+  "negative_other_phase_method_error_exit_task_checks": true
+}

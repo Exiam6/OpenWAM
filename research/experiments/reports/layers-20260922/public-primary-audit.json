@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "prediction_conditions_recomputed": {
+    "ridge": 192,
+    "mlp": 192
+  },
+  "primary_intervals_recomputed": 8,
+  "independent_episodes": 60,
+  "scope": "numerical audit only; raw provenance requires original artifacts"
+}

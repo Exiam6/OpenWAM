@@ -1,0 +1,16 @@
+{
+  "completed_at": "2026-09-22T15:02:38.164718-05:00",
+  "elapsed_seconds": 30.05077525228262,
+  "ridge_models": 45,
+  "mlp_models": 45,
+  "episodes": 105,
+  "fresh_scored": false,
+  "sha256": {
+    "coefficients.npz": "449377500a50562cf0df7225779cdc8202a098ae706faf3bcbb36421b1ac0a2d",
+    "models.pt": "e3aa787eeb1a4d40bf6659432eff383372b5c6374a8c030fbb8ca7b1689e37d7",
+    "selection.json": "735a1f5a540ee927fb76db46147b3bfb01df8447253d7a15cedd027c4dc5845e",
+    "training.json": "8e13ce22216f44aafb2b980c5d35992f023c68987517b7190cce63c94c506670",
+    "constants.json": "c8e2bb554b419d4b35d7c97b03d6683b54df3b5f5c7895cd01ee760ec57f12d1",
+    "training-samples.json": "222ca03a38cddc62808c061acad294292db1cb89f2105faae2b5524b9696c62b"
+  }
+}

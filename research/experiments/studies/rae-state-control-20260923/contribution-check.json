@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-09-23T00:36:52.246796-05:00",
+  "doc_patch_applies": true,
+  "doc_patch_applied_to_frozen_source": false,
+  "upstream_submitted": false,
+  "new_confirmation_launched": false,
+  "reason_not_launched": "Prior94.2minute fullcohort collection exceeds remaining original window; no budget extension",
+  "files": {
+    "contribution/wan-vae-input-range-doc.patch": "5ddf7a36ffc1ae778982290af3f66963aa715c3b8e8201d546ae28123efac8ef",
+    "contribution/WAN_INPUT_RANGE_PR_DRAFT.md": "4f26edc666323ea4666be9ced6a82bc606bd1b475a269cfac7a069074f724ae6",
+    "studies/rae-state-control-20260923/NEXT_CONFIRMATION_DRAFT.md": "2cffe78feb9689f8f4b351a0894b4092380b8b1335d6f5791efefa3cb3a0b1d1"
+  }
+}

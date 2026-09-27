@@ -1,0 +1,72 @@
+{
+  "as_of": "2026-09-22T19:08:35.408263-05:00",
+  "counts": {
+    "adjust_bottle": 20,
+    "handover_block": 20,
+    "place_object_basket": 12
+  },
+  "attempts": 64,
+  "outcomes": {
+    "accepted": 52,
+    "unstable_scene": 3,
+    "expert_infeasible": 9
+  },
+  "last_attempts": [
+    {
+      "task": "place_object_basket",
+      "seed": 802016,
+      "outcome": "accepted",
+      "accepted": true,
+      "error": null,
+      "exit_code": 0,
+      "elapsed_seconds": 102.19928636960685
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802017,
+      "outcome": "accepted",
+      "accepted": true,
+      "error": null,
+      "exit_code": 0,
+      "elapsed_seconds": 106.14323842152953
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802018,
+      "outcome": "accepted",
+      "accepted": true,
+      "error": null,
+      "exit_code": 0,
+      "elapsed_seconds": 102.65566947869956
+    }
+  ],
+  "active": [
+    {
+      "metadata": {
+        "pid": 1503203,
+        "process_group": 1503203,
+        "task": "place_object_basket",
+        "seed": 802019
+      },
+      "alive": true,
+      "log_mtime": "2026-09-22T19:07:47.285217-05:00",
+      "log_tail": "[eval_policy_wrapper] RoboTwin commit=0aeea2d669c0 eval_policy.py sha256=8b16c766a9c40116\n[eval_policy_wrapper] runtime_root=/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v4/place_object_basket/seed-802019/runtime\n[eval_policy_wrapper] prewarmed CUDA/Curobo before SAPIEN import\n[eval_policy_wrapper] patched warp.torch compatibility namespace\n/vol13/zifanz4/openwam-experiments/goalaux-native/benchmark-env/lib/python3.10/site-packages/sapien/_vulkan_tricks.py:37: UserWarning: Failed to find Vulkan ICD file. This is probably due to an incorrect or partial installation of the NVIDIA driver. SAPIEN will attempt to provide an ICD file anyway but it may not work.\n  warn(\nmissing pytorch3d\n"
+    }
+  ],
+  "collector_exit": null,
+  "collector_files": [
+    "implementation-freeze.json",
+    "started.json",
+    "launch.json",
+    "run.log",
+    "progress.json"
+  ],
+  "gpu": "1837, 0, 0",
+  "gpu_returncode": 0,
+  "tmux": [
+    "wam-goalaux-collect-v4 1499524 0 python3"
+  ],
+  "paused_markers": [],
+  "confirmation_v2_exit": "1",
+  "score_summaries": []
+}

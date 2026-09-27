@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "saved_prediction_conditions": 36,
+  "readout_fits": 18,
+  "max_abs_expanded_affine_prediction_residual": 3.552713678800501e-15,
+  "max_abs_episode_metric_residual": 1.8189894035458565e-12,
+  "train_episode_fold_coverage": true,
+  "frozen_sources_and_references_unchanged": true,
+  "no_model_inference_or_refitting": true,
+  "limitations": "Checks saved artifacts and arithmetic, not independence of exposed old60 or fullRAE/policy benefit."
+}

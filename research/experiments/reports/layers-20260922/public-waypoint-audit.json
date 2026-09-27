@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "prediction_conditions_recomputed": 270,
+  "paired_intervals_recomputed": 6,
+  "episodes": 60,
+  "scope": "secondary endpoint; same cohort as primary, not a new independent replication"
+}

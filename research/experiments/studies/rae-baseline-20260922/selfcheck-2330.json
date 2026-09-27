@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-09-22T23:50:50.795581-05:00",
+  "trigger": "2026-09-22T23:30:01.998269-05:00",
+  "interface_passed": true,
+  "interface_exit_code": 0,
+  "interface_causal_deltas": {
+    "single_vs_video": 0.0,
+    "future_leak": 0.0,
+    "cache_reset": 0.0,
+    "future_sensitivity": 8.75
+  },
+  "next_step": "Run separately frozen matched Wan readouts on original105 train and exposed60 evaluation; same scenes/noise, both norms, state and initial goal. Reuse cached DINO controls. Resolve whether the representation ranking survives pixel-VAE baseline and normalization control. Not independent confirmation or fullRAE.",
+  "probe_launch": {
+    "started_at": "2026-09-22T23:49:47.646711-05:00",
+    "host": "glacier",
+    "gpu": "GPU-d13929da-086d-1be5-6414-dbf6aeded08e, NVIDIA A40, 0, 0, 0",
+    "timeout_seconds": 1200,
+    "protocol_sha256": "0acd1bf00039075221f0be095418111e8fd7ac297bf40db14e67050b26d4680e",
+    "deadline": "2026-09-23T01:15:12-05:00"
+  },
+  "old_goalaux": "terminal56/60 unscored, no rerun",
+  "deadline": "2026-09-23T01:15:12-05:00",
+  "public_report": "Sites project not found; local report pending final new scores"
+}

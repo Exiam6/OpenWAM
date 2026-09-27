@@ -1,0 +1,26 @@
+{
+  "time": "2026-09-24T02:17:46.200214-05:00",
+  "run": "svae-seed43",
+  "exit": {
+    "time": "2026-09-24T02:16:27.723352-05:00",
+    "returncode": 0
+  },
+  "metrics_rows": 12000,
+  "batch_stream_rows": 12000,
+  "global_step": 12000,
+  "optimizer_updates": 6000,
+  "all_logged_metrics_finite": true,
+  "checkpoint": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_12000.safetensors",
+  "bytes": 12189767400,
+  "tensor_count": 1214,
+  "header_sha256": "f10af3c24ab3bc20e0e36d675ad32612b9fd4f1d0cf4fba6e0d424eca03e2aa4",
+  "checkpoint_structure_valid": true,
+  "scope": "Header dimensions, tensor byte counts/offsets and file length checked after exit0; full payload hash and deployment validation remain in the prescribed all-nine gate/evaluation. No policy scoring.",
+  "queue": {
+    "time": "2026-09-24T02:16:27.733667-05:00",
+    "status": "complete",
+    "ordered_seeds": [
+      43
+    ]
+  }
+}

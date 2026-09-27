@@ -1,0 +1,16 @@
+{
+  "as_of": "2026-09-22T19:17:48.667533-05:00",
+  "models_completed": 6,
+  "planned_models": 6,
+  "updates_per_model": 2000,
+  "training_exit_code": "0",
+  "state": "goalaux_confirmation_incomplete_at_original_deadline_archived",
+  "independent_training_artifact_audit_passed": true,
+  "fresh_confirmation_scored": false,
+  "policy_benefit_established": false,
+  "deadline": "2026-09-23T01:15:12-05:00",
+  "public_deployment": "blocked404;localonly",
+  "confirmation_scenes_completed": 56,
+  "readouts_independently_audited": true,
+  "confirmation_complete": false
+}

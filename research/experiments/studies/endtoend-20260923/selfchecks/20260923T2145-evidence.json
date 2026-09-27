@@ -1,0 +1,456 @@
+{
+  "checked_at": "2026-09-23T21:46:25.673962-05:00",
+  "trigger": "2026-09-23T21:45:01.555726-05:00",
+  "training": {
+    "pca-seed42": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 4202,
+        "opt_step": 2101,
+        "steps_per_sec": 0.4766679462936393,
+        "batch_size": 4,
+        "lr": 7.755108992922435e-05,
+        "metrics": {
+          "loss_total": 0.3576885759830475,
+          "loss_video": 0.3278554081916809,
+          "loss_action": 0.029833175241947174,
+          "grad_norm": 0.800220787525177
+        },
+        "allocated_bytes": 18103425024,
+        "wall_time": 1790217983.8698225,
+        "rank": 0
+      },
+      "metric_age_s": 1.839454174041748,
+      "all_metrics_finite": true,
+      "checkpoint_files": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_4000.safetensors",
+          "bytes": 12123507288
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/pca_config.json",
+          "bytes": 84
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/dinov3/config.json",
+          "bytes": 744
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/tokenizer/google/umt5-xxl/tokenizer_config.json",
+          "bytes": 61728
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/tokenizer/google/umt5-xxl/tokenizer.json",
+          "bytes": 16837417
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/tokenizer/google/umt5-xxl/special_tokens_map.json",
+          "bytes": 6623
+        }
+      ],
+      "log_tail": " [2:25:46<4:29:37,  2.07s/step, loss=0.4835, video=0.4431, action=0.0404, lr=7.76e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258d      | 4198/12000 [2:25:46<4:29:39,  2.07s/step, loss=0.4835, video=0.4431, action=0.0404, lr=7.76e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258d      | 4198/12000 [2:25:48<4:29:39,  2.07s/step, loss=0.5089, video=0.4713, action=0.0376, lr=7.76e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258d      | 4199/12000 [2:25:48<4:28:19,  2.06s/step, loss=0.5089, video=0.4713, action=0.0376, lr=7.76e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258d      | 4199/12000 [2:25:50<4:28:19,  2.06s/step, loss=0.3730, video=0.3698, action=0.0032, lr=7.76e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258c      | 4200/12000 [2:25:50<4:31:30,  2.09s/step, loss=0.3730, video=0.3698, action=0.0032, lr=7.76e-05, epoch=0]"
+    },
+    "pca-seed43": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 4164,
+        "opt_step": 2082,
+        "steps_per_sec": 0.464503507664329,
+        "batch_size": 4,
+        "lr": 7.798371091277907e-05,
+        "metrics": {
+          "loss_total": 0.2304401397705078,
+          "loss_video": 0.19357256591320038,
+          "loss_action": 0.03686758130788803,
+          "grad_norm": 0.7283597588539124
+        },
+        "allocated_bytes": 18103425024,
+        "wall_time": 1790217985.0737665,
+        "rank": 0
+      },
+      "metric_age_s": 0.6729578971862793,
+      "all_metrics_finite": true,
+      "checkpoint_files": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_4000.safetensors",
+          "bytes": 12123507288
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/pca_config.json",
+          "bytes": 84
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/dinov3/config.json",
+          "bytes": 744
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/tokenizer/google/umt5-xxl/tokenizer_config.json",
+          "bytes": 61728
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/tokenizer/google/umt5-xxl/tokenizer.json",
+          "bytes": 16837417
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/tokenizer/google/umt5-xxl/special_tokens_map.json",
+          "bytes": 6623
+        }
+      ],
+      "log_tail": " [2:25:34<4:38:17,  2.13s/step, loss=0.3096, video=0.2817, action=0.0280, lr=7.80e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258d      | 4160/12000 [2:25:34<4:39:19,  2.14s/step, loss=0.3096, video=0.2817, action=0.0280, lr=7.80e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258d      | 4160/12000 [2:25:36<4:39:19,  2.14s/step, loss=0.1381, video=0.1185, action=0.0195, lr=7.80e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258d      | 4161/12000 [2:25:36<4:35:17,  2.11s/step, loss=0.1381, video=0.1185, action=0.0195, lr=7.80e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258d      | 4161/12000 [2:25:38<4:35:17,  2.11s/step, loss=0.5311, video=0.5074, action=0.0237, lr=7.80e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258d      | 4162/12000 [2:25:38<4:34:51,  2.10s/step, loss=0.5311, video=0.5074, action=0.0237, lr=7.80e-05, epoch=0]"
+    },
+    "pca-seed44": {
+      "status": "queued",
+      "exit": null,
+      "last_metric": {},
+      "metric_age_s": null,
+      "all_metrics_finite": true,
+      "checkpoint_files": [],
+      "log_tail": null
+    },
+    "svae-seed42": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 4156,
+        "opt_step": 2078,
+        "steps_per_sec": 0.4631814728961018,
+        "batch_size": 4,
+        "lr": 7.807440655685201e-05,
+        "metrics": {
+          "loss_total": 0.1396998018026352,
+          "loss_video": 0.08016251027584076,
+          "loss_action": 0.059537287801504135,
+          "grad_norm": 0.7806356549263
+        },
+        "allocated_bytes": 18170329600,
+        "wall_time": 1790217983.8893805,
+        "rank": 0
+      },
+      "metric_age_s": 1.8891031742095947,
+      "all_metrics_finite": true,
+      "checkpoint_files": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_4000.safetensors",
+          "bytes": 12189767400
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/svae_config.json",
+          "bytes": 152
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/dinov3/config.json",
+          "bytes": 744
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/tokenizer/google/umt5-xxl/tokenizer_config.json",
+          "bytes": 61728
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/tokenizer/google/umt5-xxl/tokenizer.json",
+          "bytes": 16837417
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/tokenizer/google/umt5-xxl/special_tokens_map.json",
+          "bytes": 6623
+        }
+      ],
+      "log_tail": " [2:25:42<4:43:01,  2.16s/step, loss=0.2300, video=0.1735, action=0.0564, lr=7.81e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258d      | 4152/12000 [2:25:42<4:41:20,  2.15s/step, loss=0.2300, video=0.1735, action=0.0564, lr=7.81e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258d      | 4152/12000 [2:25:44<4:41:20,  2.15s/step, loss=0.4584, video=0.4487, action=0.0097, lr=7.81e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258d      | 4153/12000 [2:25:44<4:37:35,  2.12s/step, loss=0.4584, video=0.4487, action=0.0097, lr=7.81e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258d      | 4153/12000 [2:25:47<4:37:35,  2.12s/step, loss=0.1311, video=0.1129, action=0.0182, lr=7.81e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258d      | 4154/12000 [2:25:47<4:42:18,  2.16s/step, loss=0.1311, video=0.1129, action=0.0182, lr=7.81e-05, epoch=0]"
+    },
+    "svae-seed43": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 4232,
+        "opt_step": 2116,
+        "steps_per_sec": 0.465417280876226,
+        "batch_size": 4,
+        "lr": 7.720744926483984e-05,
+        "metrics": {
+          "loss_total": 0.11714892089366913,
+          "loss_video": 0.08807637542486191,
+          "loss_action": 0.02907254919409752,
+          "grad_norm": 0.5733950138092041
+        },
+        "allocated_bytes": 18170329600,
+        "wall_time": 1790217984.4835496,
+        "rank": 0
+      },
+      "metric_age_s": 1.330251932144165,
+      "all_metrics_finite": true,
+      "checkpoint_files": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_4000.safetensors",
+          "bytes": 12189767400
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/svae_config.json",
+          "bytes": 152
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/dinov3/config.json",
+          "bytes": 744
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/tokenizer/google/umt5-xxl/tokenizer_config.json",
+          "bytes": 61728
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/tokenizer/google/umt5-xxl/tokenizer.json",
+          "bytes": 16837417
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/tokenizer/google/umt5-xxl/special_tokens_map.json",
+          "bytes": 6623
+        }
+      ],
+      "log_tail": " [2:25:45<4:28:30,  2.07s/step, loss=0.2950, video=0.2895, action=0.0055, lr=7.73e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258c      | 4228/12000 [2:25:45<4:29:07,  2.08s/step, loss=0.2950, video=0.2895, action=0.0055, lr=7.73e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258c      | 4228/12000 [2:25:47<4:29:07,  2.08s/step, loss=0.1844, video=0.1582, action=0.0262, lr=7.73e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258c      | 4229/12000 [2:25:47<4:28:45,  2.08s/step, loss=0.1844, video=0.1582, action=0.0262, lr=7.73e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258c      | 4229/12000 [2:25:49<4:28:45,  2.08s/step, loss=0.1715, video=0.1464, action=0.0251, lr=7.72e-05, epoch=0]\rTraining:  35%|\u2588\u2588\u2588\u258c      | 4230/12000 [2:25:49<4:29:23,  2.08s/step, loss=0.1715, video=0.1464, action=0.0251, lr=7.72e-05, epoch=0]"
+    },
+    "svae-seed44": {
+      "status": "queued",
+      "exit": null,
+      "last_metric": {},
+      "metric_age_s": null,
+      "all_metrics_finite": true,
+      "checkpoint_files": [],
+      "log_tail": null
+    },
+    "wan-seed42": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 3790,
+        "opt_step": 1895,
+        "steps_per_sec": 0.42924044386666144,
+        "batch_size": 4,
+        "lr": 8.207350403554174e-05,
+        "metrics": {
+          "loss_total": 0.3384838104248047,
+          "loss_video": 0.3072584569454193,
+          "loss_action": 0.031225338578224182,
+          "grad_norm": 0.8403549790382385
+        },
+        "allocated_bytes": 19760472576,
+        "wall_time": 1790217984.9476016,
+        "rank": 0
+      },
+      "metric_age_s": 0.8971643447875977,
+      "all_metrics_finite": true,
+      "checkpoint_files": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/tokenizer/google/umt5-xxl/tokenizer_config.json",
+          "bytes": 61728
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/tokenizer/google/umt5-xxl/tokenizer.json",
+          "bytes": 16837417
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/tokenizer/google/umt5-xxl/special_tokens_map.json",
+          "bytes": 6623
+        }
+      ],
+      "log_tail": " [2:25:35<5:18:32,  2.33s/step, loss=0.2645, video=0.2193, action=0.0453, lr=8.21e-05, epoch=0]\rTraining:  32%|\u2588\u2588\u2588\u258f      | 3786/12000 [2:25:35<5:18:19,  2.33s/step, loss=0.2645, video=0.2193, action=0.0453, lr=8.21e-05, epoch=0]\rTraining:  32%|\u2588\u2588\u2588\u258f      | 3786/12000 [2:25:38<5:18:19,  2.33s/step, loss=0.1003, video=0.0742, action=0.0261, lr=8.21e-05, epoch=0]\rTraining:  32%|\u2588\u2588\u2588\u258f      | 3787/12000 [2:25:38<5:16:04,  2.31s/step, loss=0.1003, video=0.0742, action=0.0261, lr=8.21e-05, epoch=0]\rTraining:  32%|\u2588\u2588\u2588\u258f      | 3787/12000 [2:25:40<5:16:04,  2.31s/step, loss=0.4493, video=0.4098, action=0.0395, lr=8.21e-05, epoch=0]\rTraining:  32%|\u2588\u2588\u2588\u258f      | 3788/12000 [2:25:40<5:18:25,  2.33s/step, loss=0.4493, video=0.4098, action=0.0395, lr=8.21e-05, epoch=0]"
+    },
+    "wan-seed43": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 3937,
+        "opt_step": 1968,
+        "steps_per_sec": 0.4695664722729905,
+        "batch_size": 4,
+        "lr": 8.051450790521651e-05,
+        "metrics": {
+          "loss_total": 0.5816852450370789,
+          "loss_video": 0.5674890875816345,
+          "loss_action": 0.01419616024941206,
+          "grad_norm": 0.0
+        },
+        "allocated_bytes": 19760472576,
+        "wall_time": 1790217984.9578254,
+        "rank": 0
+      },
+      "metric_age_s": 0.9198353290557861,
+      "all_metrics_finite": true,
+      "checkpoint_files": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/tokenizer/google/umt5-xxl/tokenizer_config.json",
+          "bytes": 61728
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/tokenizer/google/umt5-xxl/tokenizer.json",
+          "bytes": 16837417
+        },
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/tokenizer/google/umt5-xxl/special_tokens_map.json",
+          "bytes": 6623
+        }
+      ],
+      "log_tail": " [2:25:38<5:10:31,  2.31s/step, loss=0.1917, video=0.1692, action=0.0225, lr=8.06e-05, epoch=0]\rTraining:  33%|\u2588\u2588\u2588\u258e      | 3933/12000 [2:25:38<5:08:31,  2.29s/step, loss=0.1917, video=0.1692, action=0.0225, lr=8.06e-05, epoch=0]\rTraining:  33%|\u2588\u2588\u2588\u258e      | 3933/12000 [2:25:40<5:08:31,  2.29s/step, loss=0.2405, video=0.1995, action=0.0410, lr=8.05e-05, epoch=0]\rTraining:  33%|\u2588\u2588\u2588\u258e      | 3934/12000 [2:25:40<5:04:21,  2.26s/step, loss=0.2405, video=0.1995, action=0.0410, lr=8.05e-05, epoch=0]\rTraining:  33%|\u2588\u2588\u2588\u258e      | 3934/12000 [2:25:42<5:04:21,  2.26s/step, loss=0.7263, video=0.6902, action=0.0361, lr=8.05e-05, epoch=0]\rTraining:  33%|\u2588\u2588\u2588\u258e      | 3935/12000 [2:25:42<4:57:10,  2.21s/step, loss=0.7263, video=0.6902, action=0.0361, lr=8.05e-05, epoch=0]"
+    },
+    "wan-seed44": {
+      "status": "queued",
+      "exit": null,
+      "last_metric": {},
+      "metric_age_s": null,
+      "all_metrics_finite": true,
+      "checkpoint_files": [],
+      "log_tail": null
+    }
+  },
+  "scenes": {
+    "adjust_bottle": {
+      "time": "2026-09-23T20:39:16.259497-05:00",
+      "accepted_count": 50,
+      "attempted_count": 63,
+      "complete": true,
+      "last_attempts": [
+        {
+          "seed": 1100061,
+          "outcome": "accepted",
+          "exit_code": 0
+        },
+        {
+          "seed": 1100062,
+          "outcome": "accepted",
+          "exit_code": 0
+        }
+      ]
+    },
+    "handover_block": {
+      "time": "2026-09-23T21:46:10.830354-05:00",
+      "accepted_count": 40,
+      "attempted_count": 44,
+      "complete": false,
+      "last_attempts": [
+        {
+          "seed": 1101042,
+          "outcome": "accepted",
+          "exit_code": 0
+        },
+        {
+          "seed": 1101043,
+          "outcome": "expert_infeasible",
+          "exit_code": 0
+        }
+      ]
+    },
+    "place_object_basket": {
+      "time": "2026-09-23T21:03:54.392164-05:00",
+      "accepted_count": 50,
+      "attempted_count": 84,
+      "complete": true,
+      "last_attempts": [
+        {
+          "seed": 1102082,
+          "outcome": "expert_infeasible",
+          "exit_code": 0
+        },
+        {
+          "seed": 1102083,
+          "outcome": "accepted",
+          "exit_code": 0
+        }
+      ]
+    }
+  },
+  "frozen_hash_mismatches": [],
+  "pipeline": {
+    "time": "2026-09-23T21:46:21.480820-05:00",
+    "stage": "waiting_for_all_training_collection_smoke",
+    "all_ready": false
+  },
+  "pipeline_exit": null,
+  "slot5_exit": null,
+  "slot7_exit": {
+    "time": "2026-09-23T21:03:54.426294-05:00",
+    "returncode": 0
+  },
+  "simulation_exit": {
+    "time": "2026-09-23T21:08:15.726521-05:00",
+    "returncode": 0
+  },
+  "cm001_gpu": {
+    "returncode": 0,
+    "stdout": "0, GPU-c83b7d25-753e-2eae-f13b-8f9c3df9fa4b, 32223, 4, 0\n1, GPU-67b700c2-eb7a-93aa-28dd-57e8b2711926, 37991, 85, 0\n2, GPU-025b7fc9-8f25-5467-5c28-8e59884ab6d3, 31989, 56, 0\n3, GPU-bba13bfa-9dd6-0956-0e4e-122950cd69fe, 24417, 48, 0\n4, GPU-e7aef4c0-2628-b4f8-34f4-579d62b7feb6, 25159, 42, 0\n5, GPU-1758045c-5a5e-3661-bb58-a786fa745a17, 667, 10, 0\n6, GPU-91a9a93b-b386-82f0-3009-88cc9bb79d06, 19527, 83, 0\n7, GPU-3624eff9-444b-b72c-e32e-2bae7acbb8cb, 18641, 39, 0\n",
+    "stderr": ""
+  },
+  "cm001_tmux": {
+    "returncode": 0,
+    "stdout": "exp\now-e2e-pipeline\now-e2e-scenes-5\n",
+    "stderr": ""
+  },
+  "free_disk_gib": {
+    "/data02": 244.476,
+    "/home": 0.249
+  },
+  "pause_markers": [],
+  "first_checkpoint_structure_check": {
+    "time": "2026-09-23T21:47:10.899190-05:00",
+    "checked": 4,
+    "passed": true,
+    "checks": [
+      {
+        "run": "pca-seed42",
+        "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_4000.safetensors",
+        "bytes": 12123507288,
+        "tensors": 1136,
+        "header_sha256": "5f26ed24929bbf9faaad50082e052d92636eb08f7b525a9f289e51c45365c5d3",
+        "header_and_tensor_spans_valid": true,
+        "payload_hashed": false,
+        "policy_scored": false
+      },
+      {
+        "run": "pca-seed43",
+        "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_4000.safetensors",
+        "bytes": 12123507288,
+        "tensors": 1136,
+        "header_sha256": "5f26ed24929bbf9faaad50082e052d92636eb08f7b525a9f289e51c45365c5d3",
+        "header_and_tensor_spans_valid": true,
+        "payload_hashed": false,
+        "policy_scored": false
+      },
+      {
+        "run": "svae-seed42",
+        "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_4000.safetensors",
+        "bytes": 12189767400,
+        "tensors": 1214,
+        "header_sha256": "01445a5e7c10d800896d4a4215619b9a04f555f9b152769c1d8f80c0850f21ce",
+        "header_and_tensor_spans_valid": true,
+        "payload_hashed": false,
+        "policy_scored": false
+      },
+      {
+        "run": "svae-seed43",
+        "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_4000.safetensors",
+        "bytes": 12189767400,
+        "tensors": 1214,
+        "header_sha256": "01445a5e7c10d800896d4a4215619b9a04f555f9b152769c1d8f80c0850f21ce",
+        "header_and_tensor_spans_valid": true,
+        "payload_hashed": false,
+        "policy_scored": false
+      }
+    ],
+    "scope": "Header dimensions, tensor byte counts, contiguous offsets and complete file lengths only; not full payload hash, strict reload or policy scoring."
+  },
+  "cm009": {
+    "time": "2026-09-23T21:46:24.751217-05:00",
+    "gpu": {
+      "returncode": 0,
+      "stdout": "0, GPU-c7d96da5-a1ae-e1ed-de5d-03f35e550da2, 1, 0, 2\n1, GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 22251, 3, 0\n2, GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 21935, 3, 0\n3, GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 24531, 3, 0\n4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 22251, 60, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 21935, 3, 0\n6, GPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 24531, 3, 0\n7, GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 9101, 21, 0\n",
+      "stderr": ""
+    },
+    "tmux": {
+      "returncode": 0,
+      "stdout": "ow-e2e-train-1\now-e2e-train-2\now-e2e-train-3\now-e2e-train-4\now-e2e-train-5\now-e2e-train-6\n",
+      "stderr": ""
+    }
+  },
+  "judgment": "The existing bounded plan is progressing normally. Six formal trainings at1895\u20132116/6000 optimizer updates, all logged metrics finite and fresh below2s; three seed44 runs queued. Four first scheduled4000-microstep checkpoints have complete structural metadata/tensor spans and file lengths; no intermediate payload hash, reload, selection or policy scoring. Handover40/50 from44 attempts remains incomplete. No new scientific conclusion, failure or user decision.",
+  "next_step": "Complete the remaining handover expert cohort and all nine fixed-budget native training runs. The three-task development simulator preflight has passed. Audit all150 fresh scenes, matched training streams and final12000-microstep checkpoints before the existing finite controller launches the complete paired5400-rollout matrix. This resolves whether offline representation accessibility improves native task success while preserving clean performance; no learned-policy benefit has been established.",
+  "completed_at": "2026-09-23T21:48:09.992811-05:00",
+  "public_retry_performed": false,
+  "resource_judgment": "Seven assigned study GPUs: six cm009 training and one cm001 collector. Assigned devices have0 uncorrected volatileECC. cm009GPU0 with2ECC excluded; other occupations untouched. /data02 free244.476GiB after four12.1\u201312.2GB checkpoints, consistent with expected writes. /home free0.249GiB remains for small metadata only. Subsequent checks should watch temporary checkpoint replacement space and handover completion; no job budget extension."
+}

@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-09-22T13:17:28.546304-05:00",
+  "nodes": [
+    {
+      "host": "cm004",
+      "exit_code": 0,
+      "output": "0, GPU-0c486005-5f03-f4da-5f3a-e67def845364, 1, 0, 0\n1, GPU-153010b4-4e67-76cd-cb59-97d9cff485f0, 4275, 29, 0\n2, GPU-6f96255c-1ebf-3a98-3d54-abe4f2a7e215, 25695, 78, 0\n3, GPU-42f30a74-c598-2ed0-cd99-7c06ed74f6f2, 4039, 27, 0\n4, GPU-07759cd8-0592-f9a9-67ca-e614bf8ac49b, 4279, 20, 0\n5, GPU-ff861b56-3ba7-30fd-1884-7ac30195dcac, 25695, 33, 0\n6, GPU-b7810ae4-3de5-3c38-1f18-761be83e754a, 12141, 71, 0\n7, GPU-496b3517-da10-c1bd-ceec-99839861a3d9, 4277, 30, 0\nCONTROL_PROTOCOL.md\nGROUP_PROTOCOL.md\nNIGHT_PROTOCOL.md\nOpenWAM\nREADME.md\nREPRODUCE_CONTROL.md\nREPRODUCE_NIGHT.md\nSTATUS.md\nassets\ncache\ncontribution-check\ndata\nenv\nexperiment-provenance.json\ngpu-cm002-5.lock\ngpu-cm005-0.lock\ngpu-cm006-0.lock\ngpu-cm006-4.lock\ngpu-cm007-5.lock\nlogs\nopenwam-source.tar.gz\nproposals\npublic-results\nqa-tools\nrequirements-lock.txt\nresults\nscripts\naloha-agilex_clean_50\ndinov3-study\n",
+      "error": ""
+    },
+    {
+      "host": "cm006",
+      "exit_code": 0,
+      "output": "0, GPU-56da2cc3-8cdf-dcc4-f3ac-903b764b5c29, 42015, 100, 0\n1, GPU-45d9d2c0-17a8-5b0c-695c-c68dd97cb5b0, 41999, 100, 0\n2, GPU-79d36628-7dbe-34b7-b3e4-3c332c385a6b, 41999, 100, 0\n3, GPU-d5465c36-a023-3d2a-a522-2bc978e4adf8, 1, 0, 4\n4, GPU-59bcfe51-74a3-7e6e-ef86-6fa2ec6d5400, 24311, 87, 0\n5, GPU-b7de9dec-3c3e-7be2-0c17-dc05f6486294, 41999, 100, 0\n6, GPU-09c21ec1-c50b-516c-1a43-59456040d9e3, 1, 0, 1\n7, GPU-d22a83f3-f998-12b4-c692-13b4bdaae1bc, 1, 0, 0\nCONTROL_PROTOCOL.md\nGROUP_PROTOCOL.md\nNIGHT_PROTOCOL.md\nOpenWAM\nREADME.md\nREPRODUCE_CONTROL.md\nREPRODUCE_NIGHT.md\nSTATUS.md\nassets\ncache\ncontribution-check\ndata\nenv\nexperiment-provenance.json\ngpu-cm002-5.lock\ngpu-cm005-0.lock\ngpu-cm006-0.lock\ngpu-cm006-4.lock\ngpu-cm007-5.lock\nlogs\nopenwam-source.tar.gz\nproposals\npublic-results\nqa-tools\nrequirements-lock.txt\nresults\nscripts\naloha-agilex_clean_50\ndinov3-study\n",
+      "error": ""
+    },
+    {
+      "host": "cm005",
+      "exit_code": 0,
+      "output": "0, GPU-d5dc6850-099b-e2da-8b07-a438cb854fdd, 4473, 34, 0\n1, GPU-8b2a4ee6-6568-8786-8c6e-50cb2b8e579e, 1, 0, 2\n2, GPU-6a6672af-1a61-c409-2ea4-3a1d2d74cb74, 12483, 41, 0\n3, GPU-edb34472-fb2d-e177-dcf5-4cb2e70437c7, 14231, 78, 0\n4, GPU-a5e82540-76de-23ed-7a72-388013f97f2c, 12495, 29, 0\n5, GPU-d3fa7812-ea7c-c309-abe5-014510600ecb, 4533, 40, 0\n6, GPU-5905ba8f-352f-bca1-0271-c1ad812a3504, 12679, 31, 0\n7, GPU-204b0944-8ed5-7d26-f598-f2c34c1a5ae2, 3587, 33, 0\nCONTROL_PROTOCOL.md\nGROUP_PROTOCOL.md\nNIGHT_PROTOCOL.md\nOpenWAM\nREADME.md\nREPRODUCE_CONTROL.md\nREPRODUCE_NIGHT.md\nSTATUS.md\nassets\ncache\ncontribution-check\ndata\nenv\nexperiment-provenance.json\ngpu-cm002-5.lock\ngpu-cm005-0.lock\ngpu-cm006-0.lock\ngpu-cm006-4.lock\ngpu-cm007-5.lock\nlogs\nopenwam-source.tar.gz\nproposals\npublic-results\nqa-tools\nrequirements-lock.txt\nresults\nscripts\naloha-agilex_clean_50\ndinov3-study\n",
+      "error": ""
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "as_of": "2026-09-22T18:45:58.545631-05:00",
+  "pauses": [],
+  "counts": {
+    "adjust_bottle": 20,
+    "handover_block": 20,
+    "place_object_basket": 7
+  },
+  "completed_attempts": 54,
+  "outcomes": {
+    "accepted": 47,
+    "unstable_scene": 3,
+    "expert_infeasible": 3,
+    "infrastructure_failure": 1
+  },
+  "completed_worker_exit_codes": [
+    0
+  ],
+  "collection_deadline": "2026-09-22T19:15:55.548938-05:00",
+  "exits": {
+    "fresh-v2": {
+      "exit-code.txt": "1"
+    },
+    "confirmation": {}
+  },
+  "active": [],
+  "tmux": [
+    "wam-goalaux-confirm 1454546 0 python3"
+  ],
+  "selected_gpu": "GPU-dee01971-fb13-ae53-0d7f-ebe6c6149087, 1, 0, 0",
+  "summary_exists": false,
+  "failure": null,
+  "last_attempt": {
+    "task": "place_object_basket",
+    "seed": 802008,
+    "role": "expert_only_independent_confirmation",
+    "accepted": false,
+    "started_at": "2026-09-22T18:45:13.530140-05:00",
+    "outcome": "infrastructure_failure",
+    "error": "AssertionError('target_pose cannot be None for move action.')",
+    "traceback": "Traceback (most recent call last):\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_reference.py\", line 25, in worker\n    info=env.play_once();ok=bool(env.plan_success and env.check_success());result['expert_plan_success']=ok\n  File \"/vol13/zifanz4/openwam-experiments/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/place_object_basket.py\", line 73, in play_once\n    self.move(self.grasp_actor(self.object, arm_tag=self.arm_tag))\n  File \"/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/vol13/zifanz4/openwam-experiments/goalaux-native/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+    "elapsed_seconds": 36.169496001675725,
+    "exit_code": 0
+  },
+  "run_log_tail": ": 20, 'handover_block': 20, 'place_object_basket': 4}\nplace_object_basket 802004 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 5}\nplace_object_basket 802005 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 6}\nplace_object_basket 802006 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 7}\nplace_object_basket 802007 expert_infeasible {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 7}\nplace_object_basket 802008 infrastructure_failure {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 7}\nTraceback (most recent call last):\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation_v2.py\", line 73, in <module>\n    else:parent()\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation_v2.py\", line 67, in parent\n    if code or res.get('outcome')=='infrastructure_failure':raise RuntimeError(f'Infrastructure failure retained: {task} {seed}; no retry')\nRuntimeError: Infrastructure failure retained: place_object_basket 802008; no retry\n"
+}

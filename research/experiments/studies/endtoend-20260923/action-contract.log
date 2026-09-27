@@ -1,0 +1,6 @@
+MultiTaskRoboTwinDataset: 3 task-variant pairs, embodiment=aloha-agilex, variant=clean_50, action_mode=eef
+[normalizer] Resolving multi-task shared stats (normalize_mode=min-max, action_mode=eef, embodiment=aloha-agilex, variant=clean_50)
+[normalizer] Using explicit shared stats file: /data02/zifanz4/openwam-experiments/endtoend-20260923/normalization_stats.npy (exists ✓, will be forwarded to every sub-dataset)
+Loading tasks:   0%|          | 0/3 [00:00<?, ?task/s]Loading tasks:   0%|          | 0/3 [00:00<?, ?task/s, adjust_bottle]Loading tasks:   0%|          | 0/3 [00:00<?, ?task/s, handover_block]Loading tasks:   0%|          | 0/3 [00:00<?, ?task/s, place_object_basket]Loading tasks: 100%|██████████| 3/3 [00:00<00:00, 36.51task/s, place_object_basket]
+  Total samples: 23519 (across 3 sub-datasets)
+PASS: native dataset label conversion acrossall3tasks; exact0/90degree rotation, metric units andgripper dimensions

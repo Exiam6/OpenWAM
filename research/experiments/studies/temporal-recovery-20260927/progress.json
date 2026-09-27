@@ -1,0 +1,23 @@
+{
+  "time": "2026-09-27T12:22:42.727489-05:00",
+  "deadline": "2026-09-29T17:48:49.941691-05:00",
+  "processes": [
+    {
+      "arm": "mean",
+      "pid": 3144888,
+      "uid": 2093,
+      "start_ticks": "2643478889"
+    },
+    {
+      "arm": "learned",
+      "pid": 3144889,
+      "uid": 2093,
+      "start_ticks": "2643478889"
+    }
+  ],
+  "output": "/data01/zifanz4/openwam-experiments/temporal-recovery-20260927",
+  "status": "terminal_checkpoint_api_failure",
+  "new_recurring_timer": false,
+  "heldout_outcomes": 0,
+  "next_version": "/home/zifanz4/openwam-experiments/studies/temporal-recovery-v2-20260927"
+}

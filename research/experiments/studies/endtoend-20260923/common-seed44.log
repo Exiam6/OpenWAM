@@ -1,0 +1,2 @@
+[Wan22Ti2v] native VAE released; external_encoder=DinoV3VideoEncoder (z_dim=48, pixel_decode=False, dit_patch_size=(1, 2, 2))
+COMMON INIT COMPLETE 44 /data02/zifanz4/openwam-experiments/endtoend-20260923/initialization/common-seed44.safetensors

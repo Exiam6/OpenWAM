@@ -1,0 +1,10 @@
+{
+  "attempted_at": "2026-09-22T16:02:10.232384-05:00",
+  "operation": "Sites get_site",
+  "result": "NOT_FOUND",
+  "http_code": 404,
+  "deployment_attempted": false,
+  "existing_public_version_unchanged": true,
+  "reason": "Existing project unavailable through current Sites connection",
+  "local_report_updated": true
+}

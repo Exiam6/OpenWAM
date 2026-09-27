@@ -1,0 +1,56 @@
+{
+  "frozen_at": "2026-09-22T16:09:00.069399-05:00",
+  "deadline": "2026-09-23T01:15:12-05:00",
+  "wall_seconds_cap": 600,
+  "gpu_concurrency": 1,
+  "cpu_threads_cap": 4,
+  "gpu_uuid": "GPU-0c486005-5f03-f4da-5f3a-e67def845364",
+  "scope": "Training-only implementation and throughput preflight; no scientific scoring or retained model fit",
+  "fixture": "episode3, split train, each of all three tasks;12existing clip features each",
+  "precision": "CUDA autocast BF16,FP32 parameters; deterministic algorithms; TF32 disabled",
+  "parity_acceptance": "exact native loss,CPU/CUDA RNG,all parameter gradients and one AdamW update when auxiliaryweight0",
+  "gradient_acceptance": "finite nonzero encoder/head gradient from auxiliary loss, absent decoder gradient",
+  "profile": {
+    "weights": [
+      0.0,
+      0.1
+    ],
+    "warmup_updates": 10,
+    "timed_updates": 30,
+    "optimizer": "AdamW lr1e-4,betas(.9,.99),weight_decay1e-4",
+    "clip_norm": 1.0,
+    "native_beta": 0.0001,
+    "native_cos_weight": 1.0,
+    "same_seed_and_initial_weights": 42,
+    "batch": [
+      3,
+      768,
+      3,
+      24,
+      20
+    ],
+    "auxiliary_batch": [
+      3,
+      768,
+      1,
+      24,
+      20
+    ],
+    "auxiliary_head": "per-task Linear192to2,2x2pooled initial posterior mean,training-only normalizedXY",
+    "weight_selection": "One fixed positive weight for timing only, no sweep or score-based choice"
+  },
+  "stop_conditions": [
+    "Any source hash mismatch,paused flag,deadline,occupiedGPU,failed numerical assertion,timeout600s"
+  ],
+  "outputs": "logs,timing,numerical diagnostics only; all temporary parameter updates discarded",
+  "source_sha256": {
+    "scripts/goalaux/objective.py": "edfe6dde20bd82ed96e748f4bee3b532cecba297cd72dd78d42c815a847c0fb0",
+    "scripts/goalaux/gpu_preflight.py": "3fdc0ea8f9128b312870b501bc0013726568f38547e794aea43261821865c896",
+    "OpenWAM/openwam/model/video_backbone/encoder/svae/model.py": "3f042c5d19bed2d0c8e7f385af0266aea73b8bd49f37736c3356e5044997dfd1",
+    "results/layers-20260922/L12/seed42/final.pt": "24c0646312e3e668972fec64d79162e58d0005c529421eed3d8651998e636415",
+    "results/layers-20260922/initial-goal-training-labels.json": "cae551cd7c5c5c2fc3e3b14f93fdec2ca85327f8b53eaff5df728876a4b02261",
+    "results/layers-20260922/features/adjust_bottle/episode3.pt": "f38950b4d4e46740d93dcebac15f07f8a226fc72c74a18408b909c8e96be2d26",
+    "results/layers-20260922/features/handover_block/episode3.pt": "018584b6c202a735074131a89c1b13def687e9e0fed8f86e6e79986c3ab939e4",
+    "results/layers-20260922/features/place_object_basket/episode3.pt": "c8e4f7c0fd53ff154a39e1ca0e90200bfb6898453940089871aa7d91e1d6b8c7"
+  }
+}

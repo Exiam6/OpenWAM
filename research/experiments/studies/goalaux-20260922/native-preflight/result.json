@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "completed_at": "2026-09-22T17:11:52.632727-05:00",
+  "renderer": {
+    "name": "NVIDIA L40S",
+    "pci": "0000:a1:00.0",
+    "cuda_id": 0
+  },
+  "torch_device": "NVIDIA L40S",
+  "versions": {
+    "torch": "2.4.1+cu124",
+    "sapien": "3.0.0b1",
+    "h5py": "3.16.0",
+    "numpy": "1.26.4"
+  },
+  "camera_shape": [
+    64,
+    64,
+    4
+  ],
+  "native_bootstrap_imported": true,
+  "curobo_imported": true,
+  "no_task_scenes_or_confirmation_seeds_used": true,
+  "planner_runtime_backend_gate": "still required for every scene"
+}

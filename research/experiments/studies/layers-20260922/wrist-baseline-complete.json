@@ -1,0 +1,16 @@
+{
+  "completed_at": "2026-09-22T14:37:34.680652-05:00",
+  "elapsed_seconds": 174.7754582427442,
+  "training_episodes": 105,
+  "frames": 1260,
+  "paired_group_ridge_models": 45,
+  "mlp_models": 45,
+  "fresh_scored": false,
+  "sha256": {
+    "coefficients.npz": "c79effdcecd7c2d9ed8cf824b58cb6a72fb8ce63c4fa76320dfd5ac2686b9056",
+    "models.pt": "1022087c06d22ece2de330fe102df17b2497fe4c6adffeb422cbbe6d6058bae4",
+    "selection.json": "54dcdc2fcc72e1dce316d593cd2d1013e1ed1f419072ca52f5d1ac58ce7ddee0",
+    "training.json": "2ad964ba659deedb39c29f5ca69b22479cc959fa6e45775b7d546d39b34e5415",
+    "manifest.json": "b3879d7ed57946655da64f8dac3237179baeda48e83fd1c39dbeb81a4c7d0b9c"
+  }
+}

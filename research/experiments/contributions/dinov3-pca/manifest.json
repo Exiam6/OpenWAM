@@ -1,0 +1,27 @@
+{
+  "base_is_local_source_snapshot_not_git_checkout": true,
+  "files": {
+    "openwam/model/video_backbone/encoder/dinov3_pca.py": {
+      "base_sha256": null,
+      "new_sha256": "5daa04141295143d64e4014e7cc8603ec48479acffd5fd39fc4d093f80541de7"
+    },
+    "openwam/model/video_backbone/encoder/__init__.py": {
+      "base_sha256": "31e262c70a8342a49750eede1092f1008f7aaea12552681af58292f8d5abaa19",
+      "new_sha256": "76c2a60bd41d15831a73dd61e9617212ea251760dc6a11138b4cfb69ab4287a3"
+    },
+    "configs/model/video_backbone/encoder/dinov3_pca.yaml": {
+      "base_sha256": null,
+      "new_sha256": "c5e50b24dc5e353ab4e04792006c64baf0da3e4aecd72eadaf7a61964179da17"
+    },
+    "tests/test_dinov3_pca_encoder.py": {
+      "base_sha256": null,
+      "new_sha256": "f083f5a94684d9237e75eeb1d15e98b7b2be2c54b6d085cab6ff532514fb41ce"
+    },
+    "docs/dinov3_pca.md": {
+      "base_sha256": null,
+      "new_sha256": "15938dc7080d1be59e78a000d037d0122792126205a88330eed6f28e7080e53a"
+    }
+  },
+  "scientific_claim": "optional baseline, not validated policy gain",
+  "upstream_submission": false
+}

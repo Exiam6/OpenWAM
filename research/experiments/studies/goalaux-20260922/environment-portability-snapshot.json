@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-09-22T16:44:52.155620-05:00",
+  "checks": {
+    "g1_assets": {
+      "exit": 1,
+      "out": "7.5G\t/data02/zifanz4/openwam-experiments/benchmark-env\n9.3G\t/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin\n",
+      "err": "du: cannot access '/data02/zifanz4/openwam-experiments/cache/torch_extensions': No such file or directory\n"
+    },
+    "g2_gpu": {
+      "exit": 0,
+      "out": "0, GPU-b5dd9913-a939-d3a1-c593-e11140a0e8aa, 1, 0, 1\n1, GPU-baccfb74-a28b-2d45-2786-317e766c9339, 1, 0, 0\n2, GPU-293d1d4d-595d-ea7d-f700-8da0caf03a25, 11815, 91, 0\n3, GPU-aae9d71e-4617-ea0c-78a6-0af22f0ba2ff, 17689, 93, 0\n4, GPU-6b7d2c65-3699-a6a6-4917-a81bc9aa5e36, 20911, 91, 0\n5, GPU-dee01971-fb13-ae53-0d7f-ebe6c6149087, 1, 0, 0\n6, GPU-e792825b-8c06-dd08-20ad-a2076df1bf01, 20011, 45, 0\n7, GPU-0046b346-c9aa-472e-bd54-b10f854e71e5, 17747, 73, 0\n",
+      "err": ""
+    },
+    "g2_paths": {
+      "exit": 0,
+      "out": "{'benchmark-env': (False, False), 'benchmarks/RoboTwin': (False, False), 'cache/torch_extensions': (False, False), 'assets/dinov3-study': (True, False)}\n",
+      "err": ""
+    }
+  }
+}

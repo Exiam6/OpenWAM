@@ -1,0 +1,7 @@
+adjust_bottle 800000 infrastructure_failure {'adjust_bottle': 0, 'handover_block': 0, 'place_object_basket': 0}
+Traceback (most recent call last):
+  File "/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation.py", line 68, in <module>
+    else:parent()
+  File "/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation.py", line 62, in parent
+    if code or res.get('outcome')=='infrastructure_failure':raise RuntimeError(f'Infrastructure failure retained: {task} {seed}; no retry')
+RuntimeError: Infrastructure failure retained: adjust_bottle 800000; no retry

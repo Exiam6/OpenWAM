@@ -1,0 +1,292 @@
+{
+  "time": "2026-09-27T00:00:50.461903-05:00",
+  "launch.json": {
+    "deadline": "2026-09-29T17:48:49.941691-05:00",
+    "max_new_gpus": 2,
+    "lanes": {
+      "mean": {
+        "host": "cm001",
+        "gpu": 4
+      },
+      "learned": {
+        "host": "cm001",
+        "gpu": 2
+      }
+    }
+  },
+  "evaluation-recovery-20260925.json": {
+    "expired_dependency_deadline": "2026-09-25T19:11:52.028093-05:00",
+    "stage_deadline": "2026-09-28T13:41:59.240315-05:00",
+    "evaluation_deadline": "2026-09-28T10:41:59.240315-05:00",
+    "outer_deadline_unchanged": true,
+    "original_failures_and_deadlines_preserved": true,
+    "no_automatic_retry": true
+  },
+  "training": {
+    "learned-seed42": {
+      "exit": {
+        "time": "2026-09-26T20:34:12.955020-05:00",
+        "returncode": 0,
+        "error": null,
+        "seconds": 9444.079100582749,
+        "child_returncode": 0
+      },
+      "steps": 4000,
+      "last": {
+        "global_step": 4000,
+        "opt_step": 2000,
+        "steps_per_sec": 0.3838620051132732,
+        "batch_size": 4,
+        "lr": 3.0000000000000004e-07,
+        "metrics": {
+          "loss_total": 0.23786543309688568,
+          "loss_video": 0.23015891015529633,
+          "loss_action": 0.007706526666879654,
+          "grad_norm": 0.5031799674034119
+        },
+        "time": "2026-09-26T20:32:48.532441-05:00",
+        "peak_cuda_bytes": 18170073600
+      },
+      "parity": {
+        "passed": true,
+        "native_save_reload_max_abs": 0.0,
+        "later_group_causality_max_abs": 0.0,
+        "shape": [
+          1,
+          48,
+          3,
+          4,
+          4
+        ],
+        "saved_sidecar_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed42/output/2026-09-26_17-58-29",
+        "input": "synthetic9frames64x64; no test data"
+      }
+    },
+    "learned-seed43": {
+      "exit": {
+        "time": "2026-09-26T23:01:07.664915-05:00",
+        "returncode": 0,
+        "error": null,
+        "seconds": 8799.773664969951,
+        "child_returncode": 0
+      },
+      "steps": 4000,
+      "last": {
+        "global_step": 4000,
+        "opt_step": 2000,
+        "steps_per_sec": 0.49016131853829886,
+        "batch_size": 4,
+        "lr": 3.0000000000000004e-07,
+        "metrics": {
+          "loss_total": 0.0840034931898117,
+          "loss_video": 0.07110986113548279,
+          "loss_action": 0.012893635779619217,
+          "grad_norm": 0.4474601745605469
+        },
+        "time": "2026-09-26T22:59:47.575667-05:00",
+        "peak_cuda_bytes": 18170073600
+      },
+      "parity": {
+        "passed": true,
+        "native_save_reload_max_abs": 0.0,
+        "later_group_causality_max_abs": 0.0,
+        "shape": [
+          1,
+          48,
+          3,
+          4,
+          4
+        ],
+        "saved_sidecar_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed43/output/2026-09-26_20-36-12",
+        "input": "synthetic9frames64x64; no test data"
+      }
+    },
+    "learned-seed44": {
+      "exit": null,
+      "steps": 1675,
+      "last": {
+        "global_step": 1675,
+        "opt_step": 837,
+        "steps_per_sec": 0.4884984723664089,
+        "batch_size": 4,
+        "lr": 2.0272557068470398e-05,
+        "metrics": {
+          "loss_total": 0.1429331749677658,
+          "loss_video": 0.13268885016441345,
+          "loss_action": 0.010244331322610378,
+          "grad_norm": 0.0
+        },
+        "time": "2026-09-27T00:00:50.371421-05:00",
+        "peak_cuda_bytes": 18170073600
+      },
+      "parity": {
+        "passed": true,
+        "native_save_reload_max_abs": 0.0,
+        "later_group_causality_max_abs": 0.0,
+        "shape": [
+          1,
+          48,
+          3,
+          4,
+          4
+        ],
+        "saved_sidecar_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed44/output/2026-09-26_23-02-44",
+        "input": "synthetic9frames64x64; no test data"
+      }
+    },
+    "mean-seed42": {
+      "exit": {
+        "time": "2026-09-26T20:32:50.924147-05:00",
+        "returncode": 0,
+        "error": null,
+        "seconds": 9469.84500194341,
+        "child_returncode": 0
+      },
+      "steps": 4000,
+      "last": {
+        "global_step": 4000,
+        "opt_step": 2000,
+        "steps_per_sec": 0.449804847764161,
+        "batch_size": 4,
+        "lr": 3.0000000000000004e-07,
+        "metrics": {
+          "loss_total": 0.23701539635658264,
+          "loss_video": 0.229297935962677,
+          "loss_action": 0.00771745340898633,
+          "grad_norm": 0.5015104413032532
+        },
+        "time": "2026-09-26T20:31:28.159511-05:00",
+        "peak_cuda_bytes": 18170073600
+      },
+      "parity": {
+        "passed": true,
+        "native_save_reload_max_abs": 0.0,
+        "later_group_causality_max_abs": 0.0,
+        "shape": [
+          1,
+          48,
+          3,
+          4,
+          4
+        ],
+        "saved_sidecar_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed42/output/2026-09-26_17-56-53",
+        "input": "synthetic9frames64x64; no test data"
+      }
+    },
+    "mean-seed43": {
+      "exit": {
+        "time": "2026-09-26T22:59:33.982526-05:00",
+        "returncode": 0,
+        "error": null,
+        "seconds": 8785.890330750495,
+        "child_returncode": 0
+      },
+      "steps": 4000,
+      "last": {
+        "global_step": 4000,
+        "opt_step": 2000,
+        "steps_per_sec": 0.4954028333978355,
+        "batch_size": 4,
+        "lr": 3.0000000000000004e-07,
+        "metrics": {
+          "loss_total": 0.08381731808185577,
+          "loss_video": 0.07087984681129456,
+          "loss_action": 0.012937474995851517,
+          "grad_norm": 0.44716066122055054
+        },
+        "time": "2026-09-26T22:58:13.478142-05:00",
+        "peak_cuda_bytes": 18170073600
+      },
+      "parity": {
+        "passed": true,
+        "native_save_reload_max_abs": 0.0,
+        "later_group_causality_max_abs": 0.0,
+        "shape": [
+          1,
+          48,
+          3,
+          4,
+          4
+        ],
+        "saved_sidecar_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed43/output/2026-09-26_20-35-15",
+        "input": "synthetic9frames64x64; no test data"
+      }
+    },
+    "mean-seed44": {
+      "exit": null,
+      "steps": 1724,
+      "last": {
+        "global_step": 1724,
+        "opt_step": 862,
+        "steps_per_sec": 0.48944448889705444,
+        "batch_size": 4,
+        "lr": 1.969217282547836e-05,
+        "metrics": {
+          "loss_total": 0.19147534668445587,
+          "loss_video": 0.1698349267244339,
+          "loss_action": 0.021640421822667122,
+          "grad_norm": 0.6080417633056641
+        },
+        "time": "2026-09-27T00:00:49.716644-05:00",
+        "peak_cuda_bytes": 18170073600
+      },
+      "parity": {
+        "passed": true,
+        "native_save_reload_max_abs": 0.0,
+        "later_group_causality_max_abs": 0.0,
+        "shape": [
+          1,
+          48,
+          3,
+          4,
+          4
+        ],
+        "saved_sidecar_dir": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed44/output/2026-09-26_23-01-46",
+        "input": "synthetic9frames64x64; no test data"
+      }
+    }
+  },
+  "queues": {
+    "1": {
+      "time": "2026-09-26T20:05:15.659156-05:00",
+      "returncode": 1,
+      "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+      "admitted": true,
+      "no_automatic_retry": true
+    },
+    "2": null,
+    "3": {
+      "time": "2026-09-26T22:27:38.615718-05:00",
+      "returncode": 1,
+      "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+      "admitted": true,
+      "no_automatic_retry": true
+    },
+    "4": {
+      "time": "2026-09-26T20:02:50.210159-05:00",
+      "returncode": 1,
+      "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+      "admitted": true,
+      "no_automatic_retry": true
+    },
+    "5": null,
+    "6": {
+      "time": "2026-09-26T19:32:45.229302-05:00",
+      "returncode": 1,
+      "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+      "admitted": true,
+      "no_automatic_retry": true
+    }
+  },
+  "results": {
+    "complete": 180,
+    "infrastructure_failure": 4
+  },
+  "gpus": "0, GPU-c83b7d25-753e-2eae-f13b-8f9c3df9fa4b, 22759 MiB, 100 %, 0\n1, GPU-67b700c2-eb7a-93aa-28dd-57e8b2711926, 23113 MiB, 98 %, 0\n2, GPU-025b7fc9-8f25-5467-5c28-8e59884ab6d3, 21995 MiB, 3 %, 0\n3, GPU-bba13bfa-9dd6-0956-0e4e-122950cd69fe, 6 MiB, 0 %, 0\n4, GPU-e7aef4c0-2628-b4f8-34f4-579d62b7feb6, 21997 MiB, 3 %, 0\n5, GPU-1758045c-5a5e-3661-bb58-a786fa745a17, 4 MiB, 0 %, 0\n6, GPU-91a9a93b-b386-82f0-3009-88cc9bb79d06, 4 MiB, 0 %, 0\n7, GPU-3624eff9-444b-b72c-e32e-2bae7acbb8cb, 4 MiB, 0 %, 0\n",
+  "processes": "GPU-c83b7d25-753e-2eae-f13b-8f9c3df9fa4b, 2615974, 22670 MiB\nGPU-67b700c2-eb7a-93aa-28dd-57e8b2711926, 2615975, 23022 MiB\nGPU-025b7fc9-8f25-5467-5c28-8e59884ab6d3, 2843960, 21986 MiB\nGPU-e7aef4c0-2628-b4f8-34f4-579d62b7feb6, 2843000, 21986 MiB\n",
+  "free_gib": {
+    "/": 0.08376693725585938,
+    "/home/zifanz4": 1.8291015625,
+    "/data02/zifanz4": 66.072265625
+  }
+}

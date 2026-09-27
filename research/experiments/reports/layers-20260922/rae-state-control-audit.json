@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "group_readout_fits": 42,
+  "prediction_conditions": 63,
+  "max_training_scale_difference": 0.0,
+  "normalized_normal_equation_residual": 6.512444352938499e-13,
+  "expanded_affine_prediction_max_abs": 2.3314683517128287e-15,
+  "episode_metric_max_abs": 6.217248937900877e-15,
+  "reused_noisy_initial_vectors_verified": 630,
+  "episode_disjoint_folds": true,
+  "alpha_multiplier_exactly7_not84": true,
+  "frozen_sources_and_references_unchanged": true,
+  "no_model_inference_or_refits": true
+}

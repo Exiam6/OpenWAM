@@ -1,0 +1,11 @@
+{
+  "authorized_at": "2026-09-23T18:37:23.157244-05:00",
+  "user_instruction": "完整验证是否新表征能够怎么贡献到原来的openwam 把实验跑全 改训练就训练 完整验证",
+  "scope": "independent numerical audit; native OpenWAM representation integration; matched training; independent closed-loop clean/noise/viewpoint evaluations; component diagnostics and contribution packaging",
+  "supersedes_closed_window_for_new_work": true,
+  "old_deadlines_and_frozen_results_unchanged": true,
+  "max_concurrent_gpus": 8,
+  "initial_planning_ceiling_gpu_hours": 576,
+  "review_horizon": "2026-09-30T18:37:23.157244-05:00",
+  "stage_rule": "Each job receives a fixed prospective timeout; training/evaluation budgets are frozen after measured training-only throughput and before new evaluation outcomes. No auto-extension of a running job. No old80 or expired56 reuse; no unrelated jobs terminated; no new agents."
+}

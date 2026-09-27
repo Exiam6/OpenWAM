@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "new_fits": 21,
+  "prediction_conditions": 63,
+  "training_scale_max_abs": 0.0,
+  "normalized_ridge_optimality_residual": 1.0176014004938241e-14,
+  "expanded_affine_prediction_max_abs": 1.0130785099704553e-15,
+  "episode_metric_max_abs": 8.526512829121202e-14,
+  "folds_disjoint_by_original_episode": true,
+  "seven_variants_per_training_episode": true,
+  "frozen_sources_and_inputs_unchanged": true,
+  "no_model_inference_or_refits": true,
+  "limitations": "A saved-artifact audit, not new independent samples, full RAE, or policy validation."
+}

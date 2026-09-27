@@ -1,0 +1,217 @@
+{
+  "attempts": [
+    {
+      "task": "adjust_bottle",
+      "seed": 900000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:52:31.045026-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 147,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900000/data/episode0.hdf5",
+      "hdf5_sha256": "87eabfd02128f547e998f72dabe828e20a598eb22b2ffb60d10c280e06722cf1",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 59.62156716734171,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:53:32.014020-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900001/data/episode0.hdf5",
+      "hdf5_sha256": "1e1a8e847984ef9aeec7ca7b5f2e2a4401ef8ab92202cb6acdd618a9312b8ab8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 56.45867255888879,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:54:29.828759-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 154,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900002/data/episode0.hdf5",
+      "hdf5_sha256": "b451231ed51931acb3ac44ab1674e747f489a875237c5eafbc14204a9962a101",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 55.366347808390856,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:55:26.670429-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 147,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900003/data/episode0.hdf5",
+      "hdf5_sha256": "32aba148b0a45ac86b17880de6f82c738fd93217974b07f26541cf33cd34f05b",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 53.67984440177679,
+      "exit_code": 0
+    }
+  ],
+  "accepted": [
+    {
+      "task": "adjust_bottle",
+      "seed": 900000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:52:31.045026-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 147,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900000/data/episode0.hdf5",
+      "hdf5_sha256": "87eabfd02128f547e998f72dabe828e20a598eb22b2ffb60d10c280e06722cf1",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 59.62156716734171,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:53:32.014020-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900001/data/episode0.hdf5",
+      "hdf5_sha256": "1e1a8e847984ef9aeec7ca7b5f2e2a4401ef8ab92202cb6acdd618a9312b8ab8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 56.45867255888879,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:54:29.828759-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 154,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900002/data/episode0.hdf5",
+      "hdf5_sha256": "b451231ed51931acb3ac44ab1674e747f489a875237c5eafbc14204a9962a101",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 55.366347808390856,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 900003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:55:26.670429-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 147,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/adjust_bottle/seed-900003/data/episode0.hdf5",
+      "hdf5_sha256": "32aba148b0a45ac86b17880de6f82c738fd93217974b07f26541cf33cd34f05b",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 53.67984440177679,
+      "exit_code": 0
+    }
+  ],
+  "accepted_count": 4,
+  "elapsed_seconds": 230.72270836867392,
+  "collection_deadline": "2026-09-23T14:38:51.767900-05:00"
+}

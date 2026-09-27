@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "time": "2026-09-22T18:57:48.556612-05:00",
+  "original_identity_check_reused": true,
+  "remaining_functions_checked": [
+    "parity",
+    "extract",
+    "score"
+  ],
+  "four_original_functions_route_to_continued_input_and_new_output": true,
+  "no_function_executed_no_score_or_gpu": true,
+  "original_harness_failure_preserved": true
+}

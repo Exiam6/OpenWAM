@@ -1,0 +1,18 @@
+{
+  "time": "2026-09-24T22:04:37.995488-05:00",
+  "status": "completed",
+  "source_path_preserved_as_symlink": "/home/zifanz4/.cache/pip",
+  "destination": "/data02/zifanz4/openwam-experiments/cache/pip-home-20260924",
+  "files_verified_sha256": 262,
+  "bytes_preserved": 2063175690,
+  "before_available_bytes": {
+    "home": 16777216,
+    "data02": 170587586560
+  },
+  "after_available_bytes": {
+    "home": 2083520512,
+    "data02": 168519794688
+  },
+  "redundant_source_copy_removed_after_double_hash_verification": true,
+  "installed_environments_or_frozen_experiment_files_modified": false
+}

@@ -1,0 +1,56 @@
+{
+  "status": "window_closed_scoring_complete_independent_audit_pending",
+  "updated_at": "2026-09-23T15:53:49.370099-05:00",
+  "accepted_counts": {
+    "adjust_bottle": 20,
+    "handover_block": 20,
+    "place_object_basket": 20
+  },
+  "attempt_counts": {
+    "adjust_bottle": 20,
+    "handover_block": 22,
+    "place_object_basket": 36
+  },
+  "deadline": "2026-09-23T15:38:51.767900-05:00",
+  "collection_deadline": "2026-09-23T14:38:51.767900-05:00",
+  "runtime": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923",
+  "active_collector_host": "cm009",
+  "collector_gpu_indices": [
+    1,
+    2,
+    3
+  ],
+  "max_concurrent_gpus": 4,
+  "feature_L40S_exit_code": 1,
+  "feature_failure": "Wan training-fixture maxstandardizedRMS0.106033 > frozen0.05; DINOexact; no confirmation feature extraction/scoring",
+  "resource_waiter": "finished afterdispatch; no longeractive",
+  "next_step": "New4hwindow closed15:38:51CDT with all60scenes and frozen scoring completed12:20:42. No new experiment, refit, inference, rescore or automaticdeadlineextension. Preserve old56unscored/old80unchanged and allnewfailures. Independent numerical audit scripts/confirmation/audit.py was prepared but notexecuted beforedeadline because toolapproval service exhaustedusage; its original deadline guard is preserved. Next required validation is a separately authorized bounded CPUartifact audit of rawlabels,135savedpredictions and99pairedintervals; then package minimal representation-baseline and component-reporting contribution. Current completed-run numbers remain provisional pendingthat audit; no fullRAE/closedloop claims.",
+  "last_actual_snapshot": "2026-09-23T11:59:24.082959-05:00",
+  "frozen_code_protocol_intact": true,
+  "audit_preparation": {
+    "script": "/home/zifanz4/openwam-experiments/scripts/confirmation/audit.py",
+    "sha256": "5e57bb8a00fe4443731569b627c8713351277e95a725f58b10940de78bcc70ce",
+    "syntax_checked": true,
+    "run": false,
+    "scope": "after complete balanced60 and exit0 only; independent raw-label, expanded-affine, scene-metric and bootstrap audit"
+  },
+  "feature_extracted_scenes": 60,
+  "feature_host": "rainier",
+  "feature_gpu_index": 4,
+  "hardware_parity_passed": true,
+  "feature_exit_code": 0,
+  "completed_at": "2026-09-23T12:20:42.185146-05:00",
+  "all_collectors_exit_zero": true,
+  "study_gpu_workers_remaining": 0,
+  "joint_primary_passed_by_frozen_scorer": true,
+  "independent_numerical_audit_completed": false,
+  "closure_integrity": {
+    "time": "2026-09-23T15:51:01.566309-05:00",
+    "passed": true,
+    "frozen_files_checked": 370,
+    "mismatches": [],
+    "result_sha256": "efa7f786381e9890c28401652fc2145a628938e3bc2ef381391b171d493b3366",
+    "scope": "post-window byte-integrity only; not independent numerical audit",
+    "independent_numerical_audit_completed": false
+  }
+}

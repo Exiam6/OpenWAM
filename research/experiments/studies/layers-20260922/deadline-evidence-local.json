@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-09-23T01:16:19.138631-05:00",
+  "terminal": {
+    "rae-noise-control-20260922": {
+      "exit": {
+        "finished_at": "2026-09-23T00:05:20.246213-05:00",
+        "exit_code": 0
+      },
+      "saved_audit_passed": true,
+      "result_completed_at": "2026-09-23T00:05:19.333558-05:00",
+      "final_log_starts_COMPLETE": true
+    },
+    "rae-state-control-20260923": {
+      "exit": {
+        "finished_at": "2026-09-23T00:24:31.313997-05:00",
+        "exit_code": 0
+      },
+      "saved_audit_passed": true,
+      "result_completed_at": "2026-09-23T00:24:29.856138-05:00",
+      "final_log_starts_COMPLETE": true
+    }
+  },
+  "unchanged_state_files": {
+    "result.json": true,
+    "exit.json": true,
+    "audit.json": true,
+    "protocol.json": true,
+    "freeze.json": true,
+    "run.log": true
+  },
+  "cm001_owned_gpu_processes": [],
+  "cm001_nvidia_smi_exit": 0
+}

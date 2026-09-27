@@ -1,0 +1,230 @@
+{
+  "time": "2026-09-26T22:16:03.611760-05:00",
+  "queues": [
+    {
+      "gpu": 1,
+      "started.json": {
+        "time": "2026-09-25T19:49:29.861809-05:00",
+        "pid": 2447502,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643798",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress.json": {
+        "time": "2026-09-26T19:16:28.328391-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85",
+          "00000000:21:00.0",
+          "1",
+          "0",
+          "0"
+        ],
+        "idle_samples": 3,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "exit.json": {
+        "time": "2026-09-26T20:05:15.659156-05:00",
+        "returncode": 1,
+        "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+        "admitted": true,
+        "no_automatic_retry": true
+      },
+      "admitted.json": {
+        "time": "2026-09-26T19:16:28.464585-05:00",
+        "gpu": [
+          "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85",
+          "00000000:21:00.0",
+          "1",
+          "0",
+          "0"
+        ],
+        "timeout_seconds": 141930.775747
+      }
+    },
+    {
+      "gpu": 2,
+      "started.json": {
+        "time": "2026-09-25T19:49:30.075167-05:00",
+        "pid": 2447565,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643821",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress.json": {
+        "time": "2026-09-26T22:15:38.125187-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e",
+          "00000000:41:00.0",
+          "26641",
+          "76",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      }
+    },
+    {
+      "gpu": 3,
+      "started.json": {
+        "time": "2026-09-25T19:49:30.327129-05:00",
+        "pid": 2447628,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643846",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress.json": {
+        "time": "2026-09-26T21:31:51.292190-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db",
+          "00000000:61:00.0",
+          "1",
+          "0",
+          "0"
+        ],
+        "idle_samples": 3,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted.json": {
+        "time": "2026-09-26T21:31:51.486808-05:00",
+        "gpu": [
+          "GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db",
+          "00000000:61:00.0",
+          "1",
+          "0",
+          "0"
+        ],
+        "timeout_seconds": 133807.753535
+      }
+    },
+    {
+      "gpu": 4,
+      "started.json": {
+        "time": "2026-09-25T19:49:30.569000-05:00",
+        "pid": 2447691,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643869",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress.json": {
+        "time": "2026-09-26T19:08:55.372429-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-33861458-0994-99a7-7457-6fceb49c229c",
+          "00000000:81:00.0",
+          "1",
+          "0",
+          "0"
+        ],
+        "idle_samples": 3,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "exit.json": {
+        "time": "2026-09-26T20:02:50.210159-05:00",
+        "returncode": 1,
+        "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+        "admitted": true,
+        "no_automatic_retry": true
+      },
+      "admitted.json": {
+        "time": "2026-09-26T19:08:55.515447-05:00",
+        "gpu": [
+          "GPU-33861458-0994-99a7-7457-6fceb49c229c",
+          "00000000:81:00.0",
+          "1",
+          "0",
+          "0"
+        ],
+        "timeout_seconds": 142383.724897
+      }
+    },
+    {
+      "gpu": 5,
+      "started.json": {
+        "time": "2026-09-25T19:49:30.759333-05:00",
+        "pid": 2447754,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643889",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress.json": {
+        "time": "2026-09-26T22:15:38.076487-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3",
+          "00000000:A1:00.0",
+          "26415",
+          "79",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      }
+    },
+    {
+      "gpu": 6,
+      "started.json": {
+        "time": "2026-09-25T19:49:30.979285-05:00",
+        "pid": 2447818,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643911",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress.json": {
+        "time": "2026-09-26T18:22:36.052998-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-f341a0af-5cd4-9d17-e701-31f4530522ae",
+          "00000000:C1:00.0",
+          "1",
+          "0",
+          "0"
+        ],
+        "idle_samples": 3,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "exit.json": {
+        "time": "2026-09-26T19:32:45.229302-05:00",
+        "returncode": 1,
+        "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+        "admitted": true,
+        "no_automatic_retry": true
+      },
+      "admitted.json": {
+        "time": "2026-09-26T18:22:36.193273-05:00",
+        "gpu": [
+          "GPU-f341a0af-5cd4-9d17-e701-31f4530522ae",
+          "00000000:C1:00.0",
+          "1",
+          "0",
+          "0"
+        ],
+        "timeout_seconds": 145163.047057
+      }
+    }
+  ],
+  "gpu": {
+    "returncode": 0,
+    "stdout": "0, GPU-c7d96da5-a1ae-e1ed-de5d-03f35e550da2, 1 MiB, 0 %, 2\n1, GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 1 MiB, 0 %, 0\n2, GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 26641 MiB, 82 %, 0\n3, GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 18954 MiB, 60 %, 0\n4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 1 MiB, 0 %, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 26415 MiB, 81 %, 0\n6, GPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 1 MiB, 0 %, 0\n7, GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 1 MiB, 0 %, 0\n",
+    "stderr": ""
+  },
+  "processes": {
+    "returncode": 0,
+    "stdout": "    PID    PPID     ELAPSED COMMAND\n2447439       1  1-02:26:34 /lib/systemd/systemd --user\n2447440 2447439  1-02:26:34 (sd-pam)\n2447498       1  1-02:26:34 tmux new-session -d -s ow-eval-firststart-20260925-1 timeout --signal=TERM --kill-after=90s 226351 python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 1 > /data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/queue-1.log 2>&1\n2447562 2447498  1-02:26:33 bash -c timeout --signal=TERM --kill-after=90s 226351 python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 2 > /data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/queue-2.log 2>&1\n2447564 2447562  1-02:26:33 timeout --signal=TERM --kill-after=90s 226351 python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 2\n2447565 2447564  1-02:26:33 python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 2\n2447625 2447498  1-02:26:33 bash -c timeout --signal=TERM --kill-after=90s 226351 python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 3 > /data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/queue-3.log 2>&1\n2447627 2447625  1-02:26:33 timeout --signal=TERM --kill-after=90s 226351 python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 3\n2447628 2447627  1-02:26:33 python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 3\n2447751 2447498  1-02:26:33 bash -c timeout --signal=TERM --kill-after=90s 226350 python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 5 > /data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/queue-5.log 2>&1\n2447753 2447751  1-02:26:33 timeout --signal=TERM --kill-after=90s 226350 python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 5\n2447754 2447753  1-02:26:33 python3 -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py --queue 5\n2749532 2447628       43:45 /data02/zifanz4/openwam-experiments/policy-env/bin/python -u /home/zifanz4/openwam-experiments/scripts/endtoend/serve_policy.py --checkpoint /data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28 --port 18853 --log /data02/zifanz4/openwam-experiments/endtoend-20260923/evaluation/wan-seed42/episode-rng.jsonl\n2749677 2447628       42:39 /data02/zifanz4/openwam-experiments/benchmark-env/bin/python -u /home/zifanz4/openwam-experiments/scripts/endtoend/evaluate_policy.py --task adjust_bottle --route wan --seed 42 --condition clean --port 18853 --output /data02/zifanz4/openwam-experiments/endtoend-20260923/evaluation/wan-seed42/adjust_bottle/clean\n2749837 2749532       42:10 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749847 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749849 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749851 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749852 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749854 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749857 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749858 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749861 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749863 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749864 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749867 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749869 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749871 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749873 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749875 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749877 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749879 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749881 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749883 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749885 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749887 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749889 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749891 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749893 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749895 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749896 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749899 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749901 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749903 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749905 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749907 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2749909 2749837       42:07 /data02/zifanz4/openwam-experiments/policy-env/bin/python /data02/zifanz4/openwam-experiments/env/lib/python3.10/site-packages/torch/_inductor/compile_worker/__main__.py --pickler=torch._inductor.compile_worker.subproc_pool.SubprocPickler --kind=fork --workers=32 --parent=2749532 --read-fd=65 --write-fd=68\n2755063 2755002       00:00 sshd: zifanz4@notty\n2755064 2755063       00:00 python3 -\n2755068 2755064       00:00 ps -u zifanz4 -o pid,ppid,etime,args\n",
+    "stderr": ""
+  }
+}

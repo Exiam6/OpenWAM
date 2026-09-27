@@ -1,0 +1,43 @@
+{
+  "as_of": "2026-09-22T17:37:14.084979-05:00",
+  "pauses": [],
+  "counts": {
+    "adjust_bottle": 11,
+    "handover_block": 0,
+    "place_object_basket": 0
+  },
+  "completed_attempts": 12,
+  "outcomes": {
+    "accepted": 11,
+    "unstable_scene": 1
+  },
+  "collection_deadline": "2026-09-22T19:15:55.548938-05:00",
+  "exits": {
+    "fresh-v2": {},
+    "confirmation": {}
+  },
+  "active": [
+    {
+      "task": "adjust_bottle",
+      "seed": 800012,
+      "pid": 1458754,
+      "process_alive": true,
+      "last_log_time": "2026-09-22T17:37:14.070963-05:00",
+      "log_tail": "[eval_policy_wrapper] RoboTwin commit=0aeea2d669c0 eval_policy.py sha256=8b16c766a9c40116\n[eval_policy_wrapper] runtime_root=/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800012/runtime\n[eval_policy_wrapper] prewarmed CUDA/Curobo before SAPIEN import\n[eval_policy_wrapper] patched warp.torch compatibility namespace\n/vol13/zifanz4/openwam-experiments/goalaux-native/benchmark-env/lib/python3.10/site-packages/sapien/_vulkan_tricks.py:37: UserWarning: Failed to find Vulkan ICD file. This is probably due to an incorrect or partial installation of the NVIDIA driver. SAPIEN will attempt to provide an ICD file anyway but it may not work.\n  warn(\nmissing pytorch3d\n"
+    }
+  ],
+  "tmux": [
+    "wam-goalaux-collect-v2 1448313 0 python3",
+    "wam-goalaux-confirm 1454546 0 python3"
+  ],
+  "selected_gpu": "GPU-dee01971-fb13-ae53-0d7f-ebe6c6149087, 501, 0, 0",
+  "confirmation_pending": {
+    "time": "2026-09-22T17:29:58.280919-05:00",
+    "waiting_for": "full60scene collector exit0",
+    "gpu_allocated": false,
+    "study_deadline": "2026-09-23T01:15:12-05:00"
+  },
+  "summary_exists": false,
+  "failure": null,
+  "run_log_tail": "adjust_bottle 800000 accepted {'adjust_bottle': 1, 'handover_block': 0, 'place_object_basket': 0}\nadjust_bottle 800001 accepted {'adjust_bottle': 2, 'handover_block': 0, 'place_object_basket': 0}\nadjust_bottle 800002 accepted {'adjust_bottle': 3, 'handover_block': 0, 'place_object_basket': 0}\nadjust_bottle 800003 accepted {'adjust_bottle': 4, 'handover_block': 0, 'place_object_basket': 0}\nadjust_bottle 800004 accepted {'adjust_bottle': 5, 'handover_block': 0, 'place_object_basket': 0}\nadjust_bottle 800005 accepted {'adjust_bottle': 6, 'handover_block': 0, 'place_object_basket': 0}\nadjust_bottle 800006 accepted {'adjust_bottle': 7, 'handover_block': 0, 'place_object_basket': 0}\nadjust_bottle 800007 accepted {'adjust_bottle': 8, 'handover_block': 0, 'place_object_basket': 0}\nadjust_bottle 800008 accepted {'adjust_bottle': 9, 'handover_block': 0, 'place_object_basket': 0}\nadjust_bottle 800009 accepted {'adjust_bottle': 10, 'handover_block': 0, 'place_object_basket': 0}\nadjust_bottle 800010 unstable_scene {'adjust_bottle': 10, 'handover_block': 0, 'place_object_basket': 0}\nadjust_bottle 800011 accepted {'adjust_bottle': 11, 'handover_block': 0, 'place_object_basket': 0}\n"
+}

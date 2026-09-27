@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-09-22T20:01:38.947291-05:00",
+  "accepted_counts": {
+    "adjust_bottle": 20,
+    "handover_block": 20,
+    "place_object_basket": 16
+  },
+  "distinct_candidates_started": 70,
+  "fully_completed_candidates": 69,
+  "terminal_worker_exit": 124,
+  "exits": {
+    "fresh-v4": "1",
+    "confirmation": "1",
+    "confirmation-v2": "1"
+  },
+  "terminal_log_tail": "e>\n    else:parent()\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation_v4.py\", line 37, in parent\n    if code or res['outcome']=='infrastructure_failure':raise RuntimeError('Unclassified failure retained; no retry')\nRuntimeError: Unclassified failure retained; no retry\n",
+  "canonical_metadata_checked": 49,
+  "metadata_mismatches": [],
+  "live_recorded_pids": [],
+  "goalaux_sessions": [],
+  "tmux_query_exit": 1,
+  "score_summaries": [],
+  "confirmation_v3_exists": false,
+  "gpu": {
+    "exit_code": 0,
+    "stdout": "36749, 98, 0",
+    "stderr": ""
+  },
+  "gpu_apps_query_exit": 0,
+  "gpu_process_owners": [
+    {
+      "exit_code": 0,
+      "stdout": "1511221 jw116    python",
+      "stderr": ""
+    }
+  ],
+  "paused_markers": []
+}

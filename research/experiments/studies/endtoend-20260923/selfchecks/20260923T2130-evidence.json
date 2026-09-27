@@ -1,0 +1,365 @@
+{
+  "checked_at": "2026-09-23T21:31:18.442640-05:00",
+  "trigger": "2026-09-23T21:30:01.036846-05:00",
+  "training": {
+    "pca-seed42": {
+      "start": {
+        "time": "2026-09-23T19:19:15.516770-05:00",
+        "pid": 1989739,
+        "job": {
+          "name": "pca-seed42",
+          "kind": "train",
+          "entrypoint": "/home/zifanz4/openwam-experiments/scripts/endtoend/train_main.py",
+          "host": "cm009",
+          "gpu_index": 2,
+          "gpu_uuid": "GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e",
+          "run_dir": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42",
+          "timeout_seconds": 86400,
+          "code_sha256": {
+            "/home/zifanz4/openwam-experiments/scripts/endtoend/train_main.py": "3127325d1591d6099d1504a42652714a65e533971fe18851a401af183cbfe7e8",
+            "/home/zifanz4/openwam-experiments/scripts/endtoend/run_job.py": "a151a071da74f645fd7c2f896ae272699d4ae48174c7461e5ab9f6b318e93b5b",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/config.yaml": "884ac986f3a9d9bc761729e04caa2f4036a7b05c97f3aba1bac5e48dac0cc603",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/templates-main/pca/config.yaml": "d9a2bb97d810387b8a8fdec34e2c0b2fcc848a3bb753504b45f64d2f42ee21f5",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/protocol.json": "9821536558ee158735a24e2caa8b394dfb46723269586cf4acc66c4b9b2cd7b6",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/dinov3_pca.py": "5daa04141295143d64e4014e7cc8603ec48479acffd5fd39fc4d093f80541de7",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/__init__.py": "76c2a60bd41d15831a73dd61e9617212ea251760dc6a11138b4cfb69ab4287a3"
+          }
+        },
+        "gpu_check": [
+          "GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e",
+          " 1",
+          " 0",
+          " 0"
+        ]
+      },
+      "exit": null,
+      "global_step": 3782,
+      "opt_step": 1891,
+      "last_metric_age_s": 1.3836543560028076,
+      "all_metrics_finite": true,
+      "log_tail": "<4:48:11,  2.10s/step, loss=0.3098, video=0.2812, action=0.0286, lr=8.22e-05, epoch=0]\rTraining:  32%|\u2588\u2588\u2588\u258f      | 3780/12000 [2:10:45<4:48:11,  2.10s/step, loss=0.4322, video=0.3860, action=0.0462, lr=8.22e-05, epoch=0]\rTraining:  32%|\u2588\u2588\u2588\u258f      | 3781/12000 [2:10:45<4:45:25,  2.08s/step, loss=0.4322, video=0.3860, action=0.0462, lr=8.22e-05, epoch=0]\rTraining:  32%|\u2588\u2588\u2588\u258f      | 3781/12000 [2:10:47<4:45:25,  2.08s/step, loss=0.2071, video=0.1960, action=0.0111, lr=8.22e-05, epoch=0]\rTraining:  32%|\u2588\u2588\u2588\u258f      | 3782/12000 [2:10:47<4:45:15,  2.08s/step, loss=0.2071, video=0.1960, action=0.0111, lr=8.22e-05, epoch=0]",
+      "checkpoint_files": []
+    },
+    "pca-seed43": {
+      "start": {
+        "time": "2026-09-23T19:19:15.474190-05:00",
+        "pid": 1989742,
+        "job": {
+          "name": "pca-seed43",
+          "kind": "train",
+          "entrypoint": "/home/zifanz4/openwam-experiments/scripts/endtoend/train_main.py",
+          "host": "cm009",
+          "gpu_index": 5,
+          "gpu_uuid": "GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3",
+          "run_dir": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43",
+          "timeout_seconds": 86400,
+          "code_sha256": {
+            "/home/zifanz4/openwam-experiments/scripts/endtoend/train_main.py": "3127325d1591d6099d1504a42652714a65e533971fe18851a401af183cbfe7e8",
+            "/home/zifanz4/openwam-experiments/scripts/endtoend/run_job.py": "a151a071da74f645fd7c2f896ae272699d4ae48174c7461e5ab9f6b318e93b5b",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/config.yaml": "b877efddc05a11fe2cc00800b57e0bb12720f8b803a304b355ff5b9b32c63aca",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/templates-main/pca/config.yaml": "d9a2bb97d810387b8a8fdec34e2c0b2fcc848a3bb753504b45f64d2f42ee21f5",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/protocol.json": "9821536558ee158735a24e2caa8b394dfb46723269586cf4acc66c4b9b2cd7b6",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/dinov3_pca.py": "5daa04141295143d64e4014e7cc8603ec48479acffd5fd39fc4d093f80541de7",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/__init__.py": "76c2a60bd41d15831a73dd61e9617212ea251760dc6a11138b4cfb69ab4287a3"
+          }
+        },
+        "gpu_check": [
+          "GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3",
+          " 1",
+          " 0",
+          " 0"
+        ]
+      },
+      "exit": null,
+      "global_step": 3748,
+      "opt_step": 1874,
+      "last_metric_age_s": 1.1898164749145508,
+      "all_metrics_finite": true,
+      "log_tail": "[2:10:31<4:53:48,  2.14s/step, loss=0.4393, video=0.4270, action=0.0123, lr=8.25e-05, epoch=0]\rTraining:  31%|\u2588\u2588\u2588       | 3746/12000 [2:10:33<4:53:48,  2.14s/step, loss=0.3694, video=0.2764, action=0.0930, lr=8.25e-05, epoch=0]\rTraining:  31%|\u2588\u2588\u2588       | 3747/12000 [2:10:33<4:48:05,  2.09s/step, loss=0.3694, video=0.2764, action=0.0930, lr=8.25e-05, epoch=0]\rTraining:  31%|\u2588\u2588\u2588       | 3747/12000 [2:10:35<4:48:05,  2.09s/step, loss=0.3464, video=0.3398, action=0.0066, lr=8.25e-05, epoch=0]\rTraining:  31%|\u2588\u2588\u2588       | 3748/12000 [2:10:35<4:45:11,  2.07s/step, loss=0.3464, video=0.3398, action=0.0066, lr=8.25e-05, epoch=0]",
+      "checkpoint_files": []
+    },
+    "pca-seed44": {
+      "start": null,
+      "exit": null,
+      "global_step": 0,
+      "opt_step": 0,
+      "last_metric_age_s": null,
+      "all_metrics_finite": true,
+      "log_tail": null,
+      "checkpoint_files": []
+    },
+    "svae-seed42": {
+      "start": {
+        "time": "2026-09-23T19:19:15.528871-05:00",
+        "pid": 1989738,
+        "job": {
+          "name": "svae-seed42",
+          "kind": "train",
+          "entrypoint": "/home/zifanz4/openwam-experiments/scripts/endtoend/train_main.py",
+          "host": "cm009",
+          "gpu_index": 1,
+          "gpu_uuid": "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85",
+          "run_dir": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42",
+          "timeout_seconds": 86400,
+          "code_sha256": {
+            "/home/zifanz4/openwam-experiments/scripts/endtoend/train_main.py": "3127325d1591d6099d1504a42652714a65e533971fe18851a401af183cbfe7e8",
+            "/home/zifanz4/openwam-experiments/scripts/endtoend/run_job.py": "a151a071da74f645fd7c2f896ae272699d4ae48174c7461e5ab9f6b318e93b5b",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/config.yaml": "6cfd18bcc5c6d2c334141c288d0b32eeaf5cda02f52560958be2ae6c5a2cdea2",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/templates-main/svae/config.yaml": "92cefbc836d5fe5ccb5c47801ec94afe5f1d3eb6a1963323bbd0dec8b986ee13",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/protocol.json": "9821536558ee158735a24e2caa8b394dfb46723269586cf4acc66c4b9b2cd7b6",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/dinov3_pca.py": "5daa04141295143d64e4014e7cc8603ec48479acffd5fd39fc4d093f80541de7",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/__init__.py": "76c2a60bd41d15831a73dd61e9617212ea251760dc6a11138b4cfb69ab4287a3"
+          }
+        },
+        "gpu_check": [
+          "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85",
+          " 1",
+          " 0",
+          " 0"
+        ]
+      },
+      "exit": null,
+      "global_step": 3743,
+      "opt_step": 1871,
+      "last_metric_age_s": 1.4768807888031006,
+      "all_metrics_finite": true,
+      "log_tail": "[2:10:40<4:46:37,  2.08s/step, loss=0.3562, video=0.3339, action=0.0222, lr=8.26e-05, epoch=0]\rTraining:  31%|\u2588\u2588\u2588       | 3741/12000 [2:10:42<4:46:37,  2.08s/step, loss=0.4229, video=0.3971, action=0.0258, lr=8.26e-05, epoch=0]\rTraining:  31%|\u2588\u2588\u2588       | 3742/12000 [2:10:42<4:47:59,  2.09s/step, loss=0.4229, video=0.3971, action=0.0258, lr=8.26e-05, epoch=0]\rTraining:  31%|\u2588\u2588\u2588       | 3742/12000 [2:10:44<4:47:59,  2.09s/step, loss=0.2824, video=0.2522, action=0.0302, lr=8.26e-05, epoch=0]\rTraining:  31%|\u2588\u2588\u2588       | 3743/12000 [2:10:44<4:48:12,  2.09s/step, loss=0.2824, video=0.2522, action=0.0302, lr=8.26e-05, epoch=0]",
+      "checkpoint_files": []
+    },
+    "svae-seed43": {
+      "start": {
+        "time": "2026-09-23T19:19:15.488938-05:00",
+        "pid": 1989741,
+        "job": {
+          "name": "svae-seed43",
+          "kind": "train",
+          "entrypoint": "/home/zifanz4/openwam-experiments/scripts/endtoend/train_main.py",
+          "host": "cm009",
+          "gpu_index": 4,
+          "gpu_uuid": "GPU-33861458-0994-99a7-7457-6fceb49c229c",
+          "run_dir": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43",
+          "timeout_seconds": 86400,
+          "code_sha256": {
+            "/home/zifanz4/openwam-experiments/scripts/endtoend/train_main.py": "3127325d1591d6099d1504a42652714a65e533971fe18851a401af183cbfe7e8",
+            "/home/zifanz4/openwam-experiments/scripts/endtoend/run_job.py": "a151a071da74f645fd7c2f896ae272699d4ae48174c7461e5ab9f6b318e93b5b",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/config.yaml": "8c2f5ad1ad478cc633e8e67179a7641b9257d10de71cdc8747c7bea470065f05",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/templates-main/svae/config.yaml": "92cefbc836d5fe5ccb5c47801ec94afe5f1d3eb6a1963323bbd0dec8b986ee13",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/protocol.json": "9821536558ee158735a24e2caa8b394dfb46723269586cf4acc66c4b9b2cd7b6",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/dinov3_pca.py": "5daa04141295143d64e4014e7cc8603ec48479acffd5fd39fc4d093f80541de7",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/__init__.py": "76c2a60bd41d15831a73dd61e9617212ea251760dc6a11138b4cfb69ab4287a3"
+          }
+        },
+        "gpu_check": [
+          "GPU-33861458-0994-99a7-7457-6fceb49c229c",
+          " 1",
+          " 0",
+          " 0"
+        ]
+      },
+      "exit": null,
+      "global_step": 3810,
+      "opt_step": 1905,
+      "last_metric_age_s": 1.6660637855529785,
+      "all_metrics_finite": true,
+      "log_tail": "<4:46:38,  2.10s/step, loss=0.1632, video=0.1366, action=0.0266, lr=8.19e-05, epoch=0]\rTraining:  32%|\u2588\u2588\u2588\u258f      | 3808/12000 [2:10:44<4:46:38,  2.10s/step, loss=0.1970, video=0.1766, action=0.0204, lr=8.19e-05, epoch=0]\rTraining:  32%|\u2588\u2588\u2588\u258f      | 3809/12000 [2:10:44<4:43:31,  2.08s/step, loss=0.1970, video=0.1766, action=0.0204, lr=8.19e-05, epoch=0]\rTraining:  32%|\u2588\u2588\u2588\u258f      | 3809/12000 [2:10:46<4:43:31,  2.08s/step, loss=0.2290, video=0.2150, action=0.0140, lr=8.19e-05, epoch=0]\rTraining:  32%|\u2588\u2588\u2588\u258f      | 3810/12000 [2:10:46<4:44:00,  2.08s/step, loss=0.2290, video=0.2150, action=0.0140, lr=8.19e-05, epoch=0]",
+      "checkpoint_files": []
+    },
+    "svae-seed44": {
+      "start": null,
+      "exit": null,
+      "global_step": 0,
+      "opt_step": 0,
+      "last_metric_age_s": null,
+      "all_metrics_finite": true,
+      "log_tail": null,
+      "checkpoint_files": []
+    },
+    "wan-seed42": {
+      "start": {
+        "time": "2026-09-23T19:19:15.507960-05:00",
+        "pid": 1989740,
+        "job": {
+          "name": "wan-seed42",
+          "kind": "train",
+          "entrypoint": "/home/zifanz4/openwam-experiments/scripts/endtoend/train_main.py",
+          "host": "cm009",
+          "gpu_index": 3,
+          "gpu_uuid": "GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db",
+          "run_dir": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42",
+          "timeout_seconds": 86400,
+          "code_sha256": {
+            "/home/zifanz4/openwam-experiments/scripts/endtoend/train_main.py": "3127325d1591d6099d1504a42652714a65e533971fe18851a401af183cbfe7e8",
+            "/home/zifanz4/openwam-experiments/scripts/endtoend/run_job.py": "a151a071da74f645fd7c2f896ae272699d4ae48174c7461e5ab9f6b318e93b5b",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/config.yaml": "e801ab3c8bc06b365e5858219e26be0f4912c698b568716aced7c77f97ae8809",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/templates-main/wan/config.yaml": "d18b05d3722c7752a02f2f137a4e9796709a0e8d9d19ec1985a488e16baecd4e",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/protocol.json": "9821536558ee158735a24e2caa8b394dfb46723269586cf4acc66c4b9b2cd7b6",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/dinov3_pca.py": "5daa04141295143d64e4014e7cc8603ec48479acffd5fd39fc4d093f80541de7",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/__init__.py": "76c2a60bd41d15831a73dd61e9617212ea251760dc6a11138b4cfb69ab4287a3"
+          }
+        },
+        "gpu_check": [
+          "GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db",
+          " 1",
+          " 0",
+          " 0"
+        ]
+      },
+      "exit": null,
+      "global_step": 3402,
+      "opt_step": 1701,
+      "last_metric_age_s": 0.9996881484985352,
+      "all_metrics_finite": true,
+      "log_tail": "[2:10:30<5:33:37,  2.33s/step, loss=0.3989, video=0.3712, action=0.0277, lr=8.60e-05, epoch=0]\rTraining:  28%|\u2588\u2588\u258a       | 3399/12000 [2:10:33<5:33:37,  2.33s/step, loss=0.3180, video=0.2846, action=0.0334, lr=8.60e-05, epoch=0]\rTraining:  28%|\u2588\u2588\u258a       | 3400/12000 [2:10:33<5:36:45,  2.35s/step, loss=0.3180, video=0.2846, action=0.0334, lr=8.60e-05, epoch=0]\rTraining:  28%|\u2588\u2588\u258a       | 3400/12000 [2:10:35<5:36:45,  2.35s/step, loss=0.5903, video=0.5573, action=0.0330, lr=8.60e-05, epoch=0]\rTraining:  28%|\u2588\u2588\u258a       | 3401/12000 [2:10:35<5:33:39,  2.33s/step, loss=0.5903, video=0.5573, action=0.0330, lr=8.60e-05, epoch=0]",
+      "checkpoint_files": []
+    },
+    "wan-seed43": {
+      "start": {
+        "time": "2026-09-23T19:19:15.497088-05:00",
+        "pid": 1989743,
+        "job": {
+          "name": "wan-seed43",
+          "kind": "train",
+          "entrypoint": "/home/zifanz4/openwam-experiments/scripts/endtoend/train_main.py",
+          "host": "cm009",
+          "gpu_index": 6,
+          "gpu_uuid": "GPU-f341a0af-5cd4-9d17-e701-31f4530522ae",
+          "run_dir": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43",
+          "timeout_seconds": 86400,
+          "code_sha256": {
+            "/home/zifanz4/openwam-experiments/scripts/endtoend/train_main.py": "3127325d1591d6099d1504a42652714a65e533971fe18851a401af183cbfe7e8",
+            "/home/zifanz4/openwam-experiments/scripts/endtoend/run_job.py": "a151a071da74f645fd7c2f896ae272699d4ae48174c7461e5ab9f6b318e93b5b",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/config.yaml": "2fc901557ec86999f6a4bd43d5c92ce530c342c5640df77b8b622eaa46238e0e",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/templates-main/wan/config.yaml": "d18b05d3722c7752a02f2f137a4e9796709a0e8d9d19ec1985a488e16baecd4e",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/protocol.json": "9821536558ee158735a24e2caa8b394dfb46723269586cf4acc66c4b9b2cd7b6",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/dinov3_pca.py": "5daa04141295143d64e4014e7cc8603ec48479acffd5fd39fc4d093f80541de7",
+            "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/__init__.py": "76c2a60bd41d15831a73dd61e9617212ea251760dc6a11138b4cfb69ab4287a3"
+          }
+        },
+        "gpu_check": [
+          "GPU-f341a0af-5cd4-9d17-e701-31f4530522ae",
+          " 1",
+          " 0",
+          " 0"
+        ]
+      },
+      "exit": null,
+      "global_step": 3531,
+      "opt_step": 1765,
+      "last_metric_age_s": 1.8887929916381836,
+      "all_metrics_finite": true,
+      "log_tail": "[2:10:34<5:12:15,  2.21s/step, loss=0.2753, video=0.2654, action=0.0100, lr=8.47e-05, epoch=0]\rTraining:  29%|\u2588\u2588\u2589       | 3529/12000 [2:10:36<5:12:15,  2.21s/step, loss=0.3314, video=0.3081, action=0.0232, lr=8.47e-05, epoch=0]\rTraining:  29%|\u2588\u2588\u2589       | 3530/12000 [2:10:36<5:15:23,  2.23s/step, loss=0.3314, video=0.3081, action=0.0232, lr=8.47e-05, epoch=0]\rTraining:  29%|\u2588\u2588\u2589       | 3530/12000 [2:10:38<5:15:23,  2.23s/step, loss=0.4078, video=0.3529, action=0.0549, lr=8.47e-05, epoch=0]\rTraining:  29%|\u2588\u2588\u2589       | 3531/12000 [2:10:38<5:18:30,  2.26s/step, loss=0.4078, video=0.3529, action=0.0549, lr=8.47e-05, epoch=0]",
+      "checkpoint_files": []
+    },
+    "wan-seed44": {
+      "start": null,
+      "exit": null,
+      "global_step": 0,
+      "opt_step": 0,
+      "last_metric_age_s": null,
+      "all_metrics_finite": true,
+      "log_tail": null,
+      "checkpoint_files": []
+    }
+  },
+  "scenes": {
+    "adjust_bottle": {
+      "time": "2026-09-23T20:39:16.259497-05:00",
+      "accepted_count": 50,
+      "attempted_count": 63,
+      "elapsed_seconds": 4566.1798794567585,
+      "manifest_complete": true
+    },
+    "handover_block": {
+      "time": "2026-09-23T21:30:09.420879-05:00",
+      "accepted_count": 32,
+      "attempted_count": 33,
+      "elapsed_seconds": 3053.125249966979,
+      "manifest_complete": false
+    },
+    "place_object_basket": {
+      "time": "2026-09-23T21:03:54.392164-05:00",
+      "accepted_count": 50,
+      "attempted_count": 84,
+      "elapsed_seconds": 6044.244553077966,
+      "manifest_complete": true
+    }
+  },
+  "pipeline": {
+    "time": "2026-09-23T21:30:49.807244-05:00",
+    "stage": "waiting_for_all_training_collection_smoke",
+    "all_ready": false
+  },
+  "pipeline_exit": null,
+  "slot5_exit": null,
+  "slot7_exit": {
+    "time": "2026-09-23T21:03:54.426294-05:00",
+    "returncode": 0
+  },
+  "simulation_exit": {
+    "time": "2026-09-23T21:08:15.726521-05:00",
+    "returncode": 0
+  },
+  "cm001_gpu": {
+    "returncode": 0,
+    "stdout": "0, GPU-c83b7d25-753e-2eae-f13b-8f9c3df9fa4b, 32223, 82, 0\n1, GPU-67b700c2-eb7a-93aa-28dd-57e8b2711926, 37991, 87, 0\n2, GPU-025b7fc9-8f25-5467-5c28-8e59884ab6d3, 31989, 59, 0\n3, GPU-bba13bfa-9dd6-0956-0e4e-122950cd69fe, 24325, 77, 0\n4, GPU-e7aef4c0-2628-b4f8-34f4-579d62b7feb6, 25159, 58, 0\n5, GPU-1758045c-5a5e-3661-bb58-a786fa745a17, 5248, 0, 0\n6, GPU-91a9a93b-b386-82f0-3009-88cc9bb79d06, 19527, 59, 0\n7, GPU-3624eff9-444b-b72c-e32e-2bae7acbb8cb, 18639, 54, 0\n",
+    "stderr": ""
+  },
+  "cm001_tmux": {
+    "returncode": 0,
+    "stdout": "exp\now-e2e-pipeline\now-e2e-scenes-5\n",
+    "stderr": ""
+  },
+  "free_disk_gib": {
+    "/data02": 289.87,
+    "/home": 0.25
+  },
+  "frozen_hash_mismatches": [],
+  "owned_smoke_server_pid_gone": true,
+  "pause_markers": [],
+  "cm009": {
+    "time": "2026-09-23T21:31:21.682037-05:00",
+    "gpu": {
+      "returncode": 0,
+      "stdout": "0, GPU-c7d96da5-a1ae-e1ed-de5d-03f35e550da2, 1, 0, 2\n1, GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 22251, 100, 0\n2, GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 21935, 3, 0\n3, GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 24531, 3, 0\n4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 22251, 16, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 21935, 3, 0\n6, GPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 24531, 89, 0\n7, GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 9101, 22, 0\n",
+      "stderr": ""
+    },
+    "compute": {
+      "returncode": 0,
+      "stdout": "1989821, GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 22244\n1989845, GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 21928\n1989818, GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 24524\n1989842, GPU-33861458-0994-99a7-7457-6fceb49c229c, 22244\n1989830, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 21928\n1989836, GPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 24524\n1998774, GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 9090\n",
+      "stderr": ""
+    },
+    "tmux": {
+      "returncode": 0,
+      "stdout": "ow-e2e-train-1\now-e2e-train-2\now-e2e-train-3\now-e2e-train-4\now-e2e-train-5\now-e2e-train-6\n",
+      "stderr": ""
+    }
+  },
+  "last_handover_attempts": [
+    {
+      "seed": 1101031,
+      "accepted": true,
+      "outcome": "accepted",
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "seed": 1101032,
+      "accepted": true,
+      "outcome": "accepted",
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "seed": 1101033,
+      "accepted": true,
+      "outcome": "accepted",
+      "exit_code": 0,
+      "error": null
+    }
+  ],
+  "judgment": "No new completion, failure or scientific result. Six training runs healthy with finite metrics and fresh logs; all remain before first scheduled4000-microstep checkpoint. Handover32/50 from33 attempts. Existing controller correctly waits; no duplicate jobs or extra experiments.",
+  "next_step": "Complete the remaining handover expert cohort and all nine fixed-budget native training runs. The three-task development simulator preflight has passed. Audit all150 fresh scenes, matched training streams and final12000-microstep checkpoints before the existing finite controller launches the complete paired5400-rollout matrix. This resolves whether offline representation accessibility improves native task success while preserving clean performance; no learned-policy benefit has been established.",
+  "completed_at": "2026-09-23T21:32:37.197519-05:00",
+  "public_retry_performed": false,
+  "resource_judgment": "Seven GPUs assigned to this study; active training GPUs and collector GPU have0 uncorrected volatileECC. cm009GPU0 remains excluded (2ECC). /data02 has289.87GiB free for existing artifacts; /home has0.25GiB, so preserve small metadata only and keep all training/checkpoints on/data02. No unrelated process touched."
+}

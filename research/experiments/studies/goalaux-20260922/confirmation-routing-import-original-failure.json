@@ -1,0 +1,8 @@
+{
+  "scope": "metadata-only routing check harness",
+  "error": "KeyError('O') inspecting torch.inference_mode wrapper globals",
+  "exit_code": 1,
+  "no_function_executed": true,
+  "identity_plain_function_already_checked": true,
+  "repair": "inspect.unwrap for decorated function; no pipeline source changed"
+}

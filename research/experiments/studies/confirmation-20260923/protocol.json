@@ -1,0 +1,91 @@
+{
+  "started_at": "2026-09-23T11:38:51.767900-05:00",
+  "deadline": "2026-09-23T15:38:51.767900-05:00",
+  "collection_deadline": "2026-09-23T14:38:51.767900-05:00",
+  "status": "frozen",
+  "authorization": "User: \u5141\u8bb8\u5ef6\u957f\u9884\u7b97 \u591a\u7528\u5361",
+  "prior_window_unchanged": true,
+  "max_concurrent_gpus": 4,
+  "max_gpu_hours": 16,
+  "gpu_strategy": "3 task-disjoint collectors and up to1 feature/parity worker; idle ECC-clean devices only",
+  "host_candidate": "cm009",
+  "task_order": [
+    "adjust_bottle",
+    "handover_block",
+    "place_object_basket"
+  ],
+  "new_seed_starts": {
+    "adjust_bottle": 900000,
+    "handover_block": 901000,
+    "place_object_basket": 902000
+  },
+  "accepted_per_task": 20,
+  "max_candidates_per_task": 40,
+  "source_draft": "/home/zifanz4/openwam-experiments/studies/rae-state-control-20260923/NEXT_CONFIRMATION_DRAFT.md",
+  "old56_unscored": true,
+  "old80_not_repeated": true,
+  "frozen_at": "2026-09-23T11:51:47.686124-05:00",
+  "primary_candidate": "L12_pca",
+  "primary_reference": "Wan48_native_scale",
+  "primary_condition": "noise0.10",
+  "co_primary": [
+    "first-close XY normalized MSE",
+    "short-state translation/gripper equal-group normalized MSE"
+  ],
+  "decision": "both task-stratified paired two-sided95 bootstrap absolute-difference intervals strictly below0",
+  "candidate_selection": "PCA48 selected using exposed prior60; those outcomes are not confirmation",
+  "bootstrap": {
+    "seed": 20260922,
+    "draws": 2000,
+    "unit": "scene",
+    "stratification": "20 scenes within each of3fixed tasks",
+    "SVAE": "average seed42/43/44 errors within scene before bootstrap"
+  },
+  "conditions": {
+    "clean": 1,
+    "noise0.10": 3,
+    "noise0.04": 3
+  },
+  "readouts": "frozen equal-noise goal/state coefficients; frozen original proprio-only control; zero refits",
+  "routes": [
+    "Wan48_native_scale",
+    "Wan48_per_token_layernorm",
+    "L12_raw",
+    "L12_pca",
+    "L12_svae42",
+    "L12_svae43",
+    "L12_svae44"
+  ],
+  "collection": "first20 native expert-plan-and-replay successes among first40consecutive seeds per task; raw failures retained; narrow previously established null-grasp annotation only; unclassified infrastructure failure stops task with no retry",
+  "completeness": "score only balanced60 with all3collector exits0, identity and hardware parity passed; incomplete cohort never scored; no replacement for short episode or missing firstclose label",
+  "frames": "12 unique linspace(0,n-33,12,dtype=int); target st+4 minus st XYZ and absolute st+4 grippers; n>=44 required",
+  "pixels": "cv2 IMREAD_COLOR preserving historical BGR byte interpretation; PIL bilinear320x384; Gaussian clipped0..255 then uint8 before native preprocessing",
+  "noise_seed": "20260922 + scene_seed*100000 + frame*10 + draw; same draws for sigma.10/.04 as prior frozen pipeline",
+  "goal": "initial head image, earliest gripper crossing >.5 to <=.5, left arm tie-break, XY endpose at crossing; not physical contact",
+  "mandatory_endpoints": [
+    "clean",
+    "translation",
+    "gripper",
+    "all3tasks",
+    "all7routes",
+    "proprio-only state"
+  ],
+  "gripper_rule": "no noninferiority margin; improvement only if whole paired95 interval below0; report uncertainty and all task regressions",
+  "hardware_parity": {
+    "training_frames": "first initial training frame per task, indices0/35/70",
+    "normalized_RMS_max": 0.05,
+    "normalized_coordinate_max": 0.5,
+    "normalization": "per-task training vector std clipped1e-6",
+    "fixed_before_new_data": true
+  },
+  "max_scene_seconds": 600,
+  "collection_cleanup_seconds": 30,
+  "limitations": [
+    "offline readouts only",
+    "no pixel decoder trained: not completeRAE",
+    "no policy/viewpoint/physical-contact gain",
+    "raw3072versuscompact192pooledinputs",
+    "pretraining not causally isolated",
+    "fixed known noise levels and tasks"
+  ]
+}

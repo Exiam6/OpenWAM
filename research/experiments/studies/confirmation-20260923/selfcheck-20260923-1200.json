@@ -1,0 +1,66 @@
+{
+  "time": "2026-09-23T12:03:32.837411-05:00",
+  "collectors": {
+    "adjust_bottle": {
+      "accepted": 11,
+      "attempts": 11,
+      "exit": null,
+      "log_tail": "adjust_bottle 900000 accepted 1\nadjust_bottle 900001 accepted 2\nadjust_bottle 900002 accepted 3\nadjust_bottle 900003 accepted 4\nadjust_bottle 900004 accepted 5\nadjust_bottle 900005 accepted 6\nadjust_bottle 900006 accepted 7\nadjust_bottle 900007 accepted 8\nadjust_bottle 900008 accepted 9\nadjust_bottle 900009 accepted 10\nadjust_bottle 900010 accepted 11\n",
+      "worker_exit_codes": [
+        0
+      ],
+      "outcomes": {
+        "accepted": 11
+      },
+      "last_accepted": 900010
+    },
+    "handover_block": {
+      "accepted": 10,
+      "attempts": 10,
+      "exit": null,
+      "log_tail": "handover_block 901000 accepted 1\nhandover_block 901001 accepted 2\nhandover_block 901002 accepted 3\nhandover_block 901003 accepted 4\nhandover_block 901004 accepted 5\nhandover_block 901005 accepted 6\nhandover_block 901006 accepted 7\nhandover_block 901007 accepted 8\nhandover_block 901008 accepted 9\nhandover_block 901009 accepted 10\n",
+      "worker_exit_codes": [
+        0
+      ],
+      "outcomes": {
+        "accepted": 10
+      },
+      "last_accepted": 901009
+    },
+    "place_object_basket": {
+      "accepted": 8,
+      "attempts": 14,
+      "exit": null,
+      "log_tail": "place_object_basket 902000 expert_infeasible 0\nplace_object_basket 902001 accepted 1\nplace_object_basket 902002 expert_infeasible 1\nplace_object_basket 902003 accepted 2\nplace_object_basket 902004 accepted 3\nplace_object_basket 902005 accepted 4\nplace_object_basket 902006 accepted 5\nplace_object_basket 902007 accepted 6\nplace_object_basket 902008 expert_infeasible 6\nplace_object_basket 902009 expert_infeasible 6\nplace_object_basket 902010 expert_infeasible 6\nplace_object_basket 902011 expert_infeasible 6\nplace_object_basket 902012 accepted 7\nplace_object_basket 902013 accepted 8\n",
+      "worker_exit_codes": [
+        0
+      ],
+      "outcomes": {
+        "expert_infeasible": 6,
+        "accepted": 8
+      },
+      "last_accepted": 902013
+    }
+  },
+  "resource-wait.json": {
+    "stage": "dispatching_ampere",
+    "host": "rainier",
+    "index": "4",
+    "uuid": "GPU-38557357-3f58-c864-2f53-8b14087b5e8c",
+    "time": "2026-09-23T12:03:27.424421-05:00"
+  },
+  "resource-wait-exit.json": {
+    "time": "2026-09-23T12:03:28.193785-05:00",
+    "stage": "ampere_attempt_finished",
+    "exit_code": 1
+  },
+  "feature_exit": {
+    "finished_at": "2026-09-23T12:03:28.139401-05:00",
+    "exit_code": 1
+  },
+  "feature_log_tail": "d by /data02/zifanz4/openwam-experiments/env/bin/python)\n/data02/zifanz4/openwam-experiments/env/bin/python: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.33' not found (required by /data02/zifanz4/openwam-experiments/env/bin/python)\n/data02/zifanz4/openwam-experiments/env/bin/python: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /data02/zifanz4/openwam-experiments/env/bin/python)\n/data02/zifanz4/openwam-experiments/env/bin/python: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /data02/zifanz4/openwam-experiments/env/bin/python)\n",
+  "has_result": false,
+  "feature_scenes": 0,
+  "frozen_protocol_code_intact": true,
+  "waiter_exists": false
+}

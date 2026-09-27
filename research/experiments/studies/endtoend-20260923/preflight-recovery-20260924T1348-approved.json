@@ -1,0 +1,9 @@
+{
+  "time": "2026-09-24T13:49:49.675681-05:00",
+  "explicit_user_approval": true,
+  "user_instruction": "continue",
+  "context": "User directly requested continue after the concrete three-seed44 recovery approval question, and repeated continue after13:45 timer. This authorizes the offered one-time recovery of all three zero-training preflight failures plus dependent controller. Timer messages alone were not treated as approval.",
+  "scope": "Same three untrained seeds and unchanged science/budgets; one same-model GPU resource placement change due to another user occupying GPU4. Original failure records archived; no replay of completed runs.",
+  "plan_sha256": "8620dad34dad2d9215667dd560bb38c70b747dd9d0b42a22e5ac7fd060dd1455",
+  "script_sha256": "0367cb889e39300634191f8f841e880df84e5210879c7815a22f28395d886b8e"
+}

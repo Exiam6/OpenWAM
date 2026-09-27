@@ -1,0 +1,61 @@
+{
+  "checked_at": "2026-09-23T03:15:52.651617-05:00",
+  "trigger": "2026-09-23T03:15:01.920419-05:00",
+  "terminal": {
+    "rae-noise-control-20260922": {
+      "exit": {
+        "finished_at": "2026-09-23T00:05:20.246213-05:00",
+        "exit_code": 0
+      },
+      "saved_audit_passed": true,
+      "final_log_complete": true,
+      "result_completed_at": "2026-09-23T00:05:19.333558-05:00",
+      "matches_archive": {
+        "result.json": true,
+        "audit.json": true,
+        "exit.json": true,
+        "protocol.json": true
+      }
+    },
+    "rae-state-control-20260923": {
+      "exit": {
+        "finished_at": "2026-09-23T00:24:31.313997-05:00",
+        "exit_code": 0
+      },
+      "saved_audit_passed": true,
+      "final_log_complete": true,
+      "result_completed_at": "2026-09-23T00:24:29.856138-05:00",
+      "matches_archive": {
+        "result.json": true,
+        "audit.json": true,
+        "exit.json": true,
+        "protocol.json": true
+      }
+    }
+  },
+  "completed_at": "2026-09-23T03:16:31.678717-05:00",
+  "window_status": "closed_without_extension",
+  "original_deadline": "2026-09-23T01:15:12-05:00",
+  "no_pause_markers": true,
+  "scientific_state_changed": false,
+  "resource": {
+    "host": "glacier",
+    "gpu": "GPU-d13929da-086d-1be5-6414-dbf6aeded08e",
+    "memory_MiB": 9479,
+    "utilization_percent": 20,
+    "uncorrected_volatile_ECC": 0,
+    "compute_pid": 4184055,
+    "compute_memory_MiB": 9466,
+    "same_other_user_process_as_prior_checks": true,
+    "owned_experiment_processes": [],
+    "available_for_experiment": false
+  },
+  "next_step": "The original12hour window ended2026-09-23T01:15:12-05:00. No new experiment, training, collection, inference, confirmation scoring or automatic budget extension is authorized by later timer messages. Preserve completed and negative results, keep expiredgoalaux56/60 unscored, and do not repeatold80. The next scientific uncertainty is whether compact-feature goal/translation gains and gripper tradeoffs reproduce on new scenes. The prepared independent60scene draft estimates about3hours with one idle ECC-cleanGPU and requires a separately fixed, newly authorized experiment budget before implementation/launch. FullRAE decoder/world-action training and policy gains remain untested. Subsequent selfchecks should reconcile terminal state quietly unless a material change occurs.",
+  "reasoning": "The next uncertainty remains independent-scene generalization and gripper preservation. Unchanged exposed-scene results cannot settle it; keep the new60scene draft unlaunched until a new fixed budget is authorized.",
+  "new_experiments": 0,
+  "completed_audits_repeated": false,
+  "publication_attempted": false,
+  "last_actual_publication_lookup": "2026-09-23T01:17:01-05:00",
+  "last_publication_error": "SitesConnectorError: Sites project not found",
+  "notification": "none; closed state unchanged"
+}

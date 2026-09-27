@@ -1,0 +1,9 @@
+{
+  "completed_at": "2026-09-22T15:17:51.390099-05:00",
+  "stages": {
+    "describe_confirmation.py": 1,
+    "score_wrist.py": 0,
+    "score_initial_goal.py": 0
+  },
+  "exit_code": 1
+}

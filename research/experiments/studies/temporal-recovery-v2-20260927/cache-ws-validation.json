@@ -1,0 +1,19 @@
+{
+  "time": "2026-09-27T12:29:42.669749-05:00",
+  "cache_checks": {
+    "mean": {
+      "native_ws33prompt_gate_passed": true,
+      "post_eviction_reference_action_exact": true,
+      "max_cache_entries": 32,
+      "server_log_sha256": "4c04bca3b94fa5cabe5cd05a05bdee2cef34ca53df115309f01f67fceef355a8"
+    },
+    "learned": {
+      "native_ws33prompt_gate_passed": true,
+      "post_eviction_reference_action_exact": true,
+      "max_cache_entries": 32,
+      "server_log_sha256": "079bfb92f3f9f6ab3e49eaf482204ec1ee2c6ed88e7c77597ff46e4c1460b452"
+    }
+  },
+  "original_failure_records_retained": true,
+  "data_free_gib": 136.5068359375
+}

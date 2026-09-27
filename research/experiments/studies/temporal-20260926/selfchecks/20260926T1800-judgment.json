@@ -1,0 +1,22 @@
+{
+  "trigger_time": "2026-09-26T18:00:01.340786-05:00",
+  "started_at": "2026-09-26T18:09:26.932976-05:00",
+  "time": "2026-09-26T18:12:10.182248-05:00",
+  "status": "healthy_unchanged_two_training_lanes",
+  "steps_seed42": {
+    "mean": 377,
+    "learned": 331
+  },
+  "matched_batch_prefix_checked": 311,
+  "finite_losses": true,
+  "new_frozen_files_unchanged": 224,
+  "old_frozen_files_unchanged": 43,
+  "old_queues_waiting": 6,
+  "new_rollouts": 0,
+  "old_rollouts": 0,
+  "next_step": "Continue the two existing finite lanes to4000microsteps per seed and all six matched continuations. At completion verify identical starting checkpoints and complete paired batch streams, then native development-only simulator gates and1080 prespecified rollouts. This resolves policy-success benefit after equal adaptation; training losses alone cannot answer it. Keep supervising prior cm009 queues under their unchanged Sep28 cutoff.",
+  "public_update": "No substantive change since verified version29 publication18:06; no deployment attempted.",
+  "deadline_extended": false,
+  "new_jobs_started": false,
+  "new_timers": false
+}

@@ -1,0 +1,125 @@
+{
+  "time": "2026-09-23T21:01:10.198384-05:00",
+  "trigger": "2026-09-23T21:00:01.086242-05:00",
+  "training": {
+    "pca-seed42": {
+      "opt_step": 1459,
+      "metric_age_s": 1.6297049522399902,
+      "finite": true,
+      "exit": null
+    },
+    "pca-seed43": {
+      "opt_step": 1445,
+      "metric_age_s": 1.0336594581604004,
+      "finite": true,
+      "exit": null
+    },
+    "pca-seed44": {
+      "opt_step": 0,
+      "metric_age_s": null,
+      "finite": true,
+      "exit": null
+    },
+    "svae-seed42": {
+      "opt_step": 1444,
+      "metric_age_s": 0.11685609817504883,
+      "finite": true,
+      "exit": null
+    },
+    "svae-seed43": {
+      "opt_step": 1467,
+      "metric_age_s": 0.4738140106201172,
+      "finite": true,
+      "exit": null
+    },
+    "svae-seed44": {
+      "opt_step": 0,
+      "metric_age_s": null,
+      "finite": true,
+      "exit": null
+    },
+    "wan-seed42": {
+      "opt_step": 1315,
+      "metric_age_s": 0.060417890548706055,
+      "finite": true,
+      "exit": null
+    },
+    "wan-seed43": {
+      "opt_step": 1360,
+      "metric_age_s": 2.024838447570801,
+      "finite": true,
+      "exit": null
+    },
+    "wan-seed44": {
+      "opt_step": 0,
+      "metric_age_s": null,
+      "finite": true,
+      "exit": null
+    }
+  },
+  "scenes": {
+    "adjust_bottle": {
+      "accepted": 50,
+      "attempted": 63,
+      "updated": "2026-09-23T20:39:16.259497-05:00",
+      "complete": true,
+      "last_outcome": "accepted"
+    },
+    "handover_block": {
+      "accepted": 14,
+      "attempted": 14,
+      "updated": "2026-09-23T21:00:49.733539-05:00",
+      "complete": false,
+      "last_outcome": "accepted"
+    },
+    "place_object_basket": {
+      "accepted": 49,
+      "attempted": 81,
+      "updated": "2026-09-23T21:00:58.275376-05:00",
+      "complete": false,
+      "last_outcome": "accepted"
+    }
+  },
+  "exits": {
+    "collection-slots/5": null,
+    "collection-slots/7": null,
+    "simulation-preflight": null,
+    "pipeline": null
+  },
+  "frozen_mismatches": [],
+  "pipeline": {
+    "time": "2026-09-23T21:00:46.658751-05:00",
+    "stage": "waiting_for_all_training_collection_smoke",
+    "all_ready": false
+  },
+  "free_gib": 290.9931640625,
+  "cm001_gpu": "0, GPU-c83b7d25-753e-2eae-f13b-8f9c3df9fa4b, 32223 MiB, 49 %, 0\n1, GPU-67b700c2-eb7a-93aa-28dd-57e8b2711926, 37991 MiB, 95 %, 0\n2, GPU-025b7fc9-8f25-5467-5c28-8e59884ab6d3, 31989 MiB, 86 %, 0\n3, GPU-bba13bfa-9dd6-0956-0e4e-122950cd69fe, 26 MiB, 0 %, 0\n4, GPU-e7aef4c0-2628-b4f8-34f4-579d62b7feb6, 5 MiB, 0 %, 0\n5, GPU-1758045c-5a5e-3661-bb58-a786fa745a17, 873 MiB, 8 %, 0\n6, GPU-91a9a93b-b386-82f0-3009-88cc9bb79d06, 1 MiB, 0 %, 0\n7, GPU-3624eff9-444b-b72c-e32e-2bae7acbb8cb, 657 MiB, 3 %, 0\n",
+  "tmux": "exp\now-e2e-pipeline\now-e2e-scenes-5\now-e2e-scenes-7\now-e2e-smoke\n",
+  "decision": "Healthy ongoing work; six fresh finite-loss training jobs, three seed44jobs queued, expert collectors progressing. No new completed/failed stage or learned-policy outcome at last inspection.",
+  "next_step": "Keep the unchanged first50-of-at-most100 expert-scene rule and training budgets. Basket remains49/50 at83attempts, so its prequeued development simulator gate has not acquired GPU7 yet. Upon collection completion, inspect that gate for native action/reset reproducibility, true head-camera rotation, scene reconstruction and contact API correctness; these checks separate evaluation implementation errors from representation-dependent control effects. No learned-policy outcomes may start before all150scenes, all9trainings and the existing integrity gates pass.",
+  "latest_basket_observation": {
+    "accepted": 49,
+    "attempted": 83,
+    "time": "2026-09-23T21:02:23.338272-05:00"
+  },
+  "owned_gpu_slots": {
+    "cm009": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "cm001": [
+      5,
+      7
+    ]
+  },
+  "used_gpu_uncorrected_ecc": 0,
+  "excluded_gpu": "cm009GPU0 ECC2 unchanged",
+  "old_layers_deadline_unchanged": true,
+  "new_launches": 0,
+  "publication": "No new substantive result; existing404 failure retained, localHTML refreshed.",
+  "notification": "quiet"
+}

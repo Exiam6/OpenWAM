@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-09-22T23:39:22.243741-05:00",
+  "status": "prospective_training_only_interface_preflight",
+  "deadline": "2026-09-23T01:15:12-05:00",
+  "original_deadline_unchanged": true,
+  "max_gpu_seconds": 600,
+  "max_gpu_count": 1,
+  "max_cpu_threads": 4,
+  "max_new_bytes": 3200000000,
+  "asset": {
+    "repo": "Wan-AI/Wan2.2-TI2V-5B",
+    "revision": "921dbaf3f1674a56f47e83fb80a34bac8a8f203e",
+    "filename": "Wan2.2_VAE.pth",
+    "size": 2818839170,
+    "sha256": "20eb789667fa5e60e7516bf509512f6cb61f01b0aa0695eadaea930c13892b36"
+  },
+  "fixture": {
+    "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/transfer/parity-fixture.pt",
+    "sha256": "a89f7193dcd381362be880c2bec146751a42e244c11045b286f71e7c62f5131d",
+    "rows": "all eight existing training fixture rows; same episode, not eight independent scenes",
+    "images": "stored encoded current frames only; no new corpus or outcome labels"
+  },
+  "preprocessing": {
+    "decoder": "cv2.imdecode IMREAD_COLOR; preserve existing native encoded-image convention without channel swap",
+    "resize": [
+      320,
+      384
+    ],
+    "resample": "PIL bilinear",
+    "native_pixel_range": [
+      -1,
+      1
+    ],
+    "dtype": "bfloat16"
+  },
+  "tests": [
+    "strict native model weight load; expected z48 spatial16 temporal4 causal",
+    "all eight single training frames: finite 1x48x1x24x20 latents; reuse stored DINO geometry only",
+    "first fixture frame: 9 repeats -> 1x48x3x24x20",
+    "same first frame, next eight frames pixel-inverted: first latent max absolute difference <=1e-6, future latent must change",
+    "single-frame vs repeated-video first latent max absolute difference <=1e-6",
+    "same exact original single-frame after other encodes: max absolute difference <=1e-6 (cache reset)",
+    "one native non-tiled single-frame pixel decode: finite 1x3x1x384x320, diagnostic MSE only",
+    "record per-operation wall time, peak allocated memory, native and per-token-LN pooled vector norms, no label readouts"
+  ],
+  "resource_gate": {
+    "candidate_host": "glacier",
+    "candidate_uuid": "GPU-d13929da-086d-1be5-6414-dbf6aeded08e",
+    "memory_used_MiB_below": 100,
+    "utilization_percent": 0,
+    "volatile_uncorrected_ecc": 0,
+    "no_compute_processes": true,
+    "cooperative_lock": true,
+    "recheck_before_launch": true
+  },
+  "exclusions": [
+    "no training",
+    "no heldout scoring",
+    "no DINO re-extraction",
+    "no expired goalaux cohort",
+    "no old80 rerun",
+    "no RAE or policy benefit claim"
+  ],
+  "failure_policy": "retain raw failures, do not silently relax thresholds; any engineering continuation separately recorded"
+}

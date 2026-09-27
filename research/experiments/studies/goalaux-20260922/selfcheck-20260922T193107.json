@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-09-22T19:31:07.946252-05:00",
+  "counts": {
+    "adjust_bottle": 20,
+    "handover_block": 20,
+    "place_object_basket": 16
+  },
+  "distinct_candidates_started": 70,
+  "fully_completed_candidates": 69,
+  "outcomes": {
+    "accepted": 56,
+    "unstable_scene": 3,
+    "expert_infeasible": 10,
+    "infrastructure_failure": 1
+  },
+  "exits": {
+    "fresh-v4": "1",
+    "confirmation": "1",
+    "confirmation-v2": "1"
+  },
+  "terminal_candidate": {
+    "task": "place_object_basket",
+    "seed": 802024,
+    "accepted": false,
+    "outcome": "infrastructure_failure",
+    "error": "worker produced no result",
+    "exit_code": 124
+  },
+  "terminal_log_tail": "ect_basket': 13}\nplace_object_basket 802021 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 14}\nplace_object_basket 802022 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 15}\nplace_object_basket 802023 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 16}\nplace_object_basket 802024 infrastructure_failure {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 16}\nTraceback (most recent call last):\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation_v4.py\", line 43, in <module>\n    else:parent()\n  File \"/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation_v4.py\", line 37, in parent\n    if code or res['outcome']=='infrastructure_failure':raise RuntimeError('Unclassified failure retained; no retry')\nRuntimeError: Unclassified failure retained; no retry\n",
+  "archived_metadata_files_compared": 49,
+  "archived_metadata_mismatches": [
+    "fresh-v4/place_object_basket/seed-802018/worker.log",
+    "fresh-v4/place_object_basket/seed-802017/worker.log",
+    "fresh-v4/place_object_basket/seed-802019/worker.log",
+    "fresh-v4/place_object_basket/seed-802023/worker.log",
+    "fresh-v4/place_object_basket/seed-802021/worker.log",
+    "fresh-v4/place_object_basket/seed-802022/worker.log",
+    "fresh-v4/place_object_basket/seed-802016/worker.log"
+  ],
+  "live_recorded_pids": [],
+  "goalaux_tmux": [],
+  "fresh_score_summaries": [],
+  "new_confirmation_v3_exists": false,
+  "gpu": {
+    "query_exit": 0,
+    "memory_utilization_ecc": "829, 0, 0",
+    "compute_apps": [
+      "GPU-dee01971-fb13-ae53-0d7f-ebe6c6149087, 1511221, 822"
+    ]
+  },
+  "paused_markers": []
+}

@@ -1,0 +1,219 @@
+{
+  "attempts": [
+    {
+      "task": "adjust_bottle",
+      "seed": 800000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:18:49.829724-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800000/data/episode0.hdf5",
+      "hdf5_sha256": "391ba130006155520e86d1ca9cdf8843b6347fe4876edefcaa31ab3c6cd6cc98",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 99.35201554000378,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:20:31.473760-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 137,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800001/data/episode0.hdf5",
+      "hdf5_sha256": "443c5a51104178198ab58009d65f5ee04188455e69b49b89ba833e2c70946a3a",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 94.57959485985339,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:22:09.376533-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 143,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800002/data/episode0.hdf5",
+      "hdf5_sha256": "c10962f2b994bbf15a373c97bd7e78e02219d8513601fbc17d921d3efb84fca5",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 90.93378847464919,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:23:43.552435-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800003/data/episode0.hdf5",
+      "hdf5_sha256": "83a6a5cba7ece598aa293089a633d51445dc78be86ed1808831da8abe82d5ee1",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 89.82566259242594,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800004,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:25:16.834139-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 145,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800004/data/episode0.hdf5",
+      "hdf5_sha256": "9d27c7f4f92c2f51e6db326eaf71e58bb3ee4ce9e1479178bddb89e870455937",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 87.57276750542223,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800005,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:26:47.216504-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 135,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800005/data/episode0.hdf5",
+      "hdf5_sha256": "ed77968b8b0708adac28d5469ab1795cebda27c22185e6bb00209bc22d5728c5",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 91.02005337923765,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800006,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:28:20.796139-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800006/data/episode0.hdf5",
+      "hdf5_sha256": "58ca21ccd0dfb48663ad16d93bc2a076230175ab77a895d228590713bb0f0183",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 93.0050580650568,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800007,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-22T17:29:56.245382-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/adjust_bottle/seed-800007/data/episode0.hdf5",
+      "hdf5_sha256": "029f0ce96e6b2b578dde5946f2b50c61c6100cea8fda4bbcccf5051f0ebc4326",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 92.53433700837195,
+      "exit_code": 0
+    }
+  ],
+  "accepted_counts": {
+    "adjust_bottle": 8,
+    "handover_block": 0,
+    "place_object_basket": 0
+  },
+  "elapsed_seconds": 761.1072120964527,
+  "collection_deadline": "2026-09-22T19:15:55.548938-05:00"
+}

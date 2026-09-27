@@ -1,0 +1,17 @@
+{
+  "time": "2026-09-24T13:55:04.768403-05:00",
+  "plan": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/preflight-recovery-20260924T1348.json",
+  "execution_archive": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/preflight-20260924T1348",
+  "launched": [
+    "ow-recovery-pca-seed44",
+    "ow-recovery-svae-seed44",
+    "ow-recovery-wan-seed44",
+    "ow-e2e-pipeline"
+  ],
+  "three_runs_have_finite_metrics": true,
+  "paired_prefix_rows": 90,
+  "paired_prefix_equal": true,
+  "common_initialization_equal": true,
+  "verified_original_files": 39,
+  "original_deadlines_unchanged": true
+}

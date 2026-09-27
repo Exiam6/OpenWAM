@@ -1,0 +1,29 @@
+{
+  "time": "2026-09-23T19:05:40.525521-05:00",
+  "routes": {
+    "pca": {
+      "exit": null,
+      "steps": 64,
+      "optimizer_steps": 16,
+      "median_seconds_per_microstep": 1.8619017135351896,
+      "peak_allocated_gb": 18.103414784,
+      "nonzero_optimizer_gradients": 16
+    },
+    "svae": {
+      "exit": null,
+      "steps": 64,
+      "optimizer_steps": 16,
+      "median_seconds_per_microstep": 1.8523357985541224,
+      "peak_allocated_gb": 18.17031936,
+      "nonzero_optimizer_gradients": 16
+    },
+    "wan": {
+      "exit": null,
+      "steps": 64,
+      "optimizer_steps": 16,
+      "median_seconds_per_microstep": 1.9541112193837762,
+      "peak_allocated_gb": 19.348192768,
+      "nonzero_optimizer_gradients": 16
+    }
+  }
+}

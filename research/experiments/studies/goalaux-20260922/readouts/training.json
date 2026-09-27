@@ -1,0 +1,290 @@
+{
+  "state/adjust_bottle/reconstruction_only_svae42": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.005199897568672895,
+    "output_dimensions": 8
+  },
+  "goal/adjust_bottle/reconstruction_only_svae42": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 1.429286918853967e-13,
+    "output_dimensions": 2
+  },
+  "state/adjust_bottle/reconstruction_only_svae43": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.005891009233891964,
+    "output_dimensions": 8
+  },
+  "goal/adjust_bottle/reconstruction_only_svae43": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 7.025852339151428e-14,
+    "output_dimensions": 2
+  },
+  "state/adjust_bottle/reconstruction_only_svae44": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.006810758262872696,
+    "output_dimensions": 8
+  },
+  "goal/adjust_bottle/reconstruction_only_svae44": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 9.847683649436001e-14,
+    "output_dimensions": 2
+  },
+  "state/adjust_bottle/goal_auxiliary_svae42": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.006335130892693996,
+    "output_dimensions": 8
+  },
+  "goal/adjust_bottle/goal_auxiliary_svae42": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 4.141701087992389e-14,
+    "output_dimensions": 2
+  },
+  "state/adjust_bottle/goal_auxiliary_svae43": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.005489205475896597,
+    "output_dimensions": 8
+  },
+  "goal/adjust_bottle/goal_auxiliary_svae43": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 4.652143470798564e-14,
+    "output_dimensions": 2
+  },
+  "state/adjust_bottle/goal_auxiliary_svae44": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.0075873713940382,
+    "output_dimensions": 8
+  },
+  "goal/adjust_bottle/goal_auxiliary_svae44": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 6.970167715572573e-14,
+    "output_dimensions": 2
+  },
+  "state/handover_block/reconstruction_only_svae42": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.0028083031065762043,
+    "output_dimensions": 8
+  },
+  "goal/handover_block/reconstruction_only_svae42": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 8.100413243818105e-14,
+    "output_dimensions": 2
+  },
+  "state/handover_block/reconstruction_only_svae43": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.003335915971547365,
+    "output_dimensions": 8
+  },
+  "goal/handover_block/reconstruction_only_svae43": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 9.931370504624726e-14,
+    "output_dimensions": 2
+  },
+  "state/handover_block/reconstruction_only_svae44": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.0028311857022345066,
+    "output_dimensions": 8
+  },
+  "goal/handover_block/reconstruction_only_svae44": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 9.215927175044991e-14,
+    "output_dimensions": 2
+  },
+  "state/handover_block/goal_auxiliary_svae42": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.0027477990370243788,
+    "output_dimensions": 8
+  },
+  "goal/handover_block/goal_auxiliary_svae42": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 6.046565700391915e-14,
+    "output_dimensions": 2
+  },
+  "state/handover_block/goal_auxiliary_svae43": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.0038028983399271965,
+    "output_dimensions": 8
+  },
+  "goal/handover_block/goal_auxiliary_svae43": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 4.141817639725931e-14,
+    "output_dimensions": 2
+  },
+  "state/handover_block/goal_auxiliary_svae44": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.0030526905320584774,
+    "output_dimensions": 8
+  },
+  "goal/handover_block/goal_auxiliary_svae44": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 5.896663908024069e-14,
+    "output_dimensions": 2
+  },
+  "state/place_object_basket/reconstruction_only_svae42": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.004220134578645229,
+    "output_dimensions": 8
+  },
+  "goal/place_object_basket/reconstruction_only_svae42": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 5.774233088201575e-14,
+    "output_dimensions": 2
+  },
+  "state/place_object_basket/reconstruction_only_svae43": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.0032197306863963604,
+    "output_dimensions": 8
+  },
+  "goal/place_object_basket/reconstruction_only_svae43": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 7.461425140936617e-14,
+    "output_dimensions": 2
+  },
+  "state/place_object_basket/reconstruction_only_svae44": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.003647742560133338,
+    "output_dimensions": 8
+  },
+  "goal/place_object_basket/reconstruction_only_svae44": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 1.186289564844567e-13,
+    "output_dimensions": 2
+  },
+  "state/place_object_basket/goal_auxiliary_svae42": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.004277653992176056,
+    "output_dimensions": 8
+  },
+  "goal/place_object_basket/goal_auxiliary_svae42": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 4.85497059221629e-14,
+    "output_dimensions": 2
+  },
+  "state/place_object_basket/goal_auxiliary_svae43": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.00396597059443593,
+    "output_dimensions": 8
+  },
+  "goal/place_object_basket/goal_auxiliary_svae43": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 8.680675536026916e-14,
+    "output_dimensions": 2
+  },
+  "state/place_object_basket/goal_auxiliary_svae44": {
+    "train_examples": 420,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 0.0037043688353151083,
+    "output_dimensions": 8
+  },
+  "goal/place_object_basket/goal_auxiliary_svae44": {
+    "train_examples": 35,
+    "train_episodes": 35,
+    "seed": 42,
+    "steps": 500,
+    "last_training_batch_loss": 5.3781198244839956e-14,
+    "output_dimensions": 2
+  }
+}

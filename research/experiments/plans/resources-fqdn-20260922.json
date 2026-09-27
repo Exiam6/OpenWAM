@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-09-22T01:22:54.367238-05:00",
+  "snapshot_only_no_reservation": true,
+  "nodes": [
+    {
+      "host": "cm008",
+      "exit_code": 0,
+      "output": "0, GPU-f4358e67-5d2d-875e-4d4d-d5498e241ea6, 11269 MiB, 30 %\n1, GPU-398f75e1-9c76-7919-fd6d-ef871167e061, 11233 MiB, 25 %\n2, GPU-336bd8f1-0708-a24e-ff75-e358f6485f37, 24979 MiB, 54 %\n3, GPU-bed9a26b-8f1c-4ae3-093b-b90520b09798, 14237 MiB, 47 %\n4, GPU-b751c9b7-3cb7-42c7-1f3a-746e08a19d12, 23629 MiB, 47 %\n5, GPU-65bc3a35-16ee-3e23-c7c5-865d27f67e5e, 10661 MiB, 49 %\n6, GPU-a050719f-ae33-2953-9608-b83ff0d54a83, 15399 MiB, 0 %\n7, GPU-02fe99d4-84dd-ef97-02b9-0639645b795e, 27785 MiB, 89 %",
+      "error": ""
+    },
+    {
+      "host": "cm009",
+      "exit_code": 0,
+      "output": "0, GPU-c7d96da5-a1ae-e1ed-de5d-03f35e550da2, 1 MiB, 0 %\n1, GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 33259 MiB, 100 %\n2, GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 33341 MiB, 100 %\n3, GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 32421 MiB, 98 %\n4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 32479 MiB, 96 %\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 32733 MiB, 98 %\n6, GPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 32457 MiB, 98 %\n7, GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 31737 MiB, 98 %",
+      "error": ""
+    },
+    {
+      "host": "cm002",
+      "exit_code": 0,
+      "output": "0, GPU-b5dd9913-a939-d3a1-c593-e11140a0e8aa, 1 MiB, 0 %\n1, GPU-baccfb74-a28b-2d45-2786-317e766c9339, 14233 MiB, 30 %\n2, GPU-293d1d4d-595d-ea7d-f700-8da0caf03a25, 11815 MiB, 67 %\n3, GPU-aae9d71e-4617-ea0c-78a6-0af22f0ba2ff, 17689 MiB, 93 %\n4, GPU-6b7d2c65-3699-a6a6-4917-a81bc9aa5e36, 20911 MiB, 67 %\n5, GPU-dee01971-fb13-ae53-0d7f-ebe6c6149087, 1 MiB, 0 %\n6, GPU-e792825b-8c06-dd08-20ad-a2076df1bf01, 20011 MiB, 68 %\n7, GPU-0046b346-c9aa-472e-bd54-b10f854e71e5, 17747 MiB, 57 %",
+      "error": ""
+    },
+    {
+      "host": "cm003",
+      "exit_code": 0,
+      "output": "0, GPU-ac4d58b9-8bc7-113e-e6a5-b4c6fb7b3e15, 1 MiB, 0 %\n1, GPU-5995af33-aa32-2a26-3fea-14e62f359366, 19495 MiB, 95 %\n2, GPU-84d5f519-c711-fd30-b1c5-c320f64c3faf, 14291 MiB, 41 %\n3, GPU-8808a2cc-0a31-638c-22bb-acfa6747014e, 18317 MiB, 82 %\n4, GPU-265d5895-74a3-0191-3c9a-4b26b02c8240, 29685 MiB, 96 %\n5, GPU-b718bc09-abe8-62a7-2b59-aefc77f3f3d3, 12551 MiB, 51 %\n6, GPU-d82fb066-4356-f6be-7d96-ccd5b47641a0, 1 MiB, 0 %\n7, GPU-f21c1cd0-1808-bb7a-ffbe-24b05116e358, 12483 MiB, 54 %",
+      "error": ""
+    },
+    {
+      "host": "cm004",
+      "exit_code": 0,
+      "output": "0, GPU-0c486005-5f03-f4da-5f3a-e67def845364, 8502 MiB, 0 %\n1, GPU-153010b4-4e67-76cd-cb59-97d9cff485f0, 1 MiB, 0 %\n2, GPU-6f96255c-1ebf-3a98-3d54-abe4f2a7e215, 25695 MiB, 90 %\n3, GPU-42f30a74-c598-2ed0-cd99-7c06ed74f6f2, 11 MiB, 0 %\n4, GPU-07759cd8-0592-f9a9-67ca-e614bf8ac49b, 1 MiB, 0 %\n5, GPU-ff861b56-3ba7-30fd-1884-7ac30195dcac, 25695 MiB, 57 %\n6, GPU-b7810ae4-3de5-3c38-1f18-761be83e754a, 12141 MiB, 66 %\n7, GPU-496b3517-da10-c1bd-ceec-99839861a3d9, 1 MiB, 0 %",
+      "error": ""
+    },
+    {
+      "host": "cm005",
+      "exit_code": 0,
+      "output": "0, GPU-d5dc6850-099b-e2da-8b07-a438cb854fdd, 1 MiB, 0 %\n1, GPU-8b2a4ee6-6568-8786-8c6e-50cb2b8e579e, 1 MiB, 0 %\n2, GPU-6a6672af-1a61-c409-2ea4-3a1d2d74cb74, 12483 MiB, 38 %\n3, GPU-edb34472-fb2d-e177-dcf5-4cb2e70437c7, 14231 MiB, 42 %\n4, GPU-a5e82540-76de-23ed-7a72-388013f97f2c, 12495 MiB, 75 %\n5, GPU-d3fa7812-ea7c-c309-abe5-014510600ecb, 1 MiB, 0 %\n6, GPU-5905ba8f-352f-bca1-0271-c1ad812a3504, 12679 MiB, 42 %\n7, GPU-204b0944-8ed5-7d26-f598-f2c34c1a5ae2, 3587 MiB, 27 %",
+      "error": ""
+    },
+    {
+      "host": "cm006",
+      "exit_code": 0,
+      "output": "0, GPU-56da2cc3-8cdf-dcc4-f3ac-903b764b5c29, 3 MiB, 0 %\n1, GPU-45d9d2c0-17a8-5b0c-695c-c68dd97cb5b0, 3 MiB, 0 %\n2, GPU-79d36628-7dbe-34b7-b3e4-3c332c385a6b, 14347 MiB, 30 %\n3, GPU-d5465c36-a023-3d2a-a522-2bc978e4adf8, 2 MiB, 0 %\n4, GPU-59bcfe51-74a3-7e6e-ef86-6fa2ec6d5400, 24257 MiB, 83 %\n5, GPU-b7de9dec-3c3e-7be2-0c17-dc05f6486294, 16341 MiB, 0 %\n6, GPU-09c21ec1-c50b-516c-1a43-59456040d9e3, 1 MiB, 0 %\n7, GPU-d22a83f3-f998-12b4-c692-13b4bdaae1bc, 3871 MiB, 56 %",
+      "error": ""
+    },
+    {
+      "host": "cm007",
+      "exit_code": 0,
+      "output": "0, GPU-1fcb5f57-e8ca-2cfc-d531-480f82e5939e, 1 MiB, 0 %\n1, GPU-1e67b9fa-0125-7466-263a-81ded0d59a79, 4533 MiB, 41 %\n2, GPU-a9e205e9-dcb3-19a1-5a34-ee8e1056fe96, 12747 MiB, 53 %\n3, GPU-9df04194-40a5-596f-4d9e-0e7ab68185c0, 1 MiB, 0 %\n4, GPU-c2824ff6-3f3d-f1fe-dafc-45cc208805e1, 11853 MiB, 82 %\n5, GPU-a778817b-6e28-cbcd-289c-fc1bf8d9f1dd, 27423 MiB, 58 %\n6, GPU-5c57c1c0-549a-186f-b8ac-6cbbd88e4c59, 1 MiB, 0 %\n7, GPU-2c169f5a-c67c-338e-f389-909ee43f8b8c, 12139 MiB, 88 %",
+      "error": ""
+    },
+    {
+      "host": "cm010",
+      "exit_code": 0,
+      "output": "0, GPU-df787764-f71d-172a-7a92-2cc526d87114, 1 MiB, 0 %\n1, GPU-e7fb20cc-f018-dfb4-9e31-c58731fe6e81, 11211 MiB, 28 %\n2, GPU-d6e3da77-8025-0450-ae4a-c67b79de0a67, 18497 MiB, 0 %\n3, GPU-31bed8ba-db02-7015-b75e-f26d69de78be, 21089 MiB, 63 %\n4, GPU-2186dde0-5bec-7124-4fcc-187c7ffff33d, 4473 MiB, 33 %\n5, GPU-70b809ce-2a18-7d26-2b7a-f2fc30fd431a, 1 MiB, 0 %\n6, GPU-cee7971b-c5cf-9951-260c-903ef66f6c2b, 1 MiB, 0 %",
+      "error": ""
+    }
+  ]
+}

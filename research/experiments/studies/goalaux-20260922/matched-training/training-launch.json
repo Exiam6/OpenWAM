@@ -1,0 +1,12 @@
+{
+  "started_at": "2026-09-22T16:28:20.572513-05:00",
+  "fixed_study_deadline": "2026-09-23T01:15:12-05:00",
+  "wall_seconds_cap": 1800,
+  "host": "cm002",
+  "gpu_uuid": "GPU-dee01971-fb13-ae53-0d7f-ebe6c6149087",
+  "prelaunch_gpu_state": "1, 0, 0",
+  "cpu_threads": 4,
+  "models": 6,
+  "steps_each": 2000,
+  "policy_rollouts": 0
+}

@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "seeds": {
+    "42": {
+      "mean": {
+        "initial": "4cbe7625f38a85d9d18c8340b469f746ebe7a3015df7afd23204504ad2f696a7",
+        "batch_stream_sha256": "7194c3661eb08cb2c8b587d2f39415c384c803a1389f73e1c6c4ac8e221fef07",
+        "checkpoint": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed42/output/2026-09-26_17-56-53/checkpoint_step_4000.safetensors",
+        "checkpoint_sha256": "1c6902b117ee195e93c89b2d93c9a05312f9da3a61bd6177b4d8337fa0008e83"
+      },
+      "learned": {
+        "initial": "4cbe7625f38a85d9d18c8340b469f746ebe7a3015df7afd23204504ad2f696a7",
+        "batch_stream_sha256": "7194c3661eb08cb2c8b587d2f39415c384c803a1389f73e1c6c4ac8e221fef07",
+        "checkpoint": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed42/output/2026-09-26_17-58-29/checkpoint_step_4000.safetensors",
+        "checkpoint_sha256": "c3352dec7af390cc023e269d668cdefacf3f922b989e36308035d1cbcb4873fb"
+      }
+    },
+    "43": {
+      "mean": {
+        "initial": "1424a145c1a6bae8b945705540436d6f4a0680dd88caca16a414f7563e3eccda",
+        "batch_stream_sha256": "da03c96f76920d7eb6736278d6a7743d7f46c23f90204063cf16bc3f86c4fa0b",
+        "checkpoint": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed43/output/2026-09-26_20-35-15/checkpoint_step_4000.safetensors",
+        "checkpoint_sha256": "c76ff3d5f72b7fb10fadbce940a2369ae5ba2dfdee7dbfca34a338eb30f4bbda"
+      },
+      "learned": {
+        "initial": "1424a145c1a6bae8b945705540436d6f4a0680dd88caca16a414f7563e3eccda",
+        "batch_stream_sha256": "da03c96f76920d7eb6736278d6a7743d7f46c23f90204063cf16bc3f86c4fa0b",
+        "checkpoint": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed43/output/2026-09-26_20-36-12/checkpoint_step_4000.safetensors",
+        "checkpoint_sha256": "48224627afee57921e62bec5ebcbc330a4eb8df2c93593e82a882f232b18a4da"
+      }
+    },
+    "44": {
+      "mean": {
+        "initial": "a05abc58dfa56041cd20775512f9f0bf27c0f0590f796ae53886b42b88e5421f",
+        "batch_stream_sha256": "586fc78285c17156778ca8890d42a01983b43b7cabebe887abecdddd1597cc61",
+        "checkpoint": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed44/output/2026-09-26_23-01-46/checkpoint_step_4000.safetensors",
+        "checkpoint_sha256": "c0c0e228cd2e3ad3842a01962c8585abe140eb29ac4047675ec88aba14ab8c82"
+      },
+      "learned": {
+        "initial": "a05abc58dfa56041cd20775512f9f0bf27c0f0590f796ae53886b42b88e5421f",
+        "batch_stream_sha256": "586fc78285c17156778ca8890d42a01983b43b7cabebe887abecdddd1597cc61",
+        "checkpoint": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed44/output/2026-09-26_23-02-44/checkpoint_step_4000.safetensors",
+        "checkpoint_sha256": "58158fe2a030bd99615b685e7704baf483f9c0f145ca8088ea19ec4411f155d7"
+      }
+    }
+  }
+}

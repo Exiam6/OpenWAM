@@ -1,0 +1,548 @@
+{
+  "checked_at": "2026-09-22T19:17:48.667533-05:00",
+  "scope": "terminal collection integrity only; no model predictions, labels or benefit metrics computed",
+  "integrity_passed": true,
+  "issues": [],
+  "counts": {
+    "adjust_bottle": 20,
+    "handover_block": 20,
+    "place_object_basket": 16
+  },
+  "accepted_total": 56,
+  "distinct_candidates_started": 70,
+  "fully_completed_candidates": 69,
+  "outcomes_as_recorded": {
+    "accepted": 56,
+    "unstable_scene": 3,
+    "expert_infeasible": 10,
+    "infrastructure_failure": 1
+  },
+  "accepted_hdf5_hashes_unique": true,
+  "accepted_total_bytes": 834104320,
+  "collector_exit": 1,
+  "collector_exit_written_at": "2026-09-22T19:15:56.641086-05:00",
+  "collection_deadline": "2026-09-22T19:15:55.548938-05:00",
+  "study_deadline": "2026-09-23T01:15:12-05:00",
+  "collection_complete": false,
+  "terminal_attempt": {
+    "task": "place_object_basket",
+    "seed": 802024,
+    "accepted": false,
+    "outcome": "infrastructure_failure",
+    "error": "worker produced no result",
+    "exit_code": 124
+  },
+  "terminal_worker_alive": false,
+  "terminal_worker_log_mtime": "2026-09-22T19:15:42.028028-05:00",
+  "terminal_reason": "original collection deadline interrupted current owned worker; worker exit124; parent exit1",
+  "manifest_exists": false,
+  "confirmation_score_summaries": [],
+  "original_protocol_sha256": "1372d41f026fc3f3d1b32f39431799aad90244e821b6849d6ba2421c7a83ab0d",
+  "accepted_files": [
+    {
+      "task": "adjust_bottle",
+      "seed": 800000,
+      "sha256": "391ba130006155520e86d1ca9cdf8843b6347fe4876edefcaa31ab3c6cd6cc98",
+      "bytes": 8602460,
+      "result_written_at": "2026-09-22T17:20:29.182208-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800001,
+      "sha256": "443c5a51104178198ab58009d65f5ee04188455e69b49b89ba833e2c70946a3a",
+      "bytes": 8094224,
+      "result_written_at": "2026-09-22T17:22:06.054580-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800002,
+      "sha256": "c10962f2b994bbf15a373c97bd7e78e02219d8513601fbc17d921d3efb84fca5",
+      "bytes": 8475106,
+      "result_written_at": "2026-09-22T17:23:40.309943-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800003,
+      "sha256": "83a6a5cba7ece598aa293089a633d51445dc78be86ed1808831da8abe82d5ee1",
+      "bytes": 8420650,
+      "result_written_at": "2026-09-22T17:25:13.378301-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800004,
+      "sha256": "9d27c7f4f92c2f51e6db326eaf71e58bb3ee4ce9e1479178bddb89e870455937",
+      "bytes": 8631815,
+      "result_written_at": "2026-09-22T17:26:44.408652-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800005,
+      "sha256": "ed77968b8b0708adac28d5469ab1795cebda27c22185e6bb00209bc22d5728c5",
+      "bytes": 8610955,
+      "result_written_at": "2026-09-22T17:28:18.237014-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800006,
+      "sha256": "58ca21ccd0dfb48663ad16d93bc2a076230175ab77a895d228590713bb0f0183",
+      "bytes": 8431748,
+      "result_written_at": "2026-09-22T17:29:53.802382-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800007,
+      "sha256": "029f0ce96e6b2b578dde5946f2b50c61c6100cea8fda4bbcccf5051f0ebc4326",
+      "bytes": 8399778,
+      "result_written_at": "2026-09-22T17:31:28.780745-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800008,
+      "sha256": "0a60337090dde19862c1a663a688aa864291f3904a89dae8fdc7c5907694c536",
+      "bytes": 9437639,
+      "result_written_at": "2026-09-22T17:33:04.424075-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800009,
+      "sha256": "0c7ce2877d30fafc1adc87a3983411187ea42994435afc83f7bae02b5fbc8942",
+      "bytes": 8875600,
+      "result_written_at": "2026-09-22T17:34:39.490409-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800011,
+      "sha256": "7cbcf7ccc305a0ca3e69ba6b76efe7a38e06b7c52576da14cbaf34c11ff5e5c1",
+      "bytes": 9165953,
+      "result_written_at": "2026-09-22T17:36:55.195895-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800012,
+      "sha256": "301fb2308b96a18d2f1840d6b0bcb99e24a05123b2000d9690d73b5f7f611a00",
+      "bytes": 8319466,
+      "result_written_at": "2026-09-22T17:38:31.328243-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800014,
+      "sha256": "e10b192ae30a8f5b3037b4caa1e72ee90534b63ab8e79178f328e1319eb1d489",
+      "bytes": 9194716,
+      "result_written_at": "2026-09-22T17:40:42.523724-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800015,
+      "sha256": "1496537071c6f82341737498d1fc23c8762e3a82aeaefad0e7b40d848646aff1",
+      "bytes": 8993542,
+      "result_written_at": "2026-09-22T17:42:21.219088-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800016,
+      "sha256": "cd19f15d483de2b799e8a45d751ee051ec038399daf0697ab75571cd9f04616f",
+      "bytes": 11096640,
+      "result_written_at": "2026-09-22T17:44:01.859462-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800017,
+      "sha256": "604f7d1be0ee470c55aeab808b823e9d0bfbd8226973e28ade73f0b3b1bc3b65",
+      "bytes": 8486032,
+      "result_written_at": "2026-09-22T17:45:38.532822-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800020,
+      "sha256": "70eddd1ec4e33edf270021e2ea253c0fd7764a37081e5664500e313e9468b2b3",
+      "bytes": 8380228,
+      "result_written_at": "2026-09-22T17:48:34.734483-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800021,
+      "sha256": "98c57e5ea09d59ab57f897a6988dded5b8aa5a729932f136c74176b5275e93f7",
+      "bytes": 8333698,
+      "result_written_at": "2026-09-22T17:50:08.997838-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800022,
+      "sha256": "b1ae787682973322486bb66ed6e64dcbfe3b65c5e3a7551f0087bcc5caf9ff84",
+      "bytes": 8789290,
+      "result_written_at": "2026-09-22T17:51:45.721203-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 800023,
+      "sha256": "04f77fbaf9ba19713c0acc0ae78c62181a551735eb359381e4819d6b1cb88661",
+      "bytes": 9129560,
+      "result_written_at": "2026-09-22T17:53:16.828547-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801000,
+      "sha256": "f92fefeb3408fe800ef2a8650a8cee095fd98ce524126d77b49bc51621acf57a",
+      "bytes": 19080291,
+      "result_written_at": "2026-09-22T17:55:17.714005-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801001,
+      "sha256": "b60fae5a44552ce3fe59ed41154e35ec333266bd1d725de69deafcd82745cb88",
+      "bytes": 16202853,
+      "result_written_at": "2026-09-22T17:57:08.332424-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801002,
+      "sha256": "0b94ef23a9e66a8b5629f60157056a09d89badbf3c1471d65bb655d1ff801cab",
+      "bytes": 16819299,
+      "result_written_at": "2026-09-22T17:59:00.983852-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801003,
+      "sha256": "83370c0681119f4bd10a3bd4c475c6986832b937c64b61bfc4c204b6d5234fb0",
+      "bytes": 16389141,
+      "result_written_at": "2026-09-22T18:00:49.340263-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801004,
+      "sha256": "ba6dbe60f06411d0b95049b5cc6f32c0e4818d716de2e0234a869f4c298d5d64",
+      "bytes": 16481680,
+      "result_written_at": "2026-09-22T18:02:41.078688-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801005,
+      "sha256": "5d9f1718872da01e968edb316809ad23d506d68e705c73c7a018000e2b3e66ce",
+      "bytes": 16222142,
+      "result_written_at": "2026-09-22T18:04:37.148130-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801007,
+      "sha256": "74cccd2d8369f2dc879b834f1a70f409e7b9ef0b8ef8f2a365bdc91bb9620e1a",
+      "bytes": 16096849,
+      "result_written_at": "2026-09-22T18:07:13.938689-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801008,
+      "sha256": "4a1f1146af159493665f7654592e5111f1ff5615c28cab6f49ef0961552c7eb0",
+      "bytes": 15981950,
+      "result_written_at": "2026-09-22T18:08:59.162058-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801009,
+      "sha256": "0d2a0aeec2560b6e18388cffe957f488a678aa4c7595e456bd59ddb9e88909a0",
+      "bytes": 16102324,
+      "result_written_at": "2026-09-22T18:10:54.059468-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801010,
+      "sha256": "72dcd8e3d9e533055af2a401957a7752bca0d1c1fc28ed612b52ad9c93659c9b",
+      "bytes": 16817812,
+      "result_written_at": "2026-09-22T18:12:49.258883-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801011,
+      "sha256": "f7a3231284bf37de0b4c0c8def2c65a3a466a07ae334c751aa5df60d97a37527",
+      "bytes": 16472810,
+      "result_written_at": "2026-09-22T18:14:44.925303-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801012,
+      "sha256": "c12c5c8a58a8581f927c38360c6b9c06a0c5118483d40d847bb995b19d4bb480",
+      "bytes": 16573768,
+      "result_written_at": "2026-09-22T18:16:44.018740-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801013,
+      "sha256": "8c7e4d76439ec2eb731ac766c056ddd1528e1559b773e5d36ae5d82d958b42a1",
+      "bytes": 16190748,
+      "result_written_at": "2026-09-22T18:18:33.758144-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801014,
+      "sha256": "e76d58250cc756fa73690c0bca59dc59af6833460faa6b3e02a57312090a5f29",
+      "bytes": 16320784,
+      "result_written_at": "2026-09-22T18:20:25.099556-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801015,
+      "sha256": "6a061c3e22012b569115e7c9895e39e3de0ad6f8b297f74c4786f006f1171aec",
+      "bytes": 16398352,
+      "result_written_at": "2026-09-22T18:22:16.139969-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801016,
+      "sha256": "6d32fcf7b1517c386f351b8f66facb46b2825c26d7c8658d1a3ff8e74c5fab3b",
+      "bytes": 16984701,
+      "result_written_at": "2026-09-22T18:24:13.732407-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801017,
+      "sha256": "c1a5646534d06b649e34fe06a9a23f58b75934acc207a77a5b21200e83753d24",
+      "bytes": 17248552,
+      "result_written_at": "2026-09-22T18:26:05.685825-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801018,
+      "sha256": "f602f0e7e71adcb78f50dd53d6e6cbe20aad25c5e0dcb0d050321dcabb798388",
+      "bytes": 16632160,
+      "result_written_at": "2026-09-22T18:28:02.737262-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801019,
+      "sha256": "e4fcfd52587555f06903bcbfb4b26f706b8f7267e77d4f0b99cfecb167dfec44",
+      "bytes": 16885285,
+      "result_written_at": "2026-09-22T18:30:00.093702-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "handover_block",
+      "seed": 801020,
+      "sha256": "3ed87478cc4e7d883b6046b6ffe1e702ed295281b9ff9add7372129e76c04934",
+      "bytes": 16142056,
+      "result_written_at": "2026-09-22T18:31:50.301116-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802000,
+      "sha256": "680e2945421566eac9e707569e6454d764d474bfb2647cd7b1ae9e030181ce48",
+      "bytes": 21694081,
+      "result_written_at": "2026-09-22T18:33:37.388518-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802001,
+      "sha256": "2213562798748f8cc144b0a83df4169f0a1132ea7c74bac29f6c857bd81bdbfa",
+      "bytes": 18804103,
+      "result_written_at": "2026-09-22T18:35:27.301931-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802002,
+      "sha256": "3111220b74cb3d5fa7d5dc809fe673289e35ba8f0b0ee233eaec697f64ca46f2",
+      "bytes": 18952788,
+      "result_written_at": "2026-09-22T18:37:11.411322-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802003,
+      "sha256": "219abf88d9a5d97799d5d334ed6fd86c65fb524ce685f701a78d38a6e8766116",
+      "bytes": 18284325,
+      "result_written_at": "2026-09-22T18:38:56.990719-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802004,
+      "sha256": "da46d2c1caed14b302bd7101479833dae0dc11851e7a14af04cf83e5a1783462",
+      "bytes": 26080100,
+      "result_written_at": "2026-09-22T18:40:45.848127-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802005,
+      "sha256": "78772812a2d04b77b71fc3c8e047659ac6d3228e0289b8567ef26c87a03a563f",
+      "bytes": 18862867,
+      "result_written_at": "2026-09-22T18:42:31.750523-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802006,
+      "sha256": "62dbd4f7a192d1231c1dddcb57bc898ed4c3bf2d5a0ce319bc45df76293d5add",
+      "bytes": 19920388,
+      "result_written_at": "2026-09-22T18:44:20.084929-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802011,
+      "sha256": "13643bafe4446fd73261fee0c9416a39281a43a3403ccc82f04c722babfaf87f",
+      "bytes": 20740986,
+      "result_written_at": "2026-09-22T18:53:47.956061-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802012,
+      "sha256": "8fb6964c846f2889b6101cf4062265605e64bd5e7fc62f0772f60f1c7320fcde",
+      "bytes": 22532428,
+      "result_written_at": "2026-09-22T18:55:32.757455-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802016,
+      "sha256": "50a7dad423e7b76aaf55e259edc299e6b9ec835f23ec20cfaf84f272a503cc55",
+      "bytes": 22220735,
+      "result_written_at": "2026-09-22T19:03:59.498360-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802017,
+      "sha256": "3f40247d821209320490e7454087c30b551f58380cd8739b4c832401afcf3926",
+      "bytes": 18505645,
+      "result_written_at": "2026-09-22T19:05:47.910768-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802018,
+      "sha256": "4633dbee61a3a4b48f81e951ffe843a8b62d774efe673228980e70d0f58c7e6c",
+      "bytes": 19579720,
+      "result_written_at": "2026-09-22T19:07:33.090164-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802019,
+      "sha256": "1d7cf80435c60f3defae595a67c5a5babe42ab29d2a7a099544237a55b4b8f56",
+      "bytes": 19931387,
+      "result_written_at": "2026-09-22T19:09:19.267563-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802021,
+      "sha256": "cd493201e3a2fceee13bb9300db28fb6adb69c2de3a735411554508787214c94",
+      "bytes": 21618912,
+      "result_written_at": "2026-09-22T19:11:54.623148-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802022,
+      "sha256": "580f702ed24abac9c2ae69aaaa3da276c228712b9e405263e47b8860d3c92e66",
+      "bytes": 18783624,
+      "result_written_at": "2026-09-22T19:13:41.244549-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 802023,
+      "sha256": "b46bee53344ae2d57408c76b8e558a3ac61365ff5dcd647ab79f0a6ce24b9936",
+      "bytes": 19679574,
+      "result_written_at": "2026-09-22T19:15:24.826960-05:00",
+      "runtime_provenance_records": 2,
+      "checks_passed": true
+    }
+  ],
+  "gpu_released": true
+}

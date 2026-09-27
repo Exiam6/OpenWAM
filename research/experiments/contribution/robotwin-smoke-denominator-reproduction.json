@@ -1,0 +1,30 @@
+{
+  "original_capped": {
+    "rollouts_requested": [
+      5
+    ],
+    "all_rollouts_succeeded": true,
+    "written_success_rate": 0.05
+  },
+  "fixed_capped": {
+    "rollouts_requested": [
+      5
+    ],
+    "all_rollouts_succeeded": true,
+    "written_success_rate": 1.0
+  },
+  "fixed_default": {
+    "rollouts_requested": [
+      100
+    ],
+    "all_rollouts_succeeded": true,
+    "written_success_rate": 1.0
+  },
+  "fixed_empty": {
+    "rollouts_requested": [
+      100
+    ],
+    "all_rollouts_succeeded": true,
+    "written_success_rate": 1.0
+  }
+}

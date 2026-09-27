@@ -1,0 +1,35 @@
+{
+  "time": "2026-09-24T03:17:54.058493-05:00",
+  "seed": 42,
+  "passed": true,
+  "routes": {
+    "pca": {
+      "sha256": "e8f028320242e0e207cbb8ba7c3fb56b1ae6345faa56f5165a7737e6c3b14ca6",
+      "rows": 12000,
+      "bytes": 8579772,
+      "exit": {
+        "time": "2026-09-24T02:19:59.258742-05:00",
+        "returncode": 0
+      }
+    },
+    "svae": {
+      "sha256": "e8f028320242e0e207cbb8ba7c3fb56b1ae6345faa56f5165a7737e6c3b14ca6",
+      "rows": 12000,
+      "bytes": 8579772,
+      "exit": {
+        "time": "2026-09-24T02:23:39.720465-05:00",
+        "returncode": 0
+      }
+    },
+    "wan": {
+      "sha256": "e8f028320242e0e207cbb8ba7c3fb56b1ae6345faa56f5165a7737e6c3b14ca6",
+      "rows": 12000,
+      "bytes": 8579772,
+      "exit": {
+        "time": "2026-09-24T03:09:02.445341-05:00",
+        "returncode": 0
+      }
+    }
+  },
+  "scope": "Byte-identical complete logged batch streams after all three training runs exited0. Training-pairing integrity only; not policy scoring or the full all-nine evaluation gate."
+}

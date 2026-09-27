@@ -1,0 +1,311 @@
+{
+  "time": "2026-09-24T22:01:47.850044-05:00",
+  "trigger": "2026-09-24T22:00:01.955090-05:00",
+  "trainings": {
+    "pca-seed42": {
+      "exit": {
+        "time": "2026-09-24T02:19:59.258742-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "checkpoint_bytes": 12123507288,
+      "last_metrics": {
+        "loss_total": 0.13786819577217102,
+        "loss_video": 0.13136054575443268,
+        "loss_action": 0.006507657468318939,
+        "grad_norm": 0.44345977902412415
+      },
+      "log_tail": "-06, epoch=2]\n[checkpoint] Saving final step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_12000.safetensors\n"
+    },
+    "pca-seed43": {
+      "exit": {
+        "time": "2026-09-24T02:23:54.989991-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "checkpoint_bytes": 12123507288,
+      "last_metrics": {
+        "loss_total": 0.29911789298057556,
+        "loss_video": 0.2854231894016266,
+        "loss_action": 0.013694703578948975,
+        "grad_norm": 0.4666437804698944
+      },
+      "log_tail": "-06, epoch=2]\n[checkpoint] Saving final step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_12000.safetensors\n"
+    },
+    "pca-seed44": {
+      "exit": {
+        "time": "2026-09-24T21:11:26.411245-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "checkpoint_bytes": 12123507288,
+      "last_metrics": {
+        "loss_total": 0.33998098969459534,
+        "loss_video": 0.28467512130737305,
+        "loss_action": 0.05530587211251259,
+        "grad_norm": 0.8676789999008179
+      },
+      "log_tail": "-06, epoch=2]\n[checkpoint] Saving final step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/checkpoint_step_12000.safetensors\n"
+    },
+    "svae-seed42": {
+      "exit": {
+        "time": "2026-09-24T02:23:39.720465-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "checkpoint_bytes": 12189767400,
+      "last_metrics": {
+        "loss_total": 0.12422701716423035,
+        "loss_video": 0.11894958466291428,
+        "loss_action": 0.0052774325013160706,
+        "grad_norm": 0.38373449444770813
+      },
+      "log_tail": "6, epoch=2]\n[checkpoint] Saving final step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_12000.safetensors\n"
+    },
+    "svae-seed43": {
+      "exit": {
+        "time": "2026-09-24T02:16:27.723352-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "checkpoint_bytes": 12189767400,
+      "last_metrics": {
+        "loss_total": 0.28846943378448486,
+        "loss_video": 0.27400118112564087,
+        "loss_action": 0.01446824986487627,
+        "grad_norm": 0.4534133970737457
+      },
+      "log_tail": "6, epoch=2]\n[checkpoint] Saving final step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_12000.safetensors\n"
+    },
+    "svae-seed44": {
+      "exit": {
+        "time": "2026-09-24T21:09:10.637020-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "checkpoint_bytes": 12189767400,
+      "last_metrics": {
+        "loss_total": 0.30734753608703613,
+        "loss_video": 0.2680494785308838,
+        "loss_action": 0.039298057556152344,
+        "grad_norm": 0.8073057532310486
+      },
+      "log_tail": "6, epoch=2]\n[checkpoint] Saving final step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed44/output/2026-09-24_13-51-17/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed44/output/2026-09-24_13-51-17/checkpoint_step_12000.safetensors\n"
+    },
+    "wan-seed42": {
+      "exit": {
+        "time": "2026-09-24T03:09:02.445341-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "checkpoint_bytes": 13361411736,
+      "last_metrics": {
+        "loss_total": 0.18728265166282654,
+        "loss_video": 0.17978183925151825,
+        "loss_action": 0.007500807289034128,
+        "grad_norm": 0.36119961738586426
+      },
+      "log_tail": "-06, epoch=2]\n[checkpoint] Saving final step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/checkpoint_step_12000.safetensors\n"
+    },
+    "wan-seed43": {
+      "exit": {
+        "time": "2026-09-24T02:51:13.836803-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "checkpoint_bytes": 13361411736,
+      "last_metrics": {
+        "loss_total": 0.39004501700401306,
+        "loss_video": 0.37430840730667114,
+        "loss_action": 0.015736602246761322,
+        "grad_norm": 0.43820375204086304
+      },
+      "log_tail": "-06, epoch=2]\n[checkpoint] Saving final step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/checkpoint_step_12000.safetensors\n"
+    },
+    "wan-seed44": {
+      "exit": {
+        "time": "2026-09-24T21:41:40.015348-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "checkpoint_bytes": 13361411736,
+      "last_metrics": {
+        "loss_total": 0.5353524088859558,
+        "loss_video": 0.47207069396972656,
+        "loss_action": 0.06328170001506805,
+        "grad_norm": 1.0690838098526
+      },
+      "log_tail": "-06, epoch=2]\n[checkpoint] Saving final step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed44/output/2026-09-24_13-51-20/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed44/output/2026-09-24_13-51-20/checkpoint_step_12000.safetensors\n"
+    }
+  },
+  "source_hashes": {
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_common.py": "03b9df65807fe2e7764ae569e4c600f69717e1ce754cf3644f2e30b316be0e9a",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/run_simulation_preflight.py": "e327cb4b41602bd4e347ce60f0dbc2f46df277ca0ed796881bf26cce89550862",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/simulation_preflight.py": "4edc5629b5c3941fd9e9a8558fa17689b9f10e2baea4f76fd7264a9eaffbb1b9",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/serve_policy.py": "476608ccf2e9de0aa804e4388d71ba51969e98a188f92b8738d77821f5fa5e7d",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluate_policy.py": "cd021e40f79d104dfa1e6bd86337d3dd7ff0bcc815943ac971b6e4f9f2988708",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/verify_fresh_cohort.py": "6b5999af7cd30d4a410ef43b1d77e668814c6b186e8567ad3b8954aee59657ef",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_controller.py": "04c8cb2002d6a2907666eff024776256a3f276df0875ca8922e65a674482b7f8",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_queue.py": "c17b4f589a60840540056c7db11f7a0bdcee877a8d6699bd18dd3bcd09723572",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/action_diagnostics.py": "4a38f096cca963733b031f7477ae5290936c14604847655600a273423fa31fb0",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/analyze_closed_loop.py": "f576f32798ac02c5518466411774955900375a430dbef2e041bfa530d8dbea95",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/audit_closed_loop.py": "2b9cb18971e3339334cbde0253ae18335cf2da614e955f7c50a38817d7b714ad",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/summarize_diagnostics.py": "f7a007a8addf68288781ef180b5e7d55526e71015d6b463c3f2febf2bf2818a2",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/update_status.py": "13143dd36b76f988b8bd28ad1a23cc54b3c74646e74ed76de211cb6e594b4da8",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/dinov3_pca.py": "5daa04141295143d64e4014e7cc8603ec48479acffd5fd39fc4d093f80541de7",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/__init__.py": "76c2a60bd41d15831a73dd61e9617212ea251760dc6a11138b4cfb69ab4287a3",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/deploy/server.py": "0aa4e1b6ff231e90fabcd0ef44b871cb5a51843ea09a531ca9c8c2fcaa6f7378",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/openwam2robotwin_interface.py": "3329d6b1c559646395d65f6d4521720ac83ce95a7f8ebbdfecf486a254e423b7",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py": "7b56c45b89a845b4ff264907bcac7f183a71894d74f4b90753fda69d254cedda",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/protocol.json": "9821536558ee158735a24e2caa8b394dfb46723269586cf4acc66c4b9b2cd7b6",
+    "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/EVALUATION_IMPLEMENTATION.md": "e53b3e8ac24a9cb4e11f7ad7b04947a10cd76d569d8c4077ad46e918864aa52e",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/wait_evaluation_resources_20260924.py": "4bb394d9990c530c65f835bd901648f42b79a231890d5f6880555163f370995e",
+    "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/pipeline-plan.json": "37330d780b9df112e1aa33aea5e77a1adbb0f3e7895927b9ff4d339866a2d115"
+  },
+  "disk": {
+    "/home": 0.015625,
+    "/data02": 158.875
+  },
+  "pause_paths": {
+    "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/paused.json": false,
+    "/home/zifanz4/.local/state/openwam-selfcheck/paused.json": false,
+    "/home/zifanz4/openwam-experiments/studies/layers-20260922/paused.json": false
+  },
+  "deadline": "2026-09-25T19:11:52.028093-05:00",
+  "original_controller_deadline": "2026-09-28T13:41:59.240315-05:00",
+  "resource_wait": {
+    "started.json": {
+      "time": "2026-09-24T21:37:06.626762-05:00",
+      "plan_sha256": "e2650cc1428ed2799962d14f18eb0a96b6085dc257debc1b6384a5b42fd788d8",
+      "controller": {
+        "pid": 1075445,
+        "uid": 2093,
+        "argv": [
+          "python3",
+          "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_controller.py"
+        ],
+        "start_ticks": "2618082887"
+      }
+    },
+    "progress.json": {
+      "time": "2026-09-24T22:01:44.752725-05:00",
+      "status": "waiting_for_original_six_slots",
+      "controller_held": true,
+      "consecutive_idle": 0,
+      "snapshot": {
+        "gpu": {
+          "1": [
+            "1",
+            "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85",
+            "9291",
+            "84",
+            "0"
+          ],
+          "2": [
+            "2",
+            "GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e",
+            "1",
+            "0",
+            "0"
+          ],
+          "3": [
+            "3",
+            "GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db",
+            "12",
+            "0",
+            "0"
+          ],
+          "4": [
+            "4",
+            "GPU-33861458-0994-99a7-7457-6fceb49c229c",
+            "11787",
+            "69",
+            "0"
+          ],
+          "5": [
+            "5",
+            "GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3",
+            "1",
+            "0",
+            "0"
+          ],
+          "6": [
+            "6",
+            "GPU-f341a0af-5cd4-9d17-e701-31f4530522ae",
+            "1",
+            "0",
+            "0"
+          ]
+        },
+        "compute_uuids": [
+          "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85",
+          "GPU-33861458-0994-99a7-7457-6fceb49c229c"
+        ]
+      },
+      "deadline": "2026-09-25T19:11:52.028093-05:00"
+    },
+    "exit.json": null,
+    "error.json": null
+  },
+  "controller": {
+    "pid": 1075445,
+    "uid": 2093,
+    "argv": [
+      "python3",
+      "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_controller.py"
+    ],
+    "start_ticks": "2618082887",
+    "state": "T"
+  },
+  "outer_timeout": {
+    "pid": 1075444,
+    "argv": [
+      "timeout",
+      "--signal=TERM",
+      "--kill-after=30s",
+      "345116",
+      "python3",
+      "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_controller.py"
+    ]
+  },
+  "pipeline": {
+    "time": "2026-09-24T21:36:52.725747-05:00",
+    "stage": "waiting_for_all_training_collection_smoke",
+    "all_ready": false
+  },
+  "pipeline_exit": null,
+  "evaluation_ready_present": false,
+  "cohort_gate_present": false,
+  "prerequisite_exits": {
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/collection-slots/5/exit.json": {
+      "time": "2026-09-23T22:05:36.904975-05:00",
+      "returncode": 0
+    },
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/collection-slots/7/exit.json": {
+      "time": "2026-09-23T21:03:54.426294-05:00",
+      "returncode": 0
+    },
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/simulation-preflight/exit.json": {
+      "time": "2026-09-23T21:08:15.726521-05:00",
+      "returncode": 0
+    }
+  },
+  "remote": {
+    "time": "2026-09-24T22:01:52.060935-05:00",
+    "gpus": "0, GPU-c7d96da5-a1ae-e1ed-de5d-03f35e550da2, 1, 0, 2\n1, GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 9291, 89, 0\n2, GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 1, 0, 0\n3, GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 12, 0, 0\n4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 11787, 53, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 1, 0, 0\n6, GPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 1, 0, 0\n7, GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 1, 0, 0\n",
+    "apps": "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 2029857, 9284\nGPU-33861458-0994-99a7-7457-6fceb49c229c, 2077942, 11747\n",
+    "owners": [
+      "kagaram2 2029857    19:27:19 python",
+      "bhavyaa2 2077942    09:20:47 python3"
+    ]
+  }
+}

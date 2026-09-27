@@ -1,0 +1,21 @@
+{
+  "time": "2026-09-27T12:24:43.097165-05:00",
+  "deadline": "2026-09-29T17:48:49.941691-05:00",
+  "processes": [
+    {
+      "arm": "mean",
+      "pid": 3145627,
+      "uid": 2093,
+      "start_ticks": "2643490926"
+    },
+    {
+      "arm": "learned",
+      "pid": 3145628,
+      "uid": 2093,
+      "start_ticks": "2643490926"
+    }
+  ],
+  "output": "/data01/zifanz4/openwam-experiments/temporal-recovery-v2-20260927",
+  "status": "launched_gated_evaluation",
+  "new_recurring_timer": false
+}

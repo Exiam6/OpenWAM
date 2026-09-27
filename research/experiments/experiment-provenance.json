@@ -1,0 +1,25 @@
+{
+  "openwam_git_commit": "7c5861e45cfe1339a0323f0e0b03a3316c37971c",
+  "upstream_source_sha256": {
+    "openwam/model/video_backbone/encoder/dinov3.py": "c5ac7cf081afc023fe85c32940a807f201213f383d4141b4e68096cde2124eb9",
+    "openwam/model/video_backbone/encoder/svae/model.py": "3f042c5d19bed2d0c8e7f385af0266aea73b8bd49f37736c3356e5044997dfd1",
+    "openwam/dataloader/transforms/multiview.py": "197bb6962a169f2c8c4f50574d262a9d2cbed95f3df8fff543f0b3195e18a4d5"
+  },
+  "scripts_sha256": {
+    "pilot.py": "15594dd481a0203da184ff6600831ac1a2302d0d293a4c951beefdd587fada4e",
+    "run-seeds.sh": "26a14b1f2ababe4258e3be60a7a8d43f41ec111bb1701d6d8a4a56ab6b0daabb",
+    "download_pilot.py": "a490f221602f75bd6e80920bc05f86a63fc5c2188a23c00f50ab9d9198a13dc1",
+    "summarize.py": "e2d7158c3bfbe6236443cc81e5bf23e841635206665ffe4429041552e0b1ec12",
+    "run-pilot.sh": "02affde49c827ec99e6f09881aeb0c0143039f786705e53b15757049b3a8acf2"
+  },
+  "followup_protocol": {
+    "training_seeds": [
+      42,
+      43,
+      44
+    ],
+    "optimizer_steps": 2000,
+    "selection": "lowest validation feature MSE; fixed budget; exploratory follow-up after initial 500-step pilot"
+  },
+  "public_report": "https://embodied-research-notebook.exiamzifan.chatgpt.site"
+}

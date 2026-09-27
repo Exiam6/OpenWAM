@@ -1,0 +1,491 @@
+{
+  "protocol_sha256": "473c6fe10616ba9d80782630e0438b23fb611c2b033f68a109f4e11f7a15e01a",
+  "asset_sha256": "20eb789667fa5e60e7516bf509512f6cb61f01b0aa0695eadaea930c13892b36",
+  "properties": {
+    "z_dim": 48,
+    "spatial_compression": 16,
+    "temporal_compression": 4,
+    "causal_temporal": true,
+    "pixel_decode": true,
+    "dit_patch_size": [
+      1,
+      2,
+      2
+    ]
+  },
+  "torch": "2.7.0+cu126",
+  "device": "NVIDIA A40",
+  "model_load_seconds": 7.075024241581559,
+  "operations": [
+    {
+      "name": "frame0",
+      "seconds": 2.5357299111783504,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.8828125,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.07112736254930496,
+      "latent_std": 0.8809797167778015
+    },
+    {
+      "name": "frame1",
+      "seconds": 0.017262596637010574,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.875,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.07304082065820694,
+      "latent_std": 0.8794944882392883
+    },
+    {
+      "name": "frame2",
+      "seconds": 0.0161834005266428,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.9453125,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.04754160717129707,
+      "latent_std": 0.7935523986816406
+    },
+    {
+      "name": "frame3",
+      "seconds": 0.016244051977992058,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.9453125,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.04236247017979622,
+      "latent_std": 0.7451677322387695
+    },
+    {
+      "name": "frame4",
+      "seconds": 0.01615143194794655,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.96875,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.04157329350709915,
+      "latent_std": 0.7383225560188293
+    },
+    {
+      "name": "frame5",
+      "seconds": 0.016117021441459656,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.984375,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.0385398343205452,
+      "latent_std": 0.7345479130744934
+    },
+    {
+      "name": "frame6",
+      "seconds": 0.016071410849690437,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.953125,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.039537373930215836,
+      "latent_std": 0.7368831634521484
+    },
+    {
+      "name": "frame7",
+      "seconds": 0.01607351191341877,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.9375,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.03686973452568054,
+      "latent_std": 0.7352213859558105
+    },
+    {
+      "name": "nine_repeats",
+      "seconds": 0.11853384226560593,
+      "shape": [
+        1,
+        48,
+        3,
+        24,
+        20
+      ],
+      "pixel_min": -0.8828125,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.962196992,
+      "latent_mean": -0.10468684881925583,
+      "latent_std": 1.2705879211425781
+    },
+    {
+      "name": "future_changed",
+      "seconds": 0.10099289566278458,
+      "shape": [
+        1,
+        48,
+        3,
+        24,
+        20
+      ],
+      "pixel_min": -1.0,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.96395008,
+      "latent_mean": 0.09496167302131653,
+      "latent_std": 1.1990160942077637
+    },
+    {
+      "name": "cache_reset",
+      "seconds": 0.015925919637084007,
+      "shape": [
+        1,
+        48,
+        1,
+        24,
+        20
+      ],
+      "pixel_min": -0.8828125,
+      "pixel_max": 1.0,
+      "peak_allocated_GB": 1.673683456,
+      "latent_mean": -0.07112736254930496,
+      "latent_std": 0.8809797167778015
+    }
+  ],
+  "training_rows": [
+    {
+      "task": "adjust_bottle",
+      "episode": 3,
+      "episode_uid": 3,
+      "frame": 0,
+      "frame_indices": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32
+      ],
+      "split": "train",
+      "encoded_head_hashes": [
+        "7d8bcb4e06573f49c882b3100bbe50e0a93c48baa63aded1ea365c0f0557dc8d",
+        "bd998ded68c2a0267e6eae2ff3b0de5b0eaa8dc98dc26e0f0efc6c09595fb75a",
+        "17c6a7520bc1d258a0a388da25e6ea4db0dfc49ed4370447adc89a6481195f8c",
+        "47b3f2a486745ebc0b5be78b5ca67ae3cf81b3e8f432ddb6305b7516592c8d45",
+        "9e8cb69eb4c69ad076e19897748ed8f5e4ad5e10b74c44836d6ee3c993423b03",
+        "d32964566d035fe134ed798c7342b3ca58e75ef298208c8896ddff72041cab28",
+        "c231758e10ecc9873624d0c1671117f5446ef57953c5f894189391288977b494",
+        "4e8292401707d7f10f60dd457c40d63909c659821a556f1acbeb3e4ed7854e60",
+        "d5d55705a884127892a20d6f4e77657842b54b8166af07353f4ce9101fdd17f1"
+      ],
+      "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode3.hdf5"
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 3,
+      "episode_uid": 3,
+      "frame": 10,
+      "frame_indices": [
+        10,
+        14,
+        18,
+        22,
+        26,
+        30,
+        34,
+        38,
+        42
+      ],
+      "split": "train",
+      "encoded_head_hashes": [
+        "01b43e31971ded1c8fc265546961370377c0484b337cf299c7342366c910edca",
+        "364caaf07d82dc67ded17ec337e475684cef58fa79296ad704733c16457b9101",
+        "1a185cf73de186202fa796b5bd767c097341675e2bc8ba545cb29c260fef433f",
+        "ac08bfc66ebf3b4b25ba67b51c4a68c4c95c72adf4caa5f4db5d42188525b396",
+        "d2119f8390ca0a0d8e8cd91b756f2c288009c9a367c227faf0c4a4ff7cf71a60",
+        "cf81e8254d798fdfc6327b4977487be77870c0d2c29ceebdc88989f1fb513f28",
+        "5764edcba7c2ef45a28e367629480c5b03d50f90e535fc3b2c0b504b1848f44e",
+        "8ee6138c3d6db6f296fcf0eec2030c75081d7a6388d44055b99b648ecca215b8",
+        "249c3349350154e6fabc19c70b71bc454a2ca762b82d0e90f937b7b0fa3cb979"
+      ],
+      "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode3.hdf5"
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 3,
+      "episode_uid": 3,
+      "frame": 21,
+      "frame_indices": [
+        21,
+        25,
+        29,
+        33,
+        37,
+        41,
+        45,
+        49,
+        53
+      ],
+      "split": "train",
+      "encoded_head_hashes": [
+        "160dac78172e1456f87f3e20756dd3e19c9e330308b29d4689c791d1bcb6add5",
+        "128d4519005e1c63bb959c51a23ab2dd7ad04b5b5b44efdc13bdf6ab82851a23",
+        "43080320df29b49bdfab97cd7e39aeba701f0a2c369f2e8b6f7674597d51b999",
+        "40ae342c9da12fdc4eb65833dedcdff555d1811a1b66f9fcdb817753742cdc2a",
+        "8ee6138c3d6db6f296fcf0eec2030c75081d7a6388d44055b99b648ecca215b8",
+        "8206f650b53704f02fa14ffaed520e0060a4117cf75577f42e49704f73e521a7",
+        "5cc6e1711558b343de56b0f832289fc43a1304df99d1b8d0e34d61f5f9ede7af",
+        "79dfb14e1f2721ade851dcdf474448377cda940ebbf2f85567e2f9d5dae22933",
+        "f87208b9af135976bb7c0aa6a50fbe263ebe692baa5591e7207996e242acd34d"
+      ],
+      "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode3.hdf5"
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 3,
+      "episode_uid": 3,
+      "frame": 31,
+      "frame_indices": [
+        31,
+        35,
+        39,
+        43,
+        47,
+        51,
+        55,
+        59,
+        63
+      ],
+      "split": "train",
+      "encoded_head_hashes": [
+        "6a3305d5f08e5ce74dbae5ec5be482b94527a9caa34a553b2543d1d4e53df6f6",
+        "cb136c37a16af6cd116491a6ff89b22dd5a3b35f9142facaa6ab5d366a129f1d",
+        "e88efbda4c96339580aaf13c61aaaee61e812e015c57ef1a9d5118201d92cfc8",
+        "41d64f621aeffaeccc6846ebea479bac868d1943e82b972bd537003bd5fcdb12",
+        "d96276d23015217d1ffdfb3251dd8d703e07be9993d1011c52602663d2d745cc",
+        "82edab394f7acc574f3ce3e231f184725bb2c6e3e5b837366c84fdcd7a84468c",
+        "d2ce5696b644210a4b450f76bacca68cec650085b34f68a0f3c02f138ffcd917",
+        "460c0ba5a056973f2b379ddab59a3148fc2eef580282ec6e19669a423217958e",
+        "08224dcc8e0d20963025affe5353004cddeb2c3cde1a2c477d2dfe19234be9f7"
+      ],
+      "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode3.hdf5"
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 3,
+      "episode_uid": 3,
+      "frame": 42,
+      "frame_indices": [
+        42,
+        46,
+        50,
+        54,
+        58,
+        62,
+        66,
+        70,
+        74
+      ],
+      "split": "train",
+      "encoded_head_hashes": [
+        "249c3349350154e6fabc19c70b71bc454a2ca762b82d0e90f937b7b0fa3cb979",
+        "3094f46edc7bdd94c751d6432559d6b64fb996317223061b8150387054584eb9",
+        "0142510177835e100d3b84c3af268feac1dee4463b517cdd941d290375da4455",
+        "25da91ca536d79d06b7f6c67b3bdfe6d5c6e46316c6797eebca227f04bf2f0ff",
+        "c56c9668adb874786cbe2e604dc8c7858f5401304e910e3c61c9ddeb0a4fa7bd",
+        "2e974f001e1f407443f8e4d9406b62e7c377bc8d44bf1a311c964084ed8f2117",
+        "ec7832e83e85fdfdf593bea297272523facb9fe947f29193e87099718f255f0b",
+        "0dfa2496a6fec354861920f6b392aaa29ccec1ddd45cb82552ced5af0ae29599",
+        "0608069704148996729dc41d4b1018e3294dad6da191060c313d26c1f958b4b1"
+      ],
+      "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode3.hdf5"
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 3,
+      "episode_uid": 3,
+      "frame": 52,
+      "frame_indices": [
+        52,
+        56,
+        60,
+        64,
+        68,
+        72,
+        76,
+        80,
+        84
+      ],
+      "split": "train",
+      "encoded_head_hashes": [
+        "f87208b9af135976bb7c0aa6a50fbe263ebe692baa5591e7207996e242acd34d",
+        "afdac930ae10210acacee9cb37b3b104bae45a823637591fb3cfa29a64ea16a4",
+        "a6a62f1abbc12048a2ac0f65396ee7cd41677c33467823a6718af0e26cccddd5",
+        "bcb0aa8d3f84ba6d3c881d7eae2c61905a8adc8f03261d2d65683512e4dc8d0f",
+        "05e77a91ac626a47da0821671e6c551634bffb76777432786ea80fa12a587161",
+        "8b80f32bbec5cece3230f3b9d474013a634906bc62e2ab4ca2244225b50a5923",
+        "a0820389ec09a22717e3d09313c164d44caab8ed6eb7b8ccb584eccb3067ec94",
+        "fc0e21c3d36c1d99a099d8c361d3867c122cc5a03092a3f9872653b20bb18ad6",
+        "54f52e882bf59039fb129d8b2dfeb2eb413a4491096b82275b101af4603b73b9"
+      ],
+      "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode3.hdf5"
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 3,
+      "episode_uid": 3,
+      "frame": 63,
+      "frame_indices": [
+        63,
+        67,
+        71,
+        75,
+        79,
+        83,
+        87,
+        91,
+        95
+      ],
+      "split": "train",
+      "encoded_head_hashes": [
+        "08224dcc8e0d20963025affe5353004cddeb2c3cde1a2c477d2dfe19234be9f7",
+        "96100fb49b7b4de6549d7a1e2333f878f1377fb41a634548827cd3722976f01c",
+        "766a8fd9091026d466402924481793fa421a874a38a9e8ab8ecb9611150aad89",
+        "0608069704148996729dc41d4b1018e3294dad6da191060c313d26c1f958b4b1",
+        "1a0e996c9efddcbd5c90a9193c2f24e469ddb30fcf2ec00b7c1789ee9de53592",
+        "b6856b57425007b4a21e5fa4d8c625bb45caaeb6ea0f296938747cdac424cb2d",
+        "d343a04ad38abe1cf1e79e21d09d0aa9c7287a3606ae3085b69a1da7befe3e1d",
+        "e724c743daec1e7cea7dca2c46ebb37d8491db46ff33d50380c8890e6e709d8b",
+        "81aa3e7ec3806f95c3fd1bee82d62e1cb119057cd4dd270d6b01cdbcdd54b2d7"
+      ],
+      "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode3.hdf5"
+    },
+    {
+      "task": "adjust_bottle",
+      "episode": 3,
+      "episode_uid": 3,
+      "frame": 73,
+      "frame_indices": [
+        73,
+        77,
+        81,
+        85,
+        89,
+        93,
+        97,
+        101,
+        105
+      ],
+      "split": "train",
+      "encoded_head_hashes": [
+        "324f673b3d79721967472af055a4186f3b8a3e4bbf08153648acd6bae4616b2e",
+        "eaaa9127944370656f532b3423be2d57e4efd4c479a665b445b511ffd2667203",
+        "0c079f7f32962f1e5e44993d84ca731199e3258c90423cf898f52d55c733db79",
+        "87da9ee25f83d01bbcc6b2eabe337ce051b66feb8ca511809b33b413920e689d",
+        "d92a6bcd624f1ac2e1a8efe227be1d87498e909de23fd65bddd76ba9a0b583fb",
+        "cd736ace3a697802fa66619417c0a89039a0c06b26a38e53e595f65ea18f7736",
+        "5e6d4b027adeedef2e888e2df5d10b76d5ba83bd7a108388577685e67810f625",
+        "61e314a9d93e6713fd43ee5baf980a9a771baac07eaa4011556a9a69f9db31f6",
+        "5ca299532bb956b179a515444d9ca9b85c5b4e3229d03c9e7b1be3ff65ad4d76"
+      ],
+      "path": "data/adjust_bottle/aloha-agilex_clean_50/data/episode3.hdf5"
+    }
+  ],
+  "task_scores": null,
+  "passed": true,
+  "causal_deltas": {
+    "single_vs_video": 0.0,
+    "future_leak": 0.0,
+    "cache_reset": 0.0,
+    "future_sensitivity": 8.75
+  },
+  "pixel_decode": {
+    "shape": [
+      1,
+      3,
+      1,
+      384,
+      320
+    ],
+    "seconds": 0.09657657705247402,
+    "peak_allocated_GB": 1.885490176,
+    "training_frame_MSE_minus1_plus1": 0.00014878172078169882
+  },
+  "readout_geometry": {
+    "wan_and_svae_pooled_dim": 192,
+    "raw_dino_pooled_dim": 3072,
+    "native_pooled_norms": [
+      11.259224891662598,
+      11.18463134765625,
+      9.113317489624023,
+      8.009686470031738,
+      7.956089973449707,
+      7.950584411621094,
+      7.987373352050781,
+      7.970925807952881
+    ],
+    "layernorm_pooled_norms": [
+      12.544678688049316,
+      12.423026084899902,
+      10.801424026489258,
+      10.439584732055664,
+      10.551746368408203,
+      10.390888214111328,
+      10.398837089538574,
+      10.404192924499512
+    ],
+    "existing_DINO_shape": [
+      8,
+      768,
+      1,
+      24,
+      20
+    ]
+  },
+  "total_seconds": 10.17167166620493
+}

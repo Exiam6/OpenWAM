@@ -1,0 +1,199 @@
+{
+  "attempts": [
+    {
+      "task": "place_object_basket",
+      "seed": 902000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T11:52:31.044317-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 30.202808938920498,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:53:02.397560-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 237,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902001/data/episode0.hdf5",
+      "hdf5_sha256": "06d197be5e7dfa73a3ab9b73b929e1c2ca57d7b36b1345a5354552b3fa0d1dec",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 61.86268273182213,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T11:54:05.770698-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 27.290194883942604,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:54:35.080412-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 241,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902003/data/episode0.hdf5",
+      "hdf5_sha256": "904e85d3c548bec752ecf2558eb3b24b3223c0a2ee9bfe7760529d11a90f2ba3",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 60.517835604026914,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902004,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:55:36.936104-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 270,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902004/data/episode0.hdf5",
+      "hdf5_sha256": "613b3a1bac65bb4506b4bef91eb89c223cc47c123292334d628eacf08cc9916c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 62.55131748877466,
+      "exit_code": 0
+    }
+  ],
+  "accepted": [
+    {
+      "task": "place_object_basket",
+      "seed": 902001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:53:02.397560-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 237,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902001/data/episode0.hdf5",
+      "hdf5_sha256": "06d197be5e7dfa73a3ab9b73b929e1c2ca57d7b36b1345a5354552b3fa0d1dec",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 61.86268273182213,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:54:35.080412-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 241,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902003/data/episode0.hdf5",
+      "hdf5_sha256": "904e85d3c548bec752ecf2558eb3b24b3223c0a2ee9bfe7760529d11a90f2ba3",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 60.517835604026914,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 902004,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:55:36.936104-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 270,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/place_object_basket/seed-902004/data/episode0.hdf5",
+      "hdf5_sha256": "613b3a1bac65bb4506b4bef91eb89c223cc47c123292334d628eacf08cc9916c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 62.55131748877466,
+      "exit_code": 0
+    }
+  ],
+  "accepted_count": 3,
+  "elapsed_seconds": 249.93632574379444,
+  "collection_deadline": "2026-09-23T14:38:51.767900-05:00"
+}

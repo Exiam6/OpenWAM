@@ -1,0 +1,8 @@
+[eval_policy_wrapper] RoboTwin commit=0aeea2d669c0 eval_policy.py sha256=8b16c766a9c40116
+[eval_policy_wrapper] runtime_root=/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v4/place_object_basket/seed-802015/runtime
+[eval_policy_wrapper] prewarmed CUDA/Curobo before SAPIEN import
+[eval_policy_wrapper] patched warp.torch compatibility namespace
+/vol13/zifanz4/openwam-experiments/goalaux-native/benchmark-env/lib/python3.10/site-packages/sapien/_vulkan_tricks.py:37: UserWarning: Failed to find Vulkan ICD file. This is probably due to an incorrect or partial installation of the NVIDIA driver. SAPIEN will attempt to provide an ICD file anyway but it may not work.
+  warn(
+missing pytorch3d
+{"task": "place_object_basket", "seed": 802015, "role": "expert_only_independent_confirmation", "accepted": false, "started_at": "2026-09-22T19:01:33.524892-05:00", "expert_plan_success": false, "outcome": "expert_infeasible", "elapsed_seconds": 41.71579842455685}

@@ -1,0 +1,116 @@
+{
+  "checked_at": "2026-09-23T20:01:47.076751-05:00",
+  "trigger": "2026-09-23T20:00:01.720126-05:00",
+  "training": {
+    "pca-seed42": {
+      "optimizer_updates": 598,
+      "metric_age_seconds": 1.6103503704071045,
+      "finite_losses": true,
+      "exit": null
+    },
+    "pca-seed43": {
+      "optimizer_updates": 590,
+      "metric_age_seconds": 0.7260730266571045,
+      "finite_losses": true,
+      "exit": null
+    },
+    "pca-seed44": {
+      "optimizer_updates": 0,
+      "metric_age_seconds": null,
+      "finite_losses": true,
+      "exit": null
+    },
+    "svae-seed42": {
+      "optimizer_updates": 590,
+      "metric_age_seconds": 0.6283266544342041,
+      "finite_losses": true,
+      "exit": null
+    },
+    "svae-seed43": {
+      "optimizer_updates": 601,
+      "metric_age_seconds": 1.3010363578796387,
+      "finite_losses": true,
+      "exit": null
+    },
+    "svae-seed44": {
+      "optimizer_updates": 0,
+      "metric_age_seconds": null,
+      "finite_losses": true,
+      "exit": null
+    },
+    "wan-seed42": {
+      "optimizer_updates": 539,
+      "metric_age_seconds": 0.31659483909606934,
+      "finite_losses": true,
+      "exit": null
+    },
+    "wan-seed43": {
+      "optimizer_updates": 556,
+      "metric_age_seconds": 1.3251433372497559,
+      "finite_losses": true,
+      "exit": null
+    },
+    "wan-seed44": {
+      "optimizer_updates": 0,
+      "metric_age_seconds": null,
+      "finite_losses": true,
+      "exit": null
+    }
+  },
+  "collections": {
+    "adjust_bottle": {
+      "accepted": 26,
+      "attempted": 31,
+      "last_update": "2026-09-23T20:01:46.149388-05:00",
+      "last_outcome": "accepted"
+    },
+    "handover_block": {
+      "accepted": 0,
+      "attempted": 0,
+      "last_update": null,
+      "last_outcome": null
+    },
+    "place_object_basket": {
+      "accepted": 19,
+      "attempted": 32,
+      "last_update": "2026-09-23T20:01:12.783965-05:00",
+      "last_outcome": "accepted"
+    }
+  },
+  "exits": {
+    "collection-slots/5": null,
+    "collection-slots/7": null,
+    "simulation-preflight": null,
+    "pipeline": null
+  },
+  "frozen_mismatches": [],
+  "pipeline": {
+    "time": "2026-09-23T20:01:40.555923-05:00",
+    "stage": "waiting_for_all_training_collection_smoke",
+    "all_ready": false
+  },
+  "free_gib": 293.9638671875,
+  "cm001_gpu": "0, GPU-c83b7d25-753e-2eae-f13b-8f9c3df9fa4b, 32223 MiB, 96 %, 0\n1, GPU-67b700c2-eb7a-93aa-28dd-57e8b2711926, 37991 MiB, 36 %, 0\n2, GPU-025b7fc9-8f25-5467-5c28-8e59884ab6d3, 31989 MiB, 87 %, 0\n3, GPU-bba13bfa-9dd6-0956-0e4e-122950cd69fe, 16 MiB, 0 %, 0\n4, GPU-e7aef4c0-2628-b4f8-34f4-579d62b7feb6, 5 MiB, 0 %, 0\n5, GPU-1758045c-5a5e-3661-bb58-a786fa745a17, 1 MiB, 0 %, 0\n6, GPU-91a9a93b-b386-82f0-3009-88cc9bb79d06, 1 MiB, 0 %, 0\n7, GPU-3624eff9-444b-b72c-e32e-2bae7acbb8cb, 2549 MiB, 0 %, 0\n",
+  "tmux": "exp\now-e2e-pipeline\now-e2e-scenes-5\now-e2e-scenes-7\now-e2e-smoke\n",
+  "decision": "Healthy ongoing state; no new scientific result, completion, technical failure or requested decision. No additional experiment or timer launched.",
+  "old_layers_deadline_unchanged": true,
+  "owned_gpu_slots": {
+    "cm009": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "cm001": [
+      5,
+      7
+    ]
+  },
+  "owned_gpu_uncorrected_ecc": 0,
+  "excluded_cm009_gpu0_ecc": 2,
+  "next_step": "Keep the frozen six active training jobs, three queued seed44 runs and two fresh-scene collectors within their existing bounds. Once collection slot7 releases, the existing bounded development simulator gate will verify real camera pose, contact records, scene reconstruction and per-episode RNG before any fresh heldout policy outcome. This separates evaluation implementation errors from actual representation-induced control changes.",
+  "publication": "No new substantive result requiring publication; existing NOT_FOUND404 record retained; local report refreshed.",
+  "notification": "quiet"
+}

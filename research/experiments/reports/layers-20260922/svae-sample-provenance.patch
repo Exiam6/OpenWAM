@@ -1,0 +1,284 @@
+From a030f01f4ddcc268db89522a1b416925c61cc0ca Mon Sep 17 00:00:00 2001
+From: Codex <codex@localhost>
+Date: Tue, 22 Sep 2026 14:49:03 -0500
+Subject: [PATCH] Add opt-in sample provenance to native S-VAE feature shards
+
+---
+ .../video_backbone/encoder/svae/collect.yaml  |   1 +
+ scripts/svae_train/FEATURE_PROVENANCE.md      |  22 ++++
+ scripts/svae_train/collect_svae_features.py   |  18 ++-
+ scripts/svae_train/feature_provenance.py      |  46 +++++++
+ tests/test_svae_feature_provenance.py         | 114 ++++++++++++++++++
+ 5 files changed, 199 insertions(+), 2 deletions(-)
+ create mode 100644 scripts/svae_train/FEATURE_PROVENANCE.md
+ create mode 100644 scripts/svae_train/feature_provenance.py
+ create mode 100644 tests/test_svae_feature_provenance.py
+
+diff --git a/configs/model/video_backbone/encoder/svae/collect.yaml b/configs/model/video_backbone/encoder/svae/collect.yaml
+index abb5919..3c47ee2 100644
+--- a/configs/model/video_backbone/encoder/svae/collect.yaml
++++ b/configs/model/video_backbone/encoder/svae/collect.yaml
+@@ -9,3 +9,4 @@ defaults:
+ 
+ svae_collect:
+   output_dir: outputs/openwam_svae  # script writes <encoder_name>_<timestamp>/ with feature shards + stats.pt
++  write_sample_provenance: false  # opt-in per-row dataset identity + preprocessed-input SHA256
+diff --git a/scripts/svae_train/FEATURE_PROVENANCE.md b/scripts/svae_train/FEATURE_PROVENANCE.md
+new file mode 100644
+index 0000000..eff74a0
+--- /dev/null
++++ b/scripts/svae_train/FEATURE_PROVENANCE.md
+@@ -0,0 +1,22 @@
++# Optional sample provenance
++
++Pass `svae_collect.write_sample_provenance=true` to the normal feature collector.
++Default collection output and model/training behavior are unchanged. The enabled
++collector adds `provenance_version: 1` and one `sample_metadata` record per feature
++row to each existing shard; feature-only readers can continue ignoring extra keys.
++
++Each record contains the actual shuffled dataset index, the collection split
++(`train`, as in the existing collector), available task/episode/window fields,
++and SHA256 of the preprocessed encoder input with its dtype and shape. Hashing
++happens after dataset augmentation and encoder preprocessing. BF16 is hashed as
++raw bytes, not cast to a different numeric format. This adds CPU transfer and
++hashing overhead only when enabled.
++
++Use episode identities to audit externally defined train/evaluation manifests;
++this option does not itself split data or prove that caches are disjoint. It
++also does not save labels, augmentation parameters, all sampled raw-frame indices,
++or an encoder checkpoint hash. The existing resolved config remains available
++beside the shards. Missing dataset-specific metadata stays absent, not invented.
++A matching input digest establishes byte identity under the recorded dtype/shape,
++not semantic scene equivalence. Paths are recorded exactly as supplied by the
++dataset and may be machine specific.
+diff --git a/scripts/svae_train/collect_svae_features.py b/scripts/svae_train/collect_svae_features.py
+index 915da16..ec8fee7 100644
+--- a/scripts/svae_train/collect_svae_features.py
++++ b/scripts/svae_train/collect_svae_features.py
+@@ -148,6 +148,7 @@ def main(cfg: DictConfig) -> None:
+     from openwam.dataloader.registry import build_dataset
+     from openwam.model.video_backbone.encoder import build_video_encoder
+     from openwam.train.utils.seeding import dataloader_worker_init_fn, make_dataloader_generator
++    from scripts.svae_train.feature_provenance import sample_record, shard_payload
+ 
+     dataset = build_dataset(cfg.dataloader, split="train")
+ 
+@@ -205,21 +206,27 @@ def main(cfg: DictConfig) -> None:
+     # Bounded-size chunked writing: buffer clips until ~_PART_BYTES_TARGET, then
+     # flush a part file and clear, so the collector's RAM stays flat regardless
+     # of dataset size.
++    write_provenance = bool(cfg.svae_collect.get("write_sample_provenance", False))
++    metadata_buf: list[dict] = []
+     feat_buf: list[torch.Tensor] = []  # (b, raw_dim, T_lat, h, w) cpu fp16
+     buf_clips = 0
+     part_idx = 0
+     flush_every = None  # clips per part, set from the first batch's clip size
+ 
+     def _flush() -> None:
+-        nonlocal feat_buf, buf_clips, part_idx
++        nonlocal feat_buf, metadata_buf, buf_clips, part_idx
+         if not feat_buf:
+             return
+         features = torch.cat(feat_buf, dim=0)
+         shard_path = output_dir / f"features_rank{rank}_part{part_idx:05d}.pt"
+-        torch.save({"features": features, "raw_dim": int(raw_dim), "encoder_name": encoder_name}, str(shard_path))
++        torch.save(
++            shard_payload(features, raw_dim, encoder_name, metadata_buf if write_provenance else None),
++            str(shard_path),
++        )
+         logger.info("[rank %d] wrote part %d: %d clips -> %s", rank, part_idx, features.shape[0], shard_path)
+         part_idx += 1
+         feat_buf = []
++        metadata_buf = []
+         buf_clips = 0
+ 
+     t0 = time.time()
+@@ -237,6 +244,13 @@ def main(cfg: DictConfig) -> None:
+             if flush_every is None:
+                 clip_bytes = max(1, raw[0].numel() * 2)  # fp16 stored on disk
+                 flush_every = max(1, _PART_BYTES_TARGET // clip_bytes)
++            if write_provenance:
++                indices = my_indices[total_clips : total_clips + len(samples)]
++                if len(indices) != len(samples) or raw.shape[0] != len(samples):
++                    raise ValueError("Sampler, input clips and output feature rows must align")
++                metadata_buf.extend(
++                    sample_record(sample, index, tensor) for sample, index, tensor in zip(samples, indices, tensors)
++                )
+             feat_buf.append(raw.detach().to("cpu", torch.float16))
+             buf_clips += raw.shape[0]
+             total_clips += raw.shape[0]
+diff --git a/scripts/svae_train/feature_provenance.py b/scripts/svae_train/feature_provenance.py
+new file mode 100644
+index 0000000..8a42a55
+--- /dev/null
++++ b/scripts/svae_train/feature_provenance.py
+@@ -0,0 +1,46 @@
++"""Optional, tensor-only-input provenance for offline S-VAE feature shards."""
++
++from __future__ import annotations
++
++import hashlib
++import json
++
++import torch
++
++
++def sample_record(sample: dict, dataset_index: int, encoder_input: torch.Tensor) -> dict:
++    """Bind one feature row to its dataset index and actual preprocessed input.
++
++    This records identity, not a proof of episode-disjoint splits. The digest
++    includes dtype and shape; hashing BF16 bytes must not cast values to FP32.
++    CPU transfer and hashing are intentionally opt-in collection costs.
++    """
++    tensor = encoder_input.detach().contiguous().cpu()
++    if tensor.ndim != 5 or tensor.shape[0] != 1:
++        raise ValueError("Expected one preprocessed clip with shape (1,C,T,H,W)")
++    descriptor = {"dtype": str(tensor.dtype), "shape": list(tensor.shape)}
++    header = json.dumps(descriptor, sort_keys=True, separators=(",", ":")).encode()
++    digest = hashlib.sha256(header + b"\0" + tensor.view(torch.uint8).numpy().tobytes()).hexdigest()
++    record = {
++        "dataset_index": int(dataset_index),
++        "collection_split": "train",
++        "encoder_input": descriptor,
++        "encoder_input_sha256": digest,
++    }
++    for key in ("episode_path", "task_name"):
++        if sample.get(key) is not None:
++            record[key] = str(sample[key])
++    for key in ("episode_index", "start_frame", "end_frame", "episode_length"):
++        if sample.get(key) is not None:
++            record[key] = int(sample[key])
++    return record
++
++
++def shard_payload(features: torch.Tensor, raw_dim: int, encoder_name: str, records: list | None = None) -> dict:
++    """Keep the legacy shard shape unless aligned metadata is explicitly supplied."""
++    payload = {"features": features, "raw_dim": int(raw_dim), "encoder_name": encoder_name}
++    if records is not None:
++        if len(records) != len(features):
++            raise ValueError("Sample metadata must have exactly one record per feature row")
++        payload.update(provenance_version=1, sample_metadata=list(records))
++    return payload
+diff --git a/tests/test_svae_feature_provenance.py b/tests/test_svae_feature_provenance.py
+new file mode 100644
+index 0000000..e385572
+--- /dev/null
++++ b/tests/test_svae_feature_provenance.py
+@@ -0,0 +1,114 @@
++"""Identity, shard alignment and real collector control flow, without a GPU."""
++
++import hashlib
++import importlib.util
++import json
++import sys
++import types
++from pathlib import Path
++
++import pytest
++import torch
++from omegaconf import OmegaConf
++
++ROOT = Path(__file__).resolve().parents[1]
++
++
++def load_module(name, relative):
++    spec = importlib.util.spec_from_file_location(name, ROOT / relative)
++    module = importlib.util.module_from_spec(spec)
++    spec.loader.exec_module(module)
++    return module
++
++
++provenance = load_module("feature_provenance_test", "scripts/svae_train/feature_provenance.py")
++
++
++def test_hash_binds_actual_bfloat16_bytes_shape_and_dtype():
++    tensor = torch.arange(24).reshape(1, 3, 2, 2, 2).to(torch.bfloat16)
++    record = provenance.sample_record({"task_name": "t", "start_frame": 9}, 7, tensor)
++    header = json.dumps(record["encoder_input"], sort_keys=True, separators=(",", ":")).encode()
++    assert (
++        record["encoder_input_sha256"]
++        == hashlib.sha256(header + b"\0" + tensor.view(torch.uint8).numpy().tobytes()).hexdigest()
++    )
++    assert record["dataset_index"] == 7 and record["start_frame"] == 9
++    changed = tensor.clone()
++    changed[0, 0, 0, 0, 0] += 1
++    for other in (changed, tensor.float(), tensor.reshape(1, 3, 1, 2, 4)):
++        assert provenance.sample_record({}, 7, other)["encoder_input_sha256"] != record["encoder_input_sha256"]
++
++
++def test_legacy_format_and_bad_alignment():
++    features = torch.zeros(2, 3, 1, 2, 2)
++    assert set(provenance.shard_payload(features, 3, "dinov3")) == {"features", "raw_dim", "encoder_name"}
++    with pytest.raises(ValueError, match="one record"):
++        provenance.shard_payload(features, 3, "dinov3", [{}])
++    with pytest.raises(ValueError, match="one preprocessed"):
++        provenance.sample_record({}, 0, features)
++
++
++@pytest.mark.parametrize("enabled", [False, True])
++def test_actual_collector_shuffled_partial_batch_and_flush(tmp_path, monkeypatch, enabled):
++    collector = load_module("collector_test", "scripts/svae_train/collect_svae_features.py")
++    monkeypatch.setattr(torch.cuda, "is_available", lambda: False)
++    monkeypatch.setattr(collector, "_setup_distributed", lambda: (0, 0, 1))
++    monkeypatch.setattr(collector, "_PART_BYTES_TARGET", 48)
++    monkeypatch.setattr(collector.dist, "is_initialized", lambda: False)
++
++    class Dataset:
++        def __len__(self):
++            return 3
++
++        def __getitem__(self, index):
++            return {"video": index, "episode_index": index, "start_frame": index * 5, "task_name": "fixture"}
++
++    class Encoder(torch.nn.Module):
++        _raw_embed_dim = 3
++
++        def preprocess_video(self, value):
++            return torch.full((1, 3, 1, 2, 2), float(value), dtype=torch.float32)
++
++        def batch_encode_pooled_for_svae_training(self, value):
++            return value
++
++    for name, attrs in {
++        "openwam.dataloader.registry": {"build_dataset": lambda cfg, split: Dataset()},
++        "openwam.model.video_backbone.encoder": {"build_video_encoder": lambda cfg: Encoder()},
++        "openwam.train.utils.seeding": {
++            "dataloader_worker_init_fn": lambda _: None,
++            "make_dataloader_generator": lambda seed, rank: torch.Generator().manual_seed(seed),
++        },
++    }.items():
++        module = types.ModuleType(name)
++        module.__dict__.update(attrs)
++        monkeypatch.setitem(sys.modules, name, module)
++    cfg = OmegaConf.create(
++        {
++            "project": {"seed": 42},
++            "dataloader": {},
++            "model": {"video_backbone": {"encoder": {"name": "dinov3", "svae_path": None}}},
++            "training": {"batch_size": 2, "dataset_num_workers": 0},
++            "svae_collect": {"output_dir": str(tmp_path), "write_sample_provenance": enabled},
++        }
++    )
++    collector.main.__wrapped__(cfg)
++    parts = sorted(tmp_path.glob("*/features_rank*_part*.pt"))
++    assert len(parts) == 2
++    expected = torch.randperm(3, generator=torch.Generator().manual_seed(42)).tolist()
++    offset = 0
++    for path in parts:
++        shard = torch.load(path, weights_only=True)
++        indices = expected[offset : offset + len(shard["features"])]
++        assert shard["features"][:, 0, 0, 0, 0].tolist() == indices
++        if enabled:
++            assert shard["provenance_version"] == 1
++            for index, record in zip(indices, shard["sample_metadata"]):
++                assert record["dataset_index"] == record["episode_index"] == index
++                assert record["start_frame"] == index * 5
++                reference = provenance.sample_record(Dataset()[index], index, Encoder().preprocess_video(index))
++                assert record == reference
++        else:
++            assert "sample_metadata" not in shard and "provenance_version" not in shard
++        offset += len(shard["features"])
++    assert offset == 3
+-- 
+2.34.1
+

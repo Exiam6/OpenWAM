@@ -1,0 +1,66 @@
+{
+  "checked_at": "2026-09-22T01:21:57.603232-05:00",
+  "snapshot_only_no_reservation": true,
+  "nodes": [
+    {
+      "host": "cm001",
+      "exit_code": 0,
+      "output": "0, GPU-c83b7d25-753e-2eae-f13b-8f9c3df9fa4b, 4673 MiB, 19 %\n1, GPU-67b700c2-eb7a-93aa-28dd-57e8b2711926, 8154 MiB, 29 %\n2, GPU-025b7fc9-8f25-5467-5c28-8e59884ab6d3, 6 MiB, 0 %\n3, GPU-bba13bfa-9dd6-0956-0e4e-122950cd69fe, 34565 MiB, 100 %\n4, GPU-e7aef4c0-2628-b4f8-34f4-579d62b7feb6, 34575 MiB, 99 %\n5, GPU-1758045c-5a5e-3661-bb58-a786fa745a17, 34573 MiB, 99 %\n6, GPU-91a9a93b-b386-82f0-3009-88cc9bb79d06, 34573 MiB, 100 %\n7, GPU-3624eff9-444b-b72c-e32e-2bae7acbb8cb, 34571 MiB, 100 %",
+      "error": ""
+    },
+    {
+      "host": "cm008",
+      "exit_code": 255,
+      "output": "",
+      "error": "ssh: Could not resolve hostname cm008: Temporary failure in name resolution"
+    },
+    {
+      "host": "cm009",
+      "exit_code": 255,
+      "output": "",
+      "error": "ssh: Could not resolve hostname cm009: Name or service not known"
+    },
+    {
+      "host": "cm002",
+      "exit_code": 255,
+      "output": "",
+      "error": "ssh: Could not resolve hostname cm002: Name or service not known"
+    },
+    {
+      "host": "cm003",
+      "exit_code": 255,
+      "output": "",
+      "error": "ssh: Could not resolve hostname cm003: Name or service not known"
+    },
+    {
+      "host": "cm004",
+      "exit_code": 255,
+      "output": "",
+      "error": "ssh: Could not resolve hostname cm004: Name or service not known"
+    },
+    {
+      "host": "cm005",
+      "exit_code": 255,
+      "output": "",
+      "error": "ssh: Could not resolve hostname cm005: Name or service not known"
+    },
+    {
+      "host": "cm006",
+      "exit_code": 255,
+      "output": "",
+      "error": "ssh: Could not resolve hostname cm006: Temporary failure in name resolution"
+    },
+    {
+      "host": "cm007",
+      "exit_code": 255,
+      "output": "",
+      "error": "ssh: Could not resolve hostname cm007: Temporary failure in name resolution"
+    },
+    {
+      "host": "cm010",
+      "exit_code": 255,
+      "output": "",
+      "error": "ssh: Could not resolve hostname cm010: Name or service not known"
+    }
+  ]
+}

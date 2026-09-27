@@ -1,0 +1,17 @@
+place_object_basket 802014 expert_infeasible {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 9}
+place_object_basket 802015 expert_infeasible {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 9}
+place_object_basket 802016 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 10}
+place_object_basket 802017 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 11}
+place_object_basket 802018 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 12}
+place_object_basket 802019 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 13}
+place_object_basket 802020 expert_infeasible {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 13}
+place_object_basket 802021 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 14}
+place_object_basket 802022 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 15}
+place_object_basket 802023 accepted {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 16}
+place_object_basket 802024 infrastructure_failure {'adjust_bottle': 20, 'handover_block': 20, 'place_object_basket': 16}
+Traceback (most recent call last):
+  File "/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation_v4.py", line 43, in <module>
+    else:parent()
+  File "/vol13/zifanz4/openwam-experiments/scripts/goalaux/collect_confirmation_v4.py", line 37, in parent
+    if code or res['outcome']=='infrastructure_failure':raise RuntimeError('Unclassified failure retained; no retry')
+RuntimeError: Unclassified failure retained; no retry

@@ -1,0 +1,80 @@
+{
+  "updated_at": "2026-09-22T19:21:18.931171-05:00",
+  "status": "goalaux_confirmation_incomplete_at_original_deadline_archived",
+  "readouts": {
+    "completed": true,
+    "exit_code": 0,
+    "training_episodes": 105,
+    "training_clips": 1260,
+    "ridge_endpoint_fits": 36,
+    "ridge_groups": 54,
+    "mlp_fits": 36,
+    "independent_saved_artifact_audit_passed": true,
+    "new_confirmation_scored": false
+  },
+  "confirmation": {
+    "as_of": "2026-09-22T19:17:48.667533-05:00",
+    "accepted_counts": {
+      "adjust_bottle": 20,
+      "handover_block": 20,
+      "place_object_basket": 16
+    },
+    "accepted_total": 56,
+    "distinct_attempts_completed": 69,
+    "planned_accepted_total": 60,
+    "original_failed_setups": 1,
+    "initial_failure": "missing old-root collision asset paths caused planner fallback, stopped before any actions/trajectory",
+    "documented_repair": "only two copied YAML asset prefixes; same native geometry, physics, planner, cameras, seed sequence, originaldeadline",
+    "current_actual_planner": "CuroboPlanner; checked in both arms per scene",
+    "collection_deadline": "2026-09-22T19:15:55.548938-05:00",
+    "collection_exit_code": 1,
+    "confirmation_job": "stopped; archived incomplete without scoring",
+    "confirmation_exit_code": 1,
+    "new_scores_observed": false,
+    "frozen_confirmation_files": 69,
+    "outcomes": {
+      "accepted": 56,
+      "unstable_scene": 3,
+      "expert_infeasible": 10,
+      "infrastructure_failure": 1
+    },
+    "active_seed": null,
+    "active_worker_alive": false,
+    "last_check": "terminal56/60; no owned jobs remain; GPU released; integrity audit passed",
+    "runtime_provenance_checked": 36,
+    "goalaux_environment_and_result_apparent_bytes": {
+      "goalaux-native": 17750064178,
+      "goalaux-20260922": 1281275647
+    },
+    "collector_directory": "fresh-v4",
+    "confirmation_directory": "confirmation-v2 (stopped; no scoring started)",
+    "previous_collector_exit_code": 1,
+    "previous_waiting_job_exit_code": 1,
+    "classification_amendment": "NULL_GRASP_ALL_CALLS_AMENDMENT.md",
+    "reclassified_candidates": [
+      {
+        "task": "place_object_basket",
+        "seed": 802008,
+        "original_outcome": "infrastructure_failure"
+      },
+      {
+        "task": "place_object_basket",
+        "seed": 802013,
+        "original_outcome": "infrastructure_failure"
+      }
+    ],
+    "retained_completed_candidates": 59,
+    "retained_accepted_scenes": 49,
+    "completed_seeds_replayed": 0,
+    "numeric_scorer_changed": false,
+    "original_failed_initializations": 1,
+    "raw_null_grasp_failures_preserved": 2,
+    "distinct_candidates_started": 70,
+    "collection_complete": false,
+    "terminal_worker_exit_code": 124,
+    "terminal_reason": "original collection deadline interrupted current owned worker; worker exit124; parent exit1",
+    "archive_integrity_passed": true
+  },
+  "next_step": "The goalaux confirmation branch is terminal/incomplete: retain all 56 accepted scenes, 70 distinct started candidates, six trained models and frozen readouts. Do not restart collection, score the partial cohort, refit, extend the original bounds or reinterpret incompleteness as benefit/no benefit. Scientific uncertainty remains whether fixed goal supervision jointly improves noisy initial-waypoint information and preserves state information; this run cannot answer it. The completed layer-study evidence and opt-in provenance patch are available for review in contribution/REPRESENTATION_EVIDENCE.md. Subsequent selfchecks should only verify unexpected changes or address the existing publication blocker; no duplicate GPU job/timer/agent. A future scientific experiment would need its own prospective protocol and cannot silently complete this expired cohort. Original overall study deadline remains 2026-09-23T01:15:12-05:00.",
+  "study_deadline": "2026-09-23T01:15:12-05:00"
+}

@@ -1,0 +1,25 @@
+{
+  "robotwin_commit": "0aeea2d669c0f8516f4d5785f0aa33ba812c14b4",
+  "curobo_commit": "d64c4b005459db10c5dd867d8b30a87d5bda9bdb",
+  "torch": "2.4.1+cu124",
+  "nvcc": "/usr/local/cuda-12.4/bin/nvcc",
+  "build_arch": "8.9",
+  "max_compile_jobs": 2,
+  "setuptools": "78.1.0",
+  "setuptools_reason": "SAPIEN3.0.0b1 imports pkg_resources; current setuptools removed it",
+  "pytorch3d_installed": false,
+  "pytorch3d_scope": "Optional point-cloud sampling; planned clean RGB-only eval does not request point clouds",
+  "environment_patches": {
+    "sapien/wrapper/urdf_loader.py": {
+      "before_sha256": "eabba86fe7d244ce8d469010f96914010a8883ea5835c86a8bc58be310510683",
+      "after_sha256": "13aad693f05663472a4f1b59ea34fb313db6ee2f1416fce19ad4830cfa588059",
+      "basis": "same edits as pinned RoboTwin script/_install.sh"
+    },
+    "mplib/planner.py": {
+      "before_sha256": "785f77233baf4159f3327b664fae2507572c189223a6075f42546c1133ddfa0e",
+      "after_sha256": "23c51d083ce1892e5fbd0e1473df432d1c33609e50bfac8bdf9e8bfcf6c2cf3c",
+      "basis": "same edits as pinned RoboTwin script/_install.sh"
+    }
+  },
+  "simulator_execution_verified": false
+}

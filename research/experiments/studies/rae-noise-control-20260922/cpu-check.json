@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "repeated_clean_per_scene_regularization_prediction_max_abs": 2.440270208126094e-13,
+  "no_actual_model_refit": true,
+  "source": "CLI --check output before launch; no repeat",
+  "recorded_at": "2026-09-23T00:03:46.696583-05:00"
+}

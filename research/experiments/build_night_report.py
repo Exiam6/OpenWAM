@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+"""Render the public report from completed experiment artifacts only."""
+import json,html,shutil,tarfile
+from pathlib import Path
+ROOT=Path(__file__).resolve().parent;SITE=Path('/home/zifanz4/research-reports/dist');SRC=ROOT/'public-results/night-20260921'
+s=json.loads((SRC/'summary.json').read_text());assert s['resources']['trained_models']==18
+ASSETS=SITE/'assets/night-20260921';ASSETS.mkdir(parents=True,exist_ok=True)
+for f in SRC.iterdir():
+ if f.suffix in ['.json','.svg','.png']:shutil.copy2(f,ASSETS/f.name)
+shutil.copy2(ROOT/'contribution/svae-heldout-evaluation.patch',ASSETS/'svae-heldout-evaluation.patch')
+shutil.copy2(ROOT/'NIGHT_PROTOCOL.md',ASSETS/'protocol.md');shutil.copy2(ROOT/'REPRODUCE_NIGHT.md',ASSETS/'reproduce.md')
+with tarfile.open(ASSETS/'reproduction-scripts.tar.gz','w:gz') as tar:
+ for f in ['NIGHT_PROTOCOL.md','REPRODUCE_NIGHT.md','requirements-lock.txt','scripts/pilot.py','scripts/download_pilot.py','scripts/download_night.py','scripts/night.py','scripts/correct_corruptions.py','scripts/summarize_night.py']:
+  tar.add(ROOT/f,arcname='openwam-night-study/'+f)
+NAMES={'adjust_bottle':'瓶子调整','handover_block':'双臂交接','place_object_basket':'物体入篮'}
+def fmt(d):
+ v=f"{d['mean']:.4f}";std=d.get('std_across_training_seeds')
+ return v if std is None else v+f" ± {std:.4f}"
+def change(v):return f"{v:+.1f}%"
+recon_rows=[];probe_rows=[];paired_rows=[];energy_rows=[]
+for task,b in s['tasks'].items():
+ for method,label in [('pca48','PCA-48'),('svae_w1','S-VAE 原始损失'),('svae_w4','S-VAE 当前帧权重 4')]:
+  m=b['methods'][method];r=m['reconstruction'];p=m['probes']
+  recon_rows.append(f"<tr><td>{NAMES[task]}</td><td>{label}</td><td>{fmt(r['condition_mse'])}</td><td>{fmt(r['pooled_target_mse'])}</td><td>{fmt(r['all_mse'])}</td></tr>")
+  probe_rows.append(f"<tr><td>{NAMES[task]}</td><td>{label}</td><td>{fmt(p['clean'])}</td><td>{fmt(p['brightness06'])}</td><td>{fmt(p['noise10'])}</td></tr>")
+ for metric,label in [('condition_mse','当前帧重建'),('pooled_target_mse','未来帧重建'),('clean_probe','干净输入 probe')]:
+  a=b['paired_weight4_vs_weight1'][metric];lo,hi=a['episode_paired_bootstrap_95ci']
+  paired_rows.append(f"<tr><td>{NAMES[task]}</td><td>{label}</td><td>{change(a['relative_change_percent'])}</td><td>{a['candidate_minus_baseline']:+.5f} [{lo:+.5f}, {hi:+.5f}]</td></tr>")
+ r=b['methods']['svae_w1']['reconstruction']
+ energy_rows.append(f"<tr><td>{NAMES[task]}</td><td>{r['condition_mse']['mean']/r['pooled_target_mse']['mean']:.2f}×</td><td>{r['condition_relative_mse']['mean']:.4f}</td><td>{r['pooled_target_relative_mse']['mean']:.4f}</td></tr>")
+# The conclusion is a decision under the fixed protocol, not a universal failure claim.
+assert sum(b['paired_weight4_vs_weight1']['pooled_target_mse']['relative_change_percent']>0 for b in s['tasks'].values())>=2
+r=s['resources'];maxdiff=max(b['corruption_numeric_control']['all_test_clean_max_abs'] for b in s['tasks'].values())
+page=f'''<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>今晚的最小贡献实验 · OpenWAM Research Notebook</title><meta name="description" content="三任务、三随机种子的 S-VAE 诊断：评估损失加权，准备不改变模型的独立 held-out 评测贡献。"><link rel="stylesheet" href="style.css"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23223b31'/%3E%3Cpath d='M7 9h18M7 16h12M7 23h18' stroke='%23b2ce50' stroke-width='3'/%3E%3C/svg%3E"></head><body><header><a class="brand" href="index.html">EMBODIED / RESEARCH NOTEBOOK</a><span class="status">已完成 · 2026.09.21</span></header><div class="layout"><aside><p>OPENWAM / MINIMAL CONTRIBUTION</p><nav aria-label="实验报告目录"><a href="#decision">贡献结论</a><a href="#results">三任务对照</a><a href="#robustness">输入扰动</a><a href="#controls">实验控制</a><a href="#patch">补丁与复现</a><a href="gaps.html">原版的不足</a><a href="experiments.html">首轮 pilot</a><a href="rae.html">RAE 改进方案</a></nav><div class="aside-note">探索性离线研究<br>包含负结果与复现材料</div></aside><main>
+<div class="hero"><div class="eyebrow">Completed experiment · smallest useful contribution</div><h1>先补评测。<br><em>加权改动暂不推荐。</em></h1><p class="lead">在三个任务、三个训练种子的固定预算对照中，没有得到足以推荐“提高当前帧损失权重”的证据。今晚更可靠的交付，是一个保持模型和训练不变的独立评测入口，以及完整的对照结果。</p></div>
+<div class="facts"><div><b>18</b><small>新训练的 S-VAE · 每次 2,000 步</small></div><div><b>3 × 3</b><small>任务 × 训练种子 · 逐轨迹划分</small></div><div><b>110 行</b><small>独立评测脚本 · 核心模型 0 改动</small></div></div>
+<section id="decision"><h2>今晚识别出的可补全部分</h2><div class="table-wrap"><table><thead><tr><th>候选贡献</th><th>证据与决定</th></tr></thead><tbody><tr><td>独立 held-out 评测</td><td>固定上游版本的 S-VAE 训练入口没有独立验证流程。新增脚本可直接评测现有检查点，使用训练时的归一化统计。推荐作为首个贡献。</td></tr><tr><td>当前帧 / 未来帧分开汇报</td><td>两类输入的分布与作用不同。汇总误差不能说明收益来自哪一类；同时报告目标能量归一化结果，避免误读自然方差差异。</td></tr><tr><td>当前帧损失权重设为 4</td><td>三个任务、全部种子保留。当前证据不足以推荐；不放入贡献补丁，不改变默认训练。</td></tr><tr><td>扰动与控制相关诊断</td><td>干净训练的探针在合成噪声下更差。作为筛查工具保留；未验证闭环机器人成功率。</td></tr></tbody></table></div><div class="callout"><strong>贡献主张控制在工具与可复现结论的范围。</strong> “补全评测入口”已有代码依据；“改权重能改善策略”没有得到支持。研究对象是 OpenWAM-Study 的 DINO/S-VAE 分支，不是默认采用 Wan-VAE 的 OpenWAM-α。</div></section>
+<section id="results"><h2>相同预算下，改动是否值得保留？</h2><p><strong>三个任务的平均点估计：</strong>加权后当前帧重建误差增加 0.4%–1.8%，未来帧误差增加 6.5%–11.1%，干净输入 probe 误差增加 1.1%–4.6%。部分区间跨过零，因此不将每一个差异都称为显著退化。</p><p><strong>更值得保留的观察：</strong>原始 S-VAE 相对 PCA-48 的汇总重建误差低约 45%–50%，但干净 probe 的均值只在两个任务改善约 3%–4%，交接任务反而差约 3.5%。重建与控制相关读出的排序并不一致；是否稳定显著仍需更多独立轨迹。</p><p>每个任务 50 条模拟示范，35/5/10 条分别用于训练、验证、测试。每条采样 12 个短片。两种 S-VAE 使用相同初始化种子与 minibatch 序列，固定训练 2,000 步，评估最终检查点。</p><p>原始损失对三个 latent 时间位置取平均。候选权重将当前帧从总权重的 1/3 提高到 2/3；网络结构、潜变量维度、数据与推理均不变。</p><img src="assets/night-20260921/paired-results.svg" alt="三个任务的当前帧重建、未来帧重建及干净状态变化探针对照" style="display:block;width:100%;height:auto;background:white"><p class="small">误差越低越好。误差条为三个训练种子的标准差，不是独立轨迹置信区间。</p>
+<details open><summary>重建误差：包含 PCA-48 对照</summary><div class="table-wrap"><table><thead><tr><th>任务</th><th>方法</th><th>当前帧 MSE</th><th>未来帧 MSE</th><th>汇总 MSE</th></tr></thead><tbody>{''.join(recon_rows)}</tbody></table></div></details>
+<details><summary>权重 4 相对原始损失的配对差异</summary><p>正数表示更差。先对三个训练种子平均，再以 held-out 轨迹为单位做 10,000 次配对 bootstrap。区间条件于这三个已训练种子；它没有把训练随机性或任务总体的不确定性全部包括进来。</p><div class="table-wrap"><table><thead><tr><th>任务</th><th>指标</th><th>相对变化</th><th>MSE 差值 [95% 区间]</th></tr></thead><tbody>{''.join(paired_rows)}</tbody></table></div></details>
+<h3>当前帧误差更大，不等于模型忽略当前观测</h3><p>未来特征经过时间平均，目标方差会降低。我们补充了“相对预测训练均值的误差”：误差平方和除以标准化目标能量。它不是围绕测试集均值拟合的 R²，也不直接衡量动作信息。</p><div class="table-wrap"><table><thead><tr><th>任务</th><th>原始 MSE 当前 / 未来</th><th>当前帧相对误差</th><th>未来帧相对误差</th></tr></thead><tbody>{''.join(energy_rows)}</tbody></table></div></section>
+<section id="robustness"><h2>冻结的探针能否承受输入变化？</h2><p>探针仅使用当前视觉潜变量与当前机器人状态，在干净训练集拟合。预测目标是四个原始时间步后的末端位移与夹爪状态；它不是控制命令。验证集选择 ridge 正则化，测试集只用于评估。</p><p>扰动施加在拼接后的当前输入图像：亮度乘 0.6，或加入标准差为 10/255 的高斯噪声。状态输入与监督目标不变，探针不重新拟合。这里没有真实相机视角变化，也不是 LIBERO-Plus。</p><img src="assets/night-20260921/corruption-results.svg" alt="PCA 与两种 S-VAE 在干净、亮度与噪声输入下的冻结探针误差" style="display:block;width:100%;height:auto;background:white"><details><summary>全部任务与方法的探针结果</summary><div class="table-wrap"><table><thead><tr><th>任务</th><th>方法</th><th>干净输入</th><th>亮度 ×0.6</th><th>噪声 σ=10/255</th></tr></thead><tbody>{''.join(probe_rows)}</tbody></table></div></details><p>加权方案并非所有指标都更差：噪声下，交接与入篮任务的 probe 均值改善约 6.5% 和 7.6%，瓶子任务则差约 6.9%。这种跨任务、跨条件的取舍不足以支持更改默认权重。</p><p>这些结果用于诊断表征和固定读出器的敏感性，不能单独确定整个 WAM 策略的失败原因。对压缩方法的排序也不能只看重建误差。</p></section>
+<section id="controls"><h2>哪些控制支撑这些结论？</h2><div class="callout">2026.09.21 更正：上一版把官方 num_frames=33 误读为 33 个采样帧。它实际表示 33 个原始步；步长 4 后也是 9 帧，与本实验一致。已修正文档，全部实验数值不变。</div><ul><li>统计与 PCA 只用训练轨迹拟合；所有窗口按 episode 分组划分，未随机拆分重叠短片。</li><li>每个任务的三种子、两种损失全部报告；固定最终检查点，没有按测试表现挑选种子或步数。</li><li>第一次扰动抽取使用单帧批量，与干净缓存的九帧批量产生数值差异。最终报告排除了那批扰动结果，按相同九帧批量重新编码。</li><li>全部 360 个测试短片都通过干净重编码检查：最大绝对差 {maxdiff:.2g}。两种损失与 PCA 共享完全相同的扰动输入。</li><li>输入为九个视频帧，覆盖 33 个原始时间步，得到一个当前 latent 加两个未来 latent。这与发布配置 num_frames=33、video_stride=4 的时间采样一致；本次仅选取每条轨迹 12 个完整窗口，并未复现官方穷举窗口及尾部掩码训练。</li></ul><p>固定 2,000 步并不意味着各方法都已收敛。因此今晚的负结果是“在这个预算下不值得推荐”，不是证明任何权重或更长训练都无效。</p><div class="facts"><div><b>1 × L40S</b><small>顺序执行全部训练</small></div><div><b>{r['training_seconds']/60:.1f} 分钟</b><small>18 次训练阶段累计时间</small></div><div><b>{r['peak_allocated_gb']:.2f} GB</b><small>训练时 PyTorch 峰值分配</small></div></div><p class="small">上述训练时间不含下载、安装、特征抽取和 probe 评测。完整初次运行 {r['initial_run_wall_seconds']/60:.1f} 分钟，匹配批量后的重新评测 {r['matched_reevaluation_wall_seconds']/60:.1f} 分钟；不将它们混称为训练耗时。</p></section>
+<section id="patch"><h2>可审阅的最小贡献</h2><p>补丁包含四个文件，共增加 237 行：110 行独立评测脚本、108 行测试、17 行使用说明、2 行 README 链接。训练器、编码器、模型结构和默认配置均未修改。</p><ul><li>读取现有检查点和原生特征分片，流式评测；保留训练归一化参数。</li><li>分别报告当前帧、未来帧与整体误差，补充目标能量归一化结果。</li><li>处理不完整批次、单帧缓存、空输入、维度不匹配和非有限数值。</li></ul><p><strong>验证：</strong>五项针对性测试通过，Ruff 检查通过；真实训练检查点和 held-out 原生分片也已完成评测。完整上游测试套件尚未执行。补丁已在本地准备，尚未向维护者发送消息或提交 PR。</p><div class="labels"><a class="tag green" href="assets/night-20260921/svae-heldout-evaluation.patch" download>下载贡献补丁</a><a class="tag" href="assets/night-20260921/summary.json" download>全部汇总数据 JSON</a><a class="tag" href="assets/night-20260921/protocol.md">固定方案与修订记录</a><a class="tag" href="assets/night-20260921/split-manifests.json" download>逐轨迹划分与短片清单</a><a class="tag" href="assets/night-20260921/reproduction-scripts.tar.gz" download>实验复现脚本</a><a class="tag" href="assets/night-20260921/reproduce.md">复现说明</a></div><h3>下一步只扩大证据，不急于扩大模型改动</h3><p>先讨论是否把独立 evaluator 合入上游。若继续研究表征，再验证第二种编码器与更完整的轨迹覆盖，并选一个发布策略做闭环检查；只有诊断能关联到实际执行问题时，再考虑训练改动。</p><p class="source"><a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/scripts/svae_train/train_svae.py">核对的官方训练入口</a><a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/openwam/model/video_backbone/encoder/svae/model.py">原始 S-VAE 实现</a><a href="https://huggingface.co/OpenWAM/robotwin_dual_system_joint_self_attention_dinov3_svae">公开编码器检查点</a><a href="https://huggingface.co/datasets/TianxingChen/RoboTwin2.0">公开模拟数据</a></p></section><footer>独立探索性研究 · 2026.09.21 · <a href="index.html">贡献计划</a> · <a href="gaps.html">原版局限</a></footer></main></div></body></html>'''
+(SITE/'night.html').write_text(page)
+for f in ['index.html','experiments.html','gaps.html']:
+ p=SITE/f;text=p.read_text()
+ if 'href="night.html"' not in text:
+  text=text.replace('</nav>','<a href="night.html">今晚三任务实验</a></nav>',1)
+ if f=='index.html' and 'id="night-result-note"' not in text:
+  marker='<div class="callout" id="night-result-note"><strong>今晚结果已完成：</strong>三任务、三种子、18 次训练。优先贡献独立评测入口；当前帧加权没有得到足够支持。<a href="night.html">查看完整结果、补丁与复现脚本 →</a></div>'
+  text=text.replace('<main>','<main>'+marker,1)
+ p.write_text(text)
+print('Rendered completed report, public artifacts and navigation')

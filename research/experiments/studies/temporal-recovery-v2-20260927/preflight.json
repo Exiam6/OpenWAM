@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "time": "2026-09-27T12:24:22.869261-05:00",
+  "checkpoint_api_checks": [
+    {
+      "arm": "mean",
+      "seed": 42,
+      "checkpoint": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed42/output/2026-09-26_17-56-53/checkpoint_step_4000.safetensors",
+      "directory": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed42/output/2026-09-26_17-56-53",
+      "explicit_filename": "checkpoint_step_4000.safetensors",
+      "sidecars_present": true
+    },
+    {
+      "arm": "learned",
+      "seed": 42,
+      "checkpoint": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed42/output/2026-09-26_17-58-29/checkpoint_step_4000.safetensors",
+      "directory": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed42/output/2026-09-26_17-58-29",
+      "explicit_filename": "checkpoint_step_4000.safetensors",
+      "sidecars_present": true
+    },
+    {
+      "arm": "mean",
+      "seed": 43,
+      "checkpoint": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed43/output/2026-09-26_20-35-15/checkpoint_step_4000.safetensors",
+      "directory": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed43/output/2026-09-26_20-35-15",
+      "explicit_filename": "checkpoint_step_4000.safetensors",
+      "sidecars_present": true
+    },
+    {
+      "arm": "learned",
+      "seed": 43,
+      "checkpoint": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed43/output/2026-09-26_20-36-12/checkpoint_step_4000.safetensors",
+      "directory": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed43/output/2026-09-26_20-36-12",
+      "explicit_filename": "checkpoint_step_4000.safetensors",
+      "sidecars_present": true
+    },
+    {
+      "arm": "mean",
+      "seed": 44,
+      "checkpoint": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed44/output/2026-09-26_23-01-46/checkpoint_step_4000.safetensors",
+      "directory": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed44/output/2026-09-26_23-01-46",
+      "explicit_filename": "checkpoint_step_4000.safetensors",
+      "sidecars_present": true
+    },
+    {
+      "arm": "learned",
+      "seed": 44,
+      "checkpoint": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed44/output/2026-09-26_23-02-44/checkpoint_step_4000.safetensors",
+      "directory": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed44/output/2026-09-26_23-02-44",
+      "explicit_filename": "checkpoint_step_4000.safetensors",
+      "sidecars_present": true
+    }
+  ],
+  "frozen_files": 639,
+  "cache_regression_passed": true,
+  "heldout_outcomes": 0
+}

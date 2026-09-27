@@ -1,0 +1,238 @@
+{
+  "time": "2026-09-25T19:54:05.739469-05:00",
+  "trigger_time": "2026-09-25T00:00:01.884221-05:00",
+  "actual_processing_began": "2026-09-25T19:35:00-05:00",
+  "additional_direct_instruction": "continue",
+  "missed_checks_backfilled": false,
+  "old_pipeline_exit": {
+    "time": "2026-09-25T19:12:21.310476-05:00",
+    "returncode": 1
+  },
+  "old_waiter_exit": {
+    "time": "2026-09-25T19:12:05.164949-05:00",
+    "returncode": 1,
+    "status": "original_dependency_deadline_reached",
+    "controller_resumed_if_alive": true,
+    "original_deadlines_unchanged": true
+  },
+  "new_controller": {
+    "time": "2026-09-25T19:46:45.337653-05:00",
+    "pid": 1930714,
+    "uid": 2093,
+    "host": "cm001",
+    "start_ticks": "2628863133",
+    "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+    "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+  },
+  "new_progress": {
+    "time": "2026-09-25T19:54:01.367704-05:00",
+    "stage": "independent_slot_admission_or_evaluation",
+    "terminal_slots": {},
+    "evaluation_deadline": "2026-09-28T10:41:59.240315-05:00"
+  },
+  "new_exit": null,
+  "cpu_gate_exit": {
+    "time": "2026-09-25T19:49:28.258292-05:00",
+    "returncode": 0
+  },
+  "cohort_summary": {
+    "passed": true,
+    "time": "2026-09-25T19:46:48.287044-05:00",
+    "episodes": 150,
+    "prior_hashes": 15732,
+    "manifests_sha256": {
+      "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/manifest.json": "d3c5f71928638f6b107b9d193580b85def2d8c3c44b57cb75435496fb3a523a7",
+      "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/manifest.json": "04122c608e11de012820f0e10f21ececbe88e4a9fca12790672a533eb47e016e",
+      "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/manifest.json": "2c549f879f1135a915ab9f545c6dc02b031865fb4e5ee3a1c9a61ef84d0f6e82"
+    },
+    "scope": "new seed ranges excluded onbothgroups; exact episode/encodedinitialframe and pose duplicate checks; no claim of unseen object categories or tasks"
+  },
+  "checkpoint_hash_count": 9,
+  "frozen_hash_checks": {
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_common.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/run_simulation_preflight.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/simulation_preflight.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/serve_policy.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluate_policy.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/verify_fresh_cohort.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_controller.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_queue.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/action_diagnostics.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/analyze_closed_loop.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/audit_closed_loop.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/summarize_diagnostics.py": true,
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/update_status.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/dinov3_pca.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/__init__.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/deploy/server.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/openwam2robotwin_interface.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py": true,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/protocol.json": true,
+    "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/EVALUATION_IMPLEMENTATION.md": true
+  },
+  "queues": {
+    "1": {
+      "started": {
+        "time": "2026-09-25T19:49:29.861809-05:00",
+        "pid": 2447502,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643798",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-25T19:54:02.207226-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85",
+          "00000000:21:00.0",
+          "25971",
+          "67",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null
+    },
+    "2": {
+      "started": {
+        "time": "2026-09-25T19:49:30.075167-05:00",
+        "pid": 2447565,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643821",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-25T19:54:02.250144-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e",
+          "00000000:41:00.0",
+          "26641",
+          "61",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null
+    },
+    "3": {
+      "started": {
+        "time": "2026-09-25T19:49:30.327129-05:00",
+        "pid": 2447628,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643846",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-25T19:54:02.580549-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db",
+          "00000000:61:00.0",
+          "25755",
+          "72",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null
+    },
+    "4": {
+      "started": {
+        "time": "2026-09-25T19:49:30.569000-05:00",
+        "pid": 2447691,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643869",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-25T19:54:02.486304-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-33861458-0994-99a7-7457-6fceb49c229c",
+          "00000000:81:00.0",
+          "11787",
+          "55",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null
+    },
+    "5": {
+      "started": {
+        "time": "2026-09-25T19:49:30.759333-05:00",
+        "pid": 2447754,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643889",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-25T19:54:02.968348-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3",
+          "00000000:A1:00.0",
+          "26415",
+          "70",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null
+    },
+    "6": {
+      "started": {
+        "time": "2026-09-25T19:49:30.979285-05:00",
+        "pid": 2447818,
+        "uid": 2093,
+        "host": "cm009",
+        "start_ticks": "1117643911",
+        "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+        "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+      },
+      "progress": {
+        "time": "2026-09-25T19:54:02.794633-05:00",
+        "stage": "waiting_for_own_slot",
+        "row": [
+          "GPU-f341a0af-5cd4-9d17-e701-31f4530522ae",
+          "00000000:C1:00.0",
+          "23823",
+          "74",
+          "0"
+        ],
+        "idle_samples": 0,
+        "deadline": "2026-09-28T10:41:59.240315-05:00"
+      },
+      "admitted": null,
+      "exit": null
+    }
+  },
+  "learned_policy_results": 0,
+  "action_diagnostic_files": 0,
+  "disk_available_gib": {
+    "/home": 0.33984375,
+    "/data02": 144.533203125
+  },
+  "cron": "# OPENWAM_SELFCHECK_3H -- user changed cadence 2026-09-24T22:20:21.416049-05:00\n0 */3 * * * /usr/bin/python3 /home/zifanz4/openwam-experiments/scripts/selfcheck_15m.py >> /home/zifanz4/.local/state/openwam-selfcheck/cron.log 2>&1"
+}

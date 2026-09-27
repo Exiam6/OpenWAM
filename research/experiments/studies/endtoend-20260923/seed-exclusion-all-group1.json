@@ -1,0 +1,30 @@
+{
+  "time": "2026-09-23T19:20:49.626620-05:00",
+  "passed": true,
+  "scanned_root": "/data02/zifanz4/openwam-experiments",
+  "json_seed_fields_and_seed_directories": true,
+  "known_seed_count": 230,
+  "known_seed_min_max": [
+    0,
+    20260922
+  ],
+  "proposed_ranges": [
+    [
+      1100000,
+      1100099
+    ],
+    [
+      1101000,
+      1101099
+    ],
+    [
+      1102000,
+      1102099
+    ]
+  ],
+  "files_checked": 1373,
+  "inventory_sha256": "9496e60f22ecee8d24e712d84cb203652422a3fbc4a149ff33f3e527e961b4b9",
+  "matches": [],
+  "errors": [],
+  "scope": "all prior results/data, including completedconfirmation; new endtoend outside these roots; content-identity check separately required before scoring"
+}

@@ -1,0 +1,947 @@
+[
+  {
+    "task": "adjust_bottle",
+    "episode": 3,
+    "frame": 0,
+    "target_xy": [
+      -0.005204030312597752,
+      -0.08494704216718674
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 4,
+    "frame": 0,
+    "target_xy": [
+      0.028762318193912506,
+      -0.08262652903795242
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 5,
+    "frame": 0,
+    "target_xy": [
+      0.015670018270611763,
+      -0.10062597692012787
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 7,
+    "frame": 0,
+    "target_xy": [
+      -0.015599649399518967,
+      -0.1270768642425537
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 9,
+    "frame": 0,
+    "target_xy": [
+      0.02000507339835167,
+      -0.05799521133303642
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 10,
+    "frame": 0,
+    "target_xy": [
+      0.028282973915338516,
+      -0.11840066313743591
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 15,
+    "frame": 0,
+    "target_xy": [
+      -0.045624785125255585,
+      -0.11483915895223618
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 16,
+    "frame": 0,
+    "target_xy": [
+      0.009824764914810658,
+      -0.12590435147285461
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 17,
+    "frame": 0,
+    "target_xy": [
+      -0.012239646166563034,
+      -0.06233980879187584
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 18,
+    "frame": 0,
+    "target_xy": [
+      -0.010384591296315193,
+      -0.09435797482728958
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 20,
+    "frame": 0,
+    "target_xy": [
+      -0.013270710594952106,
+      -0.09727960079908371
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 21,
+    "frame": 0,
+    "target_xy": [
+      0.031193919479846954,
+      -0.14159612357616425
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 23,
+    "frame": 0,
+    "target_xy": [
+      0.011042620055377483,
+      -0.05431376025080681
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 24,
+    "frame": 0,
+    "target_xy": [
+      0.0014423283282667398,
+      -0.12317223101854324
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 25,
+    "frame": 0,
+    "target_xy": [
+      -0.0028906019870191813,
+      -0.15142668783664703
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 26,
+    "frame": 0,
+    "target_xy": [
+      0.026604855433106422,
+      -0.08846364915370941
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 27,
+    "frame": 0,
+    "target_xy": [
+      0.02423461712896824,
+      -0.11896593123674393
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 28,
+    "frame": 0,
+    "target_xy": [
+      -0.030863314867019653,
+      -0.08636290580034256
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 29,
+    "frame": 0,
+    "target_xy": [
+      0.0038842943031340837,
+      -0.029614407569169998
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 30,
+    "frame": 0,
+    "target_xy": [
+      -0.013768209144473076,
+      -0.07657197117805481
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 31,
+    "frame": 0,
+    "target_xy": [
+      0.0035972229670733213,
+      -0.13021662831306458
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 32,
+    "frame": 0,
+    "target_xy": [
+      -0.007508228998631239,
+      -0.14022688567638397
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 34,
+    "frame": 0,
+    "target_xy": [
+      0.015337376855313778,
+      -0.13411831855773926
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 37,
+    "frame": 0,
+    "target_xy": [
+      -0.018620291724801064,
+      -0.09755223989486694
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 38,
+    "frame": 0,
+    "target_xy": [
+      0.007897717878222466,
+      -0.09238851815462112
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 39,
+    "frame": 0,
+    "target_xy": [
+      -0.003680148394778371,
+      -0.15423719584941864
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 40,
+    "frame": 0,
+    "target_xy": [
+      -0.012522469274699688,
+      -0.14498427510261536
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 41,
+    "frame": 0,
+    "target_xy": [
+      -0.0007561456877738237,
+      -0.05420643463730812
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 42,
+    "frame": 0,
+    "target_xy": [
+      -0.04928022250533104,
+      -0.08782769739627838
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 43,
+    "frame": 0,
+    "target_xy": [
+      0.007609042339026928,
+      -0.10680760443210602
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 44,
+    "frame": 0,
+    "target_xy": [
+      -0.031002581119537354,
+      -0.08883224427700043
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 45,
+    "frame": 0,
+    "target_xy": [
+      0.025926809757947922,
+      -0.12150821834802628
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 46,
+    "frame": 0,
+    "target_xy": [
+      -0.03014967404305935,
+      -0.16196182370185852
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 47,
+    "frame": 0,
+    "target_xy": [
+      -0.022764503955841064,
+      -0.1109950989484787
+    ]
+  },
+  {
+    "task": "adjust_bottle",
+    "episode": 49,
+    "frame": 0,
+    "target_xy": [
+      -0.018667520955204964,
+      -0.09332218766212463
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 3,
+    "frame": 0,
+    "target_xy": [
+      -0.2779737710952759,
+      -0.04606194794178009
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 4,
+    "frame": 0,
+    "target_xy": [
+      -0.1949334293603897,
+      0.09929178655147552
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 5,
+    "frame": 0,
+    "target_xy": [
+      -0.3238877058029175,
+      -0.042971011251211166
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 7,
+    "frame": 0,
+    "target_xy": [
+      -0.21624523401260376,
+      0.06404473632574081
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 9,
+    "frame": 0,
+    "target_xy": [
+      -0.34937024116516113,
+      0.11059470474720001
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 10,
+    "frame": 0,
+    "target_xy": [
+      -0.2099044919013977,
+      0.1539531648159027
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 15,
+    "frame": 0,
+    "target_xy": [
+      -0.18959301710128784,
+      0.10881336033344269
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 16,
+    "frame": 0,
+    "target_xy": [
+      -0.36220577359199524,
+      0.16626912355422974
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 17,
+    "frame": 0,
+    "target_xy": [
+      -0.2501718997955322,
+      0.026541313156485558
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 18,
+    "frame": 0,
+    "target_xy": [
+      -0.20935972034931183,
+      0.16190382838249207
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 20,
+    "frame": 0,
+    "target_xy": [
+      -0.21255874633789062,
+      -0.027523130178451538
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 21,
+    "frame": 0,
+    "target_xy": [
+      -0.19129547476768494,
+      0.16318394243717194
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 23,
+    "frame": 0,
+    "target_xy": [
+      -0.30432915687561035,
+      0.06970126181840897
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 24,
+    "frame": 0,
+    "target_xy": [
+      -0.16397197544574738,
+      -0.013826982118189335
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 25,
+    "frame": 0,
+    "target_xy": [
+      -0.222459614276886,
+      0.01119938399642706
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 26,
+    "frame": 0,
+    "target_xy": [
+      -0.18278779089450836,
+      0.026980970054864883
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 27,
+    "frame": 0,
+    "target_xy": [
+      -0.2835416793823242,
+      0.08940453827381134
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 28,
+    "frame": 0,
+    "target_xy": [
+      -0.2828783392906189,
+      -0.042354367673397064
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 29,
+    "frame": 0,
+    "target_xy": [
+      -0.24959492683410645,
+      0.18307678401470184
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 30,
+    "frame": 0,
+    "target_xy": [
+      -0.24267403781414032,
+      0.16348007321357727
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 31,
+    "frame": 0,
+    "target_xy": [
+      -0.21782775223255157,
+      0.12259402871131897
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 32,
+    "frame": 0,
+    "target_xy": [
+      -0.2153852880001068,
+      0.13728183507919312
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 34,
+    "frame": 0,
+    "target_xy": [
+      -0.18302364647388458,
+      0.14677971601486206
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 37,
+    "frame": 0,
+    "target_xy": [
+      -0.3325679302215576,
+      0.02412852831184864
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 38,
+    "frame": 0,
+    "target_xy": [
+      -0.21731162071228027,
+      0.0387798547744751
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 39,
+    "frame": 0,
+    "target_xy": [
+      -0.23538443446159363,
+      0.18325455486774445
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 40,
+    "frame": 0,
+    "target_xy": [
+      -0.2736733555793762,
+      0.06569552421569824
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 41,
+    "frame": 0,
+    "target_xy": [
+      -0.29963016510009766,
+      -0.016445795074105263
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 42,
+    "frame": 0,
+    "target_xy": [
+      -0.1877402663230896,
+      0.12232385575771332
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 43,
+    "frame": 0,
+    "target_xy": [
+      -0.3004659414291382,
+      0.022893527522683144
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 44,
+    "frame": 0,
+    "target_xy": [
+      -0.27490097284317017,
+      0.0019058235920965672
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 45,
+    "frame": 0,
+    "target_xy": [
+      -0.21214821934700012,
+      0.1292102038860321
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 46,
+    "frame": 0,
+    "target_xy": [
+      -0.30329471826553345,
+      -0.007006386760622263
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 47,
+    "frame": 0,
+    "target_xy": [
+      -0.36370453238487244,
+      0.04504833370447159
+    ]
+  },
+  {
+    "task": "handover_block",
+    "episode": 49,
+    "frame": 0,
+    "target_xy": [
+      -0.29030537605285645,
+      0.029055537655949593
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 3,
+    "frame": 0,
+    "target_xy": [
+      -0.21800324320793152,
+      -0.01590472087264061
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 4,
+    "frame": 0,
+    "target_xy": [
+      0.22153258323669434,
+      0.07068697363138199
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 5,
+    "frame": 0,
+    "target_xy": [
+      -0.25501787662506104,
+      0.08922047168016434
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 7,
+    "frame": 0,
+    "target_xy": [
+      -0.24919018149375916,
+      0.023948807269334793
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 9,
+    "frame": 0,
+    "target_xy": [
+      0.24406790733337402,
+      -0.026632146909832954
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 10,
+    "frame": 0,
+    "target_xy": [
+      0.20729131996631622,
+      0.031169336289167404
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 15,
+    "frame": 0,
+    "target_xy": [
+      0.22443458437919617,
+      0.07709898054599762
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 16,
+    "frame": 0,
+    "target_xy": [
+      0.2058950662612915,
+      0.0037269815802574158
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 17,
+    "frame": 0,
+    "target_xy": [
+      -0.24521343410015106,
+      -0.04216790944337845
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 18,
+    "frame": 0,
+    "target_xy": [
+      0.20706874132156372,
+      -0.03765474632382393
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 20,
+    "frame": 0,
+    "target_xy": [
+      0.22321483492851257,
+      -0.04677017405629158
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 21,
+    "frame": 0,
+    "target_xy": [
+      -0.2337600141763687,
+      0.05305706337094307
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 23,
+    "frame": 0,
+    "target_xy": [
+      0.21126040816307068,
+      0.06332170963287354
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 24,
+    "frame": 0,
+    "target_xy": [
+      -0.23978911340236664,
+      0.08661254495382309
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 25,
+    "frame": 0,
+    "target_xy": [
+      -0.21314717829227448,
+      -0.05864747613668442
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 26,
+    "frame": 0,
+    "target_xy": [
+      0.1994386613368988,
+      -0.07448989152908325
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 27,
+    "frame": 0,
+    "target_xy": [
+      -0.2173212319612503,
+      0.0787392109632492
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 28,
+    "frame": 0,
+    "target_xy": [
+      0.22037741541862488,
+      -0.07852388918399811
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 29,
+    "frame": 0,
+    "target_xy": [
+      0.23273463547229767,
+      -0.03817496448755264
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 30,
+    "frame": 0,
+    "target_xy": [
+      -0.22688743472099304,
+      -0.07011397927999496
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 31,
+    "frame": 0,
+    "target_xy": [
+      -0.21418516337871552,
+      -0.053272705525159836
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 32,
+    "frame": 0,
+    "target_xy": [
+      0.2460646778345108,
+      0.03402569144964218
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 34,
+    "frame": 0,
+    "target_xy": [
+      0.2178652286529541,
+      -0.06371313333511353
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 37,
+    "frame": 0,
+    "target_xy": [
+      0.24356526136398315,
+      0.033013906329870224
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 38,
+    "frame": 0,
+    "target_xy": [
+      -0.24095529317855835,
+      0.01264131162315607
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 39,
+    "frame": 0,
+    "target_xy": [
+      -0.22781960666179657,
+      0.08274029195308685
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 40,
+    "frame": 0,
+    "target_xy": [
+      0.2469506561756134,
+      -0.0007353508262895048
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 41,
+    "frame": 0,
+    "target_xy": [
+      0.22083096206188202,
+      -0.08228683471679688
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 42,
+    "frame": 0,
+    "target_xy": [
+      -0.2223779261112213,
+      0.07500545680522919
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 43,
+    "frame": 0,
+    "target_xy": [
+      -0.23499846458435059,
+      0.028777973726391792
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 44,
+    "frame": 0,
+    "target_xy": [
+      0.23377756774425507,
+      -0.020888885483145714
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 45,
+    "frame": 0,
+    "target_xy": [
+      -0.21686232089996338,
+      -0.009245437569916248
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 46,
+    "frame": 0,
+    "target_xy": [
+      0.199604332447052,
+      -0.061220403760671616
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 47,
+    "frame": 0,
+    "target_xy": [
+      -0.2414034754037857,
+      0.01918255165219307
+    ]
+  },
+  {
+    "task": "place_object_basket",
+    "episode": 49,
+    "frame": 0,
+    "target_xy": [
+      -0.24743182957172394,
+      0.06865306198596954
+    ]
+  }
+]

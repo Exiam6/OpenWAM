@@ -1,0 +1,23 @@
+"""Read actual records; generate a timestamped local/public-report snapshot."""
+import datetime,html,json
+from pathlib import Path
+P=Path('/home/zifanz4/openwam-experiments');S=P/'studies/temporal-20260926';N=Path('/data02/zifanz4/openwam-experiments/temporal-20260926')
+def read(p):return json.loads(p.read_text()) if p.exists() else None
+def main():
+ now=datetime.datetime.now().astimezone().isoformat();plan=read(S/'protocol.json');rows=[]
+ for seed in [42,43,44]:
+  for arm in ['mean','learned']:
+   root=N/'training'/f'{arm}-seed{seed}';exit=read(root/'exit.json');metric=None
+   if (root/'metrics.jsonl').exists():
+    lines=(root/'metrics.jsonl').read_text().splitlines()
+    if lines:metric=json.loads(lines[-1])
+   rows.append({'arm':arm,'seed':seed,'microsteps':metric['global_step'] if metric else 0,'total_microsteps':4000,'status':('complete' if exit['returncode']==0 else 'failed') if exit else ('running' if (root/'runner-started.json').exists() else 'queued'),'exit':exit,'parity':read(root/'encoder-parity.json')})
+ rollouts=list((N/'evaluation').glob('*/**/seed-*/result.json'));valid=[read(p) for p in rollouts];count=sum(x['status']=='complete' for x in valid);fail=sum(x['status']!='complete' for x in valid)
+ data={'time':now,'study':str(S),'deadline':plan['deadline'],'fit':read(N/'fit/complete.json'),'fit_exit':read(N/'fit/exit.json'),'training':rows,'rollouts_complete':count,'rollouts_total':1080,'rollout_technical_failures':fail,'lanes':{a:read(N/'lanes'/a/'exit.json') for a in ['mean','learned']},'results_audit':read(S/'results-audit.json'),'next':'Complete all six matched continuations; audit identical source checkpoints and batch streams, run development-only simulator gates, then all1080 paired heldout episodes. Report raw success and uncertainty; no current gain claim.'}
+ data['evaluation_technical_blocker']=read(S/'cache-failure-20260926.json')
+ (S/'progress.json').write_text(json.dumps(data,indent=2)+'\n')
+ table=''.join(f'<tr><td>{x["seed"]}</td><td>{x["arm"]}</td><td>{x["microsteps"]}/4000</td><td>{x["status"]}</td></tr>' for x in rows)
+ report=f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OpenWAM 时间压缩：以成功率验证</title><style>body{{font:17px/1.75 system-ui;max-width:1000px;margin:36px auto;padding:0 22px;color:#182b3b;background:#f5f8fc}}a{{color:#07588c}}section{{background:white;border:1px solid #dae4ed;padding:22px;border-radius:12px;margin:20px 0}}table{{width:100%;border-collapse:collapse}}td,th{{padding:10px;text-align:left;border-bottom:1px solid #dae4ed}}.meta{{color:#445c70}}</style></head><body><nav><a href="index.html">研究主页</a> · <a href="contribution-status.html">历史贡献清单</a> · <a href="endtoend.html">此前三表征评测</a></nav><h1>小改动，直接检验任务成功率</h1><p class="meta">实际核查：{now}；此页是时间戳快照，并非实时监控。</p><section><p><strong>目标：检验可学习时间压缩能否提高 OpenWAM 表征分支的闭环成功率。目前尚无提点结论。</strong></p><p>原四帧平均池化改为每通道的四帧凸组合，增加 3,072 个参数，从精确平均初始化。保留首帧、48 通道、token 数和动作接口。DINO 与原 S-VAE 不变；时间模块离线拟合后冻结，再匹配训练下游策略。</p><p>这检验“固定平均是否丢失运动信息”的假设。它属于预训练表征路线中的时间压缩补充，不是完整 RAE 复现。</p></section><section><h2>已完成与正在运行</h2><p>105 条训练轨迹、630 个片段、固定 1,500 步时间模块拟合已正常完成。训练误差差异很小，不能代表策略收益。平均初始化、首帧独立、分组因果性、梯度和严格保存重载检查已通过。</p><table><thead><tr><th>种子</th><th>分支</th><th>训练微步</th><th>状态</th></tr></thead><tbody>{table}</tbody></table><p>当前两路使用 cm001 的两张 L40S；六组各 4,000 微步 / 2,000 次优化更新。同一种子的两分支从同一个既有 S-VAE 策略检查点继续，配对数据顺序、噪声和预算。</p><p>闭环完成 <strong>{count}/1080</strong>；技术失败 {fail}。训练完成后仍需模拟器检查和闭环评测。</p><p><strong>新发现的技术风险：</strong>此前三表征闭环队列已触发文本缓存淘汰异常，本研究含有同一实现。隔离修复已通过CPU回归和单训练帧的5次原生推理首动作一致性检查（差值0）；尚未应用于冻结研究，也未完成WebSocket／模拟器流程验证；现有训练继续，不能承诺完整闭环完成时间。</p></section><section><h2>如何判断是否有贡献</h2><ul><li>3 个任务 × 每任务20个场景 × 3个训练种子 × 2个分支 × 3个条件 = 1080回合。</li><li>条件：干净图像、Gaussian σ=0.10、头部相机±5°偏转。主指标是噪声条件下任务成功率差（百分点），同时检查干净表现。</li><li>完整报告每个任务、种子、条件与失败；配对场景及训练种子重采样区间。3个训练种子的区间精度有限。</li><li>正向结论门槛：完整数据，主差值95%区间下界&gt;0、3个种子方向均正、干净成功率差的区间下界&gt;−5个百分点。否则按结果报告负向、有限或不确定证据。</li></ul><p>测试复用此前已封存150场景中的固定60场景子集，不声称新的独立场景。模型仍约2.95亿可训练参数、仅3任务；不是官方完整基准，也不是5B提点。</p><p>固定结束时间：{html.escape(plan['deadline'])}。之前研究的协议、结果和截止时间保持原记录；本研究使用独立目录与预算。</p></section><section><h2>材料</h2><p><a href="assets/temporal-20260926/protocol.json">固定方案</a> · <a href="assets/temporal-20260926/progress.json">本次进度快照</a> · <a href="assets/temporal-20260926/fit-complete.json">离线拟合终态</a></p></section></body></html>'''
+ dest=P/'reports/temporal-20260926';dest.mkdir(parents=True,exist_ok=True);(dest/'index.html').write_text(report)
+ print(json.dumps({'time':now,'training':[(x['arm'],x['seed'],x['microsteps'],x['status']) for x in rows],'rollouts':count}))
+if __name__=='__main__':main()

@@ -1,0 +1,176 @@
+diff --git a/benchmarks/robotwin/README.md b/benchmarks/robotwin/README.md
+index 8d13981..85f153b 100644
+--- a/benchmarks/robotwin/README.md
++++ b/benchmarks/robotwin/README.md
+@@ -72,6 +72,16 @@ bash benchmarks/robotwin/multi_eval.sh -m demo_clean -n run1 \
+ - Start the server first; the client health-checks it for up to 300 s, then aborts. Remote server: pass `[host]`/`[port]` (single) or `--host`/`--port` (multi); defaults `127.0.0.1:8848`.
+ - `task_config` ∈ {`demo_clean`, `demo_randomized`}; `ckpt_setting` is only a label in RoboTwin's result filenames; `-d` is used for log placement — weights never load client-side.
+ - `ROBOTWIN_TEST_NUM=5` caps episodes per task for a quick smoke run (default 100/task; the full `all` run takes many GPU-hours per mode).
++- `ROBOTWIN_SCENE_SEEDED_LANGUAGE=1` opts into reproducible instruction sampling
++  for paired policy/observation ablations. In the verified RoboTwin version,
++  scene setup seeds NumPy and Torch but not Python `random`, which the language
++  generator uses. This option scopes Python `random` to each actual simulator
++  seed during instruction generation and restores its previous state afterward.
++  It leaves scene generation and the expert-feasibility filter unchanged. Use it
++  for every condition in a paired comparison and report the setting; the default
++  and the original paper protocol remain unchanged. Also record/check actual
++  accepted seeds and prompts, since the expert filter can skip scene seeds.
++
+ - Don't call RoboTwin's `eval_policy.py` directly — go through `eval_policy_wrapper.py`. Its startup messages are expected; each one works around a known crash in the verified stack:
+   - `prewarmed CUDA/Curobo before SAPIEN import` — cuRobo must initialise CUDA before SAPIEN's Vulkan context exists, otherwise the first plan segfaults.
+   - `patched warp.torch compatibility namespace` — cuRobo v0.7.8 still calls `warp.torch.*`, which warp ≥ 1.x no longer ships; the wrapper aliases the new top-level functions.
+diff --git a/benchmarks/robotwin/eval_policy_wrapper.py b/benchmarks/robotwin/eval_policy_wrapper.py
+index 514ff21..f703d63 100644
+--- a/benchmarks/robotwin/eval_policy_wrapper.py
++++ b/benchmarks/robotwin/eval_policy_wrapper.py
+@@ -6,6 +6,7 @@ from __future__ import annotations
+ import hashlib
+ import importlib.util
+ import os
++import random
+ import subprocess
+ import sys
+ import tempfile
+@@ -195,6 +196,43 @@ def _install_env_trace_hooks(module) -> None:
+     module.class_decorator = traced_class_decorator
+ 
+ 
++def _install_scene_seeded_language(module) -> None:
++    """Pair instruction sampling with the actual scene seed, opt-in at bootstrap.
++
++    RoboTwin seeds numpy/torch during setup but its language generator also
++    uses Python random. Restore that generator's state so this affects language
++    only, including when instruction generation fails.
++    """
++    original_class = module.class_decorator
++    original_generate = module.generate_episode_descriptions
++    scene_seed = None
++
++    def seeded_class(task_name):
++        env = original_class(task_name)
++        original_setup = env.setup_demo
++
++        def setup(*args, **kwargs):
++            nonlocal scene_seed
++            scene_seed = kwargs.get("seed")
++            return original_setup(*args, **kwargs)
++
++        env.setup_demo = setup
++        return env
++
++    def generate(*args, **kwargs):
++        if scene_seed is None:
++            raise RuntimeError("Scene-seeded language requires setup_demo(seed=...) before instruction generation")
++        state = random.getstate()
++        try:
++            random.seed(int(scene_seed))
++            return original_generate(*args, **kwargs)
++        finally:
++            random.setstate(state)
++
++    module.class_decorator = seeded_class
++    module.generate_episode_descriptions = generate
++
++
+ def _install_test_num_override(module) -> None:
+     value = os.environ.get("ROBOTWIN_TEST_NUM", "").strip()
+     if not value:
+@@ -375,6 +413,8 @@ def bootstrap_robotwin_module(*, install_trace_hooks: bool = True):
+         _install_robot_planner_fallbacks(robotwin_path)
+     if install_trace_hooks:
+         _install_env_trace_hooks(module)
++    if os.environ.get("ROBOTWIN_SCENE_SEEDED_LANGUAGE", "") == "1":
++        _install_scene_seeded_language(module)
+     return module
+ 
+ 
+diff --git a/tests/test_robotwin_scene_seeded_language.py b/tests/test_robotwin_scene_seeded_language.py
+new file mode 100644
+index 0000000..8e125bc
+--- /dev/null
++++ b/tests/test_robotwin_scene_seeded_language.py
+@@ -0,0 +1,84 @@
++"""Paired language sampling must not change environment RNG or swallow errors."""
++
++import random
++from types import SimpleNamespace
++
++import pytest
++
++from benchmarks.robotwin.eval_policy_wrapper import _install_scene_seeded_language
++
++
++class Env:
++    def setup_demo(self, *, seed, **kwargs):
++        self.seed = seed
++        return kwargs
++
++
++def make_module(generator):
++    return SimpleNamespace(class_decorator=lambda name: Env(), generate_episode_descriptions=generator)
++
++
++def test_same_scene_produces_same_language_with_unrelated_outer_rng():
++    def generate(task, *, count):
++        words = list(range(100))
++        random.shuffle(words)
++        return task, random.sample(words, count)
++
++    module = make_module(generate)
++    _install_scene_seeded_language(module)
++    env = module.class_decorator("task")
++    results = []
++    for outer in (9, 27, 80):
++        random.seed(outer)
++        assert env.setup_demo(seed=200001, is_test=True) == {"is_test": True}
++        prior = random.getstate()
++        results.append(module.generate_episode_descriptions("pick", count=12))
++        assert random.getstate() == prior
++    assert results[0] == results[1] == results[2]
++    env.setup_demo(seed=200002)
++    assert module.generate_episode_descriptions("pick", count=12) != results[0]
++
++
++def test_generation_failure_restores_rng_and_propagates_error():
++    def generate():
++        random.random()
++        raise ValueError("missing description")
++
++    module = make_module(generate)
++    _install_scene_seeded_language(module)
++    env = module.class_decorator("task")
++    env.setup_demo(seed=100000)
++    prior = random.getstate()
++    with pytest.raises(ValueError, match="missing description"):
++        module.generate_episode_descriptions()
++    assert random.getstate() == prior
++
++
++def test_missing_seed_fails_before_sampling():
++    module = make_module(lambda: pytest.fail("must not sample without scene seed"))
++    _install_scene_seeded_language(module)
++    with pytest.raises(RuntimeError, match="setup_demo"):
++        module.generate_episode_descriptions()
++
++
++@pytest.mark.parametrize("flag,expected", [(None, False), ("0", False), ("1", True)])
++def test_bootstrap_only_enables_language_scoping_when_requested(monkeypatch, tmp_path, flag, expected):
++    from benchmarks.robotwin import eval_policy_wrapper as wrapper
++
++    module = object()
++    called = []
++    monkeypatch.setenv("ROBOTWIN_PATH", str(tmp_path))
++    monkeypatch.delenv("ROBOTWIN_ENABLE_PLANNER_FALLBACK", raising=False)
++    if flag is None:
++        monkeypatch.delenv("ROBOTWIN_SCENE_SEEDED_LANGUAGE", raising=False)
++    else:
++        monkeypatch.setenv("ROBOTWIN_SCENE_SEEDED_LANGUAGE", flag)
++    monkeypatch.setattr(wrapper, "_warn_on_unverified_robotwin", lambda path: None)
++    monkeypatch.setattr(wrapper, "_prepare_runtime_root", lambda path: path)
++    monkeypatch.setattr(wrapper, "_prewarm_cuda_for_curobo", lambda: None)
++    monkeypatch.setattr(wrapper, "_patch_warp_torch_namespace", lambda: None)
++    monkeypatch.setattr(wrapper, "_load_robotwin_eval_module", lambda path: module)
++    monkeypatch.setattr(wrapper, "_install_scene_seeded_language", called.append)
++    monkeypatch.chdir(tmp_path)
++    assert wrapper.bootstrap_robotwin_module(install_trace_hooks=False) is module
++    assert called == ([module] if expected else [])

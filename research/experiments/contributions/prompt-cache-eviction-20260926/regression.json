@@ -1,0 +1,35 @@
+{
+  "time": "2026-09-26T22:21:25.964356-05:00",
+  "python": "3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]",
+  "source": "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/deploy/engine.py",
+  "source_sha256": "47eb4b84caa12ff9ddc0c1f8c9010afa5b7c4e4c40d4983b9fed9d8ca6c72038",
+  "original_failure": {
+    "insertion": 33,
+    "type": "KeyError",
+    "message": "'0'"
+  },
+  "fixed_checks": [
+    {
+      "capacity": 0,
+      "operations": 5000,
+      "evictions": 3962
+    },
+    {
+      "capacity": 1,
+      "operations": 5000,
+      "evictions": 3962
+    },
+    {
+      "capacity": 2,
+      "operations": 5000,
+      "evictions": 3649
+    },
+    {
+      "capacity": 32,
+      "operations": 5000,
+      "evictions": 12
+    }
+  ],
+  "passed": true,
+  "scope": "CPU cache contract only; no GPU inference or frozen source mutation"
+}

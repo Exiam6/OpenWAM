@@ -54,3 +54,7 @@ from openwam.model.video_backbone.encoder.dinov3 import DinoV3VideoEncoder  # no
 from openwam.model.video_backbone.encoder.flux2_vae import FluxVAEVideoEncoder  # noqa: E402, F401
 from openwam.model.video_backbone.encoder.vjepa21 import VJEPA21VideoEncoder  # noqa: E402, F401
 from openwam.model.video_backbone.encoder.wan22_vae import WanVideoVAEEncoder  # noqa: E402, F401
+
+from openwam.model.video_backbone.encoder.dinov3_pca import DinoV3PCAEncoder  # noqa: E402,F401
+
+from . import dinov3_temporal  # optional learned temporal pooling

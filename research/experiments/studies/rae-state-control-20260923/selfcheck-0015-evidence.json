@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-09-23T00:39:22.018309-05:00",
+  "terminal": {
+    "rae-noise-control-20260922": {
+      "exit": {
+        "finished_at": "2026-09-23T00:05:20.246213-05:00",
+        "exit_code": 0
+      },
+      "audit_passed": true,
+      "log_tail": "token_layernorm\": {\"noise_adapted_E\": 0.32282951952864025, \"original_clean_trained_E\": 190.6015213747533, \"noise_adapted_per_task_E\": [0.39615494085284764, 0.3889454199444563, 0.18338819778861673]}, \"DINO_raw768\": {\"noise_adapted_E\": 0.08929440731295549, \"original_clean_trained_E\": 0.2983779977301793, \"noise_adapted_per_task_E\": [0.07810857573917229, 0.14449802134201, 0.045276624857684154]}, \"DINO_PCA48\": {\"noise_adapted_E\": 0.0930510247373853, \"original_clean_trained_E\": 0.656540717741446, \"noise_adapted_per_task_E\": [0.05473466422058826, 0.18475287151254344, 0.03966553847902422]}, \"DINO_SVAE48_seed_mean\": {\"noise_adapted_E\": 0.09741139070036954, \"original_clean_trained_E\": 0.4072412096936432, \"noise_adapted_per_task_E\": [0.06561176532779187, 0.18538755698233428, 0.041234849790982554]}}}\n"
+    },
+    "rae-state-control-20260923": {
+      "exit": {
+        "finished_at": "2026-09-23T00:24:31.313997-05:00",
+        "exit_code": 0
+      },
+      "audit_passed": true,
+      "log_tail": "1120340898642039], [0.37188040718419957, 0.04759957887885009]]}, \"DINO_PCA48\": {\"noise_adapted_E\": 0.15860021463846868, \"original_clean_trained_E\": 0.273561180759714, \"noise_adapted_per_task_E\": [0.10129958506726341, 0.10465042705557322, 0.2698506317925694], \"noise_adapted_per_task_groups\": [[0.18618592735509262, 0.01641324277943423], [0.2045059730715184, 0.0047948810396280525], [0.5044671446902071, 0.035234118894931506]]}, \"DINO_SVAE48_seed_mean\": {\"noise_adapted_E\": 0.16004340115022256, \"original_clean_trained_E\": 0.273057249404283, \"noise_adapted_per_task_E\": [0.1015895555422307, 0.10502901324325328, 0.2735116346651837], \"noise_adapted_per_task_groups\": [[0.1870980700247436, 0.01608104105971781], [0.20514725660323302, 0.004910769883273538], [0.5136279990754586, 0.03339527025490892]]}}}\n"
+    }
+  },
+  "unchanged_state_files": {
+    "result.json": true,
+    "audit.json": true,
+    "exit.json": true,
+    "protocol.json": true,
+    "freeze.json": true,
+    "selection.json": true,
+    "run.log": true
+  },
+  "pause_markers": [],
+  "completed_at": "2026-09-23T00:40:14.717668-05:00",
+  "trigger": "2026-09-23T00:15:01.242164-05:00",
+  "scientific_state_changed": false,
+  "resource": {
+    "host": "glacier",
+    "gpu": "GPU-d13929da-086d-1be5-6414-dbf6aeded08e",
+    "memory_MiB": 0,
+    "utilization_percent": 0,
+    "uncorrected_volatile_ECC": 0,
+    "compute_processes": [],
+    "owned_experiment_processes": []
+  },
+  "next_step": "Completed goal/state controls, independent audits, local report, confirmation draft and documentation patch are archived in c4255fa. No new experiment fits inside the remaining original01:15:12CDTwindow on the validated full60scene collection path. Preserve all terminal results and check only for material state changes or deadline closure. The next scientific uncertainty is independent-scene reproducibility of compact-feature goal/translation gains and gripper tradeoffs; the prepared new60scene draft is not launched and would require a separate fixed budget. No old80 or expired56/60 replay, no extension.",
+  "publication": {
+    "new_attempt": false,
+    "last_actual_lookup": "2026-09-23T00:29:47-05:00",
+    "last_error": "SitesConnectorError: Sites project not found",
+    "local_report_changed_this_check": false
+  },
+  "completed_audits_repeated": false,
+  "new_inference_or_fits": false,
+  "notification": "none; unchanged"
+}

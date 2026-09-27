@@ -1,0 +1,60 @@
+{
+  "time": "2026-09-24T01:58:50.986973-05:00",
+  "reason": "user requested remaining experiments",
+  "training": {
+    "pca-seed42": {
+      "status": "started",
+      "optimizer_step": 5715,
+      "exit": null
+    },
+    "pca-seed43": {
+      "status": "started",
+      "optimizer_step": 5663,
+      "exit": null
+    },
+    "pca-seed44": {
+      "status": "queued",
+      "optimizer_step": 0,
+      "exit": null
+    },
+    "svae-seed42": {
+      "status": "started",
+      "optimizer_step": 5668,
+      "exit": null
+    },
+    "svae-seed43": {
+      "status": "started",
+      "optimizer_step": 5763,
+      "exit": null
+    },
+    "svae-seed44": {
+      "status": "queued",
+      "optimizer_step": 0,
+      "exit": null
+    },
+    "wan-seed42": {
+      "status": "started",
+      "optimizer_step": 5135,
+      "exit": null
+    },
+    "wan-seed43": {
+      "status": "started",
+      "optimizer_step": 5333,
+      "exit": null
+    },
+    "wan-seed44": {
+      "status": "queued",
+      "optimizer_step": 0,
+      "exit": null
+    }
+  },
+  "remaining": [
+    "finish all9 fixed6000-update training runs",
+    "full150scene novelty/pose audit, paired batch-stream and final checkpoint integrity gates",
+    "5400 paired closed-loop episodes",
+    "48600 fixed expert-state action diagnostics",
+    "full matrix analysis and independent numerical audit"
+  ],
+  "conditional_followup": "prospectively frozen full-size matched validation if useful small-model evidence; not launched",
+  "claim_boundary": "PCA is not a full RAE; no current closed-loop improvement established"
+}

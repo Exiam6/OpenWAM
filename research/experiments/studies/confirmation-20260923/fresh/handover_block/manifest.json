@@ -1,0 +1,952 @@
+{
+  "task": "handover_block",
+  "accepted": [
+    {
+      "task": "handover_block",
+      "seed": 901000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:52:31.045332-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 277,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901000/data/episode0.hdf5",
+      "hdf5_sha256": "c2c31df99c07fc0e4e07380fa10ae1e370dbf64ad9a98705258a7710d357e4ed",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 66.12140445224941,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:53:38.493041-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 286,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901001/data/episode0.hdf5",
+      "hdf5_sha256": "71a9017e2e36b0bd81e1c42f6a9014ccd692003001a121f73925494e49e0bc33",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 63.85125130414963,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:54:43.763572-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 286,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901002/data/episode0.hdf5",
+      "hdf5_sha256": "c960a9ff292ea88ea7e1fb7b4da64e82fdfaaaa8d3af32dc3a981bbc8a3c03c9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 62.982650339603424,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:55:48.395441-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 279,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901003/data/episode0.hdf5",
+      "hdf5_sha256": "88782222eabc2fc94ca8ebbc45816d8441ec1a38e20c98cd9395092443b51d7e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 61.141232740134,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901004,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:56:50.907139-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 280,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901004/data/episode0.hdf5",
+      "hdf5_sha256": "21d4e336e9e801cd8a6ca4c765fedd2586ac576cb0d8869b9d419b24cf3120ed",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 62.349427001550794,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901005,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:57:54.803718-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 283,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901005/data/episode0.hdf5",
+      "hdf5_sha256": "f821868393919d6eb224a0222aefbaf72ceb3bdd4c0c478422f9f043765eb6f8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 60.501928471028805,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901006,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:58:56.647225-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 287,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901006/data/episode0.hdf5",
+      "hdf5_sha256": "1dab3cf17bd4669130776ecad30ffc419e357fc8e56a64e3553dd34b38a3e363",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 62.16350417211652,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901007,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:00:00.304411-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 280,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901007/data/episode0.hdf5",
+      "hdf5_sha256": "3f6c66a9214333676569bd33cccbe3c432bc465c8b455af4dfef7c5192180647",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 60.61071156896651,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901008,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:01:02.224012-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 281,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901008/data/episode0.hdf5",
+      "hdf5_sha256": "85cdf3a53b1b552dc048d70a5698863d283af82626cdd48c5ef1e890a534f061",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 62.50956087373197,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901009,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:02:06.108195-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 302,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901009/data/episode0.hdf5",
+      "hdf5_sha256": "e0530c66ba5bc6189701bb2264691cc89d8f3ec8a1520a52fd2cb57b1fb5e600",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 61.720392333343625,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901010,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:03:09.158629-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 277,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901010/data/episode0.hdf5",
+      "hdf5_sha256": "3e97fceed3c4b8ff3d86b569f561f19e261f2c5309d8ee31d8ebe25f55a54800",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 63.39807801693678,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901011,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:04:14.064688-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 294,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901011/data/episode0.hdf5",
+      "hdf5_sha256": "86c4af113a7649d9b60760dd888f2753e7391d0809161776993ddf1fd1039822",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 64.27325103059411,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901013,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:05:46.626048-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 277,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901013/data/episode0.hdf5",
+      "hdf5_sha256": "287806dc741dc4134de6e4a861d0eb9529790d534001ea70e649da95e82e6df3",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 58.99271300807595,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901014,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:06:46.978557-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 279,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901014/data/episode0.hdf5",
+      "hdf5_sha256": "0ddfd4269d991233c4b42762095427998f957e1981b2d6d96c868a1fa8eadc02",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 59.61026508361101,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901016,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:08:13.351339-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 277,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901016/data/episode0.hdf5",
+      "hdf5_sha256": "a20f574c3a9bb56a73b7bab3e61868f48756d4bc3959054b889a4e07288150b1",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 60.501711174845695,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901017,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:09:15.578518-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 275,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901017/data/episode0.hdf5",
+      "hdf5_sha256": "ff8c045c00370b01ca0981a91041723a3509bf62095446e996e404f8aae31092",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 61.921025443822145,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901018,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:10:18.862531-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 286,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901018/data/episode0.hdf5",
+      "hdf5_sha256": "408af7a60616c3aec7704aae4dbf4b8ea9c8796ef95dce6228bfdeaf2f9ccc89",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 59.572239346802235,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901019,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:11:19.922339-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 280,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901019/data/episode0.hdf5",
+      "hdf5_sha256": "b6178ba7a4191ded8981dd789b8a6fa6cafc1c9e1607bd681fc9f7783422de50",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 60.21081624738872,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901020,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:12:21.630989-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 318,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901020/data/episode0.hdf5",
+      "hdf5_sha256": "daa05865350b58b24871b86219b91f347e9ec2b8cf18bfdc8f4c82f4c7e01415",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 60.9799388833344,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901021,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:13:24.072300-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 274,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901021/data/episode0.hdf5",
+      "hdf5_sha256": "2e39a7be02d813244ca3ba0c92979c8f7d1262aec204f83e7d234278a6232c9c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 60.04045121371746,
+      "exit_code": 0
+    }
+  ],
+  "attempts": [
+    {
+      "task": "handover_block",
+      "seed": 901000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:52:31.045332-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 277,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901000/data/episode0.hdf5",
+      "hdf5_sha256": "c2c31df99c07fc0e4e07380fa10ae1e370dbf64ad9a98705258a7710d357e4ed",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 66.12140445224941,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:53:38.493041-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 286,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901001/data/episode0.hdf5",
+      "hdf5_sha256": "71a9017e2e36b0bd81e1c42f6a9014ccd692003001a121f73925494e49e0bc33",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 63.85125130414963,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:54:43.763572-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 286,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901002/data/episode0.hdf5",
+      "hdf5_sha256": "c960a9ff292ea88ea7e1fb7b4da64e82fdfaaaa8d3af32dc3a981bbc8a3c03c9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 62.982650339603424,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:55:48.395441-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 279,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901003/data/episode0.hdf5",
+      "hdf5_sha256": "88782222eabc2fc94ca8ebbc45816d8441ec1a38e20c98cd9395092443b51d7e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 61.141232740134,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901004,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:56:50.907139-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 280,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901004/data/episode0.hdf5",
+      "hdf5_sha256": "21d4e336e9e801cd8a6ca4c765fedd2586ac576cb0d8869b9d419b24cf3120ed",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 62.349427001550794,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901005,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:57:54.803718-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 283,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901005/data/episode0.hdf5",
+      "hdf5_sha256": "f821868393919d6eb224a0222aefbaf72ceb3bdd4c0c478422f9f043765eb6f8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 60.501928471028805,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901006,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T11:58:56.647225-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 287,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901006/data/episode0.hdf5",
+      "hdf5_sha256": "1dab3cf17bd4669130776ecad30ffc419e357fc8e56a64e3553dd34b38a3e363",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 62.16350417211652,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901007,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:00:00.304411-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 280,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901007/data/episode0.hdf5",
+      "hdf5_sha256": "3f6c66a9214333676569bd33cccbe3c432bc465c8b455af4dfef7c5192180647",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 60.61071156896651,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901008,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:01:02.224012-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 281,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901008/data/episode0.hdf5",
+      "hdf5_sha256": "85cdf3a53b1b552dc048d70a5698863d283af82626cdd48c5ef1e890a534f061",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 62.50956087373197,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901009,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:02:06.108195-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 302,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901009/data/episode0.hdf5",
+      "hdf5_sha256": "e0530c66ba5bc6189701bb2264691cc89d8f3ec8a1520a52fd2cb57b1fb5e600",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 61.720392333343625,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901010,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:03:09.158629-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 277,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901010/data/episode0.hdf5",
+      "hdf5_sha256": "3e97fceed3c4b8ff3d86b569f561f19e261f2c5309d8ee31d8ebe25f55a54800",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 63.39807801693678,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901011,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:04:14.064688-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 294,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901011/data/episode0.hdf5",
+      "hdf5_sha256": "86c4af113a7649d9b60760dd888f2753e7391d0809161776993ddf1fd1039822",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 64.27325103059411,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901012,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T12:05:19.655411-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 25.845993656665087,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901013,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:05:46.626048-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 277,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901013/data/episode0.hdf5",
+      "hdf5_sha256": "287806dc741dc4134de6e4a861d0eb9529790d534001ea70e649da95e82e6df3",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 58.99271300807595,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901014,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:06:46.978557-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 279,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901014/data/episode0.hdf5",
+      "hdf5_sha256": "0ddfd4269d991233c4b42762095427998f957e1981b2d6d96c868a1fa8eadc02",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 59.61026508361101,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901015,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T12:07:47.968920-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 24.250859515741467,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901016,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:08:13.351339-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 277,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901016/data/episode0.hdf5",
+      "hdf5_sha256": "a20f574c3a9bb56a73b7bab3e61868f48756d4bc3959054b889a4e07288150b1",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 60.501711174845695,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901017,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:09:15.578518-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 275,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901017/data/episode0.hdf5",
+      "hdf5_sha256": "ff8c045c00370b01ca0981a91041723a3509bf62095446e996e404f8aae31092",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 61.921025443822145,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901018,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:10:18.862531-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 286,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901018/data/episode0.hdf5",
+      "hdf5_sha256": "408af7a60616c3aec7704aae4dbf4b8ea9c8796ef95dce6228bfdeaf2f9ccc89",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 59.572239346802235,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901019,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:11:19.922339-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 280,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901019/data/episode0.hdf5",
+      "hdf5_sha256": "b6178ba7a4191ded8981dd789b8a6fa6cafc1c9e1607bd681fc9f7783422de50",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 60.21081624738872,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901020,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:12:21.630989-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 318,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901020/data/episode0.hdf5",
+      "hdf5_sha256": "daa05865350b58b24871b86219b91f347e9ec2b8cf18bfdc8f4c82f4c7e01415",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 60.9799388833344,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 901021,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T12:13:24.072300-05:00",
+      "expert_plan_success": true,
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 274,
+      "hdf5": "/data02/zifanz4/openwam-experiments/results/confirmation-20260923/fresh/handover_block/seed-901021/data/episode0.hdf5",
+      "hdf5_sha256": "2e39a7be02d813244ca3ba0c92979c8f7d1262aec204f83e7d234278a6232c9c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 60.04045121371746,
+      "exit_code": 0
+    }
+  ],
+  "complete": true,
+  "completed_at": "2026-09-23T12:14:25.539209-05:00",
+  "collection_deadline": "2026-09-23T14:38:51.767900-05:00"
+}

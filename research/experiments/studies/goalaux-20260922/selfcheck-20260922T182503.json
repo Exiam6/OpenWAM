@@ -1,0 +1,67 @@
+{
+  "as_of": "2026-09-22T18:25:02.837950-05:00",
+  "pauses": [],
+  "counts": {
+    "adjust_bottle": 20,
+    "handover_block": 16,
+    "place_object_basket": 0
+  },
+  "completed_attempts": 41,
+  "outcomes": {
+    "accepted": 36,
+    "unstable_scene": 3,
+    "expert_infeasible": 2
+  },
+  "collection_deadline": "2026-09-22T19:15:55.548938-05:00",
+  "exits": {
+    "fresh-v2": {},
+    "confirmation": {}
+  },
+  "active": [
+    {
+      "task": "handover_block",
+      "seed": 801017,
+      "pid": 1482383,
+      "process_alive": true,
+      "last_log_time": "2026-09-22T18:24:29.145464-05:00",
+      "log_tail": "[eval_policy_wrapper] RoboTwin commit=0aeea2d669c0 eval_policy.py sha256=8b16c766a9c40116\n[eval_policy_wrapper] runtime_root=/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801017/runtime\n[eval_policy_wrapper] prewarmed CUDA/Curobo before SAPIEN import\n[eval_policy_wrapper] patched warp.torch compatibility namespace\n/vol13/zifanz4/openwam-experiments/goalaux-native/benchmark-env/lib/python3.10/site-packages/sapien/_vulkan_tricks.py:37: UserWarning: Failed to find Vulkan ICD file. This is probably due to an incorrect or partial installation of the NVIDIA driver. SAPIEN will attempt to provide an ICD file anyway but it may not work.\n  warn(\nmissing pytorch3d\n"
+    }
+  ],
+  "tmux": [
+    "wam-goalaux-collect-v2 1448313 0 python3",
+    "wam-goalaux-confirm 1454546 0 python3"
+  ],
+  "selected_gpu": "GPU-dee01971-fb13-ae53-0d7f-ebe6c6149087, 2201, 0, 0",
+  "confirmation_pending": {
+    "time": "2026-09-22T17:29:58.280919-05:00",
+    "waiting_for": "full60scene collector exit0",
+    "gpu_allocated": false,
+    "study_deadline": "2026-09-23T01:15:12-05:00"
+  },
+  "summary_exists": false,
+  "failure": null,
+  "last_attempt": {
+    "task": "handover_block",
+    "seed": 801016,
+    "role": "expert_only_independent_confirmation",
+    "accepted": true,
+    "started_at": "2026-09-22T18:22:18.312893-05:00",
+    "expert_plan_success": true,
+    "expert_replay_success": true,
+    "outcome": "accepted",
+    "frames": 289,
+    "hdf5": "/vol13/zifanz4/openwam-experiments/results/goalaux-20260922/fresh-v2/handover_block/seed-801016/data/episode0.hdf5",
+    "hdf5_sha256": "6d32fcf7b1517c386f351b8f66facb46b2825c26d7c8658d1a3ff8e74c5fab3b",
+    "scene_info": {
+      "cluttered_table_info": [],
+      "texture_info": {
+        "wall_texture": null,
+        "table_texture": null
+      },
+      "info": {}
+    },
+    "elapsed_seconds": 115.41907363198698,
+    "exit_code": 0
+  },
+  "run_log_tail": "able_scene {'adjust_bottle': 16, 'handover_block': 0, 'place_object_basket': 0}\nadjust_bottle 800019 expert_infeasible {'adjust_bottle': 16, 'handover_block': 0, 'place_object_basket': 0}\nadjust_bottle 800020 accepted {'adjust_bottle': 17, 'handover_block': 0, 'place_object_basket': 0}\nadjust_bottle 800021 accepted {'adjust_bottle': 18, 'handover_block': 0, 'place_object_basket': 0}\nadjust_bottle 800022 accepted {'adjust_bottle': 19, 'handover_block': 0, 'place_object_basket': 0}\nadjust_bottle 800023 accepted {'adjust_bottle': 20, 'handover_block': 0, 'place_object_basket': 0}\nhandover_block 801000 accepted {'adjust_bottle': 20, 'handover_block': 1, 'place_object_basket': 0}\nhandover_block 801001 accepted {'adjust_bottle': 20, 'handover_block': 2, 'place_object_basket': 0}\nhandover_block 801002 accepted {'adjust_bottle': 20, 'handover_block': 3, 'place_object_basket': 0}\nhandover_block 801003 accepted {'adjust_bottle': 20, 'handover_block': 4, 'place_object_basket': 0}\nhandover_block 801004 accepted {'adjust_bottle': 20, 'handover_block': 5, 'place_object_basket': 0}\nhandover_block 801005 accepted {'adjust_bottle': 20, 'handover_block': 6, 'place_object_basket': 0}\nhandover_block 801006 expert_infeasible {'adjust_bottle': 20, 'handover_block': 6, 'place_object_basket': 0}\nhandover_block 801007 accepted {'adjust_bottle': 20, 'handover_block': 7, 'place_object_basket': 0}\nhandover_block 801008 accepted {'adjust_bottle': 20, 'handover_block': 8, 'place_object_basket': 0}\nhandover_block 801009 accepted {'adjust_bottle': 20, 'handover_block': 9, 'place_object_basket': 0}\nhandover_block 801010 accepted {'adjust_bottle': 20, 'handover_block': 10, 'place_object_basket': 0}\nhandover_block 801011 accepted {'adjust_bottle': 20, 'handover_block': 11, 'place_object_basket': 0}\nhandover_block 801012 accepted {'adjust_bottle': 20, 'handover_block': 12, 'place_object_basket': 0}\nhandover_block 801013 accepted {'adjust_bottle': 20, 'handover_block': 13, 'place_object_basket': 0}\nhandover_block 801014 accepted {'adjust_bottle': 20, 'handover_block': 14, 'place_object_basket': 0}\nhandover_block 801015 accepted {'adjust_bottle': 20, 'handover_block': 15, 'place_object_basket': 0}\nhandover_block 801016 accepted {'adjust_bottle': 20, 'handover_block': 16, 'place_object_basket': 0}\n"
+}

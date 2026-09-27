@@ -1,0 +1,282 @@
+{
+  "checked_at": "2026-09-24T00:16:34.511720-05:00",
+  "trigger": "2026-09-24T00:15:01.824979-05:00",
+  "training": {
+    "pca-seed42": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 8495,
+        "opt_step": 4247,
+        "steps_per_sec": 0.4855399011797612,
+        "batch_size": 4,
+        "lr": 2.2361799527281005e-05,
+        "metrics": {
+          "loss_total": 0.30136311054229736,
+          "loss_video": 0.27097079157829285,
+          "loss_action": 0.030392328277230263,
+          "grad_norm": 0.0
+        },
+        "allocated_bytes": 18103425024,
+        "wall_time": 1790226993.5069215,
+        "rank": 0
+      },
+      "metric_age_s": 1.0550181865692139,
+      "all_metrics_finite": true,
+      "log_tail": "93/12000 [4:56:02<1:59:08,  2.04s/step, loss=0.3201, video=0.3115, action=0.0086, lr=2.24e-05, epoch=1]\rTraining:  71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 8494/12000 [4:56:02<2:04:12,  2.13s/step, loss=0.3201, video=0.3115, action=0.0086, lr=2.24e-05, epoch=1]",
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_8000.safetensors",
+          "bytes": 12123507288
+        }
+      ]
+    },
+    "pca-seed43": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 8414,
+        "opt_step": 4207,
+        "steps_per_sec": 0.4576746865277701,
+        "batch_size": 4,
+        "lr": 2.3266389558074506e-05,
+        "metrics": {
+          "loss_total": 0.19873401522636414,
+          "loss_video": 0.1935044676065445,
+          "loss_action": 0.005229550879448652,
+          "grad_norm": 0.5206758975982666
+        },
+        "allocated_bytes": 18103425024,
+        "wall_time": 1790226993.9461412,
+        "rank": 0
+      },
+      "metric_age_s": 0.6750891208648682,
+      "all_metrics_finite": true,
+      "log_tail": "12/12000 [4:55:49<2:04:41,  2.09s/step, loss=0.2299, video=0.2221, action=0.0077, lr=2.33e-05, epoch=1]\rTraining:  70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 8413/12000 [4:55:49<2:04:28,  2.08s/step, loss=0.2299, video=0.2221, action=0.0077, lr=2.33e-05, epoch=1]",
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_8000.safetensors",
+          "bytes": 12123507288
+        }
+      ]
+    },
+    "pca-seed44": {
+      "status": "queued",
+      "exit": null,
+      "last_metric": {},
+      "metric_age_s": null,
+      "all_metrics_finite": true,
+      "log_tail": null,
+      "checkpoints": []
+    },
+    "svae-seed42": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 8424,
+        "opt_step": 4212,
+        "steps_per_sec": 0.4662932068034922,
+        "batch_size": 4,
+        "lr": 2.3152582880074154e-05,
+        "metrics": {
+          "loss_total": 0.1844068318605423,
+          "loss_video": 0.16387192904949188,
+          "loss_action": 0.020534897223114967,
+          "grad_norm": 0.6697915196418762
+        },
+        "allocated_bytes": 18170329600,
+        "wall_time": 1790226993.6075826,
+        "rank": 0
+      },
+      "metric_age_s": 1.0772969722747803,
+      "all_metrics_finite": true,
+      "log_tail": "22/12000 [4:55:58<2:04:14,  2.08s/step, loss=0.1381, video=0.1101, action=0.0280, lr=2.32e-05, epoch=1]\rTraining:  70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 8423/12000 [4:55:58<2:02:49,  2.06s/step, loss=0.1381, video=0.1101, action=0.0280, lr=2.32e-05, epoch=1]",
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_8000.safetensors",
+          "bytes": 12189767400
+        }
+      ]
+    },
+    "svae-seed43": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 8565,
+        "opt_step": 4282,
+        "steps_per_sec": 0.509515217294741,
+        "batch_size": 4,
+        "lr": 2.1581486711941063e-05,
+        "metrics": {
+          "loss_total": 0.10254352539777756,
+          "loss_video": 0.06476324796676636,
+          "loss_action": 0.0377802774310112,
+          "grad_norm": 0.0
+        },
+        "allocated_bytes": 18170329600,
+        "wall_time": 1790226993.1832957,
+        "rank": 0
+      },
+      "metric_age_s": 1.5649242401123047,
+      "all_metrics_finite": true,
+      "log_tail": "/12000 [4:56:00<1:59:27,  2.09s/step, loss=0.2486, video=0.2176, action=0.0310, lr=2.16e-05, epoch=1]\rTraining:  71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 8564/12000 [4:56:00<1:59:52,  2.09s/step, loss=0.2486, video=0.2176, action=0.0310, lr=2.16e-05, epoch=1]",
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_8000.safetensors",
+          "bytes": 12189767400
+        }
+      ]
+    },
+    "svae-seed44": {
+      "status": "queued",
+      "exit": null,
+      "last_metric": {},
+      "metric_age_s": null,
+      "all_metrics_finite": true,
+      "log_tail": null,
+      "checkpoints": []
+    },
+    "wan-seed42": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 7649,
+        "opt_step": 3824,
+        "steps_per_sec": 0.4603737107926577,
+        "batch_size": 4,
+        "lr": 3.2531774091618114e-05,
+        "metrics": {
+          "loss_total": 0.3210245668888092,
+          "loss_video": 0.29851868748664856,
+          "loss_action": 0.02250589057803154,
+          "grad_norm": 0.0
+        },
+        "allocated_bytes": 19760472576,
+        "wall_time": 1790226993.0246863,
+        "rank": 0
+      },
+      "metric_age_s": 1.7777645587921143,
+      "all_metrics_finite": true,
+      "log_tail": "48/12000 [4:55:53<2:51:41,  2.37s/step, loss=0.3210, video=0.2985, action=0.0225, lr=3.25e-05, epoch=1]\rTraining:  64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 7649/12000 [4:55:53<2:47:24,  2.31s/step, loss=0.3210, video=0.2985, action=0.0225, lr=3.25e-05, epoch=1]",
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/checkpoint_step_4000.safetensors",
+          "bytes": 13361411736
+        }
+      ]
+    },
+    "wan-seed43": {
+      "status": "started",
+      "exit": null,
+      "last_metric": {
+        "global_step": 7961,
+        "opt_step": 3980,
+        "steps_per_sec": 0.470556570240282,
+        "batch_size": 4,
+        "lr": 2.8637300912697423e-05,
+        "metrics": {
+          "loss_total": 0.2973075807094574,
+          "loss_video": 0.2757608890533447,
+          "loss_action": 0.021546702831983566,
+          "grad_norm": 0.0
+        },
+        "allocated_bytes": 19760472576,
+        "wall_time": 1790226993.6170611,
+        "rank": 0
+      },
+      "metric_age_s": 1.2404446601867676,
+      "all_metrics_finite": true,
+      "log_tail": "59/12000 [4:55:53<2:31:32,  2.25s/step, loss=0.1303, video=0.1203, action=0.0099, lr=2.86e-05, epoch=1]\rTraining:  66%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 7960/12000 [4:55:53<2:31:56,  2.26s/step, loss=0.1303, video=0.1203, action=0.0099, lr=2.86e-05, epoch=1]",
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/checkpoint_step_4000.safetensors",
+          "bytes": 13361411736
+        }
+      ]
+    },
+    "wan-seed44": {
+      "status": "queued",
+      "exit": null,
+      "last_metric": {},
+      "metric_age_s": null,
+      "all_metrics_finite": true,
+      "log_tail": null,
+      "checkpoints": []
+    }
+  },
+  "exits": {
+    "pipeline": null,
+    "collector5": {
+      "time": "2026-09-23T22:05:36.904975-05:00",
+      "returncode": 0
+    },
+    "collector7": {
+      "time": "2026-09-23T21:03:54.426294-05:00",
+      "returncode": 0
+    },
+    "simulation": {
+      "time": "2026-09-23T21:08:15.726521-05:00",
+      "returncode": 0
+    }
+  },
+  "frozen_hash_mismatches": [],
+  "new_second_checkpoint_checks": [
+    {
+      "run": "pca-seed43",
+      "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_8000.safetensors",
+      "structurally_complete": true,
+      "tensors": 1136,
+      "payload_hashed": false,
+      "policy_scored": false,
+      "checkpoint_count": 1
+    },
+    {
+      "run": "svae-seed42",
+      "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_8000.safetensors",
+      "structurally_complete": true,
+      "tensors": 1214,
+      "payload_hashed": false,
+      "policy_scored": false,
+      "checkpoint_count": 1
+    }
+  ],
+  "pipeline_progress": {
+    "time": "2026-09-24T00:16:07.226749-05:00",
+    "stage": "waiting_for_all_training_collection_smoke",
+    "all_ready": false
+  },
+  "free_disk_gib": {
+    "/data02": 215.971,
+    "/home": 0.158
+  },
+  "cm001_gpu": {
+    "returncode": 0,
+    "stdout": "0, 32223, 54, 0\n1, 37991, 37, 0\n2, 31989, 88, 0\n3, 24407, 46, 0\n4, 25251, 94, 0\n5, 1, 0, 0\n6, 19527, 33, 0\n7, 18641, 86, 0\n",
+    "stderr": ""
+  },
+  "cm001_tmux": {
+    "returncode": 0,
+    "stdout": "exp\now-e2e-pipeline\n",
+    "stderr": ""
+  },
+  "pause_markers": [],
+  "cm009": {
+    "time": "2026-09-24T00:16:35.109924-05:00",
+    "gpu": {
+      "returncode": 0,
+      "stdout": "0, GPU-c7d96da5-a1ae-e1ed-de5d-03f35e550da2, 1, 0, 2\n1, GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 22251, 3, 0\n2, GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 21935, 3, 0\n3, GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 24531, 3, 0\n4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 22251, 3, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 21935, 3, 0\n6, GPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 24531, 3, 0\n7, GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 1, 0, 0\n",
+      "stderr": ""
+    },
+    "tmux": {
+      "returncode": 0,
+      "stdout": "ow-e2e-train-1\now-e2e-train-2\now-e2e-train-3\now-e2e-train-4\now-e2e-train-5\now-e2e-train-6\n",
+      "stderr": ""
+    }
+  },
+  "judgment": "No new failure, experiment completion or scientific result. Six trainings at3824\u20134282/6000 optimizer updates, all logged metrics finite and latest log ages below1.8s; three seed44 runs queued. PCA43 andSVAE42 have resumed normally after scheduled8000microstep saves and passed structural checks; all four PCA/SVAE runs retain one8000checkpoint. Wan42/43 remain before their scheduled second save. Existing finite controller correctly waits for all nine trainings.",
+  "next_step": "Finish all nine matched native training runs at the fixed6000 optimizer updates. All150 expert scenes and the development simulator preflight are complete; all three individual cohorts passed raw HDF5 hash and first50 expert-accepted selection audits. After all nine trainings finish, the existing finite controller must run the full cross-cohort novelty/initial-pose audit, paired training-stream audit and final12000-microstep checkpoint hashes before launching the complete5400-rollout matrix. This resolves whether representation accessibility improves native task success without clean regression. Do not create the exclusive fresh-cohort-integrity gate early or score intermediate checkpoints.",
+  "completed_at": "2026-09-24T00:17:23.296147-05:00",
+  "meaningful_change": false,
+  "public_retry_performed": false,
+  "resource_judgment": "Six assigned cm009 GPUs have0uncorrectedECC. cm009GPU0 remains excluded with2ECC. Newly idlecm009GPU7 not allocated, preserving existing frozen queues; no extra experiment. /data02free215.971GiB and/home0.158GiB; all checkpoints stay on/data02 and keep_last retention is working. Monitor upcoming Wan second saves and final fixed12000microsteps; no intermediate scoring or favorable-checkpoint selection."
+}

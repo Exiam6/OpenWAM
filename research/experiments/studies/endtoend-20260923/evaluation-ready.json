@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "time": "2026-09-25T19:49:28.257395-05:00",
+  "checkpoint_sha256": {
+    "svae-seed42": "4cbe7625f38a85d9d18c8340b469f746ebe7a3015df7afd23204504ad2f696a7",
+    "svae-seed43": "1424a145c1a6bae8b945705540436d6f4a0680dd88caca16a414f7563e3eccda",
+    "svae-seed44": "a05abc58dfa56041cd20775512f9f0bf27c0f0590f796ae53886b42b88e5421f",
+    "pca-seed42": "7504a93ad4b6be01c2bf1592069d403b223c1429cf2a64e0853b7e11fbbf7c48",
+    "pca-seed43": "2502bfd7b1986cf16b657efc48dce79a48e8791d558af87d4f6a765a2b5fc7c2",
+    "pca-seed44": "cef39a8b994ca37a8a88ad4184f7edec6b1b7c2209eab1140db9465d82ce90e6",
+    "wan-seed42": "b9cf3c71294ec0e545c5481e10f49665b28c7d6a1d45852342c2327ab4faac52",
+    "wan-seed43": "5514b15f2d0f665c69c4703b0e856a82f11e8cbbe032f2ae3f63a10ea8743bce",
+    "wan-seed44": "e9dd53f4a96da7801b9204060c0a1720b5e55c6d190894694a020f880060ec15"
+  },
+  "training_streams": {
+    "42": {
+      "svae": "e8f028320242e0e207cbb8ba7c3fb56b1ae6345faa56f5165a7737e6c3b14ca6",
+      "pca": "e8f028320242e0e207cbb8ba7c3fb56b1ae6345faa56f5165a7737e6c3b14ca6",
+      "wan": "e8f028320242e0e207cbb8ba7c3fb56b1ae6345faa56f5165a7737e6c3b14ca6"
+    },
+    "43": {
+      "svae": "fc109f288fddf3fce898ffa504b7e489e1afe29528c9d1d5dbe4d12409a6eb0d",
+      "pca": "fc109f288fddf3fce898ffa504b7e489e1afe29528c9d1d5dbe4d12409a6eb0d",
+      "wan": "fc109f288fddf3fce898ffa504b7e489e1afe29528c9d1d5dbe4d12409a6eb0d"
+    },
+    "44": {
+      "svae": "4482cb38104572da44bfffc725d936d4891b97135ad46203fe7c8ad847317714",
+      "pca": "4482cb38104572da44bfffc725d936d4891b97135ad46203fe7c8ad847317714",
+      "wan": "4482cb38104572da44bfffc725d936d4891b97135ad46203fe7c8ad847317714"
+    }
+  },
+  "frozen_files": {
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_common.py": "03b9df65807fe2e7764ae569e4c600f69717e1ce754cf3644f2e30b316be0e9a",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/run_simulation_preflight.py": "e327cb4b41602bd4e347ce60f0dbc2f46df277ca0ed796881bf26cce89550862",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/simulation_preflight.py": "4edc5629b5c3941fd9e9a8558fa17689b9f10e2baea4f76fd7264a9eaffbb1b9",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/serve_policy.py": "476608ccf2e9de0aa804e4388d71ba51969e98a188f92b8738d77821f5fa5e7d",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluate_policy.py": "cd021e40f79d104dfa1e6bd86337d3dd7ff0bcc815943ac971b6e4f9f2988708",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/verify_fresh_cohort.py": "6b5999af7cd30d4a410ef43b1d77e668814c6b186e8567ad3b8954aee59657ef",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_controller.py": "04c8cb2002d6a2907666eff024776256a3f276df0875ca8922e65a674482b7f8",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_queue.py": "c17b4f589a60840540056c7db11f7a0bdcee877a8d6699bd18dd3bcd09723572",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/action_diagnostics.py": "4a38f096cca963733b031f7477ae5290936c14604847655600a273423fa31fb0",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/analyze_closed_loop.py": "f576f32798ac02c5518466411774955900375a430dbef2e041bfa530d8dbea95",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/audit_closed_loop.py": "2b9cb18971e3339334cbde0253ae18335cf2da614e955f7c50a38817d7b714ad",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/summarize_diagnostics.py": "f7a007a8addf68288781ef180b5e7d55526e71015d6b463c3f2febf2bf2818a2",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/update_status.py": "13143dd36b76f988b8bd28ad1a23cc54b3c74646e74ed76de211cb6e594b4da8",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/dinov3_pca.py": "5daa04141295143d64e4014e7cc8603ec48479acffd5fd39fc4d093f80541de7",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/__init__.py": "76c2a60bd41d15831a73dd61e9617212ea251760dc6a11138b4cfb69ab4287a3",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/deploy/server.py": "0aa4e1b6ff231e90fabcd0ef44b871cb5a51843ea09a531ca9c8c2fcaa6f7378",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/openwam2robotwin_interface.py": "3329d6b1c559646395d65f6d4521720ac83ce95a7f8ebbdfecf486a254e423b7",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py": "7b56c45b89a845b4ff264907bcac7f183a71894d74f4b90753fda69d254cedda",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/protocol.json": "9821536558ee158735a24e2caa8b394dfb46723269586cf4acc66c4b9b2cd7b6",
+    "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/EVALUATION_IMPLEMENTATION.md": "e53b3e8ac24a9cb4e11f7ad7b04947a10cd76d569d8c4077ad46e918864aa52e",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+    "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/evaluation-recovery-20260925.json": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/config.yaml": "9d2f38076bfc3fa4687b1609eddc035c04b45f53b9f130aa01e51cd8f4c4232f",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/normalization_stats.npy": "f55b98cc832255d3b87b9e9c7c0a2d5286857faf96f10e9659657a66688f67ed",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/config.yaml": "16bf2fb330f8c12bb95033746d9f8f9524a5da89a169a4d8fbb9937431677524",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/normalization_stats.npy": "f55b98cc832255d3b87b9e9c7c0a2d5286857faf96f10e9659657a66688f67ed",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed44/output/2026-09-24_13-51-17/config.yaml": "4b895a9406c0e2e4c0266f0ddbe7037c575c574246af9c4291c89c71fbfab49a",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed44/output/2026-09-24_13-51-17/normalization_stats.npy": "f55b98cc832255d3b87b9e9c7c0a2d5286857faf96f10e9659657a66688f67ed",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/config.yaml": "7e44455460f45b8b9d4cc9a67ab69a5b398d1a9d4026977aa00607cb3b463044",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/normalization_stats.npy": "f55b98cc832255d3b87b9e9c7c0a2d5286857faf96f10e9659657a66688f67ed",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/config.yaml": "5eb470121799dfb3d9347dce512455680624ce1242055f96ddc028bb718c816b",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/normalization_stats.npy": "f55b98cc832255d3b87b9e9c7c0a2d5286857faf96f10e9659657a66688f67ed",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/config.yaml": "d02d1e1c0173d0c86e4e41e63b5818fa2d28a100eb25b83cdfce3aa3bc8f9880",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/normalization_stats.npy": "f55b98cc832255d3b87b9e9c7c0a2d5286857faf96f10e9659657a66688f67ed",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/config.yaml": "6c774d1a03d477df62bd75aa00c1e735b00396322b00361476eee95107dedbc2",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/normalization_stats.npy": "f55b98cc832255d3b87b9e9c7c0a2d5286857faf96f10e9659657a66688f67ed",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/config.yaml": "2fea714c325ecc58d6395968a6dd8edf77abaa452749d7b59993d778a3ad7dc0",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/normalization_stats.npy": "f55b98cc832255d3b87b9e9c7c0a2d5286857faf96f10e9659657a66688f67ed",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed44/output/2026-09-24_13-51-20/config.yaml": "0b15b987819f794685e856069a2c05f52f8f3ad93f0e9edc22d7c27d2b486ed4",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed44/output/2026-09-24_13-51-20/normalization_stats.npy": "f55b98cc832255d3b87b9e9c7c0a2d5286857faf96f10e9659657a66688f67ed",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/manifest.json": "d3c5f71928638f6b107b9d193580b85def2d8c3c44b57cb75435496fb3a523a7",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/manifest.json": "04122c608e11de012820f0e10f21ececbe88e4a9fca12790672a533eb47e016e",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/manifest.json": "2c549f879f1135a915ab9f545c6dc02b031865fb4e5ee3a1c9a61ef84d0f6e82"
+  },
+  "operational_recovery": "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/evaluation-recovery-20260925.json"
+}

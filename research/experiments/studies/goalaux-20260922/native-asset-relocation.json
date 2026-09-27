@@ -1,0 +1,27 @@
+{
+  "time": "2026-09-22T17:17:44.721769-05:00",
+  "original_files_unchanged": true,
+  "changes": [
+    {
+      "file": "goalaux-native/RoboTwin/assets/embodiments/aloha-agilex/curobo_left.yml",
+      "before": "a15847fe6494c577128c520a921c6940979467c2d860d379b18354e29739dddc",
+      "after": "dbed621494c92b3cde3c5691f1311ca89ebadcdbbe05070a8a9654ac88febd87",
+      "only_prefix_replacement": true
+    },
+    {
+      "file": "goalaux-native/RoboTwin/assets/embodiments/aloha-agilex/curobo_right.yml",
+      "before": "519e555d0e2f977cacf20d147ca2c7c157d8ca53bdd47c94bfa458f4e3e3f124",
+      "after": "4ddf81828d5f6daa5f8ec617e71c4958a1981308cd34ff92ef71a4d78db393a3",
+      "only_prefix_replacement": true
+    }
+  ],
+  "sha256": {
+    "goalaux-native/RoboTwin/assets/embodiments/aloha-agilex/curobo_left.yml": "dbed621494c92b3cde3c5691f1311ca89ebadcdbbe05070a8a9654ac88febd87",
+    "goalaux-native/RoboTwin/assets/embodiments/aloha-agilex/curobo_right.yml": "4ddf81828d5f6daa5f8ec617e71c4958a1981308cd34ff92ef71a4d78db393a3",
+    "goalaux-native/RoboTwin/assets/embodiments/aloha-agilex/collision_aloha_left.yml": "19e21fbba8b6657ffc6d405ac53b277902ce118821b818aa77aad2e0b0d7f83d",
+    "goalaux-native/RoboTwin/assets/embodiments/aloha-agilex/collision_aloha_right.yml": "d22850769a5c28fec35434e12ffb597837853cb4dd916b74969e6e615faf5cdd",
+    "goalaux-native/RoboTwin/assets/embodiments/aloha-agilex/urdf/arx5_description_isaac.urdf": "097c59fb19a7b482249c6097df8319586ea7cfd268c015516f103b289a7e761a"
+  },
+  "only_absolute_asset_paths_relocated": true,
+  "robot_physics_planner_camera_parameters_unchanged": true
+}

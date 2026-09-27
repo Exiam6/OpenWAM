@@ -1,0 +1,11 @@
+{
+  "frozen_at": "2026-09-22T15:07:08.334455-05:00",
+  "source_sha256": {
+    "scripts/layers/run_secondary.py": "319ffcf8b478e8a67f5ef1bda2b31b4a4ad2234175b086f727f2f66e92423bb1",
+    "scripts/layers/describe_confirmation.py": "13d001ebd99997d03ff80a4e906cd4ec317a10e5cc74d2cd52cdaee9667159d2",
+    "scripts/layers/score_wrist.py": "86493ef0868bfc23b8d99afa1e9c3bfeef3ce2137bcf728ca04153da9b9c724c",
+    "scripts/layers/score_initial_goal.py": "da1ee01742882bf5e5f0a3dd1bbfda274ae349a4ca4708ade9e8d06871aa5253"
+  },
+  "primary_unchanged": true,
+  "no_candidate_selection": "original primary remains K4SVAE vsL12SVAE; newdiagnostics are explicitly secondary"
+}

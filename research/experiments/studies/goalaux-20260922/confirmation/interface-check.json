@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "time": "2026-09-22T17:28:49.238931-05:00",
+  "saved_readout_interfaces_checked": 69,
+  "parity_fixture_training_membership": true,
+  "episode_aggregation_fixture": true,
+  "fresh_samples_read_or_scored": false,
+  "scorer_sha256": "178434f0aae687724f7e874cd474907326fa177c0878c9d962c4383717f238ad"
+}

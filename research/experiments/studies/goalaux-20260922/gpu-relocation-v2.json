@@ -1,0 +1,16 @@
+{
+  "frozen_at": "2026-09-22T16:14:16.101378-05:00",
+  "original_protocol_sha256": "7bfef725f564afee18d3338fc62fd932148962b32f676f0c17d90cc1776c61fc",
+  "original_host": "cm004",
+  "original_gpu_uuid": "GPU-0c486005-5f03-f4da-5f3a-e67def845364",
+  "host": "cm002",
+  "gpu_uuid": "GPU-dee01971-fb13-ae53-0d7f-ebe6c6149087",
+  "gpu_name": "NVIDIA L40S",
+  "reason": "Second prelaunch gate rejected cm002gpu0 due to uncorrected ECC1. Choose first idle L40S with zero uncorrected ECC from refreshed fixed scan. No model code has executed; all scientific criteria and600s cap unchanged.",
+  "original_model_run_occurred": false,
+  "gpu_index": 5,
+  "supersedes": "relocation.json",
+  "rejected_prelaunch_gpu_indices": [
+    0
+  ]
+}

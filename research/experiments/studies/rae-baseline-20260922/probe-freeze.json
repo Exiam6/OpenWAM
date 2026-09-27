@@ -1,0 +1,24 @@
+{
+  "frozen_at": "2026-09-22T23:49:26.693177-05:00",
+  "files": {
+    "/home/zifanz4/openwam-experiments/scripts/rae_interface_preflight.py": "3dec9840f1e53b6094529dc22f81807b3d337d59582da2d8335dc0e5a42aee19",
+    "/data02/zifanz4/openwam-experiments/OpenWAM/openwam/model/video_backbone/encoder/wan22_vae.py": "d64b5a1bf61358205e99bf955c9fcd03b9002dcdef1b0265c2555060f4198f6e",
+    "/data02/zifanz4/openwam-experiments/OpenWAM/openwam/model/video_backbone/wan/models/vae.py": "2821a28dc146f57b1cf73a555da516f5a5e37436b8f044a52fcba947d89a8bd5",
+    "/data02/zifanz4/openwam-experiments/OpenWAM/openwam/model/video_backbone/encoder/base.py": "1880d59a83ddaa00eeec509e8a3890df12aa73bf8256412f0d29b8c502745c87",
+    "/home/zifanz4/openwam-experiments/scripts/rae_matched_probe.py": "3a67bda65e6692456eaeb8c041a3005b954128c2d47e1bd214eff022810fd41f",
+    "/data02/zifanz4/openwam-experiments/scripts/rae_matched_probe.py": "3a67bda65e6692456eaeb8c041a3005b954128c2d47e1bd214eff022810fd41f",
+    "/data02/zifanz4/openwam-experiments/scripts/rae_interface_preflight.py": "3dec9840f1e53b6094529dc22f81807b3d337d59582da2d8335dc0e5a42aee19",
+    "/data02/zifanz4/openwam-experiments/scripts/layers/readout_v2.py": "696468bec68e1a22001301624a06fdef4a5351f584eebac471ecbbb192f39283",
+    "/data02/zifanz4/openwam-experiments/scripts/layers/common.py": "87a54d28304292a12f1cb62d579b66920b032876e6e098a30897aee818e60e2d",
+    "/data02/zifanz4/openwam-experiments/results/rae-baseline-20260922/train-images.zip": "bd5a8229edf89d4d2e1a766accc202591a4fa635952af7febabb2494b86d9638",
+    "/data02/zifanz4/openwam-experiments/results/rae-baseline-20260922/train-labels.npz": "f1c21a2cc8721499c30231d180431eba9f4269b5ea1e51ec3dcf7f03033b1968",
+    "/data02/zifanz4/openwam-experiments/results/rae-baseline-20260922/train-rows.json": "60281e738db1c7c3d63556bf54ed2589bad8dae4c5c2d1f2a7ae50b63c526e5a",
+    "/data02/zifanz4/openwam-experiments/results/layers-20260922/readout/manifest.json": "f31f5bffc3841327b5b3a02fc73f74afad1ffe0a86e7024ff8a6740f349e8a79",
+    "/data02/zifanz4/openwam-experiments/results/layers-20260922/confirmation/sample-manifest.json": "bff7691a011614878475d802a289b0cc442f3ed437c4513b577b917ccecde358",
+    "/data02/zifanz4/openwam-experiments/results/layers-20260922/confirmation/summary.json": "2e11cef5a09f7f924d9fd8717b676d4579f077b5a0907a0f6140e272782ac609",
+    "/data02/zifanz4/openwam-experiments/results/layers-20260922/initial-goal/fresh-summary.json": "79de81242487cc19d66a76c296e39e379c67ccb67d16f8c23fb2cf20825d128a",
+    "/data02/zifanz4/openwam-experiments/results/layers-20260922/initial-goal/training-samples.json": "222ca03a38cddc62808c061acad294292db1cb89f2105faae2b5524b9696c62b",
+    "/data02/zifanz4/openwam-experiments/results/layers-20260922/initial-goal/fresh-labels.json": "057f855ef7397e2bc1b39cdc2aa379526fd2fbe962263742e8e87fca167ce48c"
+  },
+  "protocol_sha256": "0acd1bf00039075221f0be095418111e8fd7ac297bf40db14e67050b26d4680e"
+}

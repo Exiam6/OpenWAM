@@ -1,0 +1,15 @@
+{
+  "time": "2026-09-23T18:53:16.737549-05:00",
+  "episodes": 105,
+  "tasks": [
+    "adjust_bottle",
+    "handover_block",
+    "place_object_basket"
+  ],
+  "manifest": "/data02/zifanz4/openwam-experiments/endtoend-20260923/data-manifest.json",
+  "stats": "/data02/zifanz4/openwam-experiments/endtoend-20260923/normalization_stats.npy",
+  "stats_sha256": "f55b98cc832255d3b87b9e9c7c0a2d5286857faf96f10e9659657a66688f67ed",
+  "data_manifest_sha256": "568dff0b51c15f06267eafe6ec4d9fba5c2668b577d4d9ceb748c1ee2503429e",
+  "encoder_fit": "previous frozen105 train scenes; SVAE layer12 reducer seed42 for all policy seeds",
+  "scale": "controlled native 12-layer world1024/action512, not published5B"
+}

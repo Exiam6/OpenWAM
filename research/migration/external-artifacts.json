@@ -1,0 +1,81 @@
+{
+  "note": "Inventory only, not copied or verified on target. Preserve parent folders and symlink targets. Full checkpoint hashes are in experiment training audits. Live results require coordinated snapshot before transfer.",
+  "checkpoint_total_bytes": 73138641984,
+  "items": [
+    {
+      "path": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed42/output/2026-09-26_17-58-29/checkpoint_step_4000.safetensors",
+      "bytes": 12189773664,
+      "purpose": "final temporal policy; copy parent folder including configuration"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed43/output/2026-09-26_20-36-12/checkpoint_step_4000.safetensors",
+      "bytes": 12189773664,
+      "purpose": "final temporal policy; copy parent folder including configuration"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/learned-seed44/output/2026-09-26_23-02-44/checkpoint_step_4000.safetensors",
+      "bytes": 12189773664,
+      "purpose": "final temporal policy; copy parent folder including configuration"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed42/output/2026-09-26_17-56-53/checkpoint_step_4000.safetensors",
+      "bytes": 12189773664,
+      "purpose": "final temporal policy; copy parent folder including configuration"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed43/output/2026-09-26_20-35-15/checkpoint_step_4000.safetensors",
+      "bytes": 12189773664,
+      "purpose": "final temporal policy; copy parent folder including configuration"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/temporal-20260926/training/mean-seed44/output/2026-09-26_23-01-46/checkpoint_step_4000.safetensors",
+      "bytes": 12189773664,
+      "purpose": "final temporal policy; copy parent folder including configuration"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/assets",
+      "exists": true,
+      "purpose": "pretrained encoders/tokenizers"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/temporal-20260926/fit",
+      "exists": true,
+      "purpose": "frozen learned temporal kernel"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/compressors-multiview",
+      "exists": true,
+      "purpose": "frozen S-VAE and PCA"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/normalization_stats.npy",
+      "exists": true,
+      "purpose": "action/state normalization"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes",
+      "exists": true,
+      "purpose": "sealed scene cohorts"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/temporal-20260926/scenes",
+      "exists": true,
+      "purpose": "temporal scene records"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data",
+      "exists": true,
+      "purpose": "training data"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/deps",
+      "exists": true,
+      "purpose": "extra pinned Python dependencies"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin",
+      "exists": true,
+      "purpose": "simulator source, robot/object assets and task configuration"
+    }
+  ]
+}

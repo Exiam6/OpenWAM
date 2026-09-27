@@ -1,0 +1,7 @@
+{
+  "recorded_at": "2026-09-22T19:34:00.015208-05:00",
+  "error": "AttributeError: PosixPath has no attribute write",
+  "affected_stage": "local status-note write after archive, report note, and selfchecks append completed",
+  "resolution": "used Path.write_text; only remaining bookkeeping executed",
+  "experiment_or_runtime_affected": false
+}

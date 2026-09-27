@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "time": "2026-09-23T21:08:15.156304-05:00",
+  "artifact": "/data02/zifanz4/openwam-experiments/endtoend-20260923/simulation-preflight/result.json",
+  "code_sha256": {
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluate_policy.py": "cd021e40f79d104dfa1e6bd86337d3dd7ff0bcc815943ac971b6e4f9f2988708",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/serve_policy.py": "476608ccf2e9de0aa804e4388d71ba51969e98a188f92b8738d77821f5fa5e7d",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/simulation_preflight.py": "4edc5629b5c3941fd9e9a8558fa17689b9f10e2baea4f76fd7264a9eaffbb1b9"
+  },
+  "heldout_policy_outcomes_used": false
+}

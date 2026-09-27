@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "checked_at": "2026-09-22T16:34:38.516112-05:00",
+  "fit_count": 6,
+  "paired_seeds": [
+    {
+      "seed": 42,
+      "initial_checkpoint_identical": true,
+      "sample_sequence_identical": true,
+      "input_stats_identical": true,
+      "all_final_tensors_finite": true,
+      "encoder_max_abs_weight_difference": 0.02461327612400055,
+      "both_steps": 2000,
+      "model_config": {
+        "input_dim": 768,
+        "latent_dim": 48,
+        "num_heads": 16,
+        "num_layers": 3,
+        "intermediate_size": 2048,
+        "dropout": 0.0
+      }
+    },
+    {
+      "seed": 43,
+      "initial_checkpoint_identical": true,
+      "sample_sequence_identical": true,
+      "input_stats_identical": true,
+      "all_final_tensors_finite": true,
+      "encoder_max_abs_weight_difference": 0.02854904532432556,
+      "both_steps": 2000,
+      "model_config": {
+        "input_dim": 768,
+        "latent_dim": 48,
+        "num_heads": 16,
+        "num_layers": 3,
+        "intermediate_size": 2048,
+        "dropout": 0.0
+      }
+    },
+    {
+      "seed": 44,
+      "initial_checkpoint_identical": true,
+      "sample_sequence_identical": true,
+      "input_stats_identical": true,
+      "all_final_tensors_finite": true,
+      "encoder_max_abs_weight_difference": 0.023075075820088387,
+      "both_steps": 2000,
+      "model_config": {
+        "input_dim": 768,
+        "latent_dim": 48,
+        "num_heads": 16,
+        "num_layers": 3,
+        "intermediate_size": 2048,
+        "dropout": 0.0
+      }
+    }
+  ],
+  "training_episodes": 105,
+  "training_clips": 1260,
+  "all_source_and_final_checkpoint_hashes_match": true,
+  "readouts_or_confirmation_scored": false,
+  "policy_gain_claim": false,
+  "scope": "Artifact/paired-design integrity only; representation benefit unmeasured"
+}

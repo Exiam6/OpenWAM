@@ -1,0 +1,10 @@
+{
+  "time": "2026-09-22T17:17:43.704608-05:00",
+  "source_sha256": {
+    "assets/embodiments/aloha-agilex/curobo_left.yml": "a15847fe6494c577128c520a921c6940979467c2d860d379b18354e29739dddc",
+    "assets/embodiments/aloha-agilex/curobo_right.yml": "519e555d0e2f977cacf20d147ca2c7c157d8ca53bdd47c94bfa458f4e3e3f124",
+    "assets/embodiments/aloha-agilex/collision_aloha_left.yml": "19e21fbba8b6657ffc6d405ac53b277902ce118821b818aa77aad2e0b0d7f83d",
+    "assets/embodiments/aloha-agilex/collision_aloha_right.yml": "d22850769a5c28fec35434e12ffb597837853cb4dd916b74969e6e615faf5cdd",
+    "assets/embodiments/aloha-agilex/urdf/arx5_description_isaac.urdf": "097c59fb19a7b482249c6097df8319586ea7cfd268c015516f103b289a7e761a"
+  }
+}

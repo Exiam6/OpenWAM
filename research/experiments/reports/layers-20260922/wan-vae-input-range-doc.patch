@@ -1,0 +1,11 @@
+--- a/openwam/model/video_backbone/wan/models/vae.py
++++ b/openwam/model/video_backbone/wan/models/vae.py
+@@ -1141,7 +1141,7 @@
+         ``tiled=False`` and the VAE is frozen (``torch.no_grad``).
+ 
+         Args:
+-            videos: (B, 3, T, H, W) pixel-space video tensor, value range [0, 1].
++            videos: (B, 3, T, H, W) pixel-space video tensor, value range [-1, 1].
+             device: Target device for encoding.
+ 
+         Returns:

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "cached_prediction_comparisons": 126,
+  "max_abs": 9.992007221626409e-16,
+  "scene_equal_weight_metric_fixture": true,
+  "new_model_fits": 0,
+  "encoder_runs": 0,
+  "confirmation_data_used": false
+}

@@ -1,0 +1,395 @@
+{
+  "time": "2026-09-23T21:16:40.610206-05:00",
+  "trigger": "2026-09-23T21:15:01.548328-05:00",
+  "training": {
+    "pca-seed42": {
+      "opt_step": 1682,
+      "metric_age_s": 0.2975916862487793,
+      "finite": true,
+      "exit": null
+    },
+    "pca-seed43": {
+      "opt_step": 1667,
+      "metric_age_s": 1.025853157043457,
+      "finite": true,
+      "exit": null
+    },
+    "pca-seed44": {
+      "opt_step": 0,
+      "metric_age_s": null,
+      "finite": true,
+      "exit": null
+    },
+    "svae-seed42": {
+      "opt_step": 1663,
+      "metric_age_s": 1.545440435409546,
+      "finite": true,
+      "exit": null
+    },
+    "svae-seed43": {
+      "opt_step": 1692,
+      "metric_age_s": 1.3444886207580566,
+      "finite": true,
+      "exit": null
+    },
+    "svae-seed44": {
+      "opt_step": 0,
+      "metric_age_s": null,
+      "finite": true,
+      "exit": null
+    },
+    "wan-seed42": {
+      "opt_step": 1514,
+      "metric_age_s": 0.8223276138305664,
+      "finite": true,
+      "exit": null
+    },
+    "wan-seed43": {
+      "opt_step": 1570,
+      "metric_age_s": 1.1526131629943848,
+      "finite": true,
+      "exit": null
+    },
+    "wan-seed44": {
+      "opt_step": 0,
+      "metric_age_s": null,
+      "finite": true,
+      "exit": null
+    }
+  },
+  "scenes": {
+    "adjust_bottle": {
+      "accepted": 50,
+      "attempted": 63,
+      "updated": "2026-09-23T20:39:16.259497-05:00",
+      "complete": true,
+      "last_outcome": "accepted"
+    },
+    "handover_block": {
+      "accepted": 24,
+      "attempted": 24,
+      "updated": "2026-09-23T21:16:05.221770-05:00",
+      "complete": false,
+      "last_outcome": "accepted"
+    },
+    "place_object_basket": {
+      "accepted": 50,
+      "attempted": 84,
+      "updated": "2026-09-23T21:03:54.392164-05:00",
+      "complete": true,
+      "last_outcome": "accepted"
+    }
+  },
+  "exits": {
+    "collection-slots/5": null,
+    "collection-slots/7": {
+      "time": "2026-09-23T21:03:54.426294-05:00",
+      "returncode": 0
+    },
+    "simulation-preflight": {
+      "time": "2026-09-23T21:08:15.726521-05:00",
+      "returncode": 0
+    },
+    "pipeline": null
+  },
+  "frozen_mismatches": [],
+  "pipeline": {
+    "time": "2026-09-23T21:16:18.326764-05:00",
+    "stage": "waiting_for_all_training_collection_smoke",
+    "all_ready": false
+  },
+  "free_gib": 290.0205078125,
+  "cm001_gpu": "0, GPU-c83b7d25-753e-2eae-f13b-8f9c3df9fa4b, 32223 MiB, 54 %, 0\n1, GPU-67b700c2-eb7a-93aa-28dd-57e8b2711926, 37991 MiB, 93 %, 0\n2, GPU-025b7fc9-8f25-5467-5c28-8e59884ab6d3, 31989 MiB, 53 %, 0\n3, GPU-bba13bfa-9dd6-0956-0e4e-122950cd69fe, 16 MiB, 0 %, 0\n4, GPU-e7aef4c0-2628-b4f8-34f4-579d62b7feb6, 5 MiB, 0 %, 0\n5, GPU-1758045c-5a5e-3661-bb58-a786fa745a17, 2557 MiB, 2 %, 0\n6, GPU-91a9a93b-b386-82f0-3009-88cc9bb79d06, 18669 MiB, 0 %, 0\n7, GPU-3624eff9-444b-b72c-e32e-2bae7acbb8cb, 17781 MiB, 59 %, 0\n",
+  "tmux": "exp\now-e2e-pipeline\now-e2e-scenes-5\n",
+  "completion_reasoned_at": "2026-09-23T21:22:22.906584-05:00",
+  "basket_audit": {
+    "time": "2026-09-23T21:21:02.275535-05:00",
+    "passed": true,
+    "task": "place_object_basket",
+    "accepted": 50,
+    "attempted": 84,
+    "manifest_sha256": "2c549f879f1135a915ab9f545c6dc02b031865fb4e5ee3a1c9a61ef84d0f6e82",
+    "hdf5_hashes_verified": 50,
+    "selection_matches_first50_accepted": true,
+    "no_learned_policy_outcomes": true,
+    "scenes": [
+      {
+        "seed": 1102002,
+        "frames": 243,
+        "sha256": "6698e3b7db54c8e2db832033b26844895a04728bd1f5f9918cf69944971160f6"
+      },
+      {
+        "seed": 1102006,
+        "frames": 227,
+        "sha256": "e2ec0d43e1c70aef74d13b6eadc6df7f9321578eb726e0222ad319b222820fa1"
+      },
+      {
+        "seed": 1102007,
+        "frames": 246,
+        "sha256": "7d8905cd38ae30df08da87a8b5d3204b7138bab8cdf1f8faecfffc279feac260"
+      },
+      {
+        "seed": 1102008,
+        "frames": 246,
+        "sha256": "8008315b3828128167149552bc3e777d5718a5b8082082a3da3e04ec9e28844e"
+      },
+      {
+        "seed": 1102009,
+        "frames": 228,
+        "sha256": "f61af59f4bb65fb599bb3ebdf7c65147131815c99af87494fef9ad79afccd72c"
+      },
+      {
+        "seed": 1102010,
+        "frames": 246,
+        "sha256": "79f78c293f4219fce22d5dba9bbb6b3436641217cdc180a24c56bf36fd36e71c"
+      },
+      {
+        "seed": 1102011,
+        "frames": 244,
+        "sha256": "cfc986e340e212073e1c49329f7d6ad69e783d63817062990a5e081c8f139919"
+      },
+      {
+        "seed": 1102013,
+        "frames": 257,
+        "sha256": "3cfa8a116e38f5ab8ba94d0977ef0d2d1763f8a7828ba4bb53492f72f166ab62"
+      },
+      {
+        "seed": 1102015,
+        "frames": 245,
+        "sha256": "27419331e0cea5dc20637f714907559bf4de3ed14b9bfa9068caed826dae51c9"
+      },
+      {
+        "seed": 1102017,
+        "frames": 252,
+        "sha256": "46e85a1eb4ea4946b0553512253766b57048093bf51e286150b27c3c1aec011b"
+      },
+      {
+        "seed": 1102018,
+        "frames": 227,
+        "sha256": "99b8c4e34e09f3479fb0b5b99369f56f82c467f73bda6def7a0b63eb55d5c94b"
+      },
+      {
+        "seed": 1102020,
+        "frames": 258,
+        "sha256": "a9f1dfdfd9e6097cd285dca6005e7958ba23d396b0a8e03dde6274c100eaea02"
+      },
+      {
+        "seed": 1102022,
+        "frames": 247,
+        "sha256": "b45fa85db1e5228a2438212562239d264819af458a8e7b3147f57cb356a2fa01"
+      },
+      {
+        "seed": 1102023,
+        "frames": 233,
+        "sha256": "8dace3be3377f03b5cbafeb93fa38b3cf02b31f657e269fa9fddf1efadc25a27"
+      },
+      {
+        "seed": 1102024,
+        "frames": 244,
+        "sha256": "05fee192a9f3f8228076f8db20470126fdc3671632464c25f9a4cb529795955f"
+      },
+      {
+        "seed": 1102025,
+        "frames": 257,
+        "sha256": "11ccdabf99a7e2691dfedc26a36af8be5b0bf0d394f7e26a34f503e2c6ca9238"
+      },
+      {
+        "seed": 1102026,
+        "frames": 244,
+        "sha256": "8f2be15dcffdb4cd62f38e096d09483a1adcfb249016b4d7b61ca1029d0ce853"
+      },
+      {
+        "seed": 1102028,
+        "frames": 247,
+        "sha256": "68a4a15110a252f3dcd0eb2906bbad12139b512cbbbea39954a7e7784860de50"
+      },
+      {
+        "seed": 1102031,
+        "frames": 233,
+        "sha256": "cb7d1cc0bab767045b1d98912dd80475f0e2822c7d81db3f031f24d51b598008"
+      },
+      {
+        "seed": 1102032,
+        "frames": 243,
+        "sha256": "5b3dd508e27abd66aa6a3dde3c4b0f999927d728b301a49f4fe392ad5d8763e9"
+      },
+      {
+        "seed": 1102033,
+        "frames": 240,
+        "sha256": "74950761deff7553c1c5c3102dec4fd1ddb1ae6637d2c89814bcd654974e5628"
+      },
+      {
+        "seed": 1102034,
+        "frames": 264,
+        "sha256": "47da351d9b491f2f97f319b6528e4f7155831f730c83c78db1c7c2da8d9927e8"
+      },
+      {
+        "seed": 1102035,
+        "frames": 248,
+        "sha256": "dd2ccbd0e23fffd87a923223f2d5ae8772fe29548861b8f0970cfb25815e530c"
+      },
+      {
+        "seed": 1102036,
+        "frames": 247,
+        "sha256": "4a7966f7c60688efa2c923e85950d82bc54e99958bcfd33422d156f56075d0ea"
+      },
+      {
+        "seed": 1102038,
+        "frames": 245,
+        "sha256": "462914c77bf62edc76668061354e91dfc8a4e7dcd4fb0de7595a65f4f2badf7f"
+      },
+      {
+        "seed": 1102041,
+        "frames": 248,
+        "sha256": "fc6ac607882870c13b7e3f9aaed76d3909d3482641c87b1de4bd9f70586ac289"
+      },
+      {
+        "seed": 1102042,
+        "frames": 241,
+        "sha256": "527615947dded45c078e34342e6c3739415637c9ad52210874d9e54096fb340f"
+      },
+      {
+        "seed": 1102043,
+        "frames": 239,
+        "sha256": "b40cc6f66b8abbe72d70cf2a202315e7dd25a48d000f2ce5abe3f6029661728e"
+      },
+      {
+        "seed": 1102044,
+        "frames": 243,
+        "sha256": "eca0b9cf0d49453b3860e1860638fa31f1b190a1a86503614e3f45c1da3b676f"
+      },
+      {
+        "seed": 1102047,
+        "frames": 248,
+        "sha256": "84781c1386a010fb159ece526a93911f1a9f6394c7b7ff67f928b409b8ab146e"
+      },
+      {
+        "seed": 1102048,
+        "frames": 253,
+        "sha256": "3aeb314d91527dc0a88ae0cded4142dc63a03c745e7181a12505534ccb81f2e6"
+      },
+      {
+        "seed": 1102049,
+        "frames": 246,
+        "sha256": "c62048b42997e43beb4c8f73ebb4442aab2292529596f37ac71c801312624bd0"
+      },
+      {
+        "seed": 1102050,
+        "frames": 244,
+        "sha256": "6d01ce2eff807c8895e2e2483dde8200c91b3ad8ac1369c0b57807cb1450f8b4"
+      },
+      {
+        "seed": 1102053,
+        "frames": 241,
+        "sha256": "1e6e427e66036b0be92c2a3931b6a56fa62e6262a189d1e0ea62d6acc71753ce"
+      },
+      {
+        "seed": 1102054,
+        "frames": 294,
+        "sha256": "8897196607768c1d8efe7b8fd145d7158e2b7c5e5d915f5d0efe59d894be6ce0"
+      },
+      {
+        "seed": 1102056,
+        "frames": 246,
+        "sha256": "46b9de311f448d19c753a1859fd959a36f494c1e6261270863768d03edf602e2"
+      },
+      {
+        "seed": 1102057,
+        "frames": 250,
+        "sha256": "e00c3aa3636eab3bff5a403630d69cf4fe99cdbf8d7f168817ff931b08e39193"
+      },
+      {
+        "seed": 1102058,
+        "frames": 247,
+        "sha256": "86b8df56c4dae8f826734607ae02bc5006b8fc36c4b1d0d3c3d051a4c01418d7"
+      },
+      {
+        "seed": 1102062,
+        "frames": 250,
+        "sha256": "1934278434e2975ab2a59a8126d94808a755916070f9ffcc9e65edef7c190ebe"
+      },
+      {
+        "seed": 1102063,
+        "frames": 246,
+        "sha256": "bfd6f436e50caa5bd5d9088b4e032c1e3a2585a5027ae305b48d3306a3c2a191"
+      },
+      {
+        "seed": 1102066,
+        "frames": 248,
+        "sha256": "c362b2afa5ed7021e6ac27f71f3a9515dc987bced750d2445f985df76465a5aa"
+      },
+      {
+        "seed": 1102071,
+        "frames": 246,
+        "sha256": "ca2cb705efd152cf41a2d6c6374643b79567d4461b8c7208b3b5dc4d170b00cd"
+      },
+      {
+        "seed": 1102072,
+        "frames": 243,
+        "sha256": "1c546758a6b06fbbd4c102339ad86c4ff833abdab28a94f9489688d68f0d5b38"
+      },
+      {
+        "seed": 1102075,
+        "frames": 254,
+        "sha256": "5a6bde5a3907cc9932dd78f49bf6e3d8bb958269a27ad444bc08620c4b8af16a"
+      },
+      {
+        "seed": 1102076,
+        "frames": 248,
+        "sha256": "d8269e62dffc0fc93f2e7bfd00193a2c1a5bc0f3ba7c52b94152eea5706c67d6"
+      },
+      {
+        "seed": 1102077,
+        "frames": 226,
+        "sha256": "3bafe532a7b2d30676612c147df3ad372e34584ce4b1ed1e6f6bf4ac02e465bd"
+      },
+      {
+        "seed": 1102078,
+        "frames": 247,
+        "sha256": "9480ff0494f742c6c6f64c19d745bba384f918e8ba4ac2869d5922bf2621df86"
+      },
+      {
+        "seed": 1102079,
+        "frames": 242,
+        "sha256": "3b9c760f3d4d991eac6f46f049e28c95f7de0b17ae1e541a2abd091ccc9e88ff"
+      },
+      {
+        "seed": 1102080,
+        "frames": 236,
+        "sha256": "76780ea9943886e78d7f698938149c4c69cbd655c93d1f61ec435619be76bf45"
+      },
+      {
+        "seed": 1102083,
+        "frames": 267,
+        "sha256": "9102cd5e068604b1a87c067560e9303640d01753dcd8c12fa75d8a93c97ab419"
+      }
+    ]
+  },
+  "preflight_gate": {
+    "passed": true,
+    "time": "2026-09-23T21:08:15.156304-05:00",
+    "artifact": "/data02/zifanz4/openwam-experiments/endtoend-20260923/simulation-preflight/result.json",
+    "code_sha256": {
+      "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluate_policy.py": "cd021e40f79d104dfa1e6bd86337d3dd7ff0bcc815943ac971b6e4f9f2988708",
+      "/home/zifanz4/openwam-experiments/scripts/endtoend/serve_policy.py": "476608ccf2e9de0aa804e4388d71ba51969e98a188f92b8738d77821f5fa5e7d",
+      "/home/zifanz4/openwam-experiments/scripts/endtoend/simulation_preflight.py": "4edc5629b5c3941fd9e9a8558fa17689b9f10e2baea4f76fd7264a9eaffbb1b9"
+    },
+    "heldout_policy_outcomes_used": false
+  },
+  "owned_preflight_server_pid_gone": true,
+  "next_step": "Complete the remaining handover expert cohort and all nine fixed-budget native training runs. The three-task development simulator preflight has passed. Audit all150 fresh scenes, matched training streams and final12000-microstep checkpoints before the existing finite controller launches the complete paired5400-rollout matrix. This resolves whether offline representation accessibility improves native task success while preserving clean performance; no learned-policy benefit has been established.",
+  "publication": {
+    "checked_at": "2026-09-23T19:05:40.528036-05:00",
+    "status": "failed",
+    "error": "SitesConnectorError: Sites project not found",
+    "code": 404,
+    "project_id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3",
+    "public_url": "https://embodied-research-notebook.exiamzifan.chatgpt.site",
+    "new_public_version_deployed": false,
+    "last_attempt_at": "2026-09-23T21:22:22.906584-05:00",
+    "error_code": "NOT_FOUND",
+    "http_status": 404,
+    "local_report": "/home/zifanz4/openwam-experiments/reports/endtoend-20260923/index.html",
+    "public_version_created": false
+  }
+}

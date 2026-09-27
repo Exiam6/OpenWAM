@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-09-22T15:42:18.120468-05:00",
+  "reader_color_contract": "Native RoboTwin writes RGB arrays via cv2.imencode; decoding with cv2.imdecode returns original channel order; no additional swap needed",
+  "color_source_files_sha256": {
+    "OpenWAM/openwam/dataloader/robotwin.py": "66e4bfd2d8092f7f1ed145ee2be101c12c7d81488965d81ae1438e7ee78b133c",
+    "benchmarks/RoboTwin/envs/utils/pkl2hdf5.py": "e119b4093c25f881c535a041bf1895e182ba00564d6ca57f6d6fe4fb62b2666c"
+  },
+  "first_episode_planner_config": {
+    "left": "curobo",
+    "right": "curobo"
+  },
+  "fallback_engagement_logs_observed": [],
+  "logs_checked": 72,
+  "qualification": "Final completed collector log scan; configured Curobo, no observed fallback marker. Live planner class was not separately serialized."
+}

@@ -1,0 +1,293 @@
+{
+  "time": "2026-09-24T02:46:46.572968-05:00",
+  "trigger": "2026-09-24T02:45:01.234892-05:00",
+  "training": {
+    "pca-seed42": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:19:59.258742-05:00",
+        "returncode": 0
+      },
+      "metrics_rows": 12000,
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.13786819577217102,
+        "loss_video": 0.13136054575443268,
+        "loss_action": 0.006507657468318939,
+        "grad_norm": 0.44345977902412415
+      },
+      "last_metric_time": 1790234324.9809947,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_12000.safetensors",
+          "bytes": 12123507288
+        }
+      ],
+      "launcher_error": null,
+      "last_metric_age_seconds": 1681.68257188797,
+      "run_log_tail": "aining/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_12000.safetensors\n"
+    },
+    "pca-seed43": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:23:54.989991-05:00",
+        "returncode": 0
+      },
+      "metrics_rows": 12000,
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.29911789298057556,
+        "loss_video": 0.2854231894016266,
+        "loss_action": 0.013694703578948975,
+        "grad_norm": 0.4666437804698944
+      },
+      "last_metric_time": 1790234554.153833,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_12000.safetensors",
+          "bytes": 12123507288
+        }
+      ],
+      "launcher_error": null,
+      "last_metric_age_seconds": 1452.5943768024445,
+      "run_log_tail": "aining/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_12000.safetensors\n"
+    },
+    "pca-seed44": {
+      "status": "failed_preflight",
+      "exit": {
+        "time": "2026-09-24T02:19:59.344439-05:00",
+        "returncode": 1
+      },
+      "metrics_rows": 0,
+      "global_step": 0,
+      "opt_step": 0,
+      "latest_metrics": null,
+      "last_metric_time": null,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [],
+      "launcher_error": {
+        "time": "2026-09-24T02:19:59.343093-05:00",
+        "error": "AssertionError(['GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e', ' 1', ' 86', ' 0'])"
+      },
+      "last_metric_age_seconds": null
+    },
+    "svae-seed42": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:23:39.720465-05:00",
+        "returncode": 0
+      },
+      "metrics_rows": 12000,
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.12422701716423035,
+        "loss_video": 0.11894958466291428,
+        "loss_action": 0.0052774325013160706,
+        "grad_norm": 0.38373449444770813
+      },
+      "last_metric_time": 1790234535.674543,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_12000.safetensors",
+          "bytes": 12189767400
+        }
+      ],
+      "launcher_error": null,
+      "last_metric_age_seconds": 1471.1804571151733,
+      "run_log_tail": "ning/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_12000.safetensors\n"
+    },
+    "svae-seed43": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:16:27.723352-05:00",
+        "returncode": 0
+      },
+      "metrics_rows": 12000,
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.28846943378448486,
+        "loss_video": 0.27400118112564087,
+        "loss_action": 0.01446824986487627,
+        "grad_norm": 0.4534133970737457
+      },
+      "last_metric_time": 1790234114.992426,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_12000.safetensors",
+          "bytes": 12189767400
+        }
+      ],
+      "launcher_error": null,
+      "last_metric_age_seconds": 1891.9642655849457,
+      "run_log_tail": "ning/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_12000.safetensors\n"
+    },
+    "svae-seed44": {
+      "status": "failed_preflight",
+      "exit": {
+        "time": "2026-09-24T02:23:39.810033-05:00",
+        "returncode": 1
+      },
+      "metrics_rows": 0,
+      "global_step": 0,
+      "opt_step": 0,
+      "latest_metrics": null,
+      "last_metric_time": null,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [],
+      "launcher_error": {
+        "time": "2026-09-24T02:23:39.808691-05:00",
+        "error": "AssertionError(['GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85', ' 1', ' 80', ' 0'])"
+      },
+      "last_metric_age_seconds": null
+    },
+    "wan-seed42": {
+      "status": "started",
+      "exit": null,
+      "metrics_rows": 11489,
+      "global_step": 11489,
+      "opt_step": 5744,
+      "latest_metrics": {
+        "loss_total": 0.041457176208496094,
+        "loss_video": 0.038672540336847305,
+        "loss_action": 0.002784635638818145,
+        "grad_norm": 0.0
+      },
+      "last_metric_time": 1790236005.4933584,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/checkpoint_step_8000.safetensors",
+          "bytes": 13361411736
+        }
+      ],
+      "launcher_error": null,
+      "last_metric_age_seconds": 1.542051076889038,
+      "run_log_tail": "6:03<20:45,  2.43s/step, loss=0.1857, video=0.1839, action=0.0018, lr=1.49e-06, epoch=1]\rTraining:  96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 11488/12000 [7:26:03<20:54,  2.45s/step, loss=0.1857, video=0.1839, action=0.0018, lr=1.49e-06, epoch=1]"
+    },
+    "wan-seed43": {
+      "status": "started",
+      "exit": null,
+      "metrics_rows": 11923,
+      "global_step": 11923,
+      "opt_step": 5961,
+      "latest_metrics": {
+        "loss_total": 0.16597256064414978,
+        "loss_video": 0.1650284230709076,
+        "loss_action": 0.0009441361762583256,
+        "grad_norm": 0.0
+      },
+      "last_metric_time": 1790236004.7630465,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/checkpoint_step_8000.safetensors",
+          "bytes": 13361411736
+        }
+      ],
+      "launcher_error": null,
+      "last_metric_age_seconds": 2.3518407344818115,
+      "run_log_tail": "6:04<03:11,  2.42s/step, loss=0.2225, video=0.2178, action=0.0047, lr=1.01e-06, epoch=2]\rTraining:  99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 11922/12000 [7:26:04<03:08,  2.42s/step, loss=0.2225, video=0.2178, action=0.0047, lr=1.01e-06, epoch=2]"
+    },
+    "wan-seed44": {
+      "status": "queued",
+      "exit": null,
+      "metrics_rows": 0,
+      "global_step": 0,
+      "opt_step": 0,
+      "latest_metrics": null,
+      "last_metric_time": null,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [],
+      "launcher_error": null,
+      "last_metric_age_seconds": null
+    }
+  },
+  "pause_markers": [],
+  "pipeline_exit": {
+    "time": "2026-09-24T02:20:20.249820-05:00",
+    "returncode": 1
+  },
+  "pipeline_progress": {
+    "time": "2026-09-24T02:19:50.214715-05:00",
+    "stage": "waiting_for_all_training_collection_smoke",
+    "all_ready": false
+  },
+  "collection5_exit": {
+    "time": "2026-09-23T22:05:36.904975-05:00",
+    "returncode": 0
+  },
+  "collection7_exit": {
+    "time": "2026-09-23T21:03:54.426294-05:00",
+    "returncode": 0
+  },
+  "simulation_exit": {
+    "time": "2026-09-23T21:08:15.726521-05:00",
+    "returncode": 0
+  },
+  "pipeline_code_hash_mismatches": [],
+  "disk_free_gib": {
+    "/home/zifanz4": 0.92,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923": 214.163
+  },
+  "recovery_approval_present": false,
+  "recovery_archive_present": false,
+  "cm001_gpus": {
+    "returncode": 0,
+    "stdout": "0, 26557, 57, 0\n1, 37991, 41, 0\n2, 25413, 96, 0\n3, 23399, 46, 0\n4, 25251, 94, 0\n5, 9387, 80, 0\n6, 19527, 83, 0\n7, 18641, 48, 0\n",
+    "stderr": ""
+  },
+  "cm001_tmux": {
+    "returncode": 0,
+    "stdout": "exp\n",
+    "stderr": ""
+  },
+  "selfcheck_monitor": {
+    "checked_at": "2026-09-24T02:45:01.234892-05:00",
+    "summary_sha256": "8cfe950524e64a33c64ea18adc5aa37fc667713525c044383652ac647a18a12d",
+    "integrity_passed": true,
+    "exit_codes": {
+      "adapter-exit-code.txt": "0",
+      "resume-exit-code.txt": "0",
+      "adapter_renorm-exit-code.txt": "0",
+      "renorm-exit-code.txt": "0",
+      "identity-exit-code.txt": "0",
+      "study-exit-code.txt": "0"
+    }
+  },
+  "cm009": {
+    "time": "2026-09-24T02:46:48.365950-05:00",
+    "gpus": {
+      "returncode": 0,
+      "stdout": "0, GPU-c7d96da5-a1ae-e1ed-de5d-03f35e550da2, 1, 0, 2\n1, GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 9291, 75, 0\n2, GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 8651, 71, 0\n3, GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 24531, 75, 0\n4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 1, 0, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 1, 0, 0\n6, GPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 24531, 39, 0\n7, GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 9591, 88, 0\n",
+      "stderr": ""
+    },
+    "tmux": {
+      "returncode": 0,
+      "stdout": "ow-e2e-train-3\now-e2e-train-6\n",
+      "stderr": ""
+    }
+  },
+  "reasoned_at": "2026-09-24T02:47:36.376351-05:00",
+  "judgment": "No new completion, failure or scientific result since the02:30 report. Four trainings completed; the two original zero-step preflight failures and controller exit1 remain unchanged. Wan42 advanced to5744/6000 and Wan43 to5961/6000, all logged metrics finite and latest active metrics below2.4s old. Wan44 remains queued. No recovery approval or execution artifacts exist.",
+  "resource_note": "Only cm009 GPUs3/6 are running this study, both ECC0; GPU4/5 currently idle, GPU1/2/7 occupied by other work and untouched. GPU0 ECC2 remains excluded. /data02 free214.163GiB, /home0.920GiB. No timers, agents, restarts, replay, budget extension or signals to unrelated jobs.",
+  "next_step": "Obtain an explicit narrow exception to frozen pipeline-plan no_restart_or_replay=true for exactly the two zero-step failed launches and dependent controller. The prepared read-only-verified recovery preserves original failure records, scientific config/source hashes and original deadlines; uses currently idle same-model cm009 GPUs4/5 after fresh checks; launches each unchanged training recipe once; resumes the unchanged controller. Do not execute without approval, repeat completed experiments, modify active Wan jobs or precreate the exclusive cohort-integrity gate. The scientific uncertainty remains whether representation gains transfer to native control success without clean regression. Meanwhile inspect the existing Wan43 final save/exit and Wan42-to44 queue transition without altering their workers. These checks establish completeness of the matched training set; no policy-benefit uncertainty can be resolved until the full prescribed comparison runs.",
+  "meaningful_state_change": false,
+  "public_retry_performed": false
+}

@@ -1,0 +1,313 @@
+{
+  "time": "2026-09-24T02:16:13.687742-05:00",
+  "trigger": "2026-09-24T02:15:01.810919-05:00",
+  "training": {
+    "pca-seed42": {
+      "status": "started",
+      "exit": null,
+      "metrics_rows": 12000,
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.13786819577217102,
+        "loss_video": 0.13136054575443268,
+        "loss_action": 0.006507657468318939,
+        "grad_norm": 0.44345977902412415
+      },
+      "last_metric_time": 1790234324.9809947,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_8000.safetensors",
+          "bytes": 12123507288
+        }
+      ],
+      "last_metric_age_seconds": 16.81329369544983,
+      "run_log_tail": "                            \r[checkpoint] Saving step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_12000.safetensors\n\rTraining: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12000/12000 [6:58:15<00:00,  2.10s/step, loss=0.1379, video=0.1314, action=0.0065, lr=1.00e-06, epoch=2]"
+    },
+    "pca-seed43": {
+      "status": "started",
+      "exit": null,
+      "metrics_rows": 11900,
+      "global_step": 11900,
+      "opt_step": 5950,
+      "latest_metrics": {
+        "loss_total": 0.17792673408985138,
+        "loss_video": 0.17340272665023804,
+        "loss_action": 0.0045240093022584915,
+        "grad_norm": 0.4927472472190857
+      },
+      "last_metric_time": 1790234341.0900476,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_8000.safetensors",
+          "bytes": 12123507288
+        }
+      ],
+      "last_metric_age_seconds": 0.8031117916107178,
+      "run_log_tail": "o=0.1267, action=0.0025, lr=1.02e-06, epoch=2]\rTraining:  99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 11895/12000 [6:58:10<03:40,  2.10s/step, loss=0.2667, video=0.2629, action=0.0038, lr=1.02e-06, epoch=2]\rTraining:  99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 11896/12000 [6:58:10<03:38,  2.10s/step, loss=0.2667, video=0.2629, action=0.0038, lr=1.02e-06, epoch=2]"
+    },
+    "pca-seed44": {
+      "status": "queued",
+      "exit": null,
+      "metrics_rows": 0,
+      "global_step": 0,
+      "opt_step": 0,
+      "latest_metrics": null,
+      "last_metric_time": null,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [],
+      "last_metric_age_seconds": null
+    },
+    "svae-seed42": {
+      "status": "started",
+      "exit": null,
+      "metrics_rows": 11907,
+      "global_step": 11907,
+      "opt_step": 5953,
+      "latest_metrics": {
+        "loss_total": 0.177719384431839,
+        "loss_video": 0.1741923689842224,
+        "loss_action": 0.00352701754309237,
+        "grad_norm": 0.0
+      },
+      "last_metric_time": 1790234339.9467742,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_8000.safetensors",
+          "bytes": 12189767400
+        }
+      ],
+      "last_metric_age_seconds": 2.0509824752807617,
+      "run_log_tail": "o=0.0986, action=0.0238, lr=1.02e-06, epoch=2]\rTraining:  99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 11902/12000 [6:58:18<03:23,  2.07s/step, loss=0.2094, video=0.1922, action=0.0173, lr=1.02e-06, epoch=2]\rTraining:  99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 11903/12000 [6:58:18<03:21,  2.08s/step, loss=0.2094, video=0.1922, action=0.0173, lr=1.02e-06, epoch=2]"
+    },
+    "svae-seed43": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:16:27.723352-05:00",
+        "returncode": 0
+      },
+      "metrics_rows": 12000,
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.28846943378448486,
+        "loss_video": 0.27400118112564087,
+        "loss_action": 0.01446824986487627,
+        "grad_norm": 0.4534133970737457
+      },
+      "last_metric_time": 1790234114.992426,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_12000.safetensors",
+          "bytes": 12189767400
+        }
+      ],
+      "last_metric_age_seconds": 227.09239864349365,
+      "run_log_tail": "6, epoch=2]\n[checkpoint] Saving final step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_12000.safetensors\n[checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_12000.safetensors\n"
+    },
+    "svae-seed44": {
+      "status": "queued",
+      "exit": null,
+      "metrics_rows": 0,
+      "global_step": 0,
+      "opt_step": 0,
+      "latest_metrics": null,
+      "last_metric_time": null,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [],
+      "last_metric_age_seconds": null
+    },
+    "wan-seed42": {
+      "status": "started",
+      "exit": null,
+      "metrics_rows": 10790,
+      "global_step": 10790,
+      "opt_step": 5395,
+      "latest_metrics": {
+        "loss_total": 0.20520173013210297,
+        "loss_video": 0.19790923595428467,
+        "loss_action": 0.007292489521205425,
+        "grad_norm": 0.7595946192741394
+      },
+      "last_metric_time": 1790234339.9802332,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/checkpoint_step_8000.safetensors",
+          "bytes": 13361411736
+        }
+      ],
+      "last_metric_age_seconds": 2.2137258052825928,
+      "run_log_tail": "video=0.2629, action=0.0206, lr=3.74e-06, epoch=1]\rTraining:  90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 10786/12000 [6:58:12<47:13,  2.33s/step, loss=0.3087, video=0.2819, action=0.0268, lr=3.74e-06, epoch=1]\rTraining:  90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 10787/12000 [6:58:12<46:55,  2.32s/step, loss=0.3087, video=0.2819, action=0.0268, lr=3.74e-06, epoch=1]"
+    },
+    "wan-seed43": {
+      "status": "started",
+      "exit": null,
+      "metrics_rows": 11202,
+      "global_step": 11202,
+      "opt_step": 5601,
+      "latest_metrics": {
+        "loss_total": 0.1093379482626915,
+        "loss_video": 0.099736288189888,
+        "loss_action": 0.009601661004126072,
+        "grad_norm": 0.5110102891921997
+      },
+      "last_metric_time": 1790234340.638821,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [
+        {
+          "path": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/checkpoint_step_8000.safetensors",
+          "bytes": 13361411736
+        }
+      ],
+      "last_metric_age_seconds": 1.6439285278320312,
+      "run_log_tail": "o=0.2669, action=0.0019, lr=2.21e-06, epoch=1]\rTraining:  93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 11197/12000 [6:58:13<29:49,  2.23s/step, loss=0.1254, video=0.1231, action=0.0023, lr=2.20e-06, epoch=1]\rTraining:  93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 11198/12000 [6:58:13<30:01,  2.25s/step, loss=0.1254, video=0.1231, action=0.0023, lr=2.20e-06, epoch=1]"
+    },
+    "wan-seed44": {
+      "status": "queued",
+      "exit": null,
+      "metrics_rows": 0,
+      "global_step": 0,
+      "opt_step": 0,
+      "latest_metrics": null,
+      "last_metric_time": null,
+      "all_logged_losses_finite": true,
+      "code_hash_mismatches": [],
+      "checkpoints": [],
+      "last_metric_age_seconds": null
+    }
+  },
+  "pause_markers": [],
+  "pipeline_exit": null,
+  "pipeline_progress": {
+    "time": "2026-09-24T02:18:50.131322-05:00",
+    "stage": "waiting_for_all_training_collection_smoke",
+    "all_ready": false
+  },
+  "collection5_exit": {
+    "time": "2026-09-23T22:05:36.904975-05:00",
+    "returncode": 0
+  },
+  "collection7_exit": {
+    "time": "2026-09-23T21:03:54.426294-05:00",
+    "returncode": 0
+  },
+  "simulation_exit": {
+    "time": "2026-09-23T21:08:15.726521-05:00",
+    "returncode": 0
+  },
+  "pipeline_code_hash_mismatches": [],
+  "disk_free_gib": {
+    "/home/zifanz4": 0.937,
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923": 209.162
+  },
+  "cm001_gpus": {
+    "returncode": 0,
+    "stdout": "0, 2755, 0, 0\n1, 37991, 17, 0\n2, 2411, 0, 0\n3, 23399, 2, 0\n4, 25159, 92, 0\n5, 9387, 58, 0\n6, 19527, 81, 0\n7, 18641, 50, 0\n",
+    "stderr": ""
+  },
+  "cm001_tmux": {
+    "returncode": 0,
+    "stdout": "exp\now-e2e-pipeline\n",
+    "stderr": ""
+  },
+  "selfcheck_monitor": {
+    "checked_at": "2026-09-24T02:15:01.810919-05:00",
+    "summary_sha256": "8cfe950524e64a33c64ea18adc5aa37fc667713525c044383652ac647a18a12d",
+    "integrity_passed": true,
+    "exit_codes": {
+      "adapter-exit-code.txt": "0",
+      "resume-exit-code.txt": "0",
+      "adapter_renorm-exit-code.txt": "0",
+      "renorm-exit-code.txt": "0",
+      "identity-exit-code.txt": "0",
+      "study-exit-code.txt": "0"
+    }
+  },
+  "cm009_initial": {
+    "time": "2026-09-24T02:16:13.361692-05:00",
+    "gpus": {
+      "returncode": 0,
+      "stdout": "0, GPU-c7d96da5-a1ae-e1ed-de5d-03f35e550da2, 1, 0, 2\n1, GPU-6f1aae6f-2e12-d433-32d4-36a19606ad85, 22251, 13, 0\n2, GPU-2d7b9ad9-2b7f-d236-2109-e8e81e2c948e, 21935, 3, 0\n3, GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db, 24531, 4, 0\n4, GPU-33861458-0994-99a7-7457-6fceb49c229c, 22251, 0, 0\n5, GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3, 21935, 3, 0\n6, GPU-f341a0af-5cd4-9d17-e701-31f4530522ae, 24531, 14, 0\n7, GPU-eaa5f86a-162d-657b-c1ae-6e67e986253e, 9591, 82, 0\n",
+      "stderr": ""
+    },
+    "tmux": {
+      "returncode": 0,
+      "stdout": "ow-e2e-train-1\now-e2e-train-2\now-e2e-train-3\now-e2e-train-4\now-e2e-train-5\now-e2e-train-6\n",
+      "stderr": ""
+    }
+  },
+  "followup_time": "2026-09-24T02:19:01.697967-05:00",
+  "verified_completion": {
+    "time": "2026-09-24T02:17:46.200214-05:00",
+    "run": "svae-seed43",
+    "exit": {
+      "time": "2026-09-24T02:16:27.723352-05:00",
+      "returncode": 0
+    },
+    "metrics_rows": 12000,
+    "batch_stream_rows": 12000,
+    "global_step": 12000,
+    "optimizer_updates": 6000,
+    "all_logged_metrics_finite": true,
+    "checkpoint": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_12000.safetensors",
+    "bytes": 12189767400,
+    "tensor_count": 1214,
+    "header_sha256": "f10af3c24ab3bc20e0e36d675ad32612b9fd4f1d0cf4fba6e0d424eca03e2aa4",
+    "checkpoint_structure_valid": true,
+    "scope": "Header dimensions, tensor byte counts/offsets and file length checked after exit0; full payload hash and deployment validation remain in the prescribed all-nine gate/evaluation. No policy scoring.",
+    "queue": {
+      "time": "2026-09-24T02:16:27.733667-05:00",
+      "status": "complete",
+      "ordered_seeds": [
+        43
+      ]
+    }
+  },
+  "reasoned_at": "2026-09-24T02:19:01.697967-05:00",
+  "judgment": "First formal training completed: S-VAE seed43 exited0 at02:16:27, exactly12000 microsteps/6000 optimizer updates,12000 batch records, all logged metrics finite. Final checkpoint1214 tensors/12189767400 bytes passed header/span/file-length verification after exit0. No policy scoring; full payload hashing and deployment validation remain pending as prescribed.",
+  "resource_note": "cm009GPU4 released after seed43 completion (1MiB/0%, owned tmux and process gone in02:16:57 check). Other five original trainings continue, three seed44 queued. Assigned GPUs have0 uncorrected volatile ECC; GPU0 with2 ECC excluded. Other users untouched.",
+  "next_step": "Finish all nine matched native training runs at the fixed6000 optimizer updates. All150 expert scenes and the development simulator preflight are complete; all three individual cohorts passed raw HDF5 hash and first50 expert-accepted selection audits. After all nine trainings finish, the existing finite controller must run the full cross-cohort novelty/initial-pose audit, paired training-stream audit and final12000-microstep checkpoint hashes before launching the complete5400-rollout matrix. This resolves whether representation accessibility improves native task success without clean regression. Do not create the exclusive fresh-cohort-integrity gate early or score intermediate checkpoints.",
+  "meaningful_state_change": true,
+  "public_retry_performed": true,
+  "training_counts": {
+    "started": 5,
+    "queued": 3,
+    "completed": 1,
+    "failed": 0
+  },
+  "publication": {
+    "time": "2026-09-24T02:19:45.482415-05:00",
+    "project_id": "appgprj_6ab06a7c072481919a12cc100f8e9fa3",
+    "error_code": "NOT_FOUND",
+    "http_status": 404,
+    "deployed": false
+  },
+  "cm009_completion_followup": {
+    "time": "2026-09-24T02:16:57.304858-05:00",
+    "gpu4_memory_mib": 1,
+    "gpu4_utilization_percent": 0,
+    "gpu4_uncorrected_volatile_ecc": 0,
+    "training_tmux_sessions_present": [
+      1,
+      2,
+      3,
+      5,
+      6
+    ],
+    "svae_seed43_owned_worker_absent": true,
+    "source": "Read-only SSH nvidia-smi, tmux and own-process snapshot"
+  }
+}

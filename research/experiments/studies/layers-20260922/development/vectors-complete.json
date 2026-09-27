@@ -1,0 +1,16 @@
+{
+  "elapsed_seconds": 214.72740072757006,
+  "clean_frames": 1440,
+  "development_frames": 180,
+  "noise_copies": 1260,
+  "fresh_confirmation_used": false,
+  "checks": {
+    "passed": true,
+    "checks": [
+      "ridge_exact_fixture",
+      "holdout_label_mutation_no_fit_change",
+      "episode_disjoint_folds",
+      "spatial_pool_shape"
+    ]
+  }
+}

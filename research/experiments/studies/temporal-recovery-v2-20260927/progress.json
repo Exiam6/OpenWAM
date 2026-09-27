@@ -1,10 +1,10 @@
 {
-  "time": "2026-09-27T12:48:00.014814-05:00",
+  "time": "2026-09-27T17:56:58.609469-05:00",
   "deadline": "2026-09-29T17:48:49.941691-05:00",
   "output": "/data01/zifanz4/openwam-experiments/temporal-recovery-v2-20260927",
   "training_completed": 6,
   "rollouts_total": 1080,
-  "rollouts_complete": 20,
+  "rollouts_complete": 218,
   "technical_failures": 0,
   "lanes": {
     "mean": {
@@ -198,7 +198,12 @@
       },
       "heldout_complete": null,
       "heldout_groups_started": [
-        "adjust_bottle/clean/started.json"
+        "handover_block/clean/started.json",
+        "handover_block/gaussian_sigma_0.10/started.json",
+        "handover_block/head_camera_yaw_5deg/started.json",
+        "adjust_bottle/clean/started.json",
+        "adjust_bottle/gaussian_sigma_0.10/started.json",
+        "adjust_bottle/head_camera_yaw_5deg/started.json"
       ]
     },
     "mean-43": {
@@ -394,7 +399,12 @@
       },
       "heldout_complete": null,
       "heldout_groups_started": [
-        "adjust_bottle/clean/started.json"
+        "handover_block/clean/started.json",
+        "handover_block/gaussian_sigma_0.10/started.json",
+        "handover_block/head_camera_yaw_5deg/started.json",
+        "adjust_bottle/clean/started.json",
+        "adjust_bottle/gaussian_sigma_0.10/started.json",
+        "adjust_bottle/head_camera_yaw_5deg/started.json"
       ]
     },
     "learned-43": {

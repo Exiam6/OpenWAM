@@ -1,5 +1,7 @@
 # OpenWAM 实验迁移快照
 
+研究目标、最新保存进度与后续执行顺序见 [研究入口](../README.zh-CN.md)。
+
 此分支基于上游 `7c5861e45cfe1339a0323f0e0b03a3316c37971c`。
 根目录包含 temporal-recovery-v2 实际部署的 OpenWAM 源码；
 `research/experiments/` 包含本地实验仓库的代码、方案、审计、报告和未提交进度。

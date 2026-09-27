@@ -1701,7 +1701,7 @@
     "research/experiments/studies/temporal-recovery-v2-20260927/fresh-cohort-integrity.json": "0e4fbd358d4fdfdeb68bdbd7814ce0f48b49236043ff8afd8f737f694babc1da",
     "research/experiments/studies/temporal-recovery-v2-20260927/launch.json": "4c0df83e07a6bd7c82e138e12c953705bf9fad6ae90a9c112d4db2c2e2ddb72e",
     "research/experiments/studies/temporal-recovery-v2-20260927/preflight.json": "92e4c79a7602b78ddbaeb3c6f3d60ad6cddb3206959461e6bf5eaad25818ae5a",
-    "research/experiments/studies/temporal-recovery-v2-20260927/progress.json": "0c72f2774d93dc6ef2523046c174001bc86493d8c425d92d637062d7594949c3",
+    "research/experiments/studies/temporal-recovery-v2-20260927/progress.json": "9ac6eb9b4b096b58c773d17d0beb9a0de0c3e2a7e1429df2565a3ebbb28b3977",
     "research/experiments/studies/temporal-recovery-v2-20260927/protocol.json": "3b6ff4d087676a968e743d9f6456ad26f18475f9f2d51462367313caf21d73f6",
     "research/experiments/studies/temporal-recovery-v2-20260927/publication.json": "89a6a0d24ab8b4d40a86ce25b2b958ee5271f896cd87a0403f6c137c64ba3dc8",
     "research/experiments/studies/temporal-recovery-v2-20260927/recovery-plan.json": "5349e005d4c5b93dd890807cf70c28bc5841545b32d641878464995627e30aa9",
@@ -1717,5 +1717,7 @@
     "research/experiments/studies/temporal-recovery-v2-20260927/simulation-preflight-learned-42.json": "dbc899b3a3c3158fe54a10c1caac5916f63857ccb338d23c5c44a62a4b26264b",
     "research/experiments/studies/temporal-recovery-v2-20260927/simulation-preflight-mean-42.json": "9294dce4e29c06f2c8a86ac84288a12b983aa7aec039183e3c1be7c2d1896941",
     "research/experiments/studies/temporal-recovery-v2-20260927/training-audit.json": "0486d71b70e2343d084fa09525f6d11b76b17f8ad5824a0e174ea6dbd5fd0836"
-  }
+  },
+  "updated_at": "2026-09-27T17:57:15.103750-05:00",
+  "update_note": "Refresh experiment code and saved progress; original snapshot remains in parent Git commit. Runtime process liveness is not inferred from progress files."
 }

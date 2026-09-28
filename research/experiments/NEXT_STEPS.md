@@ -1,3 +1,17 @@
+# GPU02 independent temporal evaluation — 2026-09-28 18:07 CDT
+
+The user reported the old machine stopped and explicitly authorized a new independent evaluation on GPU 5, then authorized resumption and 30-minute checks. Current snapshot: **280/1080 valid completed outcomes, 3 infrastructure failures, 1 unfinished/in-flight attempt, 796 not started**, no duplicate scene identities. Worker active on shenlong-gpu-02; current group learned-seed42 / handover_block / head_camera_yaw_5deg. Original deadline remains **2026-09-29 17:48:49 CDT**.
+
+Mean-seed42 has 177 completed outcomes and 3 initial-render failures: place_object_basket scene1102008 under all three conditions. The two later failures measured head-camera MAE1.0315234375 against the unchanged <=1 threshold; the first failure did not retain its numeric MAE. Learned-seed42 has 103 completed outcomes at this snapshot. No aggregate benefit claim or official OpenWAM reproduction claim is supported.
+
+The first GPU02 launcher stopped at09:16 after123 completions. Resume-v1 started12:15, excludes every already attempted identity (completed, failed, or unfinished), retains failures and advances independent pending scenes/groups. One user systemd timer checks every30minutes; worker termination also triggers inspection. GPU lock, pause/disk/ECC/deadline guards remain. Systemic/pre-scene failures still require diagnosis; this is an OS monitor, not an autonomous chat agent or chat notification service.
+
+See [study record](studies/temporal-gpu02-20260928/README.md), [timestamped progress](studies/temporal-gpu02-20260928/progress.json), and [raw result records](studies/temporal-gpu02-20260928/result-records.json). Old source-machine outputs remain separate; this reuses the same sealed cohort, not new independent test data. Published OpenWAM checkpoint baseline and capacity/data/budget-matched original baseline remain unrun. This custom three-task native295M pooling ablation is not the standard50-task benchmark.
+
+Next: continue unattempted cells, audit all missing/failing cells and migration differences, and report incomplete evidence if the deadline is reached. Separately register the official reference baseline (initial proposal:3tasks x20clean episodes) and matched original-OpenWAM comparison; neither has started. Do not change current settings after seeing outcomes.
+
+---
+
 # Heldout evaluation actually running — 2026-09-27T12:32:09.036757-05:00
 
 Active recovery: studies/temporal-recovery-v2-20260927. Both mean/learned seed42 passed33distinct real WS prompt cache checks (capacity32; post-eviction reference action exact) and all3native development tasks. Full development rollouts completed139/136steps; these reused development results are not test evidence. First fixed heldout group adjust_bottle/clean started12:30:50CDT on both routes, scene1100000. New output root and original fixed Sep29deadline recorded in active-study.json; no old80/270replay. Run report_progress.py to refresh progress from actual artifacts.

@@ -1,0 +1,124 @@
+{
+  "captured_at": "2026-09-28T18:07:09.506334-05:00",
+  "host": "shenlong-gpu-02.cs.illinois.edu",
+  "scope": "New independent evaluation authorized 2026-09-28; do not merge old machine outcomes. Same sealed cohort, not new independent test data.",
+  "expected": 1080,
+  "complete": 280,
+  "technical_failures": 3,
+  "unfinished_attempts": 1,
+  "not_started": 796,
+  "duplicate_identities": 0,
+  "groups": {
+    "mean-seed42/adjust_bottle/clean": {
+      "complete": 20,
+      "technical_failures": 0,
+      "unfinished": 0
+    },
+    "mean-seed42/adjust_bottle/gaussian_sigma_0.10": {
+      "complete": 20,
+      "technical_failures": 0,
+      "unfinished": 0
+    },
+    "mean-seed42/adjust_bottle/head_camera_yaw_5deg": {
+      "complete": 20,
+      "technical_failures": 0,
+      "unfinished": 0
+    },
+    "mean-seed42/handover_block/clean": {
+      "complete": 20,
+      "technical_failures": 0,
+      "unfinished": 0
+    },
+    "mean-seed42/handover_block/gaussian_sigma_0.10": {
+      "complete": 20,
+      "technical_failures": 0,
+      "unfinished": 0
+    },
+    "mean-seed42/handover_block/head_camera_yaw_5deg": {
+      "complete": 20,
+      "technical_failures": 0,
+      "unfinished": 0
+    },
+    "mean-seed42/place_object_basket/clean": {
+      "complete": 19,
+      "technical_failures": 1,
+      "unfinished": 0
+    },
+    "learned-seed42/adjust_bottle/clean": {
+      "complete": 20,
+      "technical_failures": 0,
+      "unfinished": 0
+    },
+    "learned-seed42/adjust_bottle/gaussian_sigma_0.10": {
+      "complete": 20,
+      "technical_failures": 0,
+      "unfinished": 0
+    },
+    "learned-seed42/adjust_bottle/head_camera_yaw_5deg": {
+      "complete": 20,
+      "technical_failures": 0,
+      "unfinished": 0
+    },
+    "learned-seed42/handover_block/clean": {
+      "complete": 20,
+      "technical_failures": 0,
+      "unfinished": 0
+    },
+    "learned-seed42/handover_block/gaussian_sigma_0.10": {
+      "complete": 20,
+      "technical_failures": 0,
+      "unfinished": 0
+    },
+    "learned-seed42/handover_block/head_camera_yaw_5deg": {
+      "complete": 3,
+      "technical_failures": 0,
+      "unfinished": 1
+    },
+    "mean-seed42/place_object_basket/gaussian_sigma_0.10": {
+      "complete": 19,
+      "technical_failures": 1,
+      "unfinished": 0
+    },
+    "mean-seed42/place_object_basket/head_camera_yaw_5deg": {
+      "complete": 19,
+      "technical_failures": 1,
+      "unfinished": 0
+    }
+  },
+  "worker": {
+    "started": "2026-09-28T12:15:39.311075-05:00",
+    "pid": 2872762,
+    "gpu_uuid": "GPU-a4c607bb-f8f8-b999-19ea-0eb65290bb10",
+    "phase": "heldout_evaluation",
+    "completed_rollouts": 280,
+    "expected_rollouts": 1080,
+    "complete": false,
+    "run_dir": "/home/zifanz4/openwam-runtime/temporal-new-20260928/resume-v1/runs/20260928T121539310825",
+    "arm": "learned",
+    "seed": 42,
+    "server_pid": 1065366,
+    "simulator_pid": 1765027,
+    "task": "handover_block",
+    "condition": "head_camera_yaw_5deg",
+    "technical_failures": 3
+  },
+  "monitor": {
+    "time": "2026-09-28T18:00:00.775828-05:00",
+    "inventory": {
+      "observed": "2026-09-28T18:00:00.795153-05:00",
+      "completed": 278,
+      "failures_or_interrupted": 4,
+      "attempted": 282,
+      "pending": 798,
+      "duplicates": []
+    },
+    "action": "running"
+  },
+  "worker_service_active": true,
+  "deadline": "2026-09-29T17:48:49.941691-05:00",
+  "comparison_complete": false,
+  "official_openwam_baseline": "not run; official checkpoint not downloaded",
+  "unfinished_paths": [
+    "/home/zifanz4/openwam-runtime/temporal-new-20260928/resume-v1/runs/20260928T121539310825/evaluation/learned-seed42/handover_block/head_camera_yaw_5deg/seed-1101003"
+  ]
+}

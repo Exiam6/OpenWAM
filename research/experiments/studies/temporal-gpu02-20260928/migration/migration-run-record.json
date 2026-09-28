@@ -1,0 +1,194 @@
+{
+  "time": "2026-09-28T04:38:48.404008-05:00",
+  "host": "shenlong-gpu-02.cs.illinois.edu",
+  "gpu_index": 5,
+  "gpu_uuid": "GPU-a4c607bb-f8f8-b999-19ea-0eb65290bb10",
+  "original_commit": "b8ccf59db24e5f6f92fed0841aa4552263b97296",
+  "original_worktree_status": "",
+  "adapted_files_sha256": {
+    "/home/zifanz4/openwam-runtime/migration-20260927/study/scripts-v2/serve_policy.py": "23b304e03cba772b6e1a27a6520e7902261e17521c0fafeb8f0c12333fc46692",
+    "/home/zifanz4/openwam-runtime/migration-20260927/study/scripts-v2/simulation_preflight.py": "7fd65e5b87f90f7c95dfa03ebf5dd400e009872ed1ac3346578ca7995a73779f",
+    "/home/zifanz4/openwam-runtime/migration-20260927/study/scripts-v2/evaluate_policy.py": "125dea24b91caa1b78bc086f777a00f431210f721640f713b5f9533a64a12f5f",
+    "/home/zifanz4/openwam-runtime/migration-20260927/study/scripts-v2/collect_scene.py": "f71efc2b6ab94d926ec1ace41c6824422dd159eeb1727c0e7178c5808b75b491",
+    "/home/zifanz4/openwam-runtime/migration-20260927/study/scripts-v2/migration_render.py": "4862317b457a0c0a8480086ee6156f9d65cc941348d92310b828c5f59a829bb6",
+    "/home/zifanz4/openwam-runtime/migration-20260927/robot-configs/curobo_left.yml": "93f5f1458edbc91813c76bfce8a1f33c571ca8ff6e1ef61227cb9938705db57c",
+    "/home/zifanz4/openwam-runtime/migration-20260927/robot-configs/curobo_right.yml": "239c4ad47492e6bba6d4d9d60deb5eca3d595222d663583570986c10d9bc09ca"
+  },
+  "changes": [
+    "policy torch 2.7.0 CUDA build cu126 to cu128",
+    "benchmark torch 2.4.1/cu124 to 2.7.0/cu128; other pinned benchmark packages retained",
+    "pinned cuRobo compiled for sm_120 with independent CUDA12.8 toolchain",
+    "same documented SAPIEN/mplib source patch hashes",
+    "explicit SAPIEN device selection by verified physical PCI",
+    "two copied robot YAML path fields remapped; original YAML unchanged",
+    "OIDN 2.0.1 to 2.3.3 to enable Blackwell; original libraries retained"
+  ],
+  "scope": "Development validation only. No heldout rollout launched. Hardware/software migration must remain disclosed.",
+  "ownership": "Awaiting live source progress and disjoint unstarted units; archived218/1080 is not current authority.",
+  "deadline": "2026-09-29T17:48:49.941691-05:00",
+  "gate_status": {
+    "started": "2026-09-28T04:33:15.286962-05:00",
+    "scope": "development seed10 only; no heldout outcomes",
+    "passed": true,
+    "gpu_uuid": "GPU-a4c607bb-f8f8-b999-19ea-0eb65290bb10",
+    "server_pid": 1428448,
+    "server_ready": true,
+    "simulator_pid": 1770102,
+    "result": {
+      "passed": true,
+      "heldout_scenes_used": false,
+      "profile_checkpoint_only": true,
+      "tasks": [
+        {
+          "multi_prompt_gate": {
+            "distinct_prompts": 33,
+            "all_finite": true,
+            "post_eviction_action_exact": true
+          },
+          "task": "adjust_bottle",
+          "training_scene_seed": 10,
+          "native_step_limit": 400,
+          "head_rotation": {
+            "before_p": [
+              -0.03200000151991844,
+              -0.44999998807907104,
+              1.350000023841858
+            ],
+            "before_q": [
+              0.6324555277824402,
+              -0.3162277638912201,
+              0.3162277638912201,
+              0.6324555277824402
+            ],
+            "after_p": [
+              -0.03200000151991844,
+              -0.44999998807907104,
+              1.350000023841858
+            ],
+            "after_q": [
+              0.6042662476029719,
+              -0.3297204464591762,
+              0.30213312380148594,
+              0.6594408929183524
+            ],
+            "world_z_degrees": 5.0
+          },
+          "head_image_mae": 12.274283854166667,
+          "wrist_mae": {
+            "left_camera": 0.0,
+            "right_camera": 0.0
+          },
+          "repeat_initial_mae": {
+            "head_camera": 0.0,
+            "left_camera": 0.0,
+            "right_camera": 0.0
+          },
+          "ws_reset_exact": true,
+          "native_action_taken": true,
+          "real_contact_api_checked": true,
+          "contact_count": 9,
+          "full_development_rollout": {
+            "completed": true,
+            "success": true,
+            "steps": 144,
+            "scene": "development seed10 only"
+          }
+        },
+        {
+          "multi_prompt_gate": null,
+          "task": "handover_block",
+          "training_scene_seed": 10,
+          "native_step_limit": 800,
+          "head_rotation": {
+            "before_p": [
+              -0.03200000151991844,
+              -0.44999998807907104,
+              1.350000023841858
+            ],
+            "before_q": [
+              0.6324555277824402,
+              -0.3162277638912201,
+              0.3162277638912201,
+              0.6324555277824402
+            ],
+            "after_p": [
+              -0.03200000151991844,
+              -0.44999998807907104,
+              1.350000023841858
+            ],
+            "after_q": [
+              0.6042662476029719,
+              -0.3297204464591762,
+              0.30213312380148594,
+              0.6594408929183524
+            ],
+            "world_z_degrees": 5.0
+          },
+          "head_image_mae": 18.634340277777778,
+          "wrist_mae": {
+            "left_camera": 0.0,
+            "right_camera": 0.0
+          },
+          "repeat_initial_mae": {
+            "head_camera": 0.0,
+            "left_camera": 0.0,
+            "right_camera": 0.0
+          },
+          "ws_reset_exact": true,
+          "native_action_taken": true,
+          "real_contact_api_checked": true,
+          "contact_count": 4,
+          "full_development_rollout": null
+        },
+        {
+          "multi_prompt_gate": null,
+          "task": "place_object_basket",
+          "training_scene_seed": 10,
+          "native_step_limit": 700,
+          "head_rotation": {
+            "before_p": [
+              -0.03200000151991844,
+              -0.44999998807907104,
+              1.350000023841858
+            ],
+            "before_q": [
+              0.6324555277824402,
+              -0.3162277638912201,
+              0.3162277638912201,
+              0.6324555277824402
+            ],
+            "after_p": [
+              -0.03200000151991844,
+              -0.44999998807907104,
+              1.350000023841858
+            ],
+            "after_q": [
+              0.6042662476029719,
+              -0.3297204464591762,
+              0.30213312380148594,
+              0.6594408929183524
+            ],
+            "world_z_degrees": 5.0
+          },
+          "head_image_mae": 18.15476996527778,
+          "wrist_mae": {
+            "left_camera": 0.0,
+            "right_camera": 0.0
+          },
+          "repeat_initial_mae": {
+            "head_camera": 0.0,
+            "left_camera": 0.0,
+            "right_camera": 0.0
+          },
+          "ws_reset_exact": true,
+          "native_action_taken": true,
+          "real_contact_api_checked": true,
+          "contact_count": 0,
+          "full_development_rollout": null
+        }
+      ]
+    },
+    "finished": "2026-09-28T04:36:42.768004-05:00",
+    "seconds": 207.48110770698986
+  }
+}

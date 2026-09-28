@@ -1,0 +1,9 @@
+{
+  "old": "2.0.1",
+  "new": "2.3.3",
+  "basis": "Original CUDA device creation returns unsupported device type; 2.3.3 adds Blackwell support",
+  "release": "https://github.com/RenderKit/oidn/releases/tag/v2.3.3",
+  "tar_sha256": "3c385230d9e6f63527ba72f2229594dbac5051674219d72e0044b5d0b841796f",
+  "old_library_backup": "/home/zifanz4/openwam-runtime/migration-20260927/oidn-2.0.1-original",
+  "scientific_parity": "Not yet established; migration development gate must pass; no heldout outcomes"
+}

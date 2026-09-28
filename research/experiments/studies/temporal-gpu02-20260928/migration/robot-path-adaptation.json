@@ -1,0 +1,30 @@
+{
+  "curobo_left.yml": {
+    "source_sha256": "a15847fe6494c577128c520a921c6940979467c2d860d379b18354e29739dddc",
+    "migration_sha256": "93f5f1458edbc91813c76bfce8a1f33c571ca8ff6e1ef61227cb9938705db57c",
+    "changes": {
+      "urdf_path": {
+        "old": "/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/assets/embodiments/aloha-agilex/urdf/arx5_description_isaac.urdf",
+        "new": "/home/zifanz4/openwam-runtime/assets-source/benchmarks/RoboTwin/assets/embodiments/aloha-agilex/urdf/arx5_description_isaac.urdf"
+      },
+      "collision_spheres": {
+        "old": "/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/assets/embodiments/aloha-agilex/collision_aloha_left.yml",
+        "new": "/home/zifanz4/openwam-runtime/assets-source/benchmarks/RoboTwin/assets/embodiments/aloha-agilex/collision_aloha_left.yml"
+      }
+    }
+  },
+  "curobo_right.yml": {
+    "source_sha256": "519e555d0e2f977cacf20d147ca2c7c157d8ca53bdd47c94bfa458f4e3e3f124",
+    "migration_sha256": "239c4ad47492e6bba6d4d9d60deb5eca3d595222d663583570986c10d9bc09ca",
+    "changes": {
+      "urdf_path": {
+        "old": "/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/assets/embodiments/aloha-agilex/urdf/arx5_description_isaac.urdf",
+        "new": "/home/zifanz4/openwam-runtime/assets-source/benchmarks/RoboTwin/assets/embodiments/aloha-agilex/urdf/arx5_description_isaac.urdf"
+      },
+      "collision_spheres": {
+        "old": "/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/assets/embodiments/aloha-agilex/collision_aloha_right.yml",
+        "new": "/home/zifanz4/openwam-runtime/assets-source/benchmarks/RoboTwin/assets/embodiments/aloha-agilex/collision_aloha_right.yml"
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+[Unit]
+Description=Inspect OpenWAM progress and resume pending GPU5 work
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /home/zifanz4/openwam-runtime/temporal-new-20260928/resume-v1/watchdog.py
+TimeoutStartSec=120

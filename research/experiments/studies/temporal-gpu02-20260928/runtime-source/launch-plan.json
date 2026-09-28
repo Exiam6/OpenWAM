@@ -1,0 +1,37 @@
+{
+  "authorization": "2026-09-28 user explicitly requests resume and 30-minute checks; keep GPU5 progressing",
+  "scope": "Continue only never-attempted cells from original independent run; preserve and report every failure; do not automatically retry failed or completed cells",
+  "gpu": 5,
+  "gpu_uuid": "GPU-a4c607bb-f8f8-b999-19ea-0eb65290bb10",
+  "order": [
+    [
+      "mean",
+      42
+    ],
+    [
+      "learned",
+      42
+    ],
+    [
+      "mean",
+      43
+    ],
+    [
+      "learned",
+      43
+    ],
+    [
+      "mean",
+      44
+    ],
+    [
+      "learned",
+      44
+    ]
+  ],
+  "deadline": "2026-09-29T17:48:49.941691-05:00",
+  "no_automatic_retry": true,
+  "migration_record": "/home/zifanz4/openwam-runtime/migration-20260927/migration-run-record.json",
+  "old_source_not_modified": true,
+  "monitor_minutes": 30
+}

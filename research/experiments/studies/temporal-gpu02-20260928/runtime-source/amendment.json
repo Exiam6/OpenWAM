@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-28T12:14:38.876749-05:00",
+  "source": "/home/zifanz4/openwam-runtime/temporal-new-20260928",
+  "changes": [
+    "Explicit resume using never-attempted scene identities; no completed/failed scene replay",
+    "Initial image mismatch recorded with MAE and image, then continue next independent scene",
+    "Other scene process failure retained; advance to next group; systemic/pre-scene failure stops",
+    "30-minute OS timer, single GPU lock and deadline/pause/disk/ECC guards retained"
+  ],
+  "unchanged": [
+    "model weights",
+    "scene references",
+    "MAE<=1",
+    "state tolerance1e-6",
+    "action RNG",
+    "native success and limits",
+    "absolute deadline"
+  ],
+  "user_authorized": true
+}

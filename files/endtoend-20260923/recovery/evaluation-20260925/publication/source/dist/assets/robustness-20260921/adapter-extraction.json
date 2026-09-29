@@ -1,0 +1,5415 @@
+{
+  "clean_frames": 480,
+  "corrupt_frames": 900,
+  "shape": [
+    480,
+    48,
+    1,
+    24,
+    20
+  ],
+  "manifest": [
+    {
+      "episode": 3,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 3,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 3,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 3,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 3,
+      "frame": 16,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 3,
+      "frame": 16,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 3,
+      "frame": 24,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 3,
+      "frame": 24,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 3,
+      "frame": 33,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 3,
+      "frame": 33,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 3,
+      "frame": 41,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 3,
+      "frame": 41,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 3,
+      "frame": 49,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 3,
+      "frame": 49,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 3,
+      "frame": 57,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 3,
+      "frame": 57,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 3,
+      "frame": 66,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 3,
+      "frame": 66,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 3,
+      "frame": 74,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 3,
+      "frame": 74,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 3,
+      "frame": 82,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 3,
+      "frame": 82,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 3,
+      "frame": 91,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 3,
+      "frame": 91,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 4,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 4,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 4,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 4,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 4,
+      "frame": 16,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 4,
+      "frame": 16,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 4,
+      "frame": 24,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 4,
+      "frame": 24,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 4,
+      "frame": 32,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 4,
+      "frame": 32,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 4,
+      "frame": 40,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 4,
+      "frame": 40,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 4,
+      "frame": 48,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 4,
+      "frame": 48,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 4,
+      "frame": 56,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 4,
+      "frame": 56,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 4,
+      "frame": 64,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 4,
+      "frame": 64,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 4,
+      "frame": 72,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 4,
+      "frame": 72,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 4,
+      "frame": 80,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 4,
+      "frame": 80,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 4,
+      "frame": 88,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 4,
+      "frame": 88,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 5,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 5,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 5,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 5,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 5,
+      "frame": 16,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 5,
+      "frame": 16,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 5,
+      "frame": 24,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 5,
+      "frame": 24,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 5,
+      "frame": 33,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 5,
+      "frame": 33,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 5,
+      "frame": 41,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 5,
+      "frame": 41,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 5,
+      "frame": 49,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 5,
+      "frame": 49,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 5,
+      "frame": 57,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 5,
+      "frame": 57,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 5,
+      "frame": 66,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 5,
+      "frame": 66,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 5,
+      "frame": 74,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 5,
+      "frame": 74,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 5,
+      "frame": 82,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 5,
+      "frame": 82,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 5,
+      "frame": 91,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 5,
+      "frame": 91,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 6,
+      "frame": 0,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 6,
+      "frame": 8,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 6,
+      "frame": 17,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 6,
+      "frame": 26,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 6,
+      "frame": 35,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 6,
+      "frame": 44,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 6,
+      "frame": 52,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 6,
+      "frame": 61,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 6,
+      "frame": 70,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 6,
+      "frame": 79,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 6,
+      "frame": 88,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 6,
+      "frame": 97,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 7,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 7,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 7,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 7,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 7,
+      "frame": 16,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 7,
+      "frame": 16,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 7,
+      "frame": 24,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 7,
+      "frame": 24,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 7,
+      "frame": 32,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 7,
+      "frame": 32,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 7,
+      "frame": 40,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 7,
+      "frame": 40,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 7,
+      "frame": 49,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 7,
+      "frame": 49,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 7,
+      "frame": 57,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 7,
+      "frame": 57,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 7,
+      "frame": 65,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 7,
+      "frame": 65,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 7,
+      "frame": 73,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 7,
+      "frame": 73,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 7,
+      "frame": 81,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 7,
+      "frame": 81,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 7,
+      "frame": 90,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 7,
+      "frame": 90,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 9,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 9,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 9,
+      "frame": 7,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 9,
+      "frame": 7,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 9,
+      "frame": 15,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 9,
+      "frame": 15,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 9,
+      "frame": 23,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 9,
+      "frame": 23,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 9,
+      "frame": 31,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 9,
+      "frame": 31,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 9,
+      "frame": 39,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 9,
+      "frame": 39,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 9,
+      "frame": 46,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 9,
+      "frame": 46,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 9,
+      "frame": 54,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 9,
+      "frame": 54,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 9,
+      "frame": 62,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 9,
+      "frame": 62,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 9,
+      "frame": 70,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 9,
+      "frame": 70,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 9,
+      "frame": 78,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 9,
+      "frame": 78,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 9,
+      "frame": 86,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 9,
+      "frame": 86,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 10,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 10,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 10,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 10,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 10,
+      "frame": 17,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 10,
+      "frame": 17,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 10,
+      "frame": 25,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 10,
+      "frame": 25,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 10,
+      "frame": 34,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 10,
+      "frame": 34,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 10,
+      "frame": 42,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 10,
+      "frame": 42,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 10,
+      "frame": 51,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 10,
+      "frame": 51,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 10,
+      "frame": 59,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 10,
+      "frame": 59,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 10,
+      "frame": 68,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 10,
+      "frame": 68,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 10,
+      "frame": 76,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 10,
+      "frame": 76,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 10,
+      "frame": 85,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 10,
+      "frame": 85,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 10,
+      "frame": 94,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 10,
+      "frame": 94,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 11,
+      "frame": 0,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 11,
+      "frame": 8,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 11,
+      "frame": 16,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 11,
+      "frame": 24,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 11,
+      "frame": 33,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 11,
+      "frame": 41,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 11,
+      "frame": 49,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 11,
+      "frame": 57,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 11,
+      "frame": 66,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 11,
+      "frame": 74,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 11,
+      "frame": 82,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 11,
+      "frame": 91,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 15,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 15,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 15,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 15,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 15,
+      "frame": 16,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 15,
+      "frame": 16,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 15,
+      "frame": 24,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 15,
+      "frame": 24,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 15,
+      "frame": 32,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 15,
+      "frame": 32,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 15,
+      "frame": 40,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 15,
+      "frame": 40,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 15,
+      "frame": 49,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 15,
+      "frame": 49,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 15,
+      "frame": 57,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 15,
+      "frame": 57,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 15,
+      "frame": 65,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 15,
+      "frame": 65,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 15,
+      "frame": 73,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 15,
+      "frame": 73,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 15,
+      "frame": 81,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 15,
+      "frame": 81,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 15,
+      "frame": 90,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 15,
+      "frame": 90,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 16,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 16,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 16,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 16,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 16,
+      "frame": 16,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 16,
+      "frame": 16,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 16,
+      "frame": 25,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 16,
+      "frame": 25,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 16,
+      "frame": 33,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 16,
+      "frame": 33,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 16,
+      "frame": 41,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 16,
+      "frame": 41,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 16,
+      "frame": 50,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 16,
+      "frame": 50,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 16,
+      "frame": 58,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 16,
+      "frame": 58,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 16,
+      "frame": 66,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 16,
+      "frame": 66,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 16,
+      "frame": 75,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 16,
+      "frame": 75,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 16,
+      "frame": 83,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 16,
+      "frame": 83,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 16,
+      "frame": 92,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 16,
+      "frame": 92,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 17,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 17,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 17,
+      "frame": 7,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 17,
+      "frame": 7,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 17,
+      "frame": 15,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 17,
+      "frame": 15,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 17,
+      "frame": 23,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 17,
+      "frame": 23,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 17,
+      "frame": 30,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 17,
+      "frame": 30,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 17,
+      "frame": 38,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 17,
+      "frame": 38,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 17,
+      "frame": 46,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 17,
+      "frame": 46,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 17,
+      "frame": 54,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 17,
+      "frame": 54,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 17,
+      "frame": 61,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 17,
+      "frame": 61,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 17,
+      "frame": 69,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 17,
+      "frame": 69,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 17,
+      "frame": 77,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 17,
+      "frame": 77,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 17,
+      "frame": 85,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 17,
+      "frame": 85,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 18,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 18,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 18,
+      "frame": 7,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 18,
+      "frame": 7,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 18,
+      "frame": 15,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 18,
+      "frame": 15,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 18,
+      "frame": 23,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 18,
+      "frame": 23,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 18,
+      "frame": 30,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 18,
+      "frame": 30,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 18,
+      "frame": 38,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 18,
+      "frame": 38,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 18,
+      "frame": 46,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 18,
+      "frame": 46,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 18,
+      "frame": 54,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 18,
+      "frame": 54,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 18,
+      "frame": 61,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 18,
+      "frame": 61,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 18,
+      "frame": 69,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 18,
+      "frame": 69,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 18,
+      "frame": 77,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 18,
+      "frame": 77,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 18,
+      "frame": 85,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 18,
+      "frame": 85,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 19,
+      "frame": 0,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 19,
+      "frame": 8,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 19,
+      "frame": 17,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 19,
+      "frame": 25,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 19,
+      "frame": 34,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 19,
+      "frame": 42,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 19,
+      "frame": 51,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 19,
+      "frame": 59,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 19,
+      "frame": 68,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 19,
+      "frame": 76,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 19,
+      "frame": 85,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 19,
+      "frame": 94,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 20,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 20,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 20,
+      "frame": 7,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 20,
+      "frame": 7,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 20,
+      "frame": 15,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 20,
+      "frame": 15,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 20,
+      "frame": 22,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 20,
+      "frame": 22,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 20,
+      "frame": 30,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 20,
+      "frame": 30,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 20,
+      "frame": 38,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 20,
+      "frame": 38,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 20,
+      "frame": 45,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 20,
+      "frame": 45,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 20,
+      "frame": 53,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 20,
+      "frame": 53,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 20,
+      "frame": 61,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 20,
+      "frame": 61,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 20,
+      "frame": 68,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 20,
+      "frame": 68,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 20,
+      "frame": 76,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 20,
+      "frame": 76,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 20,
+      "frame": 84,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 20,
+      "frame": 84,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 21,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 21,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 21,
+      "frame": 9,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 21,
+      "frame": 9,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 21,
+      "frame": 18,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 21,
+      "frame": 18,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 21,
+      "frame": 27,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 21,
+      "frame": 27,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 21,
+      "frame": 36,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 21,
+      "frame": 36,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 21,
+      "frame": 45,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 21,
+      "frame": 45,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 21,
+      "frame": 54,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 21,
+      "frame": 54,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 21,
+      "frame": 63,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 21,
+      "frame": 63,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 21,
+      "frame": 72,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 21,
+      "frame": 72,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 21,
+      "frame": 81,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 21,
+      "frame": 81,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 21,
+      "frame": 90,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 21,
+      "frame": 90,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 21,
+      "frame": 100,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 21,
+      "frame": 100,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 22,
+      "frame": 0,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 22,
+      "frame": 8,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 22,
+      "frame": 17,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 22,
+      "frame": 25,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 22,
+      "frame": 34,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 22,
+      "frame": 43,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 22,
+      "frame": 51,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 22,
+      "frame": 60,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 22,
+      "frame": 69,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 22,
+      "frame": 77,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 22,
+      "frame": 86,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 22,
+      "frame": 95,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 23,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 23,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 23,
+      "frame": 9,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 23,
+      "frame": 9,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 23,
+      "frame": 18,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 23,
+      "frame": 18,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 23,
+      "frame": 27,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 23,
+      "frame": 27,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 23,
+      "frame": 36,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 23,
+      "frame": 36,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 23,
+      "frame": 45,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 23,
+      "frame": 45,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 23,
+      "frame": 54,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 23,
+      "frame": 54,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 23,
+      "frame": 63,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 23,
+      "frame": 63,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 23,
+      "frame": 72,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 23,
+      "frame": 72,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 23,
+      "frame": 81,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 23,
+      "frame": 81,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 23,
+      "frame": 90,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 23,
+      "frame": 90,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 23,
+      "frame": 100,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 23,
+      "frame": 100,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 24,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 24,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 24,
+      "frame": 7,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 24,
+      "frame": 7,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 24,
+      "frame": 14,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 24,
+      "frame": 14,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 24,
+      "frame": 22,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 24,
+      "frame": 22,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 24,
+      "frame": 29,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 24,
+      "frame": 29,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 24,
+      "frame": 36,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 24,
+      "frame": 36,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 24,
+      "frame": 44,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 24,
+      "frame": 44,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 24,
+      "frame": 51,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 24,
+      "frame": 51,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 24,
+      "frame": 58,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 24,
+      "frame": 58,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 24,
+      "frame": 66,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 24,
+      "frame": 66,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 24,
+      "frame": 73,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 24,
+      "frame": 73,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 24,
+      "frame": 81,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 24,
+      "frame": 81,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 25,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 25,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 25,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 25,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 25,
+      "frame": 17,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 25,
+      "frame": 17,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 25,
+      "frame": 25,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 25,
+      "frame": 25,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 25,
+      "frame": 34,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 25,
+      "frame": 34,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 25,
+      "frame": 43,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 25,
+      "frame": 43,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 25,
+      "frame": 51,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 25,
+      "frame": 51,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 25,
+      "frame": 60,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 25,
+      "frame": 60,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 25,
+      "frame": 69,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 25,
+      "frame": 69,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 25,
+      "frame": 77,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 25,
+      "frame": 77,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 25,
+      "frame": 86,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 25,
+      "frame": 86,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 25,
+      "frame": 95,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 25,
+      "frame": 95,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 26,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 26,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 26,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 26,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 26,
+      "frame": 16,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 26,
+      "frame": 16,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 26,
+      "frame": 24,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 26,
+      "frame": 24,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 26,
+      "frame": 33,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 26,
+      "frame": 33,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 26,
+      "frame": 41,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 26,
+      "frame": 41,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 26,
+      "frame": 49,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 26,
+      "frame": 49,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 26,
+      "frame": 57,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 26,
+      "frame": 57,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 26,
+      "frame": 66,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 26,
+      "frame": 66,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 26,
+      "frame": 74,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 26,
+      "frame": 74,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 26,
+      "frame": 82,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 26,
+      "frame": 82,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 26,
+      "frame": 91,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 26,
+      "frame": 91,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 27,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 27,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 27,
+      "frame": 7,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 27,
+      "frame": 7,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 27,
+      "frame": 15,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 27,
+      "frame": 15,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 27,
+      "frame": 22,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 27,
+      "frame": 22,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 27,
+      "frame": 30,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 27,
+      "frame": 30,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 27,
+      "frame": 37,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 27,
+      "frame": 37,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 27,
+      "frame": 45,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 27,
+      "frame": 45,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 27,
+      "frame": 52,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 27,
+      "frame": 52,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 27,
+      "frame": 60,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 27,
+      "frame": 60,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 27,
+      "frame": 67,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 27,
+      "frame": 67,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 27,
+      "frame": 75,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 27,
+      "frame": 75,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 27,
+      "frame": 83,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 27,
+      "frame": 83,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 28,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 28,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 28,
+      "frame": 7,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 28,
+      "frame": 7,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 28,
+      "frame": 14,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 28,
+      "frame": 14,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 28,
+      "frame": 22,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 28,
+      "frame": 22,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 28,
+      "frame": 29,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 28,
+      "frame": 29,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 28,
+      "frame": 37,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 28,
+      "frame": 37,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 28,
+      "frame": 44,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 28,
+      "frame": 44,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 28,
+      "frame": 52,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 28,
+      "frame": 52,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 28,
+      "frame": 59,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 28,
+      "frame": 59,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 28,
+      "frame": 67,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 28,
+      "frame": 67,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 28,
+      "frame": 74,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 28,
+      "frame": 74,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 28,
+      "frame": 82,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 28,
+      "frame": 82,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 29,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 29,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 29,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 29,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 29,
+      "frame": 17,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 29,
+      "frame": 17,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 29,
+      "frame": 26,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 29,
+      "frame": 26,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 29,
+      "frame": 35,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 29,
+      "frame": 35,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 29,
+      "frame": 44,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 29,
+      "frame": 44,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 29,
+      "frame": 52,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 29,
+      "frame": 52,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 29,
+      "frame": 61,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 29,
+      "frame": 61,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 29,
+      "frame": 70,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 29,
+      "frame": 70,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 29,
+      "frame": 79,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 29,
+      "frame": 79,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 29,
+      "frame": 88,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 29,
+      "frame": 88,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 29,
+      "frame": 97,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 29,
+      "frame": 97,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 30,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 30,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 30,
+      "frame": 7,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 30,
+      "frame": 7,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 30,
+      "frame": 15,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 30,
+      "frame": 15,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 30,
+      "frame": 22,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 30,
+      "frame": 22,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 30,
+      "frame": 30,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 30,
+      "frame": 30,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 30,
+      "frame": 38,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 30,
+      "frame": 38,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 30,
+      "frame": 45,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 30,
+      "frame": 45,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 30,
+      "frame": 53,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 30,
+      "frame": 53,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 30,
+      "frame": 61,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 30,
+      "frame": 61,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 30,
+      "frame": 68,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 30,
+      "frame": 68,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 30,
+      "frame": 76,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 30,
+      "frame": 76,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 30,
+      "frame": 84,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 30,
+      "frame": 84,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 31,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 31,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 31,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 31,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 31,
+      "frame": 16,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 31,
+      "frame": 16,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 31,
+      "frame": 24,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 31,
+      "frame": 24,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 31,
+      "frame": 32,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 31,
+      "frame": 32,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 31,
+      "frame": 40,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 31,
+      "frame": 40,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 31,
+      "frame": 49,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 31,
+      "frame": 49,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 31,
+      "frame": 57,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 31,
+      "frame": 57,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 31,
+      "frame": 65,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 31,
+      "frame": 65,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 31,
+      "frame": 73,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 31,
+      "frame": 73,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 31,
+      "frame": 81,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 31,
+      "frame": 81,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 31,
+      "frame": 90,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 31,
+      "frame": 90,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 32,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 32,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 32,
+      "frame": 7,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 32,
+      "frame": 7,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 32,
+      "frame": 15,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 32,
+      "frame": 15,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 32,
+      "frame": 22,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 32,
+      "frame": 22,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 32,
+      "frame": 30,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 32,
+      "frame": 30,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 32,
+      "frame": 38,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 32,
+      "frame": 38,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 32,
+      "frame": 45,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 32,
+      "frame": 45,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 32,
+      "frame": 53,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 32,
+      "frame": 53,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 32,
+      "frame": 61,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 32,
+      "frame": 61,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 32,
+      "frame": 68,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 32,
+      "frame": 68,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 32,
+      "frame": 76,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 32,
+      "frame": 76,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 32,
+      "frame": 84,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 32,
+      "frame": 84,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 34,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 34,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 34,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 34,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 34,
+      "frame": 16,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 34,
+      "frame": 16,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 34,
+      "frame": 24,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 34,
+      "frame": 24,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 34,
+      "frame": 32,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 34,
+      "frame": 32,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 34,
+      "frame": 40,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 34,
+      "frame": 40,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 34,
+      "frame": 48,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 34,
+      "frame": 48,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 34,
+      "frame": 56,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 34,
+      "frame": 56,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 34,
+      "frame": 64,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 34,
+      "frame": 64,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 34,
+      "frame": 72,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 34,
+      "frame": 72,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 34,
+      "frame": 80,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 34,
+      "frame": 80,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 34,
+      "frame": 88,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 34,
+      "frame": 88,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 35,
+      "frame": 0,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 35,
+      "frame": 8,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 35,
+      "frame": 16,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 35,
+      "frame": 24,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 35,
+      "frame": 32,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 35,
+      "frame": 40,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 35,
+      "frame": 48,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 35,
+      "frame": 56,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 35,
+      "frame": 64,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 35,
+      "frame": 72,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 35,
+      "frame": 80,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 35,
+      "frame": 89,
+      "split": "val",
+      "replica": 0
+    },
+    {
+      "episode": 37,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 37,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 37,
+      "frame": 7,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 37,
+      "frame": 7,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 37,
+      "frame": 15,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 37,
+      "frame": 15,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 37,
+      "frame": 22,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 37,
+      "frame": 22,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 37,
+      "frame": 30,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 37,
+      "frame": 30,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 37,
+      "frame": 37,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 37,
+      "frame": 37,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 37,
+      "frame": 45,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 37,
+      "frame": 45,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 37,
+      "frame": 52,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 37,
+      "frame": 52,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 37,
+      "frame": 60,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 37,
+      "frame": 60,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 37,
+      "frame": 67,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 37,
+      "frame": 67,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 37,
+      "frame": 75,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 37,
+      "frame": 75,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 37,
+      "frame": 83,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 37,
+      "frame": 83,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 38,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 38,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 38,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 38,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 38,
+      "frame": 17,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 38,
+      "frame": 17,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 38,
+      "frame": 25,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 38,
+      "frame": 25,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 38,
+      "frame": 34,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 38,
+      "frame": 34,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 38,
+      "frame": 42,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 38,
+      "frame": 42,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 38,
+      "frame": 51,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 38,
+      "frame": 51,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 38,
+      "frame": 59,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 38,
+      "frame": 59,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 38,
+      "frame": 68,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 38,
+      "frame": 68,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 38,
+      "frame": 76,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 38,
+      "frame": 76,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 38,
+      "frame": 85,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 38,
+      "frame": 85,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 38,
+      "frame": 94,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 38,
+      "frame": 94,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 39,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 39,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 39,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 39,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 39,
+      "frame": 17,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 39,
+      "frame": 17,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 39,
+      "frame": 25,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 39,
+      "frame": 25,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 39,
+      "frame": 34,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 39,
+      "frame": 34,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 39,
+      "frame": 43,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 39,
+      "frame": 43,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 39,
+      "frame": 51,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 39,
+      "frame": 51,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 39,
+      "frame": 60,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 39,
+      "frame": 60,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 39,
+      "frame": 69,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 39,
+      "frame": 69,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 39,
+      "frame": 77,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 39,
+      "frame": 77,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 39,
+      "frame": 86,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 39,
+      "frame": 86,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 39,
+      "frame": 95,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 39,
+      "frame": 95,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 40,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 40,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 40,
+      "frame": 7,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 40,
+      "frame": 7,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 40,
+      "frame": 15,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 40,
+      "frame": 15,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 40,
+      "frame": 23,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 40,
+      "frame": 23,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 40,
+      "frame": 31,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 40,
+      "frame": 31,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 40,
+      "frame": 39,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 40,
+      "frame": 39,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 40,
+      "frame": 47,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 40,
+      "frame": 47,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 40,
+      "frame": 55,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 40,
+      "frame": 55,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 40,
+      "frame": 63,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 40,
+      "frame": 63,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 40,
+      "frame": 71,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 40,
+      "frame": 71,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 40,
+      "frame": 79,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 40,
+      "frame": 79,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 40,
+      "frame": 87,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 40,
+      "frame": 87,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 41,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 41,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 41,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 41,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 41,
+      "frame": 17,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 41,
+      "frame": 17,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 41,
+      "frame": 25,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 41,
+      "frame": 25,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 41,
+      "frame": 34,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 41,
+      "frame": 34,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 41,
+      "frame": 42,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 41,
+      "frame": 42,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 41,
+      "frame": 51,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 41,
+      "frame": 51,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 41,
+      "frame": 59,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 41,
+      "frame": 59,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 41,
+      "frame": 68,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 41,
+      "frame": 68,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 41,
+      "frame": 76,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 41,
+      "frame": 76,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 41,
+      "frame": 85,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 41,
+      "frame": 85,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 41,
+      "frame": 94,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 41,
+      "frame": 94,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 42,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 42,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 42,
+      "frame": 7,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 42,
+      "frame": 7,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 42,
+      "frame": 15,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 42,
+      "frame": 15,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 42,
+      "frame": 22,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 42,
+      "frame": 22,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 42,
+      "frame": 30,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 42,
+      "frame": 30,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 42,
+      "frame": 37,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 42,
+      "frame": 37,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 42,
+      "frame": 45,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 42,
+      "frame": 45,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 42,
+      "frame": 52,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 42,
+      "frame": 52,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 42,
+      "frame": 60,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 42,
+      "frame": 60,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 42,
+      "frame": 67,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 42,
+      "frame": 67,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 42,
+      "frame": 75,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 42,
+      "frame": 75,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 42,
+      "frame": 83,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 42,
+      "frame": 83,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 43,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 43,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 43,
+      "frame": 9,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 43,
+      "frame": 9,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 43,
+      "frame": 18,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 43,
+      "frame": 18,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 43,
+      "frame": 27,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 43,
+      "frame": 27,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 43,
+      "frame": 36,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 43,
+      "frame": 36,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 43,
+      "frame": 45,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 43,
+      "frame": 45,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 43,
+      "frame": 55,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 43,
+      "frame": 55,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 43,
+      "frame": 64,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 43,
+      "frame": 64,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 43,
+      "frame": 73,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 43,
+      "frame": 73,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 43,
+      "frame": 82,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 43,
+      "frame": 82,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 43,
+      "frame": 91,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 43,
+      "frame": 91,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 43,
+      "frame": 101,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 43,
+      "frame": 101,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 44,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 44,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 44,
+      "frame": 9,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 44,
+      "frame": 9,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 44,
+      "frame": 18,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 44,
+      "frame": 18,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 44,
+      "frame": 28,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 44,
+      "frame": 28,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 44,
+      "frame": 37,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 44,
+      "frame": 37,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 44,
+      "frame": 46,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 44,
+      "frame": 46,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 44,
+      "frame": 56,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 44,
+      "frame": 56,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 44,
+      "frame": 65,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 44,
+      "frame": 65,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 44,
+      "frame": 74,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 44,
+      "frame": 74,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 44,
+      "frame": 84,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 44,
+      "frame": 84,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 44,
+      "frame": 93,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 44,
+      "frame": 93,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 44,
+      "frame": 103,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 44,
+      "frame": 103,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 45,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 45,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 45,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 45,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 45,
+      "frame": 16,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 45,
+      "frame": 16,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 45,
+      "frame": 24,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 45,
+      "frame": 24,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 45,
+      "frame": 32,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 45,
+      "frame": 32,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 45,
+      "frame": 40,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 45,
+      "frame": 40,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 45,
+      "frame": 49,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 45,
+      "frame": 49,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 45,
+      "frame": 57,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 45,
+      "frame": 57,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 45,
+      "frame": 65,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 45,
+      "frame": 65,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 45,
+      "frame": 73,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 45,
+      "frame": 73,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 45,
+      "frame": 81,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 45,
+      "frame": 81,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 45,
+      "frame": 90,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 45,
+      "frame": 90,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 46,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 46,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 46,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 46,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 46,
+      "frame": 16,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 46,
+      "frame": 16,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 46,
+      "frame": 25,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 46,
+      "frame": 25,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 46,
+      "frame": 33,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 46,
+      "frame": 33,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 46,
+      "frame": 41,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 46,
+      "frame": 41,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 46,
+      "frame": 50,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 46,
+      "frame": 50,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 46,
+      "frame": 58,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 46,
+      "frame": 58,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 46,
+      "frame": 66,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 46,
+      "frame": 66,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 46,
+      "frame": 75,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 46,
+      "frame": 75,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 46,
+      "frame": 83,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 46,
+      "frame": 83,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 46,
+      "frame": 92,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 46,
+      "frame": 92,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 47,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 47,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 47,
+      "frame": 8,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 47,
+      "frame": 8,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 47,
+      "frame": 16,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 47,
+      "frame": 16,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 47,
+      "frame": 24,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 47,
+      "frame": 24,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 47,
+      "frame": 32,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 47,
+      "frame": 32,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 47,
+      "frame": 40,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 47,
+      "frame": 40,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 47,
+      "frame": 49,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 47,
+      "frame": 49,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 47,
+      "frame": 57,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 47,
+      "frame": 57,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 47,
+      "frame": 65,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 47,
+      "frame": 65,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 47,
+      "frame": 73,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 47,
+      "frame": 73,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 47,
+      "frame": 81,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 47,
+      "frame": 81,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 47,
+      "frame": 90,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 47,
+      "frame": 90,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 49,
+      "frame": 0,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 49,
+      "frame": 0,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 49,
+      "frame": 7,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 49,
+      "frame": 7,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 49,
+      "frame": 14,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 49,
+      "frame": 14,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 49,
+      "frame": 21,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 49,
+      "frame": 21,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 49,
+      "frame": 29,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 49,
+      "frame": 29,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 49,
+      "frame": 36,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 49,
+      "frame": 36,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 49,
+      "frame": 43,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 49,
+      "frame": 43,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 49,
+      "frame": 50,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 49,
+      "frame": 50,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 49,
+      "frame": 58,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 49,
+      "frame": 58,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 49,
+      "frame": 65,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 49,
+      "frame": 65,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 49,
+      "frame": 72,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 49,
+      "frame": 72,
+      "split": "train",
+      "replica": 1
+    },
+    {
+      "episode": 49,
+      "frame": 80,
+      "split": "train",
+      "replica": 0
+    },
+    {
+      "episode": 49,
+      "frame": 80,
+      "split": "train",
+      "replica": 1
+    }
+  ],
+  "seconds": 20.84801073372364,
+  "test_episodes_opened": false
+}

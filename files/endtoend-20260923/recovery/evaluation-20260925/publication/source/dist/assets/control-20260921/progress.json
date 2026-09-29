@@ -1,0 +1,38 @@
+{
+  "as_of": "2026-09-21 10:53:04 CDT",
+  "completed_training_runs": 3,
+  "planned_training_runs": 27,
+  "checks": {
+    "future_input_invariance": true,
+    "deterministic_pool_matches_reference_tolerance_1e6": true,
+    "auxiliary_gradient_current_only": true,
+    "lambda_zero_gradient_max_abs": 0.0,
+    "auxiliary_reaches_encoder_not_decoder": true,
+    "train_statistics_ignore_test": true
+  },
+  "validation_results": [
+    {
+      "task": "adjust_bottle",
+      "name": "aux0-s42",
+      "val_mse": 0.10964449328759945,
+      "alpha": 0.01,
+      "visual_dim": 192
+    },
+    {
+      "task": "adjust_bottle",
+      "name": "aux0.1-s42",
+      "val_mse": 0.08885595115054208,
+      "alpha": 0.01,
+      "visual_dim": 192
+    },
+    {
+      "task": "adjust_bottle",
+      "name": "aux1-s42",
+      "val_mse": 0.06569471227713505,
+      "alpha": 0.01,
+      "visual_dim": 192
+    }
+  ],
+  "selected": null,
+  "complete": false
+}

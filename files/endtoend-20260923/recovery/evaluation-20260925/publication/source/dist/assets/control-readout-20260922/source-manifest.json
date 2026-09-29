@@ -1,0 +1,20 @@
+{
+  "frozen_at": "2026-09-22T01:07:24.291880-05:00",
+  "private_commit": "6687e266a985125b4d7e2ecf8f36222c67e60933",
+  "inputs": {
+    "/home/zifanz4/openwam-experiments/CONTROL_READOUT_PROTOCOL.md": "0b1154f78a1a14cd3a340795613bec40a0ad759cce2c362ff61a28c03bd8b2c5",
+    "/home/zifanz4/openwam-experiments/scripts/control_restoration_readout.py": "ac20a1588e93ea81bc129a9c835ca0451c74aa8714b6eb98495ee99c9565301c",
+    "/home/zifanz4/openwam-experiments/scripts/robustness_common.py": "e3b3da3514c47c85d4ee94f07befdd743a99ade102e950a64e5a84f4c00b1a20",
+    "/data02/zifanz4/openwam-experiments/results/representation-preflight-20260922/sample-manifest.json": "64b6795bcf77fbd170d71fffd21f063ec49994f47e772fe523842426f1f66ea3",
+    "/data02/zifanz4/openwam-experiments/results/representation-preflight-20260922/aligned-state-targets.npz": "fbe044a8ce9b38712f428f4e9cde4ffbe8467bc90de2a688e598fb55b6d5e660",
+    "/data02/zifanz4/openwam-experiments/results/representation-preflight-20260922/validation.json": "1bfbdc57c6a855b91b11c0349366b49fdf32c2d0cf8041ed86f1ba4c3911d35c",
+    "/data02/zifanz4/openwam-experiments/results/robustness-20260921/adapter-cache.pt": "055428a393917f5336958fa2a1bdbc7e031584d0e64734a92a0433fe984b0b9f",
+    "/data02/zifanz4/openwam-experiments/results/robustness-20260921/adapter-mlp-42.pt": "f0d0cf8eeae4b87e3d16a742c8733e05b82ec737a445dec6cd18efedd3092586",
+    "/data02/zifanz4/openwam-experiments/results/robustness-20260921/adapter-mlp-43.pt": "b5e014d3d98c2ae63f46e46227c1d1e5c258f98c71d532c63b2658a1f8783a0a",
+    "/data02/zifanz4/openwam-experiments/results/robustness-20260921/adapter-mlp-44.pt": "c5341062fbc6480f124aaa5749e27a4b470689780fd74e852dc86aa5013284f1",
+    "/data02/zifanz4/openwam-experiments/results/robustness-20260921/adapter-selected.pt": "f0d0cf8eeae4b87e3d16a742c8733e05b82ec737a445dec6cd18efedd3092586"
+  },
+  "wall_cap_seconds": 300,
+  "cpu_threads": 2,
+  "cuda_visible_devices": ""
+}

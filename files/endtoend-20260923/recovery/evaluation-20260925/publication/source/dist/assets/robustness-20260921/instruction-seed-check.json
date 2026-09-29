@@ -1,0 +1,13 @@
+{
+  "actual_source_sha256": "ef428fa9066c3025d41e2fabcbf894d1d4313bd12bee0a300d19d3d7d1158f24",
+  "same_simulator_seed_unseeded_instruction_lists_unique": 5,
+  "scoped_language_seed_repeated_lists_unique": 1,
+  "prior_python_rng_preserved": true,
+  "unseen_example": [
+    "Hold the brown bottle in one hand, the green plastic bottle with ridged bottom in the other.",
+    "Pick up the plastic soda bottle and the green bottle simultaneously.",
+    "Pick up the brown bottle and the green bottle with white label using both arms.",
+    "Grab the plastic soda bottle and the green bottle with white label with arms.",
+    "Lift the brown bottle and the green bottle using both arms."
+  ]
+}

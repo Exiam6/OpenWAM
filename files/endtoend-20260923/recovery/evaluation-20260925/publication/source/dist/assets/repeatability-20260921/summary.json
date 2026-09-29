@@ -1,0 +1,4222 @@
+{
+  "role": "fixed-input repeatability and sensitivity diagnostic, not policy success",
+  "all_integrity_checks_passed": true,
+  "generated_chunks": 54,
+  "unique_inputs": 6,
+  "scene_seeds": [
+    400000,
+    400001,
+    400002
+  ],
+  "aggregates": {
+    "adapter_r0_vs_identity": {
+      "chunk": {
+        "byte_equal_inputs": 0,
+        "inputs": 6,
+        "max_abs": 0.04296875,
+        "mean_input_rmse": 0.004853346498880307
+      },
+      "first_action": {
+        "byte_equal_inputs": 0,
+        "inputs": 6,
+        "max_abs": 0.004203140735626221,
+        "mean_input_rmse": 0.0013416165662446303
+      }
+    },
+    "adapter_r1_vs_identity": {
+      "chunk": {
+        "byte_equal_inputs": 0,
+        "inputs": 6,
+        "max_abs": 0.04296875,
+        "mean_input_rmse": 0.004853346498880307
+      },
+      "first_action": {
+        "byte_equal_inputs": 0,
+        "inputs": 6,
+        "max_abs": 0.004203140735626221,
+        "mean_input_rmse": 0.0013416165662446303
+      }
+    },
+    "adapter_renorm_r0_vs_identity": {
+      "chunk": {
+        "byte_equal_inputs": 0,
+        "inputs": 6,
+        "max_abs": 0.046875,
+        "mean_input_rmse": 0.005189219735095921
+      },
+      "first_action": {
+        "byte_equal_inputs": 0,
+        "inputs": 6,
+        "max_abs": 0.004203140735626221,
+        "mean_input_rmse": 0.0015294593556759003
+      }
+    },
+    "adapter_renorm_r1_vs_identity": {
+      "chunk": {
+        "byte_equal_inputs": 0,
+        "inputs": 6,
+        "max_abs": 0.046875,
+        "mean_input_rmse": 0.005189219735095921
+      },
+      "first_action": {
+        "byte_equal_inputs": 0,
+        "inputs": 6,
+        "max_abs": 0.004203140735626221,
+        "mean_input_rmse": 0.0015294593556759003
+      }
+    },
+    "adapter_renorm_within_B": {
+      "chunk": {
+        "byte_equal_inputs": 6,
+        "inputs": 6,
+        "max_abs": 0.0,
+        "mean_input_rmse": 0.0
+      },
+      "first_action": {
+        "byte_equal_inputs": 6,
+        "inputs": 6,
+        "max_abs": 0.0,
+        "mean_input_rmse": 0.0
+      }
+    },
+    "adapter_within_B": {
+      "chunk": {
+        "byte_equal_inputs": 6,
+        "inputs": 6,
+        "max_abs": 0.0,
+        "mean_input_rmse": 0.0
+      },
+      "first_action": {
+        "byte_equal_inputs": 6,
+        "inputs": 6,
+        "max_abs": 0.0,
+        "mean_input_rmse": 0.0
+      }
+    },
+    "identity_restart_vs_A0": {
+      "chunk": {
+        "byte_equal_inputs": 6,
+        "inputs": 6,
+        "max_abs": 0.0,
+        "mean_input_rmse": 0.0
+      },
+      "first_action": {
+        "byte_equal_inputs": 6,
+        "inputs": 6,
+        "max_abs": 0.0,
+        "mean_input_rmse": 0.0
+      }
+    },
+    "identity_restart_vs_A1": {
+      "chunk": {
+        "byte_equal_inputs": 6,
+        "inputs": 6,
+        "max_abs": 0.0,
+        "mean_input_rmse": 0.0
+      },
+      "first_action": {
+        "byte_equal_inputs": 6,
+        "inputs": 6,
+        "max_abs": 0.0,
+        "mean_input_rmse": 0.0
+      }
+    },
+    "identity_within_A": {
+      "chunk": {
+        "byte_equal_inputs": 6,
+        "inputs": 6,
+        "max_abs": 0.0,
+        "mean_input_rmse": 0.0
+      },
+      "first_action": {
+        "byte_equal_inputs": 6,
+        "inputs": 6,
+        "max_abs": 0.0,
+        "mean_input_rmse": 0.0
+      }
+    },
+    "renorm_r0_vs_identity": {
+      "chunk": {
+        "byte_equal_inputs": 0,
+        "inputs": 6,
+        "max_abs": 0.0078125,
+        "mean_input_rmse": 0.0013025966836423904
+      },
+      "first_action": {
+        "byte_equal_inputs": 0,
+        "inputs": 6,
+        "max_abs": 0.004203140735626221,
+        "mean_input_rmse": 0.0007962283065218843
+      }
+    },
+    "renorm_r1_vs_identity": {
+      "chunk": {
+        "byte_equal_inputs": 0,
+        "inputs": 6,
+        "max_abs": 0.0078125,
+        "mean_input_rmse": 0.0013025966836423904
+      },
+      "first_action": {
+        "byte_equal_inputs": 0,
+        "inputs": 6,
+        "max_abs": 0.004203140735626221,
+        "mean_input_rmse": 0.0007962283065218843
+      }
+    },
+    "renorm_within_B": {
+      "chunk": {
+        "byte_equal_inputs": 6,
+        "inputs": 6,
+        "max_abs": 0.0,
+        "mean_input_rmse": 0.0
+      },
+      "first_action": {
+        "byte_equal_inputs": 6,
+        "inputs": 6,
+        "max_abs": 0.0,
+        "mean_input_rmse": 0.0
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "comparison": "identity_within_A",
+      "input": "clean-400000",
+      "candidate": [
+        "A",
+        "identity",
+        1,
+        "clean-400000"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        0,
+        "clean-400000"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "identity_restart_vs_A0",
+      "input": "clean-400000",
+      "candidate": [
+        "B",
+        "identity",
+        0,
+        "clean-400000"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        0,
+        "clean-400000"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "identity_restart_vs_A1",
+      "input": "clean-400000",
+      "candidate": [
+        "B",
+        "identity",
+        0,
+        "clean-400000"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        1,
+        "clean-400000"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_within_B",
+      "input": "clean-400000",
+      "candidate": [
+        "B",
+        "renorm",
+        1,
+        "clean-400000"
+      ],
+      "reference": [
+        "B",
+        "renorm",
+        0,
+        "clean-400000"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_r0_vs_identity",
+      "input": "clean-400000",
+      "candidate": [
+        "B",
+        "renorm",
+        0,
+        "clean-400000"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400000"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.0078125,
+        "rmse": 0.0013589003296255418,
+        "mean_abs": 0.0005969639923932846,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.0007657253893060275
+          },
+          "rot6d": {
+            "max_abs": 0.0078125,
+            "rmse": 0.0015768616299377033
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.001337213275159097
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.001953125,
+        "rmse": 0.0006176272752240437,
+        "mean_abs": 0.0001953108934685588,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.001953125,
+            "rmse": 0.000797353383702062
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_r1_vs_identity",
+      "input": "clean-400000",
+      "candidate": [
+        "B",
+        "renorm",
+        1,
+        "clean-400000"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400000"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.0078125,
+        "rmse": 0.0013589003296255418,
+        "mean_abs": 0.0005969639923932846,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.0007657253893060275
+          },
+          "rot6d": {
+            "max_abs": 0.0078125,
+            "rmse": 0.0015768616299377033
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.001337213275159097
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.001953125,
+        "rmse": 0.0006176272752240437,
+        "mean_abs": 0.0001953108934685588,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.001953125,
+            "rmse": 0.000797353383702062
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_within_B",
+      "input": "clean-400000",
+      "candidate": [
+        "B",
+        "adapter",
+        1,
+        "clean-400000"
+      ],
+      "reference": [
+        "B",
+        "adapter",
+        0,
+        "clean-400000"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_r0_vs_identity",
+      "input": "clean-400000",
+      "candidate": [
+        "B",
+        "adapter",
+        0,
+        "clean-400000"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400000"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.015625,
+        "rmse": 0.0023583882639354944,
+        "mean_abs": 0.001343941574486962,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.0012290672161272712
+          },
+          "rot6d": {
+            "max_abs": 0.015625,
+            "rmse": 0.002876850763560763
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0011960399134683486
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.001953125,
+        "rmse": 0.0006820311383022224,
+        "mean_abs": 0.0003176091937348247,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0005103349685668945,
+            "rmse": 0.00034650303843225793
+          },
+          "rot6d": {
+            "max_abs": 0.001953125,
+            "rmse": 0.0008457217498690976
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_r1_vs_identity",
+      "input": "clean-400000",
+      "candidate": [
+        "B",
+        "adapter",
+        1,
+        "clean-400000"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400000"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.015625,
+        "rmse": 0.0023583882639354944,
+        "mean_abs": 0.001343941574486962,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.0012290672161272712
+          },
+          "rot6d": {
+            "max_abs": 0.015625,
+            "rmse": 0.002876850763560763
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0011960399134683486
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.001953125,
+        "rmse": 0.0006820311383022224,
+        "mean_abs": 0.0003176091937348247,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0005103349685668945,
+            "rmse": 0.00034650303843225793
+          },
+          "rot6d": {
+            "max_abs": 0.001953125,
+            "rmse": 0.0008457217498690976
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_within_B",
+      "input": "clean-400000",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        1,
+        "clean-400000"
+      ],
+      "reference": [
+        "B",
+        "adapter_renorm",
+        0,
+        "clean-400000"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_r0_vs_identity",
+      "input": "clean-400000",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        0,
+        "clean-400000"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400000"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.015625,
+        "rmse": 0.002473032629571892,
+        "mean_abs": 0.001414662811475864,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.0011253177596935828
+          },
+          "rot6d": {
+            "max_abs": 0.015625,
+            "rmse": 0.003062869027629441
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0010358009490037316
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.0039061903953552246,
+        "rmse": 0.0010350004244192058,
+        "mean_abs": 0.000439024658408016,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0009503960609436035,
+            "rmse": 0.0004826755227326091
+          },
+          "rot6d": {
+            "max_abs": 0.0039061903953552246,
+            "rmse": 0.0012918547264007519
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_r1_vs_identity",
+      "input": "clean-400000",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        1,
+        "clean-400000"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400000"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.015625,
+        "rmse": 0.002473032629571892,
+        "mean_abs": 0.001414662811475864,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.0011253177596935828
+          },
+          "rot6d": {
+            "max_abs": 0.015625,
+            "rmse": 0.003062869027629441
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0010358009490037316
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.0039061903953552246,
+        "rmse": 0.0010350004244192058,
+        "mean_abs": 0.000439024658408016,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0009503960609436035,
+            "rmse": 0.0004826755227326091
+          },
+          "rot6d": {
+            "max_abs": 0.0039061903953552246,
+            "rmse": 0.0012918547264007519
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "identity_within_A",
+      "input": "clean-400001",
+      "candidate": [
+        "A",
+        "identity",
+        1,
+        "clean-400001"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        0,
+        "clean-400001"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "identity_restart_vs_A0",
+      "input": "clean-400001",
+      "candidate": [
+        "B",
+        "identity",
+        0,
+        "clean-400001"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        0,
+        "clean-400001"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "identity_restart_vs_A1",
+      "input": "clean-400001",
+      "candidate": [
+        "B",
+        "identity",
+        0,
+        "clean-400001"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        1,
+        "clean-400001"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_within_B",
+      "input": "clean-400001",
+      "candidate": [
+        "B",
+        "renorm",
+        1,
+        "clean-400001"
+      ],
+      "reference": [
+        "B",
+        "renorm",
+        0,
+        "clean-400001"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_r0_vs_identity",
+      "input": "clean-400001",
+      "candidate": [
+        "B",
+        "renorm",
+        0,
+        "clean-400001"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400001"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.00390625,
+        "rmse": 0.0012331504469280368,
+        "mean_abs": 0.0006008404816384427,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0021015703678131104,
+            "rmse": 0.0006252951274404836
+          },
+          "rot6d": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0014932050074619382
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0008097228492078613
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.003905100515112281,
+        "rmse": 0.0010888421234363066,
+        "mean_abs": 0.0005616827169433236,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0007301568984985352,
+            "rmse": 0.0003724625726867543
+          },
+          "rot6d": {
+            "max_abs": 0.003905100515112281,
+            "rmse": 0.0013807960622732299
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_r1_vs_identity",
+      "input": "clean-400001",
+      "candidate": [
+        "B",
+        "renorm",
+        1,
+        "clean-400001"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400001"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.00390625,
+        "rmse": 0.0012331504469280368,
+        "mean_abs": 0.0006008404816384427,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0021015703678131104,
+            "rmse": 0.0006252951274404836
+          },
+          "rot6d": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0014932050074619382
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0008097228492078613
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.003905100515112281,
+        "rmse": 0.0010888421234363066,
+        "mean_abs": 0.0005616827169433236,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0007301568984985352,
+            "rmse": 0.0003724625726867543
+          },
+          "rot6d": {
+            "max_abs": 0.003905100515112281,
+            "rmse": 0.0013807960622732299
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_within_B",
+      "input": "clean-400001",
+      "candidate": [
+        "B",
+        "adapter",
+        1,
+        "clean-400001"
+      ],
+      "reference": [
+        "B",
+        "adapter",
+        0,
+        "clean-400001"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_r0_vs_identity",
+      "input": "clean-400001",
+      "candidate": [
+        "B",
+        "adapter",
+        0,
+        "clean-400001"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400001"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.015625,
+        "rmse": 0.0020962525054176685,
+        "mean_abs": 0.0011203244401258416,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0021015703678131104,
+            "rmse": 0.0008904198006005772
+          },
+          "rot6d": {
+            "max_abs": 0.015625,
+            "rmse": 0.0026054346526039993
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0009134905729428568
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.003905100515112281,
+        "rmse": 0.0010640078729741004,
+        "mean_abs": 0.0004987857188098133,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0009503364562988281,
+            "rmse": 0.0005276361030498333
+          },
+          "rot6d": {
+            "max_abs": 0.003905100515112281,
+            "rmse": 0.0013219889034950237
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_r1_vs_identity",
+      "input": "clean-400001",
+      "candidate": [
+        "B",
+        "adapter",
+        1,
+        "clean-400001"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400001"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.015625,
+        "rmse": 0.0020962525054176685,
+        "mean_abs": 0.0011203244401258416,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0021015703678131104,
+            "rmse": 0.0008904198006005772
+          },
+          "rot6d": {
+            "max_abs": 0.015625,
+            "rmse": 0.0026054346526039993
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0009134905729428568
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.003905100515112281,
+        "rmse": 0.0010640078729741004,
+        "mean_abs": 0.0004987857188098133,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0009503364562988281,
+            "rmse": 0.0005276361030498333
+          },
+          "rot6d": {
+            "max_abs": 0.003905100515112281,
+            "rmse": 0.0013219889034950237
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_within_B",
+      "input": "clean-400001",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        1,
+        "clean-400001"
+      ],
+      "reference": [
+        "B",
+        "adapter_renorm",
+        0,
+        "clean-400001"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_r0_vs_identity",
+      "input": "clean-400001",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        0,
+        "clean-400001"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400001"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.0078125,
+        "rmse": 0.002162298937711778,
+        "mean_abs": 0.001194986294649425,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.002920687198638916,
+            "rmse": 0.0009317434200152872
+          },
+          "rot6d": {
+            "max_abs": 0.0078125,
+            "rmse": 0.0026850468613675575
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0009455525747576702
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.00390625,
+        "rmse": 0.0012633722516331672,
+        "mean_abs": 0.0004873475874774158,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0004838705062866211,
+            "rmse": 0.00027686203299860527
+          },
+          "rot6d": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0016192146607753107
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_r1_vs_identity",
+      "input": "clean-400001",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        1,
+        "clean-400001"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400001"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.0078125,
+        "rmse": 0.002162298937711778,
+        "mean_abs": 0.001194986294649425,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.002920687198638916,
+            "rmse": 0.0009317434200152872
+          },
+          "rot6d": {
+            "max_abs": 0.0078125,
+            "rmse": 0.0026850468613675575
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0009455525747576702
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.00390625,
+        "rmse": 0.0012633722516331672,
+        "mean_abs": 0.0004873475874774158,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0004838705062866211,
+            "rmse": 0.00027686203299860527
+          },
+          "rot6d": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0016192146607753107
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "identity_within_A",
+      "input": "clean-400002",
+      "candidate": [
+        "A",
+        "identity",
+        1,
+        "clean-400002"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        0,
+        "clean-400002"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "identity_restart_vs_A0",
+      "input": "clean-400002",
+      "candidate": [
+        "B",
+        "identity",
+        0,
+        "clean-400002"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        0,
+        "clean-400002"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "identity_restart_vs_A1",
+      "input": "clean-400002",
+      "candidate": [
+        "B",
+        "identity",
+        0,
+        "clean-400002"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        1,
+        "clean-400002"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_within_B",
+      "input": "clean-400002",
+      "candidate": [
+        "B",
+        "renorm",
+        1,
+        "clean-400002"
+      ],
+      "reference": [
+        "B",
+        "renorm",
+        0,
+        "clean-400002"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_r0_vs_identity",
+      "input": "clean-400002",
+      "candidate": [
+        "B",
+        "renorm",
+        0,
+        "clean-400002"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400002"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.0078125,
+        "rmse": 0.0014447812682070002,
+        "mean_abs": 0.0006951869796466781,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.0006855245641720758
+          },
+          "rot6d": {
+            "max_abs": 0.0078125,
+            "rmse": 0.0017564368775526819
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0009765625
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.004203140735626221,
+        "rmse": 0.0011909116537907598,
+        "mean_abs": 0.0005752704455517232,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.0017714730008263116
+          },
+          "rot6d": {
+            "max_abs": 0.001953125,
+            "rmse": 0.0008914740502277386
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_r1_vs_identity",
+      "input": "clean-400002",
+      "candidate": [
+        "B",
+        "renorm",
+        1,
+        "clean-400002"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400002"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.0078125,
+        "rmse": 0.0014447812682070002,
+        "mean_abs": 0.0006951869796466781,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.0006855245641720758
+          },
+          "rot6d": {
+            "max_abs": 0.0078125,
+            "rmse": 0.0017564368775526819
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0009765625
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.004203140735626221,
+        "rmse": 0.0011909116537907598,
+        "mean_abs": 0.0005752704455517232,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.0017714730008263116
+          },
+          "rot6d": {
+            "max_abs": 0.001953125,
+            "rmse": 0.0008914740502277386
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_within_B",
+      "input": "clean-400002",
+      "candidate": [
+        "B",
+        "adapter",
+        1,
+        "clean-400002"
+      ],
+      "reference": [
+        "B",
+        "adapter",
+        0,
+        "clean-400002"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_r0_vs_identity",
+      "input": "clean-400002",
+      "candidate": [
+        "B",
+        "adapter",
+        0,
+        "clean-400002"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400002"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.0078125,
+        "rmse": 0.0020517861309138226,
+        "mean_abs": 0.0012263507200259483,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004082769155502319,
+            "rmse": 0.0010506442950119835
+          },
+          "rot6d": {
+            "max_abs": 0.0078125,
+            "rmse": 0.0025011665753502657
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.001118792894276328
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.00390625,
+        "rmse": 0.0010063029889716313,
+        "mean_abs": 0.0003655544831417501,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.00047516822814941406,
+            "rmse": 0.00019398661682474113
+          },
+          "rot6d": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0012918697453440024
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_r1_vs_identity",
+      "input": "clean-400002",
+      "candidate": [
+        "B",
+        "adapter",
+        1,
+        "clean-400002"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400002"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.0078125,
+        "rmse": 0.0020517861309138226,
+        "mean_abs": 0.0012263507200259483,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004082769155502319,
+            "rmse": 0.0010506442950119835
+          },
+          "rot6d": {
+            "max_abs": 0.0078125,
+            "rmse": 0.0025011665753502657
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.001118792894276328
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.00390625,
+        "rmse": 0.0010063029889716313,
+        "mean_abs": 0.0003655544831417501,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.00047516822814941406,
+            "rmse": 0.00019398661682474113
+          },
+          "rot6d": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0012918697453440024
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_within_B",
+      "input": "clean-400002",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        1,
+        "clean-400002"
+      ],
+      "reference": [
+        "B",
+        "adapter_renorm",
+        0,
+        "clean-400002"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_r0_vs_identity",
+      "input": "clean-400002",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        0,
+        "clean-400002"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400002"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.0078125,
+        "rmse": 0.0020844685034424903,
+        "mean_abs": 0.0011456191376055358,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.0010474211113827353
+          },
+          "rot6d": {
+            "max_abs": 0.0078125,
+            "rmse": 0.002552317014621877
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0010358009490037316
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.004203140735626221,
+        "rmse": 0.0011561932394503198,
+        "mean_abs": 0.0005035720183514059,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.0017393781776191052
+          },
+          "rot6d": {
+            "max_abs": 0.001953125,
+            "rmse": 0.0008457263875089435
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_r1_vs_identity",
+      "input": "clean-400002",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        1,
+        "clean-400002"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "clean-400002"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.0078125,
+        "rmse": 0.0020844685034424903,
+        "mean_abs": 0.0011456191376055358,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.0010474211113827353
+          },
+          "rot6d": {
+            "max_abs": 0.0078125,
+            "rmse": 0.002552317014621877
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0010358009490037316
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.004203140735626221,
+        "rmse": 0.0011561932394503198,
+        "mean_abs": 0.0005035720183514059,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.0017393781776191052
+          },
+          "rot6d": {
+            "max_abs": 0.001953125,
+            "rmse": 0.0008457263875089435
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "identity_within_A",
+      "input": "noise-400000",
+      "candidate": [
+        "A",
+        "identity",
+        1,
+        "noise-400000"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        0,
+        "noise-400000"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "identity_restart_vs_A0",
+      "input": "noise-400000",
+      "candidate": [
+        "B",
+        "identity",
+        0,
+        "noise-400000"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        0,
+        "noise-400000"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "identity_restart_vs_A1",
+      "input": "noise-400000",
+      "candidate": [
+        "B",
+        "identity",
+        0,
+        "noise-400000"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        1,
+        "noise-400000"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_within_B",
+      "input": "noise-400000",
+      "candidate": [
+        "B",
+        "renorm",
+        1,
+        "noise-400000"
+      ],
+      "reference": [
+        "B",
+        "renorm",
+        0,
+        "noise-400000"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_r0_vs_identity",
+      "input": "noise-400000",
+      "candidate": [
+        "B",
+        "renorm",
+        0,
+        "noise-400000"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400000"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.0078125,
+        "rmse": 0.0011832694577567904,
+        "mean_abs": 0.0004962324142979924,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0021015703678131104,
+            "rmse": 0.0006828961611455893
+          },
+          "rot6d": {
+            "max_abs": 0.0078125,
+            "rmse": 0.0013969105748190352
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0009455525747576702
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.0009765625,
+        "rmse": 0.0003140403832152093,
+        "mean_abs": 0.00011041380930691958,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.00025516748428344727,
+            "rmse": 0.00010417168924068199
+          },
+          "rot6d": {
+            "max_abs": 0.0009765625,
+            "rmse": 0.00039867664432506866
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_r1_vs_identity",
+      "input": "noise-400000",
+      "candidate": [
+        "B",
+        "renorm",
+        1,
+        "noise-400000"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400000"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.0078125,
+        "rmse": 0.0011832694577567904,
+        "mean_abs": 0.0004962324142979924,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0021015703678131104,
+            "rmse": 0.0006828961611455893
+          },
+          "rot6d": {
+            "max_abs": 0.0078125,
+            "rmse": 0.0013969105748190352
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0009455525747576702
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.0009765625,
+        "rmse": 0.0003140403832152093,
+        "mean_abs": 0.00011041380930691958,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.00025516748428344727,
+            "rmse": 0.00010417168924068199
+          },
+          "rot6d": {
+            "max_abs": 0.0009765625,
+            "rmse": 0.00039867664432506866
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_within_B",
+      "input": "noise-400000",
+      "candidate": [
+        "B",
+        "adapter",
+        1,
+        "noise-400000"
+      ],
+      "reference": [
+        "B",
+        "adapter",
+        0,
+        "noise-400000"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_r0_vs_identity",
+      "input": "noise-400000",
+      "candidate": [
+        "B",
+        "adapter",
+        0,
+        "noise-400000"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400000"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.04296875,
+        "rmse": 0.008658060558306781,
+        "mean_abs": 0.005156355514554889,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.01235508918762207,
+            "rmse": 0.005583147737195549
+          },
+          "rot6d": {
+            "max_abs": 0.04296875,
+            "rmse": 0.010442363767836785
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0013593174713940482
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.0039061903953552246,
+        "rmse": 0.0016808577782200815,
+        "mean_abs": 0.0009633142850361765,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0009503960609436035,
+            "rmse": 0.0004476780436405036
+          },
+          "rot6d": {
+            "max_abs": 0.0039061903953552246,
+            "rmse": 0.002146764302143892
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_r1_vs_identity",
+      "input": "noise-400000",
+      "candidate": [
+        "B",
+        "adapter",
+        1,
+        "noise-400000"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400000"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.04296875,
+        "rmse": 0.008658060558306781,
+        "mean_abs": 0.005156355514554889,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.01235508918762207,
+            "rmse": 0.005583147737195549
+          },
+          "rot6d": {
+            "max_abs": 0.04296875,
+            "rmse": 0.010442363767836785
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0013593174713940482
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.0039061903953552246,
+        "rmse": 0.0016808577782200815,
+        "mean_abs": 0.0009633142850361765,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0009503960609436035,
+            "rmse": 0.0004476780436405036
+          },
+          "rot6d": {
+            "max_abs": 0.0039061903953552246,
+            "rmse": 0.002146764302143892
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_within_B",
+      "input": "noise-400000",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        1,
+        "noise-400000"
+      ],
+      "reference": [
+        "B",
+        "adapter_renorm",
+        0,
+        "noise-400000"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_r0_vs_identity",
+      "input": "noise-400000",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        0,
+        "noise-400000"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400000"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.046875,
+        "rmse": 0.009030340327084378,
+        "mean_abs": 0.005546459464676445,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.014603137969970703,
+            "rmse": 0.006465183193884037
+          },
+          "rot6d": {
+            "max_abs": 0.046875,
+            "rmse": 0.01071187314485883
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0012685919000748613
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.004203140735626221,
+        "rmse": 0.002208552661317276,
+        "mean_abs": 0.0014915097854100168,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.00179644164914537
+          },
+          "rot6d": {
+            "max_abs": 0.0039061903953552246,
+            "rmse": 0.002552627430112087
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_r1_vs_identity",
+      "input": "noise-400000",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        1,
+        "noise-400000"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400000"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.046875,
+        "rmse": 0.009030340327084378,
+        "mean_abs": 0.005546459464676445,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.014603137969970703,
+            "rmse": 0.006465183193884037
+          },
+          "rot6d": {
+            "max_abs": 0.046875,
+            "rmse": 0.01071187314485883
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0012685919000748613
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.004203140735626221,
+        "rmse": 0.002208552661317276,
+        "mean_abs": 0.0014915097854100168,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.00179644164914537
+          },
+          "rot6d": {
+            "max_abs": 0.0039061903953552246,
+            "rmse": 0.002552627430112087
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "identity_within_A",
+      "input": "noise-400001",
+      "candidate": [
+        "A",
+        "identity",
+        1,
+        "noise-400001"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        0,
+        "noise-400001"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "identity_restart_vs_A0",
+      "input": "noise-400001",
+      "candidate": [
+        "B",
+        "identity",
+        0,
+        "noise-400001"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        0,
+        "noise-400001"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "identity_restart_vs_A1",
+      "input": "noise-400001",
+      "candidate": [
+        "B",
+        "identity",
+        0,
+        "noise-400001"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        1,
+        "noise-400001"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_within_B",
+      "input": "noise-400001",
+      "candidate": [
+        "B",
+        "renorm",
+        1,
+        "noise-400001"
+      ],
+      "reference": [
+        "B",
+        "renorm",
+        0,
+        "noise-400001"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_r0_vs_identity",
+      "input": "noise-400001",
+      "candidate": [
+        "B",
+        "renorm",
+        0,
+        "noise-400001"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400001"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.0078125,
+        "rmse": 0.0012568184730924348,
+        "mean_abs": 0.0005588076372077921,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.003801584243774414,
+            "rmse": 0.0007691072344704839
+          },
+          "rot6d": {
+            "max_abs": 0.0078125,
+            "rmse": 0.0014958443814428904
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0007720404443770458
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.001953125,
+        "rmse": 0.0006575774906974125,
+        "mean_abs": 0.00025689968606457114,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.00025519728660583496,
+            "rmse": 0.00010418385598784861
+          },
+          "rot6d": {
+            "max_abs": 0.001953125,
+            "rmse": 0.0008457263875089435
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_r1_vs_identity",
+      "input": "noise-400001",
+      "candidate": [
+        "B",
+        "renorm",
+        1,
+        "noise-400001"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400001"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.0078125,
+        "rmse": 0.0012568184730924348,
+        "mean_abs": 0.0005588076372077921,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.003801584243774414,
+            "rmse": 0.0007691072344704839
+          },
+          "rot6d": {
+            "max_abs": 0.0078125,
+            "rmse": 0.0014958443814428904
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0007720404443770458
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.001953125,
+        "rmse": 0.0006575774906974125,
+        "mean_abs": 0.00025689968606457114,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.00025519728660583496,
+            "rmse": 0.00010418385598784861
+          },
+          "rot6d": {
+            "max_abs": 0.001953125,
+            "rmse": 0.0008457263875089435
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_within_B",
+      "input": "noise-400001",
+      "candidate": [
+        "B",
+        "adapter",
+        1,
+        "noise-400001"
+      ],
+      "reference": [
+        "B",
+        "adapter",
+        0,
+        "noise-400001"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_r0_vs_identity",
+      "input": "noise-400001",
+      "candidate": [
+        "B",
+        "adapter",
+        0,
+        "noise-400001"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400001"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.01953125,
+        "rmse": 0.004531595960731176,
+        "mean_abs": 0.0030677380891575012,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.009457051753997803,
+            "rmse": 0.0035263248433903874
+          },
+          "rot6d": {
+            "max_abs": 0.01953125,
+            "rmse": 0.005256483969162111
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0015049838874435977
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.00390625,
+        "rmse": 0.0015619097328777238,
+        "mean_abs": 0.0009902022196911276,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0014603137969970703,
+            "rmse": 0.0009057886760092428
+          },
+          "rot6d": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0019119911418824572
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_r1_vs_identity",
+      "input": "noise-400001",
+      "candidate": [
+        "B",
+        "adapter",
+        1,
+        "noise-400001"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400001"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.01953125,
+        "rmse": 0.004531595960731176,
+        "mean_abs": 0.0030677380891575012,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.009457051753997803,
+            "rmse": 0.0035263248433903874
+          },
+          "rot6d": {
+            "max_abs": 0.01953125,
+            "rmse": 0.005256483969162111
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0015049838874435977
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.00390625,
+        "rmse": 0.0015619097328777238,
+        "mean_abs": 0.0009902022196911276,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0014603137969970703,
+            "rmse": 0.0009057886760092428
+          },
+          "rot6d": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0019119911418824572
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_within_B",
+      "input": "noise-400001",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        1,
+        "noise-400001"
+      ],
+      "reference": [
+        "B",
+        "adapter_renorm",
+        0,
+        "noise-400001"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_r0_vs_identity",
+      "input": "noise-400001",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        0,
+        "noise-400001"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400001"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.01953125,
+        "rmse": 0.005090867633256169,
+        "mean_abs": 0.003494637715994031,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.011033222079277039,
+            "rmse": 0.004354055111674122
+          },
+          "rot6d": {
+            "max_abs": 0.01953125,
+            "rmse": 0.00577308934772111
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.001524657714452734
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.0039061903953552246,
+        "rmse": 0.0014087853652790079,
+        "mean_abs": 0.0009017884731292725,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0014603137969970703,
+            "rmse": 0.0009453142665797918
+          },
+          "rot6d": {
+            "max_abs": 0.0039061903953552246,
+            "rmse": 0.0016914443958958667
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_r1_vs_identity",
+      "input": "noise-400001",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        1,
+        "noise-400001"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400001"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.01953125,
+        "rmse": 0.005090867633256169,
+        "mean_abs": 0.003494637715994031,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.011033222079277039,
+            "rmse": 0.004354055111674122
+          },
+          "rot6d": {
+            "max_abs": 0.01953125,
+            "rmse": 0.00577308934772111
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.001524657714452734
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.0039061903953552246,
+        "rmse": 0.0014087853652790079,
+        "mean_abs": 0.0009017884731292725,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0014603137969970703,
+            "rmse": 0.0009453142665797918
+          },
+          "rot6d": {
+            "max_abs": 0.0039061903953552246,
+            "rmse": 0.0016914443958958667
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "identity_within_A",
+      "input": "noise-400002",
+      "candidate": [
+        "A",
+        "identity",
+        1,
+        "noise-400002"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        0,
+        "noise-400002"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "identity_restart_vs_A0",
+      "input": "noise-400002",
+      "candidate": [
+        "B",
+        "identity",
+        0,
+        "noise-400002"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        0,
+        "noise-400002"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "identity_restart_vs_A1",
+      "input": "noise-400002",
+      "candidate": [
+        "B",
+        "identity",
+        0,
+        "noise-400002"
+      ],
+      "reference": [
+        "A",
+        "identity",
+        1,
+        "noise-400002"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_within_B",
+      "input": "noise-400002",
+      "candidate": [
+        "B",
+        "renorm",
+        1,
+        "noise-400002"
+      ],
+      "reference": [
+        "B",
+        "renorm",
+        0,
+        "noise-400002"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_r0_vs_identity",
+      "input": "noise-400002",
+      "candidate": [
+        "B",
+        "renorm",
+        0,
+        "noise-400002"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400002"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.007812440395355225,
+        "rmse": 0.0013386601262445376,
+        "mean_abs": 0.0005814995751279639,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004082769155502319,
+            "rmse": 0.0006439076115146961
+          },
+          "rot6d": {
+            "max_abs": 0.007812440395355225,
+            "rmse": 0.0016218399339351108
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0009455525747576702
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.003905100515112281,
+        "rmse": 0.0009083709127675734,
+        "mean_abs": 0.00028103654040023685,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0004839003086090088,
+            "rmse": 0.00022333455983771568
+          },
+          "rot6d": {
+            "max_abs": 0.003905100515112281,
+            "rmse": 0.0011620199492527533
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "renorm_r1_vs_identity",
+      "input": "noise-400002",
+      "candidate": [
+        "B",
+        "renorm",
+        1,
+        "noise-400002"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400002"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.007812440395355225,
+        "rmse": 0.0013386601262445376,
+        "mean_abs": 0.0005814995751279639,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004082769155502319,
+            "rmse": 0.0006439076115146961
+          },
+          "rot6d": {
+            "max_abs": 0.007812440395355225,
+            "rmse": 0.0016218399339351108
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0009455525747576702
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.003905100515112281,
+        "rmse": 0.0009083709127675734,
+        "mean_abs": 0.00028103654040023685,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0004839003086090088,
+            "rmse": 0.00022333455983771568
+          },
+          "rot6d": {
+            "max_abs": 0.003905100515112281,
+            "rmse": 0.0011620199492527533
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_within_B",
+      "input": "noise-400002",
+      "candidate": [
+        "B",
+        "adapter",
+        1,
+        "noise-400002"
+      ],
+      "reference": [
+        "B",
+        "adapter",
+        0,
+        "noise-400002"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_r0_vs_identity",
+      "input": "noise-400002",
+      "candidate": [
+        "B",
+        "adapter",
+        0,
+        "noise-400002"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400002"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.0390625,
+        "rmse": 0.009423995573976903,
+        "mean_abs": 0.006394465591438347,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.019393160939216614,
+            "rmse": 0.00883273443131241
+          },
+          "rot6d": {
+            "max_abs": 0.0390625,
+            "rmse": 0.010426546198988312
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.001337213275159097
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.004203140735626221,
+        "rmse": 0.002054589886122021,
+        "mean_abs": 0.0013203275273554027,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.0018072711981224029
+          },
+          "rot6d": {
+            "max_abs": 0.00390625,
+            "rmse": 0.002324317406998617
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_r1_vs_identity",
+      "input": "noise-400002",
+      "candidate": [
+        "B",
+        "adapter",
+        1,
+        "noise-400002"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400002"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.0390625,
+        "rmse": 0.009423995573976903,
+        "mean_abs": 0.006394465591438347,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.019393160939216614,
+            "rmse": 0.00883273443131241
+          },
+          "rot6d": {
+            "max_abs": 0.0390625,
+            "rmse": 0.010426546198988312
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.001337213275159097
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.004203140735626221,
+        "rmse": 0.002054589886122021,
+        "mean_abs": 0.0013203275273554027,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.004203140735626221,
+            "rmse": 0.0018072711981224029
+          },
+          "rot6d": {
+            "max_abs": 0.00390625,
+            "rmse": 0.002324317406998617
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_within_B",
+      "input": "noise-400002",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        1,
+        "noise-400002"
+      ],
+      "reference": [
+        "B",
+        "adapter_renorm",
+        0,
+        "noise-400002"
+      ],
+      "chunk": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": true,
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "mean_abs": 0.0,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "rot6d": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_r0_vs_identity",
+      "input": "noise-400002",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        0,
+        "noise-400002"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400002"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.046875,
+        "rmse": 0.010294310379508821,
+        "mean_abs": 0.007074656847180449,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.022455230355262756,
+            "rmse": 0.010147816308319346
+          },
+          "rot6d": {
+            "max_abs": 0.046875,
+            "rmse": 0.01117381466018315
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0012918707573557572
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.00390625,
+        "rmse": 0.0021048521919564255,
+        "mean_abs": 0.0014405360445380211,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.001978546380996704,
+            "rmse": 0.0009704219627392464
+          },
+          "rot6d": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0026292860609722435
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "comparison": "adapter_renorm_r1_vs_identity",
+      "input": "noise-400002",
+      "candidate": [
+        "B",
+        "adapter_renorm",
+        1,
+        "noise-400002"
+      ],
+      "reference": [
+        "B",
+        "identity",
+        0,
+        "noise-400002"
+      ],
+      "chunk": {
+        "byte_equal": false,
+        "max_abs": 0.046875,
+        "rmse": 0.010294310379508821,
+        "mean_abs": 0.007074656847180449,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.022455230355262756,
+            "rmse": 0.010147816308319346
+          },
+          "rot6d": {
+            "max_abs": 0.046875,
+            "rmse": 0.01117381466018315
+          },
+          "gripper": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0012918707573557572
+          }
+        }
+      },
+      "first_action": {
+        "byte_equal": false,
+        "max_abs": 0.00390625,
+        "rmse": 0.0021048521919564255,
+        "mean_abs": 0.0014405360445380211,
+        "groups": {
+          "xyz": {
+            "max_abs": 0.001978546380996704,
+            "rmse": 0.0009704219627392464
+          },
+          "rot6d": {
+            "max_abs": 0.00390625,
+            "rmse": 0.0026292860609722435
+          },
+          "gripper": {
+            "max_abs": 0.0,
+            "rmse": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "reused scenes",
+    "only initial observations",
+    "rot6d is not angular error",
+    "raw generated chunks differ from post-projection executed trajectories",
+    "no RAE versus VAE comparison"
+  ]
+}

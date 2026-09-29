@@ -1,0 +1,32 @@
+[eval_policy_wrapper] RoboTwin commit=0aeea2d669c0 eval_policy.py sha256=8b16c766a9c40116
+[eval_policy_wrapper] runtime_root=/data02/zifanz4/openwam-experiments/results/context-pilot-20260922/A0/runtime
+[eval_policy_wrapper] prewarmed CUDA/Curobo before SAPIEN import
+[eval_policy_wrapper] patched warp.torch compatibility namespace
+/data02/zifanz4/openwam-experiments/benchmark-env/lib/python3.10/site-packages/sapien/_vulkan_tricks.py:37: UserWarning: Failed to find Vulkan ICD file. This is probably due to an incorrect or partial installation of the NVIDIA driver. SAPIEN will attempt to provide an ICD file anyway but it may not work.
+  warn(
+============= Config =============
+
+[95mMessy Table:[0m False
+[95mRandom Background:[0m False
+[95mRandom Light:[0m False
+[95mRandom Table Height:[0m 0
+[95mRandom Head Camera Distance:[0m 0
+[94mHead Camera Config:[0m D435, True
+[94mWrist Camera Config:[0m D435, True
+[94mEmbodiment Config:[0m aloha-agilex
+
+==================================
+missing pytorch3d
+[OpenWAMClient] server=ws://127.0.0.1:18848 send_state=True state_dim=20 request_timeout=300s action_type=ee action_indices=None debug=False debug_dir=./debug_images
+[OpenWAMClient] Server healthy at ws://127.0.0.1:18848
+[eval_policy_wrapper] overriding RoboTwin eval test_num=1
+[34mTask Name: pick_dual_bottles[0m
+[34mPolicy Name: openwam2robotwin_interface[0m
+[OpenWAMClient] step_lim override: pick_dual_bottles 400 -> 2
+step: [92m1 / 2[0mstep: [92m2 / 2[0m[91mFail![0m
+ROBUST_EPISODE {"seed": 400000, "instruction": "Grab the plastic soda bottle with one arm, grab the green bottle with white label with the other.", "initial_head_sha256": "3c6c5721106490f5f378996cf7d7081414e944df14b0302be79dfe6659e22725", "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f", "condition": "clean", "calls": 2, "policy_head_sha256": "3c6c5721106490f5f378996cf7d7081414e944df14b0302be79dfe6659e22725", "actions": 2, "success": false}
+[93mpick_dual_bottles[0m | [94mopenwam2robotwin_interface[0m | [92mdemo_clean[0m | [91mcontext-A0[0m
+Success rate: [96m0/1[0m => [95m0.0%[0m, current seed: [90m400000[0m
+
+Data has been saved to eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/context-A0/2026-09-22 00:30:49/_result.txt
+ROBUST_COMPLETE {"condition": "clean", "successes": 0, "episodes": 1, "records": [{"seed": 400000, "instruction": "Grab the plastic soda bottle with one arm, grab the green bottle with white label with the other.", "initial_head_sha256": "3c6c5721106490f5f378996cf7d7081414e944df14b0302be79dfe6659e22725", "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f", "condition": "clean", "calls": 2, "policy_head_sha256": "3c6c5721106490f5f378996cf7d7081414e944df14b0302be79dfe6659e22725", "actions": 2, "success": false}], "script_sha256": "0268e61922251fef164fbcb5288b98612caf36037bb5e8fc40a1e2ef661a945b"}

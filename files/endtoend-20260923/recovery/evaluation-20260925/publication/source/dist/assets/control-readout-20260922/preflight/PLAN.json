@@ -1,0 +1,54 @@
+{
+  "frozen_at": "2026-09-22T01:01:13.250274-05:00",
+  "purpose": "CPU usability and cache/label alignment gates; no scientific model evaluation",
+  "cli": {
+    "commit": "eb31a97c4baa7dc5c4511a14f1f6c9b32795a5fd",
+    "environment": "existing policy-env; unchanged",
+    "checkpoint": "night-20260921/adjust_bottle/svae-w1-s42/final.pt",
+    "fixture": "first three test clip indices in existing feature manifest, native shards of2 and1",
+    "device": "cpu",
+    "batch_sizes": [
+      2,
+      1
+    ],
+    "per_call_wall_cap_seconds": 120,
+    "checks": [
+      "normal package imports, no leaf bootstrap",
+      "CLI writes finite expected metrics",
+      "same metrics under ragged batching within1e-6",
+      "normalization preserved",
+      "original inputs hash unchanged"
+    ],
+    "interpretation": "software fixture only, no new research evidence"
+  },
+  "alignment": {
+    "cache": "robustness-20260921/adapter-cache.pt",
+    "expected_clean": 480,
+    "expected_noisy": 900,
+    "episodes": {
+      "train": 35,
+      "val": 5
+    },
+    "horizon_raw_steps": 4,
+    "checks": [
+      "seed42 35/5/10 split reproduced",
+      "train and val disjoint, no test episode opened",
+      "reference mapping and replica counts",
+      "exact original frame sampling and enough future-state horizon",
+      "finite current states and future achieved-state labels",
+      "source hashes and selected HDF5 slice/image digests"
+    ],
+    "limitations": [
+      "Manifest/code evidence only; cached tensors have no original per-image hashes",
+      "Cached validation already used for adapter selection: development only",
+      "Published pretrained encoder/S-VAE training may overlap demonstrations",
+      "No contact annotations, controller-command targets or physical timestamps inferred"
+    ]
+  },
+  "resource_cap": {
+    "wall_seconds": 300,
+    "cpu_threads": 2,
+    "cuda_visible_devices": ""
+  },
+  "no_fitting": true
+}

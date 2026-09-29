@@ -1,0 +1,23 @@
+{
+  "frozen_at": "2026-09-21T15:05:04-0500",
+  "repository_commit": "8a7c27e713015406e3c604f0297260e0d6503426",
+  "runtime_sources": {
+    "scripts/norm_common.py": "6121eb420fe07a2bc3fd7ff50708d9f926cab0a43e0018bbc140952605bb826d",
+    "scripts/norm_client.py": "c11173c7b7d073fba74c084114d73cf4eb0303eca0c9b001b1ab3d6f113f28be",
+    "scripts/serve_norm.py": "8e93ab3bf8216c55f7e0704a4f89e413afd57932946d748b09e228a72e596665",
+    "scripts/norm_freeze_manifest.py": "c2adb7d8c6880a9360e151475b56091dc8f3e4ff4bfd163ed5e47b13e3a3b21f",
+    "scripts/norm_offline.py": "cbbdcc20edf3f0d93eb4658eb136c98709f15f97b43589c32e54f16db7677cba",
+    "scripts/check_norm_intervention.py": "a78d54071523f1c412cf6698c294a8eaea6721b4dc9325e07c9455407fe0d550",
+    "scripts/check_norm_replay.py": "079b9b853e5cf1139ad3721fde9347a4699978cec855466b36e6fb2f773ec9fc",
+    "scripts/run-norm-study.sh": "3f1735e2a4638dc650345f46f2e00b7e11105e49d7b1505600b51a8072cc4eef",
+    "scripts/robustness_common.py": "e3b3da3514c47c85d4ee94f07befdd743a99ade102e950a64e5a84f4c00b1a20",
+    "scripts/robustness_client.py": "0268e61922251fef164fbcb5288b98612caf36037bb5e8fc40a1e2ef661a945b"
+  },
+  "protocol_sha256": "ae10e515779dcd5697486911c975dca5d922e3ed49a2e18c2b81bcb4993e192d",
+  "adapter_sha256": "f0d0cf8eeae4b87e3d16a742c8733e05b82ec737a445dec6cd18efedd3092586",
+  "upstream_sources": {
+    "OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py": "7b56c45b89a845b4ff264907bcac7f183a71894d74f4b90753fda69d254cedda",
+    "OpenWAM/openwam/model/video_backbone/encoder/dinov3.py": "c5ac7cf081afc023fe85c32940a807f201213f383d4141b4e68096cde2124eb9",
+    "benchmarks/RoboTwin/script/eval_policy.py": "8b16c766a9c401163418b425e413ebe7f4127d6b132b9c7c4d6b6f8752d57681"
+  }
+}

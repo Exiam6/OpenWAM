@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "frozen_source_and_inputs_verified": 11,
+  "conditions_retained": 10,
+  "validation_episodes": 5,
+  "predictions_per_condition": 60,
+  "target_scaling_uses_training_only": true,
+  "all_group_metrics_recomputed": true,
+  "episode_bootstrap_recomputed": true,
+  "selection_before_scoring_verified": true,
+  "no_new_fit_or_inference": true
+}

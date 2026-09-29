@@ -1,0 +1,61 @@
+{
+  "indices": [
+    0,
+    1,
+    2
+  ],
+  "samples": [
+    {
+      "episode": 0,
+      "episode_file": "adjust_bottle/aloha-agilex_clean_50/data/episode0.hdf5",
+      "start_frame": 0,
+      "frame_indices": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32
+      ],
+      "split": "test"
+    },
+    {
+      "episode": 0,
+      "episode_file": "adjust_bottle/aloha-agilex_clean_50/data/episode0.hdf5",
+      "start_frame": 9,
+      "frame_indices": [
+        9,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37,
+        41
+      ],
+      "split": "test"
+    },
+    {
+      "episode": 0,
+      "episode_file": "adjust_bottle/aloha-agilex_clean_50/data/episode0.hdf5",
+      "start_frame": 19,
+      "frame_indices": [
+        19,
+        23,
+        27,
+        31,
+        35,
+        39,
+        43,
+        47,
+        51
+      ],
+      "split": "test"
+    }
+  ],
+  "scientific_evaluation": false
+}

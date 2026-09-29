@@ -1,0 +1,13 @@
+[
+  {
+    "seed": 400000,
+    "instruction": "Grab the plastic soda bottle with one arm, grab the green bottle with white label with the other.",
+    "initial_head_sha256": "3c6c5721106490f5f378996cf7d7081414e944df14b0302be79dfe6659e22725",
+    "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+    "condition": "clean",
+    "calls": 2,
+    "policy_head_sha256": "3c6c5721106490f5f378996cf7d7081414e944df14b0302be79dfe6659e22725",
+    "actions": 2,
+    "success": false
+  }
+]

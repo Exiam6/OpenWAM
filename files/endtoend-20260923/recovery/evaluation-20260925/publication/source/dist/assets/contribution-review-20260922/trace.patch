@@ -1,0 +1,392 @@
+diff --git a/benchmarks/POLICY_TRACE.md b/benchmarks/POLICY_TRACE.md
+new file mode 100644
+index 0000000..baf1e97
+--- /dev/null
++++ b/benchmarks/POLICY_TRACE.md
+@@ -0,0 +1,43 @@
++# Optional policy request/action traces
++
++Use this diagnostic to compare repeated runs with the same scenes, prompts, ordering
++and settings. It does not change default evaluation or import the model/torch stack.
++Wrap the existing transport in an integration you control:
++
++```python
++from benchmarks.utils import WSPolicyClient
++from benchmarks.utils.policy_trace import TracedPolicyClient
++
++with TracedPolicyClient(WSPolicyClient("ws://127.0.0.1:8848"), "repeat0.jsonl",
++                        metadata={"scene_seed": 400000, "protocol": "my-fixed-protocol"}) as client:
++    client.reset()
++    response = client.predict(payload)  # payload comes from your existing observation loop
++```
++
++The wrapper delegates exactly once and returns the original response object.
++`predict_once` preserves the underlying no-retry method; `predict` preserves its
++existing retry behavior. Reset calls and failed calls are recorded. Closing the
++wrapper closes the transport. Paths must be new; I/O/serialization errors stop the
++caller rather than silently dropping trace records. Use separate files for repeats.
++
++Compare without loading a model:
++
++```bash
++python -m benchmarks.utils.policy_trace repeat0.jsonl repeat1.jsonl
++```
++
++Results give the first differing **event index** per field, plus event counts and
++metadata agreement. Reset/error events also occupy indices. Different lengths are
++not identical traces even when their shared prefix matches. Match metadata and
++inspect server counters before attributing a difference. No automatic scene pairing
++or claim of determinism follows from equality in a finite run.
++
++Hashes cover the submitted payload, encoded image bytes, prompt, state and returned
++action. State/action values and server counters are saved; image pixels and prompt
++text are not. Encoded-image equality is not a numerical pixel-difference measure.
++These are **server actions**, not executed joint motion. In RoboTwin the native
++`joint_action.vector` contains drive targets; use actual qpos/qvel getters for physics
++diagnostics. Identical task outcomes need not imply identical traces. A changed
++request before a changed action narrows investigation, but does not identify a cause:
++action buffers may execute an older generated chunk. Tracing adds CPU/I/O overhead
++and does not prove that traced and untraced execution have identical timing.
+diff --git a/benchmarks/README.md b/benchmarks/README.md
+index 4979e6c..1028b20 100644
+--- a/benchmarks/README.md
++++ b/benchmarks/README.md
+@@ -90,6 +90,8 @@ reset_ack      → {"type": "reset_ack"}
+ 
+ ## 5. Using `benchmarks.utils`
+ 
++For opt-in request/action comparison, see [policy tracing](POLICY_TRACE.md).
++
+ Client helpers live under `benchmarks/utils/client.py` and can be imported directly:
+ 
+ ```python
+diff --git a/benchmarks/utils/policy_trace.py b/benchmarks/utils/policy_trace.py
+new file mode 100644
+index 0000000..34ffa0c
+--- /dev/null
++++ b/benchmarks/utils/policy_trace.py
+@@ -0,0 +1,146 @@
++"""Opt-in JSONL tracing and comparison at the policy transport boundary."""
++
++import argparse
++import base64
++import hashlib
++import json
++from pathlib import Path
++
++_FIELDS = (
++    "event",
++    "method",
++    "request_sha256",
++    "image_payload_sha256",
++    "prompt_sha256",
++    "state_sha256",
++    "action_sha256",
++    "server_step",
++    "error_type",
++)
++
++
++def _json(value):
++    return json.dumps(value, sort_keys=True, separators=(",", ":"), allow_nan=False)
++
++
++def _hash(value):
++    return hashlib.sha256(_json(value).encode()).hexdigest()
++
++
++class TracedPolicyClient:
++    """Wrap an existing client without changing calls, arguments or responses.
++
++    The new path must not exist. Closing this wrapper also closes its client.
++    Trace failures propagate; silently incomplete diagnostic logs are not accepted.
++    """
++
++    def __init__(self, client, path, *, metadata=None):
++        header = _json({"schema": "openwam-policy-trace-v1", "metadata": metadata or {}})
++        self.client = client
++        self._file = Path(path).open("x", encoding="utf-8")
++        self._file.write(header + "\n")
++        self._file.flush()
++        self._index = 0
++
++    def _write(self, record):
++        self._file.write(_json({"index": self._index, **record}) + "\n")
++        self._file.flush()
++        self._index += 1
++
++    def _call(self, method, payload=None):
++        if self._file.closed:
++            raise ValueError("trace is closed")
++        record = {"method": method}
++        if payload is not None:
++            record.update(
++                request_sha256=_hash(payload),
++                image_payload_sha256={
++                    key: hashlib.sha256(base64.b64decode(value, validate=True)).hexdigest()
++                    if value is not None
++                    else None
++                    for key, value in payload.get("images", {}).items()
++                },
++                prompt_sha256=_hash(payload.get("prompt")),
++                state_sha256=_hash(payload.get("state")),
++                state=json.loads(_json(payload.get("state"))),
++            )
++        try:
++            response = getattr(self.client, method)(payload) if payload is not None else getattr(self.client, method)()
++        except Exception as error:
++            self._write({**record, "event": "error", "error_type": type(error).__name__})
++            raise
++        record.update(event="prediction" if payload is not None else "reset", server_step=response.get("step"))
++        if payload is not None:
++            record.update(action=response["action"], action_sha256=_hash(response["action"]))
++        self._write(record)
++        return response
++
++    def predict(self, payload):
++        return self._call("predict", payload)
++
++    def predict_once(self, payload):
++        return self._call("predict_once", payload)
++
++    def reset(self):
++        return self._call("reset")
++
++    def ping(self):
++        return self.client.ping()
++
++    def close(self):
++        try:
++            self.client.close()
++        finally:
++            self._file.close()
++
++    def __enter__(self):
++        return self
++
++    def __exit__(self, *exc):
++        self.close()
++
++
++def _read(path):
++    rows = [json.loads(line) for line in Path(path).read_text(encoding="utf-8").splitlines()]
++    if not rows or rows[0].get("schema") != "openwam-policy-trace-v1":
++        raise ValueError("unsupported or missing trace header")
++    header, events = rows[0], rows[1:]
++    for index, row in enumerate(events):
++        if row.get("index") != index or row.get("event") not in {"prediction", "reset", "error"}:
++            raise ValueError(f"invalid trace event {index}")
++        if row["event"] == "prediction":
++            if _hash(row["action"]) != row["action_sha256"] or _hash(row["state"]) != row["state_sha256"]:
++                raise ValueError(f"trace value/hash mismatch at event {index}")
++    return header, events
++
++
++def compare_traces(left, right):
++    """Compare aligned event prefixes; include length and metadata mismatches."""
++    a_header, a = _read(left)
++    b_header, b = _read(right)
++    first = {
++        field: next(
++            (i for i, (x, y) in enumerate(zip(a, b)) if (field in x, x.get(field)) != (field in y, y.get(field))), None
++        )
++        for field in _FIELDS
++    }
++    return {
++        "event_counts": [len(a), len(b)],
++        "metadata_equal": a_header.get("metadata") == b_header.get("metadata"),
++        "first_different_event": first,
++        "same_recorded_trace": len(a) == len(b)
++        and a_header == b_header
++        and all(value is None for value in first.values()),
++    }
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("left")
++    parser.add_argument("right")
++    args = parser.parse_args()
++    print(json.dumps(compare_traces(args.left, args.right), indent=2))
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/tests/test_policy_trace.py b/tests/test_policy_trace.py
+new file mode 100644
+index 0000000..814175d
+--- /dev/null
++++ b/tests/test_policy_trace.py
+@@ -0,0 +1,172 @@
++"""Trace contracts: no transport changes, honest mismatches, native eval parity."""
++
++import base64
++import copy
++import json
++import random
++import tempfile
++import unittest
++from pathlib import Path
++
++import numpy as np
++
++from benchmarks.utils.policy_trace import TracedPolicyClient, compare_traces
++
++
++class Client:
++    def __init__(self):
++        self.response = {"action": [0.0, 1.0], "step": 1, "latency_ms": 12}
++        self.calls = []
++        self.closed = False
++
++    def predict(self, payload):
++        self.calls.append(("predict", payload))
++        return self.response
++
++    def predict_once(self, payload):
++        self.calls.append(("predict_once", payload))
++        return self.response
++
++    def reset(self):
++        self.calls.append(("reset", None))
++        return {"type": "reset_ack"}
++
++    def ping(self):
++        return {"type": "pong"}
++
++    def close(self):
++        self.closed = True
++
++
++class PolicyTraceTests(unittest.TestCase):
++    def setUp(self):
++        self.directory = tempfile.TemporaryDirectory()
++        self.addCleanup(self.directory.cleanup)
++        self.path = Path(self.directory.name)
++        self.payload = {
++            "images": {"head_camera": base64.b64encode(b"encoded-image").decode()},
++            "prompt": "pick",
++            "state": [0.1],
++        }
++
++    def write_trace(self, name, payload=None, action=None):
++        client = Client()
++        if action is not None:
++            client.response["action"] = action
++        with TracedPolicyClient(client, self.path / name, metadata={"scene": 1}) as traced:
++            traced.predict(payload or self.payload)
++        return self.path / name
++
++    def test_passthrough_identity_retry_choice_rng_and_close(self):
++        client = Client()
++        before = copy.deepcopy(self.payload)
++        np_before, py_before = np.random.get_state(), random.getstate()
++        with TracedPolicyClient(client, self.path / "trace") as traced:
++            self.assertIs(traced.predict(self.payload), client.response)
++            self.assertIs(traced.predict_once(self.payload), client.response)
++            self.assertEqual(traced.reset(), {"type": "reset_ack"})
++            self.assertEqual(traced.ping(), {"type": "pong"})
++        self.assertTrue(client.closed)
++        self.assertEqual([c[0] for c in client.calls], ["predict", "predict_once", "reset"])
++        self.assertIs(client.calls[0][1], self.payload)
++        self.assertEqual(self.payload, before)
++        self.assertTrue(all(np.array_equal(x, y) for x, y in zip(np_before, np.random.get_state())))
++        self.assertEqual(py_before, random.getstate())
++        with self.assertRaises(ValueError):
++            traced.predict(self.payload)
++        self.assertEqual(len(client.calls), 3)
++
++    def test_error_is_recorded_and_same_exception_propagates(self):
++        client = Client()
++        error = RuntimeError("server failed")
++
++        def fail(payload):
++            raise error
++
++        client.predict = fail
++        with TracedPolicyClient(client, self.path / "trace") as traced:
++            with self.assertRaises(RuntimeError) as caught:
++                traced.predict(self.payload)
++            self.assertIs(caught.exception, error)
++        row = json.loads((self.path / "trace").read_text().splitlines()[1])
++        self.assertEqual(row["event"], "error")
++        self.assertEqual(row["error_type"], "RuntimeError")
++
++    def test_refuses_overwrite_and_detects_truncated_prefix(self):
++        a = self.write_trace("a")
++        with self.assertRaises(FileExistsError):
++            TracedPolicyClient(Client(), a)
++        b = self.write_trace("b")
++        b.write_text(b.read_text().splitlines()[0] + "\n")
++        result = compare_traces(a, b)
++        self.assertEqual(result["event_counts"], [1, 0])
++        self.assertFalse(result["same_recorded_trace"])
++
++    def test_distinguishes_request_action_and_signed_zero_changes(self):
++        a = self.write_trace("a")
++        payload = copy.deepcopy(self.payload)
++        payload["state"] = [0.2]
++        b = self.write_trace("b", payload, [-0.0, 1.0])
++        result = compare_traces(a, b)
++        for field in ["request_sha256", "state_sha256", "action_sha256"]:
++            self.assertEqual(result["first_different_event"][field], 0)
++        self.assertIsNone(result["first_different_event"]["image_payload_sha256"])
++        c = self.write_trace("c")
++        self.assertTrue(compare_traces(a, c)["same_recorded_trace"])
++
++    def test_rejects_tampered_values_and_partial_json(self):
++        a, b = self.write_trace("a"), self.write_trace("b")
++        lines = b.read_text().splitlines()
++        row = json.loads(lines[1])
++        row["action"][0] = 5
++        b.write_text(lines[0] + "\n" + json.dumps(row) + "\n")
++        with self.assertRaisesRegex(ValueError, "hash mismatch"):
++            compare_traces(a, b)
++        b.write_text(lines[0] + '\n{"index":')
++        with self.assertRaises(ValueError):
++            compare_traces(a, b)
++
++    def test_actual_robotwin_eval_sends_identical_execution_target(self):
++        from benchmarks.robotwin import openwam2robotwin_interface as iface
++
++        observation = {
++            "observation": {
++                k: {"rgb": np.zeros((3, 4, 3), np.uint8)} for k in ["head_camera", "left_camera", "right_camera"]
++            },
++            "endpose": {
++                "left_endpose": [0, 0, 0, 0, 0, 0, 1],
++                "right_endpose": [1, 2, 3, 0, 0, 0, 1],
++                "left_gripper": 0.25,
++                "right_gripper": 0.75,
++            },
++        }
++
++        class Env:
++            take_action_cnt = 0
++
++            def get_instruction(self):
++                return "pick"
++
++            def take_action(self, action, *, action_type):
++                self.received = (action, action_type)
++
++        def model(client):
++            m = iface.ModelClient.__new__(iface.ModelClient)
++            m._send_state, m._state_dim, m._action_indices, m._action_type = True, 20, None, "ee"
++            m._task_description, m._debug, m._step, m._client = "pick", False, 0, client
++            return m
++
++        client = Client()
++        client.response["action"] = iface._extract_eef_proprio(observation).tolist()
++        plain = Env()
++        iface.eval(plain, model(client), observation)
++        with TracedPolicyClient(client, self.path / "native") as traced:
++            observed = Env()
++            iface.eval(observed, model(traced), observation)
++        np.testing.assert_array_equal(plain.received[0], observed.received[0])
++        self.assertEqual(plain.received[1], observed.received[1])
++        self.assertEqual(len(client.calls), 2)
++
++
++if __name__ == "__main__":
++    unittest.main()

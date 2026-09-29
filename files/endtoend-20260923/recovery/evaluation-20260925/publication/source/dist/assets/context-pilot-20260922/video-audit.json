@@ -1,0 +1,19 @@
+[
+  {
+    "trial": "A0",
+    "source": "A0/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/context-A0/2026-09-22 00:30:49/episode0.mp4",
+    "sha256": "09b8ac64e919021753ba239aa8e4981134c42f1d8e78e42d69d156c76e8601ad",
+    "bytes": 4075,
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 320,
+          "height": 240,
+          "duration": "0.200000",
+          "nb_read_frames": "2"
+        }
+      ]
+    }
+  }
+]

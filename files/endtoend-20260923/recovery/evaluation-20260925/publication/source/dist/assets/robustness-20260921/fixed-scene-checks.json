@@ -1,0 +1,29 @@
+{
+  "exact_upstream_rollout_loop_executed": true,
+  "fixed_seed_order_and_prompts": true,
+  "expert_not_refiltered": true,
+  "choice_rng_consumption_preserved": true,
+  "fake_success_count": 5,
+  "scenes": [
+    {
+      "seed": 300001,
+      "instruction": "Use one arm to grab the bottle with red screw cap, the other for the green bottle with white label."
+    },
+    {
+      "seed": 300002,
+      "instruction": "Pick up the bottle with red screw cap and the green plastic bottle with ridged bottom using both arms."
+    },
+    {
+      "seed": 300003,
+      "instruction": "Pick the bottle with red screw cap, then pick the green bottle with white label."
+    },
+    {
+      "seed": 300004,
+      "instruction": "Pick the brown bottle with one arm, the green bottle with white label with the other."
+    },
+    {
+      "seed": 300005,
+      "instruction": "Pick the plastic soda bottle, then pick the green plastic bottle with ridged bottom."
+    }
+  ]
+}

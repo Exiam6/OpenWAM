@@ -1,0 +1,26 @@
+{
+  "task": "adjust_bottle",
+  "seed": 1100029,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T19:59:00.573557-05:00",
+  "expert_plan_success": true,
+  "instruction": "Use the right arm to grab the green plastic bottle with ridged bottom upright",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 135,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100029/data/episode0.hdf5",
+  "hdf5_sha256": "fd17c92f5b32220db2bb059ce560e41e717fdbdc866cbbf51baaeccb155d0b52",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "001_bottle/base16",
+      "{a}": "right"
+    }
+  },
+  "elapsed_seconds": 82.16234733909369
+}

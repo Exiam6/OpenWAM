@@ -1,0 +1,30 @@
+{
+  "frozen_at": "2026-09-21T22:24:33.507978-05:00",
+  "sources": {
+    "scripts/repeat_common.py": "15392dd8cf2d0253467bbb7d8d4bf99a60c5a465639e7ca03d06abce98237c34",
+    "scripts/capture_repeat_inputs.py": "2043f686349d030765a2e3ed8eb4dc596151e17e3c72ca73c7c016290574d2be",
+    "scripts/repeat_action_inference.py": "645c271f8180fd512cb88af37a9d093fca936bc113b65d175a9789374e180399",
+    "scripts/check_repeatability.py": "0fd1e317a62026fba71f193b1f2a293814b043af6f661c6fefff0604c043cb5f",
+    "scripts/summarize_repeatability.py": "df027ebb7943625a38982a0d52ccdf0b67a3f87e93f4d66520a7e487f19e5715",
+    "scripts/run-repeat-study.sh": "2a61dc396634db22ef158d25c1d148ad291e607c7644d2ada23d7a17419c466a",
+    "scripts/norm_client.py": "c11173c7b7d073fba74c084114d73cf4eb0303eca0c9b001b1ab3d6f113f28be",
+    "scripts/norm_common.py": "6121eb420fe07a2bc3fd7ff50708d9f926cab0a43e0018bbc140952605bb826d",
+    "scripts/robustness_client.py": "0268e61922251fef164fbcb5288b98612caf36037bb5e8fc40a1e2ef661a945b",
+    "scripts/robustness_common.py": "e3b3da3514c47c85d4ee94f07befdd743a99ade102e950a64e5a84f4c00b1a20",
+    "OpenWAM/openwam/deploy/server.py": "0aa4e1b6ff231e90fabcd0ef44b871cb5a51843ea09a531ca9c8c2fcaa6f7378",
+    "OpenWAM/openwam/deploy/policy.py": "835b28e187a0bf835697ca7f50b8673e9f8b66d6de266dd45bbecc8853d9a36d",
+    "OpenWAM/openwam/deploy/engine.py": "47eb4b84caa12ff9ddc0c1f8c9010afa5b7c4e4c40d4983b9fed9d8ca6c72038",
+    "OpenWAM/openwam/deploy/executors/sync_executor.py": "0a170b7d1bd978fcab4a993893cb1fa1153b81343600f10ddd36a72afff1aed2",
+    "OpenWAM/benchmarks/robotwin/openwam2robotwin_interface.py": "3329d6b1c559646395d65f6d4521720ac83ce95a7f8ebbdfecf486a254e423b7",
+    "OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py": "7b56c45b89a845b4ff264907bcac7f183a71894d74f4b90753fda69d254cedda",
+    "benchmarks/RoboTwin/script/eval_policy.py": "8b16c766a9c401163418b425e413ebe7f4127d6b132b9c7c4d6b6f8752d57681",
+    "OpenWAM/configs/deploy.yaml": "a26d2087f02950f3d21f7af629cbf5a421d759359bab9b70962c8650e1235246",
+    "scripts/resume-repeat-inference.sh": "5772bd5dd8644d13ec2d9644fef976128b71115592569afb5fe9eba39f10f278",
+    "OpenWAM/openwam/deploy/obs_preprocess.py": "cc7189637029de6011084dcea0e4c3d77fbe18806664a5d8e242adc58a021ecf"
+  },
+  "protocol_sha256": "a8e64de5af5330c0e9b992a4bd40e01ab239c297979dce2e176891b4a61b68f9",
+  "manifest_sha256": "beb84029b49d5581d8b3be982b673fb059f19474426a030bb783ab7b8638ce8d",
+  "prior_norm_summary_sha256": "8cfe950524e64a33c64ea18adc5aa37fc667713525c044383652ac647a18a12d",
+  "amendment_sha256": "77160757a63e10cdf01d0209c6273329e1622305ea4c5bad1363e7c3664f601e",
+  "supersedes": "engineering-attempt-cpu-gate/source-freeze.json"
+}

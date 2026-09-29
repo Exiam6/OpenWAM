@@ -1,0 +1,18 @@
+[eval_policy_wrapper] RoboTwin commit=0aeea2d669c0 eval_policy.py sha256=8b16c766a9c40116
+[eval_policy_wrapper] runtime_root=/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100026/runtime
+[eval_policy_wrapper] prewarmed CUDA/Curobo before SAPIEN import
+[eval_policy_wrapper] patched warp.torch compatibility namespace
+/data02/zifanz4/openwam-experiments/benchmark-env/lib/python3.10/site-packages/sapien/_vulkan_tricks.py:37: UserWarning: Failed to find Vulkan ICD file. This is probably due to an incorrect or partial installation of the NVIDIA driver. SAPIEN will attempt to provide an ICD file anyway but it may not work.
+  warn(
+missing pytorch3d
+Traceback (most recent call last):
+  File "/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py", line 54, in worker
+    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args);capture_initial(env,dest,'plan' if args['need_plan'] else 'replay')
+  File "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py", line 179, in wrapped
+    return method(*args, **kwargs)
+  File "/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/adjust_bottle.py", line 10, in setup_demo
+    super()._init_task_env_(**kwags)
+  File "/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py", line 138, in _init_task_env_
+    raise UnStableError(
+envs.utils.create_actor.UnStableError: Objects is unstable in seed(1100026), unstable objects: 001_bottle
+{"task": "adjust_bottle", "seed": 1100026, "role": "expert_only_independent_confirmation", "accepted": false, "started_at": "2026-09-23T19:55:43.059677-05:00", "outcome": "unstable_scene", "error": "UnStableError('Objects is unstable in seed(1100026), unstable objects: 001_bottle')", "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 54, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args);capture_initial(env,dest,'plan' if args['need_plan'] else 'replay')\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(1100026), unstable objects: 001_bottle\n", "elapsed_seconds": 35.14644894748926}

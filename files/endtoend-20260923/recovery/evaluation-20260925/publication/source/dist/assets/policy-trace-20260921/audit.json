@@ -1,0 +1,219 @@
+{
+  "created_at": "2026-09-21T23:44:59.391667-05:00",
+  "kind": "CPU replay of saved requests/responses; no new simulation or inference",
+  "code_base": "7c5861e45cfe1339a0323f0e0b03a3316c37971c",
+  "code_sha256": {
+    "benchmarks/utils/policy_trace.py": "1c735b48c6fc75cafcba997132f2c537ddfff37cabc497440a08d779fd008812",
+    "tests/test_policy_trace.py": "86abdbb6e1daca95878745aa4a8ed6a6962076be1c13ef6d620385790710c4b7"
+  },
+  "replay_script_sha256": "40a7e50d129c55beb5e187d8416f79f64cf558d220cd4ba06fbc2e66672af282",
+  "traces": 18,
+  "records": 1881,
+  "source_files_checked": 1899,
+  "all_original_sources_unchanged": true,
+  "comparisons": [
+    {
+      "study": "closedloop",
+      "condition": "clean",
+      "seed": 400000,
+      "event_counts": [
+        112,
+        112
+      ],
+      "metadata_equal": true,
+      "first_different_event": {
+        "event": null,
+        "method": null,
+        "request_sha256": 1,
+        "image_payload_sha256": 1,
+        "prompt_sha256": null,
+        "state_sha256": 1,
+        "action_sha256": 32,
+        "server_step": null,
+        "error_type": null
+      },
+      "same_recorded_trace": false
+    },
+    {
+      "study": "closedloop",
+      "condition": "clean",
+      "seed": 400001,
+      "event_counts": [
+        105,
+        105
+      ],
+      "metadata_equal": true,
+      "first_different_event": {
+        "event": null,
+        "method": null,
+        "request_sha256": 1,
+        "image_payload_sha256": 1,
+        "prompt_sha256": null,
+        "state_sha256": 1,
+        "action_sha256": 32,
+        "server_step": null,
+        "error_type": null
+      },
+      "same_recorded_trace": false
+    },
+    {
+      "study": "closedloop",
+      "condition": "clean",
+      "seed": 400002,
+      "event_counts": [
+        105,
+        106
+      ],
+      "metadata_equal": true,
+      "first_different_event": {
+        "event": null,
+        "method": null,
+        "request_sha256": 1,
+        "image_payload_sha256": 1,
+        "prompt_sha256": null,
+        "state_sha256": 1,
+        "action_sha256": 32,
+        "server_step": null,
+        "error_type": null
+      },
+      "same_recorded_trace": false
+    },
+    {
+      "study": "closedloop",
+      "condition": "noise",
+      "seed": 400000,
+      "event_counts": [
+        110,
+        110
+      ],
+      "metadata_equal": true,
+      "first_different_event": {
+        "event": null,
+        "method": null,
+        "request_sha256": 1,
+        "image_payload_sha256": 1,
+        "prompt_sha256": null,
+        "state_sha256": 1,
+        "action_sha256": 32,
+        "server_step": null,
+        "error_type": null
+      },
+      "same_recorded_trace": false
+    },
+    {
+      "study": "closedloop",
+      "condition": "noise",
+      "seed": 400001,
+      "event_counts": [
+        400,
+        400
+      ],
+      "metadata_equal": true,
+      "first_different_event": {
+        "event": null,
+        "method": null,
+        "request_sha256": 1,
+        "image_payload_sha256": 1,
+        "prompt_sha256": null,
+        "state_sha256": 1,
+        "action_sha256": 32,
+        "server_step": null,
+        "error_type": null
+      },
+      "same_recorded_trace": false
+    },
+    {
+      "study": "closedloop",
+      "condition": "noise",
+      "seed": 400002,
+      "event_counts": [
+        102,
+        102
+      ],
+      "metadata_equal": true,
+      "first_different_event": {
+        "event": null,
+        "method": null,
+        "request_sha256": 1,
+        "image_payload_sha256": 1,
+        "prompt_sha256": null,
+        "state_sha256": 1,
+        "action_sha256": 32,
+        "server_step": null,
+        "error_type": null
+      },
+      "same_recorded_trace": false
+    },
+    {
+      "study": "attribution",
+      "condition": "clean",
+      "seed": 400000,
+      "event_counts": [
+        2,
+        2
+      ],
+      "metadata_equal": true,
+      "first_different_event": {
+        "event": null,
+        "method": null,
+        "request_sha256": null,
+        "image_payload_sha256": null,
+        "prompt_sha256": null,
+        "state_sha256": null,
+        "action_sha256": null,
+        "server_step": null,
+        "error_type": null
+      },
+      "same_recorded_trace": true
+    },
+    {
+      "study": "attribution",
+      "condition": "clean",
+      "seed": 400001,
+      "event_counts": [
+        2,
+        2
+      ],
+      "metadata_equal": true,
+      "first_different_event": {
+        "event": null,
+        "method": null,
+        "request_sha256": null,
+        "image_payload_sha256": null,
+        "prompt_sha256": null,
+        "state_sha256": null,
+        "action_sha256": null,
+        "server_step": null,
+        "error_type": null
+      },
+      "same_recorded_trace": true
+    },
+    {
+      "study": "attribution",
+      "condition": "clean",
+      "seed": 400002,
+      "event_counts": [
+        2,
+        2
+      ],
+      "metadata_equal": true,
+      "first_different_event": {
+        "event": null,
+        "method": null,
+        "request_sha256": null,
+        "image_payload_sha256": null,
+        "prompt_sha256": null,
+        "state_sha256": null,
+        "action_sha256": null,
+        "server_step": null,
+        "error_type": null
+      },
+      "same_recorded_trace": true
+    }
+  ],
+  "limitations": [
+    "Saved responses replayed through a mock transport; no live WebSocket test.",
+    "This reproduces comparator findings, not additional independent experiments.",
+    "No evidence of a fix, global determinism, RAE superiority or control improvement."
+  ]
+}

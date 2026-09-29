@@ -1,0 +1,8 @@
+{
+  "future_input_invariance": true,
+  "deterministic_pool_matches_reference_tolerance_1e6": true,
+  "auxiliary_gradient_current_only": true,
+  "lambda_zero_gradient_max_abs": 0.0,
+  "auxiliary_reaches_encoder_not_decoder": true,
+  "train_statistics_ignore_test": true
+}

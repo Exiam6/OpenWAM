@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": [
+    "ridge_exact_linear_fixture",
+    "heldout_mutation_no_effect_on_fit_or_selection",
+    "disjoint_episode_folds",
+    "zero_adapter_identity_bf16",
+    "episode_aggregation"
+  ]
+}

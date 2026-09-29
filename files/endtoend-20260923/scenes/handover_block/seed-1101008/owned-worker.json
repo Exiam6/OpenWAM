@@ -1,0 +1,11 @@
+{
+  "pid": 652270,
+  "group": 652270,
+  "command": [
+    "/data02/zifanz4/openwam-experiments/benchmark-env/bin/python",
+    "-u",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py",
+    "handover_block",
+    "1101008"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "count": 12,
+  "peak_cuda_allocated_bytes": 23924548096,
+  "encoder_weights_exact": true,
+  "process": "A"
+}

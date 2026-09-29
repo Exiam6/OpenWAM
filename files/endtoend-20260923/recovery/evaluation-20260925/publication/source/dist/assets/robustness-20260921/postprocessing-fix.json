@@ -1,0 +1,7 @@
+{
+  "at": "2026-09-21T14:40:16-0500",
+  "file": "scripts/summarize_robustness.py",
+  "previous_sha256": "bf92d844c2d263d5a6f24a7167b953403143a790b90b0ea51620df44256a4ffb",
+  "current_sha256": "672e2f134a96f0a0d66500424b885a9879ea9bb21f3c76bab31bc2e533896a16",
+  "reason": "Initial filename glob also captured two unused older study scripts present only in original repository. Both original hashes verified unchanged; reporter now explicitly verifies those at source location. No rollout, selection, pairing or metric computation changed."
+}

@@ -1,0 +1,26 @@
+{
+  "task": "adjust_bottle",
+  "seed": 1100042,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T20:12:49.790428-05:00",
+  "expert_plan_success": true,
+  "instruction": "Pick up the brown bottle from the table head-up.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 146,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100042/data/episode0.hdf5",
+  "hdf5_sha256": "7cab0dcb6a33d863cec3137db2b3c5b5753d01ccd1e4c63885c9fe88089fd6b4",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "001_bottle/base13",
+      "{a}": "left"
+    }
+  },
+  "elapsed_seconds": 80.2128998041153
+}

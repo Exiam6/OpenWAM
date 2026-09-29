@@ -1,0 +1,21 @@
+INFO:openwam.deploy.model_loader:Loading checkpoint: /data02/zifanz4/openwam-experiments/assets/dinov3-policy/checkpoint_step_9890.safetensors
+INFO:openwam.deploy.model_loader:Using config-embedded component specs for video-backbone construction
+INFO:openwam.model.video_backbone.encoder.dinov3:DinoV3VideoEncoder.from_skeleton: instantiated from /data02/zifanz4/openwam-experiments/assets/dinov3-policy/dinov3 (embed_dim=768, patch_size=16, register_tokens=4, svae=on) — weights pending checkpoint load
+INFO:openwam.model.video_backbone.wan.loader:Instantiating openwam.model.video_backbone.wan.models.dit.WanModel as holder.dit (extra_kwargs keys=['has_image_input', 'patch_size', 'in_dim', 'dim', 'ffn_dim', 'freq_dim', 'text_dim', 'out_dim', 'num_heads', 'num_layers', 'eps', 'seperated_timestep', 'require_clip_embedding', 'require_vae_embedding', 'fuse_vae_embedding_in_latents'])
+INFO:openwam.model.video_backbone.wan.loader:Instantiating openwam.model.video_backbone.wan.models.text_encoder.WanTextEncoder as holder.text_encoder (extra_kwargs keys=[])
+[Wan22Ti2v] native VAE released; external_encoder=DinoV3VideoEncoder (z_dim=48, pixel_decode=False, dit_patch_size=(1, 2, 2))
+INFO:openwam.deploy.model_loader:Architecture: dual_system_self_attn (framework=dual_system variant=joint_self_attn)
+INFO:openwam.deploy.model_loader:Loading all models with dtype=torch.bfloat16 (mixed_precision=bf16)
+INFO:openwam.deploy.model_loader:[normalizer] Resolving deployment action normalizer from checkpoint dir: /data02/zifanz4/openwam-experiments/assets/dinov3-policy
+INFO:openwam.deploy.model_loader:[normalizer] Saved config: normalize_mode=min-max, action_mode=eef
+INFO:openwam.deploy.model_loader:[normalizer] Found pre-computed stats file: /data02/zifanz4/openwam-experiments/assets/dinov3-policy/normalization_stats.npy (exists ✓)
+INFO:openwam.deploy.model_loader:[normalizer] Active: mode=min-max action_mode=eef dim=20 stats=/data02/zifanz4/openwam-experiments/assets/dinov3-policy/normalization_stats.npy
+INFO:openwam.deploy.model_loader:Model loaded successfully on cuda:0
+INFO:openwam.deploy.engine:DiT velocity cache enabled (threshold=0.990)
+INFO:openwam.deploy.server:[obs] View config: multiview=True, camera_layout=['head_camera', 'left_camera', 'right_camera'], canvas=384x320
+CONTEXT_SERVER_READY
+INFO:openwam.deploy.server:Starting PolicyServer: ws://127.0.0.1:18848
+INFO:websockets.server:server listening on 127.0.0.1:18848
+INFO:openwam.deploy.server:WebSocket server started on ws://127.0.0.1:18848
+INFO:websockets.server:connection open
+INFO:openwam.deploy.server:Client connected: ('127.0.0.1', 53662)

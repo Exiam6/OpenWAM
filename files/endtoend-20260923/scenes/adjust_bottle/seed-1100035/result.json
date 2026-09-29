@@ -1,0 +1,26 @@
+{
+  "task": "adjust_bottle",
+  "seed": 1100035,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T20:05:39.931847-05:00",
+  "expert_plan_success": true,
+  "instruction": "Grab the green bottle on the table and raise it.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 139,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100035/data/episode0.hdf5",
+  "hdf5_sha256": "b09afd20bcabbb52bab36c0929842a9993829db40d6f9f226f5e40d27b87abf9",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "001_bottle/base16",
+      "{a}": "right"
+    }
+  },
+  "elapsed_seconds": 79.66889162734151
+}

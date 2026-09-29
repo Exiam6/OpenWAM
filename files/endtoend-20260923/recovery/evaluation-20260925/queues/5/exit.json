@@ -1,0 +1,7 @@
+{
+  "time": "2026-09-27T01:35:11.767381-05:00",
+  "returncode": 1,
+  "reason": "AssertionError('Failed evaluation retained; no automatic replay')",
+  "admitted": true,
+  "no_automatic_retry": true
+}

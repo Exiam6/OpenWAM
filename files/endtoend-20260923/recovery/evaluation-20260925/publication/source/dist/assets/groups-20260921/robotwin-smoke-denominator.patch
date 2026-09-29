@@ -1,0 +1,13 @@
+--- a/script/eval_policy.py
++++ b/script/eval_policy.py
+@@ -159,7 +159,9 @@
+ 
+     st_seed = 100000 * (1 + seed)
+     suc_nums = []
+-    test_num = 100
++    test_num = int(os.environ.get("ROBOTWIN_TEST_NUM", "").strip() or "100")
++    if test_num <= 0:
++        raise ValueError("ROBOTWIN_TEST_NUM must be > 0")
+     topk = 1
+ 
+     model = get_model(usr_args)

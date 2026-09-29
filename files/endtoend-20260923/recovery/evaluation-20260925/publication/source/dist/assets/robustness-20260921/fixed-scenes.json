@@ -1,0 +1,36 @@
+{
+  "selection_rule": "First five expert-feasible starts of initial clean confirmation; independent of success outcome; no adapted rollout observed",
+  "scenes": [
+    {
+      "seed": 300001,
+      "instruction": "Use one arm to grab the bottle with red screw cap, the other for the green bottle with white label.",
+      "initial_head_sha256": "30487f43c87c60bad29b803e2d6ce8809e900102e9ba8b2013ed1d1bc8188fd7",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+    },
+    {
+      "seed": 300002,
+      "instruction": "Pick up the bottle with red screw cap and the green plastic bottle with ridged bottom using both arms.",
+      "initial_head_sha256": "4ee5884a1680552b3ae56fdb70ee4f484eb417fde4c12c63b500773cac19fd24",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+    },
+    {
+      "seed": 300003,
+      "instruction": "Pick the bottle with red screw cap, then pick the green bottle with white label.",
+      "initial_head_sha256": "5812750672fa601f95eb4069b03e0536c76c7143d7a77bd90ad44150057049b9",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+    },
+    {
+      "seed": 300004,
+      "instruction": "Pick the brown bottle with one arm, the green bottle with white label with the other.",
+      "initial_head_sha256": "6b6367e7de9f12125b0a386c63a8085c809c220bd1758658754c0315b82092b1",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+    },
+    {
+      "seed": 300005,
+      "instruction": "Pick the plastic soda bottle, then pick the green plastic bottle with ridged bottom.",
+      "initial_head_sha256": "c5e6f0c192e40a11ec9fb0047714acc03fabc90d9577f9f170746c944ad0f448",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+    }
+  ],
+  "created_at": "2026-09-21T14:09:59-0500"
+}

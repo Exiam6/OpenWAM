@@ -1,0 +1,11 @@
+.DS_Store
+*.tar.gz
+*.tar
+!dist/assets/night-20260921/reproduction-scripts.tar.gz
+!dist/assets/control-20260921/reproduction-scripts.tar.gz
+
+!dist/assets/groups-20260921/reproduction-scripts.tar.gz
+
+!dist/assets/robustness-20260921/reproduction-scripts.tar.gz
+
+!dist/assets/norm-20260921/reproduction-scripts.tar.gz

@@ -1,0 +1,12 @@
+{
+  "selection_rule": "Known prior clean adapter failure: selected diagnostic, excluded from primary outcomes",
+  "scenes": [
+    {
+      "seed": 300003,
+      "instruction": "Pick the bottle with red screw cap, then pick the green bottle with white label.",
+      "initial_head_sha256": "5812750672fa601f95eb4069b03e0536c76c7143d7a77bd90ad44150057049b9",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "instruction_choice_length": 5
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "kind": "linear",
+    "seed": 42,
+    "parameters": 2352,
+    "steps": 2000,
+    "restoration_mse": 0.1280897557735443,
+    "clean_distortion_mse": 0.010555426590144634,
+    "seconds": 2.268601194024086,
+    "peak_gb": 0.126770176
+  },
+  {
+    "kind": "linear",
+    "seed": 43,
+    "parameters": 2352,
+    "steps": 2000,
+    "restoration_mse": 0.1280655562877655,
+    "clean_distortion_mse": 0.010695893317461014,
+    "seconds": 1.8791968263685703,
+    "peak_gb": 0.126770176
+  },
+  {
+    "kind": "linear",
+    "seed": 44,
+    "parameters": 2352,
+    "steps": 2000,
+    "restoration_mse": 0.12763561308383942,
+    "clean_distortion_mse": 0.01054974365979433,
+    "seconds": 2.125228378921747,
+    "peak_gb": 0.126770176
+  },
+  {
+    "kind": "mlp",
+    "seed": 42,
+    "parameters": 9360,
+    "steps": 2000,
+    "restoration_mse": 0.10843902081251144,
+    "clean_distortion_mse": 0.007569017354398966,
+    "seconds": 3.0300058238208294,
+    "peak_gb": 0.128682496
+  },
+  {
+    "kind": "mlp",
+    "seed": 43,
+    "parameters": 9360,
+    "steps": 2000,
+    "restoration_mse": 0.10809388011693954,
+    "clean_distortion_mse": 0.00768296280875802,
+    "seconds": 3.2602102234959602,
+    "peak_gb": 0.128682496
+  },
+  {
+    "kind": "mlp",
+    "seed": 44,
+    "parameters": 9360,
+    "steps": 2000,
+    "restoration_mse": 0.1074758991599083,
+    "clean_distortion_mse": 0.007734541315585375,
+    "seconds": 3.4264057129621506,
+    "peak_gb": 0.128682496
+  }
+]

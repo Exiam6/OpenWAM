@@ -1,0 +1,512 @@
+{
+  "adjust_bottle": {
+    "aux0-s42": {
+      "translation": {
+        "alpha": 0.1,
+        "validation_mse": 0.1409251087294929,
+        "normalized_mse": 0.1409251087294929,
+        "rmse": 6.152705288119718
+      },
+      "gripper": {
+        "alpha": 0.01,
+        "validation_mse": 0.01503045152264345,
+        "normalized_mse": 0.01503045152264345,
+        "rmse": 0.050654587536402625
+      }
+    },
+    "aux1-s42": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.08428491484100517,
+        "normalized_mse": 0.08428491484100517,
+        "rmse": 4.847046193381461
+      },
+      "gripper": {
+        "alpha": 0.01,
+        "validation_mse": 0.009924104585522807,
+        "normalized_mse": 0.009924104585522807,
+        "rmse": 0.04038058875301305
+      }
+    },
+    "g0.5-s42": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.08851198725913963,
+        "normalized_mse": 0.08851198725913963,
+        "rmse": 4.968213122643977
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.008338768085293328,
+        "normalized_mse": 0.008338768085293328,
+        "rmse": 0.03718019867087478
+      }
+    },
+    "g0.75-s42": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.09648260924028694,
+        "normalized_mse": 0.09648260924028694,
+        "rmse": 5.188892978886993
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.007434245706422795,
+        "normalized_mse": 0.007434245706422795,
+        "rmse": 0.03506300130595475
+      }
+    },
+    "aux0-s43": {
+      "translation": {
+        "alpha": 0.1,
+        "validation_mse": 0.13987234770413406,
+        "normalized_mse": 0.13987234770413406,
+        "rmse": 6.175167183183907
+      },
+      "gripper": {
+        "alpha": 0.01,
+        "validation_mse": 0.014822325983208097,
+        "normalized_mse": 0.014822325983208097,
+        "rmse": 0.050331097736431095
+      }
+    },
+    "aux1-s43": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.08022225625753744,
+        "normalized_mse": 0.08022225625753744,
+        "rmse": 4.744358509135735
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.011047505496155692,
+        "normalized_mse": 0.011047505496155692,
+        "rmse": 0.04282149266884021
+      }
+    },
+    "g0.5-s43": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.08570896803617921,
+        "normalized_mse": 0.08570896803617921,
+        "rmse": 4.899377712161472
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.009816940273871604,
+        "normalized_mse": 0.009816940273871604,
+        "rmse": 0.04006080926119528
+      }
+    },
+    "g0.75-s43": {
+      "translation": {
+        "alpha": 0.1,
+        "validation_mse": 0.09726131210619243,
+        "normalized_mse": 0.09726131210619243,
+        "rmse": 5.265443108377821
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.009329769365745096,
+        "normalized_mse": 0.009329769365745096,
+        "rmse": 0.0391775927917295
+      }
+    },
+    "aux0-s44": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.1277127324793158,
+        "normalized_mse": 0.1277127324793158,
+        "rmse": 5.87750146175863
+      },
+      "gripper": {
+        "alpha": 0.01,
+        "validation_mse": 0.01385984959865521,
+        "normalized_mse": 0.01385984959865521,
+        "rmse": 0.04863068353552144
+      }
+    },
+    "aux1-s44": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.07299066685179094,
+        "normalized_mse": 0.07299066685179094,
+        "rmse": 4.490831913416369
+      },
+      "gripper": {
+        "alpha": 0.01,
+        "validation_mse": 0.011300674543340775,
+        "normalized_mse": 0.011300674543340775,
+        "rmse": 0.04347873292382631
+      }
+    },
+    "g0.5-s44": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.07796497436389274,
+        "normalized_mse": 0.07796497436389274,
+        "rmse": 4.6620358789106735
+      },
+      "gripper": {
+        "alpha": 1e-05,
+        "validation_mse": 0.009327757635385587,
+        "normalized_mse": 0.009327757635385587,
+        "rmse": 0.03929019062309068
+      }
+    },
+    "g0.75-s44": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.0955071333558523,
+        "normalized_mse": 0.0955071333558523,
+        "rmse": 5.178086263115029
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.00951258276385238,
+        "normalized_mse": 0.00951258276385238,
+        "rmse": 0.039427110552893184
+      }
+    }
+  },
+  "handover_block": {
+    "aux0-s42": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.117812637175006,
+        "normalized_mse": 0.117812637175006,
+        "rmse": 5.803082258619409
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.0063601476049190645,
+        "normalized_mse": 0.0063601476049190645,
+        "rmse": 0.038261617963832276
+      }
+    },
+    "aux1-s42": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.05508910219214915,
+        "normalized_mse": 0.05508910219214915,
+        "rmse": 3.5306107377976685
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.007324199151123643,
+        "normalized_mse": 0.007324199151123643,
+        "rmse": 0.040960111630017636
+      }
+    },
+    "g0.5-s42": {
+      "translation": {
+        "alpha": 0.001,
+        "validation_mse": 0.05592775941248375,
+        "normalized_mse": 0.05592775941248375,
+        "rmse": 3.5390295135487655
+      },
+      "gripper": {
+        "alpha": 0.0001,
+        "validation_mse": 0.007613647514901064,
+        "normalized_mse": 0.007613647514901064,
+        "rmse": 0.04171897885368991
+      }
+    },
+    "g0.75-s42": {
+      "translation": {
+        "alpha": 0.001,
+        "validation_mse": 0.06395948008525695,
+        "normalized_mse": 0.06395948008525695,
+        "rmse": 3.822917097943666
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.0066887668491763235,
+        "normalized_mse": 0.0066887668491763235,
+        "rmse": 0.03898488933342127
+      }
+    },
+    "aux0-s43": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.11801242167011398,
+        "normalized_mse": 0.11801242167011398,
+        "rmse": 5.86653583848706
+      },
+      "gripper": {
+        "alpha": 0.01,
+        "validation_mse": 0.006814648265398095,
+        "normalized_mse": 0.006814648265398095,
+        "rmse": 0.039436484210770166
+      }
+    },
+    "aux1-s43": {
+      "translation": {
+        "alpha": 0.001,
+        "validation_mse": 0.05613157232524504,
+        "normalized_mse": 0.05613157232524504,
+        "rmse": 3.6877787049133244
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.0066243492506388125,
+        "normalized_mse": 0.0066243492506388125,
+        "rmse": 0.03881415976458135
+      }
+    },
+    "g0.5-s43": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.06323830270454897,
+        "normalized_mse": 0.06323830270454897,
+        "rmse": 3.87164686863112
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.005417947672300927,
+        "normalized_mse": 0.005417947672300927,
+        "rmse": 0.03509781016142613
+      }
+    },
+    "g0.75-s43": {
+      "translation": {
+        "alpha": 0.001,
+        "validation_mse": 0.06647089424975261,
+        "normalized_mse": 0.06647089424975261,
+        "rmse": 4.007069106772141
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.006036933434919359,
+        "normalized_mse": 0.006036933434919359,
+        "rmse": 0.0372060478856055
+      }
+    },
+    "aux0-s44": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.1211599258988411,
+        "normalized_mse": 0.1211599258988411,
+        "rmse": 5.953865240276326
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.006709554149906876,
+        "normalized_mse": 0.006709554149906876,
+        "rmse": 0.039216548360937804
+      }
+    },
+    "aux1-s44": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.05782167601916869,
+        "normalized_mse": 0.05782167601916869,
+        "rmse": 3.7472148873227265
+      },
+      "gripper": {
+        "alpha": 0.0001,
+        "validation_mse": 0.006695952500398289,
+        "normalized_mse": 0.006695952500398289,
+        "rmse": 0.039109862075550506
+      }
+    },
+    "g0.5-s44": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.059040633128985005,
+        "normalized_mse": 0.059040633128985005,
+        "rmse": 3.7489436810091865
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.006744713334567367,
+        "normalized_mse": 0.006744713334567367,
+        "rmse": 0.0392159385134087
+      }
+    },
+    "g0.75-s44": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.06254853564957925,
+        "normalized_mse": 0.06254853564957925,
+        "rmse": 3.8564367436290294
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.005882555881433041,
+        "normalized_mse": 0.005882555881433041,
+        "rmse": 0.03654689848882691
+      }
+    }
+  },
+  "place_object_basket": {
+    "aux0-s42": {
+      "translation": {
+        "alpha": 0.1,
+        "validation_mse": 0.2230114478092989,
+        "normalized_mse": 0.2230114478092989,
+        "rmse": 8.48497724779067
+      },
+      "gripper": {
+        "alpha": 0.01,
+        "validation_mse": 0.01916715531511904,
+        "normalized_mse": 0.01916715531511904,
+        "rmse": 0.05171145930993479
+      }
+    },
+    "aux1-s42": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.13524515320799482,
+        "normalized_mse": 0.13524515320799482,
+        "rmse": 6.807653977379027
+      },
+      "gripper": {
+        "alpha": 0.01,
+        "validation_mse": 0.017378617966115284,
+        "normalized_mse": 0.017378617966115284,
+        "rmse": 0.049186913044943874
+      }
+    },
+    "g0.5-s42": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.14167813014577355,
+        "normalized_mse": 0.14167813014577355,
+        "rmse": 6.92061314916289
+      },
+      "gripper": {
+        "alpha": 0.01,
+        "validation_mse": 0.01700281253399265,
+        "normalized_mse": 0.01700281253399265,
+        "rmse": 0.04867695300930151
+      }
+    },
+    "g0.75-s42": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.14560187580971765,
+        "normalized_mse": 0.14560187580971765,
+        "rmse": 7.023932216839552
+      },
+      "gripper": {
+        "alpha": 0.01,
+        "validation_mse": 0.01643011582280005,
+        "normalized_mse": 0.01643011582280005,
+        "rmse": 0.047845248542486125
+      }
+    },
+    "aux0-s43": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.2113222176423841,
+        "normalized_mse": 0.2113222176423841,
+        "rmse": 8.364068212044943
+      },
+      "gripper": {
+        "alpha": 0.01,
+        "validation_mse": 0.023034253056087663,
+        "normalized_mse": 0.023034253056087663,
+        "rmse": 0.05659084378676287
+      }
+    },
+    "aux1-s43": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.13359542918854703,
+        "normalized_mse": 0.13359542918854703,
+        "rmse": 6.788258986217136
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.02093988370223326,
+        "normalized_mse": 0.02093988370223326,
+        "rmse": 0.054105336847397836
+      }
+    },
+    "g0.5-s43": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.13792652612770331,
+        "normalized_mse": 0.13792652612770331,
+        "rmse": 6.957558571657605
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.019724260797183306,
+        "normalized_mse": 0.019724260797183306,
+        "rmse": 0.05244437140123085
+      }
+    },
+    "g0.75-s43": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.15030620911855547,
+        "normalized_mse": 0.15030620911855547,
+        "rmse": 7.216843757208175
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.019974775972758266,
+        "normalized_mse": 0.019974775972758266,
+        "rmse": 0.05272733095083216
+      }
+    },
+    "aux0-s44": {
+      "translation": {
+        "alpha": 0.1,
+        "validation_mse": 0.22954955389785434,
+        "normalized_mse": 0.22954955389785434,
+        "rmse": 8.738082865073672
+      },
+      "gripper": {
+        "alpha": 0.01,
+        "validation_mse": 0.024567761107981992,
+        "normalized_mse": 0.024567761107981992,
+        "rmse": 0.05869167646586374
+      }
+    },
+    "aux1-s44": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.12695784535032534,
+        "normalized_mse": 0.12695784535032534,
+        "rmse": 6.608360886800322
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.019308301799589325,
+        "normalized_mse": 0.019308301799589325,
+        "rmse": 0.05213335945076628
+      }
+    },
+    "g0.5-s44": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.14134632628908878,
+        "normalized_mse": 0.14134632628908878,
+        "rmse": 6.931733688041305
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.018411533073217697,
+        "normalized_mse": 0.018411533073217697,
+        "rmse": 0.050725294252219895
+      }
+    },
+    "g0.75-s44": {
+      "translation": {
+        "alpha": 0.01,
+        "validation_mse": 0.15080414797359654,
+        "normalized_mse": 0.15080414797359654,
+        "rmse": 7.207936293837662
+      },
+      "gripper": {
+        "alpha": 0.001,
+        "validation_mse": 0.01912842447978865,
+        "normalized_mse": 0.01912842447978865,
+        "rmse": 0.05173687239862404
+      }
+    }
+  }
+}

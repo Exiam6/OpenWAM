@@ -1,0 +1,5 @@
+{
+  "calls": 45,
+  "max_change": 1.8125,
+  "adapter": "results/robustness-20260921/adapter-selected.pt"
+}

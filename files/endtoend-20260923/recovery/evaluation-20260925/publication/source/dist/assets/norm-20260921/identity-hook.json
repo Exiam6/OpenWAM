@@ -1,0 +1,8 @@
+{
+  "arm": "identity",
+  "calls": 153,
+  "max_change": 0.0,
+  "future_slots_exact": true,
+  "published_encoder_weights_exact": true,
+  "scope": "cumulative for this arm server across reference/historical/primary as applicable"
+}

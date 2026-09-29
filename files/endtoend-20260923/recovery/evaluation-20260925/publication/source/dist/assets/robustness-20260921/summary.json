@@ -1,0 +1,1164 @@
+{
+  "scope": "35 paired closed-loop pilot episodes, six train/validation-only adapter fits; one task; not official full benchmark",
+  "completed_at": "2026-09-21T14:40:17-0500",
+  "conditions": {
+    "baseline-clean": {
+      "condition": "clean",
+      "successes": 5,
+      "episodes": 5,
+      "records": [
+        {
+          "seed": 200001,
+          "instruction": "Pick up the plastic soda bottle and the green bottle simultaneously.",
+          "initial_head_sha256": "b9daa04f0c71b0d7fb6dc54a7eee15b3cf0d5648e3cd654fdf80344c86ddb4d9",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 105,
+          "policy_head_sha256": "b9daa04f0c71b0d7fb6dc54a7eee15b3cf0d5648e3cd654fdf80344c86ddb4d9",
+          "actions": 105,
+          "success": true
+        },
+        {
+          "seed": 200002,
+          "instruction": "Pick the brown bottle with one arm, the green plastic bottle with ridged bottom with the other.",
+          "initial_head_sha256": "04a8bce18e177fff3cc629a3fac354255f7e3e943e1a843c6b58ab7802701a4c",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 102,
+          "policy_head_sha256": "04a8bce18e177fff3cc629a3fac354255f7e3e943e1a843c6b58ab7802701a4c",
+          "actions": 102,
+          "success": true
+        },
+        {
+          "seed": 200003,
+          "instruction": "Pick up the brown bottle and the green bottle simultaneously.",
+          "initial_head_sha256": "daf671d6022f7f43ac67d0489c4649bd0be64bea07eb352543b2b3b7d333388d",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 103,
+          "policy_head_sha256": "daf671d6022f7f43ac67d0489c4649bd0be64bea07eb352543b2b3b7d333388d",
+          "actions": 103,
+          "success": true
+        },
+        {
+          "seed": 200004,
+          "instruction": "Grab the plastic soda bottle and the green plastic bottle with ridged bottom with arms.",
+          "initial_head_sha256": "db9193be6dfe988505a707974c9186a041cf7528cedc2d50a36b23ca9552c9da",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 109,
+          "policy_head_sha256": "db9193be6dfe988505a707974c9186a041cf7528cedc2d50a36b23ca9552c9da",
+          "actions": 109,
+          "success": true
+        },
+        {
+          "seed": 200005,
+          "instruction": "Lift the bottle with red screw cap and the green bottle with white label using both arms.",
+          "initial_head_sha256": "5d3cf1d787f6d3ccf7babe655d39ed3bdc15d99e501317e021fcc1a3fc6816c3",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 109,
+          "policy_head_sha256": "5d3cf1d787f6d3ccf7babe655d39ed3bdc15d99e501317e021fcc1a3fc6816c3",
+          "actions": 109,
+          "success": true
+        }
+      ],
+      "script_sha256": "0268e61922251fef164fbcb5288b98612caf36037bb5e8fc40a1e2ef661a945b",
+      "native_result_rate": 0.05,
+      "success_rate": 1.0,
+      "wilson_95ci": [
+        0.5655175352168251,
+        1.0
+      ],
+      "mean_actions_all_episodes": 105.6,
+      "environment_exceptions_in_log": 0,
+      "client_log_sha256": "978e6671ccb6eafcd9b85818f8e61e103a87d5790d336e9c3444cda6efcc1b5c",
+      "videos": [
+        {
+          "name": "episode0.mp4",
+          "sha256": "971f2d37afc9dbb08ec214c2505c99d2567acae95463d2a92232b327486b67a8",
+          "bytes": 117886
+        },
+        {
+          "name": "episode1.mp4",
+          "sha256": "0af1934aba9002282d80cc4e0e78797d6cf9fcd716a201e6be9f315dd6b50e12",
+          "bytes": 132513
+        },
+        {
+          "name": "episode2.mp4",
+          "sha256": "1b5ce325dd0227119cc13c3ffa427b5470d0a1609014b2ec99b3c832cdc6432d",
+          "bytes": 153135
+        },
+        {
+          "name": "episode3.mp4",
+          "sha256": "18c0e4ac899aa75bb00204ec91c1c1b54515fc22c44a41aabeb4a5e6fee5781b",
+          "bytes": 124679
+        },
+        {
+          "name": "episode4.mp4",
+          "sha256": "c00f0549391ade2134a03e3fc38438648fd25b3d20e190d559795973337ae760",
+          "bytes": 165016
+        }
+      ]
+    },
+    "baseline-noise": {
+      "condition": "noise",
+      "successes": 5,
+      "episodes": 5,
+      "records": [
+        {
+          "seed": 200001,
+          "instruction": "Pick up the plastic soda bottle and the green bottle simultaneously.",
+          "initial_head_sha256": "b9daa04f0c71b0d7fb6dc54a7eee15b3cf0d5648e3cd654fdf80344c86ddb4d9",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 91,
+          "policy_head_sha256": "28cefa3afd94184e5cc294f52402c832abe48eba020e54818511cbf01b65ace7",
+          "actions": 91,
+          "success": true
+        },
+        {
+          "seed": 200002,
+          "instruction": "Pick the brown bottle with one arm, the green plastic bottle with ridged bottom with the other.",
+          "initial_head_sha256": "04a8bce18e177fff3cc629a3fac354255f7e3e943e1a843c6b58ab7802701a4c",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 88,
+          "policy_head_sha256": "e488b73b0793187117fc1398d521a4ad87c0ebd0271bac5787bafa4e1cfb77a0",
+          "actions": 88,
+          "success": true
+        },
+        {
+          "seed": 200003,
+          "instruction": "Pick up the brown bottle and the green bottle simultaneously.",
+          "initial_head_sha256": "daf671d6022f7f43ac67d0489c4649bd0be64bea07eb352543b2b3b7d333388d",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 102,
+          "policy_head_sha256": "35d5cf191e54402b2e9631a7a277fd30fe1c7b2fc2bca6cabc4968df71052db6",
+          "actions": 102,
+          "success": true
+        },
+        {
+          "seed": 200004,
+          "instruction": "Grab the plastic soda bottle and the green plastic bottle with ridged bottom with arms.",
+          "initial_head_sha256": "db9193be6dfe988505a707974c9186a041cf7528cedc2d50a36b23ca9552c9da",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 106,
+          "policy_head_sha256": "e93086df876b7a7cba2618e8b7669717da128358f4198d62b91da7790eac7257",
+          "actions": 106,
+          "success": true
+        },
+        {
+          "seed": 200005,
+          "instruction": "Lift the bottle with red screw cap and the green bottle with white label using both arms.",
+          "initial_head_sha256": "5d3cf1d787f6d3ccf7babe655d39ed3bdc15d99e501317e021fcc1a3fc6816c3",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 106,
+          "policy_head_sha256": "2c14d09d82921d7bc943fbb03b9caf4aa0095627e954f2fc76e73cb6a9062127",
+          "actions": 106,
+          "success": true
+        }
+      ],
+      "script_sha256": "0268e61922251fef164fbcb5288b98612caf36037bb5e8fc40a1e2ef661a945b",
+      "native_result_rate": 0.05,
+      "success_rate": 1.0,
+      "wilson_95ci": [
+        0.5655175352168251,
+        1.0
+      ],
+      "mean_actions_all_episodes": 98.6,
+      "environment_exceptions_in_log": 0,
+      "client_log_sha256": "e20d06bde10444d670900867de9156159dabd06b6297826bf8dcfaa425527b02",
+      "videos": [
+        {
+          "name": "episode0.mp4",
+          "sha256": "3789e70fdf874e9d2aafcbd27ee1aca91bc3d644024c07c6432a829ae114e478",
+          "bytes": 108895
+        },
+        {
+          "name": "episode1.mp4",
+          "sha256": "87d724a44be2ee3ae3b1a82cee16bf19df44ecb67b9c1497daff0c2805213f63",
+          "bytes": 119662
+        },
+        {
+          "name": "episode2.mp4",
+          "sha256": "968932b703a86df31c23aaf4570ae3fd5813be3b9300609813e3ad5d31162330",
+          "bytes": 148685
+        },
+        {
+          "name": "episode3.mp4",
+          "sha256": "f603063393998533ce29aa1e05362ea78b60f0508c54819f5accac6217411f39",
+          "bytes": 122023
+        },
+        {
+          "name": "episode4.mp4",
+          "sha256": "952c231430791a652186897d2aaacb114b2d155fc73b2961959841161e0b65ef",
+          "bytes": 163002
+        }
+      ]
+    },
+    "baseline-front": {
+      "condition": "front",
+      "successes": 0,
+      "episodes": 5,
+      "records": [
+        {
+          "seed": 200001,
+          "instruction": "Pick up the plastic soda bottle and the green bottle simultaneously.",
+          "initial_head_sha256": "b9daa04f0c71b0d7fb6dc54a7eee15b3cf0d5648e3cd654fdf80344c86ddb4d9",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "front",
+          "calls": 400,
+          "policy_head_sha256": "45735d566294ae35141737f530a2a8cc242625f8a1cfb5e5e14416c7041a67da",
+          "actions": 400,
+          "success": false
+        },
+        {
+          "seed": 200002,
+          "instruction": "Pick the brown bottle with one arm, the green plastic bottle with ridged bottom with the other.",
+          "initial_head_sha256": "04a8bce18e177fff3cc629a3fac354255f7e3e943e1a843c6b58ab7802701a4c",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "front",
+          "calls": 400,
+          "policy_head_sha256": "3691ec0f9c9b6c0f591886c336328429e8ca1e3d93efdadb506fb900e74d0a4c",
+          "actions": 400,
+          "success": false
+        },
+        {
+          "seed": 200003,
+          "instruction": "Pick up the brown bottle and the green bottle simultaneously.",
+          "initial_head_sha256": "daf671d6022f7f43ac67d0489c4649bd0be64bea07eb352543b2b3b7d333388d",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "front",
+          "calls": 400,
+          "policy_head_sha256": "d12bfa4b4a6d05d777e22309a0d49836ec20605eed6ef9a62fe7bed779a15f8d",
+          "actions": 400,
+          "success": false
+        },
+        {
+          "seed": 200004,
+          "instruction": "Grab the plastic soda bottle and the green plastic bottle with ridged bottom with arms.",
+          "initial_head_sha256": "db9193be6dfe988505a707974c9186a041cf7528cedc2d50a36b23ca9552c9da",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "front",
+          "calls": 400,
+          "policy_head_sha256": "7261223a438eabf3df116a1acde18b8d3eb4137845e8618f676520d4aabedc49",
+          "actions": 400,
+          "success": false
+        },
+        {
+          "seed": 200005,
+          "instruction": "Lift the bottle with red screw cap and the green bottle with white label using both arms.",
+          "initial_head_sha256": "5d3cf1d787f6d3ccf7babe655d39ed3bdc15d99e501317e021fcc1a3fc6816c3",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "front",
+          "calls": 400,
+          "policy_head_sha256": "e0af97dc4f9d2c846105cf42bbf2559b0ec27196efc53be8f2504dcd33fad339",
+          "actions": 400,
+          "success": false
+        }
+      ],
+      "script_sha256": "0268e61922251fef164fbcb5288b98612caf36037bb5e8fc40a1e2ef661a945b",
+      "native_result_rate": 0.0,
+      "success_rate": 0.0,
+      "wilson_95ci": [
+        0.0,
+        0.43448246478317476
+      ],
+      "mean_actions_all_episodes": 400.0,
+      "environment_exceptions_in_log": 0,
+      "client_log_sha256": "70048bae6c0920613680b85ab016376df72cebeb49ae08b2184cbb2710f005ad",
+      "videos": [
+        {
+          "name": "episode0.mp4",
+          "sha256": "e9b418eda1d1968ed9449d2750410631803a05b97234292e3c109f5be4cce5d6",
+          "bytes": 482494
+        },
+        {
+          "name": "episode1.mp4",
+          "sha256": "a33d246cb726df872992ce912df6c201a3891f3d9bf14d03486147f8dd9852de",
+          "bytes": 590659
+        },
+        {
+          "name": "episode2.mp4",
+          "sha256": "6930d33c4ba47ade5f7688dc29ac4b0bad47a7341d42f45cf819cf1386e91b48",
+          "bytes": 568921
+        },
+        {
+          "name": "episode3.mp4",
+          "sha256": "e83c845cdfb2296fe89c5a27be7424f65cc88fa101a05e822068c53d95bbf913",
+          "bytes": 351454
+        },
+        {
+          "name": "episode4.mp4",
+          "sha256": "be35f60d807966cae861da8d853d1a0672b0f4b60addc5a9f5458e7436581c52",
+          "bytes": 601618
+        }
+      ]
+    },
+    "identity-confirm-clean": {
+      "condition": "clean",
+      "successes": 5,
+      "episodes": 5,
+      "records": [
+        {
+          "seed": 300001,
+          "instruction": "Use one arm to grab the bottle with red screw cap, the other for the green bottle with white label.",
+          "initial_head_sha256": "30487f43c87c60bad29b803e2d6ce8809e900102e9ba8b2013ed1d1bc8188fd7",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 105,
+          "policy_head_sha256": "30487f43c87c60bad29b803e2d6ce8809e900102e9ba8b2013ed1d1bc8188fd7",
+          "actions": 105,
+          "success": true
+        },
+        {
+          "seed": 300002,
+          "instruction": "Pick up the bottle with red screw cap and the green plastic bottle with ridged bottom using both arms.",
+          "initial_head_sha256": "4ee5884a1680552b3ae56fdb70ee4f484eb417fde4c12c63b500773cac19fd24",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 105,
+          "policy_head_sha256": "4ee5884a1680552b3ae56fdb70ee4f484eb417fde4c12c63b500773cac19fd24",
+          "actions": 105,
+          "success": true
+        },
+        {
+          "seed": 300003,
+          "instruction": "Pick the bottle with red screw cap, then pick the green bottle with white label.",
+          "initial_head_sha256": "5812750672fa601f95eb4069b03e0536c76c7143d7a77bd90ad44150057049b9",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 94,
+          "policy_head_sha256": "5812750672fa601f95eb4069b03e0536c76c7143d7a77bd90ad44150057049b9",
+          "actions": 94,
+          "success": true
+        },
+        {
+          "seed": 300004,
+          "instruction": "Pick the brown bottle with one arm, the green bottle with white label with the other.",
+          "initial_head_sha256": "6b6367e7de9f12125b0a386c63a8085c809c220bd1758658754c0315b82092b1",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 107,
+          "policy_head_sha256": "6b6367e7de9f12125b0a386c63a8085c809c220bd1758658754c0315b82092b1",
+          "actions": 107,
+          "success": true
+        },
+        {
+          "seed": 300005,
+          "instruction": "Pick the plastic soda bottle, then pick the green plastic bottle with ridged bottom.",
+          "initial_head_sha256": "c5e6f0c192e40a11ec9fb0047714acc03fabc90d9577f9f170746c944ad0f448",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 89,
+          "policy_head_sha256": "c5e6f0c192e40a11ec9fb0047714acc03fabc90d9577f9f170746c944ad0f448",
+          "actions": 89,
+          "success": true
+        }
+      ],
+      "script_sha256": "0268e61922251fef164fbcb5288b98612caf36037bb5e8fc40a1e2ef661a945b",
+      "native_result_rate": 0.05,
+      "success_rate": 1.0,
+      "wilson_95ci": [
+        0.5655175352168251,
+        1.0
+      ],
+      "mean_actions_all_episodes": 100.0,
+      "environment_exceptions_in_log": 0,
+      "client_log_sha256": "6494c5a7e1e74dda09a0ae9549f70d7e6751f106277cbd67915b8fb078c88b49",
+      "videos": [
+        {
+          "name": "episode0.mp4",
+          "sha256": "b431b99bbd9e2afff0dad14b4cb92d2e8bda14f6daa35316edc3104537bddc07",
+          "bytes": 155332
+        },
+        {
+          "name": "episode1.mp4",
+          "sha256": "45fffa8ec3be0a25c06b6260f8263507331a5c541a1e2ecb58e959338616e1d2",
+          "bytes": 156527
+        },
+        {
+          "name": "episode2.mp4",
+          "sha256": "cf4a6bfc0d0eb0ec8f827d5a95493ed6e5a3dd257cd7bc25dd1caec04e395518",
+          "bytes": 154096
+        },
+        {
+          "name": "episode3.mp4",
+          "sha256": "44294287e4bab9af93a097b9c422fe9094bbd21cb7e4083a3db05aabf183e3e6",
+          "bytes": 136969
+        },
+        {
+          "name": "episode4.mp4",
+          "sha256": "1cf799c2f985e04c84ad94957984b2784423e07f89d5bf48a129a9a698a64d36",
+          "bytes": 124781
+        }
+      ]
+    },
+    "identity-confirm-noise": {
+      "condition": "noise",
+      "successes": 5,
+      "episodes": 5,
+      "records": [
+        {
+          "seed": 300001,
+          "instruction": "Use one arm to grab the bottle with red screw cap, the other for the green bottle with white label.",
+          "initial_head_sha256": "30487f43c87c60bad29b803e2d6ce8809e900102e9ba8b2013ed1d1bc8188fd7",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 89,
+          "policy_head_sha256": "eeabe8a7fac573269ee974a9793b6d96cc382d4ade8bb9ce13e2c17b931a3ecf",
+          "actions": 89,
+          "success": true
+        },
+        {
+          "seed": 300002,
+          "instruction": "Pick up the bottle with red screw cap and the green plastic bottle with ridged bottom using both arms.",
+          "initial_head_sha256": "4ee5884a1680552b3ae56fdb70ee4f484eb417fde4c12c63b500773cac19fd24",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 89,
+          "policy_head_sha256": "59303caef68b5ca5f5877b9940f32a8911766c3bf8bcf3f1fc812bf845c3259e",
+          "actions": 89,
+          "success": true
+        },
+        {
+          "seed": 300003,
+          "instruction": "Pick the bottle with red screw cap, then pick the green bottle with white label.",
+          "initial_head_sha256": "5812750672fa601f95eb4069b03e0536c76c7143d7a77bd90ad44150057049b9",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 111,
+          "policy_head_sha256": "23105b412c092a88950c02fb15ef706ba45ca40bb96912ef339b6602df926d77",
+          "actions": 111,
+          "success": true
+        },
+        {
+          "seed": 300004,
+          "instruction": "Pick the brown bottle with one arm, the green bottle with white label with the other.",
+          "initial_head_sha256": "6b6367e7de9f12125b0a386c63a8085c809c220bd1758658754c0315b82092b1",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 92,
+          "policy_head_sha256": "74d4c865b5f8b75bb2f56509cfc36e9704de265bfc2a903026df549fe6c5a27e",
+          "actions": 92,
+          "success": true
+        },
+        {
+          "seed": 300005,
+          "instruction": "Pick the plastic soda bottle, then pick the green plastic bottle with ridged bottom.",
+          "initial_head_sha256": "c5e6f0c192e40a11ec9fb0047714acc03fabc90d9577f9f170746c944ad0f448",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 89,
+          "policy_head_sha256": "aca74cda574573cdc4f4ea69544d451c66989e36b61a6553f6e1d2ab6082c393",
+          "actions": 89,
+          "success": true
+        }
+      ],
+      "script_sha256": "0268e61922251fef164fbcb5288b98612caf36037bb5e8fc40a1e2ef661a945b",
+      "native_result_rate": 0.05,
+      "success_rate": 1.0,
+      "wilson_95ci": [
+        0.5655175352168251,
+        1.0
+      ],
+      "mean_actions_all_episodes": 94.0,
+      "environment_exceptions_in_log": 0,
+      "client_log_sha256": "5a1624f228b2b70451c66c4ccaccc55b1066838a0c7280829d11918dbf558b97",
+      "videos": [
+        {
+          "name": "episode0.mp4",
+          "sha256": "391007e3e1c498b4f70316c3e57abb6e160c18a7e78b9570ee54abfda5a1beb7",
+          "bytes": 136686
+        },
+        {
+          "name": "episode1.mp4",
+          "sha256": "74fef03471189db307be99ae523f76404b7016a1f3fe192400a3e55ce3f1cbca",
+          "bytes": 139806
+        },
+        {
+          "name": "episode2.mp4",
+          "sha256": "ffd487b41af7703cde07edc2d0ed46b811a5df738b2107ea889b6904d2c3c8c7",
+          "bytes": 173879
+        },
+        {
+          "name": "episode3.mp4",
+          "sha256": "0cae6dfa4653c37db74372e108c18578a86ea3ada2c4307e950a6b6045d6f911",
+          "bytes": 124512
+        },
+        {
+          "name": "episode4.mp4",
+          "sha256": "5949376442ff1089c76026bcf27a094e5c68dfa63743f6b23bbf67cf19bd3b4d",
+          "bytes": 129659
+        }
+      ]
+    },
+    "adapter-confirm-clean": {
+      "condition": "clean",
+      "successes": 4,
+      "episodes": 5,
+      "records": [
+        {
+          "seed": 300001,
+          "instruction": "Use one arm to grab the bottle with red screw cap, the other for the green bottle with white label.",
+          "initial_head_sha256": "30487f43c87c60bad29b803e2d6ce8809e900102e9ba8b2013ed1d1bc8188fd7",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 105,
+          "policy_head_sha256": "30487f43c87c60bad29b803e2d6ce8809e900102e9ba8b2013ed1d1bc8188fd7",
+          "actions": 105,
+          "success": true
+        },
+        {
+          "seed": 300002,
+          "instruction": "Pick up the bottle with red screw cap and the green plastic bottle with ridged bottom using both arms.",
+          "initial_head_sha256": "4ee5884a1680552b3ae56fdb70ee4f484eb417fde4c12c63b500773cac19fd24",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 104,
+          "policy_head_sha256": "4ee5884a1680552b3ae56fdb70ee4f484eb417fde4c12c63b500773cac19fd24",
+          "actions": 104,
+          "success": true
+        },
+        {
+          "seed": 300003,
+          "instruction": "Pick the bottle with red screw cap, then pick the green bottle with white label.",
+          "initial_head_sha256": "5812750672fa601f95eb4069b03e0536c76c7143d7a77bd90ad44150057049b9",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 400,
+          "policy_head_sha256": "5812750672fa601f95eb4069b03e0536c76c7143d7a77bd90ad44150057049b9",
+          "actions": 400,
+          "success": false
+        },
+        {
+          "seed": 300004,
+          "instruction": "Pick the brown bottle with one arm, the green bottle with white label with the other.",
+          "initial_head_sha256": "6b6367e7de9f12125b0a386c63a8085c809c220bd1758658754c0315b82092b1",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 107,
+          "policy_head_sha256": "6b6367e7de9f12125b0a386c63a8085c809c220bd1758658754c0315b82092b1",
+          "actions": 107,
+          "success": true
+        },
+        {
+          "seed": 300005,
+          "instruction": "Pick the plastic soda bottle, then pick the green plastic bottle with ridged bottom.",
+          "initial_head_sha256": "c5e6f0c192e40a11ec9fb0047714acc03fabc90d9577f9f170746c944ad0f448",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 89,
+          "policy_head_sha256": "c5e6f0c192e40a11ec9fb0047714acc03fabc90d9577f9f170746c944ad0f448",
+          "actions": 89,
+          "success": true
+        }
+      ],
+      "script_sha256": "0268e61922251fef164fbcb5288b98612caf36037bb5e8fc40a1e2ef661a945b",
+      "native_result_rate": 0.04,
+      "success_rate": 0.8,
+      "wilson_95ci": [
+        0.37553462976252533,
+        0.9637758913675698
+      ],
+      "mean_actions_all_episodes": 161.0,
+      "environment_exceptions_in_log": 0,
+      "client_log_sha256": "a20b2253533c602c2f5d395a9e1744021d1268b7a6f5f42b608fe75d3b84ff3e",
+      "videos": [
+        {
+          "name": "episode0.mp4",
+          "sha256": "2bb23735f3ee30f087093c611596136e9f4efb5680d8260f1f4c94f36e7e0c77",
+          "bytes": 156804
+        },
+        {
+          "name": "episode1.mp4",
+          "sha256": "25b3f20f5c712b73421f0ecd31e095c220813cdd0fcaf3a7132d2e322930b6ce",
+          "bytes": 154835
+        },
+        {
+          "name": "episode2.mp4",
+          "sha256": "8d0ed69657dfe3b53853c0e0def57e83c459cc6e8db9fd62cfc8410572b2eea8",
+          "bytes": 574249
+        },
+        {
+          "name": "episode3.mp4",
+          "sha256": "50064cdb32ec2115fba6734e84f288d1a892692bee67f71bc5c323d452dbc743",
+          "bytes": 135731
+        },
+        {
+          "name": "episode4.mp4",
+          "sha256": "7aaa8ce71bb77df2aa65ae7d2e539cad5d4ffd38315f3c9c38514013abce64f7",
+          "bytes": 127773
+        }
+      ]
+    },
+    "adapter-confirm-noise": {
+      "condition": "noise",
+      "successes": 5,
+      "episodes": 5,
+      "records": [
+        {
+          "seed": 300001,
+          "instruction": "Use one arm to grab the bottle with red screw cap, the other for the green bottle with white label.",
+          "initial_head_sha256": "30487f43c87c60bad29b803e2d6ce8809e900102e9ba8b2013ed1d1bc8188fd7",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 105,
+          "policy_head_sha256": "eeabe8a7fac573269ee974a9793b6d96cc382d4ade8bb9ce13e2c17b931a3ecf",
+          "actions": 105,
+          "success": true
+        },
+        {
+          "seed": 300002,
+          "instruction": "Pick up the bottle with red screw cap and the green plastic bottle with ridged bottom using both arms.",
+          "initial_head_sha256": "4ee5884a1680552b3ae56fdb70ee4f484eb417fde4c12c63b500773cac19fd24",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 88,
+          "policy_head_sha256": "59303caef68b5ca5f5877b9940f32a8911766c3bf8bcf3f1fc812bf845c3259e",
+          "actions": 88,
+          "success": true
+        },
+        {
+          "seed": 300003,
+          "instruction": "Pick the bottle with red screw cap, then pick the green bottle with white label.",
+          "initial_head_sha256": "5812750672fa601f95eb4069b03e0536c76c7143d7a77bd90ad44150057049b9",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 93,
+          "policy_head_sha256": "23105b412c092a88950c02fb15ef706ba45ca40bb96912ef339b6602df926d77",
+          "actions": 93,
+          "success": true
+        },
+        {
+          "seed": 300004,
+          "instruction": "Pick the brown bottle with one arm, the green bottle with white label with the other.",
+          "initial_head_sha256": "6b6367e7de9f12125b0a386c63a8085c809c220bd1758658754c0315b82092b1",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 106,
+          "policy_head_sha256": "74d4c865b5f8b75bb2f56509cfc36e9704de265bfc2a903026df549fe6c5a27e",
+          "actions": 106,
+          "success": true
+        },
+        {
+          "seed": 300005,
+          "instruction": "Pick the plastic soda bottle, then pick the green plastic bottle with ridged bottom.",
+          "initial_head_sha256": "c5e6f0c192e40a11ec9fb0047714acc03fabc90d9577f9f170746c944ad0f448",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 90,
+          "policy_head_sha256": "aca74cda574573cdc4f4ea69544d451c66989e36b61a6553f6e1d2ab6082c393",
+          "actions": 90,
+          "success": true
+        }
+      ],
+      "script_sha256": "0268e61922251fef164fbcb5288b98612caf36037bb5e8fc40a1e2ef661a945b",
+      "native_result_rate": 0.05,
+      "success_rate": 1.0,
+      "wilson_95ci": [
+        0.5655175352168251,
+        1.0
+      ],
+      "mean_actions_all_episodes": 96.4,
+      "environment_exceptions_in_log": 0,
+      "client_log_sha256": "1398e9d85a4043dc4dba70e5d04d266cca32030ddf006252ad8cadc50b2f68b7",
+      "videos": [
+        {
+          "name": "episode0.mp4",
+          "sha256": "2293efee4468a6d6aa9cc2968e90e03f937632c72d0faa888534bfe3c2871d17",
+          "bytes": 156363
+        },
+        {
+          "name": "episode1.mp4",
+          "sha256": "f0dd9dbe1fd4ee05bb207cb229efe5e2caa159d39d76558bb332e24b95d856b9",
+          "bytes": 135985
+        },
+        {
+          "name": "episode2.mp4",
+          "sha256": "df8ba4cc25ec3011c7e58ed81b44e6c2eaddb5244194b5bbec46c458385db75e",
+          "bytes": 151420
+        },
+        {
+          "name": "episode3.mp4",
+          "sha256": "b33f241a84d779d61a77d14a456ef263c9ba9b2ce6de66b9eb020d3a9c296a26",
+          "bytes": 137624
+        },
+        {
+          "name": "episode4.mp4",
+          "sha256": "1cd4550212e326b31e1387beb861dab0d576a84494fc66a4be0dcd3b5f77057a",
+          "bytes": 127334
+        }
+      ]
+    }
+  },
+  "paired_comparisons": {
+    "baseline-noise_vs_baseline-clean": {
+      "candidate_wins": 0,
+      "candidate_losses": 0,
+      "same_outcome": 5,
+      "success_rate_delta": 0.0,
+      "two_sided_exact_discordant_pair_p": 1.0,
+      "initial_state_image_instruction_checks": [
+        {
+          "seed": 200001,
+          "instruction": "Pick up the plastic soda bottle and the green bottle simultaneously.",
+          "initial_head_sha256": "b9daa04f0c71b0d7fb6dc54a7eee15b3cf0d5648e3cd654fdf80344c86ddb4d9",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 200002,
+          "instruction": "Pick the brown bottle with one arm, the green plastic bottle with ridged bottom with the other.",
+          "initial_head_sha256": "04a8bce18e177fff3cc629a3fac354255f7e3e943e1a843c6b58ab7802701a4c",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 200003,
+          "instruction": "Pick up the brown bottle and the green bottle simultaneously.",
+          "initial_head_sha256": "daf671d6022f7f43ac67d0489c4649bd0be64bea07eb352543b2b3b7d333388d",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 200004,
+          "instruction": "Grab the plastic soda bottle and the green plastic bottle with ridged bottom with arms.",
+          "initial_head_sha256": "db9193be6dfe988505a707974c9186a041cf7528cedc2d50a36b23ca9552c9da",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 200005,
+          "instruction": "Lift the bottle with red screw cap and the green bottle with white label using both arms.",
+          "initial_head_sha256": "5d3cf1d787f6d3ccf7babe655d39ed3bdc15d99e501317e021fcc1a3fc6816c3",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        }
+      ]
+    },
+    "baseline-front_vs_baseline-clean": {
+      "candidate_wins": 0,
+      "candidate_losses": 5,
+      "same_outcome": 0,
+      "success_rate_delta": -1.0,
+      "two_sided_exact_discordant_pair_p": 0.0625,
+      "initial_state_image_instruction_checks": [
+        {
+          "seed": 200001,
+          "instruction": "Pick up the plastic soda bottle and the green bottle simultaneously.",
+          "initial_head_sha256": "b9daa04f0c71b0d7fb6dc54a7eee15b3cf0d5648e3cd654fdf80344c86ddb4d9",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 200002,
+          "instruction": "Pick the brown bottle with one arm, the green plastic bottle with ridged bottom with the other.",
+          "initial_head_sha256": "04a8bce18e177fff3cc629a3fac354255f7e3e943e1a843c6b58ab7802701a4c",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 200003,
+          "instruction": "Pick up the brown bottle and the green bottle simultaneously.",
+          "initial_head_sha256": "daf671d6022f7f43ac67d0489c4649bd0be64bea07eb352543b2b3b7d333388d",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 200004,
+          "instruction": "Grab the plastic soda bottle and the green plastic bottle with ridged bottom with arms.",
+          "initial_head_sha256": "db9193be6dfe988505a707974c9186a041cf7528cedc2d50a36b23ca9552c9da",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 200005,
+          "instruction": "Lift the bottle with red screw cap and the green bottle with white label using both arms.",
+          "initial_head_sha256": "5d3cf1d787f6d3ccf7babe655d39ed3bdc15d99e501317e021fcc1a3fc6816c3",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        }
+      ]
+    },
+    "identity-confirm-noise_vs_identity-confirm-clean": {
+      "candidate_wins": 0,
+      "candidate_losses": 0,
+      "same_outcome": 5,
+      "success_rate_delta": 0.0,
+      "two_sided_exact_discordant_pair_p": 1.0,
+      "initial_state_image_instruction_checks": [
+        {
+          "seed": 300001,
+          "instruction": "Use one arm to grab the bottle with red screw cap, the other for the green bottle with white label.",
+          "initial_head_sha256": "30487f43c87c60bad29b803e2d6ce8809e900102e9ba8b2013ed1d1bc8188fd7",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 300002,
+          "instruction": "Pick up the bottle with red screw cap and the green plastic bottle with ridged bottom using both arms.",
+          "initial_head_sha256": "4ee5884a1680552b3ae56fdb70ee4f484eb417fde4c12c63b500773cac19fd24",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 300003,
+          "instruction": "Pick the bottle with red screw cap, then pick the green bottle with white label.",
+          "initial_head_sha256": "5812750672fa601f95eb4069b03e0536c76c7143d7a77bd90ad44150057049b9",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 300004,
+          "instruction": "Pick the brown bottle with one arm, the green bottle with white label with the other.",
+          "initial_head_sha256": "6b6367e7de9f12125b0a386c63a8085c809c220bd1758658754c0315b82092b1",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 300005,
+          "instruction": "Pick the plastic soda bottle, then pick the green plastic bottle with ridged bottom.",
+          "initial_head_sha256": "c5e6f0c192e40a11ec9fb0047714acc03fabc90d9577f9f170746c944ad0f448",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        }
+      ]
+    },
+    "adapter-confirm-clean_vs_identity-confirm-clean": {
+      "candidate_wins": 0,
+      "candidate_losses": 1,
+      "same_outcome": 4,
+      "success_rate_delta": -0.2,
+      "two_sided_exact_discordant_pair_p": 1.0,
+      "initial_state_image_instruction_checks": [
+        {
+          "seed": 300001,
+          "instruction": "Use one arm to grab the bottle with red screw cap, the other for the green bottle with white label.",
+          "initial_head_sha256": "30487f43c87c60bad29b803e2d6ce8809e900102e9ba8b2013ed1d1bc8188fd7",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 300002,
+          "instruction": "Pick up the bottle with red screw cap and the green plastic bottle with ridged bottom using both arms.",
+          "initial_head_sha256": "4ee5884a1680552b3ae56fdb70ee4f484eb417fde4c12c63b500773cac19fd24",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 300003,
+          "instruction": "Pick the bottle with red screw cap, then pick the green bottle with white label.",
+          "initial_head_sha256": "5812750672fa601f95eb4069b03e0536c76c7143d7a77bd90ad44150057049b9",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 300004,
+          "instruction": "Pick the brown bottle with one arm, the green bottle with white label with the other.",
+          "initial_head_sha256": "6b6367e7de9f12125b0a386c63a8085c809c220bd1758658754c0315b82092b1",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 300005,
+          "instruction": "Pick the plastic soda bottle, then pick the green plastic bottle with ridged bottom.",
+          "initial_head_sha256": "c5e6f0c192e40a11ec9fb0047714acc03fabc90d9577f9f170746c944ad0f448",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        }
+      ]
+    },
+    "adapter-confirm-noise_vs_identity-confirm-noise": {
+      "candidate_wins": 0,
+      "candidate_losses": 0,
+      "same_outcome": 5,
+      "success_rate_delta": 0.0,
+      "two_sided_exact_discordant_pair_p": 1.0,
+      "initial_state_image_instruction_checks": [
+        {
+          "seed": 300001,
+          "instruction": "Use one arm to grab the bottle with red screw cap, the other for the green bottle with white label.",
+          "initial_head_sha256": "30487f43c87c60bad29b803e2d6ce8809e900102e9ba8b2013ed1d1bc8188fd7",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 300002,
+          "instruction": "Pick up the bottle with red screw cap and the green plastic bottle with ridged bottom using both arms.",
+          "initial_head_sha256": "4ee5884a1680552b3ae56fdb70ee4f484eb417fde4c12c63b500773cac19fd24",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 300003,
+          "instruction": "Pick the bottle with red screw cap, then pick the green bottle with white label.",
+          "initial_head_sha256": "5812750672fa601f95eb4069b03e0536c76c7143d7a77bd90ad44150057049b9",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 300004,
+          "instruction": "Pick the brown bottle with one arm, the green bottle with white label with the other.",
+          "initial_head_sha256": "6b6367e7de9f12125b0a386c63a8085c809c220bd1758658754c0315b82092b1",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 300005,
+          "instruction": "Pick the plastic soda bottle, then pick the green plastic bottle with ridged bottom.",
+          "initial_head_sha256": "c5e6f0c192e40a11ec9fb0047714acc03fabc90d9577f9f170746c944ad0f448",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        }
+      ]
+    },
+    "adapter-confirm-noise_vs_adapter-confirm-clean": {
+      "candidate_wins": 1,
+      "candidate_losses": 0,
+      "same_outcome": 4,
+      "success_rate_delta": 0.2,
+      "two_sided_exact_discordant_pair_p": 1.0,
+      "initial_state_image_instruction_checks": [
+        {
+          "seed": 300001,
+          "instruction": "Use one arm to grab the bottle with red screw cap, the other for the green bottle with white label.",
+          "initial_head_sha256": "30487f43c87c60bad29b803e2d6ce8809e900102e9ba8b2013ed1d1bc8188fd7",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 300002,
+          "instruction": "Pick up the bottle with red screw cap and the green plastic bottle with ridged bottom using both arms.",
+          "initial_head_sha256": "4ee5884a1680552b3ae56fdb70ee4f484eb417fde4c12c63b500773cac19fd24",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 300003,
+          "instruction": "Pick the bottle with red screw cap, then pick the green bottle with white label.",
+          "initial_head_sha256": "5812750672fa601f95eb4069b03e0536c76c7143d7a77bd90ad44150057049b9",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 300004,
+          "instruction": "Pick the brown bottle with one arm, the green bottle with white label with the other.",
+          "initial_head_sha256": "6b6367e7de9f12125b0a386c63a8085c809c220bd1758658754c0315b82092b1",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        },
+        {
+          "seed": 300005,
+          "instruction": "Pick the plastic soda bottle, then pick the green plastic bottle with ridged bottom.",
+          "initial_head_sha256": "c5e6f0c192e40a11ec9fb0047714acc03fabc90d9577f9f170746c944ad0f448",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+        }
+      ]
+    }
+  },
+  "adapter_selection": {
+    "identity_noise_mse": 0.16612102091312408,
+    "candidates": {
+      "linear": {
+        "restoration_mse": 0.1279303083817164,
+        "clean_distortion_mse": 0.01060035452246666,
+        "noise_ratio": 0.7701030711135577,
+        "clean_ratio": 0.06381103646124534,
+        "eligible": true
+      },
+      "mlp": {
+        "restoration_mse": 0.10800293336311977,
+        "clean_distortion_mse": 0.007662173826247454,
+        "noise_ratio": 0.6501460969205204,
+        "clean_ratio": 0.04612404730075986,
+        "eligible": true
+      }
+    },
+    "selected": "mlp",
+    "deployment_seed": 42,
+    "validation_only": true,
+    "seconds_training": 16.24010591953993,
+    "selected_at": "2026-09-21T13:26:12-0500"
+  },
+  "adapter_hook": {
+    "calls": 45,
+    "max_change": 1.8125,
+    "adapter": "results/robustness-20260921/adapter-selected.pt"
+  },
+  "confirmation_unlock": {
+    "selected": "mlp",
+    "seed": 42,
+    "unlocked_at": "2026-09-21T14:13:49-0500",
+    "fixed_scenes_sha256": "132208e61ceb89dcee6e567964146dbfc3a1e23da39a63d9af767a510386e145",
+    "selection_sha256": "4e75c27ef7a933ad532b3ad910def2caf35b4dadc9f6ee162defdb10b8182fc3",
+    "checkpoint_sha256": "f0d0cf8eeae4b87e3d16a742c8733e05b82ec737a445dec6cd18efedd3092586"
+  },
+  "protocol_sha256": "77afb3da875ecc9eba754b6e9f526373920441f4013422d203a7273b9e3ba6fe",
+  "checkpoint_revision": "af1595c8ee54955116abbc0b0ffa17fa48deb691",
+  "policy_diffusion_seed": 42,
+  "noise_sigma": 0.1,
+  "denoise_steps": 10,
+  "compile_enabled": false,
+  "task": "pick_dual_bottles",
+  "mode": "demo_clean",
+  "step_limit": 400,
+  "planner_fallback": false,
+  "paired_checks_all_passed": true,
+  "source_hashes_all_passed": true,
+  "invalid_initial_attempt": {
+    "baseline-clean": [
+      {
+        "seed": 200001,
+        "instruction": "Hold the plastic soda bottle in one hand, the green bottle in the other.",
+        "initial_head_sha256": "b9daa04f0c71b0d7fb6dc54a7eee15b3cf0d5648e3cd654fdf80344c86ddb4d9",
+        "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+        "condition": "clean",
+        "calls": 105,
+        "policy_head_sha256": "b9daa04f0c71b0d7fb6dc54a7eee15b3cf0d5648e3cd654fdf80344c86ddb4d9",
+        "actions": 105,
+        "success": true
+      },
+      {
+        "seed": 200002,
+        "instruction": "Pick the bottle with red screw cap, then pick the green bottle.",
+        "initial_head_sha256": "04a8bce18e177fff3cc629a3fac354255f7e3e943e1a843c6b58ab7802701a4c",
+        "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+        "condition": "clean",
+        "calls": 103,
+        "policy_head_sha256": "04a8bce18e177fff3cc629a3fac354255f7e3e943e1a843c6b58ab7802701a4c",
+        "actions": 103,
+        "success": true
+      },
+      {
+        "seed": 200003,
+        "instruction": "Pick the brown bottle with one arm, the green bottle with the other.",
+        "initial_head_sha256": "daf671d6022f7f43ac67d0489c4649bd0be64bea07eb352543b2b3b7d333388d",
+        "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+        "condition": "clean",
+        "calls": 103,
+        "policy_head_sha256": "daf671d6022f7f43ac67d0489c4649bd0be64bea07eb352543b2b3b7d333388d",
+        "actions": 103,
+        "success": true
+      },
+      {
+        "seed": 200004,
+        "instruction": "Grab the plastic soda bottle and the green bottle with arms.",
+        "initial_head_sha256": "db9193be6dfe988505a707974c9186a041cf7528cedc2d50a36b23ca9552c9da",
+        "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+        "condition": "clean",
+        "calls": 109,
+        "policy_head_sha256": "db9193be6dfe988505a707974c9186a041cf7528cedc2d50a36b23ca9552c9da",
+        "actions": 109,
+        "success": true
+      },
+      {
+        "seed": 200005,
+        "instruction": "Take hold of the brown bottle and the green bottle with white label at once.",
+        "initial_head_sha256": "5d3cf1d787f6d3ccf7babe655d39ed3bdc15d99e501317e021fcc1a3fc6816c3",
+        "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+        "condition": "clean",
+        "calls": 110,
+        "policy_head_sha256": "5d3cf1d787f6d3ccf7babe655d39ed3bdc15d99e501317e021fcc1a3fc6816c3",
+        "actions": 110,
+        "success": true
+      }
+    ]
+  },
+  "invalid_refiltering_attempt": {
+    "identity-confirm-noise": [
+      {
+        "seed": 300001,
+        "instruction": "Use one arm to grab the bottle with red screw cap, the other for the green bottle with white label.",
+        "initial_head_sha256": "30487f43c87c60bad29b803e2d6ce8809e900102e9ba8b2013ed1d1bc8188fd7",
+        "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+        "condition": "noise",
+        "calls": 89,
+        "policy_head_sha256": "eeabe8a7fac573269ee974a9793b6d96cc382d4ade8bb9ce13e2c17b931a3ecf",
+        "actions": 89,
+        "success": true
+      },
+      {
+        "seed": 300003,
+        "instruction": "Pick the bottle with red screw cap, then pick the green bottle with white label.",
+        "initial_head_sha256": "5812750672fa601f95eb4069b03e0536c76c7143d7a77bd90ad44150057049b9",
+        "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+        "condition": "noise",
+        "calls": 400,
+        "policy_head_sha256": "23105b412c092a88950c02fb15ef706ba45ca40bb96912ef339b6602df926d77",
+        "actions": 400,
+        "success": false
+      }
+    ],
+    "identity-confirm-clean": [
+      {
+        "seed": 300001,
+        "instruction": "Use one arm to grab the bottle with red screw cap, the other for the green bottle with white label.",
+        "initial_head_sha256": "30487f43c87c60bad29b803e2d6ce8809e900102e9ba8b2013ed1d1bc8188fd7",
+        "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+        "condition": "clean",
+        "calls": 105,
+        "policy_head_sha256": "30487f43c87c60bad29b803e2d6ce8809e900102e9ba8b2013ed1d1bc8188fd7",
+        "actions": 105,
+        "success": true
+      },
+      {
+        "seed": 300002,
+        "instruction": "Pick up the bottle with red screw cap and the green plastic bottle with ridged bottom using both arms.",
+        "initial_head_sha256": "4ee5884a1680552b3ae56fdb70ee4f484eb417fde4c12c63b500773cac19fd24",
+        "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+        "condition": "clean",
+        "calls": 105,
+        "policy_head_sha256": "4ee5884a1680552b3ae56fdb70ee4f484eb417fde4c12c63b500773cac19fd24",
+        "actions": 105,
+        "success": true
+      },
+      {
+        "seed": 300003,
+        "instruction": "Pick the bottle with red screw cap, then pick the green bottle with white label.",
+        "initial_head_sha256": "5812750672fa601f95eb4069b03e0536c76c7143d7a77bd90ad44150057049b9",
+        "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+        "condition": "clean",
+        "calls": 93,
+        "policy_head_sha256": "5812750672fa601f95eb4069b03e0536c76c7143d7a77bd90ad44150057049b9",
+        "actions": 93,
+        "success": true
+      },
+      {
+        "seed": 300004,
+        "instruction": "Pick the brown bottle with one arm, the green bottle with white label with the other.",
+        "initial_head_sha256": "6b6367e7de9f12125b0a386c63a8085c809c220bd1758658754c0315b82092b1",
+        "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+        "condition": "clean",
+        "calls": 107,
+        "policy_head_sha256": "6b6367e7de9f12125b0a386c63a8085c809c220bd1758658754c0315b82092b1",
+        "actions": 107,
+        "success": true
+      },
+      {
+        "seed": 300005,
+        "instruction": "Pick the plastic soda bottle, then pick the green plastic bottle with ridged bottom.",
+        "initial_head_sha256": "c5e6f0c192e40a11ec9fb0047714acc03fabc90d9577f9f170746c944ad0f448",
+        "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+        "condition": "clean",
+        "calls": 89,
+        "policy_head_sha256": "c5e6f0c192e40a11ec9fb0047714acc03fabc90d9577f9f170746c944ad0f448",
+        "actions": 89,
+        "success": true
+      }
+    ]
+  },
+  "confirmation_scene_manifest": {
+    "selection_rule": "First five expert-feasible starts of initial clean confirmation; independent of success outcome; no adapted rollout observed",
+    "scenes": [
+      {
+        "seed": 300001,
+        "instruction": "Use one arm to grab the bottle with red screw cap, the other for the green bottle with white label.",
+        "initial_head_sha256": "30487f43c87c60bad29b803e2d6ce8809e900102e9ba8b2013ed1d1bc8188fd7",
+        "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+      },
+      {
+        "seed": 300002,
+        "instruction": "Pick up the bottle with red screw cap and the green plastic bottle with ridged bottom using both arms.",
+        "initial_head_sha256": "4ee5884a1680552b3ae56fdb70ee4f484eb417fde4c12c63b500773cac19fd24",
+        "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+      },
+      {
+        "seed": 300003,
+        "instruction": "Pick the bottle with red screw cap, then pick the green bottle with white label.",
+        "initial_head_sha256": "5812750672fa601f95eb4069b03e0536c76c7143d7a77bd90ad44150057049b9",
+        "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+      },
+      {
+        "seed": 300004,
+        "instruction": "Pick the brown bottle with one arm, the green bottle with white label with the other.",
+        "initial_head_sha256": "6b6367e7de9f12125b0a386c63a8085c809c220bd1758658754c0315b82092b1",
+        "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+      },
+      {
+        "seed": 300005,
+        "instruction": "Pick the plastic soda bottle, then pick the green plastic bottle with ridged bottom.",
+        "initial_head_sha256": "c5e6f0c192e40a11ec9fb0047714acc03fabc90d9577f9f170746c944ad0f448",
+        "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f"
+      }
+    ],
+    "created_at": "2026-09-21T14:09:59-0500"
+  },
+  "confirmation_protocol": "fixed reference-feasible seeds and exact prompts; no repeated per-condition expert filter; amendment recorded before any adapted rollout",
+  "contact_claims": false
+}

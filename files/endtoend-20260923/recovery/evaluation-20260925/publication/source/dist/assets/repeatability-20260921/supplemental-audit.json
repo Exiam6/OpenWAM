@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-09-21T22:30:01.488318-05:00",
+  "all_54_npz_hashes_match_records": true,
+  "all_future_slots_exact": true,
+  "all_bf16": true,
+  "actual_first_actions_equal_first_raw_chunk_actions": true,
+  "binary_command_dims_empty": true,
+  "protocol_and_amendment_hashes_match": true
+}

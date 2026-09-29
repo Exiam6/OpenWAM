@@ -1,0 +1,12 @@
+{
+  "num_clips": 3,
+  "metric_space": "checkpoint_training_standardized_features",
+  "all_mse": 0.13863006354246363,
+  "condition_mse": 0.18834548815120292,
+  "pooled_target_mse": 0.11377235123809396,
+  "all_relative_mse": 0.14843297534130348,
+  "condition_relative_mse": 0.16361957570432195,
+  "pooled_target_relative_mse": 0.13784291933699333,
+  "checkpoint": "/data02/zifanz4/openwam-experiments/results/night-20260921/adjust_bottle/svae-w1-s42/final.pt",
+  "features_dir": "/data02/zifanz4/openwam-experiments/results/representation-preflight-20260922/native-shards"
+}

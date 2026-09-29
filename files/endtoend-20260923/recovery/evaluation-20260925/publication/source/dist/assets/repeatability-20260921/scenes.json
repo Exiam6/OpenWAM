@@ -1,0 +1,27 @@
+{
+  "role": "reused first-three-scene repeatability diagnostic, not independent confirmation",
+  "source_sha256": "de601e99d08277a40ce77071164e8b80a457cbb5d6ad53bcd2d57c352943729b",
+  "scenes": [
+    {
+      "seed": 400000,
+      "instruction": "Grab the plastic soda bottle with one arm, grab the green bottle with white label with the other.",
+      "initial_head_sha256": "3c6c5721106490f5f378996cf7d7081414e944df14b0302be79dfe6659e22725",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "instruction_choice_length": 10
+    },
+    {
+      "seed": 400001,
+      "instruction": "Pick the plastic soda bottle with one arm, the green plastic bottle with ridged bottom with the other.",
+      "initial_head_sha256": "21df4a4f301e0f980891d63decb0f6dbb8840d2fa0a870220721b2b5168cd7da",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "instruction_choice_length": 10
+    },
+    {
+      "seed": 400002,
+      "instruction": "Pick the brown bottle, then pick the green plastic bottle with ridged bottom.",
+      "initial_head_sha256": "2c463f7ae21010e61e89558aebf601ba02a3741f3d80c35ae7d1335e98864c0a",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "instruction_choice_length": 10
+    }
+  ]
+}

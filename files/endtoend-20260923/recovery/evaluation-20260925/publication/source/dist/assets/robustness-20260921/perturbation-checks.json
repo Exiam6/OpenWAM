@@ -1,0 +1,12 @@
+{
+  "rng_independence": true,
+  "seed_step_reproducibility": true,
+  "observation_nonmutation": true,
+  "wrists_and_proprio_unchanged": true,
+  "zero_init_exact": true,
+  "future_slots_unchanged": true,
+  "counts": {
+    "linear": 2352,
+    "mlp": 9360
+  }
+}

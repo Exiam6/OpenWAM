@@ -1,0 +1,26 @@
+{
+  "task": "adjust_bottle",
+  "seed": 1100019,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T19:46:57.591301-05:00",
+  "expert_plan_success": true,
+  "instruction": "Pick up the bottle with red screw cap carefully using the right arm",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 137,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100019/data/episode0.hdf5",
+  "hdf5_sha256": "4e582047e9359615ff030cbf732dee0c0a1bbb2c733ee80042ae2eb30fe59870",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "001_bottle/base13",
+      "{a}": "right"
+    }
+  },
+  "elapsed_seconds": 79.56389575824142
+}

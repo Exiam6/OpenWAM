@@ -1,0 +1,666 @@
+{
+  "role": "post-run descriptive first-divergence inspection; all six pairs retained",
+  "pairs": [
+    {
+      "condition": "clean",
+      "seed": 400000,
+      "first_recorded_difference": 1,
+      "first_difference_fields": [
+        "raw_images",
+        "eef_state",
+        "policy_images",
+        "request"
+      ],
+      "first_step_numeric_differences": {
+        "eef": {
+          "byte_equal": false,
+          "max_abs": 5.885958671569824e-07,
+          "rmse": 1.4072578968664518e-07,
+          "mean_abs": 5.431177214632044e-08,
+          "groups": {
+            "xyz": {
+              "max_abs": 1.1920928955078125e-07,
+              "rmse": 5.0164783688197924e-08
+            },
+            "rot6d": {
+              "max_abs": 5.885958671569824e-07,
+              "rmse": 1.7817966693848088e-07
+            },
+            "gripper": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            }
+          }
+        },
+        "server_action": {
+          "byte_equal": true,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "mean_abs": 0.0,
+          "groups": {
+            "xyz": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            },
+            "rot6d": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            },
+            "gripper": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            }
+          }
+        },
+        "joint_max_abs": 0.0
+      },
+      "action_generation_context": {
+        "first_different_action_index": 32,
+        "inferred_generation_boundary": 32,
+        "inferred_buffer_offset": 0,
+        "boundary_request_equal": false,
+        "current_request_equal": false,
+        "difference_at_first_changed_action": {
+          "byte_equal": false,
+          "max_abs": 0.0039058923721313477,
+          "rmse": 0.0010353090813901423,
+          "mean_abs": 0.0004009552299976349,
+          "groups": {
+            "xyz": {
+              "max_abs": 0.0012096911668777466,
+              "rmse": 0.000628039992341141
+            },
+            "rot6d": {
+              "max_abs": 0.0039058923721313477,
+              "rmse": 0.0012606444280703834
+            },
+            "gripper": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            }
+          }
+        },
+        "boundary_is_inferred_not_directly_traced": true
+      },
+      "raw_camera_equal_at_first_difference": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      },
+      "policy_camera_pixel_differences_at_first_difference": {
+        "head_camera": {
+          "changed_rgb_channels": 17305,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 18,
+          "mean_absolute_byte_difference": 0.08260850694444444,
+          "changed_pixel_fraction": 0.19016927083333332
+        },
+        "left_wrist_camera": {
+          "changed_rgb_channels": 16216,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 6,
+          "mean_absolute_byte_difference": 0.07121961805555556,
+          "changed_pixel_fraction": 0.18240885416666666
+        },
+        "right_wrist_camera": {
+          "changed_rgb_channels": 9002,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 13,
+          "mean_absolute_byte_difference": 0.039401041666666664,
+          "changed_pixel_fraction": 0.11114583333333333
+        }
+      }
+    },
+    {
+      "condition": "clean",
+      "seed": 400001,
+      "first_recorded_difference": 1,
+      "first_difference_fields": [
+        "raw_images",
+        "eef_state",
+        "policy_images",
+        "request"
+      ],
+      "first_step_numeric_differences": {
+        "eef": {
+          "byte_equal": false,
+          "max_abs": 1.3583339750766754e-06,
+          "rmse": 4.5890087643600424e-07,
+          "mean_abs": 2.3595057427883148e-07,
+          "groups": {
+            "xyz": {
+              "max_abs": 1.7881393432617188e-07,
+              "rmse": 1.2526432884651912e-07
+            },
+            "rot6d": {
+              "max_abs": 1.3583339750766754e-06,
+              "rmse": 5.857796354280367e-07
+            },
+            "gripper": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            }
+          }
+        },
+        "server_action": {
+          "byte_equal": true,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "mean_abs": 0.0,
+          "groups": {
+            "xyz": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            },
+            "rot6d": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            },
+            "gripper": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            }
+          }
+        },
+        "joint_max_abs": 0.0
+      },
+      "action_generation_context": {
+        "first_different_action_index": 32,
+        "inferred_generation_boundary": 32,
+        "inferred_buffer_offset": 0,
+        "boundary_request_equal": false,
+        "current_request_equal": false,
+        "difference_at_first_changed_action": {
+          "byte_equal": false,
+          "max_abs": 0.0039061903953552246,
+          "rmse": 0.0013535374154664906,
+          "mean_abs": 0.0007856227457523346,
+          "groups": {
+            "xyz": {
+              "max_abs": 0.0020413994789123535,
+              "rmse": 0.0012237381451190106
+            },
+            "rot6d": {
+              "max_abs": 0.0039061903953552246,
+              "rmse": 0.0014095319302524167
+            },
+            "gripper": {
+              "max_abs": 0.001953125,
+              "rmse": 0.0013810679320049757
+            }
+          }
+        },
+        "boundary_is_inferred_not_directly_traced": true
+      },
+      "raw_camera_equal_at_first_difference": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      },
+      "policy_camera_pixel_differences_at_first_difference": {
+        "head_camera": {
+          "changed_rgb_channels": 23189,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 29,
+          "mean_absolute_byte_difference": 0.10825086805555556,
+          "changed_pixel_fraction": 0.24528645833333335
+        },
+        "left_wrist_camera": {
+          "changed_rgb_channels": 28393,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 32,
+          "mean_absolute_byte_difference": 0.15173177083333333,
+          "changed_pixel_fraction": 0.26567708333333334
+        },
+        "right_wrist_camera": {
+          "changed_rgb_channels": 35935,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 40,
+          "mean_absolute_byte_difference": 0.20043836805555557,
+          "changed_pixel_fraction": 0.32671875
+        }
+      }
+    },
+    {
+      "condition": "clean",
+      "seed": 400002,
+      "first_recorded_difference": 1,
+      "first_difference_fields": [
+        "raw_images",
+        "eef_state",
+        "policy_images",
+        "request"
+      ],
+      "first_step_numeric_differences": {
+        "eef": {
+          "byte_equal": false,
+          "max_abs": 1.823529601097107e-06,
+          "rmse": 7.915079169295404e-07,
+          "mean_abs": 4.695979782809445e-07,
+          "groups": {
+            "xyz": {
+              "max_abs": 3.5762786865234375e-07,
+              "rmse": 2.1593834081574437e-07
+            },
+            "rot6d": {
+              "max_abs": 1.823529601097107e-06,
+              "rmse": 1.0103596492106687e-06
+            },
+            "gripper": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            }
+          }
+        },
+        "server_action": {
+          "byte_equal": true,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "mean_abs": 0.0,
+          "groups": {
+            "xyz": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            },
+            "rot6d": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            },
+            "gripper": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            }
+          }
+        },
+        "joint_max_abs": 0.0
+      },
+      "action_generation_context": {
+        "first_different_action_index": 32,
+        "inferred_generation_boundary": 32,
+        "inferred_buffer_offset": 0,
+        "boundary_request_equal": false,
+        "current_request_equal": false,
+        "difference_at_first_changed_action": {
+          "byte_equal": false,
+          "max_abs": 0.00390625,
+          "rmse": 0.0012914858355427305,
+          "mean_abs": 0.0005366519093513489,
+          "groups": {
+            "xyz": {
+              "max_abs": 0.0009677708148956299,
+              "rmse": 0.0003950907807419605
+            },
+            "rot6d": {
+              "max_abs": 0.00390625,
+              "rmse": 0.001643728812740166
+            },
+            "gripper": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            }
+          }
+        },
+        "boundary_is_inferred_not_directly_traced": true
+      },
+      "raw_camera_equal_at_first_difference": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      },
+      "policy_camera_pixel_differences_at_first_difference": {
+        "head_camera": {
+          "changed_rgb_channels": 24963,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 23,
+          "mean_absolute_byte_difference": 0.11813368055555555,
+          "changed_pixel_fraction": 0.25950520833333335
+        },
+        "left_wrist_camera": {
+          "changed_rgb_channels": 27344,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 14,
+          "mean_absolute_byte_difference": 0.13337239583333332,
+          "changed_pixel_fraction": 0.26872395833333335
+        },
+        "right_wrist_camera": {
+          "changed_rgb_channels": 39364,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 40,
+          "mean_absolute_byte_difference": 0.23226996527777777,
+          "changed_pixel_fraction": 0.3424348958333333
+        }
+      }
+    },
+    {
+      "condition": "noise",
+      "seed": 400000,
+      "first_recorded_difference": 1,
+      "first_difference_fields": [
+        "raw_images",
+        "eef_state",
+        "policy_images",
+        "request"
+      ],
+      "first_step_numeric_differences": {
+        "eef": {
+          "byte_equal": false,
+          "max_abs": 1.0970979928970337e-06,
+          "rmse": 3.509756055916241e-07,
+          "mean_abs": 1.8006076061283238e-07,
+          "groups": {
+            "xyz": {
+              "max_abs": 6.556510925292969e-07,
+              "rmse": 3.0610916888973323e-07
+            },
+            "rot6d": {
+              "max_abs": 1.0970979928970337e-06,
+              "rmse": 3.980641253552379e-07
+            },
+            "gripper": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            }
+          }
+        },
+        "server_action": {
+          "byte_equal": true,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "mean_abs": 0.0,
+          "groups": {
+            "xyz": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            },
+            "rot6d": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            },
+            "gripper": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            }
+          }
+        },
+        "joint_max_abs": 0.0
+      },
+      "action_generation_context": {
+        "first_different_action_index": 32,
+        "inferred_generation_boundary": 32,
+        "inferred_buffer_offset": 0,
+        "boundary_request_equal": false,
+        "current_request_equal": false,
+        "difference_at_first_changed_action": {
+          "byte_equal": false,
+          "max_abs": 0.00390625,
+          "rmse": 0.0009090592839697852,
+          "mean_abs": 0.0002730719745159149,
+          "groups": {
+            "xyz": {
+              "max_abs": 0.0009503364562988281,
+              "rmse": 0.00045988885848162144
+            },
+            "rot6d": {
+              "max_abs": 0.00390625,
+              "rmse": 0.0011276372445109878
+            },
+            "gripper": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            }
+          }
+        },
+        "boundary_is_inferred_not_directly_traced": true
+      },
+      "raw_camera_equal_at_first_difference": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      },
+      "policy_camera_pixel_differences_at_first_difference": {
+        "head_camera": {
+          "changed_rgb_channels": 14331,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 32,
+          "mean_absolute_byte_difference": 0.07265625,
+          "changed_pixel_fraction": 0.15505208333333334
+        },
+        "left_wrist_camera": {
+          "changed_rgb_channels": 21458,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 12,
+          "mean_absolute_byte_difference": 0.09435329861111111,
+          "changed_pixel_fraction": 0.2314453125
+        },
+        "right_wrist_camera": {
+          "changed_rgb_channels": 11916,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 8,
+          "mean_absolute_byte_difference": 0.052235243055555554,
+          "changed_pixel_fraction": 0.14134114583333332
+        }
+      }
+    },
+    {
+      "condition": "noise",
+      "seed": 400001,
+      "first_recorded_difference": 1,
+      "first_difference_fields": [
+        "raw_images",
+        "eef_state",
+        "policy_images",
+        "request"
+      ],
+      "first_step_numeric_differences": {
+        "eef": {
+          "byte_equal": false,
+          "max_abs": 5.136243999004364e-07,
+          "rmse": 2.3759499981338726e-07,
+          "mean_abs": 1.521864760434255e-07,
+          "groups": {
+            "xyz": {
+              "max_abs": 1.1920928955078125e-07,
+              "rmse": 7.094371744536211e-08
+            },
+            "rot6d": {
+              "max_abs": 5.136243999004364e-07,
+              "rmse": 3.0260392325842177e-07
+            },
+            "gripper": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            }
+          }
+        },
+        "server_action": {
+          "byte_equal": true,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "mean_abs": 0.0,
+          "groups": {
+            "xyz": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            },
+            "rot6d": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            },
+            "gripper": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            }
+          }
+        },
+        "joint_max_abs": 0.0
+      },
+      "action_generation_context": {
+        "first_different_action_index": 32,
+        "inferred_generation_boundary": 32,
+        "inferred_buffer_offset": 0,
+        "boundary_request_equal": false,
+        "current_request_equal": false,
+        "difference_at_first_changed_action": {
+          "byte_equal": false,
+          "max_abs": 0.00390625,
+          "rmse": 0.001728014996976965,
+          "mean_abs": 0.0008862704038619995,
+          "groups": {
+            "xyz": {
+              "max_abs": 0.0021015703678131104,
+              "rmse": 0.0008579625099492141
+            },
+            "rot6d": {
+              "max_abs": 0.00390625,
+              "rmse": 0.0021467828368801046
+            },
+            "gripper": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            }
+          }
+        },
+        "boundary_is_inferred_not_directly_traced": true
+      },
+      "raw_camera_equal_at_first_difference": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      },
+      "policy_camera_pixel_differences_at_first_difference": {
+        "head_camera": {
+          "changed_rgb_channels": 12803,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 23,
+          "mean_absolute_byte_difference": 0.05951388888888889,
+          "changed_pixel_fraction": 0.144765625
+        },
+        "left_wrist_camera": {
+          "changed_rgb_channels": 28782,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 33,
+          "mean_absolute_byte_difference": 0.15757378472222222,
+          "changed_pixel_fraction": 0.2688671875
+        },
+        "right_wrist_camera": {
+          "changed_rgb_channels": 33182,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 46,
+          "mean_absolute_byte_difference": 0.17842013888888889,
+          "changed_pixel_fraction": 0.30584635416666667
+        }
+      }
+    },
+    {
+      "condition": "noise",
+      "seed": 400002,
+      "first_recorded_difference": 1,
+      "first_difference_fields": [
+        "raw_images",
+        "eef_state",
+        "policy_images",
+        "request"
+      ],
+      "first_step_numeric_differences": {
+        "eef": {
+          "byte_equal": false,
+          "max_abs": 1.6856938600540161e-06,
+          "rmse": 4.4017145981950665e-07,
+          "mean_abs": 2.2823128347226885e-07,
+          "groups": {
+            "xyz": {
+              "max_abs": 8.940696716308594e-08,
+              "rmse": 5.3033621370947913e-08
+            },
+            "rot6d": {
+              "max_abs": 1.6856938600540161e-06,
+              "rmse": 5.670202003175908e-07
+            },
+            "gripper": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            }
+          }
+        },
+        "server_action": {
+          "byte_equal": true,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "mean_abs": 0.0,
+          "groups": {
+            "xyz": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            },
+            "rot6d": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            },
+            "gripper": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            }
+          }
+        },
+        "joint_max_abs": 0.0
+      },
+      "action_generation_context": {
+        "first_different_action_index": 32,
+        "inferred_generation_boundary": 32,
+        "inferred_buffer_offset": 0,
+        "boundary_request_equal": false,
+        "current_request_equal": false,
+        "difference_at_first_changed_action": {
+          "byte_equal": false,
+          "max_abs": 0.00390625,
+          "rmse": 0.001975649951645258,
+          "mean_abs": 0.0011545352637767792,
+          "groups": {
+            "xyz": {
+              "max_abs": 0.0021015405654907227,
+              "rmse": 0.0008803979607027284
+            },
+            "rot6d": {
+              "max_abs": 0.00390625,
+              "rmse": 0.0024734128111690316
+            },
+            "gripper": {
+              "max_abs": 0.0,
+              "rmse": 0.0
+            }
+          }
+        },
+        "boundary_is_inferred_not_directly_traced": true
+      },
+      "raw_camera_equal_at_first_difference": {
+        "head_camera": false,
+        "left_camera": false,
+        "right_camera": false
+      },
+      "policy_camera_pixel_differences_at_first_difference": {
+        "head_camera": {
+          "changed_rgb_channels": 13315,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 16,
+          "mean_absolute_byte_difference": 0.0630685763888889,
+          "changed_pixel_fraction": 0.15028645833333334
+        },
+        "left_wrist_camera": {
+          "changed_rgb_channels": 19298,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 11,
+          "mean_absolute_byte_difference": 0.08874131944444444,
+          "changed_pixel_fraction": 0.2060546875
+        },
+        "right_wrist_camera": {
+          "changed_rgb_channels": 38735,
+          "total_rgb_channels": 230400,
+          "max_byte_difference": 24,
+          "mean_absolute_byte_difference": 0.22700086805555555,
+          "changed_pixel_fraction": 0.34369791666666666
+        }
+      }
+    }
+  ],
+  "caveat": "Temporal ordering narrows the investigation; it does not identify a specific physics, renderer, IK or model cause."
+}

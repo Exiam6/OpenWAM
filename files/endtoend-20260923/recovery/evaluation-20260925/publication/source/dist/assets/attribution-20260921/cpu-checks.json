@@ -1,0 +1,11 @@
+{
+  "native_eval_equal_actions_types_and_physics": true,
+  "planner_argument_and_return_identity": true,
+  "planner_methods_restored": true,
+  "rng_unchanged": true,
+  "actual_qpos_distinct_from_drive_targets": true,
+  "planner_arrays_copied_before_mutation": true,
+  "third_command_rejected": true,
+  "native_three_scene_loop_exactly_two_actions": true,
+  "fixed_prompts_and_ten_choice_rng": true
+}

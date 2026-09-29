@@ -1,0 +1,26 @@
+{
+  "task": "adjust_bottle",
+  "seed": 1100017,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T19:44:04.128196-05:00",
+  "expert_plan_success": true,
+  "instruction": "Pick up the green plastic bottle with ridged bottom from the table head-up.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 135,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100017/data/episode0.hdf5",
+  "hdf5_sha256": "1f7a8ea16d57cca148b8bb6fcc7c71ad21737fbedf7ace0d93c39a5f204263d9",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "001_bottle/base16",
+      "{a}": "right"
+    }
+  },
+  "elapsed_seconds": 80.73853354156017
+}

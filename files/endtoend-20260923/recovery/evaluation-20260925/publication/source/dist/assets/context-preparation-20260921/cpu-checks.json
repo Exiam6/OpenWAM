@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-09-21T23:55:21.490513-05:00",
+  "scope": "CPU-only mocked transport with actual native eval/converter; no simulation or policy inference",
+  "tests_passed": 6,
+  "exit_code": 0,
+  "ready_for_gpu_launch": false,
+  "pending_gates": [
+    "new context trace integration without synthetic server counters",
+    "frozen runner and complete source/config manifest",
+    "future separately bounded allocation; old ceiling passed",
+    "fresh-process initialization and model-residency checks"
+  ],
+  "source_sha256": {
+    "scripts/context_trial_transport.py": "f058cadd1a75510d335feb8e6c996dcd8520f59db648bbd1c02a7113caf24c7c",
+    "scripts/check_context_trial_transport.py": "40e6fd64f5524f5a31b967a207e6f462ff5420734f1a03809bc29a8cf192fe55"
+  }
+}

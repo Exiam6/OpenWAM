@@ -1,0 +1,49 @@
+{
+  "scope": "descriptive validation diagnostics after architecture selection, before adapted-policy rollouts; no selection or extra fitting",
+  "seed": 42,
+  "latent_statistics": {
+    "clean": {
+      "mean_channel_mean": -1.0465547575222445e-06,
+      "mean_token_channel_rms": 0.9999998807907104,
+      "std_token_channel_rms": 0.00041470720316283405,
+      "mse_to_clean": 0.0
+    },
+    "noisy": {
+      "mean_channel_mean": 2.76776205510032e-07,
+      "mean_token_channel_rms": 0.9999966621398926,
+      "std_token_channel_rms": 0.0004123489197809249,
+      "mse_to_clean": 0.16612103581428528
+    },
+    "adapted_clean": {
+      "mean_channel_mean": -2.319800842087716e-05,
+      "mean_token_channel_rms": 0.9849348664283752,
+      "std_token_channel_rms": 0.019150638952851295,
+      "mse_to_clean": 0.007568140514194965
+    },
+    "adapted_noisy": {
+      "mean_channel_mean": -0.00014188936620485038,
+      "mean_token_channel_rms": 0.9620910882949829,
+      "std_token_channel_rms": 0.03181283548474312,
+      "mse_to_clean": 0.10843892395496368
+    }
+  },
+  "layout_regions": {
+    "head": {
+      "baseline_noise_mse": 0.2224242091178894,
+      "adapted_noise_mse": 0.14326873421669006,
+      "relative_change_percent": -35.587616660579116,
+      "clean_distortion_mse": 0.00877953041344881
+    },
+    "wrists": {
+      "baseline_noise_mse": 0.053514644503593445,
+      "adapted_noise_mse": 0.03877926245331764,
+      "relative_change_percent": -27.535232994561586,
+      "clean_distortion_mse": 0.005145360250025988
+    }
+  },
+  "notes": [
+    "Head image occupies top 16/24 latent rows; wrists occupy bottom 8/24.",
+    "Global DINO/S-VAE mixing means these are token-layout regions, not causally isolated camera features.",
+    "These quantities do not determine control sensitivity or success."
+  ]
+}

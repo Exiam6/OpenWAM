@@ -1,0 +1,92 @@
+{
+  "checked_at": "2026-09-22T01:03:37.011118-05:00",
+  "passed": true,
+  "cli": {
+    "normal_package_bootstrap": true,
+    "calls": 2,
+    "clips_per_call": 3,
+    "batch_sizes": [
+      2,
+      1
+    ],
+    "exit_codes": [
+      0,
+      0
+    ],
+    "training_normalization_preserved": true,
+    "full_upstream_suite_run": false
+  },
+  "alignment": {
+    "clean_samples": 480,
+    "noisy_samples": 900,
+    "train_episodes": [
+      3,
+      4,
+      5,
+      7,
+      9,
+      10,
+      15,
+      16,
+      17,
+      18,
+      20,
+      21,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      49
+    ],
+    "validation_episodes": [
+      6,
+      11,
+      19,
+      22,
+      35
+    ],
+    "samples_by_split": {
+      "train": 420,
+      "val": 60
+    },
+    "test_episodes_opened": 0,
+    "raw_step_horizon": 4,
+    "state_dim": 16,
+    "target_dim": 8,
+    "timestamps": "raw HDF5 row indices; not physical time"
+  },
+  "versions": {
+    "torch": "2.7.0+cu126",
+    "transformers": "5.17.0",
+    "diffusers": "0.40.0",
+    "h5py": "3.16.0",
+    "numpy": "2.2.6"
+  },
+  "elapsed_seconds": 24.248428031802177,
+  "inputs_unchanged": true,
+  "limits": [
+    "CLI fixture is software validation, not new held-out performance evidence.",
+    "Cache manifests/code align samples; original extraction did not store per-image hashes, so feature provenance cannot be retrospectively proven byte-for-byte without re-encoding.",
+    "Validation episodes were used for adapter selection; any later readout is development evidence.",
+    "Published representation may have trained on these demos; no matched pretrained comparison.",
+    "Targets are achieved state, not commands or contact; no rotation target."
+  ]
+}

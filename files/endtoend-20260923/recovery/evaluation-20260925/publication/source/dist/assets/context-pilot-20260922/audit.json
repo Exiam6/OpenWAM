@@ -1,0 +1,19 @@
+{
+  "all_completed_record_checks_passed": true,
+  "runtime_sources_verified": 55,
+  "study_inputs_verified": 6,
+  "requests_audited": 2,
+  "decoded_images_audited": 6,
+  "planner_calls_recorded": 4,
+  "complete_trials": 1,
+  "planned_trials": 4,
+  "videos": [
+    {
+      "trial": "A0",
+      "source": "A0/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/context-A0/2026-09-22 00:30:49/episode0.mp4",
+      "sha256": "09b8ac64e919021753ba239aa8e4981134c42f1d8e78e42d69d156c76e8601ad",
+      "bytes": 4075
+    }
+  ],
+  "partial_or_failed_trials_retained": true
+}

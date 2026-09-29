@@ -1,0 +1,31 @@
+{
+  "scope": "Qualitative illustration of the observed candidate-only clean failure; not a contact label or causal mechanism",
+  "rows": [
+    {
+      "condition": "identity-confirm-clean",
+      "seed": 300003,
+      "frames": 95,
+      "shown_frames": [
+        0,
+        32,
+        64,
+        94
+      ],
+      "success": true,
+      "actions": 94
+    },
+    {
+      "condition": "adapter-confirm-clean",
+      "seed": 300003,
+      "frames": 400,
+      "shown_frames": [
+        0,
+        32,
+        64,
+        399
+      ],
+      "success": false,
+      "actions": 400
+    }
+  ]
+}

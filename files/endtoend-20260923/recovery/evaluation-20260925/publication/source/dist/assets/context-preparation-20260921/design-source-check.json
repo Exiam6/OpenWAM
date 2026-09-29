@@ -1,0 +1,20 @@
+{
+  "source_trace": "repeatability-20260921/closedloop/r0-clean/seed-400000-trace.jsonl",
+  "source_trace_sha256": "e4d385b587eecff67e0acf77348145e94f5f53349f2efcf2f49d0600ac8fe983",
+  "commands": [
+    {
+      "step": 0,
+      "server_action_hash": "466900c9b0508e8f0fe435c2e16de4f6f28ae5174d588233f295010776a3850a",
+      "env_action_hash": "553935c978a0333fc854d0b318d60f783be09681e6c029e7000083dba6a6cb94",
+      "request_sha256": "9c8241a4c1ee4b9eaab8b67910390bf45d7813bee9d1caf13fe4478944f441ba"
+    },
+    {
+      "step": 1,
+      "server_action_hash": "16d1bff2e2eeba84abcbb3f4cbda5cf3c37a4f97a8f529b8c7460cdc49cd5fb5",
+      "env_action_hash": "b15e61cf029d2962413106796ace5fa873f6966add8827427b12c7c65bf62fbd",
+      "request_sha256": "d4117d85309b04e2d773ad125eeef4ca91180e6bc1fd70a825962a7869999959"
+    }
+  ],
+  "design_sha256": "b7a73578de0cc02456c9be0160d551a92635aebde682a4220cadc69fca1a37c3",
+  "no_gpu_run": true
+}

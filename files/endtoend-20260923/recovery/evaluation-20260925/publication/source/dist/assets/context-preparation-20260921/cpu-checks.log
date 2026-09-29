@@ -1,0 +1,11 @@
+test_actual_native_eval_has_identical_16d_targets_in_both_modes (__main__.ContextChecks) ... ok
+test_ambiguous_failure_aborts_and_is_never_retried (__main__.ContextChecks) ... ok
+test_both_modes_preserve_inputs_and_rng (__main__.ContextChecks) ... ok
+test_idle_has_no_predict_and_no_fabricated_server_counter (__main__.ContextChecks) ... ok
+test_rejects_invalid_configuration_and_use_before_reset (__main__.ContextChecks) ... ok
+test_shadow_calls_once_keeps_unexpected_response_and_saved_action (__main__.ContextChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.214s
+
+OK

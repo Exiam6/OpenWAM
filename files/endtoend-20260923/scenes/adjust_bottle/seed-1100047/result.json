@@ -1,0 +1,26 @@
+{
+  "task": "adjust_bottle",
+  "seed": 1100047,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T20:18:10.566946-05:00",
+  "expert_plan_success": true,
+  "instruction": "Lift the brown bottle from the table using the left arm.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 150,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100047/data/episode0.hdf5",
+  "hdf5_sha256": "2f74f1060e1345745f69be04373ad540cca10da154a731b553040afb63678081",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "001_bottle/base13",
+      "{a}": "left"
+    }
+  },
+  "elapsed_seconds": 80.28214983642101
+}

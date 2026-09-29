@@ -1,0 +1,13 @@
+{
+  "contribution_commit": "d1273ca685d7f65b3754843b5fe42a210ecdcfa0",
+  "upstream_base": "7c5861e45cfe1339a0323f0e0b03a3316c37971c",
+  "patch_sha256": "da0f13c5b4ffaf79325e163c35836486667dfadbc3eec53b37574102a7ab2c52",
+  "patch_applies_to_pinned_base": true,
+  "unit_tests_passed": 6,
+  "unit_test_command": "benchmark-env/bin/python -m unittest tests.test_policy_trace -v",
+  "ruff_check": "passed after formatting",
+  "git_diff_check": "passed",
+  "live_websocket_validation": false,
+  "upstream_PR_submitted": false,
+  "replay_audit_sha256": "caa74b6062f69846f311975d7a54242ff33a58b9c10be0b771599b3080a16845"
+}

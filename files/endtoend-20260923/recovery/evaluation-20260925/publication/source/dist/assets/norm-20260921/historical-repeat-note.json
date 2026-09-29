@@ -1,0 +1,19 @@
+{
+  "scene": 300003,
+  "prior_original": {
+    "success": true,
+    "actions": 94
+  },
+  "current_original": {
+    "success": false,
+    "actions": 400
+  },
+  "same_initial_head_state_prompt": true,
+  "identity_latent_max_change": 0.0,
+  "execution_context_changed": [
+    "historical scene replayed individually as episode zero, previously third in five-scene sequence",
+    "new wrapper and server had first executed ten feasibility-reference episodes"
+  ],
+  "cause": "not isolated; do not assert simulator nondeterminism or a stable adapter-caused regression from this one case",
+  "primary_protocol_changed": false
+}

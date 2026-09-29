@@ -1,0 +1,236 @@
+{
+  "title": "OpenWAM offline representation pilot",
+  "date": "2026-09-20",
+  "status": "completed",
+  "closed_loop_evaluated": false,
+  "dataset": {
+    "name": "RoboTwin2.0 adjust_bottle clean50",
+    "episodes": 50,
+    "clips": 600,
+    "train_episodes": 35,
+    "validation_episodes": 5,
+    "test_episodes": 10,
+    "train_clips": 420,
+    "validation_clips": 60,
+    "test_clips": 120,
+    "split_seed": 42,
+    "resolution": [
+      384,
+      320
+    ],
+    "video_frames": 9,
+    "raw_window_steps": 33,
+    "video_stride": 4
+  },
+  "gpu": {
+    "model": "NVIDIA L40S",
+    "count": 1,
+    "torch": "2.7.0+cu126",
+    "transformers": "5.17.0",
+    "max_pytorch_allocated_gb": 1.033967104,
+    "total_job_wall_seconds": 318.67627752944827,
+    "total_gpu_hours_upper_bound_one_reserved_gpu": 0.08852118820262452
+  },
+  "extraction": {
+    "extract_wall_seconds": 36.078612403944135,
+    "median_encoder_seconds_per_clip": 0.00806356780230999,
+    "feature_cache_bytes": 1327232298,
+    "condition_future_invariance_max_abs": 0.0
+  },
+  "rows": [
+    {
+      "label": "Raw DINOv3",
+      "feature_mse": 0.0,
+      "probe_mse": 0.12067888318240207,
+      "translation_rmse_mm": 6.408567669605191,
+      "gripper_rmse": 0.11428586108712592,
+      "feature_mse_std": 0,
+      "probe_mse_std": 0,
+      "training_seeds": 1,
+      "channels": 768,
+      "episode_bootstrap_95ci": [
+        0.0828868153601252,
+        0.16631861437950257
+      ]
+    },
+    {
+      "label": "PCA-24",
+      "feature_mse": 0.3772503949701786,
+      "probe_mse": 0.14903030705066994,
+      "translation_rmse_mm": 7.585833866733098,
+      "gripper_rmse": 0.048286257431656945,
+      "feature_mse_std": 0,
+      "probe_mse_std": 0,
+      "training_seeds": 1,
+      "channels": 24,
+      "episode_bootstrap_95ci": [
+        0.11666019119771644,
+        0.19013132302723737
+      ]
+    },
+    {
+      "label": "PCA-48",
+      "feature_mse": 0.2605912332733472,
+      "probe_mse": 0.1417537136577022,
+      "translation_rmse_mm": 7.344427949726482,
+      "gripper_rmse": 0.055110098579413534,
+      "feature_mse_std": 0,
+      "probe_mse_std": 0,
+      "training_seeds": 1,
+      "channels": 48,
+      "episode_bootstrap_95ci": [
+        0.11061360579065257,
+        0.17728549645929825
+      ]
+    },
+    {
+      "label": "PCA-96",
+      "feature_mse": 0.16490397130449613,
+      "probe_mse": 0.12921326889138593,
+      "translation_rmse_mm": 6.716725081339528,
+      "gripper_rmse": 0.10444730162967003,
+      "feature_mse_std": 0,
+      "probe_mse_std": 0,
+      "training_seeds": 1,
+      "channels": 96,
+      "episode_bootstrap_95ci": [
+        0.08862715752098291,
+        0.18058506832813176
+      ]
+    },
+    {
+      "label": "S-VAE-48 / 500 steps",
+      "feature_mse": 0.20351136488219101,
+      "probe_mse": 0.13695215909176015,
+      "translation_rmse_mm": 7.16118703543119,
+      "gripper_rmse": 0.07627642272473444,
+      "feature_mse_std": 0,
+      "probe_mse_std": 0,
+      "training_seeds": 1,
+      "channels": 48,
+      "episode_bootstrap_95ci": [
+        0.10578972440837936,
+        0.17742680444012357
+      ]
+    },
+    {
+      "label": "S-VAE-48 / 2000 steps",
+      "channels": 48,
+      "training_seeds": 3,
+      "feature_mse": 0.1304177362471819,
+      "feature_mse_std": 0.0005253957987444068,
+      "probe_mse": 0.13590332407970837,
+      "probe_mse_std": 0.009830368218122753,
+      "translation_rmse_mm": 7.053644788633107,
+      "translation_rmse_mm_std": 0.27928858919999855,
+      "gripper_rmse": 0.0737415005038429,
+      "gripper_rmse_std": 0.009226996319984693
+    }
+  ],
+  "fresh_svae_2000_by_seed": [
+    {
+      "seed": 42,
+      "feature_mse": 0.1306980057929953,
+      "probe_mse": 0.12708076503292662,
+      "translation_rmse_mm": 6.816606091509599,
+      "gripper_rmse": 0.07882025765369562,
+      "selected_step": 1900,
+      "episode_bootstrap_95ci": [
+        0.09876806655202867,
+        0.16478126380478955
+      ]
+    },
+    {
+      "seed": 43,
+      "feature_mse": 0.1307435708741347,
+      "probe_mse": 0.1341293001987855,
+      "translation_rmse_mm": 6.982792523411753,
+      "gripper_rmse": 0.07931335675775894,
+      "selected_step": 2000,
+      "episode_bootstrap_95ci": [
+        0.09915347265717837,
+        0.17760342606753066
+      ]
+    },
+    {
+      "seed": 44,
+      "feature_mse": 0.12981163207441568,
+      "probe_mse": 0.14649990700741297,
+      "translation_rmse_mm": 7.361535750977967,
+      "gripper_rmse": 0.06309088710007414,
+      "selected_step": 2000,
+      "episode_bootstrap_95ci": [
+        0.10547269318810253,
+        0.19420346191600377
+      ]
+    }
+  ],
+  "proprio_only": {
+    "condition": "proprio_only",
+    "alpha": 0.1,
+    "validation_normalized_mse": 0.2519659646431934,
+    "normalized_mse": 0.2416046111620834,
+    "translation_rmse_mm": 9.660985199821367,
+    "gripper_rmse": 0.05151287932345348,
+    "normalized_mse_episode_bootstrap_95ci": [
+      0.19721713277963202,
+      0.31382947314428034
+    ]
+  },
+  "simple_baselines": {
+    "zero_motion_current_gripper": {
+      "normalized_mse": 0.611468493938446,
+      "translation_rmse_mm": 15.98188304901123,
+      "gripper_rmse": 0.06195560842752457
+    },
+    "training_mean": {
+      "normalized_mse": 0.8318013548851013,
+      "translation_rmse_mm": 15.918487548828125,
+      "gripper_rmse": 0.4032951593399048
+    }
+  },
+  "published_svae_reference": {
+    "feature": {
+      "condition": "svae_published48",
+      "channels": 48,
+      "eval_seconds_all_clips": 1.8588209059089422,
+      "test_standardized_feature_mse": 0.12365186139941216,
+      "test_feature_cosine": 0.9750362500548363,
+      "published_training_overlap_possible": true
+    },
+    "probe": {
+      "condition": "svae_published48_visual_plus_proprio",
+      "alpha": 0.1,
+      "validation_normalized_mse": 0.11096348881398584,
+      "normalized_mse": 0.14629311488486801,
+      "translation_rmse_mm": 7.300939286958351,
+      "gripper_rmse": 0.07611350860380703,
+      "normalized_mse_episode_bootstrap_95ci": [
+        0.11112234623827659,
+        0.19094122536749433
+      ]
+    },
+    "independent_holdout": false
+  },
+  "target": "Four-raw-step future achieved end-effector XYZ displacement and achieved gripper state; current visual observation plus proprioception input; not controller action or policy success.",
+  "limitations": [
+    "One simulated task, fixed episode split, correlated windows within episodes.",
+    "Ridge penalty and S-VAE checkpoint selected on validation, test used for reporting.",
+    "The three-seed follow-up was specified after the 500-step pilot; all are exploratory results.",
+    "2000-step S-VAE is a fixed-budget study, not proof of convergence.",
+    "Published S-VAE may have seen all pilot trajectories and is excluded from the fair comparison.",
+    "Stronger feature reconstruction does not establish higher closed-loop success."
+  ],
+  "source": {
+    "model_repo": "OpenWAM/robotwin_dual_system_joint_self_attention_dinov3_svae",
+    "model_revision": "af1595c8ee54955116abbc0b0ffa17fa48deb691",
+    "source_checkpoint": "checkpoint_step_9890.safetensors",
+    "tensor_count": 293,
+    "tensor_bytes": 237723840,
+    "extracted_sha256": "d84eabf6b6e01f58dd4a2d93af0eb426191a595ebaba1f43c47caa5feaefeef7",
+    "data_repo": "TianxingChen/RoboTwin2.0",
+    "data_revision": "981c92aa34d8f94d4cff47e0d5bc2f7d4e0af042",
+    "data_path": "dataset/adjust_bottle/aloha-agilex_clean_50.zip",
+    "data_expected_sha256": "5554b6b30e37c6ed2f0bbc48079e8ad79d9512e9d4f910a5e71b0d5ad8fbe50e"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "successes": 5,
+  "episodes": 5,
+  "seed": 100004,
+  "success_rate": 1.0,
+  "progress": [
+    {
+      "successes": 1,
+      "episodes": 1,
+      "seed": 100000
+    },
+    {
+      "successes": 2,
+      "episodes": 2,
+      "seed": 100001
+    },
+    {
+      "successes": 3,
+      "episodes": 3,
+      "seed": 100002
+    },
+    {
+      "successes": 4,
+      "episodes": 4,
+      "seed": 100003
+    },
+    {
+      "successes": 5,
+      "episodes": 5,
+      "seed": 100004
+    }
+  ],
+  "scope": "Published DINO/S-VAE policy only; setup smoke, not auxiliary-loss or full-paper evaluation",
+  "task": "pick_dual_bottles",
+  "mode": "demo_clean",
+  "seed_argument": 0,
+  "instruction_type": "unseen",
+  "step_limit": 400,
+  "checkpoint_revision": "af1595c8ee54955116abbc0b0ffa17fa48deb691",
+  "robotwin_commit": "0aeea2d669c0f8516f4d5785f0aa33ba812c14b4",
+  "compile_enabled": false,
+  "denoise_steps": 10,
+  "dit_cache_enabled": true,
+  "planner_fallback": false,
+  "original_result_file_rate": 0.05,
+  "original_result_file_text": "Timestamp: 2026-09-21 12:52:19\n\nInstruction Type: unseen\n\n0.05",
+  "denominator_bug_observed": true,
+  "client_log_sha256": "46b9b0792c6d8c434e1887d6abe02a625344f8ae1871ef80f5689f3e1521ce6c",
+  "setup_exceptions_in_log": 0,
+  "exit_code": 0,
+  "summarized_at": "2026-09-21T12:59:39-0500"
+}

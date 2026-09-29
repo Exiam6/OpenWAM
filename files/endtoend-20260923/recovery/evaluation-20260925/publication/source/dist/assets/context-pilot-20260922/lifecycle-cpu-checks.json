@@ -1,0 +1,12 @@
+{
+  "tests_passed": 7,
+  "exit_code": 0,
+  "prior_context_integration_gates": 14,
+  "source_sha256": {
+    "context_client.py": "842d9981677896d197b169e899661267d0102cc9d49cc29c8199ab33c77c66b4",
+    "serve_context.py": "e75bc1a837abe94580833d4d7bd63d0d36e061b4c8465cbb558ee99a6998c7fa",
+    "context_runner.py": "79533478a09690a7940c49c4e03afb472fad00c20b09a9137e8610e8ef5102fa",
+    "check_context_lifecycle.py": "b0e6b1f209a8a7bc0001c566a60747130409b8f179d92caf62e9c119e5661aac",
+    "summarize_context.py": "96235c44f005841c6d560a3dcc6ba560db832b2135f063c59c63106dd9924298"
+  }
+}

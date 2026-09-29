@@ -1,0 +1,17 @@
+{
+  "invoked_at": "2026-09-22T00:28:26.608189-05:00",
+  "argv": [
+    "timeout",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "600s",
+    "/usr/bin/python3",
+    "/data02/zifanz4/openwam-experiments/scripts/context_runner.py",
+    "--root",
+    "/data02/zifanz4/openwam-experiments",
+    "--study",
+    "/data02/zifanz4/openwam-experiments/results/context-pilot-20260922"
+  ],
+  "tmux": "wam-context",
+  "shell": "cd /data02/zifanz4/openwam-experiments\ntimeout --signal=TERM --kill-after=5s 600s /usr/bin/python3 /data02/zifanz4/openwam-experiments/scripts/context_runner.py --root /data02/zifanz4/openwam-experiments --study /data02/zifanz4/openwam-experiments/results/context-pilot-20260922 > /data02/zifanz4/openwam-experiments/results/context-pilot-20260922/launcher.log 2>&1\ncontext_outer_code=$?\nprintf \"%s\\n\" \"$context_outer_code\" > /data02/zifanz4/openwam-experiments/results/context-pilot-20260922/outer-exit-code.txt\n"
+}

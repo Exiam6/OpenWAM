@@ -1,0 +1,215 @@
+{
+  "scope": "existing five-episode validation cache; diagnostic only, no selection, no held-out demonstration test opened",
+  "arms": {
+    "identity": {
+      "noise_restoration_mse": 0.16612103581428528,
+      "clean_distortion_mse": 0.0,
+      "max_clean_change": 0.0,
+      "statistics": {
+        "clean": {
+          "mean_token_rms": 0.9999998807907104,
+          "std_token_rms": 0.00041470720316283405,
+          "mean_abs_token_mean": 0.0001940162619575858
+        },
+        "noise": {
+          "mean_token_rms": 0.9999966621398926,
+          "std_token_rms": 0.0004123489197809249,
+          "mean_abs_token_mean": 0.00019363852334208786
+        }
+      },
+      "episodes": [
+        {
+          "episode": 6,
+          "noise_restoration_mse": 0.16830401122570038,
+          "clean_distortion_mse": 0.0
+        },
+        {
+          "episode": 11,
+          "noise_restoration_mse": 0.15475231409072876,
+          "clean_distortion_mse": 0.0
+        },
+        {
+          "episode": 19,
+          "noise_restoration_mse": 0.16771192848682404,
+          "clean_distortion_mse": 0.0
+        },
+        {
+          "episode": 22,
+          "noise_restoration_mse": 0.17361672222614288,
+          "clean_distortion_mse": 0.0
+        },
+        {
+          "episode": 35,
+          "noise_restoration_mse": 0.16622017323970795,
+          "clean_distortion_mse": 0.0
+        }
+      ]
+    },
+    "renorm": {
+      "noise_restoration_mse": 0.16612111032009125,
+      "clean_distortion_mse": 1.260022397531202e-08,
+      "max_clean_change": 0.001953125,
+      "statistics": {
+        "clean": {
+          "mean_token_rms": 0.9999999403953552,
+          "std_token_rms": 0.0004136596107855439,
+          "mean_abs_token_mean": 0.0001708976924419403
+        },
+        "noise": {
+          "mean_token_rms": 0.9999966621398926,
+          "std_token_rms": 0.0004111910529900342,
+          "mean_abs_token_mean": 0.00017070418107323349
+        }
+      },
+      "episodes": [
+        {
+          "episode": 6,
+          "noise_restoration_mse": 0.16830401122570038,
+          "clean_distortion_mse": 1.2456850662090346e-08
+        },
+        {
+          "episode": 11,
+          "noise_restoration_mse": 0.15475237369537354,
+          "clean_distortion_mse": 1.2971535845451854e-08
+        },
+        {
+          "episode": 19,
+          "noise_restoration_mse": 0.16771209239959717,
+          "clean_distortion_mse": 1.294619522695939e-08
+        },
+        {
+          "episode": 22,
+          "noise_restoration_mse": 0.1736169308423996,
+          "clean_distortion_mse": 1.2532050952529517e-08
+        },
+        {
+          "episode": 35,
+          "noise_restoration_mse": 0.16622017323970795,
+          "clean_distortion_mse": 1.209449163042109e-08
+        }
+      ]
+    },
+    "adapter": {
+      "noise_restoration_mse": 0.10843892395496368,
+      "clean_distortion_mse": 0.007568140979856253,
+      "max_clean_change": 1.109375,
+      "statistics": {
+        "clean": {
+          "mean_token_rms": 0.9849348664283752,
+          "std_token_rms": 0.019150638952851295,
+          "mean_abs_token_mean": 0.000295510544674471
+        },
+        "noise": {
+          "mean_token_rms": 0.9620910882949829,
+          "std_token_rms": 0.03181283548474312,
+          "mean_abs_token_mean": 0.0003382984141353518
+        }
+      },
+      "episodes": [
+        {
+          "episode": 6,
+          "noise_restoration_mse": 0.10754165798425674,
+          "clean_distortion_mse": 0.00698836287483573
+        },
+        {
+          "episode": 11,
+          "noise_restoration_mse": 0.1003618836402893,
+          "clean_distortion_mse": 0.007486527785658836
+        },
+        {
+          "episode": 19,
+          "noise_restoration_mse": 0.1097252368927002,
+          "clean_distortion_mse": 0.007802273612469435
+        },
+        {
+          "episode": 22,
+          "noise_restoration_mse": 0.115847148001194,
+          "clean_distortion_mse": 0.007958642207086086
+        },
+        {
+          "episode": 35,
+          "noise_restoration_mse": 0.10871867090463638,
+          "clean_distortion_mse": 0.0076048970222473145
+        }
+      ]
+    },
+    "adapter_renorm": {
+      "noise_restoration_mse": 0.11172618716955185,
+      "clean_distortion_mse": 0.007191358134150505,
+      "max_clean_change": 1.09375,
+      "statistics": {
+        "clean": {
+          "mean_token_rms": 0.9999945759773254,
+          "std_token_rms": 0.0006452225497923791,
+          "mean_abs_token_mean": 0.00021070640650577843
+        },
+        "noise": {
+          "mean_token_rms": 1.0000003576278687,
+          "std_token_rms": 0.0005409013829194009,
+          "mean_abs_token_mean": 0.00020164567104075104
+        }
+      },
+      "episodes": [
+        {
+          "episode": 6,
+          "noise_restoration_mse": 0.11065389961004257,
+          "clean_distortion_mse": 0.006674472708255053
+        },
+        {
+          "episode": 11,
+          "noise_restoration_mse": 0.10316869616508484,
+          "clean_distortion_mse": 0.007137845735996962
+        },
+        {
+          "episode": 19,
+          "noise_restoration_mse": 0.11331409960985184,
+          "clean_distortion_mse": 0.007412094157189131
+        },
+        {
+          "episode": 22,
+          "noise_restoration_mse": 0.11942881345748901,
+          "clean_distortion_mse": 0.007489636540412903
+        },
+        {
+          "episode": 35,
+          "noise_restoration_mse": 0.11206542700529099,
+          "clean_distortion_mse": 0.007242738734930754
+        }
+      ]
+    }
+  },
+  "paired_differences": {
+    "adapter_renorm_minus_adapter": {
+      "noise_restoration_mse": {
+        "mean": 0.0032872676849365233,
+        "episode_bootstrap_95ci": [
+          0.0030228689312934874,
+          0.0035375624895095823
+        ]
+      },
+      "clean_distortion_mse": {
+        "mean": -0.00037678312510252,
+        "episode_bootstrap_95ci": [
+          -0.0004262667149305344,
+          -0.00033610640093684196
+        ]
+      }
+    },
+    "renorm_minus_identity": {
+      "noise_restoration_mse": {
+        "mean": 8.64267349243164e-08,
+        "episode_bootstrap_95ci": [
+          1.1920928955078126e-08,
+          1.609325408935547e-07
+        ]
+      },
+      "clean_distortion_mse": {
+        "mean": 1.2600224863490439e-08,
+        "episode_bootstrap_95ci": [
+          1.2326947107510477e-08,
+          1.2873502619470401e-08
+        ]
+      }
+    }
+  }
+}

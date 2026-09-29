@@ -1,0 +1,464 @@
+{
+  "role": "12 reused-scene original-policy repeatability rollouts, not generalization benchmark",
+  "all_integrity_checks_passed": true,
+  "episodes": 12,
+  "requests": 1869,
+  "compressed_request_bytes": 527927174,
+  "groups": {
+    "r0-clean": {
+      "condition": "clean",
+      "successes": 3,
+      "episodes": 3,
+      "records": [
+        {
+          "seed": 400000,
+          "instruction": "Grab the plastic soda bottle with one arm, grab the green bottle with white label with the other.",
+          "initial_head_sha256": "3c6c5721106490f5f378996cf7d7081414e944df14b0302be79dfe6659e22725",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 112,
+          "policy_head_sha256": "3c6c5721106490f5f378996cf7d7081414e944df14b0302be79dfe6659e22725",
+          "actions": 112,
+          "success": true
+        },
+        {
+          "seed": 400001,
+          "instruction": "Pick the plastic soda bottle with one arm, the green plastic bottle with ridged bottom with the other.",
+          "initial_head_sha256": "21df4a4f301e0f980891d63decb0f6dbb8840d2fa0a870220721b2b5168cd7da",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 105,
+          "policy_head_sha256": "21df4a4f301e0f980891d63decb0f6dbb8840d2fa0a870220721b2b5168cd7da",
+          "actions": 105,
+          "success": true
+        },
+        {
+          "seed": 400002,
+          "instruction": "Pick the brown bottle, then pick the green plastic bottle with ridged bottom.",
+          "initial_head_sha256": "2c463f7ae21010e61e89558aebf601ba02a3741f3d80c35ae7d1335e98864c0a",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 105,
+          "policy_head_sha256": "2c463f7ae21010e61e89558aebf601ba02a3741f3d80c35ae7d1335e98864c0a",
+          "actions": 105,
+          "success": true
+        }
+      ],
+      "script_sha256": "0268e61922251fef164fbcb5288b98612caf36037bb5e8fc40a1e2ef661a945b"
+    },
+    "r0-noise": {
+      "condition": "noise",
+      "successes": 2,
+      "episodes": 3,
+      "records": [
+        {
+          "seed": 400000,
+          "instruction": "Grab the plastic soda bottle with one arm, grab the green bottle with white label with the other.",
+          "initial_head_sha256": "3c6c5721106490f5f378996cf7d7081414e944df14b0302be79dfe6659e22725",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 110,
+          "policy_head_sha256": "2d7f51d0dcf792c58b4db32ea2d219acdfb7e73454c3bf97f5b35b64d99b0431",
+          "actions": 110,
+          "success": true
+        },
+        {
+          "seed": 400001,
+          "instruction": "Pick the plastic soda bottle with one arm, the green plastic bottle with ridged bottom with the other.",
+          "initial_head_sha256": "21df4a4f301e0f980891d63decb0f6dbb8840d2fa0a870220721b2b5168cd7da",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 400,
+          "policy_head_sha256": "16d7d8b3a903266a4dd0db80e9ed23a98b699816b7e0e6743f0bc3584dfac10b",
+          "actions": 400,
+          "success": false
+        },
+        {
+          "seed": 400002,
+          "instruction": "Pick the brown bottle, then pick the green plastic bottle with ridged bottom.",
+          "initial_head_sha256": "2c463f7ae21010e61e89558aebf601ba02a3741f3d80c35ae7d1335e98864c0a",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 102,
+          "policy_head_sha256": "912382770806ed89ace60d22143ee260e258b91e9cadcbaa4552045ff9bfc91d",
+          "actions": 102,
+          "success": true
+        }
+      ],
+      "script_sha256": "0268e61922251fef164fbcb5288b98612caf36037bb5e8fc40a1e2ef661a945b"
+    },
+    "r1-clean": {
+      "condition": "clean",
+      "successes": 3,
+      "episodes": 3,
+      "records": [
+        {
+          "seed": 400000,
+          "instruction": "Grab the plastic soda bottle with one arm, grab the green bottle with white label with the other.",
+          "initial_head_sha256": "3c6c5721106490f5f378996cf7d7081414e944df14b0302be79dfe6659e22725",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 112,
+          "policy_head_sha256": "3c6c5721106490f5f378996cf7d7081414e944df14b0302be79dfe6659e22725",
+          "actions": 112,
+          "success": true
+        },
+        {
+          "seed": 400001,
+          "instruction": "Pick the plastic soda bottle with one arm, the green plastic bottle with ridged bottom with the other.",
+          "initial_head_sha256": "21df4a4f301e0f980891d63decb0f6dbb8840d2fa0a870220721b2b5168cd7da",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 105,
+          "policy_head_sha256": "21df4a4f301e0f980891d63decb0f6dbb8840d2fa0a870220721b2b5168cd7da",
+          "actions": 105,
+          "success": true
+        },
+        {
+          "seed": 400002,
+          "instruction": "Pick the brown bottle, then pick the green plastic bottle with ridged bottom.",
+          "initial_head_sha256": "2c463f7ae21010e61e89558aebf601ba02a3741f3d80c35ae7d1335e98864c0a",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "clean",
+          "calls": 106,
+          "policy_head_sha256": "2c463f7ae21010e61e89558aebf601ba02a3741f3d80c35ae7d1335e98864c0a",
+          "actions": 106,
+          "success": true
+        }
+      ],
+      "script_sha256": "0268e61922251fef164fbcb5288b98612caf36037bb5e8fc40a1e2ef661a945b"
+    },
+    "r1-noise": {
+      "condition": "noise",
+      "successes": 2,
+      "episodes": 3,
+      "records": [
+        {
+          "seed": 400000,
+          "instruction": "Grab the plastic soda bottle with one arm, grab the green bottle with white label with the other.",
+          "initial_head_sha256": "3c6c5721106490f5f378996cf7d7081414e944df14b0302be79dfe6659e22725",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 110,
+          "policy_head_sha256": "2d7f51d0dcf792c58b4db32ea2d219acdfb7e73454c3bf97f5b35b64d99b0431",
+          "actions": 110,
+          "success": true
+        },
+        {
+          "seed": 400001,
+          "instruction": "Pick the plastic soda bottle with one arm, the green plastic bottle with ridged bottom with the other.",
+          "initial_head_sha256": "21df4a4f301e0f980891d63decb0f6dbb8840d2fa0a870220721b2b5168cd7da",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 400,
+          "policy_head_sha256": "16d7d8b3a903266a4dd0db80e9ed23a98b699816b7e0e6743f0bc3584dfac10b",
+          "actions": 400,
+          "success": false
+        },
+        {
+          "seed": 400002,
+          "instruction": "Pick the brown bottle, then pick the green plastic bottle with ridged bottom.",
+          "initial_head_sha256": "2c463f7ae21010e61e89558aebf601ba02a3741f3d80c35ae7d1335e98864c0a",
+          "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+          "condition": "noise",
+          "calls": 102,
+          "policy_head_sha256": "912382770806ed89ace60d22143ee260e258b91e9cadcbaa4552045ff9bfc91d",
+          "actions": 102,
+          "success": true
+        }
+      ],
+      "script_sha256": "0268e61922251fef164fbcb5288b98612caf36037bb5e8fc40a1e2ef661a945b"
+    }
+  },
+  "paired_trajectories": [
+    {
+      "condition": "clean",
+      "seed": 400000,
+      "lengths": [
+        112,
+        112
+      ],
+      "successes": [
+        true,
+        true
+      ],
+      "shared_steps": 112,
+      "first_different_step": {
+        "raw_images": 1,
+        "eef_state": 1,
+        "joint_state": 23,
+        "policy_images": 1,
+        "request": 1,
+        "server_action": 32,
+        "env_target": 32,
+        "success_flag": null
+      },
+      "raw_camera_first_differences": {
+        "head_camera": 1,
+        "left_camera": 1,
+        "right_camera": 1
+      },
+      "max_abs_over_shared_prefix": {
+        "eef_state": 0.00954502820968628,
+        "joint_state": 0.031403183937072754,
+        "server_action": 0.009765625,
+        "env_action": 0.0068359375
+      },
+      "all_recorded_values_identical": false,
+      "first_action_vs_fixed_request_diagnostic": [
+        {
+          "round": 0,
+          "exact": true,
+          "max_abs": 0.0
+        },
+        {
+          "round": 1,
+          "exact": true,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "condition": "clean",
+      "seed": 400001,
+      "lengths": [
+        105,
+        105
+      ],
+      "successes": [
+        true,
+        true
+      ],
+      "shared_steps": 105,
+      "first_different_step": {
+        "raw_images": 1,
+        "eef_state": 1,
+        "joint_state": 6,
+        "policy_images": 1,
+        "request": 1,
+        "server_action": 32,
+        "env_target": 32,
+        "success_flag": null
+      },
+      "raw_camera_first_differences": {
+        "head_camera": 1,
+        "left_camera": 1,
+        "right_camera": 1
+      },
+      "max_abs_over_shared_prefix": {
+        "eef_state": 0.012074299156665802,
+        "joint_state": 0.025397896766662598,
+        "server_action": 0.0078125,
+        "env_action": 0.005859375
+      },
+      "all_recorded_values_identical": false,
+      "first_action_vs_fixed_request_diagnostic": [
+        {
+          "round": 0,
+          "exact": true,
+          "max_abs": 0.0
+        },
+        {
+          "round": 1,
+          "exact": true,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "condition": "clean",
+      "seed": 400002,
+      "lengths": [
+        105,
+        106
+      ],
+      "successes": [
+        true,
+        true
+      ],
+      "shared_steps": 105,
+      "first_different_step": {
+        "raw_images": 1,
+        "eef_state": 1,
+        "joint_state": 4,
+        "policy_images": 1,
+        "request": 1,
+        "server_action": 32,
+        "env_target": 32,
+        "success_flag": 104
+      },
+      "raw_camera_first_differences": {
+        "head_camera": 1,
+        "left_camera": 1,
+        "right_camera": 1
+      },
+      "max_abs_over_shared_prefix": {
+        "eef_state": 0.01635982096195221,
+        "joint_state": 0.0649869441986084,
+        "server_action": 0.016596678644418716,
+        "env_action": 0.016331076622009277
+      },
+      "all_recorded_values_identical": false,
+      "first_action_vs_fixed_request_diagnostic": [
+        {
+          "round": 0,
+          "exact": true,
+          "max_abs": 0.0
+        },
+        {
+          "round": 1,
+          "exact": true,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "condition": "noise",
+      "seed": 400000,
+      "lengths": [
+        110,
+        110
+      ],
+      "successes": [
+        true,
+        true
+      ],
+      "shared_steps": 110,
+      "first_different_step": {
+        "raw_images": 1,
+        "eef_state": 1,
+        "joint_state": 2,
+        "policy_images": 1,
+        "request": 1,
+        "server_action": 32,
+        "env_target": 32,
+        "success_flag": null
+      },
+      "raw_camera_first_differences": {
+        "head_camera": 1,
+        "left_camera": 1,
+        "right_camera": 1
+      },
+      "max_abs_over_shared_prefix": {
+        "eef_state": 0.013962604105472565,
+        "joint_state": 0.05704355239868164,
+        "server_action": 0.014289706945419312,
+        "env_action": 0.014289706945419312
+      },
+      "all_recorded_values_identical": false,
+      "first_action_vs_fixed_request_diagnostic": [
+        {
+          "round": 0,
+          "exact": true,
+          "max_abs": 0.0
+        },
+        {
+          "round": 1,
+          "exact": true,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "condition": "noise",
+      "seed": 400001,
+      "lengths": [
+        400,
+        400
+      ],
+      "successes": [
+        false,
+        false
+      ],
+      "shared_steps": 400,
+      "first_different_step": {
+        "raw_images": 1,
+        "eef_state": 1,
+        "joint_state": 4,
+        "policy_images": 1,
+        "request": 1,
+        "server_action": 32,
+        "env_target": 32,
+        "success_flag": null
+      },
+      "raw_camera_first_differences": {
+        "head_camera": 1,
+        "left_camera": 1,
+        "right_camera": 1
+      },
+      "max_abs_over_shared_prefix": {
+        "eef_state": 0.6328125,
+        "joint_state": 0.6328125,
+        "server_action": 0.6328125,
+        "env_action": 0.6328125
+      },
+      "all_recorded_values_identical": false,
+      "first_action_vs_fixed_request_diagnostic": [
+        {
+          "round": 0,
+          "exact": true,
+          "max_abs": 0.0
+        },
+        {
+          "round": 1,
+          "exact": true,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "condition": "noise",
+      "seed": 400002,
+      "lengths": [
+        102,
+        102
+      ],
+      "successes": [
+        true,
+        true
+      ],
+      "shared_steps": 102,
+      "first_different_step": {
+        "raw_images": 1,
+        "eef_state": 1,
+        "joint_state": 8,
+        "policy_images": 1,
+        "request": 1,
+        "server_action": 32,
+        "env_target": 32,
+        "success_flag": null
+      },
+      "raw_camera_first_differences": {
+        "head_camera": 1,
+        "left_camera": 1,
+        "right_camera": 1
+      },
+      "max_abs_over_shared_prefix": {
+        "eef_state": 0.015625,
+        "joint_state": 0.026764988899230957,
+        "server_action": 0.015625,
+        "env_action": 0.015625
+      },
+      "all_recorded_values_identical": false,
+      "first_action_vs_fixed_request_diagnostic": [
+        {
+          "round": 0,
+          "exact": true,
+          "max_abs": 0.0
+        },
+        {
+          "round": 1,
+          "exact": true,
+          "max_abs": 0.0
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "three reused scenes",
+    "two repeats",
+    "differences do not isolate a physics/rendering/IK cause",
+    "no adapted-policy rollouts in this stage",
+    "finite repeatability checks cannot prove global determinism"
+  ]
+}

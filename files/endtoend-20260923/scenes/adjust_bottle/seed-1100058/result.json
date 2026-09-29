@@ -1,0 +1,26 @@
+{
+  "task": "adjust_bottle",
+  "seed": 1100058,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T20:32:25.117677-05:00",
+  "expert_plan_success": true,
+  "instruction": "Grab the plastic soda bottle from the table with the left arm",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 137,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100058/data/episode0.hdf5",
+  "hdf5_sha256": "096bfbd9143dda27062480d26a41529413ed12033ebfea3e1ea8dd6fdf8e8125",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "001_bottle/base13",
+      "{a}": "left"
+    }
+  },
+  "elapsed_seconds": 77.46205515414476
+}

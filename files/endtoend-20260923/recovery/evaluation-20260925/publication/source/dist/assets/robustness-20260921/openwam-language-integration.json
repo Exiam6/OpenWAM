@@ -1,0 +1,14 @@
+{
+  "same_as_exact_RoboTwin_patch": true,
+  "actual_upstream_generator": true,
+  "six_unit_tests_passed": true,
+  "ruff_check_and_format_passed": true,
+  "commit": "4cace2d002c31e5d0c53f379b4f8ca323d55ac92",
+  "hashes": [
+    "0282c15cb3243a6b2201ac9f9024586eb52d26055ba5aaed4cca8a2e4ec58aa9",
+    "0282c15cb3243a6b2201ac9f9024586eb52d26055ba5aaed4cca8a2e4ec58aa9",
+    "0282c15cb3243a6b2201ac9f9024586eb52d26055ba5aaed4cca8a2e4ec58aa9",
+    "0282c15cb3243a6b2201ac9f9024586eb52d26055ba5aaed4cca8a2e4ec58aa9",
+    "0282c15cb3243a6b2201ac9f9024586eb52d26055ba5aaed4cca8a2e4ec58aa9"
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "audited_at": "2026-09-21T23:09:05.255869-05:00",
+  "all_checks_passed": true,
+  "unchanged_frozen_sources": 33,
+  "parent_capture_summary_and_manifest_unchanged": true,
+  "two_server_configs_byte_identical": true,
+  "fresh_cpu_checks": 9,
+  "requests": 1869,
+  "decoded_camera_images": 5607,
+  "native_action_conversions_exact": 1869,
+  "proprio_payloads_exact": 1869,
+  "videos": [
+    {
+      "path": "r0-clean/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/r0-clean/2026-09-21 22:50:43/episode0.mp4",
+      "sha256": "cb9dbf4464bcc0209f01257b3bb3fa7bdb1422f3db3d1d844b0f13d3e2ee19b1",
+      "duration": 11.3,
+      "frames": 113
+    },
+    {
+      "path": "r0-clean/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/r0-clean/2026-09-21 22:50:43/episode1.mp4",
+      "sha256": "b1371f6a4c016bc29d33f7f01f7391b5b76d5c537efa86af3e3dace3625b7751",
+      "duration": 10.6,
+      "frames": 106
+    },
+    {
+      "path": "r0-clean/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/r0-clean/2026-09-21 22:50:43/episode2.mp4",
+      "sha256": "1c4513b141da759d0f0b7e206fbaca51efb3aaf406761a4fefbaec4bca656157",
+      "duration": 10.6,
+      "frames": 106
+    },
+    {
+      "path": "r0-noise/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/r0-noise/2026-09-21 22:53:34/episode0.mp4",
+      "sha256": "5d20da72c425b17701ff1b0e8377227588fa2e144635e953436e7b553b8b64cd",
+      "duration": 11.1,
+      "frames": 111
+    },
+    {
+      "path": "r0-noise/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/r0-noise/2026-09-21 22:53:34/episode1.mp4",
+      "sha256": "5a30a77a8db019835a6f9b57674d5cd767e99bcfa6d5d387509e1e582c9702d7",
+      "duration": 40.0,
+      "frames": 400
+    },
+    {
+      "path": "r0-noise/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/r0-noise/2026-09-21 22:53:34/episode2.mp4",
+      "sha256": "aa582ad8e239e54841ae91bfc8c06c074009315c93d708cbbd4efe38462cd1d8",
+      "duration": 10.3,
+      "frames": 103
+    },
+    {
+      "path": "r1-clean/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/r1-clean/2026-09-21 23:00:36/episode0.mp4",
+      "sha256": "5420992fa21acc561e3df76b866abb00114367f8aa7354cf0d3fca56dc08c051",
+      "duration": 11.3,
+      "frames": 113
+    },
+    {
+      "path": "r1-clean/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/r1-clean/2026-09-21 23:00:36/episode1.mp4",
+      "sha256": "d27ff1acaa7ef75f85d9bbf8b6882e1def0ea8e000038e9215d6c528e95e528f",
+      "duration": 10.6,
+      "frames": 106
+    },
+    {
+      "path": "r1-clean/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/r1-clean/2026-09-21 23:00:36/episode2.mp4",
+      "sha256": "7b26cf6ea33d00be0eddd68c477deddf087e6fe6ba919588330443712fa2ff76",
+      "duration": 10.7,
+      "frames": 107
+    },
+    {
+      "path": "r1-noise/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/r1-noise/2026-09-21 23:03:38/episode0.mp4",
+      "sha256": "ac9a5e33656b1bfaa2393e35ddc08fbdf81616f41d44ff19a6d6921ed642daff",
+      "duration": 11.1,
+      "frames": 111
+    },
+    {
+      "path": "r1-noise/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/r1-noise/2026-09-21 23:03:38/episode1.mp4",
+      "sha256": "1152b2da9fb434ea14c8e9fbd3b95b3bf9c6bbc8dae19f3153493507b9533420",
+      "duration": 40.0,
+      "frames": 400
+    },
+    {
+      "path": "r1-noise/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/r1-noise/2026-09-21 23:03:38/episode2.mp4",
+      "sha256": "84e9978ead585a4d6cf4e509509409cbad0453fc9b3ffdec5e46c8a77ca56a43",
+      "duration": 10.3,
+      "frames": 103
+    }
+  ],
+  "script_sha256": "b40be519979020cf8afd8fcee5f6cfb51af860e375255c97d22712e453f2aa28"
+}

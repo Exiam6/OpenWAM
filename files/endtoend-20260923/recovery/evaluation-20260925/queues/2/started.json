@@ -1,0 +1,9 @@
+{
+  "time": "2026-09-25T19:49:30.075167-05:00",
+  "pid": 2447565,
+  "uid": 2093,
+  "host": "cm009",
+  "start_ticks": "1117643821",
+  "script_sha256": "6ccb83d854b288767cfb7749a7298682979824c65a55df80bdb2b3c436c27324",
+  "plan_sha256": "8dcd408fc9f1c46b00aeb29acca32bc9176b8decabcf1f321d3fd53429340986"
+}

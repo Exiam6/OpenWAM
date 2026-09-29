@@ -1,0 +1,12 @@
+{
+  "sha256": {
+    "GROUP_PROTOCOL.md": "ec378d5b1611b5a48022749438de8f24432a3adba2498a2f4eabe8d84f3259d9",
+    "scripts/group_study.py": "3062c2e2982617732c1e073494a29314b80cff9341b91758717906f931285487",
+    "scripts/control_study.py": "ff9ec51198c029dd27eac471303bc51152ddfcb4ef9cd4a49a257acbba3eeb26",
+    "scripts/pilot.py": "e1fe12735b858113911988c6183653190576b998c7be21d0177c43985e6954fa",
+    "scripts/night.py": "299da4bafc9b6bf9fcf91466e51092afaf0f8423e74ec6eac818b98962661234"
+  },
+  "started_at": "2026-09-21T12:28:24-0500",
+  "new_training_run_cap": 28,
+  "fresh_task": "pick_dual_bottles"
+}

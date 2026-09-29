@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenWAM 表征贡献计划 · Embodied Research Notebook</title>
+<meta name="description" content="基于 OpenWAM 论文与代码的社区贡献计划：复现、表征诊断、压缩基线、受控实验与 PR 交付。">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23223b31'/%3E%3Cpath d='M7 9h18M7 16h12M7 23h18' stroke='%23b2ce50' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a class="brand" href="#top">EMBODIED / RESEARCH NOTEBOOK</a><span class="status">研究记录 · 更新于 2026.09.25</span></header>
+<div class="layout">
+<aside><p>OPENWAM CONTRIBUTION PLAN</p><nav aria-label="报告目录"><a href="endtoend.html">完整表征验证</a><a href="contribution.html">轨迹诊断补丁</a><a href="attribution.html">两步归因诊断</a><a href="trajectory.html">闭环重复性</a><a href="repeat.html">固定输入动作诊断</a><a href="norm.html">80次归一化对照</a><a href="experiments.html"><span>↗</span>首轮实验结果</a>
+<a href="#scope"><span>01</span>定位与范围</a><a href="#evidence"><span>02</span>现状核对</a><a href="#questions"><span>03</span>研究问题</a><a href="#roadmap"><span>04</span>执行路线</a><a href="#matrix"><span>05</span>实验矩阵</a><a href="#controls"><span>06</span>公平性与评测</a><a href="#compute"><span>07</span>算力与止损</a><a href="#deliverables"><span>08</span>PR 与验收</a><a href="#start"><span>09</span>前 48 小时</a><a href="#sources"><span>10</span>证据与来源</a>
+<a href="night.html">今晚三任务实验</a><a href="rae.html">RAE 改进方案</a><a href="control.html">控制监督实验</a></nav><div class="aside-note">独立贡献提案<br>非 OpenWAM 官方路线图<br><br>状态：本地贡献补丁可审阅<br>6项测试与1,881条记录验证</div></aside>
+<main id="top"><div class="callout" id="endtoend-latest"><strong>当前进度 · 09.25：9 组训练完成，数据与权重审计通过。</strong>完整闭环评测 0/5400 回合；各队列正在独立等卡或执行，尚无成功率收益结论。<a href="endtoend.html">最新状态、固定主判据与结论边界 →</a></div><div class="callout" id="plan12h-latest"><strong>历史计划 · 09.22：当时暂停后制定的 12 小时方案（窗口已结束）。</strong>未来12小时主线：末层/中间层/多层聚合，在相同48通道预算下检验控制信息，再按可行性进入等预算OpenWAM闭环验证。<a href="plan12h.html">实验矩阵、收益标准和执行门槛 →</a></div><div class="callout" id="readout-latest"><strong>新诊断：噪声位移读出改善，夹爪与干净输入未同步改善。</strong>固定适配器的分组误差与全部种子结果已公布；文档CLI验证也完成。<a href="readout.html">新实验、完整指标和局限</a>。</div><div class="callout" id="contribution-review-latest"><strong>历史决定：贡献表征诊断工具。</strong>三个独立补丁的17项CPU兼容性检查通过，重建、读出与闭环证据已统一核对。<a href="review.html">贡献取舍、完整边界与审阅包</a>。</div><div class="callout" id="context-pilot-latest"><strong>上下文短对照已结束：1/4段完成。</strong>上下文对照已停止，保留全部完成与未完成记录。<a href="context-pilot.html">全部试次、配对、视频及退出记录</a>。</div><div class="callout" id="context-preparation-latest"><strong>历史准备记录：固定动作上下文对照。</strong>记录器与原生循环接入通过：8项新检查＋6项回归，含本地WebSocket超时检查；后续运行已停止，见上方结果。<a href="context.html">方案、检查结果与剩余条件</a>。</div><div class="callout" id="trace-contribution-latest"><strong>新增：可审阅的策略轨迹诊断补丁。</strong>6项测试与全部18条旧记录的CPU回放通过；未启动新GPU实验。<a href="contribution.html">补丁、验证证据和下一步</a>。</div><div class="callout" id="attribution-latest"><strong>新增：六段两步固定动作诊断已完成。</strong>两步固定动作探针未复现上一轮分歧。<a href="attribution.html">规划路径、实测状态和全部配对记录</a>。</div><div class="callout" id="trajectory-latest"><strong>12条闭环重复性诊断已完成：</strong>6/6对先出现观测差异，再出现动作差异。<a href="trajectory.html">逐步对照、全部视频与记录</a>。</div><section id="robustness-result-note" class="callout"><strong>上一轮闭环结果 · 9 月 21 日：</strong>潜变量恢复误差降低 35.0%；固定场景闭环：干净 5/5→4/5，噪声 5/5→5/5（原策略→适配器）。 <a href="robustness.html">查看完整对照和 35 段视频 →</a></section><section id="groups-result-note" class="callout"><strong>上一轮分组实验 · 9 月 21 日：</strong>均衡监督缓解夹爪取舍，变化阶段仍弱于原损失。<a href="groups.html">查看完整新任务结果 →</a></section><div class="callout" id="control-result-note"><strong>新实验已完成：</strong>27 次控制相关监督压缩训练。λ=1 改善位移读出，夹爪出现退化。<a href="control.html">查看对照、区间和复现材料 →</a></div><div class="callout"><strong>研究补记 · 09.21：</strong><a href="gaps.html">OpenWAM 的已知短板、待验证问题与贡献优先级 →</a></div><div class="callout"><strong>首轮实验已完成：</strong>1 张 L40S、600 clips、PCA 对照与 S-VAE 三个训练种子。<a href="experiments.html">查看实测结果、曲线与算力策略 →</a></div>
+<div class="hero"><div class="eyebrow">Contribution proposal / Visual representation</div><h1>让表征实验成为<br><em>可复用的社区贡献。</em></h1><p class="lead">从已有实现出发，补齐压缩基线、动作相关信息诊断与复现记录。先交付一个两周内可收尾的工具与实验包，再决定是否扩展完整 WAM 训练。</p><div class="labels"><span class="tag green">推荐：社区贡献路线</span><span class="tag">主线：DINOv3 + 压缩诊断</span><span class="tag">扩展：时间信息 / 鲁棒性</span></div></div>
+<div class="abstract"><div class="eyebrow">The proposal</div><p><strong>建议贡献题目：Representation Diagnostics &amp; Compression Baselines for OpenWAM。</strong></p><p>核心交付是一个能复用的实验流程：固定数据划分 → 提取表征 → 比较原始特征、PCA 与 S-VAE → 测量动作信息保留 → 用少量闭环实验验证结论。两周版本即使没有成功率提升，也应能作为独立 PR 审阅。</p></div>
+<div class="facts"><div><b>2 周</b><small>最小贡献：工具、基线、诊断</small></div><div><b>+ 2 周</b><small>可选：受控闭环训练与扩展</small></div><div><b>1 条主线</b><small>先做压缩；按证据选择扩展</small></div></div>
+<section id="scope"><h2><span class="num">01</span>这是怎样一种贡献？</h2>
+<p>OpenWAM 是有维护团队的开源研究框架，提供研究基础设施、设计消融和预训练模型，仓库有明确的贡献指南。适合通过复现实验、模块、评测工具和文档参与；仓库贡献与论文署名是需要分别协商的事项。当前公开论文页面显示的是首版，未核实到已发布的“OpenWAM 2 / 1.1”版本计划。</p>
+<p class="source"><a href="https://openwam-official.github.io/">官方项目页</a><a href="https://arxiv.org/abs/2609.07398">论文版本记录</a><a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/CONTRIBUTING.md">贡献指南</a></p>
+<div class="table-wrap"><table><thead><tr><th>本轮承诺</th><th>可选扩展</th><th>需另行立项</th></tr></thead><tbody><tr><td>复现入口、数据划分、PCA 对照、诊断报告、测试和文档</td><td>一个时间压缩实验；或一个表征鲁棒性实验；少量完整 WAM 对照</td><td>新骨干、完整预训练、真机实验、独立论文、多个 benchmark 全覆盖</td></tr></tbody></table></div>
+<p>推荐先把投入上限定为 <strong>10 个工作日 + 一次阶段评审</strong>。维护者确认接口和需求后，再安排后续训练。排期从权重、数据与算力可用时起算。</p>
+</section>
+<section id="evidence"><h2><span class="num">02</span>哪些已经做了，哪里还有空间？</h2>
+<p>论文 §4.1.2 / Figure 7 已经比较四类编码器，并加入 DINOv3、V-JEPA 2.1 的 S-VAE 变体。实验固定 Wan2.2-TI2V-5B 的架构、随机初始化其权重，并对齐时间压缩率。以下是论文报告值，<strong>不是本次复现结果</strong>。</p>
+<div class="table-wrap"><table><thead><tr><th>论文条件</th><th>平均成功率</th><th>对计划的意义</th></tr></thead><tbody>
+<tr><td>DINOv3 原始特征</td><td>76.42%</td><td>高维表征直接建模的参考</td></tr><tr><td>V-JEPA 2.1 原始特征</td><td>80.91%</td><td>视频表征参考</td></tr><tr><td>FLUX.2 VAE</td><td>84.26%</td><td>图像重建编码器参考</td></tr><tr><td>V-JEPA 2.1 + S-VAE</td><td>88.46%</td><td>压缩后明显改善</td></tr><tr><td>DINOv3 + S-VAE</td><td>90.18%</td><td>优先复现的语义表征条件</td></tr><tr><td>Wan2.2 VAE</td><td>90.30%</td><td>重建式控制组；0.12 点差异不宜解读成确定优势</td></tr>
+</tbody></table></div>
+<p class="source"><a href="https://arxiv.org/pdf/2609.07398#page=12">论文 §4.1.2，pp. 12–13</a></p>
+<p>代码核对基于 <a href="https://github.com/OpenWAM-Official/OpenWAM/tree/7c5861e45cfe1339a0323f0e0b03a3316c37971c">2026-09-17 的提交 7c5861e</a>。DINOv3 / V-JEPA 编码器、S-VAE 特征提取与训练、检查点保存和 CPU 测试均已存在。下载脚本也列出了六种表征 Study 检查点。<strong>“把 RAE 接进来”本身不足以构成本轮贡献。</strong></p>
+<div class="table-wrap wide"><table><thead><tr><th>观察到的空间</th><th>证据边界</th><th>可交付工作</th></tr></thead><tbody>
+<tr><td>缺少轻量压缩对照</td><td>本次检索未在现有编码器、脚本和测试中找到可运行的 PCA 基线；不能据此断言团队没有未公开实验</td><td>相同数据、维度、归一化下的 PCA / S-VAE 诊断</td></tr>
+<tr><td>离线验证与数据溯源</td><td>现有收集器遍历 train 数据；特征分片保存 features、维度和编码器名称，未保存逐样本 episode/frame 身份；训练器未见独立 held-out 验证入口</td><td>可选样本清单、episode 划分、来源记录、验证入口，保留原默认行为</td></tr>
+<tr><td>配置一致性待核对</td><td>论文举例 V-JEPA 为 1024-D；当前配置注释写 ViT-g、1408-D，实际读取权重 manifest</td><td>对照发布检查点 config/manifest，向维护者确认论文所用变体；暂不当作 bug</td></tr>
+<tr><td>时间信息与鲁棒性</td><td>论文提出时间压缩和复杂场景表征仍值得研究；当前 DINO 与 V-JEPA 的具体时间处理并不相同</td><td>先固定一个编码器研究池化；或做受控视觉扰动诊断</td></tr>
+</tbody></table></div>
+<p class="source"><a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/scripts/svae_train/collect_svae_features.py">特征收集器</a><a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/scripts/svae_train/train_svae.py">S-VAE 训练器</a><a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/configs/model/video_backbone/encoder/vjepa21.yaml">V-JEPA 配置</a></p>
+<div class="callout">这里的 RAE 方向，具体落在“预训练表征编码器 + 适配到 WAM 的紧凑潜空间”。现有 S-VAE 重建的是编码器特征，不能把它与像素重建 VAE 或另一个完整 RAE 项目混为一谈。</div>
+</section>
+<section id="questions"><h2><span class="num">03</span>三个问题，只选一条扩展</h2>
+<div class="experiment"><h3>主问题：压缩究竟保留了哪些动作相关信息？</h3><p>以 DINOv3 为主，比较 raw、PCA-48 和 S-VAE-48。再用离线维度扫描判断 48 维是否是有意义的折中。观察重建质量、动作 probe 和实际策略表现是否一致。</p><p class="small">可检验假设：更好的特征重建不一定意味着更好的动作预测；低成本线性压缩可能已经保留主要信息。两种结果都值得记录。</p></div>
+<div class="grid"><div class="experiment"><h3>扩展 A · 时间信息</h3><p>若快速运动或抓放转换时的误差集中升高，比较 mean pooling 与 last-frame / 小型时间聚合器，保持相同输出 token 数和通道数。</p><p class="small">先在 DINOv3 做。时间聚合需要池化前特征；现有池化后缓存无法还原这些信息。</p></div><div class="experiment"><h3>扩展 B · 视觉扰动</h3><p>若干净数据上接近、扰动下差异明显，固定同一批样本，施加亮度、噪声、轻微遮挡，分析表征距离与动作误差变化。</p><p class="small">图像扰动只支持相应范围的结论；真正的视角泛化需要重新渲染或多视角数据。</p></div></div>
+<p>第二周末只选 A 或 B。前者更接近动态建模，后者更容易形成小而完整的诊断工具。暂缓新增编码器、动作监督压缩、多模态融合等会明显扩大问题范围的方向。</p>
+</section>
+<section id="roadmap"><h2><span class="num">04</span>两周核心 + 两周可选</h2>
+<div class="stage"><div class="stage-label">D1–2<br>对齐</div><div><h3>锁定复现对象和验收口径</h3><p>给维护者一页 proposal，确认是否有人在做相同方向；索取 Figure 7 的精确训练配置、编码器 revision、S-VAE 权重 / 训练数据、Study 推理配置。锁定代码、数据版本和数据许可。核对 V-JEPA 维度差异。</p><p class="out">交付：evidence.md、固定配置与来源清单；一个维护者认可的最小 PR 范围。</p></div></div>
+<div class="stage"><div class="stage-label">D3–4<br>复现</div><div><h3>先评测已发布的 Study 检查点</h3><p>从 Wan-VAE 与 DINOv3+S-VAE 两个条件开始，先跑一个任务、5 个 episode；再在预先选定的 5 个任务上做 clean / randomized 小规模评测。选择任务覆盖抓取、精细放置、双臂协调和长序列，不按模型成绩挑任务。完整表格复现另行预算。</p><p class="out">交付：运行命令、环境锁定、输出摘要、显存与吞吐；结果明确标注 smoke 或 subset。</p></div></div>
+<div class="stage"><div class="stage-label">D5–7<br>工具</div><div><h3>建立可复用的离线表征诊断</h3><p>从训练轨迹中建立按 episode 固定的 train / validation / test 划分，建议 80/10/10 并按任务分层。先用 2,000 个 clip 测数据、存储和吞吐，再扩至固定的 10,000 个 clip 上限。为缓存加入样本身份与变换记录；增加 PCA、held-out 重建评测、动作 probe。</p><p class="out">交付：可重跑的缓存清单、PCA 与 S-VAE 对照；单卡可用的诊断入口。</p></div></div>
+<div class="stage"><div class="stage-label">D8–10<br>贡献</div><div><h3>完成实验包，提交小而完整的 PR</h3><p>完成 DINOv3 的压缩扫描、归一化核对和错误分析。余量允许时用 V-JEPA 的 PCA-48 / S-VAE-48 做交叉检查。整理至少三张图、一个结果表和一份局限说明；向维护者提交工具与复现文档。</p><p class="out">验收：换一个运行目录仍能按 README 重现；即使没有优于基线，贡献仍完整。</p></div></div>
+<div class="stage"><div class="stage-label">W3–4<br>可选</div><div><h3>用闭环训练检验诊断是否有用</h3><p>仅在显存、吞吐和数据条件满足时，训练 3 个主条件：Wan-VAE、DINO+S-VAE-48、DINO+PCA-48。先各 1 个 seed 筛查，再对完整主对照做 3 个训练 seed。扩展 A/B 只加一个胜出的方案，不展开全组合。</p><p class="out">交付：成功率—成本曲线、逐任务结果、训练种子方差；是否扩展取决于结果和维护者需求。</p></div></div>
+<div class="callout caution">若官方 Study 的精确 recipe 暂不可得，先交付离线诊断与配置审计。子集、小骨干或短训练的结果标为探索实验，不能声称复现了 Figure 7。</div>
+</section>
+<section id="matrix"><h2><span class="num">05</span>实验矩阵：先便宜，后昂贵</h2>
+<div class="table-wrap wide"><table><thead><tr><th>层级</th><th>实验条件</th><th>固定项</th><th>输出</th></tr></thead><tbody>
+<tr><td>E0 · 已有策略</td><td>Wan-VAE、DINO+S-VAE；可追加 raw DINO</td><td>同任务、初始状态 / 随机种子、推理配置</td><td>环境是否正确；已有检查点可复现到什么程度</td></tr>
+<tr><td>E1 · 核心离线</td><td>DINO：raw；PCA 与 S-VAE 各 24/48/96 维，共 7 条件</td><td>同缓存、episode 划分、输出归一化；冻结编码器</td><td>重建、信息保留、吞吐、显存与缓存大小</td></tr>
+<tr><td>E2 · 最小交叉验证</td><td>V-JEPA：PCA-48、S-VAE-48；有余量再加 raw</td><td>同数据协议，记录实际 encoder / token 规格</td><td>主观察是否仅限 DINO</td></tr>
+<tr><td>E3 · 完整策略，可选</td><td>Wan-VAE、DINO+S-VAE-48、DINO+PCA-48；最多加 1 个扩展</td><td>相同训练预算与初始化协议</td><td>策略闭环成功率与成本</td></tr>
+<tr><td>E4 · 只选一个</td><td>时间聚合 或 受控视觉扰动</td><td>保持主实验其余设置</td><td>解释具体失效模式</td></tr>
+</tbody></table></div>
+<h3>离线指标必须对应明确的问题</h3>
+<ul><li><strong>压缩：</strong>held-out 特征 MSE、cosine、解释方差；误差在同一个编码器特征空间内比较，不直接横比不同编码器的原始 MSE。</li><li><strong>潜空间：</strong>通道方差、协方差谱 / effective rank；复用已有 S-VAE KL、active-units 日志，重点补 held-out 汇总。</li><li><strong>动作 probe：</strong>只用决策时可见的当前观测特征，预测下一步动作或短 action chunk；平移 / 旋转 / gripper 分开报告。固定线性 readout；超参数只用 validation 选择。</li><li><strong>动态诊断：</strong>可单独用未来 target latent 分析运动信息，但必须标明这是离线 target 分析，不能当作在线策略 probe。</li><li><strong>成本：</strong>encoder 与 reducer 各自延迟、峰值显存、训练 GPU-hours、缓存 GB；raw 高维条件作为信息参考，不伪装成同成本对照。</li></ul>
+<p>预期图表：①维度—重建 / 动作误差；②重建误差—动作误差散点；③性能—显存 / 计算成本；可选④闭环成功率与逐任务差异。没有闭环结果时，第三张用 probe 指标并明确标注。</p>
+</section>
+<section id="controls"><h2><span class="num">06</span>最容易把结论做偏的地方</h2>
+<ol><li><strong>划分在轨迹层面完成。</strong>滑窗 clip 常重叠，不能随机打散后再划分。归一化、PCA 和新训 S-VAE 只拟合 train；test 只用于最终报告。若现有 S-VAE 曾看过 held-out 数据，则不将其作为独立泛化对照。</li>
+<li><strong>先核对归一化，再解释压缩收益。</strong>现有路径包含输入标准化和输出 LayerNorm。PCA 对照需对齐这两处设置；对 48-D 增加一次归一化开 / 关诊断。不要把尺度或 flow-matching 噪声比变化误认为语义信息变好。</li>
+<li><strong>保持时间与空间 token 几何。</strong>记录实际采样帧数、物理时间跨度、latent 帧数、patch 网格和 DiT token 数。相同压缩率不自动意味着相同上下文或相同计算量。</li>
+<li><strong>严格避免未来泄漏。</strong>在线 probe 的 condition 编码只接收当前可见帧。更换时间聚合器后，检查未来帧扰动不改变当前 condition latent；这与分析未来 target latent 是不同测试。</li>
+<li><strong>策略对照保持训练条件。</strong>固定骨干、attention mask、数据、action horizon、优化器、有效 batch、学习率、更新数、噪声 shift 和推理步数。Figure 7 路线遵循随机初始化视频模型；不能把新的表征直接接到 VAE 预训练的 α 上后做归因。</li>
+<li><strong>公平报告成本。</strong>主比较固定训练样本 / 更新数，同时报告 wall time；有余量再做等 GPU-hours 比较。短训练可能偏向收敛更快的条件，不代表最终性能。</li></ol>
+<h3>闭环评测的最低规范</h3>
+<p>主验证选 RoboTwin，保持与论文 Study 接近的任务域。正式评测使用固定任务集和相同 episode seeds；clean、randomized 分开报告，给出逐任务结果与任务宏平均。3 个训练 seed 报 mean ± std；配对任务 / episode bootstrap 区间用于估计评测差异，不替代训练 seed 方差。</p>
+<p>官方 RoboTwin README 的完整评测默认是每任务 100 episodes；其中推理配置明确描述 α，<strong>Figure 7 的 Study 配置仍需单独核对</strong>。如改用 LIBERO，定位为工具验证或迁移实验，不能拿其结果替代 RoboTwin 表征消融。对同一个 Full 训练检查点做 randomized 评测也不能自动称为 Clean2Random OOD。</p>
+<p class="source"><a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/benchmarks/robotwin/README.md">RoboTwin 评测协议</a><a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/openwam/model/video_backbone/encoder/dinov3.py">DINOv3 编码路径</a><a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/openwam/model/video_backbone/encoder/vjepa21.py">V-JEPA 编码路径</a></p>
+</section>
+<section id="compute"><h2><span class="num">07</span>算力先测量，再承诺</h2>
+<p>以可用的 48GB 级 L40S 为出发点，<strong>一张卡先做特征提取、小型 reducer 和 probe</strong>。策略服务加仿真从 1–2 张卡试运行，实际是否需要分离渲染由显存与稳定性决定。完整 5B 训练不能按卡数简单推断能跑：仓库对常规训练建议 8×80GB，48GB 卡要先做实测。</p>
+<p class="source"><a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/README.md">官方训练资源建议</a><a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/configs/train.yaml">现有显存优化配置</a></p>
+<div class="table-wrap"><table><thead><tr><th>阶段</th><th>申请方式</th><th>继续条件</th></tr></thead><tbody>
+<tr><td>工具与离线实验</td><td>单卡起步；总预算先设 48–96 GPU-hours 上限</td><td>2,000-clip pilot 证明数据、缓存与吞吐可承受</td></tr>
+<tr><td>策略 smoke</td><td>1 张策略卡起步；必要时增加 1 张渲染卡</td><td>权重加载、模型推理、仿真和结果保存都稳定</td></tr>
+<tr><td>完整训练，可选</td><td>逐步测试单节点 4–8 张；扩展预算上限先设 400 GPU-hours</td><td>20-step 检查通过，再做约 200 个稳定 step 计时；按测量重算是否有能力完成全部对照</td></tr>
+</tbody></table></div>
+<p class="small">这些数字是建议的投入上限，不是测得的运行时间或完成保证；全部任务只使用已分配的 GPU。</p>
+<p>使用现有的 bf16、microbatch、梯度累积、gradient checkpointing 和 DeepSpeed ZeRO-2，必要时测试 CPU optimizer offload。多卡不能把单卡显存简单合成一块；梯度累积也不减少参数本身的存储。不要假定仓库已经支持 ZeRO-3 / FSDP。环境单独创建，驱动与 PyTorch / CUDA 兼容性在启动时验证。</p>
+<pre>预计训练 GPU-hours = 条件数 × 训练种子数 × 每次 GPU 数 × 更新数 × 秒/更新 ÷ 3600
+再单独计入：特征提取、评测、失败重跑和检查点 IO。
+
+仅作计算示例：3 条件 × 3 seeds × 4 GPUs × 5,000 steps × 2 s/step
+              = 100 GPU-hours（2 s/step 必须由实际测量替换）
+
+特征缓存大小 ≈ clip 数 × latent 帧数 × latent 高 × latent 宽 × 通道数 × 字节数
+使用首批真实 tensor 的形状估算；不按视频原始帧数猜测。</pre>
+<div class="callout caution"><strong>停止 / 缩小范围：</strong>训练无法在可用卡上装下、预计预算不足以完成基线和对照、或没有可重现的 Study 配置时，交付两周核心版本。若改用较小骨干或小任务集，应给所有条件重新跑共同基线，并明确为新的受控实验。</div>
+</section>
+<section id="deliverables"><h2><span class="num">08</span>让维护者容易接收的交付方式</h2>
+<div class="table-wrap wide"><table><thead><tr><th>PR</th><th>范围</th><th>验收条件</th></tr></thead><tbody>
+<tr><td>PR 1 · 复现与诊断</td><td>样本 manifest、可选 episode 划分 / 限量收集、held-out 评测、报告模板；补配置说明</td><td>默认训练行为保持兼容；划分不重叠；结果能定位到数据与 encoder revision；一条 documented command 生成摘要</td></tr>
+<tr><td>PR 2 · PCA 对照</td><td>先做独立离线 PCA baseline；维护者同意后接入编码器 reducer 接口</td><td>train-only 统计、确定性推理、维度错误可读、checkpoint 往返一致；旧检查点仍可加载</td></tr>
+<tr><td>PR 3 · 可选扩展</td><td>一个时间聚合器或鲁棒性诊断；完整实验配置与结果卡</td><td>提供共同基线、成本表、负结果与适用范围；不默认替换发布模型设置</td></tr>
+</tbody></table></div>
+<p>建议新增路径由维护者决定，可考虑 <code>scripts/representation_eval/</code>、<code>docs/representation_study.md</code>；它们是提案路径，目前不存在。优先扩展现有收集与训练流程，避免复制一套平行框架。</p>
+<ul class="check"><li>锁定 Git SHA、环境版本、数据 / 权重 revision、配置、随机种子、输入清单与实际预算。</li><li>提供逐任务 CSV / JSON、汇总脚本、三张诊断图；成功或负结果都保留。</li><li>测试围绕新行为：跨 episode 泄漏、train-only PCA 统计、输入维度、保存加载、未来帧隔离。已有 S-VAE 测试直接复用。</li><li>按仓库要求执行 <code>make all</code>，运行受影响的 CPU 测试；新增 GPU 路径用真实权重验证并记录环境。</li><li>数据和模型按各自许可证提供下载说明；不把大缓存、数据集、私有路径或原始凭据提交进 Git。</li></ul>
+<p>成功标准不是一定超过基线。最低成功是维护者能复用流程、结果能重现、结论与证据匹配。若性能差不多但减少成本，也能形成有用的配置建议。是否列为论文 contributor、致谢或作者，以及后续维护责任，应在实际贡献范围明确后与维护者约定。</p>
+<p class="source"><a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/CONTRIBUTING.md">PR 与测试要求</a></p>
+</section>
+<section id="start"><h2><span class="num">09</span>前 48 小时的具体行动</h2>
+<ol><li><strong>发 proposal 草稿。</strong>说明优先贡献 diagnostics + PCA 对照；确认重复工作、准确配置、权重与验收标准。先不承诺新模型或论文结果。</li><li><strong>建独立工作目录。</strong>固定当前 commit，创建独立 OpenWAM 与 RoboTwin 环境；记录 Python、Torch、CUDA、driver 和渲染依赖。保持已有项目环境可用。</li><li><strong>只下载起步需要的资产。</strong>优先下载 Visual Encoder Study 的 Wan-VAE 与 DINO+S-VAE 检查点，读取各自配置和资产依赖；先确认 S-VAE 是否在发布权重内，不下载所有模型。</li><li><strong>跑一个端到端 smoke。</strong>1 个预选任务、5 episodes，检查推理 / action-space / 归一化是否对齐，记录显存峰值与耗时。这一步不作为模型成绩。</li><li><strong>建立固定小数据清单。</strong>按 episode 划分并抽取 2,000 clips；确认训练、验证、测试无共享轨迹，再提取首批特征估算磁盘与预算。</li></ol>
+<details><summary>已核实的仓库入口（实施时填写本地资产路径）</summary>
+<p>以下是起步入口，不是完整一键安装脚本；环境、资产与数据路径需在实施时填写。</p>
+<pre><code># 下载菜单中选择 OpenWAM_Study_Visual_Encoder
+python scripts/download_assets/download_openwam_checkpoints.py
+
+# 重点检查这两个条目及其实际下载配置
+robotwin_dual_system_joint_self_attention_wan22_vae
+robotwin_dual_system_joint_self_attention_dinov3_svae
+
+# 现有特征收集与压缩训练入口
+scripts/svae_train/collect_svae_features.py
+scripts/svae_train/train_svae.py
+
+# 评测入口与说明
+benchmarks/robotwin/README.md
+benchmarks/robotwin/single_eval.sh
+
+# 本轮提议补充：held-out diagnostics / PCA / manifest
+# 尚未实现，不存在可直接运行的新实验命令。</code></pre>
+<p class="small">现有 shell launcher 会按可见设备自动推断进程数。共享机器实施时显式设置被分配的 CUDA_VISIBLE_DEVICES 和 NPROC_PER_NODE，先单卡运行。</p>
+</details>
+<div class="callout"><strong>第一份可交付报告：</strong>“已有两种 Study 检查点能否运行、各需要多少显存、数据和配置还有哪些缺口、2,000 个 clip 的诊断成本是多少”。拿到这四项后再锁定后续实验总量。</div>
+</section>
+<section id="sources"><h2><span class="num">10</span>证据、版本与适用范围</h2>
+<p>本页保留最初的贡献计划。现已完成发布检查点的编码器提取与首轮离线压缩实验，详见<a href="experiments.html">实验报告</a>；完整策略评测和 PR 尚未执行。计划中的阶段预算与验收门槛是提案，不代表维护者承诺。</p>
+<ol class="source-list">
+<li><a href="https://openwam-official.github.io/">OpenWAM 官方项目页</a>：项目定位与公开入口。</li>
+<li><a href="https://arxiv.org/abs/2609.07398">论文版本页</a>；<a href="https://arxiv.org/pdf/2609.07398">PDF</a>：§4.1.2 / Figure 7、Appendix A。</li>
+<li><a href="https://github.com/OpenWAM-Official/OpenWAM/tree/7c5861e45cfe1339a0323f0e0b03a3316c37971c">代码快照 7c5861e45cfe1339a0323f0e0b03a3316c37971c</a>：研究依据固定至此提交，实际开工前需检查上游更新。</li>
+<li><a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/scripts/download_assets/download_openwam_checkpoints.py">发布模型清单</a>；<a href="https://github.com/OpenWAM-Official/OpenWAM/tree/7c5861e45cfe1339a0323f0e0b03a3316c37971c/openwam/model/video_backbone/encoder">编码器实现</a>。</li>
+<li><a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/configs/model/video_backbone/encoder/svae/train.yaml">S-VAE 训练配置</a>；<a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/tests/test_dinov3_encoder.py">DINOv3 测试</a>；<a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/tests/test_vjepa_svae.py">V-JEPA / S-VAE 测试</a>。</li>
+<li><a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/benchmarks/robotwin/README.md">RoboTwin 协议</a>；<a href="https://github.com/OpenWAM-Official/OpenWAM/blob/7c5861e45cfe1339a0323f0e0b03a3316c37971c/CONTRIBUTING.md">贡献流程</a>。</li>
+</ol>
+</section>
+<footer>Embodied Research Notebook · 2026.09.20<br>公开研究提案，可在同一网址继续更新。首轮实验结果已单独记录日期、配置、指标与结论边界。</footer>
+</main></div>
+</body></html>

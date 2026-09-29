@@ -1,0 +1,20 @@
+{
+  "frozen_at": "2026-09-22T00:49:34.708706-05:00",
+  "kind": "CPU patch compatibility review, no scientific trials",
+  "base": "7c5861e45cfe1339a0323f0e0b03a3316c37971c",
+  "commits": [
+    "eb31a97c4baa7dc5c4511a14f1f6c9b32795a5fd",
+    "4cace2d002c31e5d0c53f379b4f8ca323d55ac92",
+    "d1273ca685d7f65b3754843b5fe42a210ecdcfa0"
+  ],
+  "checks": [
+    "apply all three patches onto pinned base in isolated copy",
+    "17 targeted CPU tests together, no full GPU suite",
+    "Ruff only changed Python files",
+    "hash original summaries and patches before/after"
+  ],
+  "wall_cap_seconds": 300,
+  "cpu_threads": 2,
+  "cuda_visible_devices": "",
+  "reason": "Previous tests covered each patch separately; first check their combined source and import compatibility. New checks do not increase scientific sample size."
+}

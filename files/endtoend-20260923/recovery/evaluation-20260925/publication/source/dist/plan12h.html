@@ -1,0 +1,27 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OpenWAM · 12小时表征实验计划</title><link rel="stylesheet" href="style.css"></head><body>
+<header><a class="brand" href="index.html">EMBODIED / RESEARCH NOTEBOOK</a><span class="status">2026-09-22 · PLAN ONLY</span></header>
+<div class="layout"><aside><p>REPRESENTATION STUDY</p><nav><a href="#question">主假设</a><a href="#matrix">实验矩阵</a><a href="#evidence">收益与解释</a><a href="#schedule">12小时时间表</a><a href="#policy">策略验证门槛</a><a href="#contribution">项目补全</a><a href="#materials">完整方案</a></nav><div class="aside-note">自检已暂停<br>新实验尚未启动<br>计时从实际执行开始</div></aside><main>
+<div class="hero"><div class="eyebrow">A controlled test of layer choice and compression</div><h1>什么表征<br><em>更适合 OpenWAM 控制？</em></h1><p class="lead">主假设：DINO 中后层的固定聚合，比只用末层更能保留控制所需的空间信息；这种优势在48通道压缩后仍存在，并能经过等预算适配转化为闭环收益。</p><div class="labels"><span class="tag green">计划已制定</span><span class="tag">定时自检 PAUSED</span><span class="tag">最多4张 L40S / 12小时</span></div></div>
+<div class="abstract"><p><strong>当前仅完成计划和只读资源核查，尚未开始训练、测速、生成数据或新评测。</strong>12小时从后续实际启动时计算。首小时完成接入和吞吐检查；不因计划列出策略阶段就声称它已经可运行。</p><p>15分钟定时入口已禁用，暂停保护已验证；只有明确要求恢复才重启。历史80次评测及冻结协议保留。</p></div>
+<section id="question"><h2>一次回答一个可检验的问题</h2><p>已有开发诊断中，恢复MSE下降34.72%，但噪声下位移误差下降11.84%、夹爪误差上升5.82%，干净总误差上升2.64%。这提示需要直接检验控制相关信息，而不是继续搜索更小的恢复误差。主要夹爪区间跨零，且读出器有容量/正则混淆，不能断言表征不可逆地丢失了信息。<a href="readout.html">完整已完成结果</a>。</p><p>RAEv2已有多层聚合先例。这里检验它在OpenWAM中的压缩兼容性和控制价值，不把聚合本身当作新发明，也不把生成质量等同于机器人成功率。B/16末四层均值是本轮固定候选，不是其大模型配置的完整复现。<a href="https://raev2.github.io/">RAEv2项目</a> · <a href="https://github.com/nanovisionx/RAEv2">官方实现</a>。</p></section>
+<section id="matrix"><h2>3种来源 × 2种48通道压缩</h2><p>固定同一个12层DINOv3-B/16、图像预处理、空间token、时间池化、归一化及训练数据。K4是唯一主候选；中间层用于解释机制，不在结果出来后择优替换。</p>
+<div class="table-wrap"><table><thead><tr><th>特征来源</th><th>PCA48</th><th>S-VAE48</th><th>作用</th></tr></thead><tbody>
+<tr><td>L12：末层</td><td>对照</td><td>主基线</td><td>当前默认来源</td></tr>
+<tr><td>L6：中间层</td><td>机制对照</td><td>机制对照</td><td>是否有不同控制信息</td></tr>
+<tr><td>K4：L9–L12均值</td><td>机制对照</td><td>唯一主候选</td><td>多层互补能否经压缩保留</td></tr>
+</tbody></table></div><p>每种来源训练一个共享三任务S-VAE，3个种子、每次2000步，共9次训练。原始768通道读出只作辅助分析，不与48通道结果混称相同预算。末层单选必须与现有路径数值一致；额外LayerNorm不被默认为无影响。</p>
+<p>固定任务：<code>adjust_bottle</code>、<code>handover_block</code>、<code>place_object_basket</code>。每任务35条训练轨迹，旧验证/已接触的保留集均为开发数据。新生成每任务20条独立专家可行轨迹；种子、最多尝试40次的规则和全部过滤原因在任何模型评分前固定。确认集只评分一次。</p></section>
+<section id="evidence"><h2>什么才算收益，如何解释？</h2><div class="grid"><div class="experiment"><h3>离线控制相关收益</h3><p>主指标：位移NMSE与夹爪NMSE各占一半，三任务等权。sigma=0.10噪声下相对误差至少下降10%，配对95%区间支持改善；至少2/3任务改善。任何任务/标签组明显退化，都不能宣布普遍收益。</p><p>干净分数退化的95%区间上界≤3%。每组单独训练内选择正则，带仅本体对照和固定MLP容量检查；不再让六个平移坐标掩盖夹爪表现。</p></div><div class="experiment"><h3>机制与真实策略证据</h3><p>原始/PCA/S-VAE对比区分来源和压缩因素；空间置换、视觉错配与本体基线检查空间信息及读出混淆。同步第二相机只称为跨相机转移；夹爪变化不冒称接触标签。</p><p>闭环必须让L12与K4策略接受同样训练。目标噪声成功率提高≥10个百分点且区间支持正收益，干净下界&gt;−5个百分点；小样本无法满足时报告未确定。</p></div></div><p>统计以任务内轨迹/场景配对，先合并同轨迹的帧、噪声副本和训练种子，再做重采样。主比较只有K4-S-VAE对L12-S-VAE；其他比较标为次要，不能事后改主指标。三任务结论不外推为所有任务最优。</p></section>
+<section id="schedule"><h2>未来12小时：按信息价值推进</h2><div class="table-wrap"><table><thead><tr><th>时间</th><th>工作</th><th>解决的不确定性</th></tr></thead><tbody>
+<tr><td>0–1h</td><td>数据/标签检查，K1一致性，冻结配置，训练与rollout测速</td><td>公平接入及时间预算是否成立</td></tr>
+<tr><td>1–3h</td><td>新场景清单、三种特征和配对噪声缓存</td><td>数据是否独立、严格配对</td></tr>
+<tr><td>3–5h</td><td>9次S-VAE训练、PCA与分组读出</td><td>层级优势能否通过48通道压缩</td></tr>
+<tr><td>5–6h</td><td>开发诊断与固定策略启动门槛</td><td>是否只是读出器或干净退化的取舍</td></tr>
+<tr><td>6–9h</td><td>条件满足则两分支等预算OpenWAM适配</td><td>实际策略能否利用信息</td></tr>
+<tr><td>9–11h</td><td>新离线确认；条件满足则160次新配对闭环</td><td>收益能否迁移到新场景</td></tr>
+<tr><td>11–12h</td><td>统计复算、失败记录、补丁及公网报告</td><td>结论是否可复查和复用</td></tr>
+</tbody></table></div><p>公开资源预算：并发≤4张L40S、GPU预算≤48卡时、墙钟≤12小时、CPU线程≤24、新增缓存≤80GB。算力尚未预留，资源、环境和数据检查计入预算。公开报告不包含内部节点标识、卡号、存储拓扑或连接信息。</p></section>
+<section id="policy"><h2>闭环阶段有明确的可行性门槛</h2><p>两策略从相同发布检查点开始，分别加载新L12/K4压缩器；相同原生损失和可训练模块、全局batch8、1000步、固定seed42、最终checkpoint。新表征坐标不能直接热替换旧策略。计划每分支2张L40S，bf16/ZeRO2/梯度检查点，吞吐尚未实测。</p><p>首小时必须证明两分支训练可在2.5小时预计时间内完成，且160次rollout可装入评测窗口，并留余量。第6小时必须完成接入检查且K4开发结果方向正确、无&gt;5%干净均值退化。否则本轮不启动大模型适配，完成已固定的离线确认并明确策略收益未验证，不换更小模型冒称原OpenWAM。</p><p>闭环固定前两任务，各20个独立新场景；2策略×2输入条件×2任务×20场景=160次。相同场景/指令/推理seed，分块交错运行，保存请求、动作、退出码和基础设施失败。仅40个独立场景、1个策略训练种子，是有界先导验证；不能把160条当160个独立样本，更不能据此宣称多种子稳健提升。</p></section>
+<section id="contribution"><h2>补全项目中的具体缺口</h2><p>OpenWAM已经比较编码器及S-VAE，不能把已有消融说成不存在。本轮针对更细的层级来源、压缩保留和扰动下控制证据，配套尽量小的改动。<a href="https://openwam-official.github.io/">官方项目</a> · <a href="https://github.com/OpenWAM-Official/OpenWAM/tree/7c5861e45cfe1339a0323f0e0b03a3316c37971c">已检查提交</a>。</p><ol><li>可选层选择/聚合配置与检查点元数据；默认末层路径保持一致，收益成立后才建议K4。</li><li>特征收集增加episode/frame/split、编码器层、预处理、dtype和seed清单，支持独立验证。</li><li>同维度压缩、按控制分组、本体对照和配对扰动的可复现实验包，保留全部种子和负结果。</li></ol><p>既有237行补丁仍只做重建评测；这些新研究功能尚未实现。未发送维护者消息或提交上游PR。收益若没有成立，报告哪一层证据失败，保留解释和评测能力，不包装“成功提升”。</p></section>
+<section id="materials"><h2>下载完整计划</h2><p><a href="assets/representation-plan-20260922/REPRESENTATION_12H_PLAN.md">完整实验计划（Markdown）</a> · <a href="assets/representation-plan-20260922/plan12h.json">状态与预算（JSON）</a> · <a href="assets/representation-plan-20260922/artifact-manifest.json">材料哈希</a></p><p>完整方案包含数据seed、输入和标签语义、预设阈值、统计单位、适配门槛及失败分支。实际执行前仍需把源代码、解析配置与命令固化为运行协议。当前暂停状态不会因过期定时消息改变。</p></section>
+<footer>计划而非实验结果 · 历史结果见 <a href="readout.html">控制读出</a> / <a href="norm.html">80次冻结评测</a> · 先检验，再下结论。</footer></main></div></body></html>

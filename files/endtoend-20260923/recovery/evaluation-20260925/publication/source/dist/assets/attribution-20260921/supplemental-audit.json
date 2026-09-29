@@ -1,0 +1,48 @@
+{
+  "audited_at": "2026-09-21T23:28:44.457124-05:00",
+  "all_checks_passed": true,
+  "frozen_source_files": 42,
+  "requests_and_native_conversions": 12,
+  "decoded_camera_images": 36,
+  "planner_calls": 24,
+  "commands_with_measured_qpos_change": 12,
+  "videos": [
+    {
+      "path": "round0/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/attribution0/2026-09-21 23:22:21/episode0.mp4",
+      "sha256": "4eadc4ded385efd856ccf8b54b347997accd04dcdd4fa03a8ba0c92eb165a84f",
+      "frames": 2,
+      "duration": 0.2
+    },
+    {
+      "path": "round0/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/attribution0/2026-09-21 23:22:21/episode1.mp4",
+      "sha256": "9fc08cc20032d95c05f626de084918ee1df25288c3f61a1b61da20ac0564a488",
+      "frames": 2,
+      "duration": 0.2
+    },
+    {
+      "path": "round0/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/attribution0/2026-09-21 23:22:21/episode2.mp4",
+      "sha256": "d890e23b0a2197d44298138a954e765a86f1aae0a42cc3b5d22c6dbd23cb2017",
+      "frames": 2,
+      "duration": 0.2
+    },
+    {
+      "path": "round1/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/attribution1/2026-09-21 23:23:28/episode0.mp4",
+      "sha256": "4eadc4ded385efd856ccf8b54b347997accd04dcdd4fa03a8ba0c92eb165a84f",
+      "frames": 2,
+      "duration": 0.2
+    },
+    {
+      "path": "round1/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/attribution1/2026-09-21 23:23:28/episode1.mp4",
+      "sha256": "9fc08cc20032d95c05f626de084918ee1df25288c3f61a1b61da20ac0564a488",
+      "frames": 2,
+      "duration": 0.2
+    },
+    {
+      "path": "round1/runtime/eval_result/pick_dual_bottles/openwam2robotwin_interface/demo_clean/attribution1/2026-09-21 23:23:28/episode2.mp4",
+      "sha256": "d890e23b0a2197d44298138a954e765a86f1aae0a42cc3b5d22c6dbd23cb2017",
+      "frames": 2,
+      "duration": 0.2
+    }
+  ],
+  "script_sha256": "0257924a5f9c89ba87bc62eb05c4605a695097f402cc6d903a5e990c5d4a8bf0"
+}

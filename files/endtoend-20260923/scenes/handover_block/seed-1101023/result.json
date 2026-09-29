@@ -1,0 +1,23 @@
+{
+  "task": "handover_block",
+  "seed": 1101023,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T21:14:33.724511-05:00",
+  "expert_plan_success": true,
+  "instruction": "Grab the red block with the left arm.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 281,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101023/data/episode0.hdf5",
+  "hdf5_sha256": "450e6c9a8fed6b3b3199aa5f3e2b7adca7e4c07903d8f364ec6afd9c6501e096",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {}
+  },
+  "elapsed_seconds": 89.91604619473219
+}

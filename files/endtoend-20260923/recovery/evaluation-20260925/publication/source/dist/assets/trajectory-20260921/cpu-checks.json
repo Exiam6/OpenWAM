@@ -1,0 +1,11 @@
+{
+  "actual_native_eval_equal_actions_and_types": true,
+  "upstream_task_limit_400_preserved": true,
+  "native_modelclient_used": true,
+  "wrapper_input_and_return_object_identity": true,
+  "rng_unchanged": true,
+  "all_three_cameras_and_eef_joint_traced": true,
+  "gzip_request_roundtrip_exact": true,
+  "actual_three_scene_replay_and_ten_choice_rng": true,
+  "upstream_loop_enforces400_action_cap": true
+}

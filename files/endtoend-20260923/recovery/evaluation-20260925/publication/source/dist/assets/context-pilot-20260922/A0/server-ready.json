@@ -1,0 +1,10 @@
+{
+  "model_initialized": true,
+  "encoder_weights_exact": true,
+  "sync_executor": true,
+  "inference_horizon": null,
+  "representation_hook": false,
+  "torch_seed": 42,
+  "cuda_memory_allocated": 23651735552,
+  "cuda_memory_reserved": 23853006848
+}

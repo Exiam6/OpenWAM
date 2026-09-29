@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-09-22T00:51:18.614245-05:00",
+  "base": "7c5861e45cfe1339a0323f0e0b03a3316c37971c",
+  "checks": [
+    {
+      "name": "cpu-tests",
+      "command": [
+        "/data02/zifanz4/openwam-experiments/env/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-c",
+        "/dev/null",
+        "--rootdir=/data02/zifanz4/openwam-experiments/results/contribution-review-20260922/combined-source",
+        "--junitxml=/data02/zifanz4/openwam-experiments/results/contribution-review-20260922/tests.xml",
+        "tests/test_svae_evaluation.py",
+        "tests/test_robotwin_scene_seeded_language.py",
+        "tests/test_policy_trace.py"
+      ],
+      "exit_code": 0,
+      "log": "cpu-tests.log"
+    },
+    {
+      "name": "ruff",
+      "command": [
+        "/tmp/openwam-review-tools/bin/ruff",
+        "check",
+        "benchmarks/robotwin/eval_policy_wrapper.py",
+        "benchmarks/utils/policy_trace.py",
+        "scripts/svae_train/evaluate_svae.py",
+        "tests/test_policy_trace.py",
+        "tests/test_robotwin_scene_seeded_language.py",
+        "tests/test_svae_evaluation.py"
+      ],
+      "exit_code": 0,
+      "log": "ruff.log"
+    },
+    {
+      "name": "environment",
+      "command": [
+        "/data02/zifanz4/openwam-experiments/env/bin/python",
+        "-c",
+        "import sys,torch,pytest,numpy;print(sys.version);print(\"torch\",torch.__version__,\"pytest\",pytest.__version__,\"numpy\",numpy.__version__);print(\"cuda_available\",torch.cuda.is_available())"
+      ],
+      "exit_code": 0,
+      "log": "environment.log"
+    }
+  ],
+  "elapsed_seconds": 4.94549248367548,
+  "source_artifacts_unchanged": true,
+  "passed": true,
+  "limits": [
+    "Targeted combined-source CPU checks only; full upstream dependency/GPU suite not run.",
+    "S-VAE CLI package bootstrap in complete upstream environment remains unchecked.",
+    "Existing scientific summaries reused; no new experiments or independent samples."
+  ]
+}

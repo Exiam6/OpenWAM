@@ -1,0 +1,59 @@
+{
+  "scope": "Arithmetic summary of existing results; no new samples or training",
+  "tasks": {
+    "adjust_bottle": {
+      "reconstruction_mse_change_pct": -50.088996355706826,
+      "clean_achieved_state_probe_mse_change_pct": -4.102914592733919
+    },
+    "handover_block": {
+      "reconstruction_mse_change_pct": -50.06782200392226,
+      "clean_achieved_state_probe_mse_change_pct": 3.5371907524434976
+    },
+    "place_object_basket": {
+      "reconstruction_mse_change_pct": -45.08036158514697,
+      "clean_achieved_state_probe_mse_change_pct": -3.424266167596224
+    }
+  },
+  "closedloop": {
+    "identity": {
+      "clean": {
+        "successes": 10,
+        "episodes": 10
+      },
+      "noise": {
+        "successes": 7,
+        "episodes": 10
+      }
+    },
+    "renorm": {
+      "clean": {
+        "successes": 10,
+        "episodes": 10
+      },
+      "noise": {
+        "successes": 9,
+        "episodes": 10
+      }
+    },
+    "adapter": {
+      "clean": {
+        "successes": 9,
+        "episodes": 10
+      },
+      "noise": {
+        "successes": 9,
+        "episodes": 10
+      }
+    },
+    "adapter_renorm": {
+      "clean": {
+        "successes": 10,
+        "episodes": 10
+      },
+      "noise": {
+        "successes": 8,
+        "episodes": 10
+      }
+    }
+  }
+}

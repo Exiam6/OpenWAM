@@ -1,0 +1,710 @@
+{
+  "role": "six two-command open-loop traces, not policy success evaluation",
+  "all_integrity_checks_passed": true,
+  "traces": 6,
+  "commands_executed": 12,
+  "policy_inference_calls": 0,
+  "video_count": 6,
+  "comparisons": [
+    {
+      "seed": 400000,
+      "steps": [
+        {
+          "step": 0,
+          "request_exact": true,
+          "raw_cameras_exact": true,
+          "eef_exact": true,
+          "fixed_commands_exact": true,
+          "states": {
+            "before_execution": {
+              "all_recorded_exact": true,
+              "actual_articulations_exact": true,
+              "actual_values": {
+                "left": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                },
+                "right": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "ee_link_poses_exact": true,
+              "object_poses_exact": true,
+              "drive_targets": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            },
+            "after_execution": {
+              "all_recorded_exact": true,
+              "actual_articulations_exact": true,
+              "actual_values": {
+                "left": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                },
+                "right": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "ee_link_poses_exact": true,
+              "object_poses_exact": true,
+              "drive_targets": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            }
+          },
+          "planners": [
+            {
+              "side": "left",
+              "inputs_exact": true,
+              "results_exact": true,
+              "statuses": [
+                "Success",
+                "Success"
+              ],
+              "position": {
+                "exact": true,
+                "max_abs": 0.0
+              },
+              "velocity": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            },
+            {
+              "side": "right",
+              "inputs_exact": true,
+              "results_exact": true,
+              "statuses": [
+                "Success",
+                "Success"
+              ],
+              "position": {
+                "exact": true,
+                "max_abs": 0.0
+              },
+              "velocity": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            }
+          ],
+          "request_matches_stageC_round0": [
+            true,
+            true
+          ]
+        },
+        {
+          "step": 1,
+          "request_exact": true,
+          "raw_cameras_exact": true,
+          "eef_exact": true,
+          "fixed_commands_exact": true,
+          "states": {
+            "before_execution": {
+              "all_recorded_exact": true,
+              "actual_articulations_exact": true,
+              "actual_values": {
+                "left": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                },
+                "right": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "ee_link_poses_exact": true,
+              "object_poses_exact": true,
+              "drive_targets": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            },
+            "after_execution": {
+              "all_recorded_exact": true,
+              "actual_articulations_exact": true,
+              "actual_values": {
+                "left": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                },
+                "right": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "ee_link_poses_exact": true,
+              "object_poses_exact": true,
+              "drive_targets": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            }
+          },
+          "planners": [
+            {
+              "side": "left",
+              "inputs_exact": true,
+              "results_exact": true,
+              "statuses": [
+                "Success",
+                "Success"
+              ],
+              "position": {
+                "exact": true,
+                "max_abs": 0.0
+              },
+              "velocity": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            },
+            {
+              "side": "right",
+              "inputs_exact": true,
+              "results_exact": true,
+              "statuses": [
+                "Success",
+                "Success"
+              ],
+              "position": {
+                "exact": true,
+                "max_abs": 0.0
+              },
+              "velocity": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            }
+          ],
+          "request_matches_stageC_round0": [
+            true,
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 400001,
+      "steps": [
+        {
+          "step": 0,
+          "request_exact": true,
+          "raw_cameras_exact": true,
+          "eef_exact": true,
+          "fixed_commands_exact": true,
+          "states": {
+            "before_execution": {
+              "all_recorded_exact": true,
+              "actual_articulations_exact": true,
+              "actual_values": {
+                "left": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                },
+                "right": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "ee_link_poses_exact": true,
+              "object_poses_exact": true,
+              "drive_targets": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            },
+            "after_execution": {
+              "all_recorded_exact": true,
+              "actual_articulations_exact": true,
+              "actual_values": {
+                "left": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                },
+                "right": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "ee_link_poses_exact": true,
+              "object_poses_exact": true,
+              "drive_targets": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            }
+          },
+          "planners": [
+            {
+              "side": "left",
+              "inputs_exact": true,
+              "results_exact": true,
+              "statuses": [
+                "Success",
+                "Success"
+              ],
+              "position": {
+                "exact": true,
+                "max_abs": 0.0
+              },
+              "velocity": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            },
+            {
+              "side": "right",
+              "inputs_exact": true,
+              "results_exact": true,
+              "statuses": [
+                "Success",
+                "Success"
+              ],
+              "position": {
+                "exact": true,
+                "max_abs": 0.0
+              },
+              "velocity": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            }
+          ],
+          "request_matches_stageC_round0": [
+            true,
+            true
+          ]
+        },
+        {
+          "step": 1,
+          "request_exact": true,
+          "raw_cameras_exact": true,
+          "eef_exact": true,
+          "fixed_commands_exact": true,
+          "states": {
+            "before_execution": {
+              "all_recorded_exact": true,
+              "actual_articulations_exact": true,
+              "actual_values": {
+                "left": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                },
+                "right": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "ee_link_poses_exact": true,
+              "object_poses_exact": true,
+              "drive_targets": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            },
+            "after_execution": {
+              "all_recorded_exact": true,
+              "actual_articulations_exact": true,
+              "actual_values": {
+                "left": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                },
+                "right": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "ee_link_poses_exact": true,
+              "object_poses_exact": true,
+              "drive_targets": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            }
+          },
+          "planners": [
+            {
+              "side": "left",
+              "inputs_exact": true,
+              "results_exact": true,
+              "statuses": [
+                "Success",
+                "Success"
+              ],
+              "position": {
+                "exact": true,
+                "max_abs": 0.0
+              },
+              "velocity": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            },
+            {
+              "side": "right",
+              "inputs_exact": true,
+              "results_exact": true,
+              "statuses": [
+                "Success",
+                "Success"
+              ],
+              "position": {
+                "exact": true,
+                "max_abs": 0.0
+              },
+              "velocity": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            }
+          ],
+          "request_matches_stageC_round0": [
+            false,
+            false
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 400002,
+      "steps": [
+        {
+          "step": 0,
+          "request_exact": true,
+          "raw_cameras_exact": true,
+          "eef_exact": true,
+          "fixed_commands_exact": true,
+          "states": {
+            "before_execution": {
+              "all_recorded_exact": true,
+              "actual_articulations_exact": true,
+              "actual_values": {
+                "left": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                },
+                "right": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "ee_link_poses_exact": true,
+              "object_poses_exact": true,
+              "drive_targets": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            },
+            "after_execution": {
+              "all_recorded_exact": true,
+              "actual_articulations_exact": true,
+              "actual_values": {
+                "left": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                },
+                "right": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "ee_link_poses_exact": true,
+              "object_poses_exact": true,
+              "drive_targets": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            }
+          },
+          "planners": [
+            {
+              "side": "left",
+              "inputs_exact": true,
+              "results_exact": true,
+              "statuses": [
+                "Success",
+                "Success"
+              ],
+              "position": {
+                "exact": true,
+                "max_abs": 0.0
+              },
+              "velocity": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            },
+            {
+              "side": "right",
+              "inputs_exact": true,
+              "results_exact": true,
+              "statuses": [
+                "Success",
+                "Success"
+              ],
+              "position": {
+                "exact": true,
+                "max_abs": 0.0
+              },
+              "velocity": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            }
+          ],
+          "request_matches_stageC_round0": [
+            true,
+            true
+          ]
+        },
+        {
+          "step": 1,
+          "request_exact": true,
+          "raw_cameras_exact": true,
+          "eef_exact": true,
+          "fixed_commands_exact": true,
+          "states": {
+            "before_execution": {
+              "all_recorded_exact": true,
+              "actual_articulations_exact": true,
+              "actual_values": {
+                "left": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                },
+                "right": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "ee_link_poses_exact": true,
+              "object_poses_exact": true,
+              "drive_targets": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            },
+            "after_execution": {
+              "all_recorded_exact": true,
+              "actual_articulations_exact": true,
+              "actual_values": {
+                "left": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                },
+                "right": {
+                  "qpos": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  },
+                  "qvel": {
+                    "exact": true,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "ee_link_poses_exact": true,
+              "object_poses_exact": true,
+              "drive_targets": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            }
+          },
+          "planners": [
+            {
+              "side": "left",
+              "inputs_exact": true,
+              "results_exact": true,
+              "statuses": [
+                "Success",
+                "Success"
+              ],
+              "position": {
+                "exact": true,
+                "max_abs": 0.0
+              },
+              "velocity": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            },
+            {
+              "side": "right",
+              "inputs_exact": true,
+              "results_exact": true,
+              "statuses": [
+                "Success",
+                "Success"
+              ],
+              "position": {
+                "exact": true,
+                "max_abs": 0.0
+              },
+              "velocity": {
+                "exact": true,
+                "max_abs": 0.0
+              }
+            }
+          ],
+          "request_matches_stageC_round0": [
+            false,
+            false
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "three reused clean scenes",
+    "two repetitions and two commands only",
+    "later scenes have truncated preceding-command context",
+    "measured state does not include bottle velocities or hidden solver state",
+    "ordering does not establish a specific library defect"
+  ]
+}

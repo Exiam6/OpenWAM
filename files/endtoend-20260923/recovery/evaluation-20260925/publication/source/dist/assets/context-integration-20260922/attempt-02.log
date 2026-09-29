@@ -1,0 +1,13 @@
+test_actual_upstream_one_scene_loop_has_two_resets_observations_and_actions (__main__.IntegrationChecks) ... ok
+test_both_modes_trace_real_state_and_identical_saved_targets (__main__.IntegrationChecks) ... ok
+test_counter_mismatch_is_saved_then_aborts_before_motion (__main__.IntegrationChecks) ... ok
+test_existing_record_directory_is_refused (__main__.IntegrationChecks) ... ok
+test_initial_mismatch_is_saved_without_prediction_or_motion (__main__.IntegrationChecks) ... ok
+test_real_loopback_websocket_preserves_rpc_counts_and_response (__main__.IntegrationChecks) ... ok
+test_real_websocket_timeout_does_not_resend_or_continue (__main__.IntegrationChecks) ... ok
+test_timeout_is_saved_without_motion_retry_or_lost_exception (__main__.IntegrationChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.330s
+
+OK

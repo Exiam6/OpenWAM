@@ -1,0 +1,6 @@
+{
+  "encoder_weights_exact": true,
+  "sync_executor": true,
+  "inference_horizon": null,
+  "representation_hook": false
+}

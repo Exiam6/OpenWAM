@@ -1,0 +1,8 @@
+{
+  "arm": "identity",
+  "noise_sigma": 0.0,
+  "manifest_sha256": "1290d3616d337c8ecedbbfa028b19dd3b40f40058a523f9e951ae4dc308ae45c",
+  "role": "context_fixed_command_diagnostic",
+  "expert_filter": "no repeated filter, frozen manifest",
+  "script_sha256": "c11173c7b7d073fba74c084114d73cf4eb0303eca0c9b001b1ab3d6f113f28be"
+}

@@ -1,0 +1,65 @@
+{
+  "selected_rho": 0.5,
+  "eligible_selection": true,
+  "promotion_gate": true,
+  "scores": {
+    "0.5": {
+      "translation_ratios_to_aux0": {
+        "adjust_bottle": 0.6173308194106139,
+        "handover_block": 0.4991994141541617,
+        "place_object_basket": 0.634073840539315
+      },
+      "translation_macro_to_aux0": 0.5835346913680302,
+      "translation_ratios_to_aux1": {
+        "adjust_bottle": 1.0618451596681469,
+        "handover_block": 1.0542133061943708,
+        "place_object_basket": 1.0635489002795757
+      },
+      "translation_macro_to_aux1": 1.0598691220473644,
+      "gripper_ratios_to_aux0": {
+        "adjust_bottle": 0.628730593767424,
+        "handover_block": 0.9945665059031452,
+        "place_object_basket": 0.8258093793061158
+      },
+      "gripper_macro_to_aux0": 0.8163688263255616,
+      "gripper_ratios_to_aux1": {
+        "adjust_bottle": 0.8516120353389488,
+        "handover_block": 0.9579455863570661,
+        "place_object_basket": 0.9568222265715539
+      },
+      "gripper_macro_to_aux1": 0.9221266160891896,
+      "translation_eligible": true,
+      "promotion_gate": true
+    },
+    "0.75": {
+      "translation_ratios_to_aux0": {
+        "adjust_bottle": 0.7080632565665914,
+        "handover_block": 0.540579907367808,
+        "place_object_basket": 0.6728777289167687
+      },
+      "translation_macro_to_aux0": 0.6405069642837227,
+      "translation_ratios_to_aux1": {
+        "adjust_bottle": 1.2179102647781619,
+        "handover_block": 1.1416009619604088,
+        "place_object_basket": 1.1286356932866959
+      },
+      "translation_macro_to_aux1": 1.162715640008422,
+      "gripper_ratios_to_aux0": {
+        "adjust_bottle": 0.6011214510900711,
+        "handover_block": 0.935824210829249,
+        "place_object_basket": 0.8317209380993748
+      },
+      "gripper_macro_to_aux0": 0.789555533339565,
+      "gripper_ratios_to_aux1": {
+        "adjust_bottle": 0.8142156076440027,
+        "handover_block": 0.9013662405169165,
+        "place_object_basket": 0.9636716412050222
+      },
+      "gripper_macro_to_aux1": 0.8930844964553137,
+      "translation_eligible": false,
+      "promotion_gate": false
+    }
+  },
+  "selected_before_fresh_training_and_test": true,
+  "selected_at": "2026-09-21T12:46:03-0500"
+}

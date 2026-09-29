@@ -1,0 +1,26 @@
+{
+  "task": "adjust_bottle",
+  "seed": 1100003,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T19:27:17.927634-05:00",
+  "expert_plan_success": true,
+  "instruction": "Use the right arm to grab the bottle the green bottle with white label",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 144,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100003/data/episode0.hdf5",
+  "hdf5_sha256": "d60223bd773eb7c22f8472c14c2993d26cfe579a80d7c799e20206686513786d",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "001_bottle/base16",
+      "{a}": "right"
+    }
+  },
+  "elapsed_seconds": 79.09063642844558
+}

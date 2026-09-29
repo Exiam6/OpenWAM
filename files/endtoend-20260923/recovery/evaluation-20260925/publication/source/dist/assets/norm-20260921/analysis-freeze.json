@@ -1,0 +1,6 @@
+{
+  "frozen_at": "2026-09-21T15:11:16-0500",
+  "script": "scripts/summarize_norm.py",
+  "sha256": "5c1fef09b632df3281dcd7fdd6138b705aca2ee85e0eb2a38602e511d5aae8ca",
+  "scope": "analysis implementation frozen before any primary-arm outcomes"
+}

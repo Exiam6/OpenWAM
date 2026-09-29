@@ -1,0 +1,16 @@
+{
+  "launched_at": "2026-09-22T01:07:50.598495-05:00",
+  "logical_cpus": 256,
+  "load_average": [
+    58.74951171875,
+    56.0185546875,
+    58.291015625
+  ],
+  "memory": {
+    "MemTotal": "792231272 kB",
+    "MemAvailable": "569614224 kB"
+  },
+  "cuda_visible_devices": "",
+  "cpu_threads": 2,
+  "wall_cap_seconds": 300
+}

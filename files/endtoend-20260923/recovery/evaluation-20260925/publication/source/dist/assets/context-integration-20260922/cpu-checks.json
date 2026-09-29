@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-09-22T00:08:49.211013-05:00",
+  "native_loop_and_local_websocket_tests_passed": 8,
+  "updated_transport_regression_tests_passed": 6,
+  "total_passed": 14,
+  "no_GPU_or_simulator_started": true,
+  "network_scope": "loopback only; real WSPolicyClient against a stub WebSocket server, not a policy model",
+  "initial_bootstrap_failure_retained": "attempt-00-bootstrap.txt",
+  "ready_for_gpu_launch": false,
+  "remaining": [
+    "actual client entrypoint and complete lifecycle integration",
+    "fresh-process model/simulator runner and timeout cleanup",
+    "complete runtime protocol/config/source freeze",
+    "separately bounded allocation and fresh resource preflight"
+  ],
+  "source_sha256": {
+    "scripts/context_trial_transport.py": "1ec09874ff8cc7fce6ae61eace9a289ecd19075b5b4bbea4ab6843a4ae10c8a2",
+    "scripts/context_trace.py": "775e576baf307c77b7beb3d617465e5ab9c21875e4e94aab9d8b5de0e576a2a1",
+    "scripts/check_context_integration.py": "d4bc0dcfb371bbd870dbd762848413ab92c513e421ac44e7021dad84cdb8d7ac",
+    "scripts/check_context_trial_transport.py": "40e6fd64f5524f5a31b967a207e6f462ff5420734f1a03809bc29a8cf192fe55",
+    "scripts/attribution_trace.py": "4116b65995be2ba0d3bd25a2c910ad8e0864c6673cf42f0effe678c804a2b8a1",
+    "scripts/trajectory_trace.py": "da0c780dee41d1e02f93b94d1447e768eec36d7a436a8ca8232a590963c5fca7",
+    "scripts/norm_client.py": "c11173c7b7d073fba74c084114d73cf4eb0303eca0c9b001b1ab3d6f113f28be",
+    "scripts/capture_repeat_inputs.py": "2043f686349d030765a2e3ed8eb4dc596151e17e3c72ca73c7c016290574d2be"
+  },
+  "upstream_files_sha256": {
+    "/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/script/eval_policy.py": "8b16c766a9c401163418b425e413ebe7f4127d6b132b9c7c4d6b6f8752d57681",
+    "/home/zifanz4/openwam-trace-contribution/benchmarks/robotwin/openwam2robotwin_interface.py": "3329d6b1c559646395d65f6d4521720ac83ce95a7f8ebbdfecf486a254e423b7",
+    "/home/zifanz4/openwam-trace-contribution/benchmarks/utils/transport.py": "f7793c446bfa83a52f8f6672bbd9c56ee304294d10859d8ecb745bc53ff3ffb6",
+    "/data02/zifanz4/openwam-experiments/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py": "7b56c45b89a845b4ff264907bcac7f183a71894d74f4b90753fda69d254cedda"
+  },
+  "integration_command": "PYTHONPATH=/data02/zifanz4/openwam-experiments/OpenWAM/benchmarks/robotwin benchmark-env/bin/python scripts/check_context_integration.py -v"
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "command": [
+      "/data02/zifanz4/openwam-experiments/policy-env/bin/python",
+      "/home/zifanz4/openwam-svae-contribution/scripts/svae_train/evaluate_svae.py",
+      "--checkpoint",
+      "/data02/zifanz4/openwam-experiments/results/night-20260921/adjust_bottle/svae-w1-s42/final.pt",
+      "--features-dir",
+      "/data02/zifanz4/openwam-experiments/results/representation-preflight-20260922/native-shards",
+      "--output",
+      "/data02/zifanz4/openwam-experiments/results/representation-preflight-20260922/cli-batch2.json",
+      "--batch-size",
+      "2",
+      "--device",
+      "cpu"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "/data02/zifanz4/openwam-experiments/policy-env/bin/python",
+      "/home/zifanz4/openwam-svae-contribution/scripts/svae_train/evaluate_svae.py",
+      "--checkpoint",
+      "/data02/zifanz4/openwam-experiments/results/night-20260921/adjust_bottle/svae-w1-s42/final.pt",
+      "--features-dir",
+      "/data02/zifanz4/openwam-experiments/results/representation-preflight-20260922/native-shards",
+      "--output",
+      "/data02/zifanz4/openwam-experiments/results/representation-preflight-20260922/cli-batch1.json",
+      "--batch-size",
+      "1",
+      "--device",
+      "cpu"
+    ],
+    "exit_code": 0
+  }
+]

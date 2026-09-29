@@ -1,0 +1,39 @@
+{
+  "baseline-clean": {
+    "completed": 5,
+    "successes": 5,
+    "finished": true
+  },
+  "baseline-noise": {
+    "completed": 5,
+    "successes": 5,
+    "finished": true
+  },
+  "baseline-front": {
+    "completed": 2,
+    "successes": 0,
+    "finished": false
+  },
+  "identity-confirm-clean": {
+    "completed": 0,
+    "successes": 0,
+    "finished": false
+  },
+  "identity-confirm-noise": {
+    "completed": 0,
+    "successes": 0,
+    "finished": false
+  },
+  "adapter-confirm-clean": {
+    "completed": 0,
+    "successes": 0,
+    "finished": false
+  },
+  "adapter-confirm-noise": {
+    "completed": 0,
+    "successes": 0,
+    "finished": false
+  },
+  "snapshot_at": "2026-09-21T13:51:20-0500",
+  "complete": false
+}

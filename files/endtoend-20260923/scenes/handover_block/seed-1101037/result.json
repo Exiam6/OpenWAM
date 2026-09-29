@@ -1,0 +1,23 @@
+{
+  "task": "handover_block",
+  "seed": 1101037,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T21:36:00.699582-05:00",
+  "expert_plan_success": true,
+  "instruction": "Pick up the red block and switch arms.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 277,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101037/data/episode0.hdf5",
+  "hdf5_sha256": "66d7d93ce00c9b7170fec365044b1a3d17245f11f4db2850b750e940000c2964",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {}
+  },
+  "elapsed_seconds": 93.81012687832117
+}

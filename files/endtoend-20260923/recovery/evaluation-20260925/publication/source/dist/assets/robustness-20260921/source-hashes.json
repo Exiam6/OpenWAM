@@ -1,0 +1,20 @@
+{
+  "ROBUSTNESS_PROTOCOL.md": "77afb3da875ecc9eba754b6e9f526373920441f4013422d203a7273b9e3ba6fe",
+  "scripts/robustness_client.py": "0268e61922251fef164fbcb5288b98612caf36037bb5e8fc40a1e2ef661a945b",
+  "scripts/run-robustness.sh": "59f0d57cba52299ee31909c4c9388d7f8c2a0428deb21987db42b6943c661eee",
+  "scripts/robustness_common.py": "e3b3da3514c47c85d4ee94f07befdd743a99ade102e950a64e5a84f4c00b1a20",
+  "scripts/control_robustness.py": "ad02bba9ba54ca8450637cef2117171738004243285eb9ae81b7f47a1e06ae02",
+  "scripts/serve_robustness.py": "f5762412b87c6767d39e8328cc942e49685d6e5b1114e335d52749ecb06360a7",
+  "scripts/run-control-robustness.sh": "faacd378d62d1b7560a7d1b5b7c5d36e3af739a1bbd51fb40a37d29725c234df",
+  "scripts/run-robust-confirmation.sh": "9fa92d126e7d5fc1c8cff0a5ec1c22839251abfccedd0266fc88f1ddb5ce9a79",
+  "scripts/train_restoration.py": "b06d666a08a06f8c6e70e006d4d898c35eea4f6714fa80e2e7be1225c6684fa4",
+  "scripts/run-restoration.sh": "595e2df74813d6f1609f0869594b5b3ae34349cdddd7474bca5e9ca57cd7c245",
+  "scripts/serve_robustness_confirmation.py": "96c0af0c50ab57ca5f3e522a76d8a1d0c4ae40b8281b6e1083349183f955f526",
+  "scripts/run-robustness-confirm-gpu0.sh": "23fd7814df5fcfd532910def70f24b5a215a6a1e4224fbf10fe4f055eb856624",
+  "scripts/run-confirmation-gpu0.sh": "6e01c2f55e07c4b9c50f2d0b91c6cbb53bb36e7353294d9da2887c7b0d648fab",
+  "scripts/replay_confirmation_client.py": "f4d580e608ae594b61375e19f6e1925c96e137b4e6e88bf09f70a3849c67c765",
+  "scripts/run-fixed-robustness.sh": "c07762f9c81e9cc5eeab090e2bb98ed9abf273dd6983b734e6b0497d619264cb",
+  "scripts/run-fixed-confirmation.sh": "1cfaaa2a50b9895b1b55bcbccf8232f544f8dbf4a7b64d69eb91510317cb5e35",
+  "scripts/check_fixed_scene_replay.py": "8c28ce6416229c13da786565fbb0ad9fd3a496adb5d451126000d4e8b2f2484b",
+  "scripts/summarize_robustness.py": "672e2f134a96f0a0d66500424b885a9879ea9bb21f3c76bab31bc2e533896a16"
+}

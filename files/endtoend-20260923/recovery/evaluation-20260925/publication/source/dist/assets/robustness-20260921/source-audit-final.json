@@ -1,0 +1,74 @@
+{
+  "ROBUSTNESS_PROTOCOL.md": {
+    "sha256_matches": true,
+    "scope": "runtime source or protocol"
+  },
+  "scripts/robustness_client.py": {
+    "sha256_matches": true,
+    "scope": "runtime source or protocol"
+  },
+  "scripts/run-robustness.sh": {
+    "sha256_matches": true,
+    "scope": "runtime source or protocol"
+  },
+  "scripts/robustness_common.py": {
+    "sha256_matches": true,
+    "scope": "runtime source or protocol"
+  },
+  "scripts/control_robustness.py": {
+    "sha256_matches": true,
+    "scope": "unused prior-study repository snapshot"
+  },
+  "scripts/serve_robustness.py": {
+    "sha256_matches": true,
+    "scope": "runtime source or protocol"
+  },
+  "scripts/run-control-robustness.sh": {
+    "sha256_matches": true,
+    "scope": "unused prior-study repository snapshot"
+  },
+  "scripts/run-robust-confirmation.sh": {
+    "sha256_matches": true,
+    "scope": "runtime source or protocol"
+  },
+  "scripts/train_restoration.py": {
+    "sha256_matches": true,
+    "scope": "runtime source or protocol"
+  },
+  "scripts/run-restoration.sh": {
+    "sha256_matches": true,
+    "scope": "runtime source or protocol"
+  },
+  "scripts/serve_robustness_confirmation.py": {
+    "sha256_matches": true,
+    "scope": "runtime source or protocol"
+  },
+  "scripts/run-robustness-confirm-gpu0.sh": {
+    "sha256_matches": true,
+    "scope": "runtime source or protocol"
+  },
+  "scripts/run-confirmation-gpu0.sh": {
+    "sha256_matches": true,
+    "scope": "runtime source or protocol"
+  },
+  "scripts/replay_confirmation_client.py": {
+    "sha256_matches": true,
+    "scope": "runtime source or protocol"
+  },
+  "scripts/run-fixed-robustness.sh": {
+    "sha256_matches": true,
+    "scope": "runtime source or protocol"
+  },
+  "scripts/run-fixed-confirmation.sh": {
+    "sha256_matches": true,
+    "scope": "runtime source or protocol"
+  },
+  "scripts/check_fixed_scene_replay.py": {
+    "sha256_matches": true,
+    "scope": "runtime source or protocol"
+  },
+  "scripts/summarize_robustness.py": {
+    "sha256_matches": true,
+    "scope": "runtime source or protocol"
+  }
+}

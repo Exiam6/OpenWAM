@@ -1,0 +1,114 @@
+{
+  "completed_at": "2026-09-22T01:07:52.542246-05:00",
+  "elapsed_seconds": 0.48075485974550247,
+  "selection": {
+    "visual_proprio_alpha": 1.0,
+    "proprio_alpha": 0.01
+  },
+  "primary_noisy": {
+    "all": {
+      "normalized_mse_delta": -0.05204384447924891,
+      "relative_change_percent": -11.04029595997008,
+      "episode_paired_delta": [
+        -0.0867635932032576,
+        -0.07055747479507107,
+        -0.051385609954118006,
+        -0.025848351898600963,
+        -0.025664192545196918
+      ],
+      "episode_bootstrap_percentile95": [
+        -0.07320554919015507,
+        -0.030882139768342753
+      ]
+    },
+    "translation": {
+      "normalized_mse_delta": -0.07105379855142713,
+      "relative_change_percent": -11.843088546804958,
+      "episode_paired_delta": [
+        -0.11788481785302518,
+        -0.0969979924554808,
+        -0.07293836364264195,
+        -0.03252289200016689,
+        -0.03492492680582082
+      ],
+      "episode_bootstrap_percentile95": [
+        -0.10054079685193078,
+        -0.04156680025092348
+      ]
+    },
+    "gripper": {
+      "normalized_mse_delta": 0.004986017737285933,
+      "relative_change_percent": 5.816912772906341,
+      "episode_paired_delta": [
+        0.00660008074604574,
+        0.008764078186158056,
+        0.0132726511114543,
+        -0.005824731593903204,
+        0.0021180102366747736
+      ],
+      "episode_bootstrap_percentile95": [
+        -0.0008548066579236263,
+        0.010134840380333715
+      ]
+    }
+  },
+  "primary_clean": {
+    "all": {
+      "normalized_mse_delta": 0.009758246543966054,
+      "relative_change_percent": 2.637120783902621,
+      "episode_paired_delta": [
+        0.015363952392946412,
+        0.010086132534080028,
+        0.019234607457124242,
+        -0.005215381010012454,
+        0.009321921345692041
+      ],
+      "episode_bootstrap_percentile95": [
+        0.0019607883793978154,
+        0.015856650446844266
+      ]
+    },
+    "translation": {
+      "normalized_mse_delta": 0.012362051480489966,
+      "relative_change_percent": 2.643909862447633,
+      "episode_paired_delta": [
+        0.020245059164958557,
+        0.012096240264735159,
+        0.02474140483096987,
+        -0.007311821294281873,
+        0.012039374436068118
+      ],
+      "episode_bootstrap_percentile95": [
+        0.0020811671093696194,
+        0.0204138336513184
+      ]
+    },
+    "gripper": {
+      "normalized_mse_delta": 0.0019468317343943303,
+      "relative_change_percent": 2.514140060808987,
+      "episode_paired_delta": [
+        0.000720632076910005,
+        0.004055809342114788,
+        0.002714215335587633,
+        0.0010739398427955238,
+        0.0011695620745637014
+      ],
+      "episode_bootstrap_percentile95": [
+        0.0009517411827949518,
+        0.0031204550877684005
+      ]
+    }
+  },
+  "all_conditions_retained": [
+    "proprio_only",
+    "identity_clean",
+    "identity_noisy",
+    "adapter42_clean",
+    "adapter42_noisy",
+    "adapter43_clean",
+    "adapter43_noisy",
+    "adapter44_clean",
+    "adapter44_noisy",
+    "visual_mismatch_clean"
+  ]
+}

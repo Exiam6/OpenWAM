@@ -1,0 +1,11 @@
+{
+  "task": "adjust_bottle",
+  "seed": 1100031,
+  "role": "expert_only_independent_confirmation",
+  "accepted": false,
+  "started_at": "2026-09-23T20:01:46.247703-05:00",
+  "outcome": "unstable_scene",
+  "error": "UnStableError('Objects is unstable in seed(1100031), unstable objects: 001_bottle')",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 54, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args);capture_initial(env,dest,'plan' if args['need_plan'] else 'replay')\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(1100031), unstable objects: 001_bottle\n",
+  "elapsed_seconds": 33.55073128268123
+}

@@ -1,0 +1,108 @@
+{
+  "checked_at": "2026-09-22T00:51:18.614245-05:00",
+  "base": "7c5861e45cfe1339a0323f0e0b03a3316c37971c",
+  "patches": [
+    {
+      "name": "svae",
+      "commit": "eb31a97c4baa7dc5c4511a14f1f6c9b32795a5fd",
+      "base": "7c5861e45cfe1339a0323f0e0b03a3316c37971c",
+      "sha256": "39321f618759fb92f818603a52f4f2eb375946a2b80a7dcc5f44bd43e12968d3",
+      "files": [
+        "README.md",
+        "scripts/svae_train/EVALUATION.md",
+        "scripts/svae_train/evaluate_svae.py",
+        "tests/test_svae_evaluation.py"
+      ],
+      "diffstat": "4 files changed, 237 insertions(+)"
+    },
+    {
+      "name": "robustness",
+      "commit": "4cace2d002c31e5d0c53f379b4f8ca323d55ac92",
+      "base": "7c5861e45cfe1339a0323f0e0b03a3316c37971c",
+      "sha256": "4e1a33d7360da3640023e1b63f363b19aafb3f849b75a8115104c2b12e291a51",
+      "files": [
+        "benchmarks/robotwin/README.md",
+        "benchmarks/robotwin/eval_policy_wrapper.py",
+        "tests/test_robotwin_scene_seeded_language.py"
+      ],
+      "diffstat": "3 files changed, 134 insertions(+)"
+    },
+    {
+      "name": "trace",
+      "commit": "d1273ca685d7f65b3754843b5fe42a210ecdcfa0",
+      "base": "7c5861e45cfe1339a0323f0e0b03a3316c37971c",
+      "sha256": "8589336bc5fdde75115575de018977a350b6a9dda361c4b2e77a50fd1e841f55",
+      "files": [
+        "benchmarks/POLICY_TRACE.md",
+        "benchmarks/README.md",
+        "benchmarks/utils/policy_trace.py",
+        "tests/test_policy_trace.py"
+      ],
+      "diffstat": "4 files changed, 363 insertions(+)"
+    }
+  ],
+  "checks": [
+    {
+      "name": "cpu-tests",
+      "command": [
+        "/data02/zifanz4/openwam-experiments/env/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-c",
+        "/dev/null",
+        "--rootdir=/data02/zifanz4/openwam-experiments/results/contribution-review-20260922/combined-source",
+        "--junitxml=/data02/zifanz4/openwam-experiments/results/contribution-review-20260922/tests.xml",
+        "tests/test_svae_evaluation.py",
+        "tests/test_robotwin_scene_seeded_language.py",
+        "tests/test_policy_trace.py"
+      ],
+      "exit_code": 0,
+      "log": "cpu-tests.log"
+    },
+    {
+      "name": "ruff",
+      "command": [
+        "/tmp/openwam-review-tools/bin/ruff",
+        "check",
+        "benchmarks/robotwin/eval_policy_wrapper.py",
+        "benchmarks/utils/policy_trace.py",
+        "scripts/svae_train/evaluate_svae.py",
+        "tests/test_policy_trace.py",
+        "tests/test_robotwin_scene_seeded_language.py",
+        "tests/test_svae_evaluation.py"
+      ],
+      "exit_code": 0,
+      "log": "ruff.log"
+    },
+    {
+      "name": "environment",
+      "command": [
+        "/data02/zifanz4/openwam-experiments/env/bin/python",
+        "-c",
+        "import sys,torch,pytest,numpy;print(sys.version);print(\"torch\",torch.__version__,\"pytest\",pytest.__version__,\"numpy\",numpy.__version__);print(\"cuda_available\",torch.cuda.is_available())"
+      ],
+      "exit_code": 0,
+      "log": "environment.log"
+    }
+  ],
+  "elapsed_seconds": 4.94549248367548,
+  "source_artifacts_unchanged": true,
+  "source_hashes": {
+    "/home/zifanz4/research-reports/dist/assets/night-20260921/summary.json": "bee3357080196ed3ca40460ea01060ecc4127049c972485121a8f0a056007743",
+    "/home/zifanz4/research-reports/dist/assets/control-20260921/summary.json": "3668f26676c9fb60b36b7851755bd3505e44706c663e2ac7323b64106ebcc8a0",
+    "/home/zifanz4/research-reports/dist/assets/groups-20260921/summary.json": "1491ee4e48c7a016ce99ad9588cfae7147ad1043c0090f0566596e467e5f8179",
+    "/home/zifanz4/research-reports/dist/assets/robustness-20260921/summary.json": "593ff1891dde4222690313d3bd78ec303271aeb1f91cf204e087e8231cd072a8",
+    "/home/zifanz4/research-reports/dist/assets/norm-20260921/summary.json": "8cfe950524e64a33c64ea18adc5aa37fc667713525c044383652ac647a18a12d",
+    "/home/zifanz4/openwam-experiments/contribution/robotwin-instruction-seed.patch": "088e7a1ddb8df157943780852f313c7a079b135dbe4cd8b444202eb112230ebf",
+    "/home/zifanz4/openwam-experiments/contribution/robotwin-smoke-denominator.patch": "3c7df4b034d5af17a9ef42369e7b717b428fabd585d61431f7bf57ac11fcd2be",
+    "/home/zifanz4/openwam-experiments/contribution/openwam-scene-seeded-language.patch": "4e1a33d7360da3640023e1b63f363b19aafb3f849b75a8115104c2b12e291a51",
+    "/home/zifanz4/openwam-experiments/contribution/svae-heldout-evaluation.patch": "003110d7209ed9c4d32ae6f7910250b5d6cf6f3fd9b569ac1c052acbdb212dde"
+  },
+  "passed": true,
+  "limits": [
+    "Targeted combined-source CPU checks only; full upstream dependency/GPU suite not run.",
+    "S-VAE CLI package bootstrap in complete upstream environment remains unchecked.",
+    "Existing scientific summaries reused; no new experiments or independent samples."
+  ]
+}

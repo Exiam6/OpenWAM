@@ -1,0 +1,23 @@
+{
+  "task": "handover_block",
+  "seed": 1101042,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T21:43:40.028725-05:00",
+  "expert_plan_success": true,
+  "instruction": "Grab the red block with the left arm, switch to the right arm, and set it on the blue pad.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 283,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101042/data/episode0.hdf5",
+  "hdf5_sha256": "171394880e89f931756cc9b1d84e2ef946da6c54e7fa8a169ea4a244b2669aa8",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {}
+  },
+  "elapsed_seconds": 98.89976305887103
+}

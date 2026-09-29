@@ -1,0 +1,26 @@
+{
+  "task": "adjust_bottle",
+  "seed": 1100041,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T20:11:31.373877-05:00",
+  "expert_plan_success": true,
+  "instruction": "Pick up the green bottle with white label using the left arm in an upright position",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 142,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100041/data/episode0.hdf5",
+  "hdf5_sha256": "e81ea643956ecd00e6addb6dc43701d80d5bd8982872652d65d5af3680b29a7b",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "001_bottle/base16",
+      "{a}": "left"
+    }
+  },
+  "elapsed_seconds": 75.93060770630836
+}

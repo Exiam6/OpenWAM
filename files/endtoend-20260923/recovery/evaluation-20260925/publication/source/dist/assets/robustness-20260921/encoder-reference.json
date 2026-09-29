@@ -1,0 +1,12 @@
+{
+  "published_encoder_weights_exact": true,
+  "shape": [
+    1,
+    48,
+    1,
+    24,
+    20
+  ],
+  "dtype": "torch.bfloat16",
+  "full_policy_reference": true
+}

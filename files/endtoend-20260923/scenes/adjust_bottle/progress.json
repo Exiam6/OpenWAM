@@ -1,0 +1,2866 @@
+{
+  "time": "2026-09-23T20:39:16.259497-05:00",
+  "accepted_count": 50,
+  "attempted_count": 63,
+  "accepted": [
+    {
+      "task": "adjust_bottle",
+      "seed": 1100000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:23:10.155490-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the green bottle with white label on the table and raise it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 145,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100000/data/episode0.hdf5",
+      "hdf5_sha256": "05e25ca09bc0464774fa50907de43f8780af383838ace1395401a01edbc5bee5",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 79.72507520020008,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:24:32.409863-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the bottle with red screw cap from the table with the left arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 151,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100001/data/episode0.hdf5",
+      "hdf5_sha256": "d9152d0e070b3436c498c941d5e14f4f604e41082b0ba3d7ff4c43b75dc18016",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 79.50653944537044,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:25:53.749308-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the bottle with red screw cap on the table and raise it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100002/data/episode0.hdf5",
+      "hdf5_sha256": "6a7ab625db761e112cdae526e5aa485d8f4cec24a5bdc3908595d90895bb3c90",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 81.99236180633307,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:27:17.927634-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the right arm to grab the bottle the green bottle with white label",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 144,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100003/data/episode0.hdf5",
+      "hdf5_sha256": "d60223bd773eb7c22f8472c14c2993d26cfe579a80d7c799e20206686513786d",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.09063642844558,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100004,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:28:39.405969-05:00",
+      "expert_plan_success": true,
+      "instruction": "Lift the plastic soda bottle from the table using the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 141,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100004/data/episode0.hdf5",
+      "hdf5_sha256": "a35dcabd56e8d1f84204c11e5147db7715c99ed954b4007158d4e2268db5be23",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 78.40318242460489,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100005,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:29:59.876678-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to grab the bottle the plastic soda bottle",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100005/data/episode0.hdf5",
+      "hdf5_sha256": "6f6ac3993f74fc66eb0744f6e161f0f9d5892dd79479dc273226de196ab6fae7",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 78.33201543614268,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100008,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:32:33.612107-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the bottle with red screw cap on the table and raise it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100008/data/episode0.hdf5",
+      "hdf5_sha256": "0d69bc6665a4fcc2d77c8052c1d6458dd33a5c65e98f7c96ecbd35b7419c25e8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.64676209539175,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100009,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:33:55.511332-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the brown bottle carefully using the right arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100009/data/episode0.hdf5",
+      "hdf5_sha256": "95ce64ab62c8662040030515838527c559028ff45734f3353e05417550bee394",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 80.18609451502562,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100010,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:35:17.635680-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the green bottle on the table and raise it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 147,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100010/data/episode0.hdf5",
+      "hdf5_sha256": "f9c3541dc3252fbbe21c0fb14937bbe2687e07ee69053ec05a9eaf8cff3210a1",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 77.44357766211033,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100012,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:37:13.134400-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the green bottle with white label using the correct arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100012/data/episode0.hdf5",
+      "hdf5_sha256": "c250cf24b5ce301a9d0649d1583e96b1ddb1c5c33c169d4bad576ea17a773f26",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 79.2136789150536,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100013,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:38:34.030369-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the bottle with red screw cap carefully using the right arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100013/data/episode0.hdf5",
+      "hdf5_sha256": "a83aca1d1a88b7547d7183a6ab6701e0215fa501b02f42bb3c6668b32ec2a6f2",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 80.4463842138648,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100014,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:39:56.646153-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to grab the green plastic bottle with ridged bottom head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100014/data/episode0.hdf5",
+      "hdf5_sha256": "5ede71dcc7d8e2d1290a21970200657c7d52759ee19f77dded6fab30dcb43d1b",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 80.27735241502523,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100015,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:41:18.530357-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to grab the green plastic bottle with ridged bottom upright",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 135,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100015/data/episode0.hdf5",
+      "hdf5_sha256": "534dad7d1b1e98f18e82c3cb70e32ba214674a23f3dff442b0e0d06eca184387",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 77.18888275697827,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100016,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:42:38.590800-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the plastic soda bottle using the correct arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 155,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100016/data/episode0.hdf5",
+      "hdf5_sha256": "6cacf842dcc0b72dc92bdc497cf17a820e213700b1c58a024e501d687bea429e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 82.62041113525629,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100017,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:44:04.128196-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the green plastic bottle with ridged bottom from the table head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 135,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100017/data/episode0.hdf5",
+      "hdf5_sha256": "1f7a8ea16d57cca148b8bb6fcc7c71ad21737fbedf7ace0d93c39a5f204263d9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 80.73853354156017,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100018,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:45:26.803821-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the bottle with red screw cap carefully using the right arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 199,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100018/data/episode0.hdf5",
+      "hdf5_sha256": "86e65ae776540ce0fed32ac39d64436a4f6ab414c4e5b1b1716d16f5301e0ebd",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 88.84470516070724,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100019,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:46:57.591301-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the bottle with red screw cap carefully using the right arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 137,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100019/data/episode0.hdf5",
+      "hdf5_sha256": "4e582047e9359615ff030cbf732dee0c0a1bbb2c733ee80042ae2eb30fe59870",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.56389575824142,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100020,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:48:18.625406-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to grab the green bottle head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100020/data/episode0.hdf5",
+      "hdf5_sha256": "7a873491efc7c7ebb23e5acba9b30cf34127eb8205c4210a2be47ab1e3b3af51",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 79.63161883875728,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100021,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:49:40.274673-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the plastic soda bottle from the table with the right arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100021/data/episode0.hdf5",
+      "hdf5_sha256": "461dbb6e35da9ab5cddb69e3479e0cef1d6c7261659d15304d5fce240649fb04",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 81.487629160285,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100022,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:51:03.933945-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the green bottle with white label using the left arm in an upright position",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 144,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100022/data/episode0.hdf5",
+      "hdf5_sha256": "94aad5109e2578d4635f6099b02eadfb4e2df40ad90d49a73dd80d19caf980b8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 79.14382416382432,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100023,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:52:25.394898-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the bottle with red screw cap from the table head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 141,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100023/data/episode0.hdf5",
+      "hdf5_sha256": "6d438dd21a9a1d7fbeda2824ea371c89344f2057da04674fc6f90e9da81854cc",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.19254087656736,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100025,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:54:21.538241-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to grab the bottle the brown bottle",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 145,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100025/data/episode0.hdf5",
+      "hdf5_sha256": "aba0b3bde98f8c84106aa226f5fd56cf93b4d94c6677f58153fba46220c1c36f",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 80.08367137610912,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100027,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:56:19.875044-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the green bottle with white label carefully using the right arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100027/data/episode0.hdf5",
+      "hdf5_sha256": "ddb2ecca7f7c10127ac9f47d2cf53586f5d455958d9139fa99352a6834a33141",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 80.92120519280434,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100028,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:57:42.505749-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the brown bottle from the table with the left arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 144,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100028/data/episode0.hdf5",
+      "hdf5_sha256": "1ec582a3b39cdcf06de86e1ed0e3045e627c2ee0404fe3caebb8e68126f1f60d",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 75.82429691776633,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100029,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:59:00.573557-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the right arm to grab the green plastic bottle with ridged bottom upright",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 135,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100029/data/episode0.hdf5",
+      "hdf5_sha256": "fd17c92f5b32220db2bb059ce560e41e717fdbdc866cbbf51baaeccb155d0b52",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 82.16234733909369,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100030,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:00:24.668186-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the bottle with red screw cap from the table with the left arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 146,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100030/data/episode0.hdf5",
+      "hdf5_sha256": "83bb62091e4dc8d03161e6b422cad5709ecc7eea4357a0cf71748b9eafdc62d8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 80.00106840208173,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100033,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:02:58.354472-05:00",
+      "expert_plan_success": true,
+      "instruction": "Lift the bottle with red screw cap from the table using the right arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 144,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100033/data/episode0.hdf5",
+      "hdf5_sha256": "1eb03af0d333defb08336f8491ac6f9aeff14350e35b47ea34c790313a67aba4",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 78.02611704170704,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100034,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:04:18.071097-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the brown bottle using the correct arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100034/data/episode0.hdf5",
+      "hdf5_sha256": "05c9c7f70113a236f46aa5967eb383cf487459ab5c899ea2700a053f6c731996",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.69693142175674,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100035,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:05:39.931847-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the green bottle on the table and raise it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100035/data/episode0.hdf5",
+      "hdf5_sha256": "b09afd20bcabbb52bab36c0929842a9993829db40d6f9f226f5e40d27b87abf9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.66889162734151,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100037,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:07:38.245909-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the right arm to grab the green bottle head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 141,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100037/data/episode0.hdf5",
+      "hdf5_sha256": "63dd20b4e1de473ee27c1e5f5181a5ac115ee718dcd5785ac5c106fe3371b850",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 77.8768858499825,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100039,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:09:32.154574-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the green bottle on the table and raise it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 154,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100039/data/episode0.hdf5",
+      "hdf5_sha256": "040ff68e33097735f26b4fd2f388473873ee5e6bbbffb9e4af9363c6d7edef9f",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 80.49766899645329,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100041,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:11:31.373877-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the green bottle with white label using the left arm in an upright position",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100041/data/episode0.hdf5",
+      "hdf5_sha256": "e81ea643956ecd00e6addb6dc43701d80d5bd8982872652d65d5af3680b29a7b",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 75.93060770630836,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100042,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:12:49.790428-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the brown bottle from the table head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 146,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100042/data/episode0.hdf5",
+      "hdf5_sha256": "7cab0dcb6a33d863cec3137db2b3c5b5753d01ccd1e4c63885c9fe88089fd6b4",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 80.2128998041153,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100044,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:14:48.990077-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the right arm to grab the bottle the plastic soda bottle",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100044/data/episode0.hdf5",
+      "hdf5_sha256": "6d28ea924da4002aecb68bedec4123b3f863d0709ca1bcdd80f82a2790e141d9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 81.13313656300306,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100045,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:16:12.295274-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the green plastic bottle with ridged bottom using the right arm in an upright position",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 141,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100045/data/episode0.hdf5",
+      "hdf5_sha256": "118ee1c73db19a93c21f7cc4cf5326b0218acb97f80a43aec506d2bf63044e51",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 80.29300133511424,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100047,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:18:10.566946-05:00",
+      "expert_plan_success": true,
+      "instruction": "Lift the brown bottle from the table using the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 150,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100047/data/episode0.hdf5",
+      "hdf5_sha256": "2f74f1060e1345745f69be04373ad540cca10da154a731b553040afb63678081",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 80.28214983642101,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100048,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:19:34.185624-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the brown bottle from the table head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 141,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100048/data/episode0.hdf5",
+      "hdf5_sha256": "a31aedad1727b6e0de14d7ce22eddc50c09b4c9825e8b7930bd5e04f6bd50810",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 77.50794943794608,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100049,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:20:53.306242-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the brown bottle from the table with the left arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 146,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100049/data/episode0.hdf5",
+      "hdf5_sha256": "1bd1bd89bb4dc208e75e5c51723c0830af58bd79e025fb509621dcaae70fb667",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 76.72518431395292,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100050,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:22:12.530839-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the brown bottle from the table head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 138,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100050/data/episode0.hdf5",
+      "hdf5_sha256": "2e82171c26af32303ea172cedcf3593bb0277ff16d3a8f57270ae364d82abc43",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.27146085724235,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100051,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:23:33.410609-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the green plastic bottle with ridged bottom from the table head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100051/data/episode0.hdf5",
+      "hdf5_sha256": "f8ffb27887cf266743ab55ca6f2086aabb39e41e30b8c94ef3e9bf45c6b4ce69",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.81602209061384,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100052,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:24:55.477554-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the green bottle with white label from the table with the left arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 143,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100052/data/episode0.hdf5",
+      "hdf5_sha256": "33c82edc1c1fccf6a8fed3aa696349f8f24bfd2273f0004ae3d86bf633e32d2c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 79.15222888067365,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100053,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:26:16.702733-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the plastic soda bottle on the table and raise it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 146,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100053/data/episode0.hdf5",
+      "hdf5_sha256": "bf74b8ab1383684d6b6f67c6c73d98a53936da239123a84a7e37527dcc267296",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 80.32823352515697,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100054,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:27:39.196353-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the plastic soda bottle from the table with the right arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 197,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100054/data/episode0.hdf5",
+      "hdf5_sha256": "ca17aabab1b50e56476a8202a15b7934d9b3c261a6736a65ec3af5bc5d048769",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 83.92683744430542,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100055,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:29:04.708302-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the bottle with red screw cap on the table and raise it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 145,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100055/data/episode0.hdf5",
+      "hdf5_sha256": "acfe78515b0f51b1eb6234d8e4c3fd1c745e10f2d05279b326048083fec6fe89",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.61134254932404,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100057,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:31:03.156662-05:00",
+      "expert_plan_success": true,
+      "instruction": "Lift the plastic soda bottle from the table using the right arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100057/data/episode0.hdf5",
+      "hdf5_sha256": "74c5d0058949dfb418268f5b06b2eb87f712b79405ce2b1eda243839c53b2f05",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.64288173243403,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100058,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:32:25.117677-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the plastic soda bottle from the table with the left arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 137,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100058/data/episode0.hdf5",
+      "hdf5_sha256": "096bfbd9143dda27062480d26a41529413ed12033ebfea3e1ea8dd6fdf8e8125",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 77.46205515414476,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100059,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:33:44.954860-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the right arm to grab the bottle the brown bottle",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100059/data/episode0.hdf5",
+      "hdf5_sha256": "c2e6fde406b5fbd336d85a9fe3cf11a3ceda2abcb9876dfef2af11c3e35814de",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 77.95791595429182,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100060,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:35:04.822675-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to grab the bottle the brown bottle",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 158,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100060/data/episode0.hdf5",
+      "hdf5_sha256": "88d43b43d6c5de19817cb9cd5b8b4c2812b4b90fd5de232e309e7875a7071bbb",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 81.35168410092592,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100061,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:36:28.343377-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the plastic soda bottle carefully using the left arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 153,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100061/data/episode0.hdf5",
+      "hdf5_sha256": "e601dec4e2e4c2c355a454de69c451a314bac96a46694cc3b3facf9fe96672c8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 81.67073454707861,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100062,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:37:51.674551-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the plastic soda bottle from the table with the right arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 146,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100062/data/episode0.hdf5",
+      "hdf5_sha256": "c4672a66a1f51e1a3081947de674cf32af0c1bac150e773605790db68e597428",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 81.87667675316334,
+      "exit_code": 0
+    }
+  ],
+  "attempts": [
+    {
+      "task": "adjust_bottle",
+      "seed": 1100000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:23:10.155490-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the green bottle with white label on the table and raise it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 145,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100000/data/episode0.hdf5",
+      "hdf5_sha256": "05e25ca09bc0464774fa50907de43f8780af383838ace1395401a01edbc5bee5",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 79.72507520020008,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:24:32.409863-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the bottle with red screw cap from the table with the left arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 151,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100001/data/episode0.hdf5",
+      "hdf5_sha256": "d9152d0e070b3436c498c941d5e14f4f604e41082b0ba3d7ff4c43b75dc18016",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 79.50653944537044,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:25:53.749308-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the bottle with red screw cap on the table and raise it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100002/data/episode0.hdf5",
+      "hdf5_sha256": "6a7ab625db761e112cdae526e5aa485d8f4cec24a5bdc3908595d90895bb3c90",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 81.99236180633307,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:27:17.927634-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the right arm to grab the bottle the green bottle with white label",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 144,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100003/data/episode0.hdf5",
+      "hdf5_sha256": "d60223bd773eb7c22f8472c14c2993d26cfe579a80d7c799e20206686513786d",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.09063642844558,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100004,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:28:39.405969-05:00",
+      "expert_plan_success": true,
+      "instruction": "Lift the plastic soda bottle from the table using the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 141,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100004/data/episode0.hdf5",
+      "hdf5_sha256": "a35dcabd56e8d1f84204c11e5147db7715c99ed954b4007158d4e2268db5be23",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 78.40318242460489,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100005,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:29:59.876678-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to grab the bottle the plastic soda bottle",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100005/data/episode0.hdf5",
+      "hdf5_sha256": "6f6ac3993f74fc66eb0744f6e161f0f9d5892dd79479dc273226de196ab6fae7",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 78.33201543614268,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100006,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:31:20.464796-05:00",
+      "outcome": "unstable_scene",
+      "error": "UnStableError('Objects is unstable in seed(1100006), unstable objects: 001_bottle')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 54, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args);capture_initial(env,dest,'plan' if args['need_plan'] else 'replay')\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(1100006), unstable objects: 001_bottle\n",
+      "elapsed_seconds": 36.313184566795826,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100007,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:31:58.611883-05:00",
+      "outcome": "unstable_scene",
+      "error": "UnStableError('Objects is unstable in seed(1100007), unstable objects: 001_bottle')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 54, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args);capture_initial(env,dest,'plan' if args['need_plan'] else 'replay')\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(1100007), unstable objects: 001_bottle\n",
+      "elapsed_seconds": 33.38102496787906,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100008,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:32:33.612107-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the bottle with red screw cap on the table and raise it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100008/data/episode0.hdf5",
+      "hdf5_sha256": "0d69bc6665a4fcc2d77c8052c1d6458dd33a5c65e98f7c96ecbd35b7419c25e8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.64676209539175,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100009,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:33:55.511332-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the brown bottle carefully using the right arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100009/data/episode0.hdf5",
+      "hdf5_sha256": "95ce64ab62c8662040030515838527c559028ff45734f3353e05417550bee394",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 80.18609451502562,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100010,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:35:17.635680-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the green bottle on the table and raise it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 147,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100010/data/episode0.hdf5",
+      "hdf5_sha256": "f9c3541dc3252fbbe21c0fb14937bbe2687e07ee69053ec05a9eaf8cff3210a1",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 77.44357766211033,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100011,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:36:37.363681-05:00",
+      "outcome": "unstable_scene",
+      "error": "UnStableError('Objects is unstable in seed(1100011), unstable objects: 001_bottle')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 54, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args);capture_initial(env,dest,'plan' if args['need_plan'] else 'replay')\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(1100011), unstable objects: 001_bottle\n",
+      "elapsed_seconds": 34.000070214271545,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100012,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:37:13.134400-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the green bottle with white label using the correct arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100012/data/episode0.hdf5",
+      "hdf5_sha256": "c250cf24b5ce301a9d0649d1583e96b1ddb1c5c33c169d4bad576ea17a773f26",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 79.2136789150536,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100013,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:38:34.030369-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the bottle with red screw cap carefully using the right arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100013/data/episode0.hdf5",
+      "hdf5_sha256": "a83aca1d1a88b7547d7183a6ab6701e0215fa501b02f42bb3c6668b32ec2a6f2",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 80.4463842138648,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100014,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:39:56.646153-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to grab the green plastic bottle with ridged bottom head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100014/data/episode0.hdf5",
+      "hdf5_sha256": "5ede71dcc7d8e2d1290a21970200657c7d52759ee19f77dded6fab30dcb43d1b",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 80.27735241502523,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100015,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:41:18.530357-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to grab the green plastic bottle with ridged bottom upright",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 135,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100015/data/episode0.hdf5",
+      "hdf5_sha256": "534dad7d1b1e98f18e82c3cb70e32ba214674a23f3dff442b0e0d06eca184387",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 77.18888275697827,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100016,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:42:38.590800-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the plastic soda bottle using the correct arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 155,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100016/data/episode0.hdf5",
+      "hdf5_sha256": "6cacf842dcc0b72dc92bdc497cf17a820e213700b1c58a024e501d687bea429e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 82.62041113525629,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100017,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:44:04.128196-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the green plastic bottle with ridged bottom from the table head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 135,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100017/data/episode0.hdf5",
+      "hdf5_sha256": "1f7a8ea16d57cca148b8bb6fcc7c71ad21737fbedf7ace0d93c39a5f204263d9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 80.73853354156017,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100018,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:45:26.803821-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the bottle with red screw cap carefully using the right arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 199,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100018/data/episode0.hdf5",
+      "hdf5_sha256": "86e65ae776540ce0fed32ac39d64436a4f6ab414c4e5b1b1716d16f5301e0ebd",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 88.84470516070724,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100019,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:46:57.591301-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the bottle with red screw cap carefully using the right arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 137,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100019/data/episode0.hdf5",
+      "hdf5_sha256": "4e582047e9359615ff030cbf732dee0c0a1bbb2c733ee80042ae2eb30fe59870",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.56389575824142,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100020,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:48:18.625406-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to grab the green bottle head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100020/data/episode0.hdf5",
+      "hdf5_sha256": "7a873491efc7c7ebb23e5acba9b30cf34127eb8205c4210a2be47ab1e3b3af51",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 79.63161883875728,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100021,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:49:40.274673-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the plastic soda bottle from the table with the right arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100021/data/episode0.hdf5",
+      "hdf5_sha256": "461dbb6e35da9ab5cddb69e3479e0cef1d6c7261659d15304d5fce240649fb04",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 81.487629160285,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100022,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:51:03.933945-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the green bottle with white label using the left arm in an upright position",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 144,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100022/data/episode0.hdf5",
+      "hdf5_sha256": "94aad5109e2578d4635f6099b02eadfb4e2df40ad90d49a73dd80d19caf980b8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 79.14382416382432,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100023,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:52:25.394898-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the bottle with red screw cap from the table head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 141,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100023/data/episode0.hdf5",
+      "hdf5_sha256": "6d438dd21a9a1d7fbeda2824ea371c89344f2057da04674fc6f90e9da81854cc",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.19254087656736,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100024,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:53:46.559606-05:00",
+      "outcome": "unstable_scene",
+      "error": "UnStableError('Objects is unstable in seed(1100024), unstable objects: 001_bottle')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 54, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args);capture_initial(env,dest,'plan' if args['need_plan'] else 'replay')\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(1100024), unstable objects: 001_bottle\n",
+      "elapsed_seconds": 32.97235883027315,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100025,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:54:21.538241-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to grab the bottle the brown bottle",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 145,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100025/data/episode0.hdf5",
+      "hdf5_sha256": "aba0b3bde98f8c84106aa226f5fd56cf93b4d94c6677f58153fba46220c1c36f",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 80.08367137610912,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100026,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:55:43.059677-05:00",
+      "outcome": "unstable_scene",
+      "error": "UnStableError('Objects is unstable in seed(1100026), unstable objects: 001_bottle')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 54, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args);capture_initial(env,dest,'plan' if args['need_plan'] else 'replay')\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(1100026), unstable objects: 001_bottle\n",
+      "elapsed_seconds": 35.14644894748926,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100027,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:56:19.875044-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the green bottle with white label carefully using the right arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100027/data/episode0.hdf5",
+      "hdf5_sha256": "ddb2ecca7f7c10127ac9f47d2cf53586f5d455958d9139fa99352a6834a33141",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 80.92120519280434,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100028,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:57:42.505749-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the brown bottle from the table with the left arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 144,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100028/data/episode0.hdf5",
+      "hdf5_sha256": "1ec582a3b39cdcf06de86e1ed0e3045e627c2ee0404fe3caebb8e68126f1f60d",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 75.82429691776633,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100029,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:59:00.573557-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the right arm to grab the green plastic bottle with ridged bottom upright",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 135,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100029/data/episode0.hdf5",
+      "hdf5_sha256": "fd17c92f5b32220db2bb059ce560e41e717fdbdc866cbbf51baaeccb155d0b52",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 82.16234733909369,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100030,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:00:24.668186-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the bottle with red screw cap from the table with the left arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 146,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100030/data/episode0.hdf5",
+      "hdf5_sha256": "83bb62091e4dc8d03161e6b422cad5709ecc7eea4357a0cf71748b9eafdc62d8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 80.00106840208173,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100031,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:01:46.247703-05:00",
+      "outcome": "unstable_scene",
+      "error": "UnStableError('Objects is unstable in seed(1100031), unstable objects: 001_bottle')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 54, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args);capture_initial(env,dest,'plan' if args['need_plan'] else 'replay')\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(1100031), unstable objects: 001_bottle\n",
+      "elapsed_seconds": 33.55073128268123,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100032,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:02:21.535084-05:00",
+      "outcome": "unstable_scene",
+      "error": "UnStableError('Objects is unstable in seed(1100032), unstable objects: 001_bottle')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 54, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args);capture_initial(env,dest,'plan' if args['need_plan'] else 'replay')\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(1100032), unstable objects: 001_bottle\n",
+      "elapsed_seconds": 35.055874451994896,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100033,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:02:58.354472-05:00",
+      "expert_plan_success": true,
+      "instruction": "Lift the bottle with red screw cap from the table using the right arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 144,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100033/data/episode0.hdf5",
+      "hdf5_sha256": "1eb03af0d333defb08336f8491ac6f9aeff14350e35b47ea34c790313a67aba4",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 78.02611704170704,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100034,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:04:18.071097-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the brown bottle using the correct arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100034/data/episode0.hdf5",
+      "hdf5_sha256": "05c9c7f70113a236f46aa5967eb383cf487459ab5c899ea2700a053f6c731996",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.69693142175674,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100035,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:05:39.931847-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the green bottle on the table and raise it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 139,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100035/data/episode0.hdf5",
+      "hdf5_sha256": "b09afd20bcabbb52bab36c0929842a9993829db40d6f9f226f5e40d27b87abf9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.66889162734151,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100036,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:07:01.981170-05:00",
+      "outcome": "unstable_scene",
+      "error": "UnStableError('Objects is unstable in seed(1100036), unstable objects: 001_bottle')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 54, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args);capture_initial(env,dest,'plan' if args['need_plan'] else 'replay')\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(1100036), unstable objects: 001_bottle\n",
+      "elapsed_seconds": 34.27254914492369,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100037,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:07:38.245909-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the right arm to grab the green bottle head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 141,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100037/data/episode0.hdf5",
+      "hdf5_sha256": "63dd20b4e1de473ee27c1e5f5181a5ac115ee718dcd5785ac5c106fe3371b850",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 77.8768858499825,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100038,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:08:58.140182-05:00",
+      "outcome": "unstable_scene",
+      "error": "UnStableError('Objects is unstable in seed(1100038), unstable objects: 001_bottle')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 54, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args);capture_initial(env,dest,'plan' if args['need_plan'] else 'replay')\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(1100038), unstable objects: 001_bottle\n",
+      "elapsed_seconds": 32.46465043723583,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100039,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:09:32.154574-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the green bottle on the table and raise it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 154,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100039/data/episode0.hdf5",
+      "hdf5_sha256": "040ff68e33097735f26b4fd2f388473873ee5e6bbbffb9e4af9363c6d7edef9f",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 80.49766899645329,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100040,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:10:54.958625-05:00",
+      "outcome": "unstable_scene",
+      "error": "UnStableError('Objects is unstable in seed(1100040), unstable objects: 001_bottle')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 54, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args);capture_initial(env,dest,'plan' if args['need_plan'] else 'replay')\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(1100040), unstable objects: 001_bottle\n",
+      "elapsed_seconds": 34.72100589796901,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100041,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:11:31.373877-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the green bottle with white label using the left arm in an upright position",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100041/data/episode0.hdf5",
+      "hdf5_sha256": "e81ea643956ecd00e6addb6dc43701d80d5bd8982872652d65d5af3680b29a7b",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 75.93060770630836,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100042,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:12:49.790428-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the brown bottle from the table head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 146,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100042/data/episode0.hdf5",
+      "hdf5_sha256": "7cab0dcb6a33d863cec3137db2b3c5b5753d01ccd1e4c63885c9fe88089fd6b4",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 80.2128998041153,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100043,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:14:11.580344-05:00",
+      "outcome": "unstable_scene",
+      "error": "UnStableError('Objects is unstable in seed(1100043), unstable objects: 001_bottle')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 54, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args);capture_initial(env,dest,'plan' if args['need_plan'] else 'replay')\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(1100043), unstable objects: 001_bottle\n",
+      "elapsed_seconds": 35.79282930493355,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100044,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:14:48.990077-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the right arm to grab the bottle the plastic soda bottle",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100044/data/episode0.hdf5",
+      "hdf5_sha256": "6d28ea924da4002aecb68bedec4123b3f863d0709ca1bcdd80f82a2790e141d9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 81.13313656300306,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100045,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:16:12.295274-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the green plastic bottle with ridged bottom using the right arm in an upright position",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 141,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100045/data/episode0.hdf5",
+      "hdf5_sha256": "118ee1c73db19a93c21f7cc4cf5326b0218acb97f80a43aec506d2bf63044e51",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 80.29300133511424,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100046,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:17:35.133579-05:00",
+      "outcome": "unstable_scene",
+      "error": "UnStableError('Objects is unstable in seed(1100046), unstable objects: 001_bottle')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 54, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args);capture_initial(env,dest,'plan' if args['need_plan'] else 'replay')\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(1100046), unstable objects: 001_bottle\n",
+      "elapsed_seconds": 33.867544304579496,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100047,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:18:10.566946-05:00",
+      "expert_plan_success": true,
+      "instruction": "Lift the brown bottle from the table using the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 150,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100047/data/episode0.hdf5",
+      "hdf5_sha256": "2f74f1060e1345745f69be04373ad540cca10da154a731b553040afb63678081",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 80.28214983642101,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100048,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:19:34.185624-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the brown bottle from the table head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 141,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100048/data/episode0.hdf5",
+      "hdf5_sha256": "a31aedad1727b6e0de14d7ce22eddc50c09b4c9825e8b7930bd5e04f6bd50810",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 77.50794943794608,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100049,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:20:53.306242-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the brown bottle from the table with the left arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 146,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100049/data/episode0.hdf5",
+      "hdf5_sha256": "1bd1bd89bb4dc208e75e5c51723c0830af58bd79e025fb509621dcaae70fb667",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 76.72518431395292,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100050,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:22:12.530839-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the brown bottle from the table head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 138,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100050/data/episode0.hdf5",
+      "hdf5_sha256": "2e82171c26af32303ea172cedcf3593bb0277ff16d3a8f57270ae364d82abc43",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.27146085724235,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100051,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:23:33.410609-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the green plastic bottle with ridged bottom from the table head-up.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100051/data/episode0.hdf5",
+      "hdf5_sha256": "f8ffb27887cf266743ab55ca6f2086aabb39e41e30b8c94ef3e9bf45c6b4ce69",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.81602209061384,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100052,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:24:55.477554-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the green bottle with white label from the table with the left arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 143,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100052/data/episode0.hdf5",
+      "hdf5_sha256": "33c82edc1c1fccf6a8fed3aa696349f8f24bfd2273f0004ae3d86bf633e32d2c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base16",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 79.15222888067365,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100053,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:26:16.702733-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the plastic soda bottle on the table and raise it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 146,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100053/data/episode0.hdf5",
+      "hdf5_sha256": "bf74b8ab1383684d6b6f67c6c73d98a53936da239123a84a7e37527dcc267296",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 80.32823352515697,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100054,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:27:39.196353-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the plastic soda bottle from the table with the right arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 197,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100054/data/episode0.hdf5",
+      "hdf5_sha256": "ca17aabab1b50e56476a8202a15b7934d9b3c261a6736a65ec3af5bc5d048769",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 83.92683744430542,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100055,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:29:04.708302-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the bottle with red screw cap on the table and raise it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 145,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100055/data/episode0.hdf5",
+      "hdf5_sha256": "acfe78515b0f51b1eb6234d8e4c3fd1c745e10f2d05279b326048083fec6fe89",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.61134254932404,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100056,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:30:27.294975-05:00",
+      "outcome": "unstable_scene",
+      "error": "UnStableError('Objects is unstable in seed(1100056), unstable objects: 001_bottle')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 54, in worker\n    env=mod.class_decorator(task);env.setup_demo(now_ep_num=0,seed=seed,**args);capture_initial(env,dest,'plan' if args['need_plan'] else 'replay')\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/adjust_bottle.py\", line 10, in setup_demo\n    super()._init_task_env_(**kwags)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 138, in _init_task_env_\n    raise UnStableError(\nenvs.utils.create_actor.UnStableError: Objects is unstable in seed(1100056), unstable objects: 001_bottle\n",
+      "elapsed_seconds": 34.18553042784333,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100057,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:31:03.156662-05:00",
+      "expert_plan_success": true,
+      "instruction": "Lift the plastic soda bottle from the table using the right arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 140,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100057/data/episode0.hdf5",
+      "hdf5_sha256": "74c5d0058949dfb418268f5b06b2eb87f712b79405ce2b1eda243839c53b2f05",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 79.64288173243403,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100058,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:32:25.117677-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the plastic soda bottle from the table with the left arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 137,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100058/data/episode0.hdf5",
+      "hdf5_sha256": "096bfbd9143dda27062480d26a41529413ed12033ebfea3e1ea8dd6fdf8e8125",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 77.46205515414476,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100059,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:33:44.954860-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the right arm to grab the bottle the brown bottle",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 142,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100059/data/episode0.hdf5",
+      "hdf5_sha256": "c2e6fde406b5fbd336d85a9fe3cf11a3ceda2abcb9876dfef2af11c3e35814de",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 77.95791595429182,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100060,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:35:04.822675-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to grab the bottle the brown bottle",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 158,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100060/data/episode0.hdf5",
+      "hdf5_sha256": "88d43b43d6c5de19817cb9cd5b8b4c2812b4b90fd5de232e309e7875a7071bbb",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 81.35168410092592,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100061,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:36:28.343377-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the plastic soda bottle carefully using the left arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 153,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100061/data/episode0.hdf5",
+      "hdf5_sha256": "e601dec4e2e4c2c355a454de69c451a314bac96a46694cc3b3facf9fe96672c8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "left"
+        }
+      },
+      "elapsed_seconds": 81.67073454707861,
+      "exit_code": 0
+    },
+    {
+      "task": "adjust_bottle",
+      "seed": 1100062,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:37:51.674551-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the plastic soda bottle from the table with the right arm",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 146,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/adjust_bottle/seed-1100062/data/episode0.hdf5",
+      "hdf5_sha256": "c4672a66a1f51e1a3081947de674cf32af0c1bac150e773605790db68e597428",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "001_bottle/base13",
+          "{a}": "right"
+        }
+      },
+      "elapsed_seconds": 81.87667675316334,
+      "exit_code": 0
+    }
+  ],
+  "elapsed_seconds": 4566.1798794567585
+}

@@ -1,0 +1,8 @@
+{
+  "exact_upstream_rollout_loop_executed": true,
+  "fixed_seed_order_and_prompts": true,
+  "expert_not_refiltered": true,
+  "choice_rng_consumption_preserved": true,
+  "fake_success_count": 10,
+  "one_scene_historical_with_five_way_draw": true
+}

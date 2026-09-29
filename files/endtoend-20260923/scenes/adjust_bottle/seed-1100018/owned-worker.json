@@ -1,0 +1,11 @@
+{
+  "pid": 589527,
+  "group": 589527,
+  "command": [
+    "/data02/zifanz4/openwam-experiments/benchmark-env/bin/python",
+    "-u",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py",
+    "adjust_bottle",
+    "1100018"
+  ]
+}

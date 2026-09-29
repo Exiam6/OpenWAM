@@ -1,0 +1,28 @@
+{
+  "observed_at": "2026-09-21T17:29:37-0500",
+  "last_three_preflight_samples": [
+    {
+      "time": "2026-09-21T17:27:47-0500",
+      "memory_mib": 6,
+      "utilization": 0,
+      "ecc": 0,
+      "processes": []
+    },
+    {
+      "time": "2026-09-21T17:27:53-0500",
+      "memory_mib": 6,
+      "utilization": 0,
+      "ecc": 0,
+      "processes": []
+    },
+    {
+      "time": "2026-09-21T17:27:59-0500",
+      "memory_mib": 6,
+      "utilization": 0,
+      "ecc": 0,
+      "processes": []
+    }
+  ],
+  "actually_started_idle": true,
+  "no_other_process_stopped": true
+}

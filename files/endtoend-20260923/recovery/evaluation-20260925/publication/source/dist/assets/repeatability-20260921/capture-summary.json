@@ -1,0 +1,68 @@
+{
+  "role": "zero-action input capture, not policy success evaluation",
+  "all_initial_hashes_match": true,
+  "all_png_roundtrips_exact": true,
+  "ambient_rng_unchanged": true,
+  "records": [
+    {
+      "name": "clean-400000",
+      "seed": 400000,
+      "condition": "clean",
+      "payload_sha256": "9c8241a4c1ee4b9eaab8b67910390bf45d7813bee9d1caf13fe4478944f441ba",
+      "raw_head_sha256": "3c6c5721106490f5f378996cf7d7081414e944df14b0302be79dfe6659e22725",
+      "state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "policy_head_sha256": "3c6c5721106490f5f378996cf7d7081414e944df14b0302be79dfe6659e22725",
+      "actions_executed": 0
+    },
+    {
+      "name": "noise-400000",
+      "seed": 400000,
+      "condition": "noise",
+      "payload_sha256": "abd6dacc029bc06260b42b59784ea98deadf73765d72073e3f790511cbe9ecab",
+      "raw_head_sha256": "3c6c5721106490f5f378996cf7d7081414e944df14b0302be79dfe6659e22725",
+      "state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "policy_head_sha256": "2d7f51d0dcf792c58b4db32ea2d219acdfb7e73454c3bf97f5b35b64d99b0431",
+      "actions_executed": 0
+    },
+    {
+      "name": "clean-400001",
+      "seed": 400001,
+      "condition": "clean",
+      "payload_sha256": "b93577ce19b224fe0e1eb4c3dfad8cb14c91676c935802f3888c792744a32acc",
+      "raw_head_sha256": "21df4a4f301e0f980891d63decb0f6dbb8840d2fa0a870220721b2b5168cd7da",
+      "state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "policy_head_sha256": "21df4a4f301e0f980891d63decb0f6dbb8840d2fa0a870220721b2b5168cd7da",
+      "actions_executed": 0
+    },
+    {
+      "name": "noise-400001",
+      "seed": 400001,
+      "condition": "noise",
+      "payload_sha256": "92f38dd5816427a49150b4740596899e2acb9fe66752612bef23ccb21d135b34",
+      "raw_head_sha256": "21df4a4f301e0f980891d63decb0f6dbb8840d2fa0a870220721b2b5168cd7da",
+      "state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "policy_head_sha256": "16d7d8b3a903266a4dd0db80e9ed23a98b699816b7e0e6743f0bc3584dfac10b",
+      "actions_executed": 0
+    },
+    {
+      "name": "clean-400002",
+      "seed": 400002,
+      "condition": "clean",
+      "payload_sha256": "7761605613d66f6ec5b830109bbeac04b448561a2be9322b8f02a9f5c2f38c44",
+      "raw_head_sha256": "2c463f7ae21010e61e89558aebf601ba02a3741f3d80c35ae7d1335e98864c0a",
+      "state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "policy_head_sha256": "2c463f7ae21010e61e89558aebf601ba02a3741f3d80c35ae7d1335e98864c0a",
+      "actions_executed": 0
+    },
+    {
+      "name": "noise-400002",
+      "seed": 400002,
+      "condition": "noise",
+      "payload_sha256": "2bdd8a8b0d4daf480520cc7659f828fde0a9d7dee4b2e8f1f4d689004e1f6603",
+      "raw_head_sha256": "2c463f7ae21010e61e89558aebf601ba02a3741f3d80c35ae7d1335e98864c0a",
+      "state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "policy_head_sha256": "912382770806ed89ace60d22143ee260e258b91e9cadcbaa4552045ff9bfc91d",
+      "actions_executed": 0
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "planned_not_launched",
+  "selfchecks": "paused_until_explicit_resume",
+  "time_origin": "future_actual_launch",
+  "wall_hours": 12,
+  "gpu_concurrency_cap": 4,
+  "gpu_hours_cap": 48,
+  "primary_contrast": "K4-SVAE48 vs L12-SVAE48",
+  "tasks": [
+    "adjust_bottle",
+    "handover_block",
+    "place_object_basket"
+  ],
+  "svae_training_seeds": [
+    42,
+    43,
+    44
+  ],
+  "svae_fit_count": 9,
+  "svae_steps": 2000,
+  "policy_stage": "conditional_on_preflight_and_fixed_development_gate",
+  "policy_train_steps": 1000,
+  "fresh_offline_episodes_target": 60,
+  "fresh_closedloop_rollouts_conditional_target": 160,
+  "no_experiment_launched_this_turn": true
+}

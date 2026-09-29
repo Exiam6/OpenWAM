@@ -1,0 +1,10 @@
+{
+  "native_three_scene_zero_action_loop": true,
+  "original_ten_way_instruction_rng": true,
+  "native_modelclient_payload_exact": true,
+  "payload_roundtrip_hash_exact": true,
+  "trace_preserves_return_object_and_actions": true,
+  "trace_and_capture_rng_unchanged": true,
+  "group_metric_checks": true,
+  "native_preprocessor_mutation_isolated": true
+}

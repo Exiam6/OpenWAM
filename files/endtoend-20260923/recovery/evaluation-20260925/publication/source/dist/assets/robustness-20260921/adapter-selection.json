@@ -1,0 +1,24 @@
+{
+  "identity_noise_mse": 0.16612102091312408,
+  "candidates": {
+    "linear": {
+      "restoration_mse": 0.1279303083817164,
+      "clean_distortion_mse": 0.01060035452246666,
+      "noise_ratio": 0.7701030711135577,
+      "clean_ratio": 0.06381103646124534,
+      "eligible": true
+    },
+    "mlp": {
+      "restoration_mse": 0.10800293336311977,
+      "clean_distortion_mse": 0.007662173826247454,
+      "noise_ratio": 0.6501460969205204,
+      "clean_ratio": 0.04612404730075986,
+      "eligible": true
+    }
+  },
+  "selected": "mlp",
+  "deployment_seed": 42,
+  "validation_only": true,
+  "seconds_training": 16.24010591953993,
+  "selected_at": "2026-09-21T13:26:12-0500"
+}

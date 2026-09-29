@@ -1,0 +1,76 @@
+{
+  "selection_rule": "First ten expert-feasible reference starts from 400000, independent of policy outcome; reference outcomes excluded from primary analysis",
+  "reference_summary_sha256": "6c3a1b7e078b2d8d2d2281cd7bba048a37e5ce98175ecf28562d25c983c635e4",
+  "scenes": [
+    {
+      "seed": 400000,
+      "instruction": "Grab the plastic soda bottle with one arm, grab the green bottle with white label with the other.",
+      "initial_head_sha256": "3c6c5721106490f5f378996cf7d7081414e944df14b0302be79dfe6659e22725",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "instruction_choice_length": 10
+    },
+    {
+      "seed": 400001,
+      "instruction": "Pick the plastic soda bottle with one arm, the green plastic bottle with ridged bottom with the other.",
+      "initial_head_sha256": "21df4a4f301e0f980891d63decb0f6dbb8840d2fa0a870220721b2b5168cd7da",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "instruction_choice_length": 10
+    },
+    {
+      "seed": 400002,
+      "instruction": "Pick the brown bottle, then pick the green plastic bottle with ridged bottom.",
+      "initial_head_sha256": "2c463f7ae21010e61e89558aebf601ba02a3741f3d80c35ae7d1335e98864c0a",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "instruction_choice_length": 10
+    },
+    {
+      "seed": 400003,
+      "instruction": "Hold the brown bottle in one hand, the green bottle in the other.",
+      "initial_head_sha256": "6b415194618c19749a23e311ed61a81573b5fbc4fb82c6982d9def5a9edee32e",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "instruction_choice_length": 10
+    },
+    {
+      "seed": 400004,
+      "instruction": "Pick the brown bottle with one arm, the green plastic bottle with ridged bottom with the other.",
+      "initial_head_sha256": "588a2928a801fdb0708e7989e582733f8bbcecbf42742b5c880835d2657f12ef",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "instruction_choice_length": 10
+    },
+    {
+      "seed": 400005,
+      "instruction": "Hold the bottle with red screw cap in one hand, the green bottle with white label in the other.",
+      "initial_head_sha256": "5bc903e49799497a5b4d2f557ef7047883607ee6028179bae8b654254c871359",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "instruction_choice_length": 10
+    },
+    {
+      "seed": 400006,
+      "instruction": "Take hold of the plastic soda bottle and the green plastic bottle with ridged bottom at once.",
+      "initial_head_sha256": "c54beea5261f161d0cea83d376c6593fad5bab699fb12e60e93e23b023cc2b9d",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "instruction_choice_length": 10
+    },
+    {
+      "seed": 400008,
+      "instruction": "Lift the bottle with red screw cap and the green bottle using both arms.",
+      "initial_head_sha256": "b1878a21645911524c1225ebdf55ec8a3b4794ae772426368d471af6df5c9520",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "instruction_choice_length": 10
+    },
+    {
+      "seed": 400009,
+      "instruction": "Pick the plastic soda bottle, then pick the green bottle with white label.",
+      "initial_head_sha256": "bbabafe47062d63188710ae35465dd4c5f52be9c1d272981f7605022d78b0b30",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "instruction_choice_length": 10
+    },
+    {
+      "seed": 400010,
+      "instruction": "Pick up the brown bottle and the green bottle using both arms.",
+      "initial_head_sha256": "afa4ba448e93ee160e83c2c099cc33598ec255b241a9da616a70efbed3937e29",
+      "initial_state_sha256": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+      "instruction_choice_length": 10
+    }
+  ]
+}

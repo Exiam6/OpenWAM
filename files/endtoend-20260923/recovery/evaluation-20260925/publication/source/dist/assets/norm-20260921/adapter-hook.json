@@ -1,0 +1,8 @@
+{
+  "arm": "adapter",
+  "calls": 108,
+  "max_change": 2.296875,
+  "future_slots_exact": true,
+  "published_encoder_weights_exact": true,
+  "scope": "cumulative for this arm server across reference/historical/primary as applicable"
+}

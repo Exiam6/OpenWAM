@@ -1,0 +1,23 @@
+{
+  "status": "reanalysis_of_existing_results_not_new_runs",
+  "results": [
+    {
+      "task": "adjust_bottle",
+      "proprio_only_mse": 0.2416046111620834,
+      "vision_plus_proprio_mse": 0.13593767985429808,
+      "relative_error_reduction_percent": 43.73547789487237
+    },
+    {
+      "task": "handover_block",
+      "proprio_only_mse": 0.3999962754726339,
+      "vision_plus_proprio_mse": 0.10950001638662617,
+      "relative_error_reduction_percent": 72.62474100359024
+    },
+    {
+      "task": "place_object_basket",
+      "proprio_only_mse": 0.465277444189409,
+      "vision_plus_proprio_mse": 0.22125745761509652,
+      "relative_error_reduction_percent": 52.44612426880827
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "all_four_arms_checked": true,
+  "actual_encoder_normalization_method": true,
+  "dtype_shape_and_input_preserved": true,
+  "future_slots_exact": true,
+  "zero_init_identity_exact": true,
+  "post_adapter_order_verified": true
+}

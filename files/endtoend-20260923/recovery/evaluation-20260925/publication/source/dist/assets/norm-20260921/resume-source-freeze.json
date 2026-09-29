@@ -1,0 +1,9 @@
+{
+  "frozen_at": "2026-09-21T17:27:45-0500",
+  "sources": {
+    "scripts/resume-norm-last-arm.sh": "da65a4044dd6b62e46c8dceb0957c1bad05fb639b5aa6b69dc729fd3a3781cf6",
+    "scripts/norm_resume_preflight.py": "f4693bbd28721d879c98d4db7781c8f7da1cc97f8b21ab35a0927ddd63b26933"
+  },
+  "amendment_sha256": "29633f942542bc9466a0546bc7fc2bd8788cfafc55e192bbb117754e019aed28",
+  "original_sources_unchanged": true
+}

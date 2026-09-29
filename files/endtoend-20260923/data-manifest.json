@@ -1,0 +1,533 @@
+{
+  "created_at": "2026-09-23T18:53:13.449437-05:00",
+  "source": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data",
+  "split_seed": 42,
+  "train_only": true,
+  "files": [
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode10.hdf5",
+      "bytes": 8689568,
+      "sha256": "dcc7e71ffcdf322e5f3e625e4a56ace8c2898dbceec35f4d31bd081c912af80d"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode15.hdf5",
+      "bytes": 8591042,
+      "sha256": "19b914c0e7f0b56301b1a500a8c43006ccbbf5ebf9bd233c51cd4dc096ca6a57"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode16.hdf5",
+      "bytes": 10887754,
+      "sha256": "a10a88fb2a88298214d850afa5aab699233be4ef6224e73616560f9e4101056a"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode17.hdf5",
+      "bytes": 8723752,
+      "sha256": "18a321ba617ac9526ccb0c3846ba71198568a1ea4bea178c35781b22ccb5bb14"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode18.hdf5",
+      "bytes": 8495224,
+      "sha256": "aa2868b3e43ea906e4697f7bbe03b49ff25414650628d634817f9d7a1b209ff1"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode20.hdf5",
+      "bytes": 7960336,
+      "sha256": "433df61b8da0533eeecfb116dbf773955d196e8916fe689f76ad7172e94f0327"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode21.hdf5",
+      "bytes": 8902024,
+      "sha256": "c4abd3108ce701e543103edadf247bbcde50f0d1ab0a1525c920c28a0bdc6db6"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode23.hdf5",
+      "bytes": 9335122,
+      "sha256": "b72d8dd7c77f019da348e395a58b558efaae6508ca993e5d9693ee611b27bab6"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode24.hdf5",
+      "bytes": 9276050,
+      "sha256": "f6c54275c18f41dd99477c10a500d21f03a90003de9faf862e313763d716a327"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode25.hdf5",
+      "bytes": 8132438,
+      "sha256": "629133cdb14e451545a18fe942e4909c568219b04482e717a1ce5fd1b963f89d"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode26.hdf5",
+      "bytes": 9397596,
+      "sha256": "40f98b159a59ca4a9486e2cf90dd0ab4762307a01aeababe2c5c49c174170f65"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode27.hdf5",
+      "bytes": 8830744,
+      "sha256": "e3d8007db7f30a3a08e9b30f8544609b957dc5d4442c655d301eed322fba4061"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode28.hdf5",
+      "bytes": 8514592,
+      "sha256": "effb91395ea6efd3cc094a2663539ed25adc36e30ee15c16e6d526b3e2347650"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode29.hdf5",
+      "bytes": 8900674,
+      "sha256": "701ee22c8d5beef052dd446ad403af1a3f0a3567a7865bca27e8360fd6001795"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode3.hdf5",
+      "bytes": 8870933,
+      "sha256": "a18f04f185e7dae7eab2761ae4626c81e35ceb97d6922c97b0e70015607a7e9a"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode30.hdf5",
+      "bytes": 8428120,
+      "sha256": "8ec727f57c8c8fd98b305f336b847c18e7665e5af4b04b892154e7cee6676ce5"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode31.hdf5",
+      "bytes": 8768834,
+      "sha256": "0640c576d8437e220600c005479a22744646da6dbcdb4f536f19c8d067844af6"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode32.hdf5",
+      "bytes": 8539968,
+      "sha256": "b8598e99a8d31f4f55f8549d7a1024810410d6c72b9cdf1ff86cc6beac040edd"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode34.hdf5",
+      "bytes": 8832640,
+      "sha256": "7969fc13254bab10d088d7993246a4849568378ac533a41ec442c6c5d7421fbe"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode37.hdf5",
+      "bytes": 8477944,
+      "sha256": "796f0ac55ba5397df7a07b57ce312452759a29adf07dda9a896ed8f3876b35a8"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode38.hdf5",
+      "bytes": 8730850,
+      "sha256": "df5611f4316c0ce395aa502ecdebaf44f26eb28267b72895ce09f07738e595ce"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode39.hdf5",
+      "bytes": 8612587,
+      "sha256": "8c0f4e595e5a570815c124d3f372d31e3ca5a0e168aeef508301f33b78e158b2"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode4.hdf5",
+      "bytes": 9149200,
+      "sha256": "4a0174a5d778f8eb134ff94bc5fee9fd326cbe3c85c233c703a089ea47f5cd45"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode40.hdf5",
+      "bytes": 8545176,
+      "sha256": "a872ec1d6dc3b3b29a9ec707dbb968582e2d01eada2c7f37faef0a4c73722c12"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode41.hdf5",
+      "bytes": 8789200,
+      "sha256": "3724e586fdd07da0754c0848f850b00bc7f8575c51a20a855c1fdd67b4cbe70c"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode42.hdf5",
+      "bytes": 8739227,
+      "sha256": "97e4c841b6eaded301725c9100ce6d3b821d6746024c523e60f8760ea2768619"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode43.hdf5",
+      "bytes": 8886163,
+      "sha256": "2e08469b185eb70649c15b475415ce9cb74f0de7b55500623261cafcd977ad50"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode44.hdf5",
+      "bytes": 8474963,
+      "sha256": "b5c9ec4572853ddc220be2c8c1991bc6b7503638b325f619efd15ecff24ade37"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode45.hdf5",
+      "bytes": 8835250,
+      "sha256": "acf76dfb7cdd19662cca62dd231b154ff1130ac56068075178958039fcb8ff1f"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode46.hdf5",
+      "bytes": 8726786,
+      "sha256": "4c27b1b980832618d708f4c4a3212bdfc1db76d6fadb11d11a06d150d94f6626"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode47.hdf5",
+      "bytes": 8650200,
+      "sha256": "fa679c184b74cf692750c860457878e45ee83d5127c77de7e6e5cd9ce0492486"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode49.hdf5",
+      "bytes": 8341272,
+      "sha256": "a47c5d4afb41c4852da050b0f7844741b66aa052661b07a2cfb10d3e0a674081"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode5.hdf5",
+      "bytes": 8984824,
+      "sha256": "f03361c298897e6b10e924e13d45f57d23b8d6add6966249ef078e8418b4dc6f"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode7.hdf5",
+      "bytes": 8596466,
+      "sha256": "c02b7ff0a62564be92d436e42ce3eade652cf74af80e3334a5a10781dcd22404"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode9.hdf5",
+      "bytes": 9197035,
+      "sha256": "7cc9e7fb699a61c7b4c8d99237bdfb0dd80eee2651bafb57cbe05f127f181f41"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode10.hdf5",
+      "bytes": 16474141,
+      "sha256": "3c7b080ca4bb3f7299018597db5c423160f33116a6215c0592cce6359715b07b"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode15.hdf5",
+      "bytes": 16324792,
+      "sha256": "f7bed17d9eaec19a061d053268e711f0af8efddee3320c6402dfff2b6c2a48a1"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode16.hdf5",
+      "bytes": 16673448,
+      "sha256": "e566c5f218cd3147203b47fd59b7b896a38ea6dfa4a2a0051e5dbaaa58a549e8"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode17.hdf5",
+      "bytes": 15827104,
+      "sha256": "b9e9811b2b810d3a7b25a3dd37ef6488523cb0c16dca2d2ae7f3280935009c42"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode18.hdf5",
+      "bytes": 16841068,
+      "sha256": "63709d5c3edbac34498e739aa4d8e685731b4957fca808345c524aa771b3e61c"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode20.hdf5",
+      "bytes": 16025428,
+      "sha256": "f0e7c2b06f2cd9838f23fec1703fc9e4a6ecac84bdbd90399cd2023ea514b47a"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode21.hdf5",
+      "bytes": 17214556,
+      "sha256": "42b355925411e1c9ce7c162d96150bd3057ee59f4bcc0f46d37c8fd36c042acd"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode23.hdf5",
+      "bytes": 15887874,
+      "sha256": "052f4bf62910865585b72d48473b00df9a4ef550388aa7d6cc84ec7fb840201f"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode24.hdf5",
+      "bytes": 15666214,
+      "sha256": "1b123a40ad6a3078b6887d6e215565710c9e605323dfe4e68fcb4c73354003c5"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode25.hdf5",
+      "bytes": 16133075,
+      "sha256": "15b69b58af33d7a44ecf567541f545cc69d891f1f47c303c05dec466e226b059"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode26.hdf5",
+      "bytes": 16366921,
+      "sha256": "92f40d1af73a6b4125137f5f50307ba1efc0568b77cf429c01150b94cb3d314a"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode27.hdf5",
+      "bytes": 15905740,
+      "sha256": "06ab3b667262d08c8ff8000f7c9d47301ababb92b9f4da78a5d706464756f946"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode28.hdf5",
+      "bytes": 16034353,
+      "sha256": "1b3ec6e881cbf2337bf7cb74ecd87d33c9d7e3981c6039d09ef54e0b1d70d99c"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode29.hdf5",
+      "bytes": 18340090,
+      "sha256": "a720f5b80f240da7b797eb468f0013f29a6923844f588ae57ae79566057f8d7c"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode3.hdf5",
+      "bytes": 15974444,
+      "sha256": "f582bbe813e6ff350ab80da6211f2e626dad32a36db32e0c3fdfeee2bf1ec97c"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode30.hdf5",
+      "bytes": 16498500,
+      "sha256": "623f280909780fe9ad7fa3f9f36c81b257fbf5df5f37f255abaab0078e469c5c"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode31.hdf5",
+      "bytes": 16034500,
+      "sha256": "e0401d013618a81893ed0be7c9c7f514ffbc68f8bb41d6da9f15a1770a113110"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode32.hdf5",
+      "bytes": 16842894,
+      "sha256": "abaf3596f8dba4e70c789bfed1553d65f4a5f7fe291a70918089879725e6e33b"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode34.hdf5",
+      "bytes": 16486792,
+      "sha256": "080ec6d696fb350696861d928fc83f91ff3584d43deda0528e14c0fa32763e46"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode37.hdf5",
+      "bytes": 16377266,
+      "sha256": "90de9b6762e18a88310da8838201c0b365404d59c8b37019243d6430bf1ce65d"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode38.hdf5",
+      "bytes": 16097096,
+      "sha256": "f950eec69e93178cd189a9c24d6eb34d80ae8101ace392162efd75ae435692d1"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode39.hdf5",
+      "bytes": 17337942,
+      "sha256": "02082173df065366697820228693ff1237a32baaf312c72b02e7662e18f28825"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode4.hdf5",
+      "bytes": 15691731,
+      "sha256": "be040dce1e5a2c04b962b11433ccb5b94e55b7a8f7c0e21bc039fc2636d05190"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode40.hdf5",
+      "bytes": 16038538,
+      "sha256": "42d0033921e461e644863dadfb558b22ac1019409b512d954ad7247fac490167"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode41.hdf5",
+      "bytes": 16078972,
+      "sha256": "47f55e705b9b422e721b366c3fa29d7d8826139743addf8f8a6319a1e2cf1956"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode42.hdf5",
+      "bytes": 16860420,
+      "sha256": "03f6a9c2bfe416ff57b10b4785d63ea5eef24bb332651a42ecd2e888c5e05a32"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode43.hdf5",
+      "bytes": 16071181,
+      "sha256": "a39dff611510772a223322ea0e3d67383410230b3e646339fccdde7cf10c95d9"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode44.hdf5",
+      "bytes": 16402540,
+      "sha256": "f4e9b3d9dda9829a820de4c3e7c0896dc64f195b274d309612b3a0572c6ea972"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode45.hdf5",
+      "bytes": 16375090,
+      "sha256": "4b6cce624c592708e16307d50f4a24b213911a02c2f4080881c6692017f9d32c"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode46.hdf5",
+      "bytes": 16176872,
+      "sha256": "49964dc12673837c9beb9abd1dbfb963a3563bb3541c590333765c8a301609c7"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode47.hdf5",
+      "bytes": 16042668,
+      "sha256": "1fecce74f3d6ae9bb9006a0e6d7516ee611e63fc691aeb992fb388291a025773"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode49.hdf5",
+      "bytes": 16376596,
+      "sha256": "d975d76e03fd86ca882fe42f90e588baaf711825c6a1c0ec114dc49a6a8034f7"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode5.hdf5",
+      "bytes": 16290560,
+      "sha256": "cd1a877024455cc5b29d12c9847f119a5ff07342ffbea03ea698629a1fd58117"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode7.hdf5",
+      "bytes": 16076598,
+      "sha256": "985f93093dd5555e528c0ded78dd9b0354f909f68dd138dff19e3a7f02bb9ee8"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode9.hdf5",
+      "bytes": 16171840,
+      "sha256": "0baea19e2e5e1d29371e417d60cf5f9b233b8c9300097b9a03c19c7456136143"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode10.hdf5",
+      "bytes": 20309308,
+      "sha256": "5eb9507fe2577bc471179de3329f5f892adb80c51b720f1c37ce6222e44eb003"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode15.hdf5",
+      "bytes": 22922399,
+      "sha256": "3fb46585d630b75801d53dfd6482d92c7e02a071de471979563aa3ba666a1f05"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode16.hdf5",
+      "bytes": 21068020,
+      "sha256": "479a62e6bd8b4af723f50fc86d62e406e6b9b38658f206efb723d05046067c71"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode17.hdf5",
+      "bytes": 20422360,
+      "sha256": "c2beb0ec4c6c5fff3d18db39c8354d1004718e724aa53c83d29c1bbd951c87e9"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode18.hdf5",
+      "bytes": 17912086,
+      "sha256": "5b822e1f5afb9838239f912cd55abd45e305079105a16e6093e3504d251a7fe7"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode20.hdf5",
+      "bytes": 18305194,
+      "sha256": "6b3b6b698b6186b02370aca0eab2fbf2e874d20fb034aa3f40f47d9bec4a52b1"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode21.hdf5",
+      "bytes": 21294286,
+      "sha256": "b0279e605d6fa2ed9a50a9e0116ae534249de619eaea289f3e020170ef2b14d0"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode23.hdf5",
+      "bytes": 20870601,
+      "sha256": "f610025a9500bb2fc1aed04f1477688211ee9eb8453d071f6117bedfa31f692c"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode24.hdf5",
+      "bytes": 19245110,
+      "sha256": "c707854ba9c2902308113840daf2f2f028ac427161e3b05034b369cf9fba3dda"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode25.hdf5",
+      "bytes": 19853336,
+      "sha256": "720ad2d86797fb558aed9fe5ceecbb7bf001acf99fbebf02e8d653e5926aec6e"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode26.hdf5",
+      "bytes": 24626140,
+      "sha256": "b372128a055cbedb60b2cd7302778eeeaa7f4ffb4d00ec7ac54b62bb8ef72cbb"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode27.hdf5",
+      "bytes": 16800608,
+      "sha256": "cfb8280da9371f89d355c8c3c6a065f13d3193c4145a5a19c6bc44080446be78"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode28.hdf5",
+      "bytes": 22512289,
+      "sha256": "c50d14db900c29bcb397606f541858bad0ab02dface137e9eb7064bab886fde9"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode29.hdf5",
+      "bytes": 23484635,
+      "sha256": "2f165eabc356b5ecaa4605672e538b5eee13ff2645b57ca0a2eb8c3d9147827e"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode3.hdf5",
+      "bytes": 20858500,
+      "sha256": "f795d6cb7925ecb6ea66afce8978b6146ba851de044feed0ae90983a2cb1263f"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode30.hdf5",
+      "bytes": 17223573,
+      "sha256": "5aa593422d499861bde76fd4a6b52fa4f38913462d9e0a8f674dafc40ede6e0c"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode31.hdf5",
+      "bytes": 18919480,
+      "sha256": "fcb9cb74685127aefac94d0c74dd5ff3670e9a48a8bdb7dd360a11cbd6e4f11c"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode32.hdf5",
+      "bytes": 21031018,
+      "sha256": "d6f79fe0d004f67727fac8fd7dbb0afa43423c87c8a14c9140a1279a3a395fbc"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode34.hdf5",
+      "bytes": 21796426,
+      "sha256": "7a966bbd8017992ff50a5e0f0249d9a784d590f180727a3e566617ecccbf1f79"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode37.hdf5",
+      "bytes": 18341050,
+      "sha256": "1e75464aa31e5fa6952f0c97936b590e18c237fb1935b2ba50a6390ae25be2b6"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode38.hdf5",
+      "bytes": 19125112,
+      "sha256": "9668925fb3ad94286ffa510183778ad2f6a5802bc6df9bed654e1d2e859f0e67"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode39.hdf5",
+      "bytes": 17855662,
+      "sha256": "9f732cdf6838a000c3553a350df353f439346969fcc9a70287e50212231a1513"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode4.hdf5",
+      "bytes": 21852248,
+      "sha256": "927263f993375775ab949121bdc8ba363b80efdf902de3ba32a4c290e5b520c8"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode40.hdf5",
+      "bytes": 20109604,
+      "sha256": "f0537dddfaaab3a9752e0155200a9d3e1cf4789d6dedf829a0920f2304ae2749"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode41.hdf5",
+      "bytes": 21941744,
+      "sha256": "956f040cb6aa30c7bcb4e2719ec6f7b6c826ec41c0df0a4517ddbd89a4c37349"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode42.hdf5",
+      "bytes": 18616444,
+      "sha256": "b5fd29f1b29842271f4b190ddc3f88c97ef5fd633d4779a5ab2f3ed43d7f0113"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode43.hdf5",
+      "bytes": 19240328,
+      "sha256": "78fb85def30a8acc26451808576bfae8b444f26914d093716fef8adaf6c01572"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode44.hdf5",
+      "bytes": 21985768,
+      "sha256": "7f38fc72d1ad0fa344b8bd48f42eee50216f5f502c19f2e245dce85823267adc"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode45.hdf5",
+      "bytes": 21261982,
+      "sha256": "90ba1a013ba54f7488100f9e048542a959c6b059c3928328f83179d8006586ff"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode46.hdf5",
+      "bytes": 18390300,
+      "sha256": "023ee1a02dfc35cb7a5abb6716c82e1400d452317f5f96c2de51b13e2c8698f8"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode47.hdf5",
+      "bytes": 17988554,
+      "sha256": "0e2d884f7f7e4be705448fe92ee9fd1bb0495b7b0e82bfb24dc33e5309117320"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode49.hdf5",
+      "bytes": 18651913,
+      "sha256": "bf1542dccbef081417f7e431003e517cba16138b82291f132e2a1b76601b8ab2"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode5.hdf5",
+      "bytes": 19830356,
+      "sha256": "ecca0f39bf4634f22735148df37ce2b7403f8f5875231743c36862e8a2ceeb97"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode7.hdf5",
+      "bytes": 20340460,
+      "sha256": "f0f9cad266ab6f1cedaf3433fc6bc880a7bc6fcad29292426bc9af2a4cf5b974"
+    },
+    {
+      "path": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode9.hdf5",
+      "bytes": 21053745,
+      "sha256": "45879c7fca87e5dbd2cff1d6cdd04933f9d4689a4b70e00a19ea1720da76826a"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "route": "wan",
+  "seed": 44,
+  "common_sha256": "31636d8c9741b6a365eb2116321f37226a0534a16d08db4992a06ae438c181d8",
+  "equal_common_tensors": 679,
+  "trainable_parameters": 295035604,
+  "frozen_text_tensors": 242,
+  "published_world_action_weights_loaded": false
+}

@@ -1,0 +1,19 @@
+{
+  "name": "wan-seed42",
+  "kind": "train",
+  "entrypoint": "/home/zifanz4/openwam-experiments/scripts/endtoend/train_main.py",
+  "host": "cm009",
+  "gpu_index": 3,
+  "gpu_uuid": "GPU-0a82dda7-402e-d63c-a8f3-e4e425ac94db",
+  "run_dir": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42",
+  "timeout_seconds": 86400,
+  "code_sha256": {
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/train_main.py": "3127325d1591d6099d1504a42652714a65e533971fe18851a401af183cbfe7e8",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/run_job.py": "a151a071da74f645fd7c2f896ae272699d4ae48174c7461e5ab9f6b318e93b5b",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed42/config.yaml": "e801ab3c8bc06b365e5858219e26be0f4912c698b568716aced7c77f97ae8809",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/templates-main/wan/config.yaml": "d18b05d3722c7752a02f2f137a4e9796709a0e8d9d19ec1985a488e16baecd4e",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/protocol.json": "9821536558ee158735a24e2caa8b394dfb46723269586cf4acc66c4b9b2cd7b6",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/dinov3_pca.py": "5daa04141295143d64e4014e7cc8603ec48479acffd5fd39fc4d093f80541de7",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/__init__.py": "76c2a60bd41d15831a73dd61e9617212ea251760dc6a11138b4cfb69ab4287a3"
+  }
+}

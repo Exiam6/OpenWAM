@@ -35,14 +35,14 @@
 <!-- greene-progress:start -->
 ### Greene 官方检查点参考基线（自动更新）
 
-更新于 2026-09-29T02:20:21-04:00；Slurm 18771822（RUNNING）；协议 `research/greene/baseline-official/protocol.json`。
+更新于 2026-09-29T02:40:25-04:00；Slurm 18771822（COMPLETED）；协议 `research/greene/baseline-official/protocol.json`。
 
 | 任务 | 完成 | 成功 | 技术失败 |
 | --- | --- | --- | --- |
 | adjust_bottle | 20/20 | 20 | 0 |
 | handover_block | 20/20 | 20 | 0 |
-| place_object_basket | 18/20 | 17 | 0 |
-| **合计** | **58/60** | **57** | **0** |
+| place_object_basket | 20/20 | 18 | 0 |
+| **合计** | **60/60** | **58** | **0** |
 
 实时进度，不是最终报告；成功率在 60 回合完成并审计前不下结论。发布检查点 + 自定义三任务 clean 场景，不是官方 50 任务基准。
 <!-- greene-progress:end -->

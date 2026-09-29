@@ -1,13 +1,16 @@
 {
-  "updated_at": "2026-09-29T02:20:21-04:00",
+  "updated_at": "2026-09-29T02:40:25-04:00",
   "run_dir": "/scratch/zz4330/openwam-runtime/runs/official-baseline-18771822",
   "slurm_job": "18771822",
-  "job_state": "RUNNING",
-  "exit": null,
+  "job_state": "COMPLETED",
+  "exit": {
+    "returncode": 0,
+    "time": "2026-09-29T02:25:01-04:00"
+  },
   "protocol": "research/greene/baseline-official/protocol.json",
   "episodes_planned": 60,
-  "episodes_complete": 58,
-  "successes": 57,
+  "episodes_complete": 60,
+  "successes": 58,
   "technical_failures": 0,
   "tasks": {
     "adjust_bottle": {
@@ -26,10 +29,10 @@
     },
     "place_object_basket": {
       "planned": 20,
-      "complete": 18,
-      "successes": 17,
+      "complete": 20,
+      "successes": 18,
       "technical_failures": 0,
-      "mean_seconds": 93.2
+      "mean_seconds": 98.5
     }
   },
   "note": "Live progress, not a final report. Official released checkpoint on the custom 3-task x 20-scene clean cohort; not the official 50-task benchmark."

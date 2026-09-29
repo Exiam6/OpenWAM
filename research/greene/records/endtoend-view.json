@@ -1,0 +1,88 @@
+{
+  "built_at": "2026-09-29T15:00:53.064397-04:00",
+  "root": "/scratch/zz4330/openwam-runtime/endtoend-root",
+  "prefix_substitution": [
+    "/data02/zifanz4/openwam-experiments",
+    "/scratch/zz4330/openwam-runtime/endtoend-root"
+  ],
+  "checkpoints": {
+    "wan-seed42": {
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/wan-seed42",
+      "checkpoint": "/scratch/zz4330/openwam-runtime/assets-wan48/endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/checkpoint_step_12000.safetensors",
+      "checkpoint_sha256": "b9cf3c71294ec0e545c5481e10f49665b28c7d6a1d45852342c2327ab4faac52",
+      "checkpoint_sha256_source": "frozen SHA256SUMS; verified by run_cell.py at load",
+      "original_config_sha256": "6c774d1a03d477df62bd75aa00c1e735b00396322b00361476eee95107dedbc2",
+      "view_config_sha256": "4280eee6fb577d5e1097527086949503f0bc7b98dbf7fe922587ed395a97e8aa"
+    },
+    "wan-seed43": {
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/wan-seed43",
+      "checkpoint": "/scratch/zz4330/openwam-runtime/assets-wan48/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/checkpoint_step_12000.safetensors",
+      "checkpoint_sha256": "5514b15f2d0f665c69c4703b0e856a82f11e8cbbe032f2ae3f63a10ea8743bce",
+      "checkpoint_sha256_source": "frozen SHA256SUMS; verified by run_cell.py at load",
+      "original_config_sha256": "2fea714c325ecc58d6395968a6dd8edf77abaa452749d7b59993d778a3ad7dc0",
+      "view_config_sha256": "1e3807149f30d883e8fc49533effb073bf1071ed432e364487aef8525257c030"
+    },
+    "wan-seed44": {
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/wan-seed44",
+      "checkpoint": "/scratch/zz4330/openwam-runtime/assets-wan48/endtoend-20260923/training/wan-seed44/output/2026-09-24_13-51-20/checkpoint_step_12000.safetensors",
+      "checkpoint_sha256": "e9dd53f4a96da7801b9204060c0a1720b5e55c6d190894694a020f880060ec15",
+      "checkpoint_sha256_source": "frozen SHA256SUMS; verified by run_cell.py at load",
+      "original_config_sha256": "0b15b987819f794685e856069a2c05f52f8f3ad93f0e9edc22d7c27d2b486ed4",
+      "view_config_sha256": "031637d1ec9d7944e4acf1e9c0ddad17717d6e10e1e559e844dd67b3b7c22561"
+    },
+    "svae-seed42": {
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/svae-seed42",
+      "checkpoint": "/scratch/zz4330/openwam-runtime/assets-endtoend/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_12000.safetensors",
+      "checkpoint_sha256": "4cbe7625f38a85d9d18c8340b469f746ebe7a3015df7afd23204504ad2f696a7",
+      "checkpoint_sha256_source": "frozen SHA256SUMS; verified by run_cell.py at load",
+      "original_config_sha256": "9d2f38076bfc3fa4687b1609eddc035c04b45f53b9f130aa01e51cd8f4c4232f",
+      "view_config_sha256": "f2adae0b58e7678003ab4c023f745bf6cafea7b6c7f91a28eb8923713aa6e1dc"
+    },
+    "svae-seed43": {
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/svae-seed43",
+      "checkpoint": "/scratch/zz4330/openwam-runtime/assets-endtoend/endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_12000.safetensors",
+      "checkpoint_sha256": "1424a145c1a6bae8b945705540436d6f4a0680dd88caca16a414f7563e3eccda",
+      "checkpoint_sha256_source": "frozen SHA256SUMS; verified by run_cell.py at load",
+      "original_config_sha256": "16bf2fb330f8c12bb95033746d9f8f9524a5da89a169a4d8fbb9937431677524",
+      "view_config_sha256": "ebeb9cf895b2933ae51e920c9fb807680c8f8da12bfa6384f4609c476a3ae4e6"
+    },
+    "svae-seed44": {
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/svae-seed44",
+      "checkpoint": "/scratch/zz4330/openwam-runtime/assets-endtoend/endtoend-20260923/training/svae-seed44/output/2026-09-24_13-51-17/checkpoint_step_12000.safetensors",
+      "checkpoint_sha256": "a05abc58dfa56041cd20775512f9f0bf27c0f0590f796ae53886b42b88e5421f",
+      "checkpoint_sha256_source": "frozen SHA256SUMS; verified by run_cell.py at load",
+      "original_config_sha256": "4b895a9406c0e2e4c0266f0ddbe7037c575c574246af9c4291c89c71fbfab49a",
+      "view_config_sha256": "075f45c6c0d91ee7ce5325afee024db9723cf243c29e74b7a39815b5433ae082"
+    },
+    "pca-seed42": {
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/pca-seed42",
+      "checkpoint": "/scratch/zz4330/openwam-runtime/assets-endtoend/endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_12000.safetensors",
+      "checkpoint_sha256": "7504a93ad4b6be01c2bf1592069d403b223c1429cf2a64e0853b7e11fbbf7c48",
+      "checkpoint_sha256_source": "frozen SHA256SUMS; verified by run_cell.py at load",
+      "original_config_sha256": "7e44455460f45b8b9d4cc9a67ab69a5b398d1a9d4026977aa00607cb3b463044",
+      "view_config_sha256": "80d72e864fc70671270b14a09757a2763069d160ae18f19933bf2e55b78c56ad"
+    },
+    "pca-seed43": {
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/pca-seed43",
+      "checkpoint": "/scratch/zz4330/openwam-runtime/assets-endtoend/endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_12000.safetensors",
+      "checkpoint_sha256": "2502bfd7b1986cf16b657efc48dce79a48e8791d558af87d4f6a765a2b5fc7c2",
+      "checkpoint_sha256_source": "frozen SHA256SUMS; verified by run_cell.py at load",
+      "original_config_sha256": "5eb470121799dfb3d9347dce512455680624ce1242055f96ddc028bb718c816b",
+      "view_config_sha256": "e034adeb55f1429dfde8dae3ee7d724162da9399391c8a31d5e672355d9b9991"
+    },
+    "pca-seed44": {
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/pca-seed44",
+      "checkpoint": "/scratch/zz4330/openwam-runtime/assets-endtoend/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/checkpoint_step_12000.safetensors",
+      "checkpoint_sha256": "cef39a8b994ca37a8a88ad4184f7edec6b1b7c2209eab1140db9465d82ce90e6",
+      "checkpoint_sha256_source": "frozen SHA256SUMS; verified by run_cell.py at load",
+      "original_config_sha256": "d02d1e1c0173d0c86e4e41e63b5818fa2d28a100eb25b83cdfce3aa3bc8f9880",
+      "view_config_sha256": "1981241ddc8b036dd0ae425b2bc4483a0e723a632efb88d33526efc7c95f5dc2"
+    }
+  },
+  "full_hash_verification": {
+    "slurm_job": 18814367,
+    "finished": "2026-09-29T14:56:51-04:00",
+    "result": "all 9 checkpoints re-hashed and equal to the frozen SHA256SUMS (log owam-e2e-view.18814367.out)",
+    "note": "view then rebuilt on the login node without hashing; run_cell.py re-hashes each checkpoint before serving"
+  }
+}

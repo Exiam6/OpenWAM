@@ -39,8 +39,10 @@ def main():
    run=f'{route}-seed{seed}';src=(AW if route=='wan' else AE)/'endtoend-20260923/training'/run
    link(E/'training'/run,src)
    (out,)=list((src/'output').iterdir());ck=out/'checkpoint_step_12000.safetensors'
-   rel=str(ck.relative_to(src.parents[2]));h=sha(ck)
-   assert want.get(rel)==h,(run,rel,h)
+   rel=str(ck.relative_to(src.parents[2]));h=want[rel]
+   # Full hash deferred to run_cell.py, which re-hashes the checkpoint before serving
+   # and asserts it equals this frozen value (keeps this step cheap enough for a login node).
+   assert ck.stat().st_size>0
    v=VIEW/run;v.mkdir(parents=True,exist_ok=True)
    for f in out.iterdir():
     if f.name!='config.yaml':link(v/f.name,f)
@@ -52,7 +54,7 @@ def main():
     if str(ROOT) in line:
      p=Path(line.split(':',1)[1].strip())
      if not any(k in line for k in ['output_path','output_dir']):assert p.exists(),(run,line)
-   ckpts[run]={'view':str(v),'checkpoint':str(ck),'checkpoint_sha256':h,'frozen_sha256_match':True,'original_config_sha256':sha(out/'config.yaml'),'view_config_sha256':sha(cfg)}
+   ckpts[run]={'view':str(v),'checkpoint':str(ck),'checkpoint_sha256':h,'checkpoint_sha256_source':'frozen SHA256SUMS; verified by run_cell.py at load','original_config_sha256':sha(out/'config.yaml'),'view_config_sha256':sha(cfg)}
    print(run,h[:12],'ok',flush=True)
  REC.write_text(json.dumps({'built_at':datetime.datetime.now().astimezone().isoformat(),'root':str(ROOT),'prefix_substitution':[OLD,str(ROOT)],'checkpoints':ckpts},indent=2)+'\n')
 if __name__=='__main__':main()

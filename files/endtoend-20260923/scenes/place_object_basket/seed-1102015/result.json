@@ -1,0 +1,28 @@
+{
+  "task": "place_object_basket",
+  "seed": 1102015,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T19:40:21.163396-05:00",
+  "expert_plan_success": true,
+  "instruction": "Grab the toycar with rounded edges, put it in the medium-sized basket with perforated texture, move the medium-sized basket with perforated texture.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 245,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102015/data/episode0.hdf5",
+  "hdf5_sha256": "27419331e0cea5dc20637f714907559bf4de3ed14b9bfa9068caed826dae51c9",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "057_toycar/base3",
+      "{B}": "110_basket/base1",
+      "{a}": "right",
+      "{b}": "left"
+    }
+  },
+  "elapsed_seconds": 89.39999892562628
+}

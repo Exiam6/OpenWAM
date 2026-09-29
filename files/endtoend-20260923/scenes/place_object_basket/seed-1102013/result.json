@@ -1,0 +1,28 @@
+{
+  "task": "place_object_basket",
+  "seed": 1102013,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T19:38:09.243652-05:00",
+  "expert_plan_success": true,
+  "instruction": "Place the playingcards with red packaging in the medium basket with smooth texture and move it.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 257,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102013/data/episode0.hdf5",
+  "hdf5_sha256": "3cfa8a116e38f5ab8ba94d0977ef0d2d1763f8a7828ba4bb53492f72f166ab62",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "081_playingcards/base1",
+      "{B}": "110_basket/base0",
+      "{a}": "left",
+      "{b}": "right"
+    }
+  },
+  "elapsed_seconds": 86.11987308040261
+}

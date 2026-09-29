@@ -1,0 +1,10 @@
+{
+  "task": "place_object_basket",
+  "seed": 1102014,
+  "role": "expert_only_independent_confirmation",
+  "accepted": false,
+  "started_at": "2026-09-23T19:39:36.939319-05:00",
+  "expert_plan_success": false,
+  "outcome": "expert_infeasible",
+  "elapsed_seconds": 42.4020872823894
+}

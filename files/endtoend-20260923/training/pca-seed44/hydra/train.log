@@ -1,0 +1,33 @@
+[2026-09-24 13:50:06,422][train][INFO] - mixed_precision = bf16 (from cfg.training.mixed_precision)
+[2026-09-24 13:50:15,047][openwam.train.openwam_trainer][INFO] - Reproducible mode: cfg.project.seed=44 (rank=0)
+[2026-09-24 13:50:15,347][openwam.train.utils.ckpt_model_loader][INFO] - [finetune] model config = /data02/zifanz4/openwam-experiments/endtoend-20260923/templates-main/pca/config.yaml (base) + live cfg.model (override): 0 overridden, 0 live-only, 0 ckpt-only
+[2026-09-24 13:50:15,356][openwam.train.utils.ckpt_model_loader][INFO] - [resume] building architecture from self-contained ckpt dir: /data02/zifanz4/openwam-experiments/endtoend-20260923/templates-main/pca
+[2026-09-24 13:50:16,754][openwam.model.video_backbone.encoder.dinov3][INFO] - DinoV3VideoEncoder.from_skeleton: instantiated from /data02/zifanz4/openwam-experiments/endtoend-20260923/templates-main/pca/dinov3 (embed_dim=768, patch_size=16, register_tokens=4, svae=off) — weights pending checkpoint load
+[2026-09-24 13:50:16,757][openwam.model.video_backbone.wan.loader][INFO] - Instantiating openwam.model.video_backbone.wan.models.dit.WanModel as holder.dit (extra_kwargs keys=['has_image_input', 'patch_size', 'in_dim', 'dim', 'ffn_dim', 'freq_dim', 'text_dim', 'out_dim', 'num_heads', 'num_layers', 'eps', 'seperated_timestep', 'require_clip_embedding', 'require_vae_embedding', 'fuse_vae_embedding_in_latents'])
+[2026-09-24 13:50:17,874][openwam.model.video_backbone.wan.loader][INFO] - Instantiating openwam.model.video_backbone.wan.models.text_encoder.WanTextEncoder as holder.text_encoder (extra_kwargs keys=[])
+[2026-09-24 13:51:18,462][openwam.train.openwam_trainer][INFO] - Architecture: dual_system_self_attn (framework=dual_system variant=joint_self_attn)
+[2026-09-24 13:51:18,466][openwam.train.openwam_trainer][INFO] - Frozen: video_backbone.text_encoder
+[2026-09-24 13:51:18,466][openwam.train.openwam_trainer][INFO] - Frozen: video_backbone.video_encoder
+[2026-09-24 13:51:18,474][openwam.train.utils.training_utils][INFO] - LR scheduler: cosine | total_opt_steps=6000 warmup=300 eta_min=1.00e-06
+[2026-09-24 13:51:18,478][openwam.model.video_backbone.wan.component_specs][INFO] - [component_specs] video_backbone.model_path not readable (/path/to/Wan2.2-TI2V-5B); skipping deploy-asset save.
+[2026-09-24 13:51:18,482][openwam.model.video_backbone.encoder.dinov3][INFO] - DinoV3VideoEncoder.save_deploy_assets: copied /data02/zifanz4/openwam-experiments/assets/dinov3-study/dinov3/config.json -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/dinov3/config.json
+[2026-09-24 13:51:18,565][openwam.train.utils.ckpt_model_loader][INFO] - [self-contained] relayed tokenizer dir: /data02/zifanz4/openwam-experiments/endtoend-20260923/templates-main/pca/tokenizer -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/tokenizer
+[2026-09-24 13:51:18,574][openwam.train.utils.checkpointing][INFO] - Saved config to /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/config.yaml
+[2026-09-24 13:51:18,580][openwam.train.utils.checkpointing][INFO] - [normalizer] Copied action stats into checkpoint dir:
+  src: /data02/zifanz4/openwam-experiments/endtoend-20260923/normalization_stats.npy
+  dst: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/normalization_stats.npy
+[2026-09-24 13:51:19,094][openwam.train.openwam_trainer][INFO] - Checkpoints will be saved to /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18
+[2026-09-24 13:51:22,262][openwam.train.openwam_trainer][INFO] - architecture wrapped (DeepSpeedEngine), device=cuda:0
+[2026-09-24 13:51:23,420][openwam.model.video_backbone.encoder.dinov3][INFO] - DinoV3VideoEncoder.from_skeleton: instantiated from /data02/zifanz4/openwam-experiments/endtoend-20260923/templates-main/pca/dinov3 (embed_dim=768, patch_size=16, register_tokens=4, svae=off) — weights pending checkpoint load
+[2026-09-24 13:51:23,959][openwam.train.utils.seeding][INFO] - shuffle order already follows cfg.project.seed via RandomSampler.generator (initial_seed=44); accelerate re-syncs this generator from rank 0 each epoch — nothing to wire.
+[2026-09-24 13:51:25,247][openwam.train.utils.training_utils][INFO] - wandb initialized: openwam/dummy-1lcleznw
+[2026-09-24 16:18:56,934][openwam.train.utils.checkpointing][INFO] - [checkpoint] Saving step 4000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/checkpoint_step_4000.safetensors
+[2026-09-24 16:19:22,016][openwam.train.utils.checkpointing][INFO] - [checkpoint] Saved: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/checkpoint_step_4000.safetensors
+[2026-09-24 18:45:39,849][openwam.train.utils.checkpointing][INFO] - [checkpoint] Saving step 8000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/checkpoint_step_8000.safetensors
+[2026-09-24 18:46:07,101][openwam.train.utils.checkpointing][INFO] - [checkpoint] Saved: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/checkpoint_step_8000.safetensors
+[2026-09-24 18:46:10,439][openwam.train.utils.checkpointing][INFO] - Removed old checkpoint: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/checkpoint_step_4000.safetensors
+[2026-09-24 21:10:11,579][openwam.train.utils.checkpointing][INFO] - [checkpoint] Saving step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/checkpoint_step_12000.safetensors
+[2026-09-24 21:10:38,288][openwam.train.utils.checkpointing][INFO] - [checkpoint] Saved: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/checkpoint_step_12000.safetensors
+[2026-09-24 21:10:41,873][openwam.train.utils.checkpointing][INFO] - Removed old checkpoint: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/checkpoint_step_8000.safetensors
+[2026-09-24 21:10:41,875][openwam.train.utils.checkpointing][INFO] - [checkpoint] Saving final step 12000 -> /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/checkpoint_step_12000.safetensors
+[2026-09-24 21:11:21,794][openwam.train.utils.checkpointing][INFO] - [checkpoint] Saved final: /data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/checkpoint_step_12000.safetensors

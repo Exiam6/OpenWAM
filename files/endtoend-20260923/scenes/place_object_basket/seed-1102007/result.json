@@ -1,0 +1,28 @@
+{
+  "task": "place_object_basket",
+  "seed": 1102007,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T19:29:51.585715-05:00",
+  "expert_plan_success": true,
+  "instruction": "Grab the black box with smooth surface and place into the basket with rounded edges.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 246,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102007/data/episode0.hdf5",
+  "hdf5_sha256": "7d8905cd38ae30df08da87a8b5d3204b7138bab8cdf1f8faecfffc279feac260",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "081_playingcards/base2",
+      "{B}": "110_basket/base0",
+      "{a}": "right",
+      "{b}": "left"
+    }
+  },
+  "elapsed_seconds": 88.75393910333514
+}

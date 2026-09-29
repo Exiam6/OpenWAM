@@ -1,0 +1,28 @@
+{
+  "task": "place_object_basket",
+  "seed": 1102011,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T19:35:52.285757-05:00",
+  "expert_plan_success": true,
+  "instruction": "Pick up the plastic toycar and drop in the basket with rounded edges.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 244,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102011/data/episode0.hdf5",
+  "hdf5_sha256": "cfc986e340e212073e1c49329f7d6ad69e783d63817062990a5e081c8f139919",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "057_toycar/base3",
+      "{B}": "110_basket/base0",
+      "{a}": "left",
+      "{b}": "right"
+    }
+  },
+  "elapsed_seconds": 90.99442511051893
+}

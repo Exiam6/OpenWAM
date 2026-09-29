@@ -1,0 +1,28 @@
+{
+  "task": "place_object_basket",
+  "seed": 1102066,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T20:42:51.537111-05:00",
+  "expert_plan_success": true,
+  "instruction": "Grab the blue toycar with yellow buttons, put it in the yellow rectangular basket with dual grips, move the yellow rectangular basket with dual grips.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 248,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102066/data/episode0.hdf5",
+  "hdf5_sha256": "c362b2afa5ed7021e6ac27f71f3a9515dc987bced750d2445f985df76465a5aa",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "057_toycar/base4",
+      "{B}": "110_basket/base1",
+      "{a}": "left",
+      "{b}": "right"
+    }
+  },
+  "elapsed_seconds": 91.71702729165554
+}

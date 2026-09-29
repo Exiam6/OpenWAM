@@ -1,0 +1,28 @@
+{
+  "task": "place_object_basket",
+  "seed": 1102058,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T20:34:35.433731-05:00",
+  "expert_plan_success": true,
+  "instruction": "Pick up the hard black box for card deck and drop in the yellow basket with open slots.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 247,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102058/data/episode0.hdf5",
+  "hdf5_sha256": "86b8df56c4dae8f826734607ae02bc5006b8fc36c4b1d0d3c3d051a4c01418d7",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "081_playingcards/base2",
+      "{B}": "110_basket/base1",
+      "{a}": "left",
+      "{b}": "right"
+    }
+  },
+  "elapsed_seconds": 87.02210025116801
+}

@@ -1,0 +1,11 @@
+{
+  "pid": 574429,
+  "group": 574429,
+  "command": [
+    "/data02/zifanz4/openwam-experiments/benchmark-env/bin/python",
+    "-u",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py",
+    "place_object_basket",
+    "1102007"
+  ]
+}

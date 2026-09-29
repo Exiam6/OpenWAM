@@ -1,0 +1,3302 @@
+{
+  "task": "place_object_basket",
+  "accepted": [
+    {
+      "task": "place_object_basket",
+      "seed": 1102002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:24:42.125831-05:00",
+      "expert_plan_success": true,
+      "instruction": "Move the tiny pink car with four wheels to the medium-sized basket with perforated texture, then shift the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 243,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102002/data/episode0.hdf5",
+      "hdf5_sha256": "6698e3b7db54c8e2db832033b26844895a04728bd1f5f9918cf69944971160f6",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 89.35181651636958,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102006,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:28:23.845329-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the gold text on playing cards box and drop in the medium basket with smooth texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 227,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102006/data/episode0.hdf5",
+      "hdf5_sha256": "e2ec0d43e1c70aef74d13b6eadc6df7f9321578eb726e0222ad319b222820fa1",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 85.38964105397463,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102007,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:29:51.585715-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the black box with smooth surface and place into the basket with rounded edges.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102007/data/episode0.hdf5",
+      "hdf5_sha256": "7d8905cd38ae30df08da87a8b5d3204b7138bab8cdf1f8faecfffc279feac260",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 88.75393910333514,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102008,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:31:23.392517-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the rectangular playingcards case with patterns, place it in the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102008/data/episode0.hdf5",
+      "hdf5_sha256": "8008315b3828128167149552bc3e777d5718a5b8082082a3da3e04ec9e28844e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 90.90492127090693,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102009,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:32:56.463911-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the rectangular red playingcards holder, place it in the medium basket with smooth texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 228,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102009/data/episode0.hdf5",
+      "hdf5_sha256": "f61af59f4bb65fb599bb3ebdf7c65147131815c99af87494fef9ad79afccd72c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.24706377461553,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102010,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:34:25.273621-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the hard black box for card deck, put it in the oval basket with medium storage space, move the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102010/data/episode0.hdf5",
+      "hdf5_sha256": "79f78c293f4219fce22d5dba9bbb6b3436641217cdc180a24c56bf36fd36e71c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 84.83743448927999,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102011,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:35:52.285757-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the plastic toycar and drop in the basket with rounded edges.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 244,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102011/data/episode0.hdf5",
+      "hdf5_sha256": "cfc986e340e212073e1c49329f7d6ad69e783d63817062990a5e081c8f139919",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 90.99442511051893,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102013,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:38:09.243652-05:00",
+      "expert_plan_success": true,
+      "instruction": "Place the playingcards with red packaging in the medium basket with smooth texture and move it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 257,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102013/data/episode0.hdf5",
+      "hdf5_sha256": "3cfa8a116e38f5ab8ba94d0977ef0d2d1763f8a7828ba4bb53492f72f166ab62",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 86.11987308040261,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102015,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:40:21.163396-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the toycar with rounded edges, put it in the medium-sized basket with perforated texture, move the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 245,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102015/data/episode0.hdf5",
+      "hdf5_sha256": "27419331e0cea5dc20637f714907559bf4de3ed14b9bfa9068caed826dae51c9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 89.39999892562628,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102017,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:42:34.626522-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the rectangular red playingcards holder, place it in the medium basket with smooth texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 252,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102017/data/episode0.hdf5",
+      "hdf5_sha256": "46e85a1eb4ea4946b0553512253766b57048093bf51e286150b27c3c1aec011b",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 90.63047773763537,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102018,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:44:07.280899-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the small box for playingcards and place into the medium basket with smooth texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 227,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102018/data/episode0.hdf5",
+      "hdf5_sha256": "99b8c4e34e09f3479fb0b5b99369f56f82c467f73bda6def7a0b63eb55d5c94b",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 89.92304262146354,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102020,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:46:22.897579-05:00",
+      "expert_plan_success": true,
+      "instruction": "Place the rectangular playingcards pack in the basket with rounded edges and move it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 258,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102020/data/episode0.hdf5",
+      "hdf5_sha256": "a9f1dfdfd9e6097cd285dca6005e7958ba23d396b0a8e03dde6274c100eaea02",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 86.62414465472102,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102022,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:48:39.757789-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the rectangular playingcards case with patterns, place it in the medium basket with smooth texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 247,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102022/data/episode0.hdf5",
+      "hdf5_sha256": "b45fa85db1e5228a2438212562239d264819af458a8e7b3147f57cb356a2fa01",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 86.38590474799275,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102023,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:50:08.114461-05:00",
+      "expert_plan_success": true,
+      "instruction": "Move the gold text on playing cards box to the medium-sized basket with perforated texture, then shift the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 233,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102023/data/episode0.hdf5",
+      "hdf5_sha256": "8dace3be3377f03b5cbafeb93fa38b3cf02b31f657e269fa9fddf1efadc25a27",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 86.15907556936145,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102024,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:51:35.974643-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the rectangular red playingcards holder, place it in the medium basket with smooth texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 244,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102024/data/episode0.hdf5",
+      "hdf5_sha256": "05fee192a9f3f8228076f8db20470126fdc3671632464c25f9a4cb529795955f",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.76185173541307,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102025,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:53:05.275976-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the black box with smooth surface, place it in the medium-sized basket with perforated texture, move the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 257,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102025/data/episode0.hdf5",
+      "hdf5_sha256": "11ccdabf99a7e2691dfedc26a36af8be5b0bf0d394f7e26a34f503e2c6ca9238",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 88.61010817810893,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102026,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:54:35.819160-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the rectangular playingcards pack, put it in the medium basket with smooth texture, move the medium basket with smooth texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 244,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102026/data/episode0.hdf5",
+      "hdf5_sha256": "8f2be15dcffdb4cd62f38e096d09483a1adcfb249016b4d7b61ca1029d0ce853",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 87.00918424502015,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102028,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:56:48.364267-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the rectangular red playingcards holder, place it in the oval basket with medium storage space, move the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 247,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102028/data/episode0.hdf5",
+      "hdf5_sha256": "68a4a15110a252f3dcd0eb2906bbad12139b512cbbbea39954a7e7784860de50",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 86.26479307934642,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102031,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:59:44.144155-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the playingcards with red packaging and put it in the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 233,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102031/data/episode0.hdf5",
+      "hdf5_sha256": "cb7d1cc0bab767045b1d98912dd80475f0e2822c7d81db3f031f24d51b598008",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 86.6632041670382,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102032,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:01:12.890932-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the tiny pink car with four wheels and put it in the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 243,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102032/data/episode0.hdf5",
+      "hdf5_sha256": "5b3dd508e27abd66aa6a3dde3c4b0f999927d728b301a49f4fe392ad5d8763e9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 91.30940420925617,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102033,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:02:46.358142-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the pink toycar with white bumper and place into the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 240,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102033/data/episode0.hdf5",
+      "hdf5_sha256": "74950761deff7553c1c5c3102dec4fd1ddb1ae6637d2c89814bcd654974e5628",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 90.21870080381632,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102034,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:04:18.997357-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the rectangular playingcards pack and put it in the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 264,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102034/data/episode0.hdf5",
+      "hdf5_sha256": "47da351d9b491f2f97f319b6528e4f7155831f730c83c78db1c7c2da8d9927e8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 91.85968408733606,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102035,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:05:52.953618-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the toycar with smooth finish, place it in the basket with rounded edges, move the basket with rounded edges.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 248,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102035/data/episode0.hdf5",
+      "hdf5_sha256": "dd2ccbd0e23fffd87a923223f2d5ae8772fe29548861b8f0970cfb25815e530c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 91.65575597807765,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102036,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:07:26.914592-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the toycar with orange wheels and put it into the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 247,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102036/data/episode0.hdf5",
+      "hdf5_sha256": "4a7966f7c60688efa2c923e85950d82bc54e99958bcfd33422d156f56075d0ea",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base0",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 89.27754107117653,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102038,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:09:45.885821-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the compact toycar with shiny black tires, place it in the oval basket with medium storage space, move the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 245,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102038/data/episode0.hdf5",
+      "hdf5_sha256": "462914c77bf62edc76668061354e91dfc8a4e7dcd4fb0de7595a65f4f2badf7f",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base2",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 88.9585714712739,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102041,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:12:46.430120-05:00",
+      "expert_plan_success": true,
+      "instruction": "Move the toycar with rounded edges to the medium-sized basket with perforated texture, then shift the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 248,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102041/data/episode0.hdf5",
+      "hdf5_sha256": "fc6ac607882870c13b7e3f9aaed76d3909d3482641c87b1de4bd9f70586ac289",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.1826235987246,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102042,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:14:16.021855-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the playable toycar with rolling wheels, put it in the yellow rectangular basket with dual grips, move the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 241,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102042/data/episode0.hdf5",
+      "hdf5_sha256": "527615947dded45c078e34342e6c3739415637c9ad52210874d9e54096fb340f",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 89.00430697202682,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102043,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:15:47.180945-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the small box for playingcards, put it in the basket with rounded edges, move the basket with rounded edges.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 239,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102043/data/episode0.hdf5",
+      "hdf5_sha256": "b40cc6f66b8abbe72d70cf2a202315e7dd25a48d000f2ce5abe3f6029661728e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 85.69676806405187,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102044,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:17:14.314595-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the rectangular red playingcards holder and put it into the basket with rounded edges.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 243,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102044/data/episode0.hdf5",
+      "hdf5_sha256": "eca0b9cf0d49453b3860e1860638fa31f1b190a1a86503614e3f45c1da3b676f",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 86.57224481925368,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102047,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:20:15.651697-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the plastic toycar with four spinning wheels, place it in the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 248,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102047/data/episode0.hdf5",
+      "hdf5_sha256": "84781c1386a010fb159ece526a93911f1a9f6394c7b7ff67f928b409b8ab146e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base5",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 88.34891787916422,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102048,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:21:45.595852-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the pink toycar with white bumper and put it in the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 253,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102048/data/episode0.hdf5",
+      "hdf5_sha256": "3aeb314d91527dc0a88ae0cded4142dc63a03c745e7181a12505534ccb81f2e6",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.85310650616884,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102049,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:23:15.545147-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the blue toycar with yellow buttons, place it in the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102049/data/episode0.hdf5",
+      "hdf5_sha256": "c62048b42997e43beb4c8f73ebb4442aab2292529596f37ac71c801312624bd0",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.77868417277932,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102050,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:24:45.311798-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the small packet of playingcards and put it into the medium basket with smooth texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 244,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102050/data/episode0.hdf5",
+      "hdf5_sha256": "6d01ce2eff807c8895e2e2483dde8200c91b3ad8ac1369c0b57807cb1450f8b4",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 86.24124191701412,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102053,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:27:47.119825-05:00",
+      "expert_plan_success": true,
+      "instruction": "Place the rectangular red playingcards holder in the basket with rounded edges and move it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 241,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102053/data/episode0.hdf5",
+      "hdf5_sha256": "1e6e427e66036b0be92c2a3931b6a56fa62e6262a189d1e0ea62d6acc71753ce",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 88.20351644232869,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102054,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:29:17.574531-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the bright green toycar, place it in the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 294,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102054/data/episode0.hdf5",
+      "hdf5_sha256": "8897196607768c1d8efe7b8fd145d7158e2b7c5e5d915f5d0efe59d894be6ce0",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 93.7590759433806,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102056,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:31:37.695685-05:00",
+      "expert_plan_success": true,
+      "instruction": "Move the bright green toycar to the oval basket with medium storage space, then shift the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102056/data/episode0.hdf5",
+      "hdf5_sha256": "46b9de311f448d19c753a1859fd959a36f494c1e6261270863768d03edf602e2",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 85.86015810444951,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102057,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:33:05.420584-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the plastic toycar, place it in the yellow basket with open slots, move the yellow basket with open slots.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 250,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102057/data/episode0.hdf5",
+      "hdf5_sha256": "e00c3aa3636eab3bff5a403630d69cf4fe99cdbf8d7f168817ff931b08e39193",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.83438568934798,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102058,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:34:35.433731-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the hard black box for card deck and drop in the yellow basket with open slots.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 247,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102058/data/episode0.hdf5",
+      "hdf5_sha256": "86b8df56c4dae8f826734607ae02bc5006b8fc36c4b1d0d3c3d051a4c01418d7",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.02210025116801,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102062,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:38:16.190224-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the small packet of playingcards, put it in the basket with rounded edges, move the basket with rounded edges.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 250,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102062/data/episode0.hdf5",
+      "hdf5_sha256": "1934278434e2975ab2a59a8126d94808a755916070f9ffcc9e65edef7c190ebe",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 88.70459128543735,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102063,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:39:47.969296-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the plastic toycar, put it in the oval basket with medium storage space, move the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102063/data/episode0.hdf5",
+      "hdf5_sha256": "bfd6f436e50caa5bd5d9088b4e032c1e3a2585a5027ae305b48d3306a3c2a191",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 89.58912629634142,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102066,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:42:51.537111-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the blue toycar with yellow buttons, put it in the yellow rectangular basket with dual grips, move the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 248,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102066/data/episode0.hdf5",
+      "hdf5_sha256": "c362b2afa5ed7021e6ac27f71f3a9515dc987bced750d2445f985df76465a5aa",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 91.71702729165554,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102071,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:47:31.097718-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the rectangular playingcards pack, place it in the basket with rounded edges.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102071/data/episode0.hdf5",
+      "hdf5_sha256": "ca2cb705efd152cf41a2d6c6374643b79567d4461b8c7208b3b5dc4d170b00cd",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 89.52844849973917,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102072,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:49:03.354722-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the toycar with rounded edges, place it in the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 243,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102072/data/episode0.hdf5",
+      "hdf5_sha256": "1c546758a6b06fbbd4c102339ad86c4ff833abdab28a94f9489688d68f0d5b38",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.30783608928323,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102075,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:52:01.941211-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the small box for playingcards, put it in the oval basket with medium storage space, move the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 254,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102075/data/episode0.hdf5",
+      "hdf5_sha256": "5a6bde5a3907cc9932dd78f49bf6e3d8bb958269a27ad444bc08620c4b8af16a",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 89.76661545783281,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102076,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:53:33.133838-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the rectangular playingcards pack and place into the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 248,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102076/data/episode0.hdf5",
+      "hdf5_sha256": "d8269e62dffc0fc93f2e7bfd00193a2c1a5bc0f3ba7c52b94152eea5706c67d6",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.12375717610121,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102077,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:55:02.401677-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the black box with smooth surface and drop in the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 226,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102077/data/episode0.hdf5",
+      "hdf5_sha256": "3bafe532a7b2d30676612c147df3ad372e34584ce4b1ed1e6f6bf4ac02e465bd",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 83.65497627854347,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102078,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:56:27.634424-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the toycar with rounded body, place it in the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 247,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102078/data/episode0.hdf5",
+      "hdf5_sha256": "9480ff0494f742c6c6f64c19d745bba384f918e8ba4ac2869d5922bf2621df86",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base1",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.4871559292078,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102079,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:57:58.037733-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the small box for playingcards and put it into the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 242,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102079/data/episode0.hdf5",
+      "hdf5_sha256": "3b9c760f3d4d991eac6f46f049e28c95f7de0b17ae1e541a2abd091ccc9e88ff",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 88.91073100268841,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102080,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:59:29.047389-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the small box for playingcards and put it in the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 236,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102080/data/episode0.hdf5",
+      "hdf5_sha256": "76780ea9943886e78d7f698938149c4c69cbd655c93d1f61ec435619be76bf45",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 85.77896535769105,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102083,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:02:23.464193-05:00",
+      "expert_plan_success": true,
+      "instruction": "Place the plastic toycar in the medium-sized basket with perforated texture and move it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 267,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102083/data/episode0.hdf5",
+      "hdf5_sha256": "9102cd5e068604b1a87c067560e9303640d01753dcd8c12fa75d8a93c97ab419",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 88.60563300177455,
+      "exit_code": 0
+    }
+  ],
+  "attempts": [
+    {
+      "task": "place_object_basket",
+      "seed": 1102000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:23:10.222548-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 45.18261758238077,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:23:57.673809-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 42.78996469080448,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:24:42.125831-05:00",
+      "expert_plan_success": true,
+      "instruction": "Move the tiny pink car with four wheels to the medium-sized basket with perforated texture, then shift the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 243,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102002/data/episode0.hdf5",
+      "hdf5_sha256": "6698e3b7db54c8e2db832033b26844895a04728bd1f5f9918cf69944971160f6",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 89.35181651636958,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:26:14.550615-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 40.353465497493744,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102004,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:26:56.652897-05:00",
+      "outcome": "expert_infeasible",
+      "error": "AssertionError('target_pose cannot be None for move action.')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 55, in worker\n    info=env.play_once();ok=bool(env.plan_success and env.check_success());result['expert_plan_success']=ok\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/place_object_basket.py\", line 122, in play_once\n    self.grasp_actor(self.basket, arm_tag=self.arm_tag.opposite, pre_grasp_dis=0.08),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+      "elapsed_seconds": 41.09110889583826,
+      "exit_code": 0,
+      "original_outcome": "infrastructure_failure",
+      "classification_amendment": "native basket grasp returned no candidate at an AST-enumerated call site; exact pre-score source/traceback class; original result retained; no retry"
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102005,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:27:39.585933-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 42.703810289502144,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102006,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:28:23.845329-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the gold text on playing cards box and drop in the medium basket with smooth texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 227,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102006/data/episode0.hdf5",
+      "hdf5_sha256": "e2ec0d43e1c70aef74d13b6eadc6df7f9321578eb726e0222ad319b222820fa1",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 85.38964105397463,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102007,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:29:51.585715-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the black box with smooth surface and place into the basket with rounded edges.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102007/data/episode0.hdf5",
+      "hdf5_sha256": "7d8905cd38ae30df08da87a8b5d3204b7138bab8cdf1f8faecfffc279feac260",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 88.75393910333514,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102008,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:31:23.392517-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the rectangular playingcards case with patterns, place it in the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102008/data/episode0.hdf5",
+      "hdf5_sha256": "8008315b3828128167149552bc3e777d5718a5b8082082a3da3e04ec9e28844e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 90.90492127090693,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102009,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:32:56.463911-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the rectangular red playingcards holder, place it in the medium basket with smooth texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 228,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102009/data/episode0.hdf5",
+      "hdf5_sha256": "f61af59f4bb65fb599bb3ebdf7c65147131815c99af87494fef9ad79afccd72c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.24706377461553,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102010,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:34:25.273621-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the hard black box for card deck, put it in the oval basket with medium storage space, move the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102010/data/episode0.hdf5",
+      "hdf5_sha256": "79f78c293f4219fce22d5dba9bbb6b3436641217cdc180a24c56bf36fd36e71c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 84.83743448927999,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102011,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:35:52.285757-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the plastic toycar and drop in the basket with rounded edges.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 244,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102011/data/episode0.hdf5",
+      "hdf5_sha256": "cfc986e340e212073e1c49329f7d6ad69e783d63817062990a5e081c8f139919",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 90.99442511051893,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102012,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:37:24.994064-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 42.173109874129295,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102013,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:38:09.243652-05:00",
+      "expert_plan_success": true,
+      "instruction": "Place the playingcards with red packaging in the medium basket with smooth texture and move it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 257,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102013/data/episode0.hdf5",
+      "hdf5_sha256": "3cfa8a116e38f5ab8ba94d0977ef0d2d1763f8a7828ba4bb53492f72f166ab62",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 86.11987308040261,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102014,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:39:36.939319-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 42.4020872823894,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102015,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:40:21.163396-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the toycar with rounded edges, put it in the medium-sized basket with perforated texture, move the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 245,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102015/data/episode0.hdf5",
+      "hdf5_sha256": "27419331e0cea5dc20637f714907559bf4de3ed14b9bfa9068caed826dae51c9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 89.39999892562628,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102016,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:41:52.202345-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 40.84427411109209,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102017,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:42:34.626522-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the rectangular red playingcards holder, place it in the medium basket with smooth texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 252,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102017/data/episode0.hdf5",
+      "hdf5_sha256": "46e85a1eb4ea4946b0553512253766b57048093bf51e286150b27c3c1aec011b",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 90.63047773763537,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102018,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:44:07.280899-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the small box for playingcards and place into the medium basket with smooth texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 227,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102018/data/episode0.hdf5",
+      "hdf5_sha256": "99b8c4e34e09f3479fb0b5b99369f56f82c467f73bda6def7a0b63eb55d5c94b",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 89.92304262146354,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102019,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:45:39.309113-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 41.95726107433438,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102020,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:46:22.897579-05:00",
+      "expert_plan_success": true,
+      "instruction": "Place the rectangular playingcards pack in the basket with rounded edges and move it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 258,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102020/data/episode0.hdf5",
+      "hdf5_sha256": "a9f1dfdfd9e6097cd285dca6005e7958ba23d396b0a8e03dde6274c100eaea02",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 86.62414465472102,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102021,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:47:51.088074-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 46.872412879019976,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102022,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:48:39.757789-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the rectangular playingcards case with patterns, place it in the medium basket with smooth texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 247,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102022/data/episode0.hdf5",
+      "hdf5_sha256": "b45fa85db1e5228a2438212562239d264819af458a8e7b3147f57cb356a2fa01",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 86.38590474799275,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102023,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:50:08.114461-05:00",
+      "expert_plan_success": true,
+      "instruction": "Move the gold text on playing cards box to the medium-sized basket with perforated texture, then shift the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 233,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102023/data/episode0.hdf5",
+      "hdf5_sha256": "8dace3be3377f03b5cbafeb93fa38b3cf02b31f657e269fa9fddf1efadc25a27",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 86.15907556936145,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102024,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:51:35.974643-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the rectangular red playingcards holder, place it in the medium basket with smooth texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 244,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102024/data/episode0.hdf5",
+      "hdf5_sha256": "05fee192a9f3f8228076f8db20470126fdc3671632464c25f9a4cb529795955f",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.76185173541307,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102025,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:53:05.275976-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the black box with smooth surface, place it in the medium-sized basket with perforated texture, move the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 257,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102025/data/episode0.hdf5",
+      "hdf5_sha256": "11ccdabf99a7e2691dfedc26a36af8be5b0bf0d394f7e26a34f503e2c6ca9238",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 88.61010817810893,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102026,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:54:35.819160-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the rectangular playingcards pack, put it in the medium basket with smooth texture, move the medium basket with smooth texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 244,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102026/data/episode0.hdf5",
+      "hdf5_sha256": "8f2be15dcffdb4cd62f38e096d09483a1adcfb249016b4d7b61ca1029d0ce853",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 87.00918424502015,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102027,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:56:04.957742-05:00",
+      "outcome": "expert_infeasible",
+      "error": "AssertionError('target_pose cannot be None for move action.')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 55, in worker\n    info=env.play_once();ok=bool(env.plan_success and env.check_success());result['expert_plan_success']=ok\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/place_object_basket.py\", line 122, in play_once\n    self.grasp_actor(self.basket, arm_tag=self.arm_tag.opposite, pre_grasp_dis=0.08),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+      "elapsed_seconds": 41.14619594067335,
+      "exit_code": 0,
+      "original_outcome": "infrastructure_failure",
+      "classification_amendment": "native basket grasp returned no candidate at an AST-enumerated call site; exact pre-score source/traceback class; original result retained; no retry"
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102028,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:56:48.364267-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the rectangular red playingcards holder, place it in the oval basket with medium storage space, move the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 247,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102028/data/episode0.hdf5",
+      "hdf5_sha256": "68a4a15110a252f3dcd0eb2906bbad12139b512cbbbea39954a7e7784860de50",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 86.26479307934642,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102029,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:58:17.707543-05:00",
+      "outcome": "expert_infeasible",
+      "error": "AssertionError('target_pose cannot be None for move action.')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 55, in worker\n    info=env.play_once();ok=bool(env.plan_success and env.check_success());result['expert_plan_success']=ok\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/place_object_basket.py\", line 122, in play_once\n    self.grasp_actor(self.basket, arm_tag=self.arm_tag.opposite, pre_grasp_dis=0.08),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+      "elapsed_seconds": 39.4730561748147,
+      "exit_code": 0,
+      "original_outcome": "infrastructure_failure",
+      "classification_amendment": "native basket grasp returned no candidate at an AST-enumerated call site; exact pre-score source/traceback class; original result retained; no retry"
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102030,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T19:58:58.542910-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 43.772891487926245,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102031,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T19:59:44.144155-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the playingcards with red packaging and put it in the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 233,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102031/data/episode0.hdf5",
+      "hdf5_sha256": "cb7d1cc0bab767045b1d98912dd80475f0e2822c7d81db3f031f24d51b598008",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 86.6632041670382,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102032,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:01:12.890932-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the tiny pink car with four wheels and put it in the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 243,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102032/data/episode0.hdf5",
+      "hdf5_sha256": "5b3dd508e27abd66aa6a3dde3c4b0f999927d728b301a49f4fe392ad5d8763e9",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 91.30940420925617,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102033,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:02:46.358142-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the pink toycar with white bumper and place into the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 240,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102033/data/episode0.hdf5",
+      "hdf5_sha256": "74950761deff7553c1c5c3102dec4fd1ddb1ae6637d2c89814bcd654974e5628",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 90.21870080381632,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102034,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:04:18.997357-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the rectangular playingcards pack and put it in the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 264,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102034/data/episode0.hdf5",
+      "hdf5_sha256": "47da351d9b491f2f97f319b6528e4f7155831f730c83c78db1c7c2da8d9927e8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 91.85968408733606,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102035,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:05:52.953618-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the toycar with smooth finish, place it in the basket with rounded edges, move the basket with rounded edges.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 248,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102035/data/episode0.hdf5",
+      "hdf5_sha256": "dd2ccbd0e23fffd87a923223f2d5ae8772fe29548861b8f0970cfb25815e530c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 91.65575597807765,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102036,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:07:26.914592-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the toycar with orange wheels and put it into the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 247,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102036/data/episode0.hdf5",
+      "hdf5_sha256": "4a7966f7c60688efa2c923e85950d82bc54e99958bcfd33422d156f56075d0ea",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base0",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 89.27754107117653,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102037,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:08:59.054903-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 44.64518362283707,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102038,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:09:45.885821-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the compact toycar with shiny black tires, place it in the oval basket with medium storage space, move the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 245,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102038/data/episode0.hdf5",
+      "hdf5_sha256": "462914c77bf62edc76668061354e91dfc8a4e7dcd4fb0de7595a65f4f2badf7f",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base2",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 88.9585714712739,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102039,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:11:17.093052-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 43.138046108186245,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102040,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:12:01.897721-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 42.50986224412918,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102041,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:12:46.430120-05:00",
+      "expert_plan_success": true,
+      "instruction": "Move the toycar with rounded edges to the medium-sized basket with perforated texture, then shift the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 248,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102041/data/episode0.hdf5",
+      "hdf5_sha256": "fc6ac607882870c13b7e3f9aaed76d3909d3482641c87b1de4bd9f70586ac289",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.1826235987246,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102042,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:14:16.021855-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the playable toycar with rolling wheels, put it in the yellow rectangular basket with dual grips, move the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 241,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102042/data/episode0.hdf5",
+      "hdf5_sha256": "527615947dded45c078e34342e6c3739415637c9ad52210874d9e54096fb340f",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 89.00430697202682,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102043,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:15:47.180945-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the small box for playingcards, put it in the basket with rounded edges, move the basket with rounded edges.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 239,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102043/data/episode0.hdf5",
+      "hdf5_sha256": "b40cc6f66b8abbe72d70cf2a202315e7dd25a48d000f2ce5abe3f6029661728e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 85.69676806405187,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102044,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:17:14.314595-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the rectangular red playingcards holder and put it into the basket with rounded edges.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 243,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102044/data/episode0.hdf5",
+      "hdf5_sha256": "eca0b9cf0d49453b3860e1860638fa31f1b190a1a86503614e3f45c1da3b676f",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 86.57224481925368,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102045,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:18:43.163588-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 43.1449896171689,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102046,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:19:28.302510-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 45.61996044963598,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102047,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:20:15.651697-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the plastic toycar with four spinning wheels, place it in the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 248,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102047/data/episode0.hdf5",
+      "hdf5_sha256": "84781c1386a010fb159ece526a93911f1a9f6394c7b7ff67f928b409b8ab146e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base5",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 88.34891787916422,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102048,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:21:45.595852-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the pink toycar with white bumper and put it in the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 253,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102048/data/episode0.hdf5",
+      "hdf5_sha256": "3aeb314d91527dc0a88ae0cded4142dc63a03c745e7181a12505534ccb81f2e6",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.85310650616884,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102049,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:23:15.545147-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the blue toycar with yellow buttons, place it in the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102049/data/episode0.hdf5",
+      "hdf5_sha256": "c62048b42997e43beb4c8f73ebb4442aab2292529596f37ac71c801312624bd0",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.77868417277932,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102050,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:24:45.311798-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the small packet of playingcards and put it into the medium basket with smooth texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 244,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102050/data/episode0.hdf5",
+      "hdf5_sha256": "6d01ce2eff807c8895e2e2483dde8200c91b3ad8ac1369c0b57807cb1450f8b4",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 86.24124191701412,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102051,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:26:13.731031-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 43.60350617393851,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102052,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:26:59.529503-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 44.802186306566,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102053,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:27:47.119825-05:00",
+      "expert_plan_success": true,
+      "instruction": "Place the rectangular red playingcards holder in the basket with rounded edges and move it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 241,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102053/data/episode0.hdf5",
+      "hdf5_sha256": "1e6e427e66036b0be92c2a3931b6a56fa62e6262a189d1e0ea62d6acc71753ce",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 88.20351644232869,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102054,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:29:17.574531-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the bright green toycar, place it in the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 294,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102054/data/episode0.hdf5",
+      "hdf5_sha256": "8897196607768c1d8efe7b8fd145d7158e2b7c5e5d915f5d0efe59d894be6ce0",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base1",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 93.7590759433806,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102055,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:30:52.782442-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 42.72625616565347,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102056,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:31:37.695685-05:00",
+      "expert_plan_success": true,
+      "instruction": "Move the bright green toycar to the oval basket with medium storage space, then shift the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102056/data/episode0.hdf5",
+      "hdf5_sha256": "46b9de311f448d19c753a1859fd959a36f494c1e6261270863768d03edf602e2",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 85.86015810444951,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102057,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:33:05.420584-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the plastic toycar, place it in the yellow basket with open slots, move the yellow basket with open slots.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 250,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102057/data/episode0.hdf5",
+      "hdf5_sha256": "e00c3aa3636eab3bff5a403630d69cf4fe99cdbf8d7f168817ff931b08e39193",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.83438568934798,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102058,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:34:35.433731-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the hard black box for card deck and drop in the yellow basket with open slots.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 247,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102058/data/episode0.hdf5",
+      "hdf5_sha256": "86b8df56c4dae8f826734607ae02bc5006b8fc36c4b1d0d3c3d051a4c01418d7",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.02210025116801,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102059,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:36:05.082829-05:00",
+      "outcome": "expert_infeasible",
+      "error": "AssertionError('target_pose cannot be None for move action.')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 55, in worker\n    info=env.play_once();ok=bool(env.plan_success and env.check_success());result['expert_plan_success']=ok\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/place_object_basket.py\", line 122, in play_once\n    self.grasp_actor(self.basket, arm_tag=self.arm_tag.opposite, pre_grasp_dis=0.08),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+      "elapsed_seconds": 41.334663700312376,
+      "exit_code": 0,
+      "original_outcome": "infrastructure_failure",
+      "classification_amendment": "native basket grasp returned no candidate at an AST-enumerated call site; exact pre-score source/traceback class; original result retained; no retry"
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102060,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:36:48.122417-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 42.93167653307319,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102061,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:37:33.168506-05:00",
+      "outcome": "expert_infeasible",
+      "error": "AssertionError('target_pose cannot be None for move action.')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 55, in worker\n    info=env.play_once();ok=bool(env.plan_success and env.check_success());result['expert_plan_success']=ok\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/place_object_basket.py\", line 122, in play_once\n    self.grasp_actor(self.basket, arm_tag=self.arm_tag.opposite, pre_grasp_dis=0.08),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+      "elapsed_seconds": 41.55508125200868,
+      "exit_code": 0,
+      "original_outcome": "infrastructure_failure",
+      "classification_amendment": "native basket grasp returned no candidate at an AST-enumerated call site; exact pre-score source/traceback class; original result retained; no retry"
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102062,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:38:16.190224-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the small packet of playingcards, put it in the basket with rounded edges, move the basket with rounded edges.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 250,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102062/data/episode0.hdf5",
+      "hdf5_sha256": "1934278434e2975ab2a59a8126d94808a755916070f9ffcc9e65edef7c190ebe",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 88.70459128543735,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102063,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:39:47.969296-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the plastic toycar, put it in the oval basket with medium storage space, move the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102063/data/episode0.hdf5",
+      "hdf5_sha256": "bfd6f436e50caa5bd5d9088b4e032c1e3a2585a5027ae305b48d3306a3c2a191",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 89.58912629634142,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102064,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:41:19.694127-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 44.472686901688576,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102065,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:42:06.004508-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 44.05388030782342,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102066,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:42:51.537111-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the blue toycar with yellow buttons, put it in the yellow rectangular basket with dual grips, move the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 248,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102066/data/episode0.hdf5",
+      "hdf5_sha256": "c362b2afa5ed7021e6ac27f71f3a9515dc987bced750d2445f985df76465a5aa",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base4",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 91.71702729165554,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102067,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:44:25.486065-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 43.93062638491392,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102068,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:45:11.804880-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 44.15617103502154,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102069,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:45:57.902201-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 43.75238114595413,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102070,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:46:43.976797-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 45.79060747101903,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102071,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:47:31.097718-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the rectangular playingcards pack, place it in the basket with rounded edges.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 246,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102071/data/episode0.hdf5",
+      "hdf5_sha256": "ca2cb705efd152cf41a2d6c6374643b79567d4461b8c7208b3b5dc4d170b00cd",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "right",
+          "{b}": "left"
+        }
+      },
+      "elapsed_seconds": 89.52844849973917,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102072,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:49:03.354722-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the toycar with rounded edges, place it in the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 243,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102072/data/episode0.hdf5",
+      "hdf5_sha256": "1c546758a6b06fbbd4c102339ad86c4ff833abdab28a94f9489688d68f0d5b38",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.30783608928323,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102073,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:50:32.755271-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 42.17312405630946,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102074,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T20:51:16.335696-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 43.31629033386707,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102075,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:52:01.941211-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the small box for playingcards, put it in the oval basket with medium storage space, move the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 254,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102075/data/episode0.hdf5",
+      "hdf5_sha256": "5a6bde5a3907cc9932dd78f49bf6e3d8bb958269a27ad444bc08620c4b8af16a",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 89.76661545783281,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102076,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:53:33.133838-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the rectangular playingcards pack and place into the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 248,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102076/data/episode0.hdf5",
+      "hdf5_sha256": "d8269e62dffc0fc93f2e7bfd00193a2c1a5bc0f3ba7c52b94152eea5706c67d6",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base0",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.12375717610121,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102077,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:55:02.401677-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the black box with smooth surface and drop in the yellow rectangular basket with dual grips.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 226,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102077/data/episode0.hdf5",
+      "hdf5_sha256": "3bafe532a7b2d30676612c147df3ad372e34584ce4b1ed1e6f6bf4ac02e465bd",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base2",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 83.65497627854347,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102078,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:56:27.634424-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use one arm to grab the toycar with rounded body, place it in the medium-sized basket with perforated texture.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 247,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102078/data/episode0.hdf5",
+      "hdf5_sha256": "9480ff0494f742c6c6f64c19d745bba384f918e8ba4ac2869d5922bf2621df86",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base1",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 87.4871559292078,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102079,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:57:58.037733-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the small box for playingcards and put it into the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 242,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102079/data/episode0.hdf5",
+      "hdf5_sha256": "3b9c760f3d4d991eac6f46f049e28c95f7de0b17ae1e541a2abd091ccc9e88ff",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 88.91073100268841,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102080,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:59:29.047389-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the small box for playingcards and put it in the oval basket with medium storage space.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 236,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102080/data/episode0.hdf5",
+      "hdf5_sha256": "76780ea9943886e78d7f698938149c4c69cbd655c93d1f61ec435619be76bf45",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "081_playingcards/base1",
+          "{B}": "110_basket/base0",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 85.77896535769105,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102081,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T21:00:58.381745-05:00",
+      "outcome": "expert_infeasible",
+      "error": "AssertionError('target_pose cannot be None for move action.')",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 55, in worker\n    info=env.play_once();ok=bool(env.plan_success and env.check_success());result['expert_plan_success']=ok\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/place_object_basket.py\", line 112, in play_once\n    self.grasp_actor(self.basket, arm_tag=self.arm_tag.opposite, pre_grasp_dis=0.02),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+      "elapsed_seconds": 41.362713895738125,
+      "exit_code": 0,
+      "original_outcome": "infrastructure_failure",
+      "classification_amendment": "native basket grasp returned no candidate at an AST-enumerated call site; exact pre-score source/traceback class; original result retained; no retry"
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102082,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T21:01:41.049606-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 40.97502977773547,
+      "exit_code": 0
+    },
+    {
+      "task": "place_object_basket",
+      "seed": 1102083,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:02:23.464193-05:00",
+      "expert_plan_success": true,
+      "instruction": "Place the plastic toycar in the medium-sized basket with perforated texture and move it.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 267,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102083/data/episode0.hdf5",
+      "hdf5_sha256": "9102cd5e068604b1a87c067560e9303640d01753dcd8c12fa75d8a93c97ab419",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {
+          "{A}": "057_toycar/base3",
+          "{B}": "110_basket/base1",
+          "{a}": "left",
+          "{b}": "right"
+        }
+      },
+      "elapsed_seconds": 88.60563300177455,
+      "exit_code": 0
+    }
+  ],
+  "complete": true,
+  "finished_at": "2026-09-23T21:03:54.422639-05:00",
+  "no_policy_scoring": true
+}

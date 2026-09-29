@@ -1,0 +1,139 @@
+{
+  "passed": true,
+  "heldout_scenes_used": false,
+  "profile_checkpoint_only": true,
+  "tasks": [
+    {
+      "task": "adjust_bottle",
+      "training_scene_seed": 10,
+      "native_step_limit": 400,
+      "head_rotation": {
+        "before_p": [
+          -0.03200000151991844,
+          -0.44999998807907104,
+          1.350000023841858
+        ],
+        "before_q": [
+          0.6324555277824402,
+          -0.3162277638912201,
+          0.3162277638912201,
+          0.6324555277824402
+        ],
+        "after_p": [
+          -0.03200000151991844,
+          -0.44999998807907104,
+          1.350000023841858
+        ],
+        "after_q": [
+          0.6042662476029719,
+          -0.3297204464591762,
+          0.30213312380148594,
+          0.6594408929183524
+        ],
+        "world_z_degrees": 5.0
+      },
+      "head_image_mae": 12.316592881944445,
+      "wrist_mae": {
+        "left_camera": 0.0,
+        "right_camera": 0.0
+      },
+      "repeat_initial_mae": {
+        "head_camera": 0.0,
+        "left_camera": 0.0,
+        "right_camera": 0.0
+      },
+      "ws_reset_exact": true,
+      "native_action_taken": true,
+      "real_contact_api_checked": true,
+      "contact_count": 5
+    },
+    {
+      "task": "handover_block",
+      "training_scene_seed": 10,
+      "native_step_limit": 800,
+      "head_rotation": {
+        "before_p": [
+          -0.03200000151991844,
+          -0.44999998807907104,
+          1.350000023841858
+        ],
+        "before_q": [
+          0.6324555277824402,
+          -0.3162277638912201,
+          0.3162277638912201,
+          0.6324555277824402
+        ],
+        "after_p": [
+          -0.03200000151991844,
+          -0.44999998807907104,
+          1.350000023841858
+        ],
+        "after_q": [
+          0.6042662476029719,
+          -0.3297204464591762,
+          0.30213312380148594,
+          0.6594408929183524
+        ],
+        "world_z_degrees": 5.0
+      },
+      "head_image_mae": 18.66717013888889,
+      "wrist_mae": {
+        "left_camera": 0.0,
+        "right_camera": 0.0
+      },
+      "repeat_initial_mae": {
+        "head_camera": 0.0,
+        "left_camera": 0.0,
+        "right_camera": 0.0
+      },
+      "ws_reset_exact": true,
+      "native_action_taken": true,
+      "real_contact_api_checked": true,
+      "contact_count": 5
+    },
+    {
+      "task": "place_object_basket",
+      "training_scene_seed": 10,
+      "native_step_limit": 700,
+      "head_rotation": {
+        "before_p": [
+          -0.03200000151991844,
+          -0.44999998807907104,
+          1.350000023841858
+        ],
+        "before_q": [
+          0.6324555277824402,
+          -0.3162277638912201,
+          0.3162277638912201,
+          0.6324555277824402
+        ],
+        "after_p": [
+          -0.03200000151991844,
+          -0.44999998807907104,
+          1.350000023841858
+        ],
+        "after_q": [
+          0.6042662476029719,
+          -0.3297204464591762,
+          0.30213312380148594,
+          0.6594408929183524
+        ],
+        "world_z_degrees": 5.0
+      },
+      "head_image_mae": 18.192664930555555,
+      "wrist_mae": {
+        "left_camera": 0.0,
+        "right_camera": 0.0
+      },
+      "repeat_initial_mae": {
+        "head_camera": 0.0,
+        "left_camera": 0.0,
+        "right_camera": 0.0
+      },
+      "ws_reset_exact": true,
+      "native_action_taken": true,
+      "real_contact_api_checked": true,
+      "contact_count": 18
+    }
+  ]
+}

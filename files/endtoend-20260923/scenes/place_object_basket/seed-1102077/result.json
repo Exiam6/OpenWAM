@@ -1,0 +1,28 @@
+{
+  "task": "place_object_basket",
+  "seed": 1102077,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T20:55:02.401677-05:00",
+  "expert_plan_success": true,
+  "instruction": "Pick up the black box with smooth surface and drop in the yellow rectangular basket with dual grips.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 226,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102077/data/episode0.hdf5",
+  "hdf5_sha256": "3bafe532a7b2d30676612c147df3ad372e34584ce4b1ed1e6f6bf4ac02e465bd",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "081_playingcards/base2",
+      "{B}": "110_basket/base1",
+      "{a}": "left",
+      "{b}": "right"
+    }
+  },
+  "elapsed_seconds": 83.65497627854347
+}

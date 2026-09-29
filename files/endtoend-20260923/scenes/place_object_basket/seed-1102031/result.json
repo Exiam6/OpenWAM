@@ -1,0 +1,28 @@
+{
+  "task": "place_object_basket",
+  "seed": 1102031,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T19:59:44.144155-05:00",
+  "expert_plan_success": true,
+  "instruction": "Grab the playingcards with red packaging and put it in the oval basket with medium storage space.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 233,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102031/data/episode0.hdf5",
+  "hdf5_sha256": "cb7d1cc0bab767045b1d98912dd80475f0e2822c7d81db3f031f24d51b598008",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "081_playingcards/base1",
+      "{B}": "110_basket/base0",
+      "{a}": "right",
+      "{b}": "left"
+    }
+  },
+  "elapsed_seconds": 86.6632041670382
+}

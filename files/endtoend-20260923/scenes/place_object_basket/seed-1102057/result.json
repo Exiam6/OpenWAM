@@ -1,0 +1,28 @@
+{
+  "task": "place_object_basket",
+  "seed": 1102057,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T20:33:05.420584-05:00",
+  "expert_plan_success": true,
+  "instruction": "Pick up the plastic toycar, place it in the yellow basket with open slots, move the yellow basket with open slots.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 250,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102057/data/episode0.hdf5",
+  "hdf5_sha256": "e00c3aa3636eab3bff5a403630d69cf4fe99cdbf8d7f168817ff931b08e39193",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "057_toycar/base3",
+      "{B}": "110_basket/base1",
+      "{a}": "left",
+      "{b}": "right"
+    }
+  },
+  "elapsed_seconds": 87.83438568934798
+}

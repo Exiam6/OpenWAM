@@ -1,0 +1,28 @@
+{
+  "task": "place_object_basket",
+  "seed": 1102022,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T19:48:39.757789-05:00",
+  "expert_plan_success": true,
+  "instruction": "Use one arm to grab the rectangular playingcards case with patterns, place it in the medium basket with smooth texture.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 247,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102022/data/episode0.hdf5",
+  "hdf5_sha256": "b45fa85db1e5228a2438212562239d264819af458a8e7b3147f57cb356a2fa01",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "081_playingcards/base0",
+      "{B}": "110_basket/base0",
+      "{a}": "right",
+      "{b}": "left"
+    }
+  },
+  "elapsed_seconds": 86.38590474799275
+}

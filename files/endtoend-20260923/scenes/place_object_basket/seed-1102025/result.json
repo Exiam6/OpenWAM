@@ -1,0 +1,28 @@
+{
+  "task": "place_object_basket",
+  "seed": 1102025,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T19:53:05.275976-05:00",
+  "expert_plan_success": true,
+  "instruction": "Pick up the black box with smooth surface, place it in the medium-sized basket with perforated texture, move the medium-sized basket with perforated texture.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 257,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102025/data/episode0.hdf5",
+  "hdf5_sha256": "11ccdabf99a7e2691dfedc26a36af8be5b0bf0d394f7e26a34f503e2c6ca9238",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "081_playingcards/base2",
+      "{B}": "110_basket/base1",
+      "{a}": "left",
+      "{b}": "right"
+    }
+  },
+  "elapsed_seconds": 88.61010817810893
+}

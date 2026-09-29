@@ -1,0 +1,28 @@
+{
+  "task": "place_object_basket",
+  "seed": 1102020,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T19:46:22.897579-05:00",
+  "expert_plan_success": true,
+  "instruction": "Place the rectangular playingcards pack in the basket with rounded edges and move it.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 258,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102020/data/episode0.hdf5",
+  "hdf5_sha256": "a9f1dfdfd9e6097cd285dca6005e7958ba23d396b0a8e03dde6274c100eaea02",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "081_playingcards/base0",
+      "{B}": "110_basket/base0",
+      "{a}": "right",
+      "{b}": "left"
+    }
+  },
+  "elapsed_seconds": 86.62414465472102
+}

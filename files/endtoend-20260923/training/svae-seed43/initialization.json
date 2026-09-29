@@ -1,0 +1,9 @@
+{
+  "route": "svae",
+  "seed": 43,
+  "common_sha256": "4e87e3a42501f99c74d7c4622a2ba90a4f06472cf0bfd800b1707468a682670f",
+  "equal_common_tensors": 679,
+  "trainable_parameters": 295035604,
+  "frozen_text_tensors": 242,
+  "published_world_action_weights_loaded": false
+}

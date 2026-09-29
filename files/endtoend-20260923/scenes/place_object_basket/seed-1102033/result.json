@@ -1,0 +1,28 @@
+{
+  "task": "place_object_basket",
+  "seed": 1102033,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T20:02:46.358142-05:00",
+  "expert_plan_success": true,
+  "instruction": "Grab the pink toycar with white bumper and place into the yellow rectangular basket with dual grips.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 240,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102033/data/episode0.hdf5",
+  "hdf5_sha256": "74950761deff7553c1c5c3102dec4fd1ddb1ae6637d2c89814bcd654974e5628",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "057_toycar/base2",
+      "{B}": "110_basket/base1",
+      "{a}": "right",
+      "{b}": "left"
+    }
+  },
+  "elapsed_seconds": 90.21870080381632
+}

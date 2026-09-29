@@ -1,0 +1,14 @@
+{
+  "task": "place_object_basket",
+  "seed": 1102027,
+  "role": "expert_only_independent_confirmation",
+  "accepted": false,
+  "started_at": "2026-09-23T19:56:04.957742-05:00",
+  "outcome": "expert_infeasible",
+  "error": "AssertionError('target_pose cannot be None for move action.')",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/zifanz4/openwam-experiments/scripts/endtoend/collect_scene.py\", line 55, in worker\n    info=env.play_once();ok=bool(env.plan_success and env.check_success());result['expert_plan_success']=ok\n  File \"/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/benchmarks/robotwin/eval_policy_wrapper.py\", line 179, in wrapped\n    return method(*args, **kwargs)\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/place_object_basket.py\", line 122, in play_once\n    self.grasp_actor(self.basket, arm_tag=self.arm_tag.opposite, pre_grasp_dis=0.08),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/_base_task.py\", line 1205, in grasp_actor\n    Action(arm_tag, \"move\", target_pose=pre_grasp_pose),\n  File \"/data02/zifanz4/openwam-experiments/benchmarks/RoboTwin/envs/utils/action.py\", line 76, in __init__\n    assert (target_pose is not None), \"target_pose cannot be None for move action.\"\nAssertionError: target_pose cannot be None for move action.\n",
+  "elapsed_seconds": 41.14619594067335,
+  "exit_code": 0,
+  "original_outcome": "infrastructure_failure",
+  "classification_amendment": "native basket grasp returned no candidate at an AST-enumerated call site; exact pre-score source/traceback class; original result retained; no retry"
+}

@@ -1,0 +1,28 @@
+{
+  "task": "place_object_basket",
+  "seed": 1102028,
+  "role": "expert_only_independent_confirmation",
+  "accepted": true,
+  "started_at": "2026-09-23T19:56:48.364267-05:00",
+  "expert_plan_success": true,
+  "instruction": "Pick up the rectangular red playingcards holder, place it in the oval basket with medium storage space, move the oval basket with medium storage space.",
+  "expert_replay_success": true,
+  "outcome": "accepted",
+  "frames": 247,
+  "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/place_object_basket/seed-1102028/data/episode0.hdf5",
+  "hdf5_sha256": "68a4a15110a252f3dcd0eb2906bbad12139b512cbbbea39954a7e7784860de50",
+  "scene_info": {
+    "cluttered_table_info": [],
+    "texture_info": {
+      "wall_texture": null,
+      "table_texture": null
+    },
+    "info": {
+      "{A}": "081_playingcards/base1",
+      "{B}": "110_basket/base0",
+      "{a}": "right",
+      "{b}": "left"
+    }
+  },
+  "elapsed_seconds": 86.26479307934642
+}

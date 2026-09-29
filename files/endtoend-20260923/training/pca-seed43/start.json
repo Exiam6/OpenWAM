@@ -1,0 +1,29 @@
+{
+  "time": "2026-09-23T19:19:15.474190-05:00",
+  "pid": 1989742,
+  "job": {
+    "name": "pca-seed43",
+    "kind": "train",
+    "entrypoint": "/home/zifanz4/openwam-experiments/scripts/endtoend/train_main.py",
+    "host": "cm009",
+    "gpu_index": 5,
+    "gpu_uuid": "GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3",
+    "run_dir": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43",
+    "timeout_seconds": 86400,
+    "code_sha256": {
+      "/home/zifanz4/openwam-experiments/scripts/endtoend/train_main.py": "3127325d1591d6099d1504a42652714a65e533971fe18851a401af183cbfe7e8",
+      "/home/zifanz4/openwam-experiments/scripts/endtoend/run_job.py": "a151a071da74f645fd7c2f896ae272699d4ae48174c7461e5ab9f6b318e93b5b",
+      "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/pca-seed43/config.yaml": "b877efddc05a11fe2cc00800b57e0bb12720f8b803a304b355ff5b9b32c63aca",
+      "/data02/zifanz4/openwam-experiments/endtoend-20260923/templates-main/pca/config.yaml": "d9a2bb97d810387b8a8fdec34e2c0b2fcc848a3bb753504b45f64d2f42ee21f5",
+      "/data02/zifanz4/openwam-experiments/endtoend-20260923/protocol.json": "9821536558ee158735a24e2caa8b394dfb46723269586cf4acc66c4b9b2cd7b6",
+      "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/dinov3_pca.py": "5daa04141295143d64e4014e7cc8603ec48479acffd5fd39fc4d093f80541de7",
+      "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/__init__.py": "76c2a60bd41d15831a73dd61e9617212ea251760dc6a11138b4cfb69ab4287a3"
+    }
+  },
+  "gpu_check": [
+    "GPU-c79308c7-4289-c36c-fc35-32c7fb6e60f3",
+    " 1",
+    " 0",
+    " 0"
+  ]
+}

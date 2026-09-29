@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "shape": [
+    1,
+    48,
+    3,
+    4,
+    4
+  ],
+  "strict_reload_max_abs": 0.0,
+  "bf16_single_vs_batch_max_abs": 0.0546875,
+  "fixed_batch_future_change_max_abs": 0.0,
+  "fp32_single_vs_batch_max_abs": 2.86102294921875e-06,
+  "actual_gpu": "NVIDIA L40S",
+  "input": "fixed synthetic9frames64x64; no heldout scenes"
+}

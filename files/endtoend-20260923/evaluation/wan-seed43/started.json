@@ -1,0 +1,5 @@
+{
+  "time": "2026-09-26T18:23:01.888265-05:00",
+  "checkpoint": "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/checkpoint_step_12000.safetensors",
+  "checkpoint_sha256": "5514b15f2d0f665c69c4703b0e856a82f11e8cbbe032f2ae3f63a10ea8743bce"
+}

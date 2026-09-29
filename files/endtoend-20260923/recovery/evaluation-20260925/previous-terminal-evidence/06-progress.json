@@ -1,0 +1,203 @@
+{
+  "updated_at": "2026-09-25T19:12:21.332927-05:00",
+  "status": "pipeline_failed_needs_diagnosis",
+  "training": {
+    "pca-seed42": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:19:59.258742-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.13786819577217102,
+        "loss_video": 0.13136054575443268,
+        "loss_action": 0.006507657468318939,
+        "grad_norm": 0.44345977902412415
+      },
+      "last_metric_time": 1790234324.9809947,
+      "all_logged_losses_finite": true
+    },
+    "pca-seed43": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:23:54.989991-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.29911789298057556,
+        "loss_video": 0.2854231894016266,
+        "loss_action": 0.013694703578948975,
+        "grad_norm": 0.4666437804698944
+      },
+      "last_metric_time": 1790234554.153833,
+      "all_logged_losses_finite": true
+    },
+    "pca-seed44": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T21:11:26.411245-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.33998098969459534,
+        "loss_video": 0.28467512130737305,
+        "loss_action": 0.05530587211251259,
+        "grad_norm": 0.8676789999008179
+      },
+      "last_metric_time": 1790302211.5778666,
+      "all_logged_losses_finite": true
+    },
+    "svae-seed42": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:23:39.720465-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.12422701716423035,
+        "loss_video": 0.11894958466291428,
+        "loss_action": 0.0052774325013160706,
+        "grad_norm": 0.38373449444770813
+      },
+      "last_metric_time": 1790234535.674543,
+      "all_logged_losses_finite": true
+    },
+    "svae-seed43": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:16:27.723352-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.28846943378448486,
+        "loss_video": 0.27400118112564087,
+        "loss_action": 0.01446824986487627,
+        "grad_norm": 0.4534133970737457
+      },
+      "last_metric_time": 1790234114.992426,
+      "all_logged_losses_finite": true
+    },
+    "svae-seed44": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T21:09:10.637020-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.30734753608703613,
+        "loss_video": 0.2680494785308838,
+        "loss_action": 0.039298057556152344,
+        "grad_norm": 0.8073057532310486
+      },
+      "last_metric_time": 1790302076.433825,
+      "all_logged_losses_finite": true
+    },
+    "wan-seed42": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T03:09:02.445341-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.18728265166282654,
+        "loss_video": 0.17978183925151825,
+        "loss_action": 0.007500807289034128,
+        "grad_norm": 0.36119961738586426
+      },
+      "last_metric_time": 1790237256.928238,
+      "all_logged_losses_finite": true
+    },
+    "wan-seed43": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T02:51:13.836803-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.39004501700401306,
+        "loss_video": 0.37430840730667114,
+        "loss_action": 0.015736602246761322,
+        "grad_norm": 0.43820375204086304
+      },
+      "last_metric_time": 1790236189.6906774,
+      "all_logged_losses_finite": true
+    },
+    "wan-seed44": {
+      "status": "completed",
+      "exit": {
+        "time": "2026-09-24T21:41:40.015348-05:00",
+        "returncode": 0
+      },
+      "global_step": 12000,
+      "opt_step": 6000,
+      "latest_metrics": {
+        "loss_total": 0.5353524088859558,
+        "loss_video": 0.47207069396972656,
+        "loss_action": 0.06328170001506805,
+        "grad_norm": 1.0690838098526
+      },
+      "last_metric_time": 1790304015.59202,
+      "all_logged_losses_finite": true
+    }
+  },
+  "scenes": {
+    "adjust_bottle": {
+      "accepted": 50,
+      "attempted": 63,
+      "complete": true
+    },
+    "handover_block": {
+      "accepted": 50,
+      "attempted": 57,
+      "complete": true
+    },
+    "place_object_basket": {
+      "accepted": 50,
+      "attempted": 84,
+      "complete": true
+    }
+  },
+  "simulation_preflight": {
+    "passed": true,
+    "time": "2026-09-23T21:08:15.156304-05:00",
+    "artifact": "/data02/zifanz4/openwam-experiments/endtoend-20260923/simulation-preflight/result.json",
+    "code_sha256": {
+      "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluate_policy.py": "cd021e40f79d104dfa1e6bd86337d3dd7ff0bcc815943ac971b6e4f9f2988708",
+      "/home/zifanz4/openwam-experiments/scripts/endtoend/serve_policy.py": "476608ccf2e9de0aa804e4388d71ba51969e98a188f92b8738d77821f5fa5e7d",
+      "/home/zifanz4/openwam-experiments/scripts/endtoend/simulation_preflight.py": "4edc5629b5c3941fd9e9a8558fa17689b9f10e2baea4f76fd7264a9eaffbb1b9"
+    },
+    "heldout_policy_outcomes_used": false
+  },
+  "audit_passed": true,
+  "native_deployment_preflights_passed": true,
+  "controlled_native295M_primary_passed": false,
+  "closed_loop": null,
+  "closed_loop_audit": null,
+  "pipeline": {
+    "time": "2026-09-24T21:36:52.725747-05:00",
+    "stage": "waiting_for_all_training_collection_smoke",
+    "all_ready": false
+  },
+  "pipeline_exit": {
+    "time": "2026-09-25T19:12:21.310476-05:00",
+    "returncode": 1
+  },
+  "next_step": "Finish all nine matched fixed-budget native training runs and collect first50 expert-feasible fresh scenes/task. Run the training-only simulator/camera/contact preflight after one collection slot releases its GPU; complete the paired 5400-rollout matrix only after all integrity gates pass. Resolve whether offline accessibility gains translate into native task success without clean regression.",
+  "public_report_status": "Failed: existing Sites project returned404; local HTML updated"
+}

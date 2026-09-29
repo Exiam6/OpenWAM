@@ -1,0 +1,25 @@
+{
+  "time": "2026-09-23T19:14:53.772925-05:00",
+  "pid": 564934,
+  "job": {
+    "name": "deploy-check-pca",
+    "kind": "deploy-check",
+    "route": "pca",
+    "host": "cm001",
+    "gpu_index": 6,
+    "gpu_uuid": "GPU-91a9a93b-b386-82f0-3009-88cc9bb79d06",
+    "run_dir": "/data02/zifanz4/openwam-experiments/endtoend-20260923/deploy-preflight/pca",
+    "timeout_seconds": 1200,
+    "code_sha256": {
+      "/home/zifanz4/openwam-experiments/scripts/endtoend/run_job.py": "b0abb6aeb6d3d5bff79f4906e3c8f5552e26d35f7f1f6d03596bb242a2de6445",
+      "/home/zifanz4/openwam-experiments/scripts/endtoend/check_native_deploy.py": "68891fae93bbc8bca998a373dab0af88a95459d837511d90a28654f6472143c8",
+      "/data02/zifanz4/openwam-experiments/endtoend-20260923/OpenWAM/openwam/model/video_backbone/encoder/dinov3_pca.py": "5daa04141295143d64e4014e7cc8603ec48479acffd5fd39fc4d093f80541de7"
+    }
+  },
+  "gpu_check": [
+    "GPU-91a9a93b-b386-82f0-3009-88cc9bb79d06",
+    " 1",
+    " 0",
+    " 0"
+  ]
+}

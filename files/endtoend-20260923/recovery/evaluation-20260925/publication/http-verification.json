@@ -1,0 +1,35 @@
+{
+  "time": "2026-09-25T19:56:12.497683-05:00",
+  "browser_user_agent_public_get": [
+    {
+      "url": "https://embodied-research-notebook.exiamzifan.chatgpt.site/endtoend.html",
+      "status": 200,
+      "expected_content_markers": {
+        "9 / 9": true,
+        "0 / 5400": true,
+        "150 条专家轨迹": true,
+        "19:49": true,
+        "尚未证实新表征带来闭环收益": true
+      },
+      "bytes": 6075,
+      "sha256": "caa02080299c1763f47224a7377bf0410e08a83db80bbc2a44223aee3b85d39c",
+      "exact_source_bytes_match": false,
+      "html_prefix": "<!doctype html><html lang=\"zh-CN\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=d"
+    },
+    {
+      "url": "https://embodied-research-notebook.exiamzifan.chatgpt.site/index.html",
+      "status": 200,
+      "expected_content_markers": {
+        "当前进度 · 09.25": true,
+        "完整表征验证": true,
+        "endtoend.html": true
+      },
+      "bytes": 33150,
+      "sha256": "746ac2b62e768ccad7b22eac82afb5d5fcb20b9ae4045e2973f35a9bb7e8030e",
+      "exact_source_bytes_match": false,
+      "html_prefix": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n<meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"widt"
+    }
+  ],
+  "default_urllib_user_agent_status": 403,
+  "note": "Browser user-agent public HTTP checks pass; default urllib user-agent rejected. Hosting may inject runtime markup, so validated content markers rather than raw-byte equality."
+}

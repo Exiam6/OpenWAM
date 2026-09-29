@@ -1,0 +1,20 @@
+{
+  "scene_seed": 1100029,
+  "training_seed": 43,
+  "route": "wan",
+  "task": "adjust_bottle",
+  "condition": "clean",
+  "status": "complete",
+  "initial_render_mae": {
+    "head_camera": 0.0,
+    "left_camera": 0.0,
+    "right_camera": 0.0
+  },
+  "initial_state": "e6a695eb3f30e42f9cd31a8f7f676407fdce67b6e147f95a59946e41f0d3f21f",
+  "step_limit": 400,
+  "instruction": "Use the right arm to grab the green plastic bottle with ridged bottom upright",
+  "success": false,
+  "steps": 400,
+  "seconds": 117.39101768657565,
+  "action_seed": 1540201407
+}

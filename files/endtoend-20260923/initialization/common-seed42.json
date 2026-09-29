@@ -1,0 +1,2354 @@
+{
+  "seed": 42,
+  "shared_trainable_parameters": 295035604,
+  "tensors": 679,
+  "sha256": "ec63d676990a334abda0c3688087c24458f867db8af5a59bc63c6ee72c22b4da",
+  "frozen_weights_excluded": true,
+  "shapes": {
+    "action_backbone.action_decoder.bias": [
+      20
+    ],
+    "action_backbone.action_decoder.weight": [
+      20,
+      512
+    ],
+    "action_backbone.action_encoder.bias": [
+      512
+    ],
+    "action_backbone.action_encoder.weight": [
+      512,
+      20
+    ],
+    "action_backbone.blocks.0.context_attn_norm.bias": [
+      512
+    ],
+    "action_backbone.blocks.0.context_attn_norm.weight": [
+      512
+    ],
+    "action_backbone.blocks.0.cross_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.0.cross_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.0.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.0.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.0.cross_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.0.cross_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.0.cross_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.0.cross_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.0.cross_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.0.cross_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.0.ffn.0.bias": [
+      2048
+    ],
+    "action_backbone.blocks.0.ffn.0.weight": [
+      2048,
+      512
+    ],
+    "action_backbone.blocks.0.ffn.2.bias": [
+      512
+    ],
+    "action_backbone.blocks.0.ffn.2.weight": [
+      512,
+      2048
+    ],
+    "action_backbone.blocks.0.modulation": [
+      1,
+      6,
+      512
+    ],
+    "action_backbone.blocks.0.self_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.0.self_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.0.self_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.0.self_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.0.self_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.0.self_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.0.self_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.0.self_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.0.self_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.0.self_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.1.context_attn_norm.bias": [
+      512
+    ],
+    "action_backbone.blocks.1.context_attn_norm.weight": [
+      512
+    ],
+    "action_backbone.blocks.1.cross_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.1.cross_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.1.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.1.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.1.cross_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.1.cross_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.1.cross_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.1.cross_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.1.cross_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.1.cross_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.1.ffn.0.bias": [
+      2048
+    ],
+    "action_backbone.blocks.1.ffn.0.weight": [
+      2048,
+      512
+    ],
+    "action_backbone.blocks.1.ffn.2.bias": [
+      512
+    ],
+    "action_backbone.blocks.1.ffn.2.weight": [
+      512,
+      2048
+    ],
+    "action_backbone.blocks.1.modulation": [
+      1,
+      6,
+      512
+    ],
+    "action_backbone.blocks.1.self_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.1.self_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.1.self_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.1.self_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.1.self_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.1.self_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.1.self_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.1.self_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.1.self_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.1.self_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.10.context_attn_norm.bias": [
+      512
+    ],
+    "action_backbone.blocks.10.context_attn_norm.weight": [
+      512
+    ],
+    "action_backbone.blocks.10.cross_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.10.cross_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.10.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.10.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.10.cross_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.10.cross_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.10.cross_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.10.cross_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.10.cross_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.10.cross_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.10.ffn.0.bias": [
+      2048
+    ],
+    "action_backbone.blocks.10.ffn.0.weight": [
+      2048,
+      512
+    ],
+    "action_backbone.blocks.10.ffn.2.bias": [
+      512
+    ],
+    "action_backbone.blocks.10.ffn.2.weight": [
+      512,
+      2048
+    ],
+    "action_backbone.blocks.10.modulation": [
+      1,
+      6,
+      512
+    ],
+    "action_backbone.blocks.10.self_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.10.self_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.10.self_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.10.self_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.10.self_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.10.self_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.10.self_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.10.self_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.10.self_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.10.self_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.11.context_attn_norm.bias": [
+      512
+    ],
+    "action_backbone.blocks.11.context_attn_norm.weight": [
+      512
+    ],
+    "action_backbone.blocks.11.cross_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.11.cross_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.11.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.11.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.11.cross_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.11.cross_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.11.cross_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.11.cross_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.11.cross_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.11.cross_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.11.ffn.0.bias": [
+      2048
+    ],
+    "action_backbone.blocks.11.ffn.0.weight": [
+      2048,
+      512
+    ],
+    "action_backbone.blocks.11.ffn.2.bias": [
+      512
+    ],
+    "action_backbone.blocks.11.ffn.2.weight": [
+      512,
+      2048
+    ],
+    "action_backbone.blocks.11.modulation": [
+      1,
+      6,
+      512
+    ],
+    "action_backbone.blocks.11.self_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.11.self_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.11.self_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.11.self_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.11.self_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.11.self_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.11.self_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.11.self_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.11.self_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.11.self_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.2.context_attn_norm.bias": [
+      512
+    ],
+    "action_backbone.blocks.2.context_attn_norm.weight": [
+      512
+    ],
+    "action_backbone.blocks.2.cross_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.2.cross_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.2.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.2.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.2.cross_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.2.cross_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.2.cross_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.2.cross_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.2.cross_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.2.cross_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.2.ffn.0.bias": [
+      2048
+    ],
+    "action_backbone.blocks.2.ffn.0.weight": [
+      2048,
+      512
+    ],
+    "action_backbone.blocks.2.ffn.2.bias": [
+      512
+    ],
+    "action_backbone.blocks.2.ffn.2.weight": [
+      512,
+      2048
+    ],
+    "action_backbone.blocks.2.modulation": [
+      1,
+      6,
+      512
+    ],
+    "action_backbone.blocks.2.self_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.2.self_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.2.self_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.2.self_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.2.self_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.2.self_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.2.self_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.2.self_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.2.self_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.2.self_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.3.context_attn_norm.bias": [
+      512
+    ],
+    "action_backbone.blocks.3.context_attn_norm.weight": [
+      512
+    ],
+    "action_backbone.blocks.3.cross_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.3.cross_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.3.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.3.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.3.cross_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.3.cross_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.3.cross_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.3.cross_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.3.cross_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.3.cross_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.3.ffn.0.bias": [
+      2048
+    ],
+    "action_backbone.blocks.3.ffn.0.weight": [
+      2048,
+      512
+    ],
+    "action_backbone.blocks.3.ffn.2.bias": [
+      512
+    ],
+    "action_backbone.blocks.3.ffn.2.weight": [
+      512,
+      2048
+    ],
+    "action_backbone.blocks.3.modulation": [
+      1,
+      6,
+      512
+    ],
+    "action_backbone.blocks.3.self_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.3.self_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.3.self_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.3.self_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.3.self_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.3.self_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.3.self_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.3.self_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.3.self_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.3.self_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.4.context_attn_norm.bias": [
+      512
+    ],
+    "action_backbone.blocks.4.context_attn_norm.weight": [
+      512
+    ],
+    "action_backbone.blocks.4.cross_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.4.cross_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.4.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.4.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.4.cross_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.4.cross_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.4.cross_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.4.cross_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.4.cross_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.4.cross_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.4.ffn.0.bias": [
+      2048
+    ],
+    "action_backbone.blocks.4.ffn.0.weight": [
+      2048,
+      512
+    ],
+    "action_backbone.blocks.4.ffn.2.bias": [
+      512
+    ],
+    "action_backbone.blocks.4.ffn.2.weight": [
+      512,
+      2048
+    ],
+    "action_backbone.blocks.4.modulation": [
+      1,
+      6,
+      512
+    ],
+    "action_backbone.blocks.4.self_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.4.self_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.4.self_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.4.self_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.4.self_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.4.self_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.4.self_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.4.self_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.4.self_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.4.self_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.5.context_attn_norm.bias": [
+      512
+    ],
+    "action_backbone.blocks.5.context_attn_norm.weight": [
+      512
+    ],
+    "action_backbone.blocks.5.cross_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.5.cross_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.5.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.5.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.5.cross_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.5.cross_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.5.cross_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.5.cross_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.5.cross_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.5.cross_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.5.ffn.0.bias": [
+      2048
+    ],
+    "action_backbone.blocks.5.ffn.0.weight": [
+      2048,
+      512
+    ],
+    "action_backbone.blocks.5.ffn.2.bias": [
+      512
+    ],
+    "action_backbone.blocks.5.ffn.2.weight": [
+      512,
+      2048
+    ],
+    "action_backbone.blocks.5.modulation": [
+      1,
+      6,
+      512
+    ],
+    "action_backbone.blocks.5.self_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.5.self_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.5.self_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.5.self_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.5.self_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.5.self_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.5.self_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.5.self_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.5.self_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.5.self_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.6.context_attn_norm.bias": [
+      512
+    ],
+    "action_backbone.blocks.6.context_attn_norm.weight": [
+      512
+    ],
+    "action_backbone.blocks.6.cross_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.6.cross_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.6.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.6.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.6.cross_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.6.cross_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.6.cross_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.6.cross_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.6.cross_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.6.cross_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.6.ffn.0.bias": [
+      2048
+    ],
+    "action_backbone.blocks.6.ffn.0.weight": [
+      2048,
+      512
+    ],
+    "action_backbone.blocks.6.ffn.2.bias": [
+      512
+    ],
+    "action_backbone.blocks.6.ffn.2.weight": [
+      512,
+      2048
+    ],
+    "action_backbone.blocks.6.modulation": [
+      1,
+      6,
+      512
+    ],
+    "action_backbone.blocks.6.self_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.6.self_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.6.self_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.6.self_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.6.self_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.6.self_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.6.self_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.6.self_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.6.self_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.6.self_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.7.context_attn_norm.bias": [
+      512
+    ],
+    "action_backbone.blocks.7.context_attn_norm.weight": [
+      512
+    ],
+    "action_backbone.blocks.7.cross_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.7.cross_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.7.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.7.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.7.cross_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.7.cross_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.7.cross_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.7.cross_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.7.cross_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.7.cross_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.7.ffn.0.bias": [
+      2048
+    ],
+    "action_backbone.blocks.7.ffn.0.weight": [
+      2048,
+      512
+    ],
+    "action_backbone.blocks.7.ffn.2.bias": [
+      512
+    ],
+    "action_backbone.blocks.7.ffn.2.weight": [
+      512,
+      2048
+    ],
+    "action_backbone.blocks.7.modulation": [
+      1,
+      6,
+      512
+    ],
+    "action_backbone.blocks.7.self_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.7.self_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.7.self_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.7.self_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.7.self_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.7.self_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.7.self_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.7.self_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.7.self_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.7.self_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.8.context_attn_norm.bias": [
+      512
+    ],
+    "action_backbone.blocks.8.context_attn_norm.weight": [
+      512
+    ],
+    "action_backbone.blocks.8.cross_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.8.cross_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.8.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.8.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.8.cross_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.8.cross_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.8.cross_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.8.cross_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.8.cross_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.8.cross_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.8.ffn.0.bias": [
+      2048
+    ],
+    "action_backbone.blocks.8.ffn.0.weight": [
+      2048,
+      512
+    ],
+    "action_backbone.blocks.8.ffn.2.bias": [
+      512
+    ],
+    "action_backbone.blocks.8.ffn.2.weight": [
+      512,
+      2048
+    ],
+    "action_backbone.blocks.8.modulation": [
+      1,
+      6,
+      512
+    ],
+    "action_backbone.blocks.8.self_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.8.self_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.8.self_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.8.self_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.8.self_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.8.self_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.8.self_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.8.self_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.8.self_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.8.self_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.9.context_attn_norm.bias": [
+      512
+    ],
+    "action_backbone.blocks.9.context_attn_norm.weight": [
+      512
+    ],
+    "action_backbone.blocks.9.cross_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.9.cross_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.9.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.9.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.9.cross_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.9.cross_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.9.cross_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.9.cross_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.9.cross_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.9.cross_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.9.ffn.0.bias": [
+      2048
+    ],
+    "action_backbone.blocks.9.ffn.0.weight": [
+      2048,
+      512
+    ],
+    "action_backbone.blocks.9.ffn.2.bias": [
+      512
+    ],
+    "action_backbone.blocks.9.ffn.2.weight": [
+      512,
+      2048
+    ],
+    "action_backbone.blocks.9.modulation": [
+      1,
+      6,
+      512
+    ],
+    "action_backbone.blocks.9.self_attn.k.bias": [
+      1024
+    ],
+    "action_backbone.blocks.9.self_attn.k.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.9.self_attn.norm_k.weight": [
+      1024
+    ],
+    "action_backbone.blocks.9.self_attn.norm_q.weight": [
+      1024
+    ],
+    "action_backbone.blocks.9.self_attn.o.bias": [
+      512
+    ],
+    "action_backbone.blocks.9.self_attn.o.weight": [
+      512,
+      1024
+    ],
+    "action_backbone.blocks.9.self_attn.q.bias": [
+      1024
+    ],
+    "action_backbone.blocks.9.self_attn.q.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.blocks.9.self_attn.v.bias": [
+      1024
+    ],
+    "action_backbone.blocks.9.self_attn.v.weight": [
+      1024,
+      512
+    ],
+    "action_backbone.text_embedding.0.bias": [
+      512
+    ],
+    "action_backbone.text_embedding.0.weight": [
+      512,
+      4096
+    ],
+    "action_backbone.text_embedding.2.bias": [
+      512
+    ],
+    "action_backbone.text_embedding.2.weight": [
+      512,
+      512
+    ],
+    "action_backbone.time_embedding.mlp.0.bias": [
+      512
+    ],
+    "action_backbone.time_embedding.mlp.0.weight": [
+      512,
+      256
+    ],
+    "action_backbone.time_embedding.mlp.2.bias": [
+      512
+    ],
+    "action_backbone.time_embedding.mlp.2.weight": [
+      512,
+      512
+    ],
+    "action_backbone.time_projection.proj.1.bias": [
+      3072
+    ],
+    "action_backbone.time_projection.proj.1.weight": [
+      3072,
+      512
+    ],
+    "proprio_encoder.bias": [
+      4096
+    ],
+    "proprio_encoder.weight": [
+      4096,
+      20
+    ],
+    "video_backbone.dit.blocks.0.cross_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.0.cross_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.0.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.0.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.0.cross_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.0.cross_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.0.cross_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.0.cross_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.0.cross_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.0.cross_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.0.ffn.0.bias": [
+      4096
+    ],
+    "video_backbone.dit.blocks.0.ffn.0.weight": [
+      4096,
+      1024
+    ],
+    "video_backbone.dit.blocks.0.ffn.2.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.0.ffn.2.weight": [
+      1024,
+      4096
+    ],
+    "video_backbone.dit.blocks.0.modulation": [
+      1,
+      6,
+      1024
+    ],
+    "video_backbone.dit.blocks.0.norm3.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.0.norm3.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.0.self_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.0.self_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.0.self_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.0.self_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.0.self_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.0.self_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.0.self_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.0.self_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.0.self_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.0.self_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.1.cross_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.1.cross_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.1.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.1.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.1.cross_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.1.cross_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.1.cross_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.1.cross_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.1.cross_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.1.cross_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.1.ffn.0.bias": [
+      4096
+    ],
+    "video_backbone.dit.blocks.1.ffn.0.weight": [
+      4096,
+      1024
+    ],
+    "video_backbone.dit.blocks.1.ffn.2.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.1.ffn.2.weight": [
+      1024,
+      4096
+    ],
+    "video_backbone.dit.blocks.1.modulation": [
+      1,
+      6,
+      1024
+    ],
+    "video_backbone.dit.blocks.1.norm3.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.1.norm3.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.1.self_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.1.self_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.1.self_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.1.self_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.1.self_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.1.self_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.1.self_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.1.self_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.1.self_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.1.self_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.10.cross_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.10.cross_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.10.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.10.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.10.cross_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.10.cross_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.10.cross_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.10.cross_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.10.cross_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.10.cross_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.10.ffn.0.bias": [
+      4096
+    ],
+    "video_backbone.dit.blocks.10.ffn.0.weight": [
+      4096,
+      1024
+    ],
+    "video_backbone.dit.blocks.10.ffn.2.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.10.ffn.2.weight": [
+      1024,
+      4096
+    ],
+    "video_backbone.dit.blocks.10.modulation": [
+      1,
+      6,
+      1024
+    ],
+    "video_backbone.dit.blocks.10.norm3.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.10.norm3.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.10.self_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.10.self_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.10.self_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.10.self_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.10.self_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.10.self_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.10.self_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.10.self_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.10.self_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.10.self_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.11.cross_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.11.cross_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.11.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.11.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.11.cross_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.11.cross_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.11.cross_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.11.cross_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.11.cross_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.11.cross_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.11.ffn.0.bias": [
+      4096
+    ],
+    "video_backbone.dit.blocks.11.ffn.0.weight": [
+      4096,
+      1024
+    ],
+    "video_backbone.dit.blocks.11.ffn.2.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.11.ffn.2.weight": [
+      1024,
+      4096
+    ],
+    "video_backbone.dit.blocks.11.modulation": [
+      1,
+      6,
+      1024
+    ],
+    "video_backbone.dit.blocks.11.norm3.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.11.norm3.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.11.self_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.11.self_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.11.self_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.11.self_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.11.self_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.11.self_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.11.self_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.11.self_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.11.self_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.11.self_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.2.cross_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.2.cross_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.2.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.2.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.2.cross_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.2.cross_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.2.cross_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.2.cross_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.2.cross_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.2.cross_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.2.ffn.0.bias": [
+      4096
+    ],
+    "video_backbone.dit.blocks.2.ffn.0.weight": [
+      4096,
+      1024
+    ],
+    "video_backbone.dit.blocks.2.ffn.2.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.2.ffn.2.weight": [
+      1024,
+      4096
+    ],
+    "video_backbone.dit.blocks.2.modulation": [
+      1,
+      6,
+      1024
+    ],
+    "video_backbone.dit.blocks.2.norm3.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.2.norm3.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.2.self_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.2.self_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.2.self_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.2.self_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.2.self_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.2.self_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.2.self_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.2.self_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.2.self_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.2.self_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.3.cross_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.3.cross_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.3.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.3.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.3.cross_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.3.cross_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.3.cross_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.3.cross_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.3.cross_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.3.cross_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.3.ffn.0.bias": [
+      4096
+    ],
+    "video_backbone.dit.blocks.3.ffn.0.weight": [
+      4096,
+      1024
+    ],
+    "video_backbone.dit.blocks.3.ffn.2.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.3.ffn.2.weight": [
+      1024,
+      4096
+    ],
+    "video_backbone.dit.blocks.3.modulation": [
+      1,
+      6,
+      1024
+    ],
+    "video_backbone.dit.blocks.3.norm3.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.3.norm3.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.3.self_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.3.self_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.3.self_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.3.self_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.3.self_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.3.self_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.3.self_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.3.self_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.3.self_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.3.self_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.4.cross_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.4.cross_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.4.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.4.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.4.cross_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.4.cross_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.4.cross_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.4.cross_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.4.cross_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.4.cross_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.4.ffn.0.bias": [
+      4096
+    ],
+    "video_backbone.dit.blocks.4.ffn.0.weight": [
+      4096,
+      1024
+    ],
+    "video_backbone.dit.blocks.4.ffn.2.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.4.ffn.2.weight": [
+      1024,
+      4096
+    ],
+    "video_backbone.dit.blocks.4.modulation": [
+      1,
+      6,
+      1024
+    ],
+    "video_backbone.dit.blocks.4.norm3.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.4.norm3.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.4.self_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.4.self_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.4.self_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.4.self_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.4.self_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.4.self_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.4.self_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.4.self_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.4.self_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.4.self_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.5.cross_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.5.cross_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.5.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.5.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.5.cross_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.5.cross_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.5.cross_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.5.cross_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.5.cross_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.5.cross_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.5.ffn.0.bias": [
+      4096
+    ],
+    "video_backbone.dit.blocks.5.ffn.0.weight": [
+      4096,
+      1024
+    ],
+    "video_backbone.dit.blocks.5.ffn.2.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.5.ffn.2.weight": [
+      1024,
+      4096
+    ],
+    "video_backbone.dit.blocks.5.modulation": [
+      1,
+      6,
+      1024
+    ],
+    "video_backbone.dit.blocks.5.norm3.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.5.norm3.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.5.self_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.5.self_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.5.self_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.5.self_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.5.self_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.5.self_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.5.self_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.5.self_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.5.self_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.5.self_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.6.cross_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.6.cross_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.6.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.6.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.6.cross_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.6.cross_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.6.cross_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.6.cross_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.6.cross_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.6.cross_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.6.ffn.0.bias": [
+      4096
+    ],
+    "video_backbone.dit.blocks.6.ffn.0.weight": [
+      4096,
+      1024
+    ],
+    "video_backbone.dit.blocks.6.ffn.2.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.6.ffn.2.weight": [
+      1024,
+      4096
+    ],
+    "video_backbone.dit.blocks.6.modulation": [
+      1,
+      6,
+      1024
+    ],
+    "video_backbone.dit.blocks.6.norm3.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.6.norm3.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.6.self_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.6.self_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.6.self_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.6.self_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.6.self_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.6.self_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.6.self_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.6.self_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.6.self_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.6.self_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.7.cross_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.7.cross_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.7.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.7.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.7.cross_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.7.cross_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.7.cross_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.7.cross_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.7.cross_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.7.cross_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.7.ffn.0.bias": [
+      4096
+    ],
+    "video_backbone.dit.blocks.7.ffn.0.weight": [
+      4096,
+      1024
+    ],
+    "video_backbone.dit.blocks.7.ffn.2.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.7.ffn.2.weight": [
+      1024,
+      4096
+    ],
+    "video_backbone.dit.blocks.7.modulation": [
+      1,
+      6,
+      1024
+    ],
+    "video_backbone.dit.blocks.7.norm3.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.7.norm3.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.7.self_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.7.self_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.7.self_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.7.self_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.7.self_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.7.self_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.7.self_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.7.self_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.7.self_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.7.self_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.8.cross_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.8.cross_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.8.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.8.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.8.cross_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.8.cross_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.8.cross_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.8.cross_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.8.cross_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.8.cross_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.8.ffn.0.bias": [
+      4096
+    ],
+    "video_backbone.dit.blocks.8.ffn.0.weight": [
+      4096,
+      1024
+    ],
+    "video_backbone.dit.blocks.8.ffn.2.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.8.ffn.2.weight": [
+      1024,
+      4096
+    ],
+    "video_backbone.dit.blocks.8.modulation": [
+      1,
+      6,
+      1024
+    ],
+    "video_backbone.dit.blocks.8.norm3.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.8.norm3.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.8.self_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.8.self_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.8.self_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.8.self_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.8.self_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.8.self_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.8.self_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.8.self_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.8.self_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.8.self_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.9.cross_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.9.cross_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.9.cross_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.9.cross_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.9.cross_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.9.cross_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.9.cross_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.9.cross_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.9.cross_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.9.cross_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.9.ffn.0.bias": [
+      4096
+    ],
+    "video_backbone.dit.blocks.9.ffn.0.weight": [
+      4096,
+      1024
+    ],
+    "video_backbone.dit.blocks.9.ffn.2.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.9.ffn.2.weight": [
+      1024,
+      4096
+    ],
+    "video_backbone.dit.blocks.9.modulation": [
+      1,
+      6,
+      1024
+    ],
+    "video_backbone.dit.blocks.9.norm3.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.9.norm3.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.9.self_attn.k.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.9.self_attn.k.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.9.self_attn.norm_k.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.9.self_attn.norm_q.weight": [
+      1024
+    ],
+    "video_backbone.dit.blocks.9.self_attn.o.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.9.self_attn.o.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.9.self_attn.q.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.9.self_attn.q.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.blocks.9.self_attn.v.bias": [
+      1024
+    ],
+    "video_backbone.dit.blocks.9.self_attn.v.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.head.head.bias": [
+      192
+    ],
+    "video_backbone.dit.head.head.weight": [
+      192,
+      1024
+    ],
+    "video_backbone.dit.head.modulation": [
+      1,
+      2,
+      1024
+    ],
+    "video_backbone.dit.patch_embedding.bias": [
+      1024
+    ],
+    "video_backbone.dit.patch_embedding.weight": [
+      1024,
+      48,
+      1,
+      2,
+      2
+    ],
+    "video_backbone.dit.text_embedding.0.bias": [
+      1024
+    ],
+    "video_backbone.dit.text_embedding.0.weight": [
+      1024,
+      4096
+    ],
+    "video_backbone.dit.text_embedding.2.bias": [
+      1024
+    ],
+    "video_backbone.dit.text_embedding.2.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.time_embedding.0.bias": [
+      1024
+    ],
+    "video_backbone.dit.time_embedding.0.weight": [
+      1024,
+      256
+    ],
+    "video_backbone.dit.time_embedding.2.bias": [
+      1024
+    ],
+    "video_backbone.dit.time_embedding.2.weight": [
+      1024,
+      1024
+    ],
+    "video_backbone.dit.time_projection.1.bias": [
+      6144
+    ],
+    "video_backbone.dit.time_projection.1.weight": [
+      6144,
+      1024
+    ]
+  }
+}

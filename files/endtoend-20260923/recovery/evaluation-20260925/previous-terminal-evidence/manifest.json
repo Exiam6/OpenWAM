@@ -1,0 +1,50 @@
+{
+  "time": "2026-09-25T19:42:19.700472-05:00",
+  "files": {
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/pipeline/started.json": {
+      "archive": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/previous-terminal-evidence/00-started.json",
+      "sha256": "e40d7aadaaf1075be1d95397e452ee8aa28d10c2e3e10a6007d3172f77b62349"
+    },
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/pipeline/progress.json": {
+      "archive": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/previous-terminal-evidence/01-progress.json",
+      "sha256": "3aebb936a1debc03d211bda60903b54ecbbbd96561a31d81242bae3b49f8af40"
+    },
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/pipeline/exit.json": {
+      "archive": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/previous-terminal-evidence/02-exit.json",
+      "sha256": "605bf9a12b0eac1c91aeebab18142c2313809506e6668e025d54732f568e50de"
+    },
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/pipeline-controller.log": {
+      "archive": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/previous-terminal-evidence/03-pipeline-controller.log",
+      "sha256": "e7bbcf8225c0769cd23ce551d2c9c2001df37c26ff8c6e64dce28f3d3be671a9"
+    },
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/evaluation-resource-wait-20260924/progress.json": {
+      "archive": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/previous-terminal-evidence/04-progress.json",
+      "sha256": "87a309eb8f64464111e0b072176959338d69ab60b6e23718cdc3437865e90dfa"
+    },
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/evaluation-resource-wait-20260924/exit.json": {
+      "archive": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/previous-terminal-evidence/05-exit.json",
+      "sha256": "531dd3cee5ee62dc17344bef82eaf2b425c0ab5f22ef6754584ec58ffead2721"
+    },
+    "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/progress.json": {
+      "archive": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/previous-terminal-evidence/06-progress.json",
+      "sha256": "fae686ee63f67f1efad5feaaa2ed6cee8eb534f5b58b1925ee86f8b46c50912b"
+    },
+    "/home/zifanz4/openwam-experiments/studies/endtoend-20260923/pipeline-plan.json": {
+      "archive": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/previous-terminal-evidence/07-pipeline-plan.json",
+      "sha256": "37330d780b9df112e1aa33aea5e77a1adbb0f3e7895927b9ff4d339866a2d115"
+    },
+    "/home/zifanz4/openwam-experiments/STATUS.md": {
+      "archive": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/previous-terminal-evidence/08-STATUS.md",
+      "sha256": "bfe7b034e74c724e24d43c0a7f9dfa0f5a0509f599c7582a2e17df2ff18901bb"
+    },
+    "/home/zifanz4/openwam-experiments/NEXT_STEPS.md": {
+      "archive": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/previous-terminal-evidence/09-NEXT_STEPS.md",
+      "sha256": "c02fdd58639a1aaa603c48aaf46731a624c85ddcc523cbc0e2e2f5b7f891105f"
+    },
+    "/home/zifanz4/openwam-experiments/reports/endtoend-20260923/index.html": {
+      "archive": "/data02/zifanz4/openwam-experiments/endtoend-20260923/recovery/evaluation-20260925/previous-terminal-evidence/10-index.html",
+      "sha256": "d759f55c14fdd17ee82bff18b719f8a0737ea77ead264085da6e43eef05b0282"
+    }
+  },
+  "originals_left_in_place": true
+}

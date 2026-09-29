@@ -1,0 +1,9 @@
+{
+  "time": "2026-09-26T19:18:05.551600-05:00",
+  "task": "adjust_bottle",
+  "route": "svae",
+  "policy_seed": 42,
+  "condition": "clean",
+  "manifest_sha256": "d3c5f71928638f6b107b9d193580b85def2d8c3c44b57cb75435496fb3a523a7",
+  "protocol_sha256": "9821536558ee158735a24e2caa8b394dfb46723269586cf4acc66c4b9b2cd7b6"
+}

@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-09-23T19:04:13.686333-05:00",
+  "deadline": "2026-09-23T21:04:13.686333-05:00",
+  "timeout_seconds": 7200,
+  "gpu_host": "cm001",
+  "gpu_index": 6,
+  "gpu_uuid": "GPU-91a9a93b-b386-82f0-3009-88cc9bb79d06",
+  "train_episodes": 105,
+  "clips_per_episode": 12,
+  "raw_window": 33,
+  "video_stride": 4,
+  "native_multiview": true,
+  "height": 384,
+  "width": 320,
+  "svae_steps": 2000,
+  "svae_seed": 42,
+  "svae_optimizer": {
+    "lr": 0.0001,
+    "betas": [
+      0.9,
+      0.99
+    ],
+    "weight_decay": 0.0001,
+    "clip_grad_norm": 1
+  },
+  "svae_loss": {
+    "cos_weight": 1.0,
+    "beta": 0.0001,
+    "beta_warmup": 400
+  },
+  "pca_rank": 48,
+  "pca_statistics": "all1260trainingclips; no heldoutfit",
+  "encoder": "frozen publishedDINOv3 lastlayer",
+  "code_sha256": "5855e702e7f7ed870919746ad5f21a7594a685def0d44ff26a5a0268079aa7e5",
+  "reason": "Main native policy uses published three-camera composition; refit both bottlenecks on that actual distribution. Previous single-head stretched-image weights remain unchanged."
+}

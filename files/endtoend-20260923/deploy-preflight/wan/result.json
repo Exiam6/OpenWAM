@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "route": "wan",
+  "checkpoint": "/data02/zifanz4/openwam-experiments/endtoend-20260923/profiles-v3/wan/output/2026-09-23_19-09-41",
+  "strict_native_deploy_load": true,
+  "native_multiview": true,
+  "train_deploy_composite_pixels_equal": true,
+  "repeat_reset_action_equal": true,
+  "action_dim": 20,
+  "denoise_steps": 10,
+  "replan_horizon": 8,
+  "seconds": 85.7494394108653,
+  "first_latency_ms": 2128.21,
+  "warm_latency_ms": 254.04,
+  "training_episode_used": "/data02/zifanz4/openwam-experiments/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode10.hdf5",
+  "heldout_scenes_used": false
+}

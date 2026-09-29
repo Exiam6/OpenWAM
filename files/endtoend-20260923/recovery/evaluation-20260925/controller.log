@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py", line 324, in <module>
+    elif args.controller: controller(q)
+  File "/home/zifanz4/openwam-experiments/scripts/endtoend/evaluation_recovery_20260925.py", line 273, in controller
+    assert all(x['returncode'] == 0 for x in states.values()), 'Full matrix incomplete; all failures retained'
+AssertionError: Full matrix incomplete; all failures retained

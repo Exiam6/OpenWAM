@@ -1,0 +1,15 @@
+{
+  "pid": 2714629,
+  "command": [
+    "/data02/zifanz4/openwam-experiments/policy-env/bin/python",
+    "-u",
+    "/home/zifanz4/openwam-experiments/scripts/endtoend/serve_policy.py",
+    "--checkpoint",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25",
+    "--port",
+    "18851",
+    "--log",
+    "/data02/zifanz4/openwam-experiments/endtoend-20260923/evaluation/svae-seed42/episode-rng.jsonl"
+  ],
+  "time": "2026-09-26T19:16:49.767673-05:00"
+}

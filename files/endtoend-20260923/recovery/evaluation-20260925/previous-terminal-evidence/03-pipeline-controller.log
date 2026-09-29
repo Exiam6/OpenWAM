@@ -1,0 +1,62 @@
+{
+  "time": "2026-09-25T19:12:21.332927-05:00",
+  "runs": {
+    "pca-seed42": [
+      "completed",
+      6000
+    ],
+    "pca-seed43": [
+      "completed",
+      6000
+    ],
+    "pca-seed44": [
+      "completed",
+      6000
+    ],
+    "svae-seed42": [
+      "completed",
+      6000
+    ],
+    "svae-seed43": [
+      "completed",
+      6000
+    ],
+    "svae-seed44": [
+      "completed",
+      6000
+    ],
+    "wan-seed42": [
+      "completed",
+      6000
+    ],
+    "wan-seed43": [
+      "completed",
+      6000
+    ],
+    "wan-seed44": [
+      "completed",
+      6000
+    ]
+  },
+  "scenes": {
+    "adjust_bottle": {
+      "accepted": 50,
+      "attempted": 63,
+      "complete": true
+    },
+    "handover_block": {
+      "accepted": 50,
+      "attempted": 57,
+      "complete": true
+    },
+    "place_object_basket": {
+      "accepted": 50,
+      "attempted": 84,
+      "complete": true
+    }
+  }
+}
+Traceback (most recent call last):
+  File "/home/zifanz4/openwam-experiments/scripts/endtoend/pipeline_controller.py", line 9, in <module>
+    guard();assert now()<deadline,'Prespecified dependency deadline; no extension';ready=True
+AssertionError: Prespecified dependency deadline; no extension

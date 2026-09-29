@@ -1,28 +1,28 @@
 {
-  "updated_at": "2026-09-29T01:20:09-04:00",
+  "updated_at": "2026-09-29T01:40:14-04:00",
   "run_dir": "/scratch/zz4330/openwam-runtime/runs/official-baseline-18771822",
   "slurm_job": "18771822",
   "job_state": "RUNNING",
   "exit": null,
   "protocol": "research/greene/baseline-official/protocol.json",
   "episodes_planned": 60,
-  "episodes_complete": 18,
-  "successes": 18,
+  "episodes_complete": 32,
+  "successes": 32,
   "technical_failures": 0,
   "tasks": {
     "adjust_bottle": {
       "planned": 20,
-      "complete": 18,
-      "successes": 18,
+      "complete": 20,
+      "successes": 20,
       "technical_failures": 0,
-      "mean_seconds": 42.9
+      "mean_seconds": 42.6
     },
     "handover_block": {
       "planned": 20,
-      "complete": 0,
-      "successes": 0,
+      "complete": 12,
+      "successes": 12,
       "technical_failures": 0,
-      "mean_seconds": null
+      "mean_seconds": 87.5
     },
     "place_object_basket": {
       "planned": 20,

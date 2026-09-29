@@ -1,0 +1,19 @@
+{
+  "verified_at": "2026-09-29T04:50:59-04:00",
+  "target_root": "/scratch/zz4330/openwam-runtime/assets-endtoend",
+  "pack_head": "92eae05d374cbf5221645f013679dedcfb031b87",
+  "file_count": 4379,
+  "total_bytes": 84030142327,
+  "frozen_hash_files": [
+    "endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_12000.safetensors",
+    "endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_12000.safetensors",
+    "endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/checkpoint_step_12000.safetensors",
+    "endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_12000.safetensors",
+    "endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_12000.safetensors",
+    "endtoend-20260923/training/svae-seed44/output/2026-09-24_13-51-17/checkpoint_step_12000.safetensors"
+  ],
+  "frozen_hash_source": "delta/endtoend/SHA256SUMS",
+  "hashed_at_pack_only": 4373,
+  "all_sha256_verified": true,
+  "note": "Frozen-hash files match hashes recorded by the original study; the rest (configs, training data) are verified for transport only, against hashes computed by the sender at pack time."
+}

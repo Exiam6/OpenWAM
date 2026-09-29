@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "created_at": "2026-09-29",
+  "name": "official-checkpoint reference baseline (Greene)",
+  "question": "Clean closed-loop success of the released OpenWAM-Alpha-Sim-RoboTwin-Full checkpoint on the same 3 tasks x 20 clean scenes used by the native295M temporal study.",
+  "source": "research/experiments/NEXT_STEPS.md: 'register the official reference baseline (initial proposal: 3 tasks x 20 clean episodes)'",
+  "checkpoint": "assets/openwam_ckpt/openwam_alpha/OpenWAM-Alpha-Sim-RoboTwin-Full/checkpoint_step_118655.safetensors (public release)",
+  "policy": {"route": "official", "action_rng_seed": 42, "note": "action RNG uses SeedSequence([scene, 42, 811]) as in the temporal study, so action seeds pair with the seed-42 routes"},
+  "serving": "identical to the temporal-study harness: compile off, DiT cache off, denoise_steps 10, inference_horizon 8, prompt cache 32",
+  "evaluation": {
+    "tasks": ["adjust_bottle", "handover_block", "place_object_basket"],
+    "cohort": "first 20 accepted entries per task of the sealed temporal-20260926 cohort (rebuilt byte-exact on Greene)",
+    "conditions": ["clean"],
+    "episodes": 60,
+    "success": "native RoboTwin eval_success, native step limits, 600 s per-episode wall limit",
+    "render_gate": "initial state atol 1e-6 and per-camera initial render MAE <= 1 uint8 vs GPU02 reference PNGs; a render mismatch is recorded as a technical failure and the next scene continues"
+  },
+  "deviations_from_official_protocol": "3 tasks not 50, 20 not 100 episodes/task, fixed sealed scenes not seed-0 stream, compile/cache off, horizon 8. This is a reference point for the reduced study, not an official benchmark reproduction.",
+  "cell_isolation": "route 'official' cells do not exist in the GPU02 1080-cell matrix; no GPU02 cell is executed here and outcomes are never merged with GPU02 outcomes.",
+  "failures": "retained, never auto-retried"
+}

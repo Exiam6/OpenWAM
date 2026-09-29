@@ -16,6 +16,7 @@
 # (private git repo pushed by delta/git_push_pack.sh) and it is cloned/pulled:
 #   sbatch --export=ALL,PACK_REPO=git@github.com:Exiam6/openwam-greene-transfer.git \
 #          research/greene/sbatch/delta_unpack.sbatch
+# Optional PACK_BRANCH (default main) and PACK_SHA (abort unless HEAD equals it).
 set -euo pipefail
 export TZ="America/New_York"
 RUNTIME=/scratch/zz4330/openwam-runtime
@@ -23,9 +24,13 @@ PACK="${PACK:-${RUNTIME}/delta/pack}"
 G=/scratch/zz4330/OpenWAM/research/greene
 echo "node $(hostname) job ${SLURM_JOB_ID} start $(date -Is)"
 if [ -n "${PACK_REPO:-}" ]; then
-  if [ -d "${PACK}/.git" ]; then git -C "$PACK" pull -q --ff-only origin main
-  else git clone -q -b main "$PACK_REPO" "$PACK"; fi
-  echo "pack repo ${PACK_REPO} @ $(git -C "$PACK" rev-parse HEAD)"
+  PACK_BRANCH="${PACK_BRANCH:-main}"
+  if [ -d "${PACK}/.git" ]; then git -C "$PACK" pull -q --ff-only origin "$PACK_BRANCH"
+  else git clone -q --single-branch -b "$PACK_BRANCH" "$PACK_REPO" "$PACK"; fi
+  head_sha="$(git -C "$PACK" rev-parse HEAD)"
+  echo "pack repo ${PACK_REPO} ${PACK_BRANCH} @ ${head_sha}"
+  if [ -n "${PACK_SHA:-}" ] && [ "$head_sha" != "$PACK_SHA" ]; then
+    echo "PACK HEAD MISMATCH: expected ${PACK_SHA}"; exit 1; fi
 fi
 python3 "$G/delta/unpack_delta.py" --pack "$PACK" \
   --reference-index "${RUNTIME}/delta/reference-index.json" \

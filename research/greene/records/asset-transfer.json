@@ -1,0 +1,16 @@
+{
+  "transferred_at": "2026-09-28T23:41:18.596635-04:00",
+  "target_machine": "NYU Greene",
+  "target_root": "/scratch/zz4330/openwam-runtime/assets-source",
+  "source": "zifanz4@shenlong-gpu-02.cs.illinois.edu:/home/zifanz4/openwam-runtime/assets-source",
+  "transport": "byte-exact delta pack relayed off-line; frozen tensors taken from the public OpenWAM-Alpha-Sim-RoboTwin-Full checkpoint (see delta/README.md)",
+  "manifest": "share-eval/files.txt",
+  "file_count": 663,
+  "total_bytes": 73281816939,
+  "total_gib": 68.25,
+  "all_sha256_verified": true,
+  "verification_log": "logs/sha256-check.txt",
+  "transfer_log": "/scratch/zz4330/openwam-runtime/logs/finalize-private-assets.20260928T233922.log",
+  "scope": "evaluation reproduction only; full training trajectories NOT included",
+  "note": "Old-machine outputs are not merged with any Greene run. Hand over evaluation cells explicitly before launching."
+}

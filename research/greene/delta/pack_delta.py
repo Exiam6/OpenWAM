@@ -195,30 +195,52 @@ def main():
     ap.add_argument("--out", required=True, help="new, empty output directory")
     ap.add_argument("--part-mib", type=float, default=1024,
                     help="max part size; use 95 for a plain-git transport (GitHub 100 MB/file)")
+    ap.add_argument("--manifest-dir", help="dir with files.txt + SHA256SUMS (default ROOT/share-eval)")
+    ap.add_argument("--src", help="dir the manifest paths are relative to (default ROOT/assets-source)")
+    ap.add_argument("--add-tree", action="append", default=[],
+                    help="also pack every file under SRC/REL that is not already listed; "
+                         "hashed at pack time (no prior checksum). Unlisted *.safetensors are skipped.")
+    ap.add_argument("--dry-run", action="store_true", help="list files and sizes, write nothing")
     a = ap.parse_args()
+
+    share = a.manifest_dir or os.path.join(a.root, "share-eval")
+    src_root = a.src or os.path.join(a.root, "assets-source")
+    with open(os.path.join(share, "files.txt")) as fh:
+        files = [norm(l) for l in fh if l.strip()]
+    sums = read_sums(os.path.join(share, "SHA256SUMS"))
+    listed, added, skipped = set(files), [], []
+    for tree in a.add_tree:
+        for dp, dns, fs in os.walk(os.path.join(src_root, norm(tree)), followlinks=True):
+            dns.sort()
+            for f in sorted(fs):
+                rel = os.path.relpath(os.path.join(dp, f), src_root)
+                if rel in listed:
+                    continue
+                if f.endswith(".safetensors"):
+                    skipped.append(rel)
+                    continue
+                listed.add(rel)
+                added.append(rel)
+    files += added
+    size_of = {rel: os.path.getsize(os.path.join(src_root, rel)) for rel in files}
+    log("%d listed files (+%d from --add-tree, %.2f GB total); %d unlisted safetensors skipped"
+        % (len(files) - len(added), len(added), sum(size_of.values()) / 1e9, len(skipped)))
+    for rel in skipped:
+        log("  skipped %s (%.2f GB)" % (rel, os.path.getsize(os.path.join(src_root, rel)) / 1e9))
+    if a.dry_run:
+        for rel in files:
+            print("%14d  %s%s" % (size_of[rel], rel, "" if rel in sums else "   [hash at pack time]"))
+        return
 
     if os.path.exists(a.out) and os.listdir(a.out):
         raise SystemExit("--out %s exists and is not empty; use a fresh directory" % a.out)
     os.makedirs(a.out, exist_ok=True)
-
-    share = os.path.join(a.root, "share-eval")
-    src_root = os.path.join(a.root, "assets-source")
-    with open(os.path.join(share, "files.txt")) as fh:
-        files = [norm(l) for l in fh if l.strip()]
-    sums = read_sums(os.path.join(share, "SHA256SUMS"))
     with open(a.reference) as fh:
         refidx = json.load(fh)
     ref = refidx["tensors"]
-    log("%d files in manifest, %d checksums, %d reference tensors"
-        % (len(files), len(sums), len(ref)))
+    log("%d checksums, %d reference tensors" % (len(sums), len(ref)))
 
     out_hashes = {}
-    shutil.copytree(share, os.path.join(a.out, "share-eval"))
-    for dp, _, fs in os.walk(os.path.join(a.out, "share-eval")):
-        for f in fs:
-            p = os.path.join(dp, f)
-            out_hashes[os.path.relpath(p, a.out)] = copy_hash(p)
-
     pack = Pack(a.out, int(a.part_mib * 2**20))
     entries, total_src = [], 0
     totals = {"ref": 0, "dup": 0, "new": 0, "plain": 0}
@@ -227,7 +249,7 @@ def main():
         size = os.path.getsize(src)
         total_src += size
         want = sums.get(rel)
-        if want is None:
+        if want is None and rel not in added:
             raise SystemExit("no SHA256SUMS entry for %s" % rel)
         if rel.endswith(".safetensors"):
             log("[%d/%d] %s (%.2f GB)" % (i, len(files), rel, size / 1e9))
@@ -243,16 +265,33 @@ def main():
             out_hashes["files/" + rel] = got
             recipe = {"kind": "plain"}
             totals["plain"] += size
-        if got != want:
+        if want is None:
+            want = got
+            recipe["sha256_origin"] = "computed-at-pack"
+            sums[rel] = got
+        elif got != want:
             raise SystemExit("SOURCE CHECKSUM MISMATCH %s: %s != %s" % (rel, got, want))
         recipe.update({"path": rel, "bytes": size, "sha256": want})
         entries.append(recipe)
     pack.finish()
     out_hashes.update(pack.part_hashes)
 
+    # share-eval in the pack: the given manifest, extended with --add-tree files
+    se = os.path.join(a.out, "share-eval")
+    shutil.copytree(share, se)
+    with open(os.path.join(se, "files.txt"), "w") as fh:
+        fh.write("".join(rel + "\n" for rel in files))
+    with open(os.path.join(se, "SHA256SUMS"), "w") as fh:
+        fh.write("".join("%s  ./%s\n" % (sums[rel], rel) for rel in files))
+    for dp, _, fs in os.walk(se):
+        for f in fs:
+            p = os.path.join(dp, f)
+            out_hashes[os.path.relpath(p, a.out)] = copy_hash(p)
+
     manifest = {
         "created": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
-        "source_root": a.root,
+        "source_root": src_root,
+        "hashed_at_pack": len(added),
         "reference_file": refidx["reference_file"],
         "reference_sha256": refidx["reference_sha256"],
         "reference_bytes": refidx["reference_bytes"],

@@ -20,7 +20,15 @@
 set -euo pipefail
 export TZ="America/New_York"
 RUNTIME=/scratch/zz4330/openwam-runtime
-PACK="${PACK:-${RUNTIME}/delta/pack}"
+# TRANSFER=main (default): the 363-file handoff -> assets-source + finalize.
+# TRANSFER=wan48: endtoend Wan48 checkpoints + training data -> assets-wan48,
+#   verified against the FROZEN hashes in delta/wan48/SHA256SUMS.
+TRANSFER="${TRANSFER:-main}"
+if [ "$TRANSFER" = main ]; then
+  PACK="${PACK:-${RUNTIME}/delta/pack}"; DEST="${RUNTIME}/assets-source"; HANDOFF="${RUNTIME}/handoff"
+else
+  PACK="${PACK:-${RUNTIME}/delta/pack-${TRANSFER}}"; DEST="${RUNTIME}/assets-${TRANSFER}"; HANDOFF="${RUNTIME}/handoff-${TRANSFER}"
+fi
 G=/scratch/zz4330/OpenWAM/research/greene
 echo "node $(hostname) job ${SLURM_JOB_ID} start $(date -Is)"
 if [ -n "${PACK_REPO:-}" ]; then
@@ -34,7 +42,13 @@ if [ -n "${PACK_REPO:-}" ]; then
 fi
 python3 "$G/delta/unpack_delta.py" --pack "$PACK" \
   --reference-index "${RUNTIME}/delta/reference-index.json" \
-  --dest "${RUNTIME}/assets-source" --handoff "${RUNTIME}/handoff"
-bash "$G/scripts/finalize_private_assets.sh" \
-  "byte-exact delta pack relayed off-line; frozen tensors taken from the public OpenWAM-Alpha-Sim-RoboTwin-Full checkpoint (see delta/README.md)"
+  --dest "$DEST" --handoff "$HANDOFF"
+if [ "$TRANSFER" = main ]; then
+  bash "$G/scripts/finalize_private_assets.sh" \
+    "byte-exact delta pack relayed off-line; frozen tensors taken from the public OpenWAM-Alpha-Sim-RoboTwin-Full checkpoint (see delta/README.md)"
+else
+  python3 "$G/delta/verify_transfer.py" --dest "$DEST" --handoff "$HANDOFF" \
+    --frozen "$G/delta/${TRANSFER}/SHA256SUMS" \
+    --record "$G/records/${TRANSFER}-transfer.json" --pack-head "${head_sha:-}"
+fi
 echo "finished $(date -Is)"

@@ -1,0 +1,18 @@
+{
+  "verified_at": "2026-09-29T02:52:19-04:00",
+  "target_root": "/scratch/zz4330/openwam-runtime/assets-wan48",
+  "pack_head": "6976c2122d016ad96e2ab288926b2a893d4fee74",
+  "file_count": 272,
+  "total_bytes": 41784885305,
+  "frozen_hash_files": [
+    "endtoend-20260923/data-manifest.json",
+    "endtoend-20260923/normalization_stats.npy",
+    "endtoend-20260923/training/wan-seed42/output/2026-09-23_19-20-28/checkpoint_step_12000.safetensors",
+    "endtoend-20260923/training/wan-seed43/output/2026-09-23_19-20-28/checkpoint_step_12000.safetensors",
+    "endtoend-20260923/training/wan-seed44/output/2026-09-24_13-51-20/checkpoint_step_12000.safetensors"
+  ],
+  "frozen_hash_source": "delta/wan48/SHA256SUMS",
+  "hashed_at_pack_only": 267,
+  "all_sha256_verified": true,
+  "note": "Frozen-hash files match hashes recorded by the original study; the rest (configs, training data) are verified for transport only, against hashes computed by the sender at pack time."
+}

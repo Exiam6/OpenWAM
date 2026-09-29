@@ -200,6 +200,8 @@ def main():
     ap.add_argument("--add-tree", action="append", default=[],
                     help="also pack every file under SRC/REL that is not already listed; "
                          "hashed at pack time (no prior checksum). Unlisted *.safetensors are skipped.")
+    ap.add_argument("--add-tree-all", action="append", default=[],
+                    help="like --add-tree but also packs *.safetensors (delta-deduplicated, hashed at pack time)")
     ap.add_argument("--dry-run", action="store_true", help="list files and sizes, write nothing")
     a = ap.parse_args()
 
@@ -209,14 +211,23 @@ def main():
         files = [norm(l) for l in fh if l.strip()]
     sums = read_sums(os.path.join(share, "SHA256SUMS"))
     listed, added, skipped = set(files), [], []
-    for tree in a.add_tree:
-        for dp, dns, fs in os.walk(os.path.join(src_root, norm(tree)), followlinks=True):
+    trees = [(t, False) for t in a.add_tree] + [(t, True) for t in a.add_tree_all]
+    for tree, keep_st in trees:
+        top = os.path.join(src_root, norm(tree))
+        if not os.path.exists(top):
+            raise SystemExit("--add-tree path does not exist: %s" % top)
+        if os.path.isfile(top):
+            rel = os.path.relpath(top, src_root)
+            if rel not in listed:
+                listed.add(rel); added.append(rel)
+            continue
+        for dp, dns, fs in os.walk(top, followlinks=True):
             dns.sort()
             for f in sorted(fs):
                 rel = os.path.relpath(os.path.join(dp, f), src_root)
                 if rel in listed:
                     continue
-                if f.endswith(".safetensors"):
+                if f.endswith(".safetensors") and not keep_st:
                     skipped.append(rel)
                     continue
                 listed.add(rel)
@@ -228,6 +239,16 @@ def main():
     for rel in skipped:
         log("  skipped %s (%.2f GB)" % (rel, os.path.getsize(os.path.join(src_root, rel)) / 1e9))
     if a.dry_run:
+        log("largest files:")
+        for rel in sorted(files, key=lambda r: -size_of[r])[:15]:
+            log("  %8.3f GB  %s" % (size_of[rel] / 1e9, rel))
+        per_top = {}
+        for rel in files:
+            k = "/".join(rel.split("/")[:2])
+            per_top[k] = per_top.get(k, 0) + size_of[rel]
+        log("by top-level dir:")
+        for k, v in sorted(per_top.items(), key=lambda kv: -kv[1]):
+            log("  %8.3f GB  %s" % (v / 1e9, k))
         for rel in files:
             print("%14d  %s%s" % (size_of[rel], rel, "" if rel in sums else "   [hash at pack time]"))
         return

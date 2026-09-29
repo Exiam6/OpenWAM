@@ -24,11 +24,12 @@
   照上次的做法在分支里放 `PUBLIC-TRANSFER.md` 写明授权；Greene 验证完就删分支。
 - 出错不要绕过校验，把完整输出带回来。
 
-## 1. 拿脚本
+## 1. 拿脚本（用独立 clone，**不要**用 `/home/zifanz4/OpenWAM`，那是 GPU02 正在跑的评测的代码目录）
 
 ```bash
-cd <OpenWAM clone> && git fetch origin && git checkout research/progress-20260927 && git pull --ff-only
-D=$PWD/research/greene/delta
+cd /data02/zifanz4/openwam-greene-tools 2>/dev/null && git pull --ff-only \
+  || git clone -b research/progress-20260927 --depth 1 https://github.com/Exiam6/OpenWAM.git /data02/zifanz4/openwam-greene-tools
+D=/data02/zifanz4/openwam-greene-tools/research/greene/delta
 ls $D/wan48      # files.txt  SHA256SUMS  WAN48_TRANSFER.md
 ```
 

@@ -1,0 +1,12 @@
+{
+  "time": "2026-09-23T19:07:11.492403-05:00",
+  "episodes": 105,
+  "clips": 1260,
+  "svae_steps": 2000,
+  "svae_seed": 42,
+  "selection": "fixed final step; no checkpoint or representation selection",
+  "pca_sha256": "197276657ff49d08b4b3ea17ad0eaaf66dfa8f14c9c10375f6b58a639a84a47c",
+  "svae_sha256": "898443b0dc03208dbb46cfc26540ebe57d47805719ef170f9331b959a00f2bec",
+  "feature_manifest_sha256": "1bd2f3900d2aafa06222176d9347e29cd42f81511d3ddd20429883d2f9e44467",
+  "policy_seed_effect_separate_from_fixed_reducer_seed": true
+}

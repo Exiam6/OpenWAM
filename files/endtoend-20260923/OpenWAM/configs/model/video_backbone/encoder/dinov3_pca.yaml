@@ -1,0 +1,3 @@
+name: dinov3_pca
+model_path: /path/to/DINOv3
+pca_path: /path/to/train_only_pca.pt

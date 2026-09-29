@@ -1,0 +1,12 @@
+{
+  "model_repo": "OpenWAM/robotwin_dual_system_joint_self_attention_dinov3_svae",
+  "model_revision": "af1595c8ee54955116abbc0b0ffa17fa48deb691",
+  "source_checkpoint": "checkpoint_step_9890.safetensors",
+  "tensor_count": 293,
+  "tensor_bytes": 237723840,
+  "extracted_sha256": "d84eabf6b6e01f58dd4a2d93af0eb426191a595ebaba1f43c47caa5feaefeef7",
+  "data_repo": "TianxingChen/RoboTwin2.0",
+  "data_revision": "981c92aa34d8f94d4cff47e0d5bc2f7d4e0af042",
+  "data_path": "dataset/adjust_bottle/aloha-agilex_clean_50.zip",
+  "data_expected_sha256": "5554b6b30e37c6ed2f0bbc48079e8ad79d9512e9d4f910a5e71b0d5ad8fbe50e"
+}

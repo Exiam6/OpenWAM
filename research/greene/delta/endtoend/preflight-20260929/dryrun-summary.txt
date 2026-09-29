@@ -1,0 +1,32 @@
+[02:17:46] 6 listed files (+2572461 from --add-tree, 2163.80 GB total); 1 unlisted safetensors skipped
+[02:17:46]   skipped assets/dinov3-study/encoder.safetensors (0.24 GB)
+[02:17:46] largest files:
+[02:17:47]     12.190 GB  endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_12000.safetensors
+[02:17:47]     12.190 GB  endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_12000.safetensors
+[02:17:47]     12.190 GB  endtoend-20260923/training/svae-seed44/output/2026-09-24_13-51-17/checkpoint_step_12000.safetensors
+[02:17:47]     12.124 GB  endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_12000.safetensors
+[02:17:47]     12.124 GB  endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_12000.safetensors
+[02:17:47]     12.124 GB  endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/checkpoint_step_12000.safetensors
+[02:17:47]      3.738 GB  endtoend-20260923/scenes/adjust_bottle/seed-1100000/runtime/assets/objects.zip
+[02:17:47]      3.738 GB  endtoend-20260923/scenes/adjust_bottle/seed-1100001/runtime/assets/objects.zip
+[02:17:47]      3.738 GB  endtoend-20260923/scenes/adjust_bottle/seed-1100002/runtime/assets/objects.zip
+[02:17:47]      3.738 GB  endtoend-20260923/scenes/adjust_bottle/seed-1100003/runtime/assets/objects.zip
+[02:17:47]      3.738 GB  endtoend-20260923/scenes/adjust_bottle/seed-1100004/runtime/assets/objects.zip
+[02:17:47]      3.738 GB  endtoend-20260923/scenes/adjust_bottle/seed-1100005/runtime/assets/objects.zip
+[02:17:47]      3.738 GB  endtoend-20260923/scenes/adjust_bottle/seed-1100006/runtime/assets/objects.zip
+[02:17:47]      3.738 GB  endtoend-20260923/scenes/adjust_bottle/seed-1100007/runtime/assets/objects.zip
+[02:17:47]      3.738 GB  endtoend-20260923/scenes/adjust_bottle/seed-1100008/runtime/assets/objects.zip
+[02:17:50] by top-level dir:
+[02:17:50]   2013.296 GB  endtoend-20260923/scenes
+[02:17:50]     73.166 GB  endtoend-20260923/training
+[02:17:50]     59.222 GB  endtoend-20260923/evaluation
+[02:17:50]      9.858 GB  endtoend-20260923/simulation-preflight
+[02:17:50]      2.925 GB  endtoend-20260923/compressors-multiview
+[02:17:50]      2.819 GB  assets/wan22-vae-baseline
+[02:17:50]      2.254 GB  endtoend-20260923/initialization
+[02:17:50]      0.179 GB  endtoend-20260923/recovery
+[02:17:50]      0.064 GB  endtoend-20260923/templates-main
+[02:17:50]      0.015 GB  endtoend-20260923/OpenWAM
+[02:17:50]      0.000 GB  endtoend-20260923/deploy-preflight
+[02:17:50]      0.000 GB  assets/dinov3-study
+[02:17:50]      0.000 GB  endtoend-20260923/evaluation-slots

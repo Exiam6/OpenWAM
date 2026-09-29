@@ -1,0 +1,158 @@
+[
+  {
+    "tree": "endtoend-20260923/training/svae-seed42",
+    "regular_files": 22,
+    "regular_bytes": 12227397793,
+    "symlinks": 0,
+    "over_3gb": [
+      [
+        "endtoend-20260923/training/svae-seed42/output/2026-09-23_19-20-25/checkpoint_step_12000.safetensors",
+        12189767400
+      ]
+    ]
+  },
+  {
+    "tree": "endtoend-20260923/training/svae-seed43",
+    "regular_files": 22,
+    "regular_bytes": 12227397346,
+    "symlinks": 0,
+    "over_3gb": [
+      [
+        "endtoend-20260923/training/svae-seed43/output/2026-09-23_19-20-23/checkpoint_step_12000.safetensors",
+        12189767400
+      ]
+    ]
+  },
+  {
+    "tree": "endtoend-20260923/training/svae-seed44",
+    "regular_files": 22,
+    "regular_bytes": 12227398422,
+    "symlinks": 0,
+    "over_3gb": [
+      [
+        "endtoend-20260923/training/svae-seed44/output/2026-09-24_13-51-17/checkpoint_step_12000.safetensors",
+        12189767400
+      ]
+    ]
+  },
+  {
+    "tree": "endtoend-20260923/training/pca-seed42",
+    "regular_files": 22,
+    "regular_bytes": 12161135499,
+    "symlinks": 0,
+    "over_3gb": [
+      [
+        "endtoend-20260923/training/pca-seed42/output/2026-09-23_19-20-22/checkpoint_step_12000.safetensors",
+        12123507288
+      ]
+    ]
+  },
+  {
+    "tree": "endtoend-20260923/training/pca-seed43",
+    "regular_files": 22,
+    "regular_bytes": 12161136098,
+    "symlinks": 0,
+    "over_3gb": [
+      [
+        "endtoend-20260923/training/pca-seed43/output/2026-09-23_19-20-33/checkpoint_step_12000.safetensors",
+        12123507288
+      ]
+    ]
+  },
+  {
+    "tree": "endtoend-20260923/training/pca-seed44",
+    "regular_files": 22,
+    "regular_bytes": 12161137020,
+    "symlinks": 0,
+    "over_3gb": [
+      [
+        "endtoend-20260923/training/pca-seed44/output/2026-09-24_13-51-18/checkpoint_step_12000.safetensors",
+        12123507288
+      ]
+    ]
+  },
+  {
+    "tree": "assets/wan22-vae-baseline",
+    "regular_files": 1,
+    "regular_bytes": 2818839170,
+    "symlinks": 0,
+    "over_3gb": []
+  },
+  {
+    "tree": "assets/dinov3-study",
+    "regular_files": 6,
+    "regular_bytes": 237769621,
+    "symlinks": 0,
+    "over_3gb": []
+  },
+  {
+    "tree": "endtoend-20260923/compressors-multiview",
+    "regular_files": 117,
+    "regular_bytes": 2924540192,
+    "symlinks": 0,
+    "over_3gb": []
+  },
+  {
+    "tree": "endtoend-20260923/templates-main",
+    "regular_files": 7,
+    "regular_bytes": 13479,
+    "symlinks": 3,
+    "over_3gb": []
+  },
+  {
+    "tree": "endtoend-20260923/OpenWAM",
+    "regular_files": 696,
+    "regular_bytes": 15287261,
+    "symlinks": 0,
+    "over_3gb": []
+  },
+  {
+    "tree": "endtoend-20260923/scenes",
+    "regular_files": 2072,
+    "regular_bytes": 2337995227,
+    "symlinks": 2652,
+    "over_3gb": []
+  },
+  {
+    "tree": "endtoend-20260923/evaluation",
+    "regular_files": 600,
+    "regular_bytes": 75672343,
+    "symlinks": 78,
+    "over_3gb": []
+  },
+  {
+    "tree": "endtoend-20260923/evaluation-slots",
+    "regular_files": 18,
+    "regular_bytes": 2343,
+    "symlinks": 0,
+    "over_3gb": []
+  },
+  {
+    "tree": "endtoend-20260923/recovery/evaluation-20260925",
+    "regular_files": 697,
+    "regular_bytes": 179070065,
+    "symlinks": 0,
+    "over_3gb": []
+  },
+  {
+    "tree": "endtoend-20260923/simulation-preflight",
+    "regular_files": 8,
+    "regular_bytes": 8614,
+    "symlinks": 13,
+    "over_3gb": []
+  },
+  {
+    "tree": "endtoend-20260923/deploy-preflight",
+    "regular_files": 15,
+    "regular_bytes": 14102,
+    "symlinks": 0,
+    "over_3gb": []
+  },
+  {
+    "tree": "endtoend-20260923/initialization",
+    "regular_files": 6,
+    "regular_bytes": 2253873651,
+    "symlinks": 0,
+    "over_3gb": []
+  }
+]

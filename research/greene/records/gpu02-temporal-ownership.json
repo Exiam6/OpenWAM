@@ -1,0 +1,21 @@
+{
+  "updated_at": "2026-09-30T16:45:25.164932-05:00",
+  "study": "temporal-gpu02-20260928",
+  "owner_host": "shenlong-gpu-02.cs.illinois.edu",
+  "gpu": 5,
+  "gpu_uuid": "GPU-a4c607bb-f8f8-b999-19ea-0eb65290bb10",
+  "worker_active_at_capture": true,
+  "execution_root": "/home/zifanz4/openwam-runtime/temporal-new-20260928/resume-v1",
+  "deadline": "2026-10-01T18:43:29.998112-05:00",
+  "cluster_launch_allowed": false,
+  "instruction": "Do not launch, retrain, resume, or replay this temporal mean/learned 1080-cell study on Torch/Greene. GPU02 owns all remaining cells. Snapshot age or deadline expiry does not release ownership; require explicit coordinated handoff and fresh inventory before transfer. Exclude all attempted identities, including failures and unfinished directories.",
+  "identity_fields": [
+    "arm-training_seed",
+    "task",
+    "condition",
+    "scene_seed"
+  ],
+  "progress_path": "research/experiments/studies/temporal-gpu02-20260928/snapshots/20260930T164525/progress.json",
+  "attempt_ledger_path": "research/experiments/studies/temporal-gpu02-20260928/snapshots/20260930T164525/attempt-ledger.json",
+  "separate_cluster_study": "Existing Greene wan/svae/pca 1620-cell evaluation is distinct and is not blocked by this temporal-study notice."
+}

@@ -1,3 +1,16 @@
+# GPU02 temporal ownership — 2026-09-30T16:45:25.164932-05:00
+
+Captured **2026-09-30T16:45:25.164932-05:00**. GPU02 worker active: **True**.
+**882/1080 complete**, 16 technical failures,
+2 unfinished/in-flight directories, 180 never attempted; zero duplicate identities.
+Current: learned-seed44 / place_object_basket / head_camera_yaw_5deg.
+Authorized resume deadline: **2026-10-01T18:43:29.998112-05:00**; the September 29 deadline below is historical.
+Every 30 minutes, the GPU02 systemd monitor checks and resumes eligible pending work.
+
+**Torch/Greene: do not duplicate this temporal study.** See [handoff](../greene/GPU02_TEMPORAL_HANDOFF.md). Existing Greene wan/svae/pca endtoend work is separate. Official clean reference is already complete per cluster records.
+
+---
+
 # GPU02 independent temporal evaluation — 2026-09-28 18:07 CDT
 
 The user reported the old machine stopped and explicitly authorized a new independent evaluation on GPU 5, then authorized resumption and 30-minute checks. Current snapshot: **280/1080 valid completed outcomes, 3 infrastructure failures, 1 unfinished/in-flight attempt, 796 not started**, no duplicate scene identities. Worker active on shenlong-gpu-02; current group learned-seed42 / handover_block / head_camera_yaw_5deg. Original deadline remains **2026-09-29 17:48:49 CDT**.

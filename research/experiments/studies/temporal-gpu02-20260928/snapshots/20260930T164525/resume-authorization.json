@@ -1,0 +1,7 @@
+{
+  "captured_at": "2026-09-30T16:45:25.164932-05:00",
+  "authorization": "2026-09-29 user requested resume our eval after original deadline and confirmed continue",
+  "deadline": "2026-10-01T18:43:29.998112-05:00",
+  "gpu": 5,
+  "policy": "Only never-attempted cells; retain completed, failed and interrupted attempts; no automatic retry"
+}

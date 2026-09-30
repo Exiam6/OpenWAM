@@ -1,3 +1,18 @@
+# Latest GPU02 temporal progress and cluster ownership
+
+Captured **2026-09-30T16:45:25.164932-05:00**. GPU02 worker active: **True**.
+**882/1080 complete**, 16 technical failures,
+2 unfinished/in-flight directories, 180 never attempted; zero duplicate identities.
+Current: learned-seed44 / place_object_basket / head_camera_yaw_5deg.
+Authorized resume deadline: **2026-10-01T18:43:29.998112-05:00**; the September 29 deadline below is historical.
+Every 30 minutes, the GPU02 systemd monitor checks and resumes eligible pending work.
+
+Torch/Greene must not launch this temporal study. See [handoff](../../../greene/GPU02_TEMPORAL_HANDOFF.md), [latest progress](snapshots/20260930T164525/progress.json), and [attempt ledger](snapshots/20260930T164525/attempt-ledger.json).
+
+The following September 28 archive (including root progress.json and runtime-source) is historical; its deadline and official-baseline status are superseded by the latest snapshot and cluster records.
+
+---
+
 # GPU02 temporal evaluation and resume snapshot
 
 Captured **2026-09-28 18:07:09 CDT**. This archive is a snapshot, not a live dashboard.

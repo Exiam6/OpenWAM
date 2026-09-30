@@ -1,5 +1,7 @@
 # Greene deployment — OpenWAM research branch
 
+> **Current scheduling handoff:** [GPU02 temporal ownership — do not duplicate on Torch/Greene](GPU02_TEMPORAL_HANDOFF.md). Read before submitting temporal jobs. The deployment tables below are historical setup notes.
+
 Target machine adaptation of `research/progress-20260927` for the **NYU Greene**
 Slurm cluster (L40S sm_89 / H200 sm_90). Written 2026-09-28.
 

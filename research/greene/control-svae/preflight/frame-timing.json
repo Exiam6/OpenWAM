@@ -1,0 +1,757 @@
+{
+ "time": "2026-09-30T16:54:36-04:00",
+ "scope": "read-only training-data timing audit (105 episodes); no fitting, no heldout data",
+ "robotwin": {
+  "timestep_s": 0.004,
+  "save_freq_steps": 15,
+  "nominal_frame_s": 0.06,
+  "nominal_t4_s": 0.24,
+  "source": "benchmarks/RoboTwin/envs/_base_task.py:223,817-882; task_config/demo_clean.yml"
+ },
+ "adjacent_pairs": 23519,
+ "identical_joint_vector_pairs": 4186,
+ "identical_fraction": 0.178,
+ "t4_windows": 23204,
+ "t4_windows_with_identical_pair": 7245,
+ "t4_windows_fraction_irregular_lower_bound": 0.3122,
+ "t4_windows_fully_static": 1183,
+ "physical_horizon_verified": false,
+ "conclusion": "t+4 recorded frames is NOT a fixed 0.24 s: it spans <= 0.24 s and less whenever a window crosses a segment boundary (identical frames) or a post-step-0 frame (0.004 s). Exact per-window span needs sim-step timestamps (instrumented replay).",
+ "rows": [
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode10.hdf5",
+   "frames": 136,
+   "identical_pairs": 18,
+   "t4_windows": 132,
+   "t4_windows_with_identical_pair": 35
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode15.hdf5",
+   "frames": 139,
+   "identical_pairs": 21,
+   "t4_windows": 135,
+   "t4_windows_with_identical_pair": 38
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode16.hdf5",
+   "frames": 174,
+   "identical_pairs": 23,
+   "t4_windows": 170,
+   "t4_windows_with_identical_pair": 40
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode17.hdf5",
+   "frames": 148,
+   "identical_pairs": 20,
+   "t4_windows": 144,
+   "t4_windows_with_identical_pair": 37
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode18.hdf5",
+   "frames": 144,
+   "identical_pairs": 23,
+   "t4_windows": 140,
+   "t4_windows_with_identical_pair": 40
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode20.hdf5",
+   "frames": 136,
+   "identical_pairs": 21,
+   "t4_windows": 132,
+   "t4_windows_with_identical_pair": 38
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode21.hdf5",
+   "frames": 144,
+   "identical_pairs": 22,
+   "t4_windows": 140,
+   "t4_windows_with_identical_pair": 39
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode23.hdf5",
+   "frames": 157,
+   "identical_pairs": 22,
+   "t4_windows": 153,
+   "t4_windows_with_identical_pair": 39
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode24.hdf5",
+   "frames": 145,
+   "identical_pairs": 21,
+   "t4_windows": 141,
+   "t4_windows_with_identical_pair": 38
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode25.hdf5",
+   "frames": 134,
+   "identical_pairs": 21,
+   "t4_windows": 130,
+   "t4_windows_with_identical_pair": 38
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode26.hdf5",
+   "frames": 148,
+   "identical_pairs": 20,
+   "t4_windows": 144,
+   "t4_windows_with_identical_pair": 37
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode27.hdf5",
+   "frames": 144,
+   "identical_pairs": 18,
+   "t4_windows": 140,
+   "t4_windows_with_identical_pair": 35
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode28.hdf5",
+   "frames": 139,
+   "identical_pairs": 20,
+   "t4_windows": 135,
+   "t4_windows_with_identical_pair": 37
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode29.hdf5",
+   "frames": 153,
+   "identical_pairs": 21,
+   "t4_windows": 149,
+   "t4_windows_with_identical_pair": 38
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode3.hdf5",
+   "frames": 149,
+   "identical_pairs": 19,
+   "t4_windows": 145,
+   "t4_windows_with_identical_pair": 36
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode30.hdf5",
+   "frames": 144,
+   "identical_pairs": 22,
+   "t4_windows": 140,
+   "t4_windows_with_identical_pair": 39
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode31.hdf5",
+   "frames": 142,
+   "identical_pairs": 21,
+   "t4_windows": 138,
+   "t4_windows_with_identical_pair": 38
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode32.hdf5",
+   "frames": 136,
+   "identical_pairs": 22,
+   "t4_windows": 132,
+   "t4_windows_with_identical_pair": 39
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode34.hdf5",
+   "frames": 145,
+   "identical_pairs": 21,
+   "t4_windows": 141,
+   "t4_windows_with_identical_pair": 38
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode37.hdf5",
+   "frames": 144,
+   "identical_pairs": 23,
+   "t4_windows": 140,
+   "t4_windows_with_identical_pair": 40
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode38.hdf5",
+   "frames": 145,
+   "identical_pairs": 21,
+   "t4_windows": 141,
+   "t4_windows_with_identical_pair": 38
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode39.hdf5",
+   "frames": 139,
+   "identical_pairs": 22,
+   "t4_windows": 135,
+   "t4_windows_with_identical_pair": 39
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode4.hdf5",
+   "frames": 152,
+   "identical_pairs": 23,
+   "t4_windows": 148,
+   "t4_windows_with_identical_pair": 40
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode40.hdf5",
+   "frames": 143,
+   "identical_pairs": 21,
+   "t4_windows": 139,
+   "t4_windows_with_identical_pair": 38
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode41.hdf5",
+   "frames": 150,
+   "identical_pairs": 22,
+   "t4_windows": 146,
+   "t4_windows_with_identical_pair": 39
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode42.hdf5",
+   "frames": 143,
+   "identical_pairs": 21,
+   "t4_windows": 139,
+   "t4_windows_with_identical_pair": 38
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode43.hdf5",
+   "frames": 147,
+   "identical_pairs": 20,
+   "t4_windows": 143,
+   "t4_windows_with_identical_pair": 37
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode44.hdf5",
+   "frames": 143,
+   "identical_pairs": 22,
+   "t4_windows": 139,
+   "t4_windows_with_identical_pair": 39
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode45.hdf5",
+   "frames": 145,
+   "identical_pairs": 22,
+   "t4_windows": 141,
+   "t4_windows_with_identical_pair": 39
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode46.hdf5",
+   "frames": 143,
+   "identical_pairs": 21,
+   "t4_windows": 139,
+   "t4_windows_with_identical_pair": 38
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode47.hdf5",
+   "frames": 140,
+   "identical_pairs": 20,
+   "t4_windows": 136,
+   "t4_windows_with_identical_pair": 37
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode49.hdf5",
+   "frames": 142,
+   "identical_pairs": 20,
+   "t4_windows": 138,
+   "t4_windows_with_identical_pair": 37
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode5.hdf5",
+   "frames": 148,
+   "identical_pairs": 21,
+   "t4_windows": 144,
+   "t4_windows_with_identical_pair": 38
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode7.hdf5",
+   "frames": 137,
+   "identical_pairs": 22,
+   "t4_windows": 133,
+   "t4_windows_with_identical_pair": 39
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode9.hdf5",
+   "frames": 153,
+   "identical_pairs": 22,
+   "t4_windows": 149,
+   "t4_windows_with_identical_pair": 39
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode10.hdf5",
+   "frames": 291,
+   "identical_pairs": 56,
+   "t4_windows": 287,
+   "t4_windows_with_identical_pair": 95
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode15.hdf5",
+   "frames": 281,
+   "identical_pairs": 51,
+   "t4_windows": 277,
+   "t4_windows_with_identical_pair": 90
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode16.hdf5",
+   "frames": 289,
+   "identical_pairs": 51,
+   "t4_windows": 285,
+   "t4_windows_with_identical_pair": 90
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode17.hdf5",
+   "frames": 278,
+   "identical_pairs": 55,
+   "t4_windows": 274,
+   "t4_windows_with_identical_pair": 94
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode18.hdf5",
+   "frames": 289,
+   "identical_pairs": 52,
+   "t4_windows": 285,
+   "t4_windows_with_identical_pair": 91
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode20.hdf5",
+   "frames": 273,
+   "identical_pairs": 52,
+   "t4_windows": 269,
+   "t4_windows_with_identical_pair": 91
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode21.hdf5",
+   "frames": 293,
+   "identical_pairs": 55,
+   "t4_windows": 289,
+   "t4_windows_with_identical_pair": 94
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode23.hdf5",
+   "frames": 283,
+   "identical_pairs": 55,
+   "t4_windows": 279,
+   "t4_windows_with_identical_pair": 94
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode24.hdf5",
+   "frames": 274,
+   "identical_pairs": 52,
+   "t4_windows": 270,
+   "t4_windows_with_identical_pair": 91
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode25.hdf5",
+   "frames": 275,
+   "identical_pairs": 52,
+   "t4_windows": 271,
+   "t4_windows_with_identical_pair": 91
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode26.hdf5",
+   "frames": 279,
+   "identical_pairs": 53,
+   "t4_windows": 275,
+   "t4_windows_with_identical_pair": 92
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode27.hdf5",
+   "frames": 276,
+   "identical_pairs": 51,
+   "t4_windows": 272,
+   "t4_windows_with_identical_pair": 90
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode28.hdf5",
+   "frames": 279,
+   "identical_pairs": 53,
+   "t4_windows": 275,
+   "t4_windows_with_identical_pair": 92
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode29.hdf5",
+   "frames": 315,
+   "identical_pairs": 58,
+   "t4_windows": 311,
+   "t4_windows_with_identical_pair": 98
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode3.hdf5",
+   "frames": 278,
+   "identical_pairs": 55,
+   "t4_windows": 274,
+   "t4_windows_with_identical_pair": 94
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode30.hdf5",
+   "frames": 290,
+   "identical_pairs": 53,
+   "t4_windows": 286,
+   "t4_windows_with_identical_pair": 92
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode31.hdf5",
+   "frames": 290,
+   "identical_pairs": 55,
+   "t4_windows": 286,
+   "t4_windows_with_identical_pair": 95
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode32.hdf5",
+   "frames": 286,
+   "identical_pairs": 55,
+   "t4_windows": 282,
+   "t4_windows_with_identical_pair": 94
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode34.hdf5",
+   "frames": 288,
+   "identical_pairs": 54,
+   "t4_windows": 284,
+   "t4_windows_with_identical_pair": 93
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode37.hdf5",
+   "frames": 278,
+   "identical_pairs": 53,
+   "t4_windows": 274,
+   "t4_windows_with_identical_pair": 92
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode38.hdf5",
+   "frames": 277,
+   "identical_pairs": 52,
+   "t4_windows": 273,
+   "t4_windows_with_identical_pair": 91
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode39.hdf5",
+   "frames": 301,
+   "identical_pairs": 56,
+   "t4_windows": 297,
+   "t4_windows_with_identical_pair": 95
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode4.hdf5",
+   "frames": 287,
+   "identical_pairs": 55,
+   "t4_windows": 283,
+   "t4_windows_with_identical_pair": 95
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode40.hdf5",
+   "frames": 279,
+   "identical_pairs": 51,
+   "t4_windows": 275,
+   "t4_windows_with_identical_pair": 90
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode41.hdf5",
+   "frames": 278,
+   "identical_pairs": 54,
+   "t4_windows": 274,
+   "t4_windows_with_identical_pair": 93
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode42.hdf5",
+   "frames": 284,
+   "identical_pairs": 54,
+   "t4_windows": 280,
+   "t4_windows_with_identical_pair": 93
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode43.hdf5",
+   "frames": 279,
+   "identical_pairs": 54,
+   "t4_windows": 275,
+   "t4_windows_with_identical_pair": 93
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode44.hdf5",
+   "frames": 276,
+   "identical_pairs": 55,
+   "t4_windows": 272,
+   "t4_windows_with_identical_pair": 94
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode45.hdf5",
+   "frames": 285,
+   "identical_pairs": 54,
+   "t4_windows": 281,
+   "t4_windows_with_identical_pair": 93
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode46.hdf5",
+   "frames": 277,
+   "identical_pairs": 50,
+   "t4_windows": 273,
+   "t4_windows_with_identical_pair": 89
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode47.hdf5",
+   "frames": 281,
+   "identical_pairs": 53,
+   "t4_windows": 277,
+   "t4_windows_with_identical_pair": 92
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode49.hdf5",
+   "frames": 276,
+   "identical_pairs": 53,
+   "t4_windows": 272,
+   "t4_windows_with_identical_pair": 92
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode5.hdf5",
+   "frames": 280,
+   "identical_pairs": 54,
+   "t4_windows": 276,
+   "t4_windows_with_identical_pair": 93
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode7.hdf5",
+   "frames": 277,
+   "identical_pairs": 54,
+   "t4_windows": 273,
+   "t4_windows_with_identical_pair": 93
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode9.hdf5",
+   "frames": 280,
+   "identical_pairs": 53,
+   "t4_windows": 276,
+   "t4_windows_with_identical_pair": 92
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode10.hdf5",
+   "frames": 249,
+   "identical_pairs": 44,
+   "t4_windows": 245,
+   "t4_windows_with_identical_pair": 76
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode15.hdf5",
+   "frames": 233,
+   "identical_pairs": 41,
+   "t4_windows": 229,
+   "t4_windows_with_identical_pair": 69
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode16.hdf5",
+   "frames": 246,
+   "identical_pairs": 45,
+   "t4_windows": 242,
+   "t4_windows_with_identical_pair": 77
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode17.hdf5",
+   "frames": 240,
+   "identical_pairs": 45,
+   "t4_windows": 236,
+   "t4_windows_with_identical_pair": 77
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode18.hdf5",
+   "frames": 246,
+   "identical_pairs": 44,
+   "t4_windows": 242,
+   "t4_windows_with_identical_pair": 76
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode20.hdf5",
+   "frames": 246,
+   "identical_pairs": 46,
+   "t4_windows": 242,
+   "t4_windows_with_identical_pair": 78
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode21.hdf5",
+   "frames": 258,
+   "identical_pairs": 44,
+   "t4_windows": 254,
+   "t4_windows_with_identical_pair": 76
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode23.hdf5",
+   "frames": 233,
+   "identical_pairs": 42,
+   "t4_windows": 229,
+   "t4_windows_with_identical_pair": 71
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode24.hdf5",
+   "frames": 230,
+   "identical_pairs": 43,
+   "t4_windows": 226,
+   "t4_windows_with_identical_pair": 72
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode25.hdf5",
+   "frames": 248,
+   "identical_pairs": 46,
+   "t4_windows": 244,
+   "t4_windows_with_identical_pair": 78
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode26.hdf5",
+   "frames": 270,
+   "identical_pairs": 47,
+   "t4_windows": 266,
+   "t4_windows_with_identical_pair": 81
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode27.hdf5",
+   "frames": 238,
+   "identical_pairs": 45,
+   "t4_windows": 234,
+   "t4_windows_with_identical_pair": 74
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode28.hdf5",
+   "frames": 293,
+   "identical_pairs": 49,
+   "t4_windows": 289,
+   "t4_windows_with_identical_pair": 83
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode29.hdf5",
+   "frames": 245,
+   "identical_pairs": 45,
+   "t4_windows": 241,
+   "t4_windows_with_identical_pair": 77
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode3.hdf5",
+   "frames": 254,
+   "identical_pairs": 46,
+   "t4_windows": 250,
+   "t4_windows_with_identical_pair": 78
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode30.hdf5",
+   "frames": 247,
+   "identical_pairs": 47,
+   "t4_windows": 243,
+   "t4_windows_with_identical_pair": 79
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode31.hdf5",
+   "frames": 240,
+   "identical_pairs": 45,
+   "t4_windows": 236,
+   "t4_windows_with_identical_pair": 77
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode32.hdf5",
+   "frames": 251,
+   "identical_pairs": 46,
+   "t4_windows": 247,
+   "t4_windows_with_identical_pair": 78
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode34.hdf5",
+   "frames": 246,
+   "identical_pairs": 44,
+   "t4_windows": 242,
+   "t4_windows_with_identical_pair": 76
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode37.hdf5",
+   "frames": 250,
+   "identical_pairs": 45,
+   "t4_windows": 246,
+   "t4_windows_with_identical_pair": 77
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode38.hdf5",
+   "frames": 246,
+   "identical_pairs": 45,
+   "t4_windows": 242,
+   "t4_windows_with_identical_pair": 77
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode39.hdf5",
+   "frames": 238,
+   "identical_pairs": 42,
+   "t4_windows": 234,
+   "t4_windows_with_identical_pair": 71
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode4.hdf5",
+   "frames": 232,
+   "identical_pairs": 43,
+   "t4_windows": 228,
+   "t4_windows_with_identical_pair": 72
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode40.hdf5",
+   "frames": 246,
+   "identical_pairs": 45,
+   "t4_windows": 242,
+   "t4_windows_with_identical_pair": 77
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode41.hdf5",
+   "frames": 248,
+   "identical_pairs": 45,
+   "t4_windows": 244,
+   "t4_windows_with_identical_pair": 77
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode42.hdf5",
+   "frames": 228,
+   "identical_pairs": 45,
+   "t4_windows": 224,
+   "t4_windows_with_identical_pair": 74
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode43.hdf5",
+   "frames": 247,
+   "identical_pairs": 45,
+   "t4_windows": 243,
+   "t4_windows_with_identical_pair": 77
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode44.hdf5",
+   "frames": 264,
+   "identical_pairs": 46,
+   "t4_windows": 260,
+   "t4_windows_with_identical_pair": 78
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode45.hdf5",
+   "frames": 249,
+   "identical_pairs": 47,
+   "t4_windows": 245,
+   "t4_windows_with_identical_pair": 79
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode46.hdf5",
+   "frames": 250,
+   "identical_pairs": 46,
+   "t4_windows": 246,
+   "t4_windows_with_identical_pair": 78
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode47.hdf5",
+   "frames": 254,
+   "identical_pairs": 47,
+   "t4_windows": 250,
+   "t4_windows_with_identical_pair": 79
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode49.hdf5",
+   "frames": 239,
+   "identical_pairs": 44,
+   "t4_windows": 235,
+   "t4_windows_with_identical_pair": 73
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode5.hdf5",
+   "frames": 244,
+   "identical_pairs": 44,
+   "t4_windows": 240,
+   "t4_windows_with_identical_pair": 73
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode7.hdf5",
+   "frames": 258,
+   "identical_pairs": 47,
+   "t4_windows": 254,
+   "t4_windows_with_identical_pair": 79
+  },
+  {
+   "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode9.hdf5",
+   "frames": 245,
+   "identical_pairs": 44,
+   "t4_windows": 241,
+   "t4_windows_with_identical_pair": 76
+  }
+ ]
+}

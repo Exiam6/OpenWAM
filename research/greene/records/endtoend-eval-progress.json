@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-09-30T16:15:13-04:00",
+  "updated_at": "2026-09-30T16:15:30-04:00",
   "slurm_array": "18893528",
   "array_task_states": {
-    "NOT_SUBMITTED": 81
+    "PENDING": 81
   },
   "protocol": "research/greene/endtoend-eval/protocol.json",
   "deadline": "2026-10-04T12:00:00-04:00",

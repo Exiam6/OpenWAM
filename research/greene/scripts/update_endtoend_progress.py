@@ -37,7 +37,14 @@ def array_tasks(array):
     tasks = {}
     for line in out.splitlines():
         raw, jid, state = line.split("|")[:3]
-        if "_" in jid and "[" not in jid:
+        if "_" not in jid:
+            continue
+        if "[" in jid:        # unexpanded pending tasks, e.g. 123_[5-80%6]
+            for part in jid.split("[")[1].split("%")[0].rstrip("]").split(","):
+                lo, _, hi = part.partition("-")
+                for i in range(int(lo), int(hi or lo) + 1):
+                    tasks.setdefault(i, (None, "PENDING"))
+        else:
             tasks[int(jid.split("_")[1])] = (raw, state.split()[0])
     return tasks
 

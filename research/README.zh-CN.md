@@ -52,7 +52,7 @@
 <!-- greene-endtoend:start -->
 ### Greene endtoend 匹配表征重评（自动更新）
 
-更新于 2026-09-30T16:15:30-04:00；Slurm 数组 18893528（PENDING 81）；协议 `research/greene/endtoend-eval/protocol.json`（已冻结，截止 2026-10-04T12:00:00-04:00）。
+更新于 2026-09-30T16:16:44-04:00；Slurm 数组 18893528（PENDING 81）；协议 `research/greene/endtoend-eval/protocol.json`（已冻结，截止 2026-10-04T12:00:00-04:00）。
 
 | 路线 | clean | gaussian σ0.10 | head yaw 5° |
 | --- | --- | --- | --- |

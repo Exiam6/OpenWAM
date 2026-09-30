@@ -38,8 +38,8 @@ for task in ['adjust_bottle','handover_block','place_object_basket']:
     probe=dict(example,lang='Lift the bottle. Training-only cache verification case '+str(case)+'.')
     got=model.step(probe);assert got.size==20 and np.isfinite(got).all()
    interface.reset_model(model);cur['step']=0;recomputed=model.step(example)
-   assert np.array_equal(reference,recomputed),'WS action changed after33distinct prompts'
-   multiprompt={'distinct_prompts':33,'all_finite':True,'post_eviction_action_exact':True}
+   assert np.array_equal(reference,recomputed),'WS action changed after 33 distinct prompts'
+   multiprompt={'distinct_prompts':33,'all_finite':True,'action_exact_after_33_prompts':True,'evictions':0}
    print('MULTIPROMPT_GATE_PASSED',flush=True)
 
   pose=rotate_head_camera(env,10);altered=env.get_obs();head_mae=float(np.abs(altered['observation']['head_camera']['rgb'].astype(float)-obs['observation']['head_camera']['rgb'].astype(float)).mean());assert head_mae>1.,'Head camera pose change did not alter actual rendering'

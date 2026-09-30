@@ -27,6 +27,7 @@
 - **条件：** `clean`、`gaussian_sigma_0.10`、`head_camera_yaw_5deg`，和时间压缩研究一致。噪声和相机位姿的生成规则与原协议相同，所有方法、所有 seed 都用同一套。
 - **回合数：** 9 个 checkpoint × 3 任务 × 20 场景 × 3 条件 = **1620**。
 - **部署：** compile 关、DiT cache 关、denoise_steps 10、inference_horizon 8，使用原生任务步数上限，每回合墙钟上限 600 s。服务和评测代码来自 `research/experiments/scripts/endtoend/`，配合 `endtoend-20260923/OpenWAM` 代码快照，只做路径适配，改动另存为 Greene 版本并记录哈希。
+- **偏差（2026-09-30）：** 快照 `engine.py` 的 `_BoundedPromptEmbedCache` 首次淘汰即抛 KeyError（cm001 原 wan-seed42 评测即因此中止）。60 个评测场景含 42 个不同指令，每个 checkpoint 单一服务进程，故仅通过配置把 `optimization.prompt_embed_cache.maxsize` 由 32 调到 128，保证永不淘汰；快照代码不变，缓存只做文本嵌入的记忆化，不影响数值。
 - **动作随机数：** 和时间压缩研究一样，`SeedSequence([scene, training_seed, 811])`。
 - **渲染门槛：** 初始状态误差 ≤ 1e-6；每个相机的初始渲染 MAE ≤ 1（uint8），对照原机器的参考 PNG。不达标记为技术失败，然后继续下一个场景。
 

@@ -1,23 +1,23 @@
 {
-  "updated_at": "2026-09-30T17:37:00-04:00",
+  "updated_at": "2026-09-30T17:57:05-04:00",
   "slurm_array": "18893528",
   "array_task_states": {
-    "COMPLETED": 2,
-    "RUNNING": 5,
-    "PENDING": 74
+    "COMPLETED": 4,
+    "RUNNING": 6,
+    "PENDING": 71
   },
   "protocol": "research/greene/endtoend-eval/protocol.json",
   "deadline": "2026-10-04T12:00:00-04:00",
   "episodes_planned": 1620,
-  "episodes_complete": 65,
-  "successes": 36,
+  "episodes_complete": 124,
+  "successes": 66,
   "technical_failures": 0,
   "routes": {
     "wan": {
       "clean": {
         "planned": 180,
-        "complete": 31,
-        "successes": 12,
+        "complete": 50,
+        "successes": 17,
         "technical_failures": 0
       },
       "gaussian_sigma_0.10": {
@@ -36,8 +36,8 @@
     "svae": {
       "clean": {
         "planned": 180,
-        "complete": 20,
-        "successes": 16,
+        "complete": 40,
+        "successes": 29,
         "technical_failures": 0
       },
       "gaussian_sigma_0.10": {
@@ -56,8 +56,8 @@
     "pca": {
       "clean": {
         "planned": 180,
-        "complete": 14,
-        "successes": 8,
+        "complete": 34,
+        "successes": 20,
         "technical_failures": 0
       },
       "gaussian_sigma_0.10": {

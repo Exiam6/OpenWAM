@@ -1,0 +1,76 @@
+{
+  "updated_at": "2026-09-30T16:15:13-04:00",
+  "slurm_array": "18893528",
+  "array_task_states": {
+    "NOT_SUBMITTED": 81
+  },
+  "protocol": "research/greene/endtoend-eval/protocol.json",
+  "deadline": "2026-10-04T12:00:00-04:00",
+  "episodes_planned": 1620,
+  "episodes_complete": 0,
+  "successes": 0,
+  "technical_failures": 0,
+  "routes": {
+    "wan": {
+      "clean": {
+        "planned": 180,
+        "complete": 0,
+        "successes": 0,
+        "technical_failures": 0
+      },
+      "gaussian_sigma_0.10": {
+        "planned": 180,
+        "complete": 0,
+        "successes": 0,
+        "technical_failures": 0
+      },
+      "head_camera_yaw_5deg": {
+        "planned": 180,
+        "complete": 0,
+        "successes": 0,
+        "technical_failures": 0
+      }
+    },
+    "svae": {
+      "clean": {
+        "planned": 180,
+        "complete": 0,
+        "successes": 0,
+        "technical_failures": 0
+      },
+      "gaussian_sigma_0.10": {
+        "planned": 180,
+        "complete": 0,
+        "successes": 0,
+        "technical_failures": 0
+      },
+      "head_camera_yaw_5deg": {
+        "planned": 180,
+        "complete": 0,
+        "successes": 0,
+        "technical_failures": 0
+      }
+    },
+    "pca": {
+      "clean": {
+        "planned": 180,
+        "complete": 0,
+        "successes": 0,
+        "technical_failures": 0
+      },
+      "gaussian_sigma_0.10": {
+        "planned": 180,
+        "complete": 0,
+        "successes": 0,
+        "technical_failures": 0
+      },
+      "head_camera_yaw_5deg": {
+        "planned": 180,
+        "complete": 0,
+        "successes": 0,
+        "technical_failures": 0
+      }
+    }
+  },
+  "note": "Live counts, not a final report. Pooled over 3 seeds x 3 tasks; no differences, CIs or conclusions until all 1620 are complete and audited. 295M three-task setup only."
+}

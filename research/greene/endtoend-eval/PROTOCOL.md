@@ -1,4 +1,4 @@
-# Greene 重评 endtoend 匹配表征对照 — 协议草案（用户已确认，未冻结）
+# Greene 重评 endtoend 匹配表征对照 — 协议（用户已确认，2026-09-30 冻结为 `protocol.json`）
 
 创建于 2026-09-29。**用户于 2026-09-29 确认本草案，不做修改**（不加高斯 0.04 条件，场景数不变）。 资产到齐、开发门槛通过、用户确认之后，再冻结成 `protocol.json`，
 附代码哈希和绝对截止时间。冻结之前不跑任何评测场景。
@@ -52,9 +52,13 @@
 每回合约 80 s，共约 **36 L40S·h**。同时最多用 6 张 L40S（和组里共享的 48 卡上限不冲突），墙钟约 6–8 小时。
 每个 (checkpoint, 任务, 条件) 是一个有限的 Slurm 作业，跑完就退出，由 `update_progress.py` 自动更新进度。
 
-## 冻结前的门槛
+## 冻结前的门槛（全部完成）
 
-1. endtoend 资产到齐：`records/endtoend-transfer.json`，冻结哈希一致。
-2. 每条路线在开发场景上跑一次部署门槛：服务能起来、动作有限、提示缓存一致。
-3. 在 1 个 L40S 上跑 1 个开发场景的完整回合，确认耗时。
-4. ~~用户确认~~（已确认 2026-09-29）→ 写 `protocol.json`，内容包括参数、代码 sha256、截止时间。
+1. endtoend 资产到齐：`records/endtoend-transfer.json`，6/6 冻结哈希一致。✅
+2. 每条路线的部署门槛（seed42，开发场景 seed10，L40S）：wan Slurm 18854932（400 步未成功，完整跑完）、svae 18854933（131 步成功）、pca 18854934（152 步成功）；服务启动约 125–135 s，门槛含一次完整开发回合 210–270 s。✅
+3. 场景完整性：`scripts/verify_cohort.py` 对照冻结的 `fresh-cohort-integrity.json` 核对 150 个场景（hdf5、初始 head 帧编码、初始位姿签名、3 个 manifest），全部一致；每个评测作业开跑前重新核对。✅
+4. 用户确认（2026-09-29）→ `protocol.json` 冻结：参数、81 个单元的顺序、代码 sha256、截止 **2026-10-04 12:00 EDT**（截止时间草案未规定，冻结时定为约 4 天；只约束作业开始时间）。✅
+
+## 启动
+
+`sbatch --array=0-80%6 research/greene/sbatch/endtoend_array.sbatch`：每个数组任务 = 一个（checkpoint、任务、条件）单元，顺序为 clean → σ0.10 → yaw5°，便于中途不完整时各路线/种子仍均衡。进度由 `scripts/update_endtoend_progress.py`（`sbatch/endtoend_watcher.sbatch`，每 20 分钟）写入 `records/endtoend-eval-progress.json` 和 README。

@@ -44,6 +44,7 @@ def main():
  t=time.monotonic();got=sha(ckpt);assert got==v['checkpoint_sha256'],(ckpt,got);assert sha(Path(v['view'])/'config.yaml')==v['view_config_sha256']
  code={str(p):sha(p) for p in sorted(SCRIPT.glob('*.py'))}
  write(out/'run-record.json',{'time':now(),'host':socket.gethostname(),'slurm_job':os.environ.get('SLURM_JOB_ID'),'route':a.route,'seed':a.seed,'checkpoint':str(ckpt),'checkpoint_sha256':got,'checkpoint_hash_seconds':time.monotonic()-t,'gate_only':a.gate_only,'cells':cells,'code_sha256':code,'protocol':protocol})
+ if cells:child([BENCH_PY,'-u',str(SCRIPT/'verify_cohort.py'),'--output',str(out/'cohort-integrity.json')],dict(os.environ),out/'cohort-integrity.log',1800,REPO)
  pci=subprocess.check_output(['nvidia-smi','--query-gpu=pci.bus_id','--format=csv,noheader'],text=True).strip().splitlines();assert len(pci)==1,pci
  port=19400+int(os.environ.get('SLURM_JOB_ID','0'))%500;probe=socket.socket();probe.bind(('127.0.0.1',port));probe.close()
  env=dict(os.environ,PYTHONPATH=str(E/'OpenWAM'),HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',TOKENIZERS_PARALLELISM='false',WANDB_MODE='disabled')

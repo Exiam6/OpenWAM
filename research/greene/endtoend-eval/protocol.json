@@ -1,0 +1,625 @@
+{
+  "version": 1,
+  "frozen": true,
+  "frozen_at": "2026-09-30T16:13:42-04:00",
+  "deadline": "2026-10-04T12:00:00-04:00",
+  "name": "endtoend matched-representation re-evaluation (Greene)",
+  "design": "research/greene/endtoend-eval/PROTOCOL.md (user-confirmed as-is 2026-09-29; this file is its frozen form)",
+  "question": "Closed-loop success of compressed representations (SVAE48, PCA48) vs the original OpenWAM representation (Wan48) under the fully matched 295M three-task endtoend setup (same init, same 105 trajectories, same per-seed batch stream, 6000 updates).",
+  "checkpoints": {
+    "wan-seed42": {
+      "checkpoint_sha256": "b9cf3c71294ec0e545c5481e10f49665b28c7d6a1d45852342c2327ab4faac52",
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/wan-seed42"
+    },
+    "wan-seed43": {
+      "checkpoint_sha256": "5514b15f2d0f665c69c4703b0e856a82f11e8cbbe032f2ae3f63a10ea8743bce",
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/wan-seed43"
+    },
+    "wan-seed44": {
+      "checkpoint_sha256": "e9dd53f4a96da7801b9204060c0a1720b5e55c6d190894694a020f880060ec15",
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/wan-seed44"
+    },
+    "svae-seed42": {
+      "checkpoint_sha256": "4cbe7625f38a85d9d18c8340b469f746ebe7a3015df7afd23204504ad2f696a7",
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/svae-seed42"
+    },
+    "svae-seed43": {
+      "checkpoint_sha256": "1424a145c1a6bae8b945705540436d6f4a0680dd88caca16a414f7563e3eccda",
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/svae-seed43"
+    },
+    "svae-seed44": {
+      "checkpoint_sha256": "a05abc58dfa56041cd20775512f9f0bf27c0f0590f796ae53886b42b88e5421f",
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/svae-seed44"
+    },
+    "pca-seed42": {
+      "checkpoint_sha256": "7504a93ad4b6be01c2bf1592069d403b223c1429cf2a64e0853b7e11fbbf7c48",
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/pca-seed42"
+    },
+    "pca-seed43": {
+      "checkpoint_sha256": "2502bfd7b1986cf16b657efc48dce79a48e8791d558af87d4f6a765a2b5fc7c2",
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/pca-seed43"
+    },
+    "pca-seed44": {
+      "checkpoint_sha256": "cef39a8b994ca37a8a88ad4184f7edec6b1b7c2209eab1140db9465d82ce90e6",
+      "view": "/scratch/zz4330/openwam-runtime/endtoend-eval/ckpt/pca-seed44"
+    }
+  },
+  "serving": "snapshot endtoend-20260923/OpenWAM; compile off, DiT cache off, denoise_steps 10, inference_horizon 8; prompt_embed_cache.maxsize 128 (deviation: snapshot eviction KeyError, see PROTOCOL.md)",
+  "evaluation": {
+    "tasks": [
+      "adjust_bottle",
+      "handover_block",
+      "place_object_basket"
+    ],
+    "conditions": [
+      "clean",
+      "gaussian_sigma_0.10",
+      "head_camera_yaw_5deg"
+    ],
+    "scenes_per_task": 20,
+    "cohort": "first 20 accepted per task of the sealed endtoend cohort (same 60 scenes as the temporal study and the Greene official baseline), verified per job against fresh-cohort-integrity.json",
+    "episodes": 1620,
+    "action_rng": "SeedSequence([scene, training_seed, 811])",
+    "success": "native RoboTwin eval_success, native step limits, 600 s per-episode wall limit",
+    "render_gate": "initial state atol 1e-6; per-camera initial render MAE <= 1 uint8 vs reference PNGs; mismatch = technical failure, next scene continues"
+  },
+  "analysis": {
+    "primary": [
+      "SVAE48 - Wan48",
+      "PCA48 - Wan48"
+    ],
+    "secondary": [
+      "PCA48 - SVAE48"
+    ],
+    "metric": "task-equal-weight success-rate difference, reported per condition",
+    "ci": "scene x seed crossed paired bootstrap, 10000 resamples, seed 426; per-seed effects reported",
+    "claim_rule": "all 1620 valid outcomes present (technical failures never dropped), 95% CI lower bound > 0, and same sign in all 3 seeds; otherwise limited / negative / inconclusive",
+    "scope": "no extrapolation to 5B or the official 50-task benchmark",
+    "limitations": "these 60 scenes were used in the old 270-episode evaluation and the temporal study; 3 seeds"
+  },
+  "cells": [
+    [
+      "wan",
+      42,
+      "adjust_bottle",
+      "clean"
+    ],
+    [
+      "svae",
+      42,
+      "adjust_bottle",
+      "clean"
+    ],
+    [
+      "pca",
+      42,
+      "adjust_bottle",
+      "clean"
+    ],
+    [
+      "wan",
+      43,
+      "adjust_bottle",
+      "clean"
+    ],
+    [
+      "svae",
+      43,
+      "adjust_bottle",
+      "clean"
+    ],
+    [
+      "pca",
+      43,
+      "adjust_bottle",
+      "clean"
+    ],
+    [
+      "wan",
+      44,
+      "adjust_bottle",
+      "clean"
+    ],
+    [
+      "svae",
+      44,
+      "adjust_bottle",
+      "clean"
+    ],
+    [
+      "pca",
+      44,
+      "adjust_bottle",
+      "clean"
+    ],
+    [
+      "wan",
+      42,
+      "handover_block",
+      "clean"
+    ],
+    [
+      "svae",
+      42,
+      "handover_block",
+      "clean"
+    ],
+    [
+      "pca",
+      42,
+      "handover_block",
+      "clean"
+    ],
+    [
+      "wan",
+      43,
+      "handover_block",
+      "clean"
+    ],
+    [
+      "svae",
+      43,
+      "handover_block",
+      "clean"
+    ],
+    [
+      "pca",
+      43,
+      "handover_block",
+      "clean"
+    ],
+    [
+      "wan",
+      44,
+      "handover_block",
+      "clean"
+    ],
+    [
+      "svae",
+      44,
+      "handover_block",
+      "clean"
+    ],
+    [
+      "pca",
+      44,
+      "handover_block",
+      "clean"
+    ],
+    [
+      "wan",
+      42,
+      "place_object_basket",
+      "clean"
+    ],
+    [
+      "svae",
+      42,
+      "place_object_basket",
+      "clean"
+    ],
+    [
+      "pca",
+      42,
+      "place_object_basket",
+      "clean"
+    ],
+    [
+      "wan",
+      43,
+      "place_object_basket",
+      "clean"
+    ],
+    [
+      "svae",
+      43,
+      "place_object_basket",
+      "clean"
+    ],
+    [
+      "pca",
+      43,
+      "place_object_basket",
+      "clean"
+    ],
+    [
+      "wan",
+      44,
+      "place_object_basket",
+      "clean"
+    ],
+    [
+      "svae",
+      44,
+      "place_object_basket",
+      "clean"
+    ],
+    [
+      "pca",
+      44,
+      "place_object_basket",
+      "clean"
+    ],
+    [
+      "wan",
+      42,
+      "adjust_bottle",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "svae",
+      42,
+      "adjust_bottle",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "pca",
+      42,
+      "adjust_bottle",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "wan",
+      43,
+      "adjust_bottle",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "svae",
+      43,
+      "adjust_bottle",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "pca",
+      43,
+      "adjust_bottle",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "wan",
+      44,
+      "adjust_bottle",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "svae",
+      44,
+      "adjust_bottle",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "pca",
+      44,
+      "adjust_bottle",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "wan",
+      42,
+      "handover_block",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "svae",
+      42,
+      "handover_block",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "pca",
+      42,
+      "handover_block",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "wan",
+      43,
+      "handover_block",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "svae",
+      43,
+      "handover_block",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "pca",
+      43,
+      "handover_block",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "wan",
+      44,
+      "handover_block",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "svae",
+      44,
+      "handover_block",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "pca",
+      44,
+      "handover_block",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "wan",
+      42,
+      "place_object_basket",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "svae",
+      42,
+      "place_object_basket",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "pca",
+      42,
+      "place_object_basket",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "wan",
+      43,
+      "place_object_basket",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "svae",
+      43,
+      "place_object_basket",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "pca",
+      43,
+      "place_object_basket",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "wan",
+      44,
+      "place_object_basket",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "svae",
+      44,
+      "place_object_basket",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "pca",
+      44,
+      "place_object_basket",
+      "gaussian_sigma_0.10"
+    ],
+    [
+      "wan",
+      42,
+      "adjust_bottle",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "svae",
+      42,
+      "adjust_bottle",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "pca",
+      42,
+      "adjust_bottle",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "wan",
+      43,
+      "adjust_bottle",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "svae",
+      43,
+      "adjust_bottle",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "pca",
+      43,
+      "adjust_bottle",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "wan",
+      44,
+      "adjust_bottle",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "svae",
+      44,
+      "adjust_bottle",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "pca",
+      44,
+      "adjust_bottle",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "wan",
+      42,
+      "handover_block",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "svae",
+      42,
+      "handover_block",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "pca",
+      42,
+      "handover_block",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "wan",
+      43,
+      "handover_block",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "svae",
+      43,
+      "handover_block",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "pca",
+      43,
+      "handover_block",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "wan",
+      44,
+      "handover_block",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "svae",
+      44,
+      "handover_block",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "pca",
+      44,
+      "handover_block",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "wan",
+      42,
+      "place_object_basket",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "svae",
+      42,
+      "place_object_basket",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "pca",
+      42,
+      "place_object_basket",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "wan",
+      43,
+      "place_object_basket",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "svae",
+      43,
+      "place_object_basket",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "pca",
+      43,
+      "place_object_basket",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "wan",
+      44,
+      "place_object_basket",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "svae",
+      44,
+      "place_object_basket",
+      "head_camera_yaw_5deg"
+    ],
+    [
+      "pca",
+      44,
+      "place_object_basket",
+      "head_camera_yaw_5deg"
+    ]
+  ],
+  "cell_order": "condition-major (clean first), then task, seed, route; one Slurm array task per cell, at most 6 concurrent",
+  "launch": "sbatch --array=0-80%6 research/greene/sbatch/endtoend_array.sbatch",
+  "deploy_gates": {
+    "wan": {
+      "slurm_job": "18854932",
+      "run_dir": "/scratch/zz4330/openwam-runtime/runs/endtoend-gate-wan-seed42-18854932",
+      "development_rollout": {
+        "completed": true,
+        "success": false,
+        "steps": 400,
+        "scene": "development seed10 only"
+      },
+      "server_startup_seconds": 125.3,
+      "preflight_seconds": 270.3
+    },
+    "svae": {
+      "slurm_job": "18854933",
+      "run_dir": "/scratch/zz4330/openwam-runtime/runs/endtoend-gate-svae-seed42-18854933",
+      "development_rollout": {
+        "completed": true,
+        "success": true,
+        "steps": 131,
+        "scene": "development seed10 only"
+      },
+      "server_startup_seconds": 135.3,
+      "preflight_seconds": 210.2
+    },
+    "pca": {
+      "slurm_job": "18854934",
+      "run_dir": "/scratch/zz4330/openwam-runtime/runs/endtoend-gate-pca-seed42-18854934",
+      "development_rollout": {
+        "completed": true,
+        "success": true,
+        "steps": 152,
+        "scene": "development seed10 only"
+      },
+      "server_startup_seconds": 125.3,
+      "preflight_seconds": 225.3
+    }
+  },
+  "code_sha256": {
+    "/scratch/zz4330/OpenWAM/research/greene/endtoend-eval/scripts/build_view.py": "b295a6909f5d9fd9b565444607c767aad65059181482f66465c1492262286692",
+    "/scratch/zz4330/OpenWAM/research/greene/endtoend-eval/scripts/collect_scene.py": "f71efc2b6ab94d926ec1ace41c6824422dd159eeb1727c0e7178c5808b75b491",
+    "/scratch/zz4330/OpenWAM/research/greene/endtoend-eval/scripts/evaluate_policy.py": "83e0db9621626b4dab45d61b344553f93b4d81ea9eaca03c648c828935ca622b",
+    "/scratch/zz4330/OpenWAM/research/greene/endtoend-eval/scripts/migration_render.py": "399be93982f219302362fef7e7e473772c55e57945f28d7505fa5b123b84a4dc",
+    "/scratch/zz4330/OpenWAM/research/greene/endtoend-eval/scripts/run_cell.py": "54e968bde6f0198799ea4c3fabe08684448a66aa681a0e6366ff734caa033402",
+    "/scratch/zz4330/OpenWAM/research/greene/endtoend-eval/scripts/serve_policy.py": "ef8ef548841b054ce4d0e13767efdfef34970bed81207957f2bf7de7ff6a6d44",
+    "/scratch/zz4330/OpenWAM/research/greene/endtoend-eval/scripts/simulation_preflight.py": "f8f537d45d8451358f99e9f6ec5233d4a5cd97a30a083dece627ede1a4f5cf61",
+    "/scratch/zz4330/OpenWAM/research/greene/endtoend-eval/scripts/verify_cohort.py": "f07b3e37e6c599af1da2a9a29761d7697e873657235ac6b8d38289582db69546",
+    "/scratch/zz4330/OpenWAM/research/greene/endtoend-eval/PROTOCOL.md": "6072e2732cc3b43595f6c24845fd784da3e29e29b94eadeff9296d23fb9241f1",
+    "/scratch/zz4330/OpenWAM/research/greene/sbatch/endtoend_cell.sbatch": "22e1e07153e910a93285838a864bc9b663ac9521f4749b8022c94238ab0f57ba",
+    "/scratch/zz4330/OpenWAM/research/greene/sbatch/endtoend_array.sbatch": "07f00c8c94706aae6e5db22688392cb1c13fbeb923ccc9bcb31fc4cf24fe6033",
+    "/scratch/zz4330/OpenWAM/research/greene/records/endtoend-view.json": "c42d81291b264d95ed6b26116dac3fa9a504bfb8358d35d573b90adc17e560c1",
+    "/scratch/zz4330/OpenWAM/research/experiments/studies/endtoend-20260923/fresh-cohort-integrity.json": "b067c40f8acb744b532982584a22a3e5769572030e089c61b828025f8bba1573"
+  },
+  "cell_isolation": "endtoend checkpoints only; GPU02 evaluates temporal checkpoints; no shared cell. The old 270 cm009 episodes are reported separately, never merged or selected between.",
+  "failures": "retained, never auto-retried; deadline never extended"
+}

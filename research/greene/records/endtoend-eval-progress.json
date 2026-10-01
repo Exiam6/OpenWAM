@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-01T02:39:58-04:00",
+  "updated_at": "2026-10-01T03:00:06-04:00",
   "slurm_array": "18893528",
   "array_task_states": {
-    "COMPLETED": 50,
+    "COMPLETED": 53,
     "RUNNING": 6,
-    "PENDING": 25
+    "PENDING": 22
   },
   "protocol": "research/greene/endtoend-eval/protocol.json",
   "deadline": "2026-10-04T12:00:00-04:00",
   "episodes_planned": 1620,
-  "episodes_complete": 1067,
-  "successes": 221,
+  "episodes_complete": 1116,
+  "successes": 235,
   "technical_failures": 0,
   "routes": {
     "wan": {
@@ -22,14 +22,14 @@
       },
       "gaussian_sigma_0.10": {
         "planned": 180,
-        "complete": 175,
+        "complete": 180,
         "successes": 22,
         "technical_failures": 0
       },
       "head_camera_yaw_5deg": {
         "planned": 180,
-        "complete": 12,
-        "successes": 5,
+        "complete": 20,
+        "successes": 6,
         "technical_failures": 0
       }
     },
@@ -42,14 +42,14 @@
       },
       "gaussian_sigma_0.10": {
         "planned": 180,
-        "complete": 172,
+        "complete": 178,
         "successes": 47,
         "technical_failures": 0
       },
       "head_camera_yaw_5deg": {
         "planned": 180,
-        "complete": 0,
-        "successes": 0,
+        "complete": 14,
+        "successes": 8,
         "technical_failures": 0
       }
     },
@@ -62,14 +62,14 @@
       },
       "gaussian_sigma_0.10": {
         "planned": 180,
-        "complete": 168,
+        "complete": 176,
         "successes": 32,
         "technical_failures": 0
       },
       "head_camera_yaw_5deg": {
         "planned": 180,
-        "complete": 0,
-        "successes": 0,
+        "complete": 8,
+        "successes": 5,
         "technical_failures": 0
       }
     }

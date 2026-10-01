@@ -4,7 +4,7 @@ A frozen per-token S-VAE (:mod:`openwam.model.video_backbone.encoder.svae.model`
 that compresses an encoder's raw per-token features to a smaller ``z_dim``. Any
 encoder MAY opt in by holding ``self._svae = reducer.build(...)`` and routing its
 ``batch_encode`` / ``from_skeleton`` / ``save_deploy_assets`` through these
-functions; currently only :class:`VJEPA21VideoEncoder` does. With ``svae=None``
+functions; DINOv3 and V-JEPA 2.1 both do. With ``svae=None``
 every function is a no-op / passthrough, so a non-opting encoder's
 ``batch_encode`` / ``spec`` / ``state_dict`` are bit-unchanged.
 """
@@ -32,6 +32,8 @@ def build(
     svae_path: str | None,
     svae_target_dim: int | None,
     svae_config: dict | None,
+    *,
+    expected_input_dim: int | None = None,
 ) -> SVAE | None:
     """Build the optional frozen S-VAE reducer from one of three sources.
 
@@ -40,6 +42,9 @@ def build(
       sidecar config dict; the architecture's strict ``load_checkpoint`` fills
       the weights immediately after construction.
     * neither — disabled (raw passthrough; ``z_dim`` stays ``embed_dim``).
+
+    When supplied, ``expected_input_dim`` checks the reducer against the host
+    encoder's raw feature width before any frames are encoded.
 
     Always returned frozen and in eval mode; :func:`reduce` calls
     :meth:`SVAE.encode_mean` (deterministic) so a recursive ``host.train()``
@@ -53,6 +58,11 @@ def build(
         svae = build_svae(dict(svae_config))
     else:
         return None
+    if expected_input_dim is not None and int(expected_input_dim) != svae.input_dim:
+        raise ValueError(
+            f"S-VAE input_dim ({svae.input_dim}) does not match the encoder's raw feature width "
+            f"({expected_input_dim}). Use an S-VAE trained on this encoder's pooled features."
+        )
     if svae_target_dim is not None and int(svae_target_dim) != svae.latent_dim:
         raise ValueError(
             f"svae_target_dim ({svae_target_dim}) does not match the S-VAE latent_dim ({svae.latent_dim})."

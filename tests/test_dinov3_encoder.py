@@ -520,3 +520,25 @@ def test_DS9_disabled_is_passthrough():
     z = raw.batch_encode(torch.zeros(1, 3, 9, 32, 32))
     assert z.shape == (1, 8, 3, 2, 2)  # unchanged raw-dim behaviour
     assert raw._svae is None
+
+
+@pytest.mark.parametrize("source", ["config", "checkpoint"])
+def test_svae_input_dim_mismatch_rejected_at_construction(source, tmp_path):
+    from openwam.model.video_backbone.encoder.dinov3 import DinoV3VideoEncoder
+    from openwam.model.video_backbone.encoder.svae import _CHECKPOINT_FORMAT_VERSION, SVAE
+
+    cfg = _svae_cfg(input_dim=16, latent_dim=4)
+    if source == "config":
+        kwargs = {"svae_config": cfg}
+    else:
+        path = tmp_path / "svae.pt"
+        torch.save(
+            {"format_version": _CHECKPOINT_FORMAT_VERSION, "model_config": cfg, "state_dict": SVAE(**cfg).state_dict()},
+            path,
+        )
+        kwargs = {"svae_path": str(path)}
+
+    with pytest.raises(ValueError, match=r"S-VAE input_dim \(16\).*encoder.*\(8\)"):
+        DinoV3VideoEncoder(
+            _MockDinoViT(embed_dim=8), embed_dim=8, patch_size=16, num_register_tokens=0, **kwargs
+        )

@@ -157,8 +157,6 @@ model:
 
 S-VAE is an offline feature reducer. Collect features with the complete data chain, train the reducer, then point svae_path at the resulting file. The scripts and reducer implementation are under scripts/svae_train/ and openwam/model/video_backbone/encoder/svae/.
 
-The reducer's `input_dim` must match the selected DINOv3 or V-JEPA encoder's raw feature width; `svae_target_dim` checks its output width (`latent_dim`). Both are validated when the encoder is constructed, including deployment from a saved S-VAE config. Matching dimensions alone do not establish compatibility: use a reducer trained on the same encoder and feature collection pipeline.
-
 ### Dataloader selection and loading
 
 Built-in registry names are:

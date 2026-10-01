@@ -153,9 +153,7 @@ The script installs the upstream cosmos packages into the active environment and
 
 ## Assets Preparation
 
-When using an optional S-VAE reducer with DINOv3 or V-JEPA, its input feature width
-must match the selected encoder. A mismatch raises a configuration error at
-encoder construction; see the [S-VAE setup guide](assets/openwam_usage_docs/train-and-deploy.md#visual-encoder-and-s-vae).
+An optional S-VAE reducer must match the DINOv3 or V-JEPA encoder's raw feature width; incompatible input dimensions are rejected during encoder construction.
 
 The downloaders are interactive by default; every menu step also has a flag (`--name`, `--source`, `--root`, `--yes`, see `--help`) so they can run unattended, and the default storage location is resolved relative to the repository regardless of the working directory. Component downloaders store assets under
 `assets/` and update the matching YAML path; the released-checkpoint downloader

@@ -77,7 +77,7 @@ class VJEPA21VideoEncoder(VideoEncoder):
         # (see ``batch_encode``). When enabled it advertises ``latent_dim`` as
         # ``z_dim`` so the DiT conv / unpatchify head / freeze yaml rebuild
         # against the reduced dim.
-        self._svae = reducer.build(svae_path, svae_target_dim, svae_config, expected_input_dim=self._raw_embed_dim)
+        self._svae = reducer.build(svae_path, svae_target_dim, svae_config)
         effective_z_dim = reducer.effective_z_dim(self._svae, self._raw_embed_dim)
         self._spec = VideoEncoderProperties(
             z_dim=int(effective_z_dim),

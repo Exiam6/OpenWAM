@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-09-30T21:38:04-04:00",
+  "updated_at": "2026-09-30T21:58:11-04:00",
   "slurm_array": "18893528",
   "array_task_states": {
-    "COMPLETED": 24,
+    "COMPLETED": 26,
     "RUNNING": 6,
-    "PENDING": 51
+    "PENDING": 49
   },
   "protocol": "research/greene/endtoend-eval/protocol.json",
   "deadline": "2026-10-04T12:00:00-04:00",
   "episodes_planned": 1620,
-  "episodes_complete": 512,
-  "successes": 114,
+  "episodes_complete": 568,
+  "successes": 139,
   "technical_failures": 0,
   "routes": {
     "wan": {
       "clean": {
         "planned": 180,
-        "complete": 177,
+        "complete": 180,
         "successes": 22,
         "technical_failures": 0
       },
       "gaussian_sigma_0.10": {
         "planned": 180,
-        "complete": 0,
-        "successes": 0,
+        "complete": 13,
+        "successes": 5,
         "technical_failures": 0
       },
       "head_camera_yaw_5deg": {
@@ -36,14 +36,14 @@
     "svae": {
       "clean": {
         "planned": 180,
-        "complete": 175,
-        "successes": 45,
+        "complete": 180,
+        "successes": 46,
         "technical_failures": 0
       },
       "gaussian_sigma_0.10": {
         "planned": 180,
-        "complete": 0,
-        "successes": 0,
+        "complete": 19,
+        "successes": 14,
         "technical_failures": 0
       },
       "head_camera_yaw_5deg": {
@@ -56,14 +56,14 @@
     "pca": {
       "clean": {
         "planned": 180,
-        "complete": 160,
+        "complete": 165,
         "successes": 47,
         "technical_failures": 0
       },
       "gaussian_sigma_0.10": {
         "planned": 180,
-        "complete": 0,
-        "successes": 0,
+        "complete": 11,
+        "successes": 5,
         "technical_failures": 0
       },
       "head_camera_yaw_5deg": {

@@ -1,0 +1,35 @@
+# cc-sync: edit on the laptop, run on Torch (template: vga-code/torch_template, see its README §5).
+# Needs a `torch` ssh alias with ControlMaster (setup_ccsync_laptop.sh writes it).
+#   bash setup_ccsync_laptop.sh ~/code/OpenWAM /scratch/zz4330/OpenWAM   # keeps this file
+[remote]
+host = "torch"
+path = "/scratch/zz4330/OpenWAM"
+
+[sync]
+exclude = [
+    ".git/", "__pycache__/", ".venv/", "node_modules/", ".vscode/", ".idea/", ".claude/",
+    "wandb/", "logs/", "outputs/", "runs/", "checkpoints/", "*.ckpt", "*.pt", "*.safetensors",
+    "logs/cc-sync/", ".ccsync/", ".ccsync.toml",
+    # Written only on Torch by the progress watcher (18893531) and eval jobs; the cluster copy is
+    # the source of truth. Get them on the laptop with `git pull`, never push them with rsync.
+    # (Each dir is listed twice: "dir/" for rsync, "dir/*" for the `ccsync watch` matcher.)
+    "research/README.zh-CN.md",
+    "research/greene/records/", "research/greene/records/*",
+    # Frozen endtoend eval: protocol.json + its 13 code_sha256 files. run_cell.py refuses to run
+    # if any of them changes, so an rsync overwrite would stop every remaining array task.
+    "research/greene/endtoend-eval/", "research/greene/endtoend-eval/*",
+    "research/greene/sbatch/endtoend_cell.sbatch", "research/greene/sbatch/endtoend_array.sbatch",
+    "research/experiments/studies/endtoend-20260923/fresh-cohort-integrity.json",
+]
+debounce_ms = 500
+# Keep false: true would delete cluster-side files the laptop doesn't have (runs, records, logs).
+delete = false
+log_pull_interval_s = 15
+
+[pull]
+paths = ["logs/"]
+
+[run]
+tmux_prefix = "ccs"
+log_dir = ".ccsync/logs"
+shell = "bash -lc"

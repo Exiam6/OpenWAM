@@ -216,3 +216,7 @@ assets/*
 # Versioned RoboDojo score verification (see issue #23).
 !assets/robodojo_verification/
 !assets/robodojo_verification/**
+
+# cc-sync
+.ccsync/
+logs/cc-sync/

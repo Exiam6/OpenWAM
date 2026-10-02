@@ -1,0 +1,64 @@
+{
+  "task_id": "gpu02-eval-assist-20261001",
+  "created": "2026-10-01T22:18:19.015594-05:00",
+  "visibility": "public_dispatch_only",
+  "status": "requested_readiness_check",
+  "requested_by": "user",
+  "destination": "Torch / NYU Greene",
+  "source_branch": "research/progress-20260927",
+  "gpu02_status": "Training finished; evaluation continues on GPU5.",
+  "scored_cell_owner": "gpu02",
+  "torch_assigned_cells": [],
+  "queue_wait": "unknown_for_both_l40s_and_h200",
+  "immediate_tasks": [
+    "Inspect live Slurm queue/start estimates and quota.",
+    "Check existing policy/benchmark environments, simulator dependencies and free space.",
+    "Check whether private package and exact new checkpoints are available; report missing inputs.",
+    "Commit sanitized readiness report to the progress branch."
+  ],
+  "gpu_preflight": {
+    "gpus": 1,
+    "when": "Only after the private package and exact assets are available.",
+    "hardware": "L40S or H200, whichever can start sooner; no duplicate jobs across partitions.",
+    "scope": "Fixed training-scene loading/reset/finite-action/native-action smoke; no scored scenes and no new training."
+  },
+  "handoff": {
+    "required": true,
+    "rule": "GPU02 persists exact per-cell exclusions and acknowledges them before Torch executes any scored cell.",
+    "shard": "Same training seed/task/scenes, all matched comparison arms, same hardware class.",
+    "no_replay": [
+      "complete",
+      "failed",
+      "inflight"
+    ]
+  },
+  "privacy": {
+    "public_contents": [
+      "Dispatch instructions",
+      "Sanitized resource readiness",
+      "Sanitized ownership status"
+    ],
+    "private_contents": [
+      "Research implementation",
+      "Checkpoints and data",
+      "Detailed experimental protocol",
+      "Experimental results and per-episode ledgers"
+    ]
+  },
+  "readiness_record": "research/greene/records/gpu02-eval-assist-20261001-readiness.json",
+  "readiness_fields": [
+    "updated_at",
+    "status",
+    "gpu_type",
+    "queue_state",
+    "estimated_start_or_unknown",
+    "job_id_or_null",
+    "software_versions",
+    "private_payload_available",
+    "asset_hashes_verified",
+    "smoke_passed_or_not_run",
+    "missing_dependency_categories",
+    "transfer_acknowledged"
+  ],
+  "old_jobs": "Do not rerun completed endtoend1620, old temporal study, or official-checkpoint reference evaluation."
+}

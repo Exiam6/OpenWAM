@@ -41,5 +41,25 @@
   "existing_service_earlier_stop": "2026-10-02T11:34:09+00:00",
   "public_payload_scope": "Scheduling protocol, coordinator, tests, opaque ownership and receipt hashes only",
   "next_gpu02": "Prepare and validate gated runner; do not disturb active legacy evaluation before readiness",
-  "next_torch": "Run coordinator tests; report real assets/QOS; single GPU preflight after assets verified; no scoring yet"
+  "next_torch": "Run coordinator tests; report real assets/QOS; single GPU preflight after assets verified; no scoring yet",
+  "cluster_count": 2,
+  "cluster_topology": {
+    "uiuc_shenlong": {
+      "display_name": "UIUC Shenlong",
+      "legacy_registry_actor": "gpu02",
+      "nodes": [
+        "shenlong-gpu-01.cs.illinois.edu",
+        "shenlong-gpu-02.cs.illinois.edu"
+      ],
+      "current_execution_node": "shenlong-gpu-02.cs.illinois.edu",
+      "current_execution_gpu_index": 5
+    },
+    "nyu_torch": {
+      "display_name": "NYU Torch",
+      "registry_actor": "torch",
+      "nodes": "Assigned by Slurm; record actual allocation separately",
+      "historical_repository_directory": "research/greene"
+    }
+  },
+  "naming_note": "gpu02 is an SSH/node alias retained as the legacy registry actor for UIUC Shenlong. It is not a separate cluster. This clarification changes no ownership, resource permission, or token."
 }

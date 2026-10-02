@@ -1,6 +1,8 @@
-> **跨集群调度协议 v1：** [CLUSTER_COORDINATION_PROTOCOL.md](CLUSTER_COORDINATION_PROTOCOL.md)。独立 Git 注册表 + 原子准入；当前全部单元仍由 GPU02 legacy 队列独占，Torch 未获分配。此协议替代下方历史分配提议。
+> **两方是 UIUC Shenlong 与 NYU Torch；`gpu02` 是 Shenlong 节点的 SSH 别名，不是集群。**
+>
+> **跨集群调度协议 v1：** [CLUSTER_COORDINATION_PROTOCOL.md](CLUSTER_COORDINATION_PROTOCOL.md)。独立 Git 注册表 + 原子准入；当前全部单元仍由 UIUC Shenlong 的旧队列独占，Torch 未获分配。此协议替代下方历史分配提议。
 
-# Greene deployment — OpenWAM research branch
+# NYU Torch deployment — historical `greene/` directory
 
 > **2026-10-01 Torch 下一步任务：** [协助 GPU02 评测：先检查资源，再领取未开始的配对任务](GPU02_EVAL_ASSIST_TASKS.md)。GPU02 继续运行；本任务单不转移评测执行权。
 >

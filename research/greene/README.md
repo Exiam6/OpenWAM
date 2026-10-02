@@ -1,6 +1,8 @@
 # Greene deployment — OpenWAM research branch
 
 > **2026-10-01 Torch 下一步任务：** [协助 GPU02 评测：先检查资源，再领取未开始的配对任务](GPU02_EVAL_ASSIST_TASKS.md)。GPU02 继续运行；本任务单不转移评测执行权。
+>
+> **Torch 回报（2026-10-01 23:35 EDT）：** CPU 检查完成，见 [readiness](records/gpu02-eval-assist-20261001-readiness.json)。环境可复用；L40S 预计可立即开始，H200 约 10-02 13:40。**尚未收到私有交接包和新检查点**，单卡预检未运行，未领取任何单元。
 
 > **Current scheduling handoff:** [GPU02 temporal ownership — do not duplicate on Torch/Greene](GPU02_TEMPORAL_HANDOFF.md). Read before submitting temporal jobs. The deployment tables below are historical setup notes.
 

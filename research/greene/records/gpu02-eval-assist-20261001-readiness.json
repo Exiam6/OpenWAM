@@ -1,0 +1,47 @@
+{
+  "task_id": "gpu02-eval-assist-20261001",
+  "updated_at": "2026-10-01T23:35:00-04:00",
+  "status": "cpu_checks_done_waiting_private_payload",
+  "gpu_type": {
+    "preferred": "L40S (sm_89, same build_arch 8.9 as the frozen source machine)",
+    "alternative": "H200 (sm_90)",
+    "rule": "one partition only, whichever starts first; no duplicate submissions"
+  },
+  "queue_state": {
+    "observed_at": "2026-10-01T23:23:28-04:00",
+    "our_jobs": "none running or pending",
+    "l40s": "68 nodes x 4 GPU: 67 mix (65 'mix-'), 1 down*; QOS l40s_courant GrpTRES gres/gpu=52",
+    "h200": "34 nodes x 8 GPU: 14 reserved, 3 alloc, 17 mix; QOS h200_courant GrpTRES gres/gpu=88",
+    "account_queue": "torch_pr_222_courant: other members have ~34 GPU jobs pending (b200 / h200_courant)",
+    "user_qos_note": "gpu48 QOS shows MaxTRESPU gres/gpu=2; group pool often full (QOSGrpGRES) during the endtoend run"
+  },
+  "estimated_start_or_unknown": {
+    "method": "sbatch --test-only, 1 GPU / 8 CPU / 64G / 4h, nothing submitted",
+    "l40s_courant": "2026-10-01T23:26:54 (immediate at test time)",
+    "h200_courant": "2026-10-02T13:39:54",
+    "caveat": "scheduler estimate only, not a reservation; changes with the queue"
+  },
+  "job_id_or_null": null,
+  "software_versions": {
+    "policy_env": "Python 3.10.21, torch 2.7.0+cu126",
+    "bench_env": "Python 3.10.21, torch 2.4.1+cu124, sapien 3.0.0b1, mplib 0.2.1 (documented patches byte-identical to frozen after_sha256), cuRobo built for 8.9;9.0",
+    "robotwin": "present (benchmarks/RoboTwin)",
+    "verified_by": "endtoend 1620-episode evaluation completed on these envs 2026-10-01, 0 technical failures"
+  },
+  "storage": {
+    "scratch_quota": "4.47 TB / 5.00 TB used (89%), ~0.5 TB free; files 78%",
+    "openwam_runtime": "246 GB",
+    "home": "12 GB / 50 GB, files 89% (pip cache 8.6 GB can be cleared)"
+  },
+  "private_payload_available": false,
+  "asset_hashes_verified": false,
+  "smoke_passed_or_not_run": "not_run (blocked on private payload and new checkpoints)",
+  "missing_dependency_categories": [
+    "private handoff package (fixed source, configs, normalization statistics)",
+    "new GPU02 checkpoints + their SHA256 list",
+    "GPU02 launcher-equivalent run spec (device/path binding to adapt)"
+  ],
+  "transfer_acknowledged": false,
+  "torch_assigned_cells": [],
+  "note": "Old endtoend checkpoints are NOT substituted for the new ones. No GPU job submitted. GPU02 keeps ownership of all cells."
+}

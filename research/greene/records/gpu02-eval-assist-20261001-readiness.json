@@ -1,7 +1,7 @@
 {
   "task_id": "gpu02-eval-assist-20261001",
-  "updated_at": "2026-10-01T23:35:00-04:00",
-  "status": "cpu_checks_done_waiting_private_payload",
+  "updated_at": "2026-10-01T23:50:00-04:00",
+  "status": "allocation_proposed_waiting_gpu02_ack_and_assets",
   "gpu_type": {
     "preferred": "L40S (sm_89, same build_arch 8.9 as the frozen source machine)",
     "alternative": "H200 (sm_90)",
@@ -37,11 +37,11 @@
   "asset_hashes_verified": false,
   "smoke_passed_or_not_run": "not_run (blocked on private payload and new checkpoints)",
   "missing_dependency_categories": [
-    "private handoff package (fixed source, configs, normalization statistics)",
-    "new GPU02 checkpoints + their SHA256 list",
-    "GPU02 launcher-equivalent run spec (device/path binding to adapt)"
+    "GPU02 allocation ack (exact cell list + exclusion active)",
+    "fixed source/configs/normalization stats + new checkpoints for the Torch shard (git transfer branch + SHA256SUMS)"
   ],
   "transfer_acknowledged": false,
   "torch_assigned_cells": [],
-  "note": "Old endtoend checkpoints are NOT substituted for the new ones. No GPU job submitted. GPU02 keeps ownership of all cells."
+  "note": "Old endtoend checkpoints are NOT substituted for the new ones. No GPU job submitted. GPU02 keeps ownership of all cells.",
+  "allocation": "records/gpu02-eval-assist-20261001-allocation.json (proposed; Torch takes tail 2 training seeds)"
 }

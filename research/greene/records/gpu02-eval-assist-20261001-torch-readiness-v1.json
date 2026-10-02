@@ -1,0 +1,46 @@
+{
+  "task_id": "gpu02-eval-assist-20261001",
+  "actor": "torch",
+  "reported_at": "2026-10-02T00:12:00-04:00",
+  "protocol": "research/greene/CLUSTER_COORDINATION_PROTOCOL.md v1 (pulled at 226b601)",
+  "registry_observed": {
+    "branch": "coordination/gpu02-eval-assist-20261001",
+    "head": "138ebb7",
+    "revision": 0,
+    "all_units_owner": "gpu02",
+    "mode": "legacy"
+  },
+  "coordinator_tests": "python3 -m unittest discover -s research/greene/coordination/tests: 13 tests OK (CPU, login node)",
+  "assets_verified": false,
+  "missing_inputs": [
+    "new-checkpoint files + SHA256SUMS (none present under openwam-runtime)",
+    "fixed source / configs / normalization statistics for the new study",
+    "private cell-ID mapping and unit manifests (cannot verify manifest_sha256 without it)",
+    "gated per-cell runner (protocol step 4, owned by Shenlong)"
+  ],
+  "delivery_channel": "none received; private repo Exiam6/openwam-greene-transfer does not exist; no new transfer/* branch",
+  "gpu_allocation": {
+    "allocated": false,
+    "requested": false,
+    "reason": "protocol v1: no GPU request before assets are verified; no idle allocations"
+  },
+  "qos_snapshot": {
+    "qos": "gpu48",
+    "max_gpu_per_user": 16,
+    "in_use_by_user": 0,
+    "test_only_start_estimate_1gpu_2h": {
+      "l40s_courant": "2026-10-02T00:38:55-04:00",
+      "h200_courant": "2026-10-02T14:23:58-04:00 (after hard deadline; not usable this round)"
+    },
+    "note": "sbatch --test-only is a forecast, not readiness"
+  },
+  "envs_reusable": ["openwam-policy", "openwam-bench"],
+  "scratch_usage": "/scratch 87% filesystem-wide",
+  "window": {
+    "hard_deadline": "2026-10-02T07:38:16-04:00",
+    "new_work_deadline": "2026-10-02T07:28:16-04:00",
+    "remaining_at_report_h": 7.3
+  },
+  "torch_units_claimed": [],
+  "next": "On asset delivery: verify SHA256 -> 1x L40S non-scoring smoke on training scenes -> advertise via coordinator with real allocation id. Shenlong initiates any transfer; Torch never edits legacy ownership."
+}

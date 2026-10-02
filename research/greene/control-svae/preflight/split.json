@@ -1,0 +1,1267 @@
+{
+ "time": "2026-10-02T04:02:00-04:00",
+ "gate": "control-SVAE preflight: fit/dev split freeze",
+ "scope": "read-only; 105 training episodes; assignment uses only task name + episode index",
+ "rule": {
+  "seed": 20260926,
+  "per_task": {
+   "fit": 28,
+   "dev": 7
+  },
+  "assignment": "sort episodes of each task by sha256(f'{seed}:{task}:episode{idx}') ascending; first 7 = dev, remaining 28 = fit",
+  "unit": "whole episode (all frames and t+4 windows of a trajectory share its partition)",
+  "scene_variant_check": {
+   "image": "head_camera frame 0, gray 32x32 bilinear, mean abs diff",
+   "image_threshold": 2.0,
+   "joint": "frame-0 joint_action/vector max abs diff",
+   "joint_threshold": 0.001,
+   "near_duplicate": "image diff < threshold"
+  }
+ },
+ "tasks": {
+  "adjust_bottle": {
+   "dev_episodes": [
+    17,
+    29,
+    32,
+    34,
+    42,
+    43,
+    45
+   ],
+   "fit_episodes": [
+    3,
+    4,
+    5,
+    7,
+    9,
+    10,
+    15,
+    16,
+    18,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    30,
+    31,
+    37,
+    38,
+    39,
+    40,
+    41,
+    44,
+    46,
+    47,
+    49
+   ],
+   "fit_valid_t4_pairs": 3942,
+   "dev_valid_t4_pairs": 989,
+   "min_pairwise_frame0_image_diff": 1.212,
+   "episodes": [
+    {
+     "episode": 3,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode3.hdf5",
+     "sha256": "a18f04f185e7dae7eab2761ae4626c81e35ceb97d6922c97b0e70015607a7e9a",
+     "frames": 149,
+     "valid_t4_pairs": 145,
+     "excluded_tail_frames": 4,
+     "key": "382c6c54a1188da73083cc74338d5c39f0702d95734a5f59a21f2626249110be",
+     "partition": "fit"
+    },
+    {
+     "episode": 4,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode4.hdf5",
+     "sha256": "4a0174a5d778f8eb134ff94bc5fee9fd326cbe3c85c233c703a089ea47f5cd45",
+     "frames": 152,
+     "valid_t4_pairs": 148,
+     "excluded_tail_frames": 4,
+     "key": "6c9a0f93525c9ded77a6c1e6e036460699083a77ab7e58545c68e5f8a410e7c3",
+     "partition": "fit"
+    },
+    {
+     "episode": 5,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode5.hdf5",
+     "sha256": "f03361c298897e6b10e924e13d45f57d23b8d6add6966249ef078e8418b4dc6f",
+     "frames": 148,
+     "valid_t4_pairs": 144,
+     "excluded_tail_frames": 4,
+     "key": "aeabf39dc8765fe3648401e533d5d9c31ded0ce08803f6d64cbbaa890f55ce4e",
+     "partition": "fit"
+    },
+    {
+     "episode": 7,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode7.hdf5",
+     "sha256": "c02b7ff0a62564be92d436e42ce3eade652cf74af80e3334a5a10781dcd22404",
+     "frames": 137,
+     "valid_t4_pairs": 133,
+     "excluded_tail_frames": 4,
+     "key": "5ca19306e5b90c907e03fd51d8edf76c5fad2fed91103a37d4803b6c5d047d85",
+     "partition": "fit"
+    },
+    {
+     "episode": 9,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode9.hdf5",
+     "sha256": "7cc9e7fb699a61c7b4c8d99237bdfb0dd80eee2651bafb57cbe05f127f181f41",
+     "frames": 153,
+     "valid_t4_pairs": 149,
+     "excluded_tail_frames": 4,
+     "key": "3d49a17e4cc69c3e2fa5616cadcf112311babfb1a96741764079db1bba37de93",
+     "partition": "fit"
+    },
+    {
+     "episode": 10,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode10.hdf5",
+     "sha256": "dcc7e71ffcdf322e5f3e625e4a56ace8c2898dbceec35f4d31bd081c912af80d",
+     "frames": 136,
+     "valid_t4_pairs": 132,
+     "excluded_tail_frames": 4,
+     "key": "eb578d1034fc2e030cf5ca5f39b4f5041c2ac9a4e50a8e572c718b01f2be8131",
+     "partition": "fit"
+    },
+    {
+     "episode": 15,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode15.hdf5",
+     "sha256": "19b914c0e7f0b56301b1a500a8c43006ccbbf5ebf9bd233c51cd4dc096ca6a57",
+     "frames": 139,
+     "valid_t4_pairs": 135,
+     "excluded_tail_frames": 4,
+     "key": "de9a03be4ec74431648a9a4d70592e1d7eab6c0ed758adb500849e70ca7fbbe1",
+     "partition": "fit"
+    },
+    {
+     "episode": 16,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode16.hdf5",
+     "sha256": "a10a88fb2a88298214d850afa5aab699233be4ef6224e73616560f9e4101056a",
+     "frames": 174,
+     "valid_t4_pairs": 170,
+     "excluded_tail_frames": 4,
+     "key": "40ed654004aef72494370f18c884fe0fa0552969ea4f1e60134db0a13e9054ef",
+     "partition": "fit"
+    },
+    {
+     "episode": 17,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode17.hdf5",
+     "sha256": "18a321ba617ac9526ccb0c3846ba71198568a1ea4bea178c35781b22ccb5bb14",
+     "frames": 148,
+     "valid_t4_pairs": 144,
+     "excluded_tail_frames": 4,
+     "key": "1030945616ed5424d2af1e6a316ee45c84e32ca715bb1867e03e0421d1a053c5",
+     "partition": "dev"
+    },
+    {
+     "episode": 18,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode18.hdf5",
+     "sha256": "aa2868b3e43ea906e4697f7bbe03b49ff25414650628d634817f9d7a1b209ff1",
+     "frames": 144,
+     "valid_t4_pairs": 140,
+     "excluded_tail_frames": 4,
+     "key": "9eac9192f49fa715328f7e51bd22b7ad35e9e7614403f456656f89e019a3bd86",
+     "partition": "fit"
+    },
+    {
+     "episode": 20,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode20.hdf5",
+     "sha256": "433df61b8da0533eeecfb116dbf773955d196e8916fe689f76ad7172e94f0327",
+     "frames": 136,
+     "valid_t4_pairs": 132,
+     "excluded_tail_frames": 4,
+     "key": "942ce1f110639450b369a9a5a7f0d9ee14f529d51695e892286e5b588ed88092",
+     "partition": "fit"
+    },
+    {
+     "episode": 21,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode21.hdf5",
+     "sha256": "c4abd3108ce701e543103edadf247bbcde50f0d1ab0a1525c920c28a0bdc6db6",
+     "frames": 144,
+     "valid_t4_pairs": 140,
+     "excluded_tail_frames": 4,
+     "key": "8796af55139dc9639ebc80bf62a4021442ced1d9a463a7791e6fc6fae389bf04",
+     "partition": "fit"
+    },
+    {
+     "episode": 23,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode23.hdf5",
+     "sha256": "b72d8dd7c77f019da348e395a58b558efaae6508ca993e5d9693ee611b27bab6",
+     "frames": 157,
+     "valid_t4_pairs": 153,
+     "excluded_tail_frames": 4,
+     "key": "e247b21dcc510a7ef1b9b06b196ed04289e98269529c7354af787d7f94e9dc23",
+     "partition": "fit"
+    },
+    {
+     "episode": 24,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode24.hdf5",
+     "sha256": "f6c54275c18f41dd99477c10a500d21f03a90003de9faf862e313763d716a327",
+     "frames": 145,
+     "valid_t4_pairs": 141,
+     "excluded_tail_frames": 4,
+     "key": "de4ac841147f66e4c36eb9d703253de8e2dfde7a105c23ad90ca1a77fa880303",
+     "partition": "fit"
+    },
+    {
+     "episode": 25,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode25.hdf5",
+     "sha256": "629133cdb14e451545a18fe942e4909c568219b04482e717a1ce5fd1b963f89d",
+     "frames": 134,
+     "valid_t4_pairs": 130,
+     "excluded_tail_frames": 4,
+     "key": "52a9b4f86bf53bdda02b958c32fc73734d1707a76809b8344548739470f772e1",
+     "partition": "fit"
+    },
+    {
+     "episode": 26,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode26.hdf5",
+     "sha256": "40f98b159a59ca4a9486e2cf90dd0ab4762307a01aeababe2c5c49c174170f65",
+     "frames": 148,
+     "valid_t4_pairs": 144,
+     "excluded_tail_frames": 4,
+     "key": "3dd652743a42208c2834f110777ed9a9da66de9c0288d9f9fdb65181451367fc",
+     "partition": "fit"
+    },
+    {
+     "episode": 27,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode27.hdf5",
+     "sha256": "e3d8007db7f30a3a08e9b30f8544609b957dc5d4442c655d301eed322fba4061",
+     "frames": 144,
+     "valid_t4_pairs": 140,
+     "excluded_tail_frames": 4,
+     "key": "3fb335296dc74763bf63774b1463a8b10223af437f68af79e87cf68d1c6cbdb7",
+     "partition": "fit"
+    },
+    {
+     "episode": 28,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode28.hdf5",
+     "sha256": "effb91395ea6efd3cc094a2663539ed25adc36e30ee15c16e6d526b3e2347650",
+     "frames": 139,
+     "valid_t4_pairs": 135,
+     "excluded_tail_frames": 4,
+     "key": "8d00c5e2bd53403c7585347949f08a5ba897afd7c8caa7e6b6497e2e467f5ff0",
+     "partition": "fit"
+    },
+    {
+     "episode": 29,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode29.hdf5",
+     "sha256": "701ee22c8d5beef052dd446ad403af1a3f0a3567a7865bca27e8360fd6001795",
+     "frames": 153,
+     "valid_t4_pairs": 149,
+     "excluded_tail_frames": 4,
+     "key": "19a431732b7ec908d148cdf510c1316b7ed112f5223a48ab0f974971dc001a4f",
+     "partition": "dev"
+    },
+    {
+     "episode": 30,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode30.hdf5",
+     "sha256": "8ec727f57c8c8fd98b305f336b847c18e7665e5af4b04b892154e7cee6676ce5",
+     "frames": 144,
+     "valid_t4_pairs": 140,
+     "excluded_tail_frames": 4,
+     "key": "cecdcddb2d051781db15ec38e807dc64316b23f87dd134555597861cac5a94dd",
+     "partition": "fit"
+    },
+    {
+     "episode": 31,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode31.hdf5",
+     "sha256": "0640c576d8437e220600c005479a22744646da6dbcdb4f536f19c8d067844af6",
+     "frames": 142,
+     "valid_t4_pairs": 138,
+     "excluded_tail_frames": 4,
+     "key": "edc77a1240fbefc4d7c9409f28b04bc53fac11c4b55223e5ef78e36ecd711f2d",
+     "partition": "fit"
+    },
+    {
+     "episode": 32,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode32.hdf5",
+     "sha256": "b8598e99a8d31f4f55f8549d7a1024810410d6c72b9cdf1ff86cc6beac040edd",
+     "frames": 136,
+     "valid_t4_pairs": 132,
+     "excluded_tail_frames": 4,
+     "key": "22eb4a430be6f8b32e316e2a51ea76708ed6a0d9e6f00b5e5cd24d6a7ceda754",
+     "partition": "dev"
+    },
+    {
+     "episode": 34,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode34.hdf5",
+     "sha256": "7969fc13254bab10d088d7993246a4849568378ac533a41ec442c6c5d7421fbe",
+     "frames": 145,
+     "valid_t4_pairs": 141,
+     "excluded_tail_frames": 4,
+     "key": "0dd4d500e52e8dc7c4fae90371c4dd0c75df005375a3b2d1d5e0d89224d44f26",
+     "partition": "dev"
+    },
+    {
+     "episode": 37,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode37.hdf5",
+     "sha256": "796f0ac55ba5397df7a07b57ce312452759a29adf07dda9a896ed8f3876b35a8",
+     "frames": 144,
+     "valid_t4_pairs": 140,
+     "excluded_tail_frames": 4,
+     "key": "a7e26d577cbe2ea0f681fcc790d10c74a226689ae82cd0a73c3799fc945c0dae",
+     "partition": "fit"
+    },
+    {
+     "episode": 38,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode38.hdf5",
+     "sha256": "df5611f4316c0ce395aa502ecdebaf44f26eb28267b72895ce09f07738e595ce",
+     "frames": 145,
+     "valid_t4_pairs": 141,
+     "excluded_tail_frames": 4,
+     "key": "6c8a618967b6b0ad8e73b6c9756a3ffdb400624f409f196bb42bcff9502dc486",
+     "partition": "fit"
+    },
+    {
+     "episode": 39,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode39.hdf5",
+     "sha256": "8c0f4e595e5a570815c124d3f372d31e3ca5a0e168aeef508301f33b78e158b2",
+     "frames": 139,
+     "valid_t4_pairs": 135,
+     "excluded_tail_frames": 4,
+     "key": "571ecb943cbba1d1cbb6f01183582ece95c5fc35187bd4f1b8d401484934c2a4",
+     "partition": "fit"
+    },
+    {
+     "episode": 40,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode40.hdf5",
+     "sha256": "a872ec1d6dc3b3b29a9ec707dbb968582e2d01eada2c7f37faef0a4c73722c12",
+     "frames": 143,
+     "valid_t4_pairs": 139,
+     "excluded_tail_frames": 4,
+     "key": "e15990cfa2126293175f7e11a474256b902a0ff7831e83c579535e3db081f5a5",
+     "partition": "fit"
+    },
+    {
+     "episode": 41,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode41.hdf5",
+     "sha256": "3724e586fdd07da0754c0848f850b00bc7f8575c51a20a855c1fdd67b4cbe70c",
+     "frames": 150,
+     "valid_t4_pairs": 146,
+     "excluded_tail_frames": 4,
+     "key": "61f0a0004000589032c385fd103bbbb70a6e0ceeb0fa6c22bc7194c83db7555e",
+     "partition": "fit"
+    },
+    {
+     "episode": 42,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode42.hdf5",
+     "sha256": "97e4c841b6eaded301725c9100ce6d3b821d6746024c523e60f8760ea2768619",
+     "frames": 143,
+     "valid_t4_pairs": 139,
+     "excluded_tail_frames": 4,
+     "key": "18c16ef033ea04c300254eecee0593a21980e8e03a2e0fbce4f414b468b3f524",
+     "partition": "dev"
+    },
+    {
+     "episode": 43,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode43.hdf5",
+     "sha256": "2e08469b185eb70649c15b475415ce9cb74f0de7b55500623261cafcd977ad50",
+     "frames": 147,
+     "valid_t4_pairs": 143,
+     "excluded_tail_frames": 4,
+     "key": "07c12300e9b20c1613aea635f9f6440035ef856b900a110420e8444c64244f73",
+     "partition": "dev"
+    },
+    {
+     "episode": 44,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode44.hdf5",
+     "sha256": "b5c9ec4572853ddc220be2c8c1991bc6b7503638b325f619efd15ecff24ade37",
+     "frames": 143,
+     "valid_t4_pairs": 139,
+     "excluded_tail_frames": 4,
+     "key": "7710c6f3c165cbc3fca479b6fae5643f5a40ab47f6426db8ac3b8542f5e258cd",
+     "partition": "fit"
+    },
+    {
+     "episode": 45,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode45.hdf5",
+     "sha256": "acf76dfb7cdd19662cca62dd231b154ff1130ac56068075178958039fcb8ff1f",
+     "frames": 145,
+     "valid_t4_pairs": 141,
+     "excluded_tail_frames": 4,
+     "key": "15a6b3d7f67f11e813883d4e808b8cfeb43d29bdeae7b8ad170103a30a214785",
+     "partition": "dev"
+    },
+    {
+     "episode": 46,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode46.hdf5",
+     "sha256": "4c27b1b980832618d708f4c4a3212bdfc1db76d6fadb11d11a06d150d94f6626",
+     "frames": 143,
+     "valid_t4_pairs": 139,
+     "excluded_tail_frames": 4,
+     "key": "6b732a380a5d909f626aec975ca78cfdc0a77b7c5234e77c3b387e7f0ddd29ef",
+     "partition": "fit"
+    },
+    {
+     "episode": 47,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode47.hdf5",
+     "sha256": "fa679c184b74cf692750c860457878e45ee83d5127c77de7e6e5cd9ce0492486",
+     "frames": 140,
+     "valid_t4_pairs": 136,
+     "excluded_tail_frames": 4,
+     "key": "2f7af1dd03be38fca1b604396e4a66e06a1722e0b432139b445cd8793de0e000",
+     "partition": "fit"
+    },
+    {
+     "episode": 49,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/adjust_bottle/aloha-agilex_clean_50/data/episode49.hdf5",
+     "sha256": "a47c5d4afb41c4852da050b0f7844741b66aa052661b07a2cfb10d3e0a674081",
+     "frames": 142,
+     "valid_t4_pairs": 138,
+     "excluded_tail_frames": 4,
+     "key": "537e156b7d0ea418f2f1fa2fbea4112e96d8fbc7353fae73dd79479b60799e46",
+     "partition": "fit"
+    }
+   ]
+  },
+  "handover_block": {
+   "dev_episodes": [
+    15,
+    17,
+    20,
+    27,
+    38,
+    45,
+    49
+   ],
+   "fit_episodes": [
+    3,
+    4,
+    5,
+    7,
+    9,
+    10,
+    16,
+    18,
+    21,
+    23,
+    24,
+    25,
+    26,
+    28,
+    29,
+    30,
+    31,
+    32,
+    34,
+    37,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    46,
+    47
+   ],
+   "fit_valid_t4_pairs": 7844,
+   "dev_valid_t4_pairs": 1918,
+   "min_pairwise_frame0_image_diff": 2.335,
+   "episodes": [
+    {
+     "episode": 3,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode3.hdf5",
+     "sha256": "f582bbe813e6ff350ab80da6211f2e626dad32a36db32e0c3fdfeee2bf1ec97c",
+     "frames": 278,
+     "valid_t4_pairs": 274,
+     "excluded_tail_frames": 4,
+     "key": "e25cef3d9dd27f4097a2627dd6bb352f871b563e53914c0df25024cea23bf2b2",
+     "partition": "fit"
+    },
+    {
+     "episode": 4,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode4.hdf5",
+     "sha256": "be040dce1e5a2c04b962b11433ccb5b94e55b7a8f7c0e21bc039fc2636d05190",
+     "frames": 287,
+     "valid_t4_pairs": 283,
+     "excluded_tail_frames": 4,
+     "key": "d5df8f2751e6a708a7687e131d4e99e1118f86c64cc842d24e1a706d7a0f0648",
+     "partition": "fit"
+    },
+    {
+     "episode": 5,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode5.hdf5",
+     "sha256": "cd1a877024455cc5b29d12c9847f119a5ff07342ffbea03ea698629a1fd58117",
+     "frames": 280,
+     "valid_t4_pairs": 276,
+     "excluded_tail_frames": 4,
+     "key": "c14f0979914e0b83ffc7f8e417fdf2a5537f3f862c1b5194fa4b96f4d2453dde",
+     "partition": "fit"
+    },
+    {
+     "episode": 7,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode7.hdf5",
+     "sha256": "985f93093dd5555e528c0ded78dd9b0354f909f68dd138dff19e3a7f02bb9ee8",
+     "frames": 277,
+     "valid_t4_pairs": 273,
+     "excluded_tail_frames": 4,
+     "key": "a905ec90c74f43a125cd867d3c417431570df3dd9c30bd98f24753324e748961",
+     "partition": "fit"
+    },
+    {
+     "episode": 9,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode9.hdf5",
+     "sha256": "0baea19e2e5e1d29371e417d60cf5f9b233b8c9300097b9a03c19c7456136143",
+     "frames": 280,
+     "valid_t4_pairs": 276,
+     "excluded_tail_frames": 4,
+     "key": "5a305c772bd2dc211e679c0f675ac48ef72d5b7e5c807b15b29bf593be0be9dc",
+     "partition": "fit"
+    },
+    {
+     "episode": 10,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode10.hdf5",
+     "sha256": "3c7b080ca4bb3f7299018597db5c423160f33116a6215c0592cce6359715b07b",
+     "frames": 291,
+     "valid_t4_pairs": 287,
+     "excluded_tail_frames": 4,
+     "key": "80f9267dfa971c81d1022f278c4d1a95df7315470c5c46fe04b30d3f66f87061",
+     "partition": "fit"
+    },
+    {
+     "episode": 15,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode15.hdf5",
+     "sha256": "f7bed17d9eaec19a061d053268e711f0af8efddee3320c6402dfff2b6c2a48a1",
+     "frames": 281,
+     "valid_t4_pairs": 277,
+     "excluded_tail_frames": 4,
+     "key": "13d85f0d8813fba371ee3b88a5b6fabab2c453dd30cef93f6ab23fe4132ba21b",
+     "partition": "dev"
+    },
+    {
+     "episode": 16,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode16.hdf5",
+     "sha256": "e566c5f218cd3147203b47fd59b7b896a38ea6dfa4a2a0051e5dbaaa58a549e8",
+     "frames": 289,
+     "valid_t4_pairs": 285,
+     "excluded_tail_frames": 4,
+     "key": "84a289a5d52a505d82b74c11bf373c43ee282c63669c80ebfa4fa7cb12f10fee",
+     "partition": "fit"
+    },
+    {
+     "episode": 17,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode17.hdf5",
+     "sha256": "b9e9811b2b810d3a7b25a3dd37ef6488523cb0c16dca2d2ae7f3280935009c42",
+     "frames": 278,
+     "valid_t4_pairs": 274,
+     "excluded_tail_frames": 4,
+     "key": "05b9b08f1875431103d8d71ba1db767eb73ef9660c768e9b655672ae3d8d3ad7",
+     "partition": "dev"
+    },
+    {
+     "episode": 18,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode18.hdf5",
+     "sha256": "63709d5c3edbac34498e739aa4d8e685731b4957fca808345c524aa771b3e61c",
+     "frames": 289,
+     "valid_t4_pairs": 285,
+     "excluded_tail_frames": 4,
+     "key": "33883d93a837c18bc10587f1e77ed4ac78959edcffa54827268a6a97dfa0f325",
+     "partition": "fit"
+    },
+    {
+     "episode": 20,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode20.hdf5",
+     "sha256": "f0e7c2b06f2cd9838f23fec1703fc9e4a6ecac84bdbd90399cd2023ea514b47a",
+     "frames": 273,
+     "valid_t4_pairs": 269,
+     "excluded_tail_frames": 4,
+     "key": "033e6b53a665a636af639a7a25b8fed2265d53df9c3791cdd63d5f4e966c53dc",
+     "partition": "dev"
+    },
+    {
+     "episode": 21,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode21.hdf5",
+     "sha256": "42b355925411e1c9ce7c162d96150bd3057ee59f4bcc0f46d37c8fd36c042acd",
+     "frames": 293,
+     "valid_t4_pairs": 289,
+     "excluded_tail_frames": 4,
+     "key": "3a183fb9947a2bdb3944a6b0d21d2299c53c671f43568fb544026abea8bce49d",
+     "partition": "fit"
+    },
+    {
+     "episode": 23,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode23.hdf5",
+     "sha256": "052f4bf62910865585b72d48473b00df9a4ef550388aa7d6cc84ec7fb840201f",
+     "frames": 283,
+     "valid_t4_pairs": 279,
+     "excluded_tail_frames": 4,
+     "key": "7329161a4baf253f2ca14642f806ccf3d26ddab9eabe74aaea389ed75fb43fde",
+     "partition": "fit"
+    },
+    {
+     "episode": 24,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode24.hdf5",
+     "sha256": "1b123a40ad6a3078b6887d6e215565710c9e605323dfe4e68fcb4c73354003c5",
+     "frames": 274,
+     "valid_t4_pairs": 270,
+     "excluded_tail_frames": 4,
+     "key": "af027221c41eb4ae4e4c4a22ea32ae7ee582df222df869c9aa25fb6a9e5c947e",
+     "partition": "fit"
+    },
+    {
+     "episode": 25,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode25.hdf5",
+     "sha256": "15b69b58af33d7a44ecf567541f545cc69d891f1f47c303c05dec466e226b059",
+     "frames": 275,
+     "valid_t4_pairs": 271,
+     "excluded_tail_frames": 4,
+     "key": "c1bcc37e6869d69673e2dde98232df4e3a6c7fdd0895ee3ab1cab4e8d96d914d",
+     "partition": "fit"
+    },
+    {
+     "episode": 26,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode26.hdf5",
+     "sha256": "92f40d1af73a6b4125137f5f50307ba1efc0568b77cf429c01150b94cb3d314a",
+     "frames": 279,
+     "valid_t4_pairs": 275,
+     "excluded_tail_frames": 4,
+     "key": "5ba2d8a695e4b28adeac058f68c0695debd3884339d1db8120526930491eadc0",
+     "partition": "fit"
+    },
+    {
+     "episode": 27,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode27.hdf5",
+     "sha256": "06ab3b667262d08c8ff8000f7c9d47301ababb92b9f4da78a5d706464756f946",
+     "frames": 276,
+     "valid_t4_pairs": 272,
+     "excluded_tail_frames": 4,
+     "key": "139489c9197bc4e7bf601142b2d3aa2fa7fca4c974072c52bc92f03f4deeda82",
+     "partition": "dev"
+    },
+    {
+     "episode": 28,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode28.hdf5",
+     "sha256": "1b3ec6e881cbf2337bf7cb74ecd87d33c9d7e3981c6039d09ef54e0b1d70d99c",
+     "frames": 279,
+     "valid_t4_pairs": 275,
+     "excluded_tail_frames": 4,
+     "key": "95e4d7dd2865b1060cc04bc4e069ae07cc50e8b406117d957ba5fd2c212394fc",
+     "partition": "fit"
+    },
+    {
+     "episode": 29,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode29.hdf5",
+     "sha256": "a720f5b80f240da7b797eb468f0013f29a6923844f588ae57ae79566057f8d7c",
+     "frames": 315,
+     "valid_t4_pairs": 311,
+     "excluded_tail_frames": 4,
+     "key": "2f00b0bbb349efe110dcb3ec4dbd81c8dbc2193704ca91cbc81e635d66631e7e",
+     "partition": "fit"
+    },
+    {
+     "episode": 30,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode30.hdf5",
+     "sha256": "623f280909780fe9ad7fa3f9f36c81b257fbf5df5f37f255abaab0078e469c5c",
+     "frames": 290,
+     "valid_t4_pairs": 286,
+     "excluded_tail_frames": 4,
+     "key": "2deb71b9be43692008bcae3b6501cfba578fb9578ebc2c62f913d7ccd0a03da4",
+     "partition": "fit"
+    },
+    {
+     "episode": 31,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode31.hdf5",
+     "sha256": "e0401d013618a81893ed0be7c9c7f514ffbc68f8bb41d6da9f15a1770a113110",
+     "frames": 290,
+     "valid_t4_pairs": 286,
+     "excluded_tail_frames": 4,
+     "key": "4dd8e8de5828fdc3851dd250f17a85a50bab9bfa93e7a709e734f1fe28039e55",
+     "partition": "fit"
+    },
+    {
+     "episode": 32,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode32.hdf5",
+     "sha256": "abaf3596f8dba4e70c789bfed1553d65f4a5f7fe291a70918089879725e6e33b",
+     "frames": 286,
+     "valid_t4_pairs": 282,
+     "excluded_tail_frames": 4,
+     "key": "2c5632489d6b235c19ea6d75da62fb44c3ace468064b44671f1cdab9353eacae",
+     "partition": "fit"
+    },
+    {
+     "episode": 34,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode34.hdf5",
+     "sha256": "080ec6d696fb350696861d928fc83f91ff3584d43deda0528e14c0fa32763e46",
+     "frames": 288,
+     "valid_t4_pairs": 284,
+     "excluded_tail_frames": 4,
+     "key": "c9c2d1a1b4a402428652161a1640604e4c1c85558ba4f13986024513725756fe",
+     "partition": "fit"
+    },
+    {
+     "episode": 37,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode37.hdf5",
+     "sha256": "90de9b6762e18a88310da8838201c0b365404d59c8b37019243d6430bf1ce65d",
+     "frames": 278,
+     "valid_t4_pairs": 274,
+     "excluded_tail_frames": 4,
+     "key": "a0a32345f23b84b1afe0422f46c5592fcfaa40ebb5330b51c937575e425cdcaa",
+     "partition": "fit"
+    },
+    {
+     "episode": 38,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode38.hdf5",
+     "sha256": "f950eec69e93178cd189a9c24d6eb34d80ae8101ace392162efd75ae435692d1",
+     "frames": 277,
+     "valid_t4_pairs": 273,
+     "excluded_tail_frames": 4,
+     "key": "1e83dc51332251db404a2d1eaef415cf568745e4d3db2ed2e40f19cc3eb328f6",
+     "partition": "dev"
+    },
+    {
+     "episode": 39,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode39.hdf5",
+     "sha256": "02082173df065366697820228693ff1237a32baaf312c72b02e7662e18f28825",
+     "frames": 301,
+     "valid_t4_pairs": 297,
+     "excluded_tail_frames": 4,
+     "key": "7fe933ff408db2b42902ca2ee06e98bcd3cf4d3eda6021775203c32cb46b003b",
+     "partition": "fit"
+    },
+    {
+     "episode": 40,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode40.hdf5",
+     "sha256": "42d0033921e461e644863dadfb558b22ac1019409b512d954ad7247fac490167",
+     "frames": 279,
+     "valid_t4_pairs": 275,
+     "excluded_tail_frames": 4,
+     "key": "99af6bebaa03af2321d7b96170337904c499b4772ecb93336db4596ae775ce2d",
+     "partition": "fit"
+    },
+    {
+     "episode": 41,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode41.hdf5",
+     "sha256": "47f55e705b9b422e721b366c3fa29d7d8826139743addf8f8a6319a1e2cf1956",
+     "frames": 278,
+     "valid_t4_pairs": 274,
+     "excluded_tail_frames": 4,
+     "key": "b22c00144290a16110f07097a1627ce7f02f3b9edc10cec075b3d450e1465fb7",
+     "partition": "fit"
+    },
+    {
+     "episode": 42,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode42.hdf5",
+     "sha256": "03f6a9c2bfe416ff57b10b4785d63ea5eef24bb332651a42ecd2e888c5e05a32",
+     "frames": 284,
+     "valid_t4_pairs": 280,
+     "excluded_tail_frames": 4,
+     "key": "e07f779274609985024b5a896b985173015a4a18811cd96b38b17e1bb9ea4a7f",
+     "partition": "fit"
+    },
+    {
+     "episode": 43,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode43.hdf5",
+     "sha256": "a39dff611510772a223322ea0e3d67383410230b3e646339fccdde7cf10c95d9",
+     "frames": 279,
+     "valid_t4_pairs": 275,
+     "excluded_tail_frames": 4,
+     "key": "732a5d66e22f3c0ece36d1b0a6f0dfa1559539c6fefdbf8a878a777f27e1e3a3",
+     "partition": "fit"
+    },
+    {
+     "episode": 44,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode44.hdf5",
+     "sha256": "f4e9b3d9dda9829a820de4c3e7c0896dc64f195b274d309612b3a0572c6ea972",
+     "frames": 276,
+     "valid_t4_pairs": 272,
+     "excluded_tail_frames": 4,
+     "key": "f29be348dc8a7ac75859bbea789cdcc6026745434a954088f0d35b7181bacc5c",
+     "partition": "fit"
+    },
+    {
+     "episode": 45,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode45.hdf5",
+     "sha256": "4b6cce624c592708e16307d50f4a24b213911a02c2f4080881c6692017f9d32c",
+     "frames": 285,
+     "valid_t4_pairs": 281,
+     "excluded_tail_frames": 4,
+     "key": "2c0dad336d5ea37f84f744e311b1256bae90d5018085e2e5a56adac34f26bb45",
+     "partition": "dev"
+    },
+    {
+     "episode": 46,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode46.hdf5",
+     "sha256": "49964dc12673837c9beb9abd1dbfb963a3563bb3541c590333765c8a301609c7",
+     "frames": 277,
+     "valid_t4_pairs": 273,
+     "excluded_tail_frames": 4,
+     "key": "627c948dacda50a6aae39e085660f6aa2a10251cf8acdbeb979ee571cfa94965",
+     "partition": "fit"
+    },
+    {
+     "episode": 47,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode47.hdf5",
+     "sha256": "1fecce74f3d6ae9bb9006a0e6d7516ee611e63fc691aeb992fb388291a025773",
+     "frames": 281,
+     "valid_t4_pairs": 277,
+     "excluded_tail_frames": 4,
+     "key": "785872e383c7dcabb0dc6cbf71b3a0c681b3eb26540c159c992e5f411474c17e",
+     "partition": "fit"
+    },
+    {
+     "episode": 49,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/handover_block/aloha-agilex_clean_50/data/episode49.hdf5",
+     "sha256": "d975d76e03fd86ca882fe42f90e588baaf711825c6a1c0ec114dc49a6a8034f7",
+     "frames": 276,
+     "valid_t4_pairs": 272,
+     "excluded_tail_frames": 4,
+     "key": "0511221cfa825717c842d0b661789f69f5781ebe461089d32011304707424da3",
+     "partition": "dev"
+    }
+   ]
+  },
+  "place_object_basket": {
+   "dev_episodes": [
+    10,
+    15,
+    20,
+    23,
+    38,
+    41,
+    47
+   ],
+   "fit_episodes": [
+    3,
+    4,
+    5,
+    7,
+    9,
+    16,
+    17,
+    18,
+    21,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    34,
+    37,
+    39,
+    40,
+    42,
+    43,
+    44,
+    45,
+    46,
+    49
+   ],
+   "fit_valid_t4_pairs": 6830,
+   "dev_valid_t4_pairs": 1681,
+   "min_pairwise_frame0_image_diff": 1.036,
+   "episodes": [
+    {
+     "episode": 3,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode3.hdf5",
+     "sha256": "f795d6cb7925ecb6ea66afce8978b6146ba851de044feed0ae90983a2cb1263f",
+     "frames": 254,
+     "valid_t4_pairs": 250,
+     "excluded_tail_frames": 4,
+     "key": "a79ab5717c6213a199f9b3d90b40a67f23f079c986207c05ebccc2d47dd8ffc0",
+     "partition": "fit"
+    },
+    {
+     "episode": 4,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode4.hdf5",
+     "sha256": "927263f993375775ab949121bdc8ba363b80efdf902de3ba32a4c290e5b520c8",
+     "frames": 232,
+     "valid_t4_pairs": 228,
+     "excluded_tail_frames": 4,
+     "key": "dcb04fd783896bbd008f15341ac30ec5b2c77563d161e8c7facf061b69474e4f",
+     "partition": "fit"
+    },
+    {
+     "episode": 5,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode5.hdf5",
+     "sha256": "ecca0f39bf4634f22735148df37ce2b7403f8f5875231743c36862e8a2ceeb97",
+     "frames": 244,
+     "valid_t4_pairs": 240,
+     "excluded_tail_frames": 4,
+     "key": "4075adb01d13f3d6bee010ac0f154ea443c3e876c28f50b76518383e211944fb",
+     "partition": "fit"
+    },
+    {
+     "episode": 7,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode7.hdf5",
+     "sha256": "f0f9cad266ab6f1cedaf3433fc6bc880a7bc6fcad29292426bc9af2a4cf5b974",
+     "frames": 258,
+     "valid_t4_pairs": 254,
+     "excluded_tail_frames": 4,
+     "key": "83f0d5bbb3f3edb2adb417d55867daeb2a52ec024a89bd2d50c023cd275f2493",
+     "partition": "fit"
+    },
+    {
+     "episode": 9,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode9.hdf5",
+     "sha256": "45879c7fca87e5dbd2cff1d6cdd04933f9d4689a4b70e00a19ea1720da76826a",
+     "frames": 245,
+     "valid_t4_pairs": 241,
+     "excluded_tail_frames": 4,
+     "key": "6bfeb7fd60bb89e56f9275fc9b49d1dfba483656933d63df3d5da6639ce7e82f",
+     "partition": "fit"
+    },
+    {
+     "episode": 10,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode10.hdf5",
+     "sha256": "5eb9507fe2577bc471179de3329f5f892adb80c51b720f1c37ce6222e44eb003",
+     "frames": 249,
+     "valid_t4_pairs": 245,
+     "excluded_tail_frames": 4,
+     "key": "2dd353f6c88de34387c6a19b56056fce382a90c3e97045c9409c2ff157de9579",
+     "partition": "dev"
+    },
+    {
+     "episode": 15,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode15.hdf5",
+     "sha256": "3fb46585d630b75801d53dfd6482d92c7e02a071de471979563aa3ba666a1f05",
+     "frames": 233,
+     "valid_t4_pairs": 229,
+     "excluded_tail_frames": 4,
+     "key": "0c013815e217721f02c984ccc92cf69dbf6460b422dcbf59c8a1a976ca55ad73",
+     "partition": "dev"
+    },
+    {
+     "episode": 16,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode16.hdf5",
+     "sha256": "479a62e6bd8b4af723f50fc86d62e406e6b9b38658f206efb723d05046067c71",
+     "frames": 246,
+     "valid_t4_pairs": 242,
+     "excluded_tail_frames": 4,
+     "key": "b4ad8cbeaa657d78d72ef621e29126be6ab2a51d6d8f30813f829678930c26e8",
+     "partition": "fit"
+    },
+    {
+     "episode": 17,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode17.hdf5",
+     "sha256": "c2beb0ec4c6c5fff3d18db39c8354d1004718e724aa53c83d29c1bbd951c87e9",
+     "frames": 240,
+     "valid_t4_pairs": 236,
+     "excluded_tail_frames": 4,
+     "key": "fc6b010608ee072e396272293f4464f83dec23ce184f3621be85a378b0b3c147",
+     "partition": "fit"
+    },
+    {
+     "episode": 18,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode18.hdf5",
+     "sha256": "5b822e1f5afb9838239f912cd55abd45e305079105a16e6093e3504d251a7fe7",
+     "frames": 246,
+     "valid_t4_pairs": 242,
+     "excluded_tail_frames": 4,
+     "key": "7cbfe1d751d92c462f46833dbe4b950fd4419891eefce4c4e0695f3180d7457d",
+     "partition": "fit"
+    },
+    {
+     "episode": 20,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode20.hdf5",
+     "sha256": "6b3b6b698b6186b02370aca0eab2fbf2e874d20fb034aa3f40f47d9bec4a52b1",
+     "frames": 246,
+     "valid_t4_pairs": 242,
+     "excluded_tail_frames": 4,
+     "key": "0e0b8736cdd40476a540472e06f2ff8c93adc816067d5e7f84b7663c6156db6b",
+     "partition": "dev"
+    },
+    {
+     "episode": 21,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode21.hdf5",
+     "sha256": "b0279e605d6fa2ed9a50a9e0116ae534249de619eaea289f3e020170ef2b14d0",
+     "frames": 258,
+     "valid_t4_pairs": 254,
+     "excluded_tail_frames": 4,
+     "key": "5e3161249f2818f75a4ed84f176572f85489f51754d3c9253c317bc57d6e4565",
+     "partition": "fit"
+    },
+    {
+     "episode": 23,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode23.hdf5",
+     "sha256": "f610025a9500bb2fc1aed04f1477688211ee9eb8453d071f6117bedfa31f692c",
+     "frames": 233,
+     "valid_t4_pairs": 229,
+     "excluded_tail_frames": 4,
+     "key": "2b57217c862bbc5a9ffed9c30ba9479c8cd4cf03c17443b6568a0a4a4300c34d",
+     "partition": "dev"
+    },
+    {
+     "episode": 24,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode24.hdf5",
+     "sha256": "c707854ba9c2902308113840daf2f2f028ac427161e3b05034b369cf9fba3dda",
+     "frames": 230,
+     "valid_t4_pairs": 226,
+     "excluded_tail_frames": 4,
+     "key": "e12b97b94a702334db501c6e34288182d5f7281e92cdaa7c0e49c4693ff16ac5",
+     "partition": "fit"
+    },
+    {
+     "episode": 25,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode25.hdf5",
+     "sha256": "720ad2d86797fb558aed9fe5ceecbb7bf001acf99fbebf02e8d653e5926aec6e",
+     "frames": 248,
+     "valid_t4_pairs": 244,
+     "excluded_tail_frames": 4,
+     "key": "890cdff73203ab06afeaaaa52f38d7710b2af7a120156a71ca3716f216652b2e",
+     "partition": "fit"
+    },
+    {
+     "episode": 26,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode26.hdf5",
+     "sha256": "b372128a055cbedb60b2cd7302778eeeaa7f4ffb4d00ec7ac54b62bb8ef72cbb",
+     "frames": 270,
+     "valid_t4_pairs": 266,
+     "excluded_tail_frames": 4,
+     "key": "908bd7bd4933efec369b512e6e233d5652531e1e4262584aeca52a2aa2e73ffd",
+     "partition": "fit"
+    },
+    {
+     "episode": 27,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode27.hdf5",
+     "sha256": "cfb8280da9371f89d355c8c3c6a065f13d3193c4145a5a19c6bc44080446be78",
+     "frames": 238,
+     "valid_t4_pairs": 234,
+     "excluded_tail_frames": 4,
+     "key": "be42e1d22ae192a4df72ee2b616daaad1d650c40d51c6bc1fff3cf9b0194291a",
+     "partition": "fit"
+    },
+    {
+     "episode": 28,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode28.hdf5",
+     "sha256": "c50d14db900c29bcb397606f541858bad0ab02dface137e9eb7064bab886fde9",
+     "frames": 293,
+     "valid_t4_pairs": 289,
+     "excluded_tail_frames": 4,
+     "key": "38b8c6fe0f89a736418816ab51f4822aab19c9a44671ae2757b184a64c1719a2",
+     "partition": "fit"
+    },
+    {
+     "episode": 29,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode29.hdf5",
+     "sha256": "2f165eabc356b5ecaa4605672e538b5eee13ff2645b57ca0a2eb8c3d9147827e",
+     "frames": 245,
+     "valid_t4_pairs": 241,
+     "excluded_tail_frames": 4,
+     "key": "da1471e279e9b1a8c02eb7d70f6995255443888230ad2b3c0de36b58c7bd0674",
+     "partition": "fit"
+    },
+    {
+     "episode": 30,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode30.hdf5",
+     "sha256": "5aa593422d499861bde76fd4a6b52fa4f38913462d9e0a8f674dafc40ede6e0c",
+     "frames": 247,
+     "valid_t4_pairs": 243,
+     "excluded_tail_frames": 4,
+     "key": "c946a7ae0ddad8f6eec0f8872927881e06462107d39cd205b4c9c27a388ec4a2",
+     "partition": "fit"
+    },
+    {
+     "episode": 31,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode31.hdf5",
+     "sha256": "fcb9cb74685127aefac94d0c74dd5ff3670e9a48a8bdb7dd360a11cbd6e4f11c",
+     "frames": 240,
+     "valid_t4_pairs": 236,
+     "excluded_tail_frames": 4,
+     "key": "9d04835c8d80d3f922ce4352abd2b13fad97aca4a3451503584fe8845ac5cdfd",
+     "partition": "fit"
+    },
+    {
+     "episode": 32,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode32.hdf5",
+     "sha256": "d6f79fe0d004f67727fac8fd7dbb0afa43423c87c8a14c9140a1279a3a395fbc",
+     "frames": 251,
+     "valid_t4_pairs": 247,
+     "excluded_tail_frames": 4,
+     "key": "3aaa69bbfdc3d9d4e7238771dff7039c43bc8867aa2606a0ede74ab567647195",
+     "partition": "fit"
+    },
+    {
+     "episode": 34,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode34.hdf5",
+     "sha256": "7a966bbd8017992ff50a5e0f0249d9a784d590f180727a3e566617ecccbf1f79",
+     "frames": 246,
+     "valid_t4_pairs": 242,
+     "excluded_tail_frames": 4,
+     "key": "c0cf577f0f44eed2bdc1f0bdc4eb652636466e110e0a1e977646cacf02c10b5f",
+     "partition": "fit"
+    },
+    {
+     "episode": 37,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode37.hdf5",
+     "sha256": "1e75464aa31e5fa6952f0c97936b590e18c237fb1935b2ba50a6390ae25be2b6",
+     "frames": 250,
+     "valid_t4_pairs": 246,
+     "excluded_tail_frames": 4,
+     "key": "5a97f7c325ce9cde01593d0872863b2a49480ceb0000dfb9de187c863706e511",
+     "partition": "fit"
+    },
+    {
+     "episode": 38,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode38.hdf5",
+     "sha256": "9668925fb3ad94286ffa510183778ad2f6a5802bc6df9bed654e1d2e859f0e67",
+     "frames": 246,
+     "valid_t4_pairs": 242,
+     "excluded_tail_frames": 4,
+     "key": "1d43f30645b6fdfb4474ee21f19e0a0626d42b5d8e5bd43f2236d925d2f6fc26",
+     "partition": "dev"
+    },
+    {
+     "episode": 39,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode39.hdf5",
+     "sha256": "9f732cdf6838a000c3553a350df353f439346969fcc9a70287e50212231a1513",
+     "frames": 238,
+     "valid_t4_pairs": 234,
+     "excluded_tail_frames": 4,
+     "key": "c1b4a26a07af0d9f24e97e1fc30877eb2b9f4469362113a55b0c5458ffb0ae61",
+     "partition": "fit"
+    },
+    {
+     "episode": 40,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode40.hdf5",
+     "sha256": "f0537dddfaaab3a9752e0155200a9d3e1cf4789d6dedf829a0920f2304ae2749",
+     "frames": 246,
+     "valid_t4_pairs": 242,
+     "excluded_tail_frames": 4,
+     "key": "ea25394b4e56df833cd46212d713ea8644f09b40f095d46ab918920f62c81d53",
+     "partition": "fit"
+    },
+    {
+     "episode": 41,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode41.hdf5",
+     "sha256": "956f040cb6aa30c7bcb4e2719ec6f7b6c826ec41c0df0a4517ddbd89a4c37349",
+     "frames": 248,
+     "valid_t4_pairs": 244,
+     "excluded_tail_frames": 4,
+     "key": "1d18d674144086c0476a374fc057ad6d06abdb557dc8f9d6414041bbacdba8c6",
+     "partition": "dev"
+    },
+    {
+     "episode": 42,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode42.hdf5",
+     "sha256": "b5fd29f1b29842271f4b190ddc3f88c97ef5fd633d4779a5ab2f3ed43d7f0113",
+     "frames": 228,
+     "valid_t4_pairs": 224,
+     "excluded_tail_frames": 4,
+     "key": "955956b4a669fbbc98b4f902ab8ec2d88af1aef93b8f0496a5b90e2d8a5775bf",
+     "partition": "fit"
+    },
+    {
+     "episode": 43,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode43.hdf5",
+     "sha256": "78fb85def30a8acc26451808576bfae8b444f26914d093716fef8adaf6c01572",
+     "frames": 247,
+     "valid_t4_pairs": 243,
+     "excluded_tail_frames": 4,
+     "key": "c4fe9449d388cde3ae0e7311305571abe6aaca5083eb8574bb707ed3896b5c29",
+     "partition": "fit"
+    },
+    {
+     "episode": 44,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode44.hdf5",
+     "sha256": "7f38fc72d1ad0fa344b8bd48f42eee50216f5f502c19f2e245dce85823267adc",
+     "frames": 264,
+     "valid_t4_pairs": 260,
+     "excluded_tail_frames": 4,
+     "key": "eb9a3ba7016b590cec523f9da94ce4ecd15952c50a2bfc8be8672a76fe6e3cf9",
+     "partition": "fit"
+    },
+    {
+     "episode": 45,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode45.hdf5",
+     "sha256": "90ba1a013ba54f7488100f9e048542a959c6b059c3928328f83179d8006586ff",
+     "frames": 249,
+     "valid_t4_pairs": 245,
+     "excluded_tail_frames": 4,
+     "key": "cdb0dbd4f94ed75ab78be6db95b14e39c4d964abcadc2590c12c627619da8a2d",
+     "partition": "fit"
+    },
+    {
+     "episode": 46,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode46.hdf5",
+     "sha256": "023ee1a02dfc35cb7a5abb6716c82e1400d452317f5f96c2de51b13e2c8698f8",
+     "frames": 250,
+     "valid_t4_pairs": 246,
+     "excluded_tail_frames": 4,
+     "key": "cb502b9adbf23746d1eddce1d93a5597a3a10393f6d4f12c0d0685332da8b754",
+     "partition": "fit"
+    },
+    {
+     "episode": 47,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode47.hdf5",
+     "sha256": "0e2d884f7f7e4be705448fe92ee9fd1bb0495b7b0e82bfb24dc33e5309117320",
+     "frames": 254,
+     "valid_t4_pairs": 250,
+     "excluded_tail_frames": 4,
+     "key": "2aa31bc62a0d78a38bd1ee697c4ec46c689d2349c51ab544062b2c26f0f52ada",
+     "partition": "dev"
+    },
+    {
+     "episode": 49,
+     "path": "/scratch/zz4330/openwam-runtime/endtoend-root/results/layers-20260922/native-preflight/train-data/place_object_basket/aloha-agilex_clean_50/data/episode49.hdf5",
+     "sha256": "bf1542dccbef081417f7e431003e517cba16138b82291f132e2a1b76601b8ab2",
+     "frames": 239,
+     "valid_t4_pairs": 235,
+     "excluded_tail_frames": 4,
+     "key": "8563d84cb825a1f272d9d9689e281aa86b73a8a67d7d56300db9d5e86c1605ae",
+     "partition": "fit"
+    }
+   ]
+  }
+ },
+ "near_duplicate_pairs": [
+  {
+   "task": "adjust_bottle",
+   "episodes": [
+    27,
+    45
+   ],
+   "image_diff": 1.768,
+   "joint0_diff": 0.0,
+   "same_partition": false
+  },
+  {
+   "task": "adjust_bottle",
+   "episodes": [
+    37,
+    49
+   ],
+   "image_diff": 1.212,
+   "joint0_diff": 0.0,
+   "same_partition": true
+  },
+  {
+   "task": "place_object_basket",
+   "episodes": [
+    5,
+    49
+   ],
+   "image_diff": 1.036,
+   "joint0_diff": 0.0,
+   "same_partition": true
+  },
+  {
+   "task": "place_object_basket",
+   "episodes": [
+    25,
+    30
+   ],
+   "image_diff": 1.594,
+   "joint0_diff": 0.0,
+   "same_partition": true
+  },
+  {
+   "task": "place_object_basket",
+   "episodes": [
+    3,
+    45
+   ],
+   "image_diff": 1.693,
+   "joint0_diff": 0.0,
+   "same_partition": true
+  }
+ ],
+ "cross_partition_near_duplicates": 1,
+ "total_valid_t4_pairs": 23204,
+ "passed": false,
+ "caveat": "The initial S-VAE/policy may have seen all 105 episodes, so dev is for auxiliary-training development only, not an unseen generalization test (PLAN)."
+}

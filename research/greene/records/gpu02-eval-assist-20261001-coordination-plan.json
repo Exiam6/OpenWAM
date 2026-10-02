@@ -1,0 +1,45 @@
+{
+  "task_id": "gpu02-eval-assist-20261001",
+  "protocol_version": 1,
+  "status": "protocol_ready_legacy_execution_continues",
+  "registry_branch": "coordination/gpu02-eval-assist-20261001",
+  "registry_file": "registry.json",
+  "progress_branch": "research/progress-20260927",
+  "all_current_units_owner": "gpu02",
+  "legacy_runner_gated": false,
+  "allocation_ack_issued": false,
+  "torch_allocated_units": [],
+  "cross_cluster_unit": "entire_training_seed",
+  "within_cluster_shard": "one_task_all_arms_conditions_scenes",
+  "gpu_caps": {
+    "gpu02": 1,
+    "torch": 2
+  },
+  "initial_workers_per_gpu": 1,
+  "handoff_requires": [
+    "verified_assets",
+    "actual_gpu_allocation",
+    "non_scoring_smoke_passed",
+    "legacy_drained",
+    "gated_runner_verified",
+    "complete_inventory_adopted",
+    "unattempted_entire_seed",
+    "atomic_transfer"
+  ],
+  "candidate_units_only": [
+    "seed-44",
+    "seed-43"
+  ],
+  "no_reservation_for_pending_jobs": true,
+  "heartbeat_seconds": 60,
+  "heartbeat_stale_seconds": 180,
+  "resource_stale_seconds": 300,
+  "automatic_expiry_reassignment": false,
+  "automatic_cell_retry": false,
+  "new_work_deadline": "2026-10-02T11:28:16.615093+00:00",
+  "hard_deadline": "2026-10-02T11:38:16.615093+00:00",
+  "existing_service_earlier_stop": "2026-10-02T11:34:09+00:00",
+  "public_payload_scope": "Scheduling protocol, coordinator, tests, opaque ownership and receipt hashes only",
+  "next_gpu02": "Prepare and validate gated runner; do not disturb active legacy evaluation before readiness",
+  "next_torch": "Run coordinator tests; report real assets/QOS; single GPU preflight after assets verified; no scoring yet"
+}

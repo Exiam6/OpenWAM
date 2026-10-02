@@ -1,10 +1,12 @@
+> **跨集群调度协议 v1：** [CLUSTER_COORDINATION_PROTOCOL.md](CLUSTER_COORDINATION_PROTOCOL.md)。独立 Git 注册表 + 原子准入；当前全部单元仍由 GPU02 legacy 队列独占，Torch 未获分配。此协议替代下方历史分配提议。
+
 # Greene deployment — OpenWAM research branch
 
 > **2026-10-01 Torch 下一步任务：** [协助 GPU02 评测：先检查资源，再领取未开始的配对任务](GPU02_EVAL_ASSIST_TASKS.md)。GPU02 继续运行；本任务单不转移评测执行权。
 >
 > **Torch 回报（2026-10-01 23:35 EDT）：** CPU 检查完成，见 [readiness](records/gpu02-eval-assist-20261001-readiness.json)。环境可复用；L40S 预计可立即开始，H200 约 10-02 13:40。**尚未收到私有交接包和新检查点**，单卡预检未运行，未领取任何单元。
 >
-> **分配方案（2026-10-01 23:50 EDT，待 GPU02 确认）：** [GPU02_EVAL_ALLOCATION.md](GPU02_EVAL_ALLOCATION.md)。按训练种子整块切分，Torch 取队尾 2 个种子、L40S；GPU02 推送 ack（确切单元清单 + 排除已生效）和该分片资产后 Torch 才执行。
+> **历史分配提议（已替代）：** [GPU02_EVAL_ALLOCATION.md](GPU02_EVAL_ALLOCATION.md)。当前只按跨集群协议 v1 和独立注册表交接；没有提前保留给 Torch 的种子。
 
 > **Current scheduling handoff:** [GPU02 temporal ownership — do not duplicate on Torch/Greene](GPU02_TEMPORAL_HANDOFF.md). Read before submitting temporal jobs. The deployment tables below are historical setup notes.
 

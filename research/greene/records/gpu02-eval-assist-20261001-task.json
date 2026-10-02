@@ -14,7 +14,8 @@
     "Inspect live Slurm queue/start estimates and quota.",
     "Check existing policy/benchmark environments, simulator dependencies and free space.",
     "Check whether private package and exact new checkpoints are available; report missing inputs.",
-    "Commit sanitized readiness report to the progress branch."
+    "Commit sanitized readiness report to the progress branch.",
+    "Run coordination/tests on CPU; report readiness without claiming any legacy-owned cells."
   ],
   "gpu_preflight": {
     "gpus": 1,
@@ -24,8 +25,8 @@
   },
   "handoff": {
     "required": true,
-    "rule": "GPU02 persists exact per-cell exclusions and acknowledges them before Torch executes any scored cell.",
-    "shard": "Same training seed/task/scenes, all matched comparison arms, same hardware class.",
+    "rule": "Legacy drain + verified gated runner + exact inventory adopt, then atomic owner transfer and per-cell admission through protocol v1.",
+    "shard": "Cross-cluster: entire unattempted training seed. Within cluster: task across all arms, conditions and scenes; fixed GPU hardware class per seed.",
     "no_replay": [
       "complete",
       "failed",
@@ -60,5 +61,7 @@
     "missing_dependency_categories",
     "transfer_acknowledged"
   ],
-  "old_jobs": "Do not rerun completed endtoend1620, old temporal study, or official-checkpoint reference evaluation."
+  "old_jobs": "Do not rerun completed endtoend1620, old temporal study, or official-checkpoint reference evaluation.",
+  "coordination_protocol": "research/greene/CLUSTER_COORDINATION_PROTOCOL.md",
+  "registry_branch": "coordination/gpu02-eval-assist-20261001"
 }

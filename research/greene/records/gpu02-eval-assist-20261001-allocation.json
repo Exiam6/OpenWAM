@@ -1,18 +1,17 @@
 {
   "task_id": "gpu02-eval-assist-20261001",
-  "status": "proposed",
+  "status": "superseded_by_coordination_protocol_v1",
   "proposed_at": "2026-10-01T23:50:00-04:00",
   "proposed_by": "torch",
-  "user_decision": "2026-10-01: split the new-checkpoint evaluation between GPU02 and Torch; no separate private handoff; coordinate via this progress branch",
   "shard_unit": "one training seed = all matched arms x all tasks x all conditions x all scenes",
   "proposal": {
     "torch": "last 2 training seeds in GPU02 queue order (about 2/3 of the matrix); must be never-attempted at ack time",
     "gpu02": "all remaining seeds, including every cell already complete, failed or in flight",
     "torch_hardware": "L40S only (sm_89); H200 only as a whole-shard switch if L40S cannot start",
-    "torch_concurrency": "canary %1, then up to 6"
+    "torch_concurrency": "Historical proposal only; current cap is 2 GPUs subject to actual verified available QOS and allocation."
   },
   "torch_assigned_cells": [],
-  "effective_when": "GPU02 pushes records/gpu02-eval-assist-20261001-allocation-ack.json after its worker exclusion is active",
+  "effective_when": "No longer effective; only verified transfer in coordination/gpu02-eval-assist-20261001 registry.json changes ownership.",
   "ack_required_fields": [
     "study",
     "matrix",
@@ -22,8 +21,8 @@
     "gpu02_worker_position",
     "exclusion_active_at"
   ],
-  "assets_needed_on_torch": "fixed source, configs, normalization statistics, checkpoints for the Torch shard only; via transfer/<id> branch + delta pack with SHA256SUMS",
-  "release_rule": "if Torch has not started its shard by 2026-10-03T12:00:00-04:00, Torch pushes an explicit release record; GPU02 re-includes only after acknowledging it; no silent timeout",
+  "assets_needed_on_torch": "Exact assets must be verified through a user-authorized delivery channel; this record grants no new publication authorization.",
+  "release_rule": "No timeout-based reassignment; follow protocol v1 and original Oct 2 deadline, never Oct 3.",
   "no_replay": [
     "complete",
     "failed",
@@ -33,5 +32,8 @@
     "official-checkpoint reference"
   ],
   "failures": "retained, never auto-retried; technical failures reported separately",
-  "reporting": "per-episode ledger with task id, checkpoint sha256, source version, GPU/PyTorch/CUDA, seed/scene/condition, native success, steps, time, technical failure; analysis on valid matched cells with machine/hardware labels"
+  "reporting": "per-episode ledger with task id, checkpoint sha256, source version, GPU/PyTorch/CUDA, seed/scene/condition, native success, steps, time, technical failure; analysis on valid matched cells with machine/hardware labels",
+  "superseded_by": "research/greene/CLUSTER_COORDINATION_PROTOCOL.md",
+  "historical_user_decision_claim": "2026-10-01: split the new-checkpoint evaluation between GPU02 and Torch; no separate private handoff; coordinate via this progress branch",
+  "authorization_note": "Historical proposal text is not authorization to publish private research assets."
 }

@@ -1,0 +1,664 @@
+{
+  "schema_version": 1,
+  "experiment_id": "gpu02-eval-assist-20261001",
+  "revision": 0,
+  "events": [],
+  "created_at": "2026-10-02T03:52:55.300910+00:00",
+  "legacy_inventory_captured_at": "2026-10-02T03:52:55.300910+00:00",
+  "inventory_semantics": "Historical snapshot only while mode=legacy; owner is authoritative. Refresh exact stopped inventory at adopt.",
+  "hard_deadline": "2026-10-02T11:38:16.615093+00:00",
+  "new_work_deadline": "2026-10-02T11:28:16.615093+00:00",
+  "clusters": {
+    "gpu02": {
+      "max_gpu_slots": 1
+    },
+    "torch": {
+      "max_gpu_slots": 2
+    }
+  },
+  "resources": {},
+  "units": {
+    "seed-42": {
+      "owner": "gpu02",
+      "mode": "legacy",
+      "epoch": 0,
+      "hardware": null,
+      "manifest_sha256": "6ddbef6bf07b28d6869f59d6902987ba880efe8bb56e6959b61ae5ccd36700b5",
+      "shards": {
+        "task-01": {
+          "state": "legacy",
+          "cells": {
+            "68735f45ab639066ef82300d4fe31f737c703316ad37017ccedb57c9465988cd": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "341f525ada11a0a608e5ac66e9e49507f5a147277b0f7f9ab9db6d191323a9b7"
+            },
+            "d559051111dd7402ed14dcb2e95e2d05b72b749440baee32efd59269311b1ee7": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "a3ab802602c4098b932dfb88ff8a9867efbd1a413a495001920b4bba49693614"
+            },
+            "0c00d61656cef2daeb4da9edc68c317995005434a3349457416ab4f4b2e24c59": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "97a3ca0fa6d8dd92208f24e81cc91bd71863d288f8e13700211ec53ccca33e5d"
+            },
+            "a909b47280765daa0197db226ffd6f65c2791fc30189724677cb6d76ace1b339": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "5a8c8b4d8c68ba464bdaf68e1f33ebff2324585cf916f19314a80e9f977369cb"
+            },
+            "7fbe638579a7f7ea6cbacdcd9f028d4423a55a950350a64c09719820335e2f9b": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "950210e98f6ea99001c0d78cf9e5839dc6ea7d4d52733c00fea940657e68a8bc"
+            },
+            "0c43417a080171099d76ea1e89c3012b70148d53146377148aed5ad2ce1ca0b1": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "539deedf21fa74de974424304f116372c901cd861d48dcded97de38adef0466b"
+            },
+            "85872a26d42cbf2411847ad17f1803a07957a004e5bd1ed343261ce4f751a00d": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "b57061e1256796b3274d8fa0ac290f7e5c32b8d9e82c796a4d0fe0c68acacf28"
+            },
+            "73a9f20ece2b63e092809097daf05d8a83260e785f06fb361fc96a86c5af6642": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "65b9e68778ca5d3192e319cf8e2d25d20671b7c0a37475212d66c098e354ccc8"
+            },
+            "d8274d331269d0c6b06c6fc2a42c9a850f86bbc89b441075a47d0378bc8aa406": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "61445b2703dc6cf8d5522f7cadf7c4d9dab80e9ca2b24dfbae9d1ef60910e0cc"
+            },
+            "5784f5a4708b50ceb086fc77ead847808fb6a364e1bef41299a2308988ffbed6": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "f2f100fe8c1d1eb363f443df69089ec878207de663b978c099d1993434904de7"
+            },
+            "d91e68831dc68d2fb4ff9dc5317201f11e55bdf3dcf3b1ac34d302054e61e3be": {
+              "state": "pending",
+              "attempted": false
+            },
+            "f43ed107ad797815bdbf6c6a2f28c9e5639a974ba60353a81e96c05a76d7d579": {
+              "state": "pending",
+              "attempted": false
+            },
+            "f90f9de0889b94d43b4eaf85b23a9a49fb892ad3782d90721afac2708a010278": {
+              "state": "pending",
+              "attempted": false
+            },
+            "a90b7e97ee52da405144b3db95d56707d1845caf2399266fb1cc62625776e622": {
+              "state": "pending",
+              "attempted": false
+            },
+            "a7452cef3eefe4144288dbae1784cb0ad6fa628094f803645461f82072ef47cb": {
+              "state": "pending",
+              "attempted": false
+            }
+          }
+        },
+        "task-02": {
+          "state": "legacy",
+          "cells": {
+            "69e43927062df2382bca93f248a75387bd28e279f077a4ed4a798684a6a786d5": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "ef34f7d8790df1c4245f1836008925228e272f5fcb6282bb4c90ce8b0b390c71"
+            },
+            "588481aa89b1b91a1b27328cd5f67578673691025329dd31f51acadfa90f5cd2": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "13fe81568ae5d1cdaec382fe4aaeaa89794ec329d4b77b0f041b2f6acfeabaac"
+            },
+            "e96246fab91fe7dbce849d6596639bd5206851abd6dada5a387b991a66fd7516": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "05035cf85faf347faae97ab57826d824d5c01f54f941c0b19746ffdea31cf3ea"
+            },
+            "db40403ecd91342bcac529a093f2d33a25fac100c960b08f478711dea305844e": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "5f1c3c2c0ec077edaea826838e6dcb334e92e4966868259a49429175cb5235c1"
+            },
+            "304a5f7368feb637791d640f03aae17dd35bc6cd0aeb9399e051a6ed017f1cf9": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "b4bfea41e558844d19a8fd604af8be526a7145f42020531d1aa3ca58b47f750f"
+            },
+            "30b841ecc35c6a52a68440d406162c1ecc739cc697cc23a09dd441e15ecdb4ec": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "3e17ebd5ff818d02ca09c66c2be57f1797b1d0ba58b3c2d0a41941b040f0a629"
+            },
+            "c10f69c114ed95633da07398a76bb1e5500469ff0dd51873933d7f79478c655b": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "14ac6aff607adf6b72aa0596ffd5287faafdfd089a643bba10908e1aac283da5"
+            },
+            "9c1b28605344b4c2ef662d145892cef539edcfaf78c6ae8543dc8b91c749b178": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "2bb20015fed5f8bd6d9717af62a8e3a702f3156b186421acf582dbdf548a7750"
+            },
+            "bfd12b8ff3bd77dfd63cc59836141f7407e2227a8e179e5b28736653a19ac41a": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "d12ca24356eec8e465edcdf810648dad40ae03711a4b0e40cdc40b8a55879bbf"
+            },
+            "12fbe04faef9a0b1160339f506b5236ea0c82d70f7e72eecea68e433db367045": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "c3ab7bf77c81c4c48599a3625c9f2d23bd6450efd1f32a8eb91f77946755f36f"
+            },
+            "fd9c42c8626faede8e234028d4969cd42869ce8de7357771fc894d857c6deb83": {
+              "state": "pending",
+              "attempted": false
+            },
+            "16b2f982f966930c3a3971e5a3efa6f6aa5be3046971599669b66610d70516b5": {
+              "state": "pending",
+              "attempted": false
+            },
+            "b00dd66c942570a6057353f9d9bb0aa19158e1edf27fff19c22201e1ca493356": {
+              "state": "pending",
+              "attempted": false
+            },
+            "f291b8dd50912a66942f3c83d3728a2f7668fba9854d9208f4cfa04497492a87": {
+              "state": "pending",
+              "attempted": false
+            },
+            "7f8c84f906cf4ef56466e9517f8c50af02403b7d36bc415a729ab1a2d64fc1e4": {
+              "state": "pending",
+              "attempted": false
+            }
+          }
+        },
+        "task-03": {
+          "state": "legacy",
+          "cells": {
+            "3a24f4ee5a468fdd35bd81f3a1c631bbe43f4c8db7c573e1736a34bf691e8c39": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "5b786fc9104275043ce0120ec8220e2977c8dcd1f7fa0907a4dba0eb2fb47515"
+            },
+            "5db3f47893e7f097e82df4b4ec59823190c05e9dfcf559ffc6794a238a1231ab": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "e96bbe884fbca994b994c89ce030d7dcb904372e83eaa1c7a569ea4d1ab89699"
+            },
+            "ccf9d7eaeb725cd3e5c1459bb5d503fdc28f3c442ae54708c41c02d835fbc786": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "5cfea7e18c7be9484fe2672413c1ea85d7f45b177c0c825855f2530c98107297"
+            },
+            "50b58da3752b059cbadefe4cd26501cc816e37e78ed62790894f01ccdb9f9b54": {
+              "state": "failed",
+              "attempted": true,
+              "result_sha256": "ab4169af849877ea2475303bc5a4119dcc46d632ffe65ac04a7abf45abbbbfd3"
+            },
+            "e6db9205ceb17fd3a5c40da97de28e1b59cfb24fdb80040b04b9d989d64e70bd": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "279db9b43d414967120860f68438f4a7275fe8096b9aef2908636972d52a2474"
+            },
+            "154a936ddd08d4fff530cc6f58244b2a322ab4fe745e5b2b9045f0edce370d48": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "7c4417ec3807dbbd23b7113a4f50bde1d9ba007e38737119a95f66ec0fc31eb8"
+            },
+            "e40f4341de8814c5aeb5b6338cf9dda94640b6ac9c4bacb785ed81c2bd6d26af": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "e1642cc3f6338c3129ac3ad69eaf3a0369097aa855f4fe3da2c681417d6ec340"
+            },
+            "5ff7af794ceb3c2615e4e39fbb48a86049a4fccce065c91d0b57696b850acbec": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "8ef495b44f2aae03d192656edadfc63def92bc6a38c4ef5ccc388555be04fc89"
+            },
+            "c0575b5e6ca31aa4e07b10f8b7c2a2b35184631b7bf6a85d2d61d466cdbee9e5": {
+              "state": "failed",
+              "attempted": true,
+              "result_sha256": "d9463c704e87f5731e902d05aff1025e0a3908cbe9f387473b959ae281cc15ab"
+            },
+            "769167820e22116ba88640b9be255a3975252011f2a8d22b4cabc7af7f9a8cf7": {
+              "state": "complete",
+              "attempted": true,
+              "result_sha256": "47bacc34c15fc2053e1cd5060f9ee441d7557621d2b880d8a38f8c69ea814635"
+            },
+            "dc7c63b733209f640e2f3993dca795ae96e32522676e68cc64b02e2aefed56a1": {
+              "state": "pending",
+              "attempted": false
+            },
+            "0f28b10d22d24e7d2c2af4accf1937f6ce5da025523262e45f98e43d1cb8e5db": {
+              "state": "pending",
+              "attempted": false
+            },
+            "4f6be8d685bfc4a79a4aa02760acca185759b5ca70bc0718440ab7851086c638": {
+              "state": "pending",
+              "attempted": false
+            },
+            "6f8ecd26a99ae0f748bcbe8be38cb45426bd6f73cbb3484b6e178af4dd356c8d": {
+              "state": "pending",
+              "attempted": false
+            },
+            "c295208df4437131f8f8e027a2ca73c0b9e5e49a970ec8463af26a9d85f780b7": {
+              "state": "pending",
+              "attempted": false
+            }
+          }
+        }
+      }
+    },
+    "seed-43": {
+      "owner": "gpu02",
+      "mode": "legacy",
+      "epoch": 0,
+      "hardware": null,
+      "manifest_sha256": "854b4c8f5da6ae795f93962c5a09c5b237a8e7e0e790ef93c865ef2b854438c5",
+      "shards": {
+        "task-01": {
+          "state": "legacy",
+          "cells": {
+            "3a7cc68c4ec87462a87c8c1b8a6d424ed70ec00abc3b236d54b913abafa75257": {
+              "state": "pending",
+              "attempted": false
+            },
+            "1c0ba992da33e27d946a6af79ecade6888de9ad7c315f2569bc8c588205f49d5": {
+              "state": "pending",
+              "attempted": false
+            },
+            "98e2998ec0519161b12478605c11ed746c89da31953b91748af065b831e855d2": {
+              "state": "pending",
+              "attempted": false
+            },
+            "d44d74b0a2aa6ec6f783917f12225e84f1052d01b1ab095036e460be40ede458": {
+              "state": "pending",
+              "attempted": false
+            },
+            "12742ea29c6faf0746bb3239c362e406918e08318d6db4884fee212c632ecf40": {
+              "state": "pending",
+              "attempted": false
+            },
+            "045a4b3cb0420c627762e731169d2b994db026c4bcae51de8d997eeef310fce4": {
+              "state": "pending",
+              "attempted": false
+            },
+            "e7226ab5bb785a9daeb9127b55afe8445fa214a13fdb2c9af19ea45cf2476299": {
+              "state": "pending",
+              "attempted": false
+            },
+            "a66d8131af8848f774248e272f245860ff6f4d9392c0e92e46e75450fd866a2c": {
+              "state": "pending",
+              "attempted": false
+            },
+            "5372beca00fbc244918d68cd5900c8814f237085f4b3ba0d121bd8cacaff274e": {
+              "state": "pending",
+              "attempted": false
+            },
+            "6064deab7908f316a06b752cdb50149f2304934a4aea12d428f2e49755940906": {
+              "state": "pending",
+              "attempted": false
+            },
+            "730e5e28aa9a1a0582020e5fe1f2cd5aacc253d023ae90800a95362b7615cae9": {
+              "state": "pending",
+              "attempted": false
+            },
+            "e9b755ee32e6791d37c600ed01e88b23313ef018d9e93c8be3b06d92a9f2d45d": {
+              "state": "pending",
+              "attempted": false
+            },
+            "4acc942aa75dc7a7ac1860eda5a54e006c56f567267b02f9faa56e2e4f9d038c": {
+              "state": "pending",
+              "attempted": false
+            },
+            "bc2e444f5701a711fcd1b429e1669fba689f339451c6be33ab141b9a0c7002fe": {
+              "state": "pending",
+              "attempted": false
+            },
+            "d7031cee3efeb1bd01918d9091159e0b99b94851d3f88c96b261558c00a43d01": {
+              "state": "pending",
+              "attempted": false
+            }
+          }
+        },
+        "task-02": {
+          "state": "legacy",
+          "cells": {
+            "e3e5a0af51681188a7c2df88814b84123b18aaa75285f30959c67c5e8c45bae9": {
+              "state": "pending",
+              "attempted": false
+            },
+            "239254014a4e98de6f63cb2f2cab1f1ea2f24f5d94681e7c291125e997d6ecbc": {
+              "state": "pending",
+              "attempted": false
+            },
+            "b12ea66ae095c76e45c140d49f4572edd7093e1ca085ab96560185b463a7f131": {
+              "state": "pending",
+              "attempted": false
+            },
+            "a2c724e665f0a2fc1727090f7ffd1f8118e89fa956c969b099e2885204560d09": {
+              "state": "pending",
+              "attempted": false
+            },
+            "910bde59e3150479d023251cb4b220db394454eb336f3061105b0add933c92e9": {
+              "state": "pending",
+              "attempted": false
+            },
+            "5ceed47a71259b1fbe857cf4721db86a13b708bebcafbce3e6014da45e52866e": {
+              "state": "pending",
+              "attempted": false
+            },
+            "669449a6df19dc5d9ef8cb8d9decfba47a751d734608ad50ed6f5467dbdc11b6": {
+              "state": "pending",
+              "attempted": false
+            },
+            "c0a60fd46ba1918422c7274579eafbdb28654fe16d646bf9c6b664bccdc1861e": {
+              "state": "pending",
+              "attempted": false
+            },
+            "558f62a1988057d479c007e7374f4087554aebf8d3e8981106d3bdba6e5171d7": {
+              "state": "pending",
+              "attempted": false
+            },
+            "53e01dc6e42a5a5358839eb64d2ccce89fbb57591975adcd5a6559cc5437ad9a": {
+              "state": "pending",
+              "attempted": false
+            },
+            "647229cb8ff52df0dcbf6eefb3f9b3c7721697f2b38934d209fd2ad8b0d5fd0d": {
+              "state": "pending",
+              "attempted": false
+            },
+            "2151aa0a016a4e48947f22f9c4ab1f6df8c2765cbaa28139184b034cae9ea054": {
+              "state": "pending",
+              "attempted": false
+            },
+            "3c34179e34d55f0ecd21ec7fb998f45b5d86e304f90cfbb991afc97551fda2bc": {
+              "state": "pending",
+              "attempted": false
+            },
+            "4f5594600769c166d34105d4719def1918a8bdf0a1f3d0db7b9b12674d85a49a": {
+              "state": "pending",
+              "attempted": false
+            },
+            "99f6e39b3dec8b0754a1b4c07911b34a3293f98d594d246ffdc1c87fbfaeeb6b": {
+              "state": "pending",
+              "attempted": false
+            }
+          }
+        },
+        "task-03": {
+          "state": "legacy",
+          "cells": {
+            "33b0456a6988490b94e4ef448d3ca2937faca033e9f746dd96c3c4cd28bbb974": {
+              "state": "pending",
+              "attempted": false
+            },
+            "cff2aa5e45ce4be5b9c77a4b2f3609b47791890cec6f21a99ee4256995eaf1cc": {
+              "state": "pending",
+              "attempted": false
+            },
+            "62675d627daa9116b986f085e3ede9d435b916dc409bc451e4ffaf5239d0d2ea": {
+              "state": "pending",
+              "attempted": false
+            },
+            "6879cdfbce2c079c78ce40c7a5f59e070f7a05150d3305e3972bddbe847a1a6d": {
+              "state": "pending",
+              "attempted": false
+            },
+            "29df58def09a07bdb8537f736946385e952ba933739f724030a62ae8c1e4da31": {
+              "state": "pending",
+              "attempted": false
+            },
+            "5cadb84a9c1bdb2226f4698791f9a19c2e20475b4b92b62aaf3fd15285885762": {
+              "state": "pending",
+              "attempted": false
+            },
+            "6e48d14f6192e3b0bb171d9b78c9876fbb1e7521269ca4b04226bf1bf211cf0b": {
+              "state": "pending",
+              "attempted": false
+            },
+            "128cabe07dbfb371f61cb89da70252ba99f3e49bd7f7865f9bf7724180d70664": {
+              "state": "pending",
+              "attempted": false
+            },
+            "f73c2ff979a7f79622246762843642717f03d69f5661377fc5acfc85e69b5c2f": {
+              "state": "pending",
+              "attempted": false
+            },
+            "af10743579e0a67df70ff1cb0d1c9ed0b4f6e99a87328abdcf744286c7e6101c": {
+              "state": "pending",
+              "attempted": false
+            },
+            "0f3cc0553e806bbb1fd46018d25f5e8b9b8fc8b821156d6cc19f4d17ee620bdc": {
+              "state": "pending",
+              "attempted": false
+            },
+            "03284ca26b3dbc66190449da145f85f9fe83a8b4b2c2ca9295492d697e074338": {
+              "state": "pending",
+              "attempted": false
+            },
+            "d14a32ee76bf5b5ca979a70714d6ee45be62f3b2d71f2eab8d6c71b373b38f8d": {
+              "state": "pending",
+              "attempted": false
+            },
+            "c2e561b6061d168b0f92f4f668c34a392fc455af08fcb312f6be5102e90f532b": {
+              "state": "pending",
+              "attempted": false
+            },
+            "b909cd54473125e4aef126e9441a67a6babcbfbc28411223c484bcd10828c708": {
+              "state": "pending",
+              "attempted": false
+            }
+          }
+        }
+      }
+    },
+    "seed-44": {
+      "owner": "gpu02",
+      "mode": "legacy",
+      "epoch": 0,
+      "hardware": null,
+      "manifest_sha256": "02d09d7ec5cc6a353b0d405c40177a72dc2ca31cacc84e48c243831a1829c3d9",
+      "shards": {
+        "task-01": {
+          "state": "legacy",
+          "cells": {
+            "0b299f35627d65514b74f6e45c8105e6f7472aa804e03e69fb374ee12cc87fb3": {
+              "state": "pending",
+              "attempted": false
+            },
+            "c3fe4c3f04f346de3b65c3ad9459c573759e5bb52cb7c3e98bf93d6d9fb722b5": {
+              "state": "pending",
+              "attempted": false
+            },
+            "646d74dc5cc47190a43903ba834b9fb2377ceb20147950a46d019063eb718b35": {
+              "state": "pending",
+              "attempted": false
+            },
+            "b521bab07bdd220a007a476a8e7d1cea938e5f52a37590b74c4f408f0ac80304": {
+              "state": "pending",
+              "attempted": false
+            },
+            "d31eaba8601f6d4502b38b3d32cd175ef4aa1a4f5043ec4a78e80ef7d395bc01": {
+              "state": "pending",
+              "attempted": false
+            },
+            "2b879a08be1a94af47212bd7783cfaa02a0c1ddfbc9f65c79955c6fc0e6955db": {
+              "state": "pending",
+              "attempted": false
+            },
+            "f5283b591a254cce2ee66129797f816528938e8dce9b63b50e88f320be414c61": {
+              "state": "pending",
+              "attempted": false
+            },
+            "db57c31bec710760d8d5a4a52c64e49b97bab44b4017829c7fa74e9d4d424dc9": {
+              "state": "pending",
+              "attempted": false
+            },
+            "c820c93007150998a949c6dc6e54843c58a7bc18ae5182db9eff98243799642b": {
+              "state": "pending",
+              "attempted": false
+            },
+            "7a3ebf2136b7c867eecb0404ef7d52fc78290fb471b215d8c6ae65ef05c63dbf": {
+              "state": "pending",
+              "attempted": false
+            },
+            "984b507fa52c4f563606b9123beb21afd418d0602f34b0d703fea44660b2214a": {
+              "state": "pending",
+              "attempted": false
+            },
+            "1843a7fc92002f707d30ef98a090e7aae4daf2714e176502b1a14b61a3ceec8c": {
+              "state": "pending",
+              "attempted": false
+            },
+            "07e8c2b5578e143e498743d4f96334a61485084e694fc744bb37507e6e5049d0": {
+              "state": "pending",
+              "attempted": false
+            },
+            "a18819e54c65ffd718184f7b357b9ab263e60b8cc0c3551e618bd41e44ba7153": {
+              "state": "pending",
+              "attempted": false
+            },
+            "236f53202dc1348d1f1de2534dbcfde594230237415adee86492c462cc7691bc": {
+              "state": "pending",
+              "attempted": false
+            }
+          }
+        },
+        "task-02": {
+          "state": "legacy",
+          "cells": {
+            "6a05d0cdf07ad54ecfcff374db9476dc317817d28ee72b2c3fb6cc1a081177f7": {
+              "state": "pending",
+              "attempted": false
+            },
+            "03b3c9e74105fd09eb7bcb436985b670547070fa897e797047bd4588daca6158": {
+              "state": "pending",
+              "attempted": false
+            },
+            "7b113daa8b55612a836bc2600d957ac5fc781b4d4d7e2eb2a8c7c766bf2ee890": {
+              "state": "pending",
+              "attempted": false
+            },
+            "e08136091dc6d03fc718b1ba3cd893e456dcfa629894cc1f4afeda65257d201f": {
+              "state": "pending",
+              "attempted": false
+            },
+            "ae14c275ad1d4faef014f69d4a5143400cbb4125f138c25dc25a8a5a69851079": {
+              "state": "pending",
+              "attempted": false
+            },
+            "4cd486074a82c07478791e501c409f742946091f2854a203feb43068238a6958": {
+              "state": "pending",
+              "attempted": false
+            },
+            "7e44c84c7b46eb5725b470e11f3a6a3db5ad7b55fc6c9cfc59407f34cb6d188a": {
+              "state": "pending",
+              "attempted": false
+            },
+            "e1c7152a18f97a5fc4d102934922d6482ca2086f8bf0219e04501001034d8acb": {
+              "state": "pending",
+              "attempted": false
+            },
+            "56829df22ace19118460f56df66ccfef1f00181ee200316a9d6af1fff8674f21": {
+              "state": "pending",
+              "attempted": false
+            },
+            "dfb49934f2dc4900215a797b17073f30f3eb07229642a56ac3416721c82324f8": {
+              "state": "pending",
+              "attempted": false
+            },
+            "6b5cd42af5e52d9e66ff820544b5b9f27f9be6c92bed6d310db610d715165ebf": {
+              "state": "pending",
+              "attempted": false
+            },
+            "f8a5851cae5dd00e68e9a94b215f2fd6df6c08dc0fb7b5def3e0f7030f201170": {
+              "state": "pending",
+              "attempted": false
+            },
+            "624ddabdcf15f72031d8a9e53c2241a34af048407bc26e177b7c781cbbd3ad26": {
+              "state": "pending",
+              "attempted": false
+            },
+            "9087d802137a7d31d60daede5d6020301c99b1ddcd1e9c30e2fe0f718ea388c7": {
+              "state": "pending",
+              "attempted": false
+            },
+            "4386e8914761529381c3debda035582da5755778f1e7e1ee413858fd4b5bc279": {
+              "state": "pending",
+              "attempted": false
+            }
+          }
+        },
+        "task-03": {
+          "state": "legacy",
+          "cells": {
+            "d1a01a8823c67cdee38f39ea5a17cc1cc339b8c85dbb4ec3e861b9cf4bea6c82": {
+              "state": "pending",
+              "attempted": false
+            },
+            "268f46479372b7d73fad816c5dd9f0e5f8b3a380a5d4d0ed6e9549549993a888": {
+              "state": "pending",
+              "attempted": false
+            },
+            "60e8f0612fecb3a60804ed1adc8b61f1711b0692bcdccfc0e7cc57f553a045a1": {
+              "state": "pending",
+              "attempted": false
+            },
+            "5a40e7eb3450840f46906f807719bc50748f015fb0dd0793058de0823744b701": {
+              "state": "pending",
+              "attempted": false
+            },
+            "e0c6e6636cf3e762ba0fd1a05e595c77e1e9181cb9bc78ac1e61fc1320bae326": {
+              "state": "pending",
+              "attempted": false
+            },
+            "a82c2b42242dfd6b3e46f7479b093ecbfcf2a8eabece4480bc0d178bb90e987c": {
+              "state": "pending",
+              "attempted": false
+            },
+            "626c51e59c6802b5debc15494f8bf07669a3d8b0d32608d5183a303d842b8b19": {
+              "state": "pending",
+              "attempted": false
+            },
+            "11928c6f11cfc07705aa9a21ae543f17bc6a3ccf869ac8c7a6cbc0efdec93c17": {
+              "state": "pending",
+              "attempted": false
+            },
+            "b8130a0ebd7d378e5c658b118841ce5886aed6b9937bab97bc2b367e01c4f14b": {
+              "state": "pending",
+              "attempted": false
+            },
+            "00f1a75fb8caafd3db7ad5ce0e2bbd4e380cae94945accbb03fc0b736f96ee7c": {
+              "state": "pending",
+              "attempted": false
+            },
+            "62c0b9fac989cc149568ac4fa4fea8c8ed5676d13fd3f04b3f94f63daac16d63": {
+              "state": "pending",
+              "attempted": false
+            },
+            "f24b78748d26257fffbb7aba2c9f47ca6cdee39aac580c5b1f82831f54186b10": {
+              "state": "pending",
+              "attempted": false
+            },
+            "9a61b2a35c17c9e6dad51773117e814cd838382c13eab56a681f478d47311214": {
+              "state": "pending",
+              "attempted": false
+            },
+            "1c06e3b7937d9b203e86c1d573316d6fb6bd4f20e034d56a122a068aa3626269": {
+              "state": "pending",
+              "attempted": false
+            },
+            "df86b460d7ff351b7ee8c8ab3f3d6aa557c86627c05859ab809f0ed50bfe5a3f": {
+              "state": "pending",
+              "attempted": false
+            }
+          }
+        }
+      }
+    }
+  }
+}

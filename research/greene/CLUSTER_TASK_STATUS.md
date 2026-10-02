@@ -50,30 +50,45 @@ GPU5 的显存和算力当前只有本任务在用。`shenlong-gpu-01` 上 5 号
 
 因此 03:20 之后到 06:34 之间约 **3 小时 14 分**的空窗，只能靠**开一个新实验**来填。这超出当前冻结协议的范围，需要先定方案再占卡——协议 §3 明确写了"不为填满卡而重训/重跑"。候选方向和预估见第 7 节。
 
-## 6. Torch 本轮应该提交什么
+## 6. Torch 已经交了，本轮不再需要更多
 
-协议 §3 末段：*"如果 Torch 就绪时所有种子都已开始，则不拆开正在跑的种子。"*
+Torch 在 **2026-10-02 00:12 EDT** 推了 [readiness v1](records/gpu02-eval-assist-20261001-torch-readiness-v1.json)（提交 `2cbf69e6`，来自 `torch-login-a-1` 登录节点）。这份报告是合规的，先记录它交了什么：
 
-三个种子（42/43/44）**都已开始**，seed 44 的最后一个变体也会在约 03:18 前结束。所以本轮触发的是该条款：**Torch 不 claim、不启动任何计分 cell**，Shenlong 把本轮跑完。
+| 项 | Torch 报告值 |
+| --- | --- |
+| 协调器测试 | 13 tests OK（CPU，登录节点） |
+| 观察到的注册表 | `138ebb7`，revision 0，全部 unit owner=`gpu02`，`mode=legacy` |
+| GPU allocation | `allocated: false`，`requested: false` |
+| 不申请的理由 | 协议 v1：资产未校验前不申请 GPU，不空占卡 |
+| 资产校验 | `false` —— **一份都没收到** |
+| 交付通道 | `none received`；私有仓库 `Exiam6/openwam-greene-transfer` 不存在，也没有新的 `transfer/*` 分支 |
+| 已 claim 单元 | `[]`（空） |
+| QOS | `gpu48`，单用户上限 16 卡，当前占用 0 |
 
-Torch 应当提交的是以下四项，都不需要计分所有权：
+两点值得注意：
 
-1. **资源实况记录。** 实际拿到的 Slurm job/allocation ID、GPU 型号与 UUID、可用时长、当前 QOS 与剩余配额。`sbatch --test-only` 的预测、PENDING 作业、历史 6 卡吞吐**都不算**资源就绪（§1）。拿不到卡就如实写拿不到。
-2. **资产校验结果。** 对已收到的资产逐文件 SHA256 比对 `code-freeze.json` 与 `source-sha256.json`，提交比对结果（含不一致项）。
-3. **单卡预检证明。** 只用指定训练场景，不跑任何计分场景、不训练，有时限。L40S 优先（sm_89，与冻结的 `build_arch 8.9` 一致）；H200 仅在更早可用且另行验证兼容性时选用。提交预检日志与实测吞吐。
-4. **无需所有权的分析。** 对已有结果做完整性核验（ledger 的 planned/attempted/valid/technical_failures 对账），不重跑、不重训。
+- **Torch 没有空占卡，这是对的。** 它明确写了 `sbatch --test-only` 只是预测不是就绪，并据此拒绝提前申请——正是协议 §1 和 §2 要求的行为。
+- **卡住 Torch 的是 Shenlong 这边。** `missing_inputs` 四项里，checkpoint + SHA256SUMS、固定源码/配置/归一化统计、私有 cell-ID 对照表都该由 Shenlong 交付，逐单元准入 runner 也明确标注 `owned by Shenlong`。Torch 没有拖延。
 
-提交路径按 §4：走 `coordination/gpu02-eval-assist-20261001` 分支的 `registry.json`，经 `coordination/coordinator.py` 做 fast-forward push；**禁止 force push、手动 merge/rebase、绕过工具改 owner**。文档和聊天记录不是锁。
+**但本轮这些都已经不需要补了。** 三个种子都已开始，协议 §3 末段生效：不拆开正在跑的种子，Torch 本轮 claim 0 个计分 cell，Shenlong 自己跑完。所以：
 
-Shenlong 这边本轮**不需要**推 ack JSON 转移执行权——没有可转移的未尝试种子了。
+1. Shenlong **不需要**交付资产，也**不需要**推 ack JSON——没有可转移的未尝试种子。
+2. Torch 报告里被阻塞的"资产 SHA256 校验"和"单卡预检"两项，本轮**作废**，不用补。
+3. Torch 本轮**不需要再提交任何东西**。它的 readiness v1 已经是完整的收尾记录。
+
+Torch 报告里 H200 的 `--test-only` 预估开始时间是 10-02 14:23 EDT，本来就在硬截止之后，这一路本轮不可用；L40S 预估 00:38 EDT 可用，但因为没有资产，申请了也只是空占卡。两条路本轮都不走。
+
+如果下一轮要真正让 Torch 接计分单元，缺的是同一份东西：Shenlong 先建交付通道（私有 transfer 分支 + SHA256SUMS），再部署逐单元准入 runner，然后才谈 transfer。这是下一轮的前置条件，不是本轮的待办。
 
 ## 7. 空窗期如果要开新实验
 
 需要你先定方向。按单卡 RTX PRO 6000 Blackwell、03:20 起算到 06:34 硬停，可用窗口 **3h14m**，预算应留 20 分钟余量，即**实际可用约 2h50m**。
 
+注意 Torch 侧窗口更紧：它报告的 `new_work_deadline` 是 07:28 EDT（= 06:28 CDT），比 Shenlong 的 06:34 CDT 还早 6 分钟。
+
 任何方案启动前仍要满足 §3/§4：独立的协议冻结、cell 清单、注册表领取，且不得写入本轮已冻结的 `rae-policy-20261001` 结果目录，避免污染已完成的配对比较。
 
 ## 8. 本文件没有覆盖的
 
-- 未核查 Torch 侧的实时 Slurm 状态（本次只核查了 Shenlong 节点）。
-- 未对已完成 7 个 cell 的策略结果做任何统计解读；`attempts_finished` 与 `complete` 只表示技术上跑完，不表示策略成功。
+- Torch 侧的实时 Slurm 状态未独立核查；第 6 节的 Torch 数据全部转引自它自己推送的 readiness v1，报告时间 00:12 EDT，距本文件核实时间已过约 2.4 小时。
+- 未对已完成 cell 的策略结果做任何统计解读；`attempts_finished` 与 `complete` 只表示技术上跑完，不表示策略成功。

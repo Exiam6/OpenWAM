@@ -1,7 +1,7 @@
 {
   "task_id": "gpu02-eval-assist-20261001",
   "verified_at": "2026-10-02T02:26:00-05:00",
-  "verification_scope": "Live check of shenlong-gpu-02 only. Torch-side Slurm state not inspected.",
+  "verification_scope": "Live check of shenlong-gpu-02 only. Torch-side figures are quoted from the readiness report Torch itself pushed; Torch Slurm state not independently inspected.",
   "cluster": "UIUC Shenlong",
   "node": "shenlong-gpu-02.cs.illinois.edu",
   "gpu_index": 5,
@@ -42,7 +42,8 @@
     "service_expiry": "2026-10-02T06:34:09-05:00",
     "protocol_deadline": "2026-10-02T06:38:16-05:00",
     "binding_limit": "2026-10-02T06:34:09-05:00",
-    "queue_truncated_by_limit": false
+    "queue_truncated_by_limit": false,
+    "torch_new_work_deadline": "2026-10-02T07:28:16-04:00"
   },
   "idle_window_after_matrix": {
     "from": "2026-10-02T03:20:00-05:00",
@@ -52,18 +53,36 @@
     "has_queued_work": false,
     "note": "Frozen protocol has no remaining scoring work. automatic_retries is false and cells are attempt-once. Filling this window requires a new experiment scoped by the user; protocol section 3 forbids retraining or rerunning merely to occupy the GPU."
   },
-  "torch_allocation_this_round": {
-    "scoring_units": 0,
+  "torch_status_this_round": {
+    "scoring_units_claimed": 0,
     "basis": "CLUSTER_COORDINATION_PROTOCOL.md section 3 final paragraph: all three seeds already started, so started seeds are not split.",
+    "torch_readiness_report": {
+      "commit": "2cbf69e6",
+      "reported_at": "2026-10-02T00:12:00-04:00",
+      "origin": "torch-login-a-1 login node",
+      "coordinator_tests": "13 tests OK",
+      "gpu_allocated": false,
+      "gpu_requested": false,
+      "assets_verified": false,
+      "delivery_channel": "none received",
+      "units_claimed": [],
+      "compliant": true,
+      "compliance_note": "Torch correctly declined to request a GPU before assets were verified, and treated sbatch --test-only as a forecast rather than readiness."
+    },
+    "blocked_on": "Shenlong, not Torch. Checkpoint plus SHA256SUMS, frozen source/configs/normalization statistics, the private cell-ID mapping and the gated per-cell runner were all Shenlong deliverables and none were delivered.",
     "shenlong_ack_required": false,
     "ack_reason": "No unattempted tail seed remains to transfer.",
-    "torch_should_submit": [
-      "Actual Slurm job/allocation ID, GPU model and UUID, available duration, QOS and remaining quota. Predictions from sbatch --test-only, PENDING jobs and historical throughput do not count as readiness.",
-      "Per-file SHA256 verification of received assets against code-freeze.json and source-sha256.json, including any mismatches.",
-      "Time-boxed single-GPU preflight on designated training scenes only, no scoring scenes and no training. L40S preferred (sm_89, matches frozen build_arch 8.9); H200 only if earlier available and separately validated.",
-      "Integrity reconciliation of existing results (planned/attempted/valid/technical_failures in the ledger). No reruns, no retraining."
+    "asset_delivery_required_this_round": false,
+    "torch_further_submission_required": false,
+    "superseded_items": [
+      "Asset SHA256 verification: moot this round, no transfer will occur.",
+      "Time-boxed single-GPU preflight: moot this round, no scoring unit to prepare for."
     ],
-    "submission_path": "coordination/gpu02-eval-assist-20261001 branch, registry.json, via coordination/coordinator.py fast-forward push. Force push, manual merge/rebase and bypassing the tool to edit owner are prohibited."
+    "next_round_prerequisites": [
+      "Shenlong stands up a delivery channel (private transfer branch plus SHA256SUMS).",
+      "Shenlong deploys the gated per-cell admission runner required by protocol step 4.",
+      "Only then does a transfer become discussable."
+    ]
   },
   "unrelated_gpu_note": "GPU 5 on shenlong-gpu-01 is occupied by another user (hongchix, skill_benchmark) and is unrelated to this task. GPU indices on the two nodes are not interchangeable."
 }

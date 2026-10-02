@@ -1,0 +1,15 @@
+{
+  "decided_at": "2026-10-01",
+  "decided_by": "user (option A)",
+  "gate": "control-SVAE preflight: label horizon definition",
+  "evidence": "frame-timing.json (105 training episodes, read-only)",
+  "decision": "Keep the PLAN label definition unchanged: label = state at recorded frame t+4 relative to frame t (bimanual end-effector delta XYZ, 6 dims) + future left/right gripper open state (2 dims). No re-timing, no interpolation, no instrumented replay.",
+  "reporting": [
+    "Describe the horizon as '4 recorded frames (nominal 0.24 s, actual <= 0.24 s and variable)', never as a fixed 0.24 s physical horizon.",
+    "Report alongside it: 17.8% identical adjacent joint-vector pairs; >= 31.2% of 23204 t+4 windows contain an identical pair (lower bound on irregular windows); 1183 fully static windows."
+  ],
+  "static_windows": "Retained and counted, not excluded (PLAN: no filtering by success/failure or label magnitude). Only the pre-specified boundary rule (fewer than 4 recorded frames left) excludes samples, also counted.",
+  "rationale": "Both arms (A: stop-gradient(z) aux head, B: control gradient into the representation) use identical labels, so the matched comparison is unaffected; the horizon definition only limits the physical-time wording of any claim.",
+  "physical_horizon_verified": false,
+  "plan_file_changed": false
+}

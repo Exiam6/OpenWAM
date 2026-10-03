@@ -1,0 +1,72 @@
+{
+  "task_id": "official-baseline-20261002",
+  "created": "2026-10-02T03:50:00-05:00",
+  "dispatcher": "UIUC Shenlong",
+  "assignee": "NYU Torch",
+  "protocol": "research/greene/CLUSTER_COORDINATION_PROTOCOL.md v1",
+  "is_ownership_transfer": false,
+  "transfer_note": "A new standalone evaluation task. It carves nothing out of gpu02-eval-assist-20261001, so no registry transfer is required.",
+  "question": "Are handover_block and place_object_basket achievable at all? All three of our arms score exactly zero on both (0/15 and 0/12 across 3 variants x 3 seeds).",
+  "why_torch": "Shenlong GPU5 is held by another user (xzeng28). The official checkpoint and RoboTwin assets are public, so this task needs no private asset delivery - the blocker that stalled gpu02-eval-assist-20261001.",
+  "checkpoint": {
+    "name": "OpenWAM-Alpha-Sim-RoboTwin-Full",
+    "file": "checkpoint_step_118655.safetensors",
+    "bytes": 24813767464,
+    "sha256": "d07ff6f8cfb627ebf47313e65af38773fabcb3861d52fdc7c3bc5e7bee33f6fe",
+    "public": true,
+    "fetch": "python scripts/download_assets/download_openwam_checkpoints.py --family alpha --name OpenWAM-Alpha-Sim-RoboTwin-Full --yes",
+    "verified_on_shenlong": true,
+    "architecture": {
+      "encoder": "wan22_vae",
+      "in_dim": 48,
+      "out_dim": 48,
+      "dim": 3072,
+      "num_layers": 30,
+      "num_heads": 24,
+      "ffn_dim": 14336,
+      "trained_steps": 118655
+    }
+  },
+  "scenes": {
+    "adjust_bottle": [1100000, 1100001, 1100002, 1100003, 1100004],
+    "handover_block": [1101000, 1101001, 1101002, 1101003, 1101004],
+    "place_object_basket": [1102002, 1102006, 1102007, 1102008, 1102009],
+    "total_cells": 15,
+    "pairing": "Exactly the seeds used by rae-policy-20261001, so results pair cell-by-cell with our 126 valid cells. Do not substitute the 20 fresh scenes proposed in baseline-official/protocol.json.",
+    "payload_size": "1 MiB for all 15 scene directories",
+    "delivery": "undecided - awaiting user decision between committing to this branch, private transfer, or Torch-side regeneration from seeds"
+  },
+  "serving": {
+    "compile": false,
+    "dit_cache": false,
+    "denoise_steps": 10,
+    "inference_horizon": 8,
+    "prompt_cache": 32,
+    "condition": "clean",
+    "action_rng": "SeedSequence([scene, 42, 811])",
+    "step_limits": {"adjust_bottle": 400, "place_object_basket": 700, "handover_block": 800}
+  },
+  "must_report_per_scene": [
+    "scene_seed", "task", "success", "steps", "seconds",
+    "initial_render_mae", "initial_state digest", "action_seed",
+    "GPU model and UUID", "Slurm job id"
+  ],
+  "render_divergence_measurement": {
+    "why": "Shenlong finds the scene physics reproduces to 1e-6 (proprio and every object pose assertion passes) while the render of that identical state diverges from the recorded reference by 0.52-1.03 uint8 levels across all 135 cells.",
+    "properties": "Deterministic (spread 0.00 across 9 independent runs), localized, signed mean about zero so not an exposure or gamma shift.",
+    "current_gate": "MAE > 1.0 is recorded as a technical failure; place_object_basket seed-1102008 sits at 1.0315 and was dropped from all 9 arms.",
+    "torch_value": "Torch is a third rendering environment. A matching distribution implicates the collection/eval config difference (eval_mode, is_test, render_freq, save_data); a different one implicates a machine-dependent component.",
+    "instruction": "Record initial_render_mae for every scene. If seed-1102008 also exceeds 1.0 on Torch, record the rejection honestly rather than widening the gate."
+  },
+  "shenlong_side": {
+    "gpu5_status": "held by xzeng28",
+    "retained_phase": "vae48_native control arm (phase 2), to run on GPU5 once free",
+    "phase2_purpose": "Our study has no VAE arm at all - both raw768 and svae48 are DINOv3-based - so the RAE substitution has never actually been tested against the baseline it claims to beat."
+  },
+  "prerequisites": [
+    "CPU-side dependency and asset verification",
+    "Real GPU allocation reported (Slurm job id, model, UUID, available window); sbatch --test-only forecasts do not count",
+    "Time-boxed single-GPU preflight on training scenes only, no scoring scenes"
+  ],
+  "failure_policy": "Technical failures recorded separately, never counted as policy failures, no automatic retries."
+}

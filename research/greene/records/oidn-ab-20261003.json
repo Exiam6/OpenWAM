@@ -1,0 +1,311 @@
+{
+ "record": "oidn-ab-20261003",
+ "task": "cross-cluster-rootcause-20261003",
+ "array_job": 19114636,
+ "gpu": "L40S sm_89, driver 610.43.02",
+ "script": "research/greene/cross-cluster/oidn_ab.py",
+ "sbatch": "research/greene/sbatch/oidn_ab.sbatch",
+ "method": "render-only: setup_demo + get_obs on the 60 baseline scenes, three-camera max MAE vs reference PNG, same formula as evaluate_policy.py; no policy, no scoring",
+ "shenlong_reference": {
+  "all": {
+   "min": 0.5116,
+   "median": 0.5718,
+   "max": 1.0315
+  },
+  "adjust_bottle": {
+   "median": 0.5372,
+   "max": 0.5669
+  },
+  "handover_block": {
+   "median": 0.5718,
+   "max": 0.6143
+  },
+  "place_object_basket": {
+   "median": 0.7824,
+   "max": 1.0315
+  },
+  "seed-1102008": 1.0315
+ },
+ "variants": {
+  "A": {
+   "description": "as deployed (SAPIEN-bundled OIDN 2.0.1)",
+   "job": "19114700",
+   "oidn_libs_loaded": [
+    "libOpenImageDenoise.so.2.0.1",
+    "libOpenImageDenoise_core.so.2.0.1",
+    "libOpenImageDenoise_device_cuda.so.2.0.1"
+   ],
+   "errors": 0,
+   "all": {
+    "min": 0.06036892361111111,
+    "median": 0.10194661458333333,
+    "max": 0.33697482638888887
+   },
+   "over_gate_1.0": 0,
+   "per_task": {
+    "adjust_bottle": {
+     "median": 0.1019,
+     "max": 0.121
+    },
+    "handover_block": {
+     "median": 0.0626,
+     "max": 0.0735
+    },
+    "place_object_basket": {
+     "median": 0.1701,
+     "max": 0.337
+    }
+   },
+   "seed-1102008": 0.3032,
+   "per_scene_max_mae": {
+    "adjust_bottle/seed-1100000": 0.0885,
+    "adjust_bottle/seed-1100001": 0.0972,
+    "adjust_bottle/seed-1100002": 0.1017,
+    "adjust_bottle/seed-1100003": 0.1088,
+    "adjust_bottle/seed-1100004": 0.1066,
+    "adjust_bottle/seed-1100005": 0.0958,
+    "adjust_bottle/seed-1100008": 0.0873,
+    "adjust_bottle/seed-1100009": 0.0765,
+    "adjust_bottle/seed-1100010": 0.1003,
+    "adjust_bottle/seed-1100012": 0.1054,
+    "adjust_bottle/seed-1100013": 0.0999,
+    "adjust_bottle/seed-1100014": 0.1022,
+    "adjust_bottle/seed-1100015": 0.1196,
+    "adjust_bottle/seed-1100016": 0.0961,
+    "adjust_bottle/seed-1100017": 0.0959,
+    "adjust_bottle/seed-1100018": 0.1137,
+    "adjust_bottle/seed-1100019": 0.1063,
+    "adjust_bottle/seed-1100020": 0.121,
+    "adjust_bottle/seed-1100021": 0.1037,
+    "adjust_bottle/seed-1100022": 0.1112,
+    "handover_block/seed-1101000": 0.0638,
+    "handover_block/seed-1101001": 0.062,
+    "handover_block/seed-1101002": 0.0652,
+    "handover_block/seed-1101003": 0.0609,
+    "handover_block/seed-1101004": 0.0622,
+    "handover_block/seed-1101005": 0.0635,
+    "handover_block/seed-1101006": 0.0617,
+    "handover_block/seed-1101007": 0.063,
+    "handover_block/seed-1101008": 0.0616,
+    "handover_block/seed-1101009": 0.0613,
+    "handover_block/seed-1101010": 0.0709,
+    "handover_block/seed-1101011": 0.0613,
+    "handover_block/seed-1101012": 0.0735,
+    "handover_block/seed-1101013": 0.0653,
+    "handover_block/seed-1101014": 0.0637,
+    "handover_block/seed-1101015": 0.0649,
+    "handover_block/seed-1101016": 0.0615,
+    "handover_block/seed-1101017": 0.065,
+    "handover_block/seed-1101018": 0.0604,
+    "handover_block/seed-1101019": 0.062,
+    "place_object_basket/seed-1102002": 0.2218,
+    "place_object_basket/seed-1102006": 0.1611,
+    "place_object_basket/seed-1102007": 0.1893,
+    "place_object_basket/seed-1102008": 0.3032,
+    "place_object_basket/seed-1102009": 0.158,
+    "place_object_basket/seed-1102010": 0.1151,
+    "place_object_basket/seed-1102011": 0.1658,
+    "place_object_basket/seed-1102013": 0.1786,
+    "place_object_basket/seed-1102015": 0.3368,
+    "place_object_basket/seed-1102017": 0.1743,
+    "place_object_basket/seed-1102018": 0.1631,
+    "place_object_basket/seed-1102020": 0.1547,
+    "place_object_basket/seed-1102022": 0.1562,
+    "place_object_basket/seed-1102023": 0.2738,
+    "place_object_basket/seed-1102024": 0.179,
+    "place_object_basket/seed-1102025": 0.2961,
+    "place_object_basket/seed-1102026": 0.1216,
+    "place_object_basket/seed-1102028": 0.1463,
+    "place_object_basket/seed-1102031": 0.1119,
+    "place_object_basket/seed-1102032": 0.337
+   }
+  },
+  "B": {
+   "description": "ray-tracing denoiser forced to none",
+   "job": "19114884",
+   "oidn_libs_loaded": [
+    "libOpenImageDenoise.so.2.0.1",
+    "libOpenImageDenoise_core.so.2.0.1"
+   ],
+   "errors": 0,
+   "all": {
+    "min": 3.8423003472222224,
+    "median": 4.107868923611111,
+    "max": 4.7840234375
+   },
+   "over_gate_1.0": 60,
+   "per_task": {
+    "adjust_bottle": {
+     "median": 3.8751,
+     "max": 3.9028
+    },
+    "handover_block": {
+     "median": 4.1079,
+     "max": 4.2712
+    },
+    "place_object_basket": {
+     "median": 4.5442,
+     "max": 4.784
+    }
+   },
+   "seed-1102008": 4.784,
+   "per_scene_max_mae": {
+    "adjust_bottle/seed-1100000": 3.8562,
+    "adjust_bottle/seed-1100001": 3.8799,
+    "adjust_bottle/seed-1100002": 3.8766,
+    "adjust_bottle/seed-1100003": 3.8515,
+    "adjust_bottle/seed-1100004": 3.884,
+    "adjust_bottle/seed-1100005": 3.8805,
+    "adjust_bottle/seed-1100008": 3.8898,
+    "adjust_bottle/seed-1100009": 3.9028,
+    "adjust_bottle/seed-1100010": 3.8578,
+    "adjust_bottle/seed-1100012": 3.8567,
+    "adjust_bottle/seed-1100013": 3.8784,
+    "adjust_bottle/seed-1100014": 3.8535,
+    "adjust_bottle/seed-1100015": 3.8595,
+    "adjust_bottle/seed-1100016": 3.8784,
+    "adjust_bottle/seed-1100017": 3.8423,
+    "adjust_bottle/seed-1100018": 3.8755,
+    "adjust_bottle/seed-1100019": 3.8746,
+    "adjust_bottle/seed-1100020": 3.8549,
+    "adjust_bottle/seed-1100021": 3.8821,
+    "adjust_bottle/seed-1100022": 3.8527,
+    "handover_block/seed-1101000": 4.114,
+    "handover_block/seed-1101001": 4.1669,
+    "handover_block/seed-1101002": 4.0996,
+    "handover_block/seed-1101003": 4.1873,
+    "handover_block/seed-1101004": 4.0917,
+    "handover_block/seed-1101005": 4.1378,
+    "handover_block/seed-1101006": 4.0943,
+    "handover_block/seed-1101007": 4.0849,
+    "handover_block/seed-1101008": 4.0681,
+    "handover_block/seed-1101009": 4.0219,
+    "handover_block/seed-1101010": 4.1805,
+    "handover_block/seed-1101011": 4.0781,
+    "handover_block/seed-1101012": 4.1265,
+    "handover_block/seed-1101013": 4.0857,
+    "handover_block/seed-1101014": 4.1439,
+    "handover_block/seed-1101015": 4.1017,
+    "handover_block/seed-1101016": 4.1463,
+    "handover_block/seed-1101017": 4.1324,
+    "handover_block/seed-1101018": 4.2712,
+    "handover_block/seed-1101019": 4.079,
+    "place_object_basket/seed-1102002": 4.767,
+    "place_object_basket/seed-1102006": 4.5369,
+    "place_object_basket/seed-1102007": 4.5423,
+    "place_object_basket/seed-1102008": 4.784,
+    "place_object_basket/seed-1102009": 4.5862,
+    "place_object_basket/seed-1102010": 4.4798,
+    "place_object_basket/seed-1102011": 4.4598,
+    "place_object_basket/seed-1102013": 4.573,
+    "place_object_basket/seed-1102015": 4.7161,
+    "place_object_basket/seed-1102017": 4.5201,
+    "place_object_basket/seed-1102018": 4.5262,
+    "place_object_basket/seed-1102020": 4.5416,
+    "place_object_basket/seed-1102022": 4.5408,
+    "place_object_basket/seed-1102023": 4.7457,
+    "place_object_basket/seed-1102024": 4.5731,
+    "place_object_basket/seed-1102025": 4.7207,
+    "place_object_basket/seed-1102026": 4.5101,
+    "place_object_basket/seed-1102028": 4.5461,
+    "place_object_basket/seed-1102031": 4.54,
+    "place_object_basket/seed-1102032": 4.7071
+   }
+  },
+  "C": {
+   "description": "OIDN 2.3.3 via LD_PRELOAD",
+   "job": "19114636",
+   "oidn_libs_loaded": [
+    "libOpenImageDenoise.so.2.0.1",
+    "libOpenImageDenoise_core.so.2.0.1",
+    "libOpenImageDenoise.so.2.3.3",
+    "libOpenImageDenoise_core.so.2.3.3",
+    "libOpenImageDenoise_device_cuda.so.2.3.3"
+   ],
+   "errors": 0,
+   "all": {
+    "min": 0.51109375,
+    "median": 0.5712651909722222,
+    "max": 1.0314800347222222
+   },
+   "over_gate_1.0": 1,
+   "per_task": {
+    "adjust_bottle": {
+     "median": 0.537,
+     "max": 0.5669
+    },
+    "handover_block": {
+     "median": 0.5713,
+     "max": 0.6145
+    },
+    "place_object_basket": {
+     "median": 0.7797,
+     "max": 1.0315
+    }
+   },
+   "seed-1102008": 1.0315,
+   "per_scene_max_mae": {
+    "adjust_bottle/seed-1100000": 0.5543,
+    "adjust_bottle/seed-1100001": 0.5343,
+    "adjust_bottle/seed-1100002": 0.5514,
+    "adjust_bottle/seed-1100003": 0.5401,
+    "adjust_bottle/seed-1100004": 0.5371,
+    "adjust_bottle/seed-1100005": 0.5369,
+    "adjust_bottle/seed-1100008": 0.5202,
+    "adjust_bottle/seed-1100009": 0.5134,
+    "adjust_bottle/seed-1100010": 0.5606,
+    "adjust_bottle/seed-1100012": 0.5669,
+    "adjust_bottle/seed-1100013": 0.5162,
+    "adjust_bottle/seed-1100014": 0.5656,
+    "adjust_bottle/seed-1100015": 0.5606,
+    "adjust_bottle/seed-1100016": 0.5291,
+    "adjust_bottle/seed-1100017": 0.5361,
+    "adjust_bottle/seed-1100018": 0.5168,
+    "adjust_bottle/seed-1100019": 0.5231,
+    "adjust_bottle/seed-1100020": 0.5561,
+    "adjust_bottle/seed-1100021": 0.5111,
+    "adjust_bottle/seed-1100022": 0.5509,
+    "handover_block/seed-1101000": 0.5732,
+    "handover_block/seed-1101001": 0.5957,
+    "handover_block/seed-1101002": 0.5833,
+    "handover_block/seed-1101003": 0.5698,
+    "handover_block/seed-1101004": 0.5206,
+    "handover_block/seed-1101005": 0.566,
+    "handover_block/seed-1101006": 0.513,
+    "handover_block/seed-1101007": 0.6096,
+    "handover_block/seed-1101008": 0.5676,
+    "handover_block/seed-1101009": 0.5522,
+    "handover_block/seed-1101010": 0.5727,
+    "handover_block/seed-1101011": 0.6145,
+    "handover_block/seed-1101012": 0.5879,
+    "handover_block/seed-1101013": 0.5648,
+    "handover_block/seed-1101014": 0.5729,
+    "handover_block/seed-1101015": 0.5679,
+    "handover_block/seed-1101016": 0.5418,
+    "handover_block/seed-1101017": 0.529,
+    "handover_block/seed-1101018": 0.5746,
+    "handover_block/seed-1101019": 0.5952,
+    "place_object_basket/seed-1102002": 0.9005,
+    "place_object_basket/seed-1102006": 0.7507,
+    "place_object_basket/seed-1102007": 0.7761,
+    "place_object_basket/seed-1102008": 1.0315,
+    "place_object_basket/seed-1102009": 0.752,
+    "place_object_basket/seed-1102010": 0.7347,
+    "place_object_basket/seed-1102011": 0.7167,
+    "place_object_basket/seed-1102013": 0.7954,
+    "place_object_basket/seed-1102015": 0.9173,
+    "place_object_basket/seed-1102017": 0.8099,
+    "place_object_basket/seed-1102018": 0.7544,
+    "place_object_basket/seed-1102020": 0.7832,
+    "place_object_basket/seed-1102022": 0.7537,
+    "place_object_basket/seed-1102023": 0.9313,
+    "place_object_basket/seed-1102024": 0.7593,
+    "place_object_basket/seed-1102025": 0.9472,
+    "place_object_basket/seed-1102026": 0.7759,
+    "place_object_basket/seed-1102028": 0.7863,
+    "place_object_basket/seed-1102031": 0.7463,
+    "place_object_basket/seed-1102032": 0.9136
+   }
+  }
+ }
+}

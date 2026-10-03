@@ -28,13 +28,36 @@
     }
   },
   "scenes": {
-    "adjust_bottle": [1100000, 1100001, 1100002, 1100003, 1100004],
-    "handover_block": [1101000, 1101001, 1101002, 1101003, 1101004],
-    "place_object_basket": [1102002, 1102006, 1102007, 1102008, 1102009],
-    "total_cells": 15,
+    "adjust_bottle": [
+      1100000,
+      1100001,
+      1100002,
+      1100003,
+      1100004
+    ],
+    "handover_block": [
+      1101000,
+      1101001,
+      1101002,
+      1101003,
+      1101004
+    ],
+    "place_object_basket": [
+      1102002,
+      1102006,
+      1102007,
+      1102008,
+      1102009
+    ],
+    "total_cells": 60,
     "pairing": "Exactly the seeds used by rae-policy-20261001, so results pair cell-by-cell with our 126 valid cells. Do not substitute the 20 fresh scenes proposed in baseline-official/protocol.json.",
-    "payload_size": "1 MiB for all 15 scene directories",
-    "delivery": "undecided - awaiting user decision between committing to this branch, private transfer, or Torch-side regeneration from seeds"
+    "payload_size": "7.6 MiB for all 60 scene directories plus 3 manifests",
+    "delivery": "delivered in this branch at research/greene/scenes/ (point the harness E at research/greene/)",
+    "delivered_scene_count": 60,
+    "delivered_bytes_note": "60 scenes plus 3 manifests, 7.6 MiB, 303 real files; the runtime symlinks were dereferenced",
+    "reporting": "Report the paired 15 and the full 60 separately; do not merge them into one success rate.",
+    "full_set_rationale": "20 scenes per task matches the scale baseline-official/protocol.json originally proposed and gives 4x the power on the zero-success question.",
+    "paired_subset_cells": 15
   },
   "serving": {
     "compile": false,
@@ -44,12 +67,23 @@
     "prompt_cache": 32,
     "condition": "clean",
     "action_rng": "SeedSequence([scene, 42, 811])",
-    "step_limits": {"adjust_bottle": 400, "place_object_basket": 700, "handover_block": 800}
+    "step_limits": {
+      "adjust_bottle": 400,
+      "place_object_basket": 700,
+      "handover_block": 800
+    }
   },
   "must_report_per_scene": [
-    "scene_seed", "task", "success", "steps", "seconds",
-    "initial_render_mae", "initial_state digest", "action_seed",
-    "GPU model and UUID", "Slurm job id"
+    "scene_seed",
+    "task",
+    "success",
+    "steps",
+    "seconds",
+    "initial_render_mae",
+    "initial_state digest",
+    "action_seed",
+    "GPU model and UUID",
+    "Slurm job id"
   ],
   "render_divergence_measurement": {
     "why": "Shenlong finds the scene physics reproduces to 1e-6 (proprio and every object pose assertion passes) while the render of that identical state diverges from the recorded reference by 0.52-1.03 uint8 levels across all 135 cells.",

@@ -58,10 +58,23 @@ Shenlong 已下载并逐字节核验通过，SHA256 与历史 manifest 记录一
 
 **不要**改用 `baseline-official/protocol.json` 里提的 20 个新场景——那样只是"协议相似"，不是逐场景配对。
 
-每个场景目录含 `collection-config.json`、`initial-replay.json`、`initial-{head,left,right}_camera.png`，15 个合计 1 MiB。
+每个场景目录含 `collection-config.json`、`initial-replay.json`、`initial-{head,left,right}_camera.png`。
 
-> **待用户裁决**：这 1 MiB 是我们录制的研究资产。要么（a）直接提交进本分支，要么（b）私下传给 Torch，要么（c）Torch 用相同 RoboTwin 资产和相同种子自行重建。
-> 选 (c) 要注意：见 §6，重建的渲染**预计不会**与我们的录制一致。
+**场景已随本分支交付，无需另行传输。** 位置 `research/greene/scenes/`，布局与运行时一致：
+
+```
+research/greene/scenes/<task>/manifest.json
+research/greene/scenes/<task>/seed-<N>/{collection-config.json,initial-replay.json,initial-*.png}
+```
+
+把评测脚本里的 `E` 指向 `research/greene/` 即可（运行时原值是 `assets-source/temporal-20260926`）。
+
+交付的是**全部 60 个场景**（每任务 20 个）而非仅上表 15 个，合计 7.6 MiB、303 个文件，原仓库里的符号链接已全部解引用为真实文件。多给的 45 个场景有两个用处：
+
+1. 上表 15 个用于与我们 126 个 cell 的**逐场景严格配对**；
+2. 每任务 20 个正好对应 `baseline-official/protocol.json` 原本提的规模，能把"这两个任务到底可不可做"的统计功效提高 4 倍——鉴于我们三个臂在这两个任务上**全部为零**，这个功效是需要的。
+
+**两批请分开汇报**，不要混为一个成功率。
 
 ## 4. 评测配置
 

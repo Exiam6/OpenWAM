@@ -1,0 +1,1768 @@
+{
+  "task": "handover_block",
+  "accepted": [
+    {
+      "task": "handover_block",
+      "seed": 1101000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:39:16.380597-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 278,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101000/data/episode0.hdf5",
+      "hdf5_sha256": "e61fbfb922c0547e857e5e9ee9422b71460c8d94b515de5be95fe058b58a8f22",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 90.56095109507442,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:40:48.897245-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 281,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101001/data/episode0.hdf5",
+      "hdf5_sha256": "a699fc4994cbbba9fba910c55c4bfcc762fd9f31e74f1d24561ac2ffcc700421",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 91.2422605343163,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:42:22.265029-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm, switch to the right arm, and set it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 281,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101002/data/episode0.hdf5",
+      "hdf5_sha256": "e843d52834686508e85c69991c7896ec61b65ca43fc5ead354e24abcac753efb",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 87.4422393925488,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:43:51.926742-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pass the red block to the right arm and set it down.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 276,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101003/data/episode0.hdf5",
+      "hdf5_sha256": "f57a8493fd80f0966dd55fee2a1d7cc9c1c2eda599c7c4af7bec0aab9116a686",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 89.92722360044718,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101004,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:45:23.298955-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 293,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101004/data/episode0.hdf5",
+      "hdf5_sha256": "9d9a329b36e8ae84370434a69ac3e5960e025aa901fb63f59a9606c46801d834",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 94.09549228474498,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101005,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:46:59.649181-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 277,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101005/data/episode0.hdf5",
+      "hdf5_sha256": "7a5ea63ee3e6b790c8bac12e036d456cf8751b2ad1d03ca5ec7bf09e23c8b509",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 89.50365582481027,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101006,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:48:30.547210-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm, switch to the right arm, and set it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 293,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101006/data/episode0.hdf5",
+      "hdf5_sha256": "9845285c048adf001f7b355eb5c84e8d73912bebd09c70a2ab8c45d678d04de5",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 92.57708420976996,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101007,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:50:05.341356-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the red block with the left arm, transfer it to the right, and place it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 280,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101007/data/episode0.hdf5",
+      "hdf5_sha256": "46acf8968f59ce18f572a5cbd0a6ae495ceed296ad4bc8032e7cb8aac12636da",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 91.16763911023736,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101008,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:51:38.240044-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to pick up the red block.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 281,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101008/data/episode0.hdf5",
+      "hdf5_sha256": "b3740c0477ac52d445d4484e0e59ba50dd9cb5f67609d3a7f25b2b6f91b32a81",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 87.3615347892046,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101009,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:53:07.380335-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the red block with the left arm, transfer it to the right, and place it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 291,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101009/data/episode0.hdf5",
+      "hdf5_sha256": "9bb9797913a0b01c84c398a633c528b172d2565cd3aa09546d810d9aec7647ba",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 90.98996416479349,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101010,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:54:40.519374-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to pick up the red block.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 302,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101010/data/episode0.hdf5",
+      "hdf5_sha256": "bc7e7921cf9b08ce968656966b050046d81bad42779be532d10a9fdf0a53b6dd",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 93.14261537790298,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101011,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:56:15.259772-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pass the red block to the right arm and set it down.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 319,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101011/data/episode0.hdf5",
+      "hdf5_sha256": "a6cea9facdf9347499cc10e1f937dce72a9179af1ea5bbd81a99bf20ace10c41",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 90.0884295143187,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101012,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:57:47.555387-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 278,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101012/data/episode0.hdf5",
+      "hdf5_sha256": "08ecc4152050271fd501be4d23333a9e2d10de91983b310afb9ec1b4c8d2d67e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 89.17102988809347,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101013,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:59:18.810953-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block using the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 279,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101013/data/episode0.hdf5",
+      "hdf5_sha256": "a8df32d8f7a87c2f656cc66d104f2ba91686adfe05f086c4cfbc3a3d58866176",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 88.41894180700183,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101014,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:00:49.852955-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm, switch to the right arm, and set it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 276,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101014/data/episode0.hdf5",
+      "hdf5_sha256": "93c8f449a79796754de3af73bd7654bcd55e030def4a9e87584c944a5dca3886",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 88.45766020566225,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101015,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:02:20.404111-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block using the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 278,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101015/data/episode0.hdf5",
+      "hdf5_sha256": "1103f9282ba1a1baf5626355d7931679b85e4209c980a9316dc0995b471c88b8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 88.15813716128469,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101016,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:03:50.663489-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 282,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101016/data/episode0.hdf5",
+      "hdf5_sha256": "46650c8702dd35c227a112312f45861a248ad0d5218fb0f2e7704d683dba0673",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 90.24328414723277,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101017,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:05:25.576664-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 291,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101017/data/episode0.hdf5",
+      "hdf5_sha256": "6ab03ced0f077b5778dd5d6745bf15936c69e399559670ee5a368cc799df1ac7",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 89.05086595192552,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101018,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:06:56.846024-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block using the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 280,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101018/data/episode0.hdf5",
+      "hdf5_sha256": "69b458bd76398fe76b6c30bdeda3c18efbffef3d9e63b55e20e400b621ccaa47",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 89.81350546330214,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101019,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:08:28.582286-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to grab the red block, transfer it to the right hand, and set it onto the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 280,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101019/data/episode0.hdf5",
+      "hdf5_sha256": "d6a89ae0ec5fcb181231cb69dad28f042bade616f0fcddcd4e302c4679e3ece0",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 88.38100692257285,
+      "exit_code": 0
+    }
+  ],
+  "attempts": [
+    {
+      "task": "handover_block",
+      "seed": 1101000,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:39:16.380597-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 278,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101000/data/episode0.hdf5",
+      "hdf5_sha256": "e61fbfb922c0547e857e5e9ee9422b71460c8d94b515de5be95fe058b58a8f22",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 90.56095109507442,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101001,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:40:48.897245-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 281,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101001/data/episode0.hdf5",
+      "hdf5_sha256": "a699fc4994cbbba9fba910c55c4bfcc762fd9f31e74f1d24561ac2ffcc700421",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 91.2422605343163,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101002,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:42:22.265029-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm, switch to the right arm, and set it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 281,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101002/data/episode0.hdf5",
+      "hdf5_sha256": "e843d52834686508e85c69991c7896ec61b65ca43fc5ead354e24abcac753efb",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 87.4422393925488,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101003,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:43:51.926742-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pass the red block to the right arm and set it down.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 276,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101003/data/episode0.hdf5",
+      "hdf5_sha256": "f57a8493fd80f0966dd55fee2a1d7cc9c1c2eda599c7c4af7bec0aab9116a686",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 89.92722360044718,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101004,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:45:23.298955-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 293,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101004/data/episode0.hdf5",
+      "hdf5_sha256": "9d9a329b36e8ae84370434a69ac3e5960e025aa901fb63f59a9606c46801d834",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 94.09549228474498,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101005,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:46:59.649181-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 277,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101005/data/episode0.hdf5",
+      "hdf5_sha256": "7a5ea63ee3e6b790c8bac12e036d456cf8751b2ad1d03ca5ec7bf09e23c8b509",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 89.50365582481027,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101006,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:48:30.547210-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm, switch to the right arm, and set it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 293,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101006/data/episode0.hdf5",
+      "hdf5_sha256": "9845285c048adf001f7b355eb5c84e8d73912bebd09c70a2ab8c45d678d04de5",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 92.57708420976996,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101007,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:50:05.341356-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the red block with the left arm, transfer it to the right, and place it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 280,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101007/data/episode0.hdf5",
+      "hdf5_sha256": "46acf8968f59ce18f572a5cbd0a6ae495ceed296ad4bc8032e7cb8aac12636da",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 91.16763911023736,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101008,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:51:38.240044-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to pick up the red block.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 281,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101008/data/episode0.hdf5",
+      "hdf5_sha256": "b3740c0477ac52d445d4484e0e59ba50dd9cb5f67609d3a7f25b2b6f91b32a81",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 87.3615347892046,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101009,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:53:07.380335-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the red block with the left arm, transfer it to the right, and place it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 291,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101009/data/episode0.hdf5",
+      "hdf5_sha256": "9bb9797913a0b01c84c398a633c528b172d2565cd3aa09546d810d9aec7647ba",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 90.98996416479349,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101010,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:54:40.519374-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to pick up the red block.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 302,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101010/data/episode0.hdf5",
+      "hdf5_sha256": "bc7e7921cf9b08ce968656966b050046d81bad42779be532d10a9fdf0a53b6dd",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 93.14261537790298,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101011,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:56:15.259772-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pass the red block to the right arm and set it down.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 319,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101011/data/episode0.hdf5",
+      "hdf5_sha256": "a6cea9facdf9347499cc10e1f937dce72a9179af1ea5bbd81a99bf20ace10c41",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 90.0884295143187,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101012,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:57:47.555387-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 278,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101012/data/episode0.hdf5",
+      "hdf5_sha256": "08ecc4152050271fd501be4d23333a9e2d10de91983b310afb9ec1b4c8d2d67e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 89.17102988809347,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101013,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T20:59:18.810953-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block using the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 279,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101013/data/episode0.hdf5",
+      "hdf5_sha256": "a8df32d8f7a87c2f656cc66d104f2ba91686adfe05f086c4cfbc3a3d58866176",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 88.41894180700183,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101014,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:00:49.852955-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm, switch to the right arm, and set it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 276,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101014/data/episode0.hdf5",
+      "hdf5_sha256": "93c8f449a79796754de3af73bd7654bcd55e030def4a9e87584c944a5dca3886",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 88.45766020566225,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101015,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:02:20.404111-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block using the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 278,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101015/data/episode0.hdf5",
+      "hdf5_sha256": "1103f9282ba1a1baf5626355d7931679b85e4209c980a9316dc0995b471c88b8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 88.15813716128469,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101016,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:03:50.663489-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 282,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101016/data/episode0.hdf5",
+      "hdf5_sha256": "46650c8702dd35c227a112312f45861a248ad0d5218fb0f2e7704d683dba0673",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 90.24328414723277,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101017,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:05:25.576664-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 291,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101017/data/episode0.hdf5",
+      "hdf5_sha256": "6ab03ced0f077b5778dd5d6745bf15936c69e399559670ee5a368cc799df1ac7",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 89.05086595192552,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101018,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:06:56.846024-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block using the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 280,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101018/data/episode0.hdf5",
+      "hdf5_sha256": "69b458bd76398fe76b6c30bdeda3c18efbffef3d9e63b55e20e400b621ccaa47",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 89.81350546330214,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101019,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:08:28.582286-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to grab the red block, transfer it to the right hand, and set it onto the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 280,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101019/data/episode0.hdf5",
+      "hdf5_sha256": "d6a89ae0ec5fcb181231cb69dad28f042bade616f0fcddcd4e302c4679e3ece0",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 88.38100692257285,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101020,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:09:59.179118-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm, switch to the right arm, and set it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 274,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101020/data/episode0.hdf5",
+      "hdf5_sha256": "39cd00bf6f13110d212f2b03913ff652d0a022890709d8b208333ee394ce3420",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 87.89690085500479,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101021,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:11:29.309991-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block using the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 277,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101021/data/episode0.hdf5",
+      "hdf5_sha256": "695502142dda7b656c3cbfd2baac4dd7729fa4625e2e2f406c71f8c7cca1086d",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 87.96352999284863,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101022,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:12:59.580538-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 303,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101022/data/episode0.hdf5",
+      "hdf5_sha256": "35fc2562a724ef448394ecc2f4a52425a0f859c142d5810f07d49304b2742278",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 92.07007774710655,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101023,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:14:33.724511-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 281,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101023/data/episode0.hdf5",
+      "hdf5_sha256": "450e6c9a8fed6b3b3199aa5f3e2b7adca7e4c07903d8f364ec6afd9c6501e096",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 89.91604619473219,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101024,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:16:05.381810-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm, switch to the right arm, and set it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 279,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101024/data/episode0.hdf5",
+      "hdf5_sha256": "ed3b66e69839c5b50ed210eab3d03a1710fd7e5e2e3abeb3e0cdaf9a83b6821a",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 90.90599389746785,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101025,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:17:39.201852-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block using the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 278,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101025/data/episode0.hdf5",
+      "hdf5_sha256": "eac2ef707787856e034a3eb50edaf889f758d5d2352d441178df85c488d3eb18",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 94.99221788719296,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101026,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:19:17.112445-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to pick up the red block.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 293,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101026/data/episode0.hdf5",
+      "hdf5_sha256": "c79141427f0ab328d50fb92bddd3809c67cc7c570da28d585917632f71b557ae",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 96.70061553642154,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101027,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:20:55.875782-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm, switch to the right, and place it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 287,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101027/data/episode0.hdf5",
+      "hdf5_sha256": "8e60833fdc122681523b7b25aac28f86f966f74beb221e8a1f0f86b59724d2dc",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 95.82601116225123,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101028,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T21:22:35.025694-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 47.167557537555695,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101029,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:23:24.245606-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the red block with the left arm, transfer it to the right, and place it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 281,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101029/data/episode0.hdf5",
+      "hdf5_sha256": "e2873ea2d77f325488dbd0b0b368e994468d004901d343221f027febb60e4068",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 100.73286592587829,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101030,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:25:07.982525-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the red block with the left arm, transfer it to the right, and place it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 276,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101030/data/episode0.hdf5",
+      "hdf5_sha256": "516174e7d5fd7acf7c12af8479023b5580e37c305f89f6888e754062cb61a42c",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 95.93108892813325,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101031,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:26:46.576229-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to grab the red block, transfer it to the right hand, and set it onto the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 280,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101031/data/episode0.hdf5",
+      "hdf5_sha256": "f53d92aa82284d70e7a4914cacf416c77ea465aa51d73f74aa760f1538cb1cf0",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 96.43454893678427,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101032,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:28:25.978570-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 286,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101032/data/episode0.hdf5",
+      "hdf5_sha256": "3a3598af7f5344934158dff58d6a6fa642974850a922d4e8e86824ca0031d8a3",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 100.8096737600863,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101033,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:30:09.544235-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 281,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101033/data/episode0.hdf5",
+      "hdf5_sha256": "e7b76860578d9403994397bc9dc703c857df8df3c7b06c629615aec21b526e56",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 94.74985426291823,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101034,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:31:46.828168-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to pick up the red block.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 288,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101034/data/episode0.hdf5",
+      "hdf5_sha256": "2f40bcaf86c2cc13230b5875edb9e19fe396895c50f581d7925460b043286aea",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 100.47729327529669,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101035,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:33:30.108457-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm, switch to the right, and place it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 274,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101035/data/episode0.hdf5",
+      "hdf5_sha256": "b36ac6167f3ae2133cf55267ed4a8e77d405d06594da7f58475e4536f7ce118d",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 99.58800110220909,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101036,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T21:35:11.879215-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 45.775093238800764,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101037,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:36:00.699582-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pick up the red block and switch arms.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 277,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101037/data/episode0.hdf5",
+      "hdf5_sha256": "66d7d93ce00c9b7170fec365044b1a3d17245f11f4db2850b750e940000c2964",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 93.81012687832117,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101038,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:37:37.248523-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 287,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101038/data/episode0.hdf5",
+      "hdf5_sha256": "48d2d9c74bf7735af40b388591d698f0894c17fcbf3af21746e548ef48e055aa",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 100.90423016250134,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101039,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:39:22.328812-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to pick up the red block.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 308,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101039/data/episode0.hdf5",
+      "hdf5_sha256": "6162331352a440ab5129fc032b70bd9f881a956f3eb20678d9b065132cf8ad16",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 103.77390856668353,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101040,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T21:41:08.469026-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 47.579167012125254,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101041,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:41:59.021321-05:00",
+      "expert_plan_success": true,
+      "instruction": "Pass the red block to the right arm and set it down.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 285,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101041/data/episode0.hdf5",
+      "hdf5_sha256": "5734c79ef5b5b1d83b4f38b66a1ff6006dcec5db0c92737be353ca2456187bcd",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 97.7443866468966,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101042,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:43:40.028725-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm, switch to the right arm, and set it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 283,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101042/data/episode0.hdf5",
+      "hdf5_sha256": "171394880e89f931756cc9b1d84e2ef946da6c54e7fa8a169ea4a244b2669aa8",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 98.89976305887103,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101043,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T21:45:22.297057-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 46.62522583454847,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101044,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:46:10.928803-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to pick up the red block.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 281,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101044/data/episode0.hdf5",
+      "hdf5_sha256": "eb47804577120c679963814e8c98d4073055720764a12ab60a487c4edd4a472b",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 100.61797398328781,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101045,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:47:53.921207-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to pick up the red block.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 284,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101045/data/episode0.hdf5",
+      "hdf5_sha256": "42e957ca21fc98d4153faa3b6ba66787025201ec670e93422d961d21dceacd00",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 98.14896734803915,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101046,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:49:34.631320-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 297,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101046/data/episode0.hdf5",
+      "hdf5_sha256": "1a3df0409e32a09802bc38354343ec7418b330a93a5df278e66f440711f66ffe",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 101.66096268594265,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101047,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:51:18.513119-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 278,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101047/data/episode0.hdf5",
+      "hdf5_sha256": "eea92361c8dcf06b05e6caea855567567f13df93adc644f12aa0967480678d2e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 98.52149279415607,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101048,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:53:00.030747-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to grab the red block, transfer it to the right hand, and set it onto the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 275,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101048/data/episode0.hdf5",
+      "hdf5_sha256": "5a0c49c57e7c6eeeaf3f16d8d0917981c6b1e6f4712d00dda3adf8c0d10738e7",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 95.10419696941972,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101049,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T21:54:37.698940-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 47.33737479895353,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101050,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:55:28.485766-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm, switch to the right arm, and set it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 282,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101050/data/episode0.hdf5",
+      "hdf5_sha256": "5029bbf8fcedde65fc9d3cd8293cd7ebed815db50641de59acb783a27895a36b",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 98.94495432823896,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101051,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T21:57:10.400856-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 49.690746795386076,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101052,
+      "role": "expert_only_independent_confirmation",
+      "accepted": false,
+      "started_at": "2026-09-23T21:58:02.544809-05:00",
+      "expert_plan_success": false,
+      "outcome": "expert_infeasible",
+      "elapsed_seconds": 47.129137482494116,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101053,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T21:58:52.904649-05:00",
+      "expert_plan_success": true,
+      "instruction": "Use the left arm to pick up the red block.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 280,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101053/data/episode0.hdf5",
+      "hdf5_sha256": "a060464af494ddc467d508b0e861abd93f86f461eed2beb01a823c501b96296e",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 96.63706835731864,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101054,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T22:00:31.683912-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm, switch to the right arm, and set it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 281,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101054/data/episode0.hdf5",
+      "hdf5_sha256": "1775c471c459b667edbf5703140ceca4e55ae7028713337c0c5d71a1d0a35620",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 100.10083804652095,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101055,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T22:02:14.819961-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 301,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101055/data/episode0.hdf5",
+      "hdf5_sha256": "39d17978190ac92e82cb4274720a8edb6ef683a74e505c1ddf953e5a4970f609",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 99.88574481382966,
+      "exit_code": 0
+    },
+    {
+      "task": "handover_block",
+      "seed": 1101056,
+      "role": "expert_only_independent_confirmation",
+      "accepted": true,
+      "started_at": "2026-09-23T22:03:57.223653-05:00",
+      "expert_plan_success": true,
+      "instruction": "Grab the red block with the left arm, switch to the right arm, and set it on the blue pad.",
+      "expert_replay_success": true,
+      "outcome": "accepted",
+      "frames": 276,
+      "hdf5": "/data02/zifanz4/openwam-experiments/endtoend-20260923/scenes/handover_block/seed-1101056/data/episode0.hdf5",
+      "hdf5_sha256": "d52cc2d7d082609cf5db0f3070ffb349e08aa868919a2be4c36bd84cbfd783bd",
+      "scene_info": {
+        "cluttered_table_info": [],
+        "texture_info": {
+          "wall_texture": null,
+          "table_texture": null
+        },
+        "info": {}
+      },
+      "elapsed_seconds": 97.44990489259362,
+      "exit_code": 0
+    }
+  ],
+  "complete": true,
+  "finished_at": "2026-09-23T22:05:36.901586-05:00",
+  "no_policy_scoring": true,
+  "cohort_note": "Prespecified first20 of previously sealed150scene cohort; not newly independent"
+}

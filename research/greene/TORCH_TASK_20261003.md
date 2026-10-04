@@ -74,7 +74,7 @@ Shenlong 侧对照：驱动 **580.95.05**（R580 分支，组内明令不升级�
 
 如果根因隔离后确认 Shenlong 的评测环境不可用，那么**最有价值的事是让 Torch 跑我们自己三个变体的闭环评测**——那样架构比较（含 RAE 的全部问题）就能在一台能工作的机器上重做。
 
-障碍是资产：checkpoint 每个 12.7 GB，三变体单种子 38 GB，三种子 114 GB。这触及私有资产传输，**需要用户单独授权**，不在本任务范围内。
+**2026-10-03 更新：所有者已授权并建立私有仓库 `Exiam6/openwam-greene-transfer`。** 传输按 `delta/GPU02_GIT_TRANSFER.md` 的 delta 机制走，清单见 `delta/rae-policy/`，源 116 GB 经参考索引去重后预计只传训练权重。Shenlong 侧打包就绪、待执行；推送后会在本分支记录 `HEAD` sha。Torch 侧届时按 §4 用 `delta_unpack.sbatch` 还原。
 
 ## 5. 汇报方式
 

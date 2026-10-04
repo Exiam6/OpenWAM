@@ -35,8 +35,10 @@ Shenlong 在 2.3.3 下，`adjust_bottle` 失败的 11 个场景初始帧 MAE 系
 
 每场景：场景种子、成功与否、步数、`initial_render_mae`、动作种子、job id。把 20 个场景的成败与上面 7 个检验点逐一对照。按协议 §4 推到 `research/progress-20260927`。
 
-## 3. Shenlong 侧对称实验的状态
+## 3. Shenlong 侧对称实验的状态：**撤回**（2026-10-04 13:5x CDT 更新）
 
-对称方向（官方 checkpoint + **干净的 2.0.1**，看 9/20 能否回到 20/20）在 Shenlong 已完全就绪：干净 2.0.1 已从原 wheel 恢复（sha256 与 RECORD 一致），脚本 `run_official_oidn201.sh` 参数化、共享环境零改动。**只等一张卡**：GPU5 被占，其他卡在白天不在授权窗口内。两边任一方向成立即闭环，两边都做互为对照。
+对称方向（官方 checkpoint + 干净的 2.0.1）**在 Shenlong 上做不了**。解析两个 CUDA 设备库里嵌入的 fatbin（`cross-cluster/fatbin_targets.py`）：OIDN 2.0.1 只带 sm_70/75/80/90 的原生内核且**没有 PTX**，而 Shenlong 的卡是 Blackwell（compute capability 12.0）。没有 sm_120 内核、也没有可 JIT 的 PTX，2.0.1 的 CUDA 降噪在这台机器上根本无法运行；2.3.3 才补上了 sm_100/sm_120。所以 09-28 换成 2.3.3 不是误操作，是让 SAPIEN 在 Blackwell 上跑起来的必要步骤。详见 [SHENLONG_ENV_INVENTORY](SHENLONG_ENV_INVENTORY_20261003.md) §1c。
 
-Shenlong 侧还有一个未完成的核查：OIDN 2.0.1（2023 年版）的 CUDA 设备库是否内含 Blackwell sm_120 的内核——若没有，干净 2.0.1 在 Blackwell 上可能回退到 CPU 降噪或初始化失败，这也可能正是 09-28 有人换成 2.3.3 的原因。结果会补进 [SHENLONG_ENV_INVENTORY](SHENLONG_ENV_INVENTORY_20261003.md)。**这不影响 Torch 侧**：L40S（sm_89）上 2.0.1 一直在正常工作。
+**这意味着 §0 的任务是闭合因果链的唯一剩余路径。** L40S（sm_89）上 2.0.1 和 2.3.3 都能跑，Torch 不受影响。
+
+它还把上游缺陷说得更具体：这个基准的录制资产（参考 PNG、训练渲染）绑定在 OIDN 2.0.1 上，而 Blackwell 这一代 GPU 只能运行 OIDN ≥ 2.3.x——在这类硬件上回放渲染**不可能**等于录制渲染。

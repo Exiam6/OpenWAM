@@ -55,6 +55,19 @@ wheel 安装时的 `sapien-3.0.0b1.dist-info/RECORD` 记录 `libOpenImageDenoise
 
 这意味着决定性测试**不需要改共享环境**：只要在模拟器进程的 `LD_LIBRARY_PATH` 里换成这个目录即可。
 
+## 1c. 2.0.1 在 Blackwell 上跑不了：09-28 的替换是必须的
+
+直接解析两个 CUDA 设备库里嵌入的 fatbin（`cross-cluster/fatbin_targets.py`，本机没有 cuobjdump）：
+
+| 库 | 原生 SASS 内核 | PTX |
+| --- | --- | --- |
+| `libOpenImageDenoise_device_cuda.so.2.0.1` | sm_70 sm_75 sm_80 sm_90 | **无** |
+| `libOpenImageDenoise_device_cuda.so.2.3.3` | sm_70 sm_75 sm_80 sm_90 **sm_100 sm_120** | 无 |
+
+本机 compute capability **12.0**。2.0.1 既没有 sm_120 内核、也没有可供驱动 JIT 的 PTX，**它的 CUDA 降噪在这张卡上无法运行**（wheel 里也没有 2.0.1 的 CPU 设备库可退）。2.3.3 的 tarball 于 09-28 04:32 下载、同日 04:33 建链——这不是误操作，是让 SAPIEN 光追降噪在 Blackwell 上跑起来的必要步骤。
+
+**后果**：§1b 恢复的"干净 2.0.1"在这台机器上**不可用**，`run_official_oidn201.sh` 作废。Shenlong 没有任何办法用生成参考 PNG 的那个降噪器版本来回放场景。
+
 ## 2. 为什么 OIDN 是头号嫌疑
 
 降噪器直接决定光追渲染的输出。我们测到的渲染分歧形态是：**局部化、带重尾、带符号均值≈0、跨运行完全确定**（9 次运行离散度 0.00）。这正是"同一场景经不同降噪实现"的签名，而不是曝光/几何差异。
@@ -74,7 +87,7 @@ ln -sfn "$D/libOpenImageDenoise.so.2.0.1" "$D/libOpenImageDenoise.so.2"
 若 MAE 回落 → **根因确认是 OIDN 版本**，然后用官方 checkpoint 重跑 20 个 `adjust_bottle` 场景（约 30 分钟），看成功率能否从 9/20 回到 20/20。
 若 MAE 不变 → 根因在驱动或 torch/CUDA，需另外隔离。
 
-**改用 `LD_LIBRARY_PATH=openwam-runtime/oidn-2.0.1-pristine`（见 §1b），共享环境零改动，不再需要等。只差一张空卡。**
+~~改用 `LD_LIBRARY_PATH=openwam-runtime/oidn-2.0.1-pristine`~~ —— **作废**，见 §1c：2.0.1 没有 Blackwell 内核。这个检验只能在 Torch（L40S）上反向做，Torch 已完成（OIDN_AB_RESULT）。
 
 ## 4. 一个独立的警告
 

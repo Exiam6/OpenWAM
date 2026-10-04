@@ -101,10 +101,12 @@ Torch 的变体 C 已把逐场景 MAE 复现到小数点后 3–4 位。**若 To
 
 **仍未确立**：渲染分歧 → 成功率 97% 掉到 17% 这一环。每步 1.3% 的动作偏差在 400–800 步里累积，是**机制上自洽的解释**，但还没有一个把两端直接连起来的干预实验。两个对称的干预都已准备好：
 
-- Shenlong 侧：官方 checkpoint + 干净的 2.0.1（`LD_LIBRARY_PATH` 指向 `oidn-2.0.1-pristine/`，共享环境零改动），先跑 `adjust_bottle` 20 场景（约 30 分钟），看 9/20 是否回到 20/20 附近。脚本 `run_official_oidn201.sh` 就绪，只差一张空卡。
-- Torch 侧（Torch 提议）：官方 checkpoint + 2.3.3，看 58/60 是否掉到 Shenlong 水平。约 16 h 上限，需用户决定。
+- ~~Shenlong 侧：官方 checkpoint + 干净的 2.0.1~~ —— **撤回**。OIDN 2.0.1 的 CUDA 设备库只有 sm_70–90 内核且无 PTX，在 Blackwell（sm_120）上无法运行（[SHENLONG_ENV_INVENTORY](SHENLONG_ENV_INVENTORY_20261003.md) §1c）。Shenlong **没有办法**用生成参考 PNG 的降噪器版本回放场景。
+- **Torch 侧是唯一剩下的路**：官方 checkpoint + 2.3.3，`adjust_bottle` 20 场景，约 30 分钟（[TORCH_TASK_20261004](TORCH_TASK_20261004.md)），对照 §4d 预注册的 7 个场景。需用户决定。
 
-**任一方向成立即闭环**；两边都做则互为对照。
+### 这对 Shenlong 作为评测环境意味着什么
+
+这个基准的录制资产（参考 PNG、训练时的渲染）与 OIDN 2.0.1 绑定，而 **Blackwell 只能运行 OIDN ≥ 2.3.x**。所以在 Blackwell 上，无论怎么配置，回放渲染都不会等于录制渲染——策略在这台卡上评测时**必然**处于训练分布之外。要让 Shenlong 成为有效的评测环境，只有两条路：用 2.3.3 **重新生成**参考资产并**重新渲染训练数据**（等于换一个基准版本），或者只在能跑 2.0.1 的卡（sm_70–90，如 L40S/A100/H100）上评测。这是一个值得上报的、具体的可复现性缺陷：**基准资产隐式依赖降噪器版本，而新一代 GPU 无法运行旧版降噪器。**
 
 一个未排除的工程差异：Torch 用 `baseline-official/scripts/evaluate_policy.py`，我们用 `rae-policy-20261001/evaluate_policy.py`。两者 diff 过，逻辑一致、只差路径与闸门文件；但我们的 `simrun` 设了 `ROBOTWIN_ENABLE_PLANNER_FALLBACK=1`，Torch 是否设置未知。该开关理论上只影响专家规划器、与 `eval_mode` 下的策略回放无关，但未经验证。
 

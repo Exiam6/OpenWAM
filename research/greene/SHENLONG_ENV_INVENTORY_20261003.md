@@ -34,6 +34,27 @@ downloads/oidn-2.3.3.../libOpenImageDenoise_core.so.2.3.3
 
 SAPIEN 版本相同，planner fallback 相同。**差异集中在 OIDN、驱动、torch/CUDA 三处。**
 
+## 1b. 进一步核实：Shenlong 上根本没有完整的 2.0.1
+
+`sapien/oidn_library/` 里 **所有** `*.so.2.0.1` 文件都是指向 `downloads/oidn-2.3.3` 的符号链接，不只是 soname 链接：
+
+```
+libOpenImageDenoise.so.2.0.1       -> downloads/oidn-2.3.3.x86_64.linux/lib/libOpenImageDenoise.so.2.3.3
+libOpenImageDenoise_core.so.2.0.1  -> downloads/oidn-2.3.3.x86_64.linux/lib/libOpenImageDenoise_core.so.2.3.3
+```
+
+两者 sha256 相同（`9ac9dcd1…`），`DT_NEEDED` 相同（都依赖 `core.so.2.3.3`）。
+
+wheel 安装时的 `sapien-3.0.0b1.dist-info/RECORD` 记录 `libOpenImageDenoise.so.2.0.1` 原始 sha256 为 `9h88Er7HAe88…`（131,481 字节）；
+现在磁盘上该路径算出来是 `msnc0YMYyuh5…`。**原始 2.0.1 被整体替换掉了**，不是只改了一个链接。
+
+**已恢复一份干净的 2.0.1**：从 PyPI 重新下载原始 wheel `sapien-3.0.0b1-cp310-cp310-manylinux2014_x86_64.whl`（49.6 MB，只解压不安装），
+取出三个 OIDN 库放到 `openwam-runtime/oidn-2.0.1-pristine/`。核验：`libOpenImageDenoise.so.2.0.1` sha256 = `9h88Er7HAe88…`，
+**与 RECORD 完全一致**；`DT_NEEDED` 只依赖 `core.so.2.0.1`。用 `ctypes` 直接 `dlopen`（不初始化渲染器、不碰 GPU）确认
+`LD_LIBRARY_PATH` 指向该目录时解析到的全是 2.0.1，共享目录分毫未动（soname 链接仍指向 2.3.3）。
+
+这意味着决定性测试**不需要改共享环境**：只要在模拟器进程的 `LD_LIBRARY_PATH` 里换成这个目录即可。
+
 ## 2. 为什么 OIDN 是头号嫌疑
 
 降噪器直接决定光追渲染的输出。我们测到的渲染分歧形态是：**局部化、带重尾、带符号均值≈0、跨运行完全确定**（9 次运行离散度 0.00）。这正是"同一场景经不同降噪实现"的签名，而不是曝光/几何差异。
@@ -53,7 +74,7 @@ ln -sfn "$D/libOpenImageDenoise.so.2.0.1" "$D/libOpenImageDenoise.so.2"
 若 MAE 回落 → **根因确认是 OIDN 版本**，然后用官方 checkpoint 重跑 20 个 `adjust_bottle` 场景（约 30 分钟），看成功率能否从 9/20 回到 20/20。
 若 MAE 不变 → 根因在驱动或 torch/CUDA，需另外隔离。
 
-**这个改动会影响共享环境里任何正在跑的渲染任务，所以等用户点头再做。**
+**改用 `LD_LIBRARY_PATH=openwam-runtime/oidn-2.0.1-pristine`（见 §1b），共享环境零改动，不再需要等。只差一张空卡。**
 
 ## 4. 一个独立的警告
 

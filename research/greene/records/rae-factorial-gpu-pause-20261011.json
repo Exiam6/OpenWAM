@@ -1,0 +1,7 @@
+{
+  "paused_at": "2026-10-11T19:32:43.122696+00:00",
+  "reason": "User: 15号之前先不用gpu",
+  "no_gpu_before": "2026-10-15T00:00:00-05:00",
+  "timezone": "America/Chicago",
+  "automatic_resume": false
+}

@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "variant": "raw768_wide",
+  "seed": 43,
+  "steps": 20000,
+  "checkpoint": "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/runs/raw768_wide-seed43/checkpoint_step_20000.safetensors",
+  "checkpoint_sha256": "1c203b868fb8d36138e853fbdfe987564056f36b6752696255dc58942cde0a1e",
+  "strict_reload": true,
+  "final_dev_action_loss": 0.01899019395000646,
+  "final_dev_video_loss": 0.17717047259135144,
+  "resumed_from_step": 0,
+  "peak_gib": 18.595335483551025,
+  "seconds": 5593.384334007045,
+  "training_seconds": 5531.452278984012,
+  "policy_success_claim": false
+}

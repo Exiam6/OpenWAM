@@ -1,0 +1,134 @@
+From d68345b5b25bf5d0295cc8aa4ad0fc8b1efd6745 Mon Sep 17 00:00:00 2001
+From: Zifan Zhao <zifanz4@shenlong-gpu-01.cs.illinois.edu>
+Date: Sat, 10 Oct 2026 14:11:03 -0500
+Subject: [PATCH] fix(benchmarks): preserve half-turn absolute pose rotations
+
+---
+ benchmarks/README.md                          |  7 ++
+ benchmarks/utils/action_conversion.py         |  9 +--
+ .../test_robocasa_absolute_pose_conversion.py | 75 +++++++++++++++++++
+ 3 files changed, 85 insertions(+), 6 deletions(-)
+ create mode 100644 tests/test_robocasa_absolute_pose_conversion.py
+
+diff --git a/benchmarks/README.md b/benchmarks/README.md
+index 94b28a45..b49db046 100644
+--- a/benchmarks/README.md
++++ b/benchmarks/README.md
+@@ -95,6 +95,13 @@ reset_ack      → {"type": "reset_ack"}
+ 
+ ## 5. Using `benchmarks.utils`
+ 
++For absolute-pose checkpoints, the exported `eef10_to_robocasa12d` and
++`eef20d_to_robocasa12d` helpers convert the target orientation relative to the
++current orientation into a shortest-path axis-angle command, including exact
++180° rotations. Controller scaling and optional clipping apply afterward.
++These helpers require an absolute-pose action contract; the current RoboCasa365
++adapter uses its native delta-action contract.
++
+ Client helpers live under `benchmarks/utils/client.py` and can be imported directly:
+ 
+ ```python
+diff --git a/benchmarks/utils/action_conversion.py b/benchmarks/utils/action_conversion.py
+index 8c3feda3..bee84167 100644
+--- a/benchmarks/utils/action_conversion.py
++++ b/benchmarks/utils/action_conversion.py
+@@ -125,12 +125,9 @@ def _rot6d_to_matrix(r6d: np.ndarray) -> np.ndarray:
+ 
+ def _matrix_to_axis_angle(R: np.ndarray) -> np.ndarray:
+     """3x3 rotation matrix -> axis-angle (rotation vector), pure numpy."""
+-    angle = np.arccos(np.clip((np.trace(R) - 1.0) * 0.5, -1.0, 1.0))
+-    if angle < 1e-8:
+-        return np.zeros(3, np.float32)
+-    axis = np.array([R[2, 1] - R[1, 2], R[0, 2] - R[2, 0], R[1, 0] - R[0, 1]], np.float64)
+-    axis = axis / max(float(np.linalg.norm(axis)), 1e-8)
+-    return (axis * angle).astype(np.float32)
++    # The skew-symmetric part vanishes at a half turn. Use the shared
++    # quaternion path, which recovers that axis from the matrix diagonal.
++    return rot6d_to_axis_angle(np.concatenate([R[:, 0], R[:, 1]]))
+ 
+ 
+ def binarize_robocasa_action12(action: np.ndarray) -> np.ndarray:
+diff --git a/tests/test_robocasa_absolute_pose_conversion.py b/tests/test_robocasa_absolute_pose_conversion.py
+new file mode 100644
+index 00000000..8d6b96ef
+--- /dev/null
++++ b/tests/test_robocasa_absolute_pose_conversion.py
+@@ -0,0 +1,75 @@
++"""Absolute EEF bridges must preserve rotations, including exact half turns."""
++
++import numpy as np
++import pytest
++from scipy.spatial.transform import Rotation
++
++from benchmarks.utils import eef10_to_robocasa12d, eef20d_to_robocasa12d
++
++
++def _rot6d(matrix):
++    return np.concatenate([matrix[:, 0], matrix[:, 1]])
++
++
++def _convert(target, current, *, legacy=False, clip=False):
++    action = np.concatenate([[0.2, -0.1, 0.4], _rot6d(target), [-1.0]])
++    if legacy:
++        action = np.concatenate([action, np.zeros(10)])
++    convert = eef20d_to_robocasa12d if legacy else eef10_to_robocasa12d
++    return convert(
++        action,
++        np.array([0.1, -0.2, 0.3]),
++        _rot6d(current),
++        pos_scale=0.05,
++        rot_scale=0.5,
++        base_motion=np.array([0.1, -0.2, 0.3, 0.4]),
++        control_mode=1.0,
++        clip=clip,
++    )
++
++
++@pytest.mark.parametrize("legacy", [False, True], ids=["eef10", "eef20"])
++@pytest.mark.parametrize("axis", np.eye(3).tolist() + [[1.0, 2.0, -3.0]])
++def test_absolute_pose_half_turn_reconstructs_target(axis, legacy):
++    axis = np.asarray(axis) / np.linalg.norm(axis)
++    # Exact symmetric rotation matrix: the old skew-only extraction returns zero.
++    target = 2 * np.outer(axis, axis) - np.eye(3)
++    action = _convert(target, np.eye(3), legacy=legacy)
++    actual_rotation = Rotation.from_rotvec(action[3:6] * 0.5).as_matrix()
++    np.testing.assert_allclose(actual_rotation, target, atol=3e-6)
++    np.testing.assert_allclose(np.linalg.norm(action[3:6] * 0.5), np.pi, atol=3e-7)
++    assert action.shape == (12,) and action.dtype == np.float32
++    np.testing.assert_allclose(action[:3], [2.0, 2.0, 2.0], atol=1e-6)
++    np.testing.assert_allclose(action[6:], [1.0, 0.1, -0.2, 0.3, 0.4, 1.0])
++
++
++@pytest.mark.parametrize("legacy", [False, True], ids=["eef10", "eef20"])
++@pytest.mark.parametrize("angle", [0.0, 1e-7, 0.3, np.pi - 1e-10, np.pi + 1e-10])
++def test_absolute_pose_relative_rotation_matches_independent_reference(angle, legacy):
++    current = Rotation.from_euler("xyz", [0.2, -0.4, 0.7]).as_matrix()
++    axis = np.array([1.0, -2.0, 3.0]) / np.sqrt(14.0)
++    delta = Rotation.from_rotvec(angle * axis).as_matrix()
++    target = delta @ current
++    action = _convert(target, current, legacy=legacy)
++    # Compare orientations because +/- pi describe the same half turn.
++    np.testing.assert_allclose(Rotation.from_rotvec(action[3:6] * 0.5).as_matrix() @ current, target, atol=3e-6)
++    assert np.linalg.norm(action[3:6] * 0.5) <= np.pi + 3e-7
++
++
++@pytest.mark.parametrize("axis_index", range(3))
++def test_default_clipping_preserves_nonzero_half_turn_command(axis_index):
++    target = -np.eye(3)
++    target[axis_index, axis_index] = 1.0
++    action = _convert(target, np.eye(3), clip=True)
++    np.testing.assert_allclose(np.abs(action[3:6]), np.eye(3)[axis_index])
++    np.testing.assert_allclose(action[:3], np.ones(3))
++
++
++def test_absolute_pose_random_rotation_roundtrips():
++    rng = np.random.default_rng(811)
++    for current, target in zip(
++        Rotation.random(100, random_state=rng).as_matrix(),
++        Rotation.random(100, random_state=rng).as_matrix(),
++    ):
++        action = _convert(target, current)
++        np.testing.assert_allclose(Rotation.from_rotvec(action[3:6] * 0.5).as_matrix() @ current, target, atol=3e-6)
+-- 
+2.55.0
+

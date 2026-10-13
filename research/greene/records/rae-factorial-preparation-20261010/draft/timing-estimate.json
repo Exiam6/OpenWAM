@@ -1,0 +1,194 @@
+{
+  "training_gpu_hours_proxy": 9.176794707614981,
+  "evaluation_gpu_hours_proxy": 35.467217534652896,
+  "total_gpu_hours_proxy": 44.64401224226788,
+  "two_gpu_ideal_wall_hours": 22.32200612113394,
+  "two_gpu_wall_hours_with_25pct_allowance": 27.902507651417423,
+  "training_runs": [
+    {
+      "variant": "raw768_native_shift16",
+      "seed": 42,
+      "proxy_source": "raw768_native-seed42",
+      "proxy_seconds": 5359.584304039017,
+      "proxy_peak_gib": 16.418837070465088
+    },
+    {
+      "variant": "raw768_native_shift16",
+      "seed": 43,
+      "proxy_source": "raw768_native-seed43",
+      "proxy_seconds": 5212.232073202962,
+      "proxy_peak_gib": 16.418837070465088
+    },
+    {
+      "variant": "raw768_native_shift16",
+      "seed": 44,
+      "proxy_source": "raw768_native-seed44",
+      "proxy_seconds": 5493.530840483028,
+      "proxy_peak_gib": 16.418837070465088
+    },
+    {
+      "variant": "raw768_wide_shift16",
+      "seed": 42,
+      "proxy_source": "raw768_wide-seed42",
+      "proxy_seconds": 5761.948114172905,
+      "proxy_peak_gib": 18.595335483551025
+    },
+    {
+      "variant": "raw768_wide_shift16",
+      "seed": 43,
+      "proxy_source": "raw768_wide-seed43",
+      "proxy_seconds": 5593.384334007045,
+      "proxy_peak_gib": 18.595335483551025
+    },
+    {
+      "variant": "raw768_wide_shift16",
+      "seed": 44,
+      "proxy_source": "raw768_wide-seed44",
+      "proxy_seconds": 5615.781281508971,
+      "proxy_peak_gib": 18.595335483551025
+    }
+  ],
+  "evaluation_cells": [
+    {
+      "variant": "svae48_native",
+      "task": "adjust_bottle",
+      "proxy_base": "svae48_native",
+      "historical_valid_attempts": 60,
+      "historical_mean_seconds": 68.18716628367159,
+      "historical_max_seconds": 116.11746513913386,
+      "planned_attempts": 60
+    },
+    {
+      "variant": "svae48_native",
+      "task": "handover_block",
+      "proxy_base": "svae48_native",
+      "historical_valid_attempts": 60,
+      "historical_mean_seconds": 175.80305113154463,
+      "historical_max_seconds": 182.8914712809492,
+      "planned_attempts": 60
+    },
+    {
+      "variant": "svae48_native",
+      "task": "place_object_basket",
+      "proxy_base": "svae48_native",
+      "historical_valid_attempts": 57,
+      "historical_mean_seconds": 174.0085121831783,
+      "historical_max_seconds": 189.70338214887306,
+      "planned_attempts": 60
+    },
+    {
+      "variant": "raw768_native",
+      "task": "adjust_bottle",
+      "proxy_base": "raw768_native",
+      "historical_valid_attempts": 60,
+      "historical_mean_seconds": 72.35006222460264,
+      "historical_max_seconds": 104.9946358690504,
+      "planned_attempts": 60
+    },
+    {
+      "variant": "raw768_native",
+      "task": "handover_block",
+      "proxy_base": "raw768_native",
+      "historical_valid_attempts": 60,
+      "historical_mean_seconds": 176.71128998946708,
+      "historical_max_seconds": 187.5514217989985,
+      "planned_attempts": 60
+    },
+    {
+      "variant": "raw768_native",
+      "task": "place_object_basket",
+      "proxy_base": "raw768_native",
+      "historical_valid_attempts": 57,
+      "historical_mean_seconds": 176.55841346549917,
+      "historical_max_seconds": 195.4475458820816,
+      "planned_attempts": 60
+    },
+    {
+      "variant": "raw768_wide",
+      "task": "adjust_bottle",
+      "proxy_base": "raw768_wide",
+      "historical_valid_attempts": 60,
+      "historical_mean_seconds": 76.271093451872,
+      "historical_max_seconds": 104.35447348607704,
+      "planned_attempts": 60
+    },
+    {
+      "variant": "raw768_wide",
+      "task": "handover_block",
+      "proxy_base": "raw768_wide",
+      "historical_valid_attempts": 60,
+      "historical_mean_seconds": 175.9218270951727,
+      "historical_max_seconds": 183.59344381815754,
+      "planned_attempts": 60
+    },
+    {
+      "variant": "raw768_wide",
+      "task": "place_object_basket",
+      "proxy_base": "raw768_wide",
+      "historical_valid_attempts": 57,
+      "historical_mean_seconds": 177.20447501377612,
+      "historical_max_seconds": 219.39641555794515,
+      "planned_attempts": 60
+    },
+    {
+      "variant": "raw768_native_shift16",
+      "task": "adjust_bottle",
+      "proxy_base": "raw768_native",
+      "historical_valid_attempts": 60,
+      "historical_mean_seconds": 72.35006222460264,
+      "historical_max_seconds": 104.9946358690504,
+      "planned_attempts": 60
+    },
+    {
+      "variant": "raw768_native_shift16",
+      "task": "handover_block",
+      "proxy_base": "raw768_native",
+      "historical_valid_attempts": 60,
+      "historical_mean_seconds": 176.71128998946708,
+      "historical_max_seconds": 187.5514217989985,
+      "planned_attempts": 60
+    },
+    {
+      "variant": "raw768_native_shift16",
+      "task": "place_object_basket",
+      "proxy_base": "raw768_native",
+      "historical_valid_attempts": 57,
+      "historical_mean_seconds": 176.55841346549917,
+      "historical_max_seconds": 195.4475458820816,
+      "planned_attempts": 60
+    },
+    {
+      "variant": "raw768_wide_shift16",
+      "task": "adjust_bottle",
+      "proxy_base": "raw768_wide",
+      "historical_valid_attempts": 60,
+      "historical_mean_seconds": 76.271093451872,
+      "historical_max_seconds": 104.35447348607704,
+      "planned_attempts": 60
+    },
+    {
+      "variant": "raw768_wide_shift16",
+      "task": "handover_block",
+      "proxy_base": "raw768_wide",
+      "historical_valid_attempts": 60,
+      "historical_mean_seconds": 175.9218270951727,
+      "historical_max_seconds": 183.59344381815754,
+      "planned_attempts": 60
+    },
+    {
+      "variant": "raw768_wide_shift16",
+      "task": "place_object_basket",
+      "proxy_base": "raw768_wide",
+      "historical_valid_attempts": 57,
+      "historical_mean_seconds": 177.20447501377612,
+      "historical_max_seconds": 219.39641555794515,
+      "planned_attempts": 60
+    }
+  ],
+  "limitations": [
+    "Shift16 timings are inferred from matching shift5 architectures, not measured.",
+    "Reported run/episode seconds omit some process startup, staging, scene preparation, v2 diagnostics and model-load costs; GPU queue availability is unknown.",
+    "Two-GPU wall time assumes perfect balancing and exclusive continuous availability.",
+    "The 25 percent allowance is a planning assumption, not a measured bound."
+  ]
+}

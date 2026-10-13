@@ -1,0 +1,86 @@
+{
+  "study": "/home/zifanz4/openwam-runtime/rae-policy-20261001",
+  "variant": "raw768_native",
+  "checkpoint": "/home/zifanz4/openwam-runtime/rae-policy-20261001/runs/raw768_native-seed42/checkpoint_step_4000.safetensors",
+  "shift_video": 5.0,
+  "dev_windows": 60,
+  "curve": [
+    {
+      "target_sigma": 0.1,
+      "actual_sigma": 0.10110294073820114,
+      "index": 978,
+      "loss_video": 0.7054872334003448,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.2,
+      "actual_sigma": 0.20134228467941284,
+      "index": 952,
+      "loss_video": 1.2927050272623697,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.3,
+      "actual_sigma": 0.3001519739627838,
+      "index": 921,
+      "loss_video": 1.7215634286403656,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.4,
+      "actual_sigma": 0.4008152484893799,
+      "index": 882,
+      "loss_video": 1.9880364338556926,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.5,
+      "actual_sigma": 0.5005995631217957,
+      "index": 833,
+      "loss_video": 2.06356830795606,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.6,
+      "actual_sigma": 0.600311815738678,
+      "index": 769,
+      "loss_video": 1.9468425194422403,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.7,
+      "actual_sigma": 0.6998239755630493,
+      "index": 682,
+      "loss_video": 1.647150746981303,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.8,
+      "actual_sigma": 0.7997118830680847,
+      "index": 556,
+      "loss_video": 1.1926158169905345,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.9,
+      "actual_sigma": 0.900056004524231,
+      "index": 357,
+      "loss_video": 0.6250052551428477,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.95,
+      "actual_sigma": 0.9500959515571594,
+      "index": 208,
+      "loss_video": 0.31656572272380196,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.99,
+      "actual_sigma": 0.9900166392326355,
+      "index": 48,
+      "loss_video": 0.06388120340804258,
+      "n": 60
+    }
+  ]
+}

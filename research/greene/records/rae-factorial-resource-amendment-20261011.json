@@ -1,0 +1,118 @@
+{
+  "policy": {
+    "host": "gpu02",
+    "timezone": "America/Chicago",
+    "start_hour": 1,
+    "end_hour": 9,
+    "baseline_gpus": [
+      "1",
+      "2"
+    ],
+    "gpus": {
+      "0": "GPU-b7f1830e-d968-bf46-ac6a-28eee383c657",
+      "1": "GPU-f77a93d8-04eb-226f-b3a6-5d51e8441d72",
+      "2": "GPU-96123909-6676-60d1-629f-74efe5f66706",
+      "3": "GPU-deab6de5-9e18-8cbe-797b-bad0e922199b",
+      "4": "GPU-4de4c4a5-0d62-23b4-6ba3-9b929d9ff38e",
+      "5": "GPU-a4c607bb-f8f8-b999-19ea-0eb65290bb10",
+      "6": "GPU-4c12201b-df77-c088-2575-36c8383b3b7f",
+      "7": "GPU-eb8209db-0d9f-ea1c-425d-4e28267f2712"
+    },
+    "idle_only": true,
+    "user_message": "每天晚上1am-9am 你可以占用任何空的卡",
+    "recorded_at": "2026-10-11T18:55:20.650232+00:00",
+    "study_deadline": "2026-10-12T11:52:56+00:00",
+    "max_attempt_cleanup_margin_seconds": 120
+  },
+  "scientific_protocol_sha256": "42545ca3e7099faa4ff74e76bf3cc713ceab30ba2f252f53698a91ba72a544f9",
+  "previous_manifests": {
+    "code-freeze.json": "bb02843a28fc86593114651bc7ec512a083f01f82a496373a39c0605dc61d9aa",
+    "eval-freeze.json": "75ba16127d166ef6db42e97f97e5f9cdb0206a9d4833850377bcee20738995c3"
+  },
+  "new_manifests": {
+    "code-freeze.json": "98c5cacd52e31f87e05175bec308f689121de0d15bb98c85c34012a4e1aef00f",
+    "eval-freeze.json": "dbd456c2c65cb5a86437a7b197e0a8f264d2c88d47b5332ce3b6bbc90bd9edd3"
+  },
+  "services": [
+    {
+      "unit": "openwam-rae-factorial-gpu0-20261010.service",
+      "gpu": "0",
+      "deadline": "2026-10-12T11:52:56+00:00"
+    },
+    {
+      "unit": "openwam-rae-factorial-gpu1-20261010.service",
+      "gpu": "1",
+      "deadline": "2026-10-12T11:52:56+00:00"
+    },
+    {
+      "unit": "openwam-rae-factorial-gpu2-20261010.service",
+      "gpu": "2",
+      "deadline": "2026-10-12T11:52:56+00:00"
+    },
+    {
+      "unit": "openwam-rae-factorial-gpu3-20261010.service",
+      "gpu": "3",
+      "deadline": "2026-10-12T11:52:56+00:00"
+    },
+    {
+      "unit": "openwam-rae-factorial-gpu4-20261010.service",
+      "gpu": "4",
+      "deadline": "2026-10-12T11:52:56+00:00"
+    },
+    {
+      "unit": "openwam-rae-factorial-gpu5-20261010.service",
+      "gpu": "5",
+      "deadline": "2026-10-12T11:52:56+00:00"
+    },
+    {
+      "unit": "openwam-rae-factorial-gpu6-20261010.service",
+      "gpu": "6",
+      "deadline": "2026-10-12T11:52:56+00:00"
+    },
+    {
+      "unit": "openwam-rae-factorial-gpu7-20261010.service",
+      "gpu": "7",
+      "deadline": "2026-10-12T11:52:56+00:00"
+    },
+    {
+      "unit": "openwam-rae-factorial-post-gpu0-20261010.service",
+      "gpu": "0",
+      "deadline": "2026-10-12T11:52:56+00:00"
+    },
+    {
+      "unit": "openwam-rae-factorial-post-gpu1-20261010.service",
+      "gpu": "1",
+      "deadline": "2026-10-12T11:52:56+00:00"
+    },
+    {
+      "unit": "openwam-rae-factorial-post-gpu2-20261010.service",
+      "gpu": "2",
+      "deadline": "2026-10-12T11:52:56+00:00"
+    },
+    {
+      "unit": "openwam-rae-factorial-post-gpu3-20261010.service",
+      "gpu": "3",
+      "deadline": "2026-10-12T11:52:56+00:00"
+    },
+    {
+      "unit": "openwam-rae-factorial-post-gpu4-20261010.service",
+      "gpu": "4",
+      "deadline": "2026-10-12T11:52:56+00:00"
+    },
+    {
+      "unit": "openwam-rae-factorial-post-gpu5-20261010.service",
+      "gpu": "5",
+      "deadline": "2026-10-12T11:52:56+00:00"
+    },
+    {
+      "unit": "openwam-rae-factorial-post-gpu6-20261010.service",
+      "gpu": "6",
+      "deadline": "2026-10-12T11:52:56+00:00"
+    },
+    {
+      "unit": "openwam-rae-factorial-post-gpu7-20261010.service",
+      "gpu": "7",
+      "deadline": "2026-10-12T11:52:56+00:00"
+    }
+  ]
+}

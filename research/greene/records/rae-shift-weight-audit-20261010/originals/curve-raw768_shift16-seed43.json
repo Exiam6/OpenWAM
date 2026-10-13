@@ -1,0 +1,86 @@
+{
+  "study": "/home/zifanz4/openwam-runtime/rae-shift-20261003",
+  "variant": "raw768_shift16",
+  "checkpoint": "/home/zifanz4/openwam-runtime/rae-shift-20261003/runs/raw768_shift16-seed43/checkpoint_step_4000.safetensors",
+  "shift_video": 16.4317,
+  "dev_windows": 60,
+  "curve": [
+    {
+      "target_sigma": 0.1,
+      "actual_sigma": 0.10380832850933075,
+      "index": 993,
+      "loss_video": 1.2264087597529094,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.2,
+      "actual_sigma": 0.20014649629592896,
+      "index": 985,
+      "loss_video": 2.186187032858531,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.3,
+      "actual_sigma": 0.29643145203590393,
+      "index": 975,
+      "loss_video": 2.9023056626319885,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.4,
+      "actual_sigma": 0.40006354451179504,
+      "index": 961,
+      "loss_video": 3.3649932742118835,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.5,
+      "actual_sigma": 0.49829936027526855,
+      "index": 943,
+      "loss_video": 3.485300127665202,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.6,
+      "actual_sigma": 0.6010909676551819,
+      "index": 916,
+      "loss_video": 3.2749554991722105,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.7,
+      "actual_sigma": 0.699333906173706,
+      "index": 876,
+      "loss_video": 2.768944787979126,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.8,
+      "actual_sigma": 0.8002292513847351,
+      "index": 804,
+      "loss_video": 1.9923690517743429,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.9,
+      "actual_sigma": 0.9000436067581177,
+      "index": 646,
+      "loss_video": 1.043285701672236,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.95,
+      "actual_sigma": 0.9499536156654358,
+      "index": 464,
+      "loss_video": 0.5287011762460073,
+      "n": 60
+    },
+    {
+      "target_sigma": 0.99,
+      "actual_sigma": 0.9900283813476562,
+      "index": 142,
+      "loss_video": 0.10595483121772607,
+      "n": 60
+    }
+  ]
+}

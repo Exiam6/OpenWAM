@@ -1,0 +1,108 @@
+{
+  "status": "draft_not_runnable",
+  "experiment_started": false,
+  "proposed_runtime": "/home/zifanz4/openwam-runtime/rae-factorial-20261010",
+  "source_runtime": "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006",
+  "primary_candidate": "raw768_wide_shift16",
+  "primary_control": "raw768_native",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "steps": 20000,
+  "new_training_runs": [
+    {
+      "variant": "raw768_native_shift16",
+      "seed": 42,
+      "proxy_source": "raw768_native-seed42",
+      "proxy_seconds": 5359.584304039017,
+      "proxy_peak_gib": 16.418837070465088
+    },
+    {
+      "variant": "raw768_native_shift16",
+      "seed": 43,
+      "proxy_source": "raw768_native-seed43",
+      "proxy_seconds": 5212.232073202962,
+      "proxy_peak_gib": 16.418837070465088
+    },
+    {
+      "variant": "raw768_native_shift16",
+      "seed": 44,
+      "proxy_source": "raw768_native-seed44",
+      "proxy_seconds": 5493.530840483028,
+      "proxy_peak_gib": 16.418837070465088
+    },
+    {
+      "variant": "raw768_wide_shift16",
+      "seed": 42,
+      "proxy_source": "raw768_wide-seed42",
+      "proxy_seconds": 5761.948114172905,
+      "proxy_peak_gib": 18.595335483551025
+    },
+    {
+      "variant": "raw768_wide_shift16",
+      "seed": 43,
+      "proxy_source": "raw768_wide-seed43",
+      "proxy_seconds": 5593.384334007045,
+      "proxy_peak_gib": 18.595335483551025
+    },
+    {
+      "variant": "raw768_wide_shift16",
+      "seed": 44,
+      "proxy_source": "raw768_wide-seed44",
+      "proxy_seconds": 5615.781281508971,
+      "proxy_peak_gib": 18.595335483551025
+    }
+  ],
+  "candidate_config_checks": {
+    "raw768_native_shift16": {
+      "base": "raw768_native",
+      "changed_fields": [
+        "model.video_backbone.shift_video",
+        "project.output_dir",
+        "training.output_path"
+      ],
+      "sha256": "0b7c2523fbeab68ef6dbf8e83a5663da0d8b8e13630a68c75e75a61921e5e86d",
+      "shift_action": 5.0
+    },
+    "raw768_wide_shift16": {
+      "base": "raw768_wide",
+      "changed_fields": [
+        "model.video_backbone.shift_video",
+        "project.output_dir",
+        "training.output_path"
+      ],
+      "sha256": "9320ef1f13a3eade218117a7d1ebba3f72df094f5eb66dbedec5794f3c8b2102",
+      "shift_action": 5.0
+    }
+  },
+  "closed_loop": {
+    "tasks": [
+      "adjust_bottle",
+      "handover_block",
+      "place_object_basket"
+    ],
+    "arms": [
+      "svae48_native",
+      "raw768_native",
+      "raw768_wide",
+      "raw768_native_shift16",
+      "raw768_wide_shift16"
+    ],
+    "scenes_per_task": 20,
+    "total_attempts": 900,
+    "new_scene_manifest": null
+  },
+  "device_allocation": null,
+  "deadline": null,
+  "remaining": [
+    "User authorization to resume experiments and a resource/time budget.",
+    "Freeze new independent study, full template sidecars, inputs and code hashes.",
+    "Apply and GPU-test the wide-preflight patch in the new study only.",
+    "Strict reload, exact initialization and paired-noise smoke checks for both new arms.",
+    "Rehash reused checkpoints before fresh closed-loop evaluation.",
+    "Freeze a disjoint fresh scene manifest and add planner/tick instrumentation.",
+    "Execute the controlled experiment and measure paired closed-loop success."
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "captured_at": "2026-10-11T00:07:11.765845+00:00",
+  "runtime": "/home/zifanz4/openwam-runtime/rae-factorial-20261010",
+  "authorization": {
+    "message": "User replied ok to GPU1/2, idle-only, maximum 36 hours.",
+    "budget_start_utc": "2026-10-10T23:52:56+00:00",
+    "max_wall_hours": 36
+  },
+  "deadline": "2026-10-12T11:52:56+00:00",
+  "services": {
+    "openwam-rae-factorial-gpu1-20261010.service": {
+      "systemd": {
+        "Restart": "no",
+        "RuntimeMaxUSec": "1d 11h 55min 30s",
+        "MainPID": "2113325",
+        "KillMode": "control-group",
+        "ActiveState": "active",
+        "SubState": "running"
+      },
+      "state": {
+        "time": "2026-10-11T00:06:27.623028+00:00",
+        "pid": 2113325,
+        "gpu": "1",
+        "phase": "waiting_for_free_gpu",
+        "free_streak": 0,
+        "query": [
+          "GPU-f77a93d8-04eb-226f-b3a6-5d51e8441d72",
+          "90391",
+          "100",
+          "0",
+          "00000000:04:00.0"
+        ],
+        "next_job": {
+          "stage": "preflight",
+          "variant": "raw768_native_shift16",
+          "seed": 42
+        }
+      }
+    },
+    "openwam-rae-factorial-gpu2-20261010.service": {
+      "systemd": {
+        "Restart": "no",
+        "RuntimeMaxUSec": "1d 11h 55min 30s",
+        "MainPID": "2113410",
+        "KillMode": "control-group",
+        "ActiveState": "active",
+        "SubState": "running"
+      },
+      "state": {
+        "time": "2026-10-11T00:06:27.664127+00:00",
+        "pid": 2113410,
+        "gpu": "2",
+        "phase": "waiting_for_free_gpu",
+        "free_streak": 0,
+        "query": [
+          "GPU-96123909-6676-60d1-629f-74efe5f66706",
+          "90387",
+          "100",
+          "0",
+          "00000000:73:00.0"
+        ],
+        "next_job": {
+          "stage": "preflight",
+          "variant": "raw768_native_shift16",
+          "seed": 42
+        }
+      }
+    },
+    "openwam-rae-factorial-post-gpu1-20261010.service": {
+      "systemd": {
+        "Restart": "no",
+        "RuntimeMaxUSec": "1d 11h 46min 41s",
+        "MainPID": "3370297",
+        "KillMode": "control-group",
+        "ActiveState": "active",
+        "SubState": "running"
+      },
+      "state": {
+        "phase": "waiting_for_training",
+        "pid": 3370297,
+        "time": "2026-10-11T00:06:44.745918+00:00",
+        "gpu": "1"
+      }
+    },
+    "openwam-rae-factorial-post-gpu2-20261010.service": {
+      "systemd": {
+        "Restart": "no",
+        "RuntimeMaxUSec": "1d 11h 46min 41s",
+        "MainPID": "3370362",
+        "KillMode": "control-group",
+        "ActiveState": "active",
+        "SubState": "running"
+      },
+      "state": {
+        "phase": "waiting_for_training",
+        "pid": 3370362,
+        "time": "2026-10-11T00:06:44.754725+00:00",
+        "gpu": "2"
+      }
+    }
+  },
+  "gpu_query": "1, GPU-f77a93d8-04eb-226f-b3a6-5d51e8441d72, 90391 MiB, 100 %\n2, GPU-96123909-6676-60d1-629f-74efe5f66706, 90387 MiB, 100 %\n",
+  "attempt_claims": [],
+  "post_attempt_claims": [],
+  "code_freezes_verified": true,
+  "closed_loop_results_present": false,
+  "artifact_sha256": {
+    "protocol.json": "42545ca3e7099faa4ff74e76bf3cc713ceab30ba2f252f53698a91ba72a544f9",
+    "scene-protocol.json": "46c0f452480da648963c763003def2151d85ab2af8f820e84d0965db1ee1e140",
+    "input-freeze.json": "f96df0c0abe3b6441ef1da2bd763f79d2db3ff7f20233a77fe2253dbdfc02f05",
+    "code-freeze.json": "bb02843a28fc86593114651bc7ec512a083f01f82a496373a39c0605dc61d9aa",
+    "eval-freeze.json": "75ba16127d166ef6db42e97f97e5f9cdb0206a9d4833850377bcee20738995c3",
+    "seed-exclusion.json": "5cadf23b894ad626ae3d3c8de481ff5bfc36bff310fe4969d549d061e44e7611"
+  },
+  "local_cpu_validation": {
+    "tests_passed": 22,
+    "gpu_tests_pending": true,
+    "command": "python -m pytest tests/test_rae_factorial_worker.py tests/test_rae_sigma_metrics.py tests/test_rae_execution_trace.py tests/test_rae_factorial_score.py tests/test_rae_post_worker.py -q"
+  }
+}

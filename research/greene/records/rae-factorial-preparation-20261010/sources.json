@@ -1,0 +1,55 @@
+{
+  "host": "gpu02",
+  "root": "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006",
+  "captured_at": "2026-10-10T19:45:52.952844+00:00",
+  "files": {
+    "templates/raw768_native/config.yaml": {
+      "sha256": "9300d21ea4610691b1ca08282fcb231c5e187a66ade3b51f06eb75eac453575d"
+    },
+    "templates/raw768_wide/config.yaml": {
+      "sha256": "0893c30231268fcdd3d3b3979ba05e530e02045e954712992232668d86bbb23f"
+    },
+    "templates/svae48_native/config.yaml": {
+      "sha256": "4c145fa48511d7ce01f4bc57399b50a8e6eae0289c5bd74f12ce4a8591c5bb2e"
+    },
+    "train.py": {
+      "sha256": "0e7c18649817aa36bcb767b7e9aba07024c0880f2fe46d7dbf91e375e40cded2"
+    },
+    "common.py": {
+      "sha256": "289d8b19e104b145ce986cb825e6d8713dd9d3127ded590b72a6478ce98ee437"
+    },
+    "code-freeze.json": {
+      "sha256": "c91ec05a32f0fbab9834af469009285e7dd9bfaf8fc2c9b84a836480c18aa2b1"
+    },
+    "evaluation-ledger.json": {
+      "sha256": "01e18d2ee6891e6f914bd68975cffbe314fe21790a580af4802bfd28ada18b9c"
+    },
+    "runs/raw768_native-seed42/result.json": {
+      "sha256": "5f63d1dfcd1c68a4c6938734e2b867e9fb7196fbeb78fdc02f5fcfbbedc8b1c4"
+    },
+    "runs/raw768_native-seed43/result.json": {
+      "sha256": "ed76632f510eed01ddaef1fbfca0512c87ef83987601dfca500da16d72f0eaca"
+    },
+    "runs/raw768_native-seed44/result.json": {
+      "sha256": "543ef6b7d09993da9da2b77484aeccaa24211ccde478a72d8f3fdfdf79994da7"
+    },
+    "runs/raw768_wide-seed42/result.json": {
+      "sha256": "9302e8805a51cd4ffea22439d8f0760cc2facf4340b283272ecca1d97006578e"
+    },
+    "runs/raw768_wide-seed43/result.json": {
+      "sha256": "aa41e1de7d822c4fe818471bcf993cdc1cf4a54ee6eec772344012c97d249c2e"
+    },
+    "runs/raw768_wide-seed44/result.json": {
+      "sha256": "a5f337185ea76d4f0deaad83770e53294acf00060eb183287170d3fdf5421cf5"
+    },
+    "runs/svae48_native-seed42/result.json": {
+      "sha256": "ed7cb160e8834bbadc4c9aea44fa40cc5e63d76f10b87a5e25abf0974c90dba8"
+    },
+    "runs/svae48_native-seed43/result.json": {
+      "sha256": "0b45ac10d318344e3a9addbe7fbb9a68ae08a153483c516da07944b855830558"
+    },
+    "runs/svae48_native-seed44/result.json": {
+      "sha256": "b1c7cad8b2aefd4094fe90420a810eb4c11c0d3aefe9e299b21bde117e878fed"
+    }
+  }
+}

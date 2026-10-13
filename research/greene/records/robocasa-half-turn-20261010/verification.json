@@ -1,0 +1,52 @@
+{
+  "created_at": "2026-10-10T19:11:40.419911+00:00",
+  "objective": "Verified contribution to OpenWAM",
+  "upstream_base": "4d7f642b841913ea3c176010b692b1de3d5ef180",
+  "commit": "d68345b5b25bf5d0295cc8aa4ad0fc8b1efd6745",
+  "branch": "contribution/robocasa-half-turn-20261010",
+  "worktree": "/home/zifanz4/openwam-rotation-contribution",
+  "worktree_clean": true,
+  "title": "fix(benchmarks): preserve half-turn absolute pose rotations",
+  "scope": [
+    "benchmarks/README.md",
+    "benchmarks/utils/action_conversion.py",
+    "tests/test_robocasa_absolute_pose_conversion.py"
+  ],
+  "failure_before": {
+    "regression_failed": 15,
+    "regression_passed": 7,
+    "principal_axis_180deg_output": [
+      0,
+      0,
+      0
+    ]
+  },
+  "validation": {
+    "regression_after_passed": 22,
+    "adjacent_client_tests_passed": 37,
+    "make_all_exit_code": 0,
+    "cpu_passed": 2047,
+    "skipped": 18,
+    "deselected": 21,
+    "warnings": 15,
+    "repository_ruff": "passed",
+    "changed_file_compile": "passed",
+    "patch_applies_to_upstream_base": true
+  },
+  "limits": [
+    "CPU-only mathematical and client verification; no simulator or policy experiment.",
+    "Fix affects exported absolute-pose helpers; it does not explain the RoboTwin study zero-success tasks.",
+    "18 suite skips cover optional labtasker, opt-in Docker integration, and a CUDA-only check; 21 GPU tests deselected."
+  ],
+  "publication": {
+    "pushed": false,
+    "pull_request_created": false
+  },
+  "artifacts": {
+    "robocasa-half-turn.patch": "071d968c42c75ed9f145e3965a24731cccd4a97f4f9d378846b3344e95070961",
+    "regression-before.log": "f86f3e471172062e6dced14a91865078231f45db948a62a1c6559f1932f12796",
+    "make-all.log": "63480cbc2ab20497221f0ddb2835ac86c68ee464d5d668e5778722bf39577ded",
+    "cpu-test-environment.txt": "9343dec93df779504e993167af1502249ef1d988aa363e0622eeb75eb7d3085b",
+    "pr-description.txt": "ca8a07ebef43aa54347ca447de847a1210bcb7d1ae1fd736ac1455fc3c7d56bf"
+  }
+}

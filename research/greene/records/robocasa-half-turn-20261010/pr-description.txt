@@ -1,0 +1,5 @@
+The absolute EEF-pose to RoboCasa command helpers currently return a zero rotation for an exact 180-degree orientation change. Near a half turn the same skew-only extraction also underestimates the rotation. Both exported EEF10 and legacy EEF20 helpers are affected.
+
+Reuse the existing NumPy quaternion-based conversion to recover the half-turn axis. Position/controller scaling, gripper/base commands, and clipping behavior remain covered by regression tests. This does not change the native delta-action RoboCasa365 adapter or RoboTwin evaluation.
+
+Validation: the new tests fail 15 cases on base 4d7f642b and pass all 22 after the fix; make all passes (repository lint and 2047 CPU tests, 18 skipped, 21 deselected). Tests cover principal/oblique half turns, near-pi relative rotations, clipping, ordinary random rotations, and both exported helpers. No GPU experiment was run.

@@ -1,0 +1,59 @@
+Result=success
+ExecMainExitTimestamp=Sun 2026-10-11 01:38:46 CDT
+ExecMainStatus=0
+
+NEXT                         LEFT LAST                         PASSED UNIT                                         ACTIVATES
+Sun 2026-10-11 02:08:46 CDT 29min Sun 2026-10-11 01:38:45 CDT 25s ago openwam-rae-factorial-monitor-20261010.timer openwam-rae-factorial-monitor-20261010.service
+
+1 timers listed.
+
+{
+  "checked_at": "2026-10-11T06:38:46.021039+00:00",
+  "alerts": [],
+  "gpu": {
+    "returncode": 0,
+    "stdout": "1, GPU-f77a93d8-04eb-226f-b3a6-5d51e8441d72, 90519 MiB, 100 %\n2, GPU-96123909-6676-60d1-629f-74efe5f66706, 90517 MiB, 100 %",
+    "stderr": ""
+  },
+  "remaining_hours": 29.236105266944445,
+  "services": {
+    "openwam-rae-factorial-gpu1-20261010.service": {
+      "systemd": {
+        "MainPID": "2113325",
+        "Result": "success",
+        "ActiveState": "active",
+        "SubState": "running"
+      },
+      "phase": "waiting_for_free_gpu"
+    },
+    "openwam-rae-factorial-gpu2-20261010.service": {
+      "systemd": {
+        "MainPID": "2113410",
+        "Result": "success",
+        "ActiveState": "active",
+        "SubState": "running"
+      },
+      "phase": "waiting_for_free_gpu"
+    },
+    "openwam-rae-factorial-post-gpu1-20261010.service": {
+      "systemd": {
+        "MainPID": "3370297",
+        "Result": "success",
+        "ActiveState": "active",
+        "SubState": "running"
+      },
+      "phase": "waiting_for_training"
+    },
+    "openwam-rae-factorial-post-gpu2-20261010.service": {
+      "systemd": {
+        "MainPID": "3370362",
+        "Result": "success",
+        "ActiveState": "active",
+        "SubState": "running"
+      },
+      "phase": "waiting_for_training"
+    }
+  },
+  "record_path": "/home/zifanz4/openwam-runtime/rae-factorial-20261010/monitor/latest.json",
+  "chat_notifications_available": false
+}

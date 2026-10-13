@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "variant": "svae48_native",
+  "seed": 44,
+  "steps": 20000,
+  "checkpoint": "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/runs/svae48_native-seed44/checkpoint_step_20000.safetensors",
+  "checkpoint_sha256": "2e7e8443b0a48b6fb74a9c6ba96d6b62a1e3938c8569bd6af26339dad043f1e9",
+  "strict_reload": true,
+  "final_dev_action_loss": 0.02038218225722094,
+  "final_dev_video_loss": 0.13667668998870988,
+  "resumed_from_step": 0,
+  "peak_gib": 16.375507831573486,
+  "seconds": 5194.130622236989,
+  "training_seconds": 5134.889949769131,
+  "policy_success_claim": false
+}

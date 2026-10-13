@@ -1,0 +1,29 @@
+{
+  "files": {
+    "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/study_queue.py": "bf46d0cfb89d8b2a5b408e9b1e2a303777189b64576430561f73f3e72b899067",
+    "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/launch.py": "7670c9de1fff1ec34043560aed063275431348c2b5a787b0d7b51fb1844d2a1f",
+    "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/orchestrate.py": "2b64b3a5b03ff2010b1f6a291b0e24a89fc698cc1ce89dbbfdd790045ff340e9",
+    "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/collect.py": "e5b9acf1957920dc15051ec040940eace89421c8b0c980c5c6b1e10d4ecb574e",
+    "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/prepare.py": "5d68f74d496abe3242ab8b69aa4bb7e0751eef814050fecfb3e4d7dfbde7e61e",
+    "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/common.py": "289d8b19e104b145ce986cb825e6d8713dd9d3127ded590b72a6478ce98ee437",
+    "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/train.py": "0e7c18649817aa36bcb767b7e9aba07024c0880f2fe46d7dbf91e375e40cded2",
+    "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/pipeline.py": "97d34c4015cfd07a8d2d3e55d4318b0912638814ebfaa228ffa8387b6adf80ea",
+    "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/evaluate.py": "32736aa2a76b8d27f764204e4c87ff49c3363bc050bc4287ff68a09de1fa03f5",
+    "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/evaluate_policy.py": "f9b65ef3123373d29d18918087decea514e3a483ee535cd7f4482394c14efdc6",
+    "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/serve_policy.py": "736e6ccbc7dd749bb961b85671b91fd93cc157ae7daec8205837d2f770c71425",
+    "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/simulation_smoke.py": "1983b90cd95685070bfb29daca26cb0b02d89e9a31c2fe4c554d78441822a410",
+    "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/collect_scene.py": "f71efc2b6ab94d926ec1ace41c6824422dd159eeb1727c0e7178c5808b75b491",
+    "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/migration_render.py": "4862317b457a0c0a8480086ee6156f9d65cc941348d92310b828c5f59a829bb6",
+    "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/protocol.json": "578a4c1d1bc4e5af3db308b5a9a9703b02dddee6f8040e9971e30315d0dd8b3f",
+    "/home/zifanz4/openwam-runtime/rae-policy-expanded-20261006/eval-protocol.json": "93f590d3a97a1156f373a4f46a38b38def043c2efda3a23825dacec30f802685",
+    "/home/zifanz4/openwam-rae-research/openwam/model/video_backbone/wan/models/dit.py": "8c3a7c2792446e2238d67afb8c97abe6d86cb14867cd7f36cf1edb3573087cf0",
+    "/home/zifanz4/openwam-rae-research/openwam/model/video_backbone/wan/models/rae_head.py": "b48899e847d5dc63b87d3b9e584395111c82d5aa3659ca0f5484de3a55b48bad",
+    "/home/zifanz4/openwam-rae-research/openwam/model/video_backbone/wan/reinit.py": "7be636e87f7df9b329fa1cd7409f7231fe6a2874a146616bde8d5dd27b56a1b4",
+    "/home/zifanz4/openwam-rae-research/openwam/model/video_backbone/wan_backbone.py": "b961d7d8367572c1db9b165f41f4d23f56163546d1259e653c887936b7b7638f",
+    "/home/zifanz4/openwam-rae-research/tests/test_rae_wide_head.py": "acfe6ad0a9e1cdcb838ddf05326ed35890865f41d3204e6af97808e1168c1bb9"
+  },
+  "created": "2026-10-06T13:56:50.149425-05:00",
+  "local_source_commit": "e983676",
+  "upstream_base": "1204dde1b9e9c232131fc99a3f2c6b78330e7f64",
+  "public_push": false
+}

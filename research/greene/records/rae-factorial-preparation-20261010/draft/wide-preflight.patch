@@ -1,0 +1,11 @@
+--- a/train.py
++++ b/train.py
+@@ -104,7 +104,7 @@
+                         last_grad[name] = float(param.grad.float().norm())
+             assert last_grad.get('action'), 'No action gradient'
+             assert last_grad['video_backbone.dit.patch_embedding.weight'] > 0
+-            if a.variant == 'raw768_wide':
++            if getattr(model.video_backbone.dit, 'rae_head', None) is not None:
+                 assert last_grad['video_backbone.dit.rae_head.raw_projection.weight'] > 0
+                 assert all(p.grad is None for p in model.video_backbone.dit.head.parameters())
+         grad = torch.nn.utils.clip_grad_norm_(params, 1., error_if_nonfinite=True)

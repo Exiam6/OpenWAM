@@ -1,3 +1,49 @@
+# RAE 偏移结果更正：旧曲线混入训练权重（2026-10-10）
+
+**当前结论：撤回旧文“shift 16.43 全面劣化约 1.7 倍”“shift 5 接近最优”“调 shift 路线已关闭”的判断。尚未证明任何 RAE 改动提高 RoboTwin 成功率。**
+
+本次仅用已有曲线和冻结调度器做 CPU 重算，没有重新训练或推理。原始文件、SHA256 和全部数值见 [审计记录](records/rae-shift-weight-audit-20261010/corrected-curves.json)。下方 10-03 正文保留为历史记录，其机制解释和建议已被本节替代。
+
+## 更正依据
+
+旧 `eval_sigma_curve.py` 固定了每个臂的近邻 sigma 索引，却仍调用 native `compute_loss` 的加权 video loss。其训练权重为 `exp(-2*((1000*sigma-500)/1000)**2)`，减去本网格最小值后，除以本网格均值。不同 shift 使用不同网格，归一化常数不同。**同一 sigma 的权重并不相同**。
+
+每个曲线点的 60 个窗口都使用同一索引，且 `lambda_video=1`，因此可将保存的平均 loss 除以该索引的训练权重，恢复未加权平均 MSE。脚本逐点检查索引、旧浮点边界、sigma、权重；不对随机 sigma 混合的整段训练 loss 做此除法。
+
+| 目标 sigma | seed42 旧 loss 比值 | 权重比值 | seed42 MSE 比值 | seed43 MSE 比值 |
+| --- | --- | --- | --- | --- |
+| 0.10 | 1.7399 | 1.7094 | 1.0178 | 1.0176 |
+| 0.30 | 1.6866 | 1.6516 | 1.0212 | 1.0218 |
+| 0.50 | 1.6901 | 1.6662 | 1.0144 | 1.0159 |
+| 0.70 | 1.6830 | 1.6681 | 1.0089 | 1.0101 |
+| 0.90 | 1.6707 | 1.6664 | 1.0026 | 1.0045 |
+| 0.99 | 1.6590 | 1.6642 | 0.9969 | 0.9999 |
+
+比值均为 shift16.4317 / shift5。两个种子共 22 个点，去权重后为 0.99685–1.02177，原来的约 1.7 倍差距主要是指标缩放。仍保留原始近邻网格最大约 0.00372 的 sigma 失配和 BF16 舍入；没有逐窗口历史结果，无法补算配对置信区间。微小高噪声优势不能当成可靠收益。
+
+## 同时撤回的机制推断
+
+旧文的 91.1 来自逐通道方差的 participation ratio，忽略跨通道协方差，并非旋转不变的协方差有效秩；不能据此证明论文中的维度必须替换为 91，也不能推出 5.66 或 5.0 最优。RAE 论文还指出高维高斯噪声下的宽度瓶颈，并组合使用宽头与维度相关偏移；我们先前只在窄头上单独测试偏移。参见 [RAE 原论文 §4–5](https://arxiv.org/html/2510.11690v1)。这只是下一步实验的依据，不是机器人收益证据。
+
+## 修正后的评估工具
+
+[eval_sigma_curve_v2.py](cross-cluster/eval_sigma_curve_v2.py) 为每臂设置相同 sigma 和单位 video 权重，保留原始训练代码、首帧/填充掩码、独立 action scheduler。输出记录实际模型 dtype 下的 sigma/timestep、逐窗口/逐噪声 draw、来源哈希；action loss 明确标作训练加权量。三个噪声 draw 不是三个独立演示。工具受 study 原有 pause/deadline guard 约束；当前仅通过 CPU 测试，尚未在 checkpoint 上执行。
+
+复算命令（仅 CPU，路径相对于仓库根目录）：
+
+```bash
+python research/greene/cross-cluster/audit_sigma_weights.py \
+  --curves research/greene/records/rae-shift-weight-audit-20261010/originals \
+  --scheduler research/greene/records/rae-shift-weight-audit-20261010/originals/flow_match.py \
+  --output /tmp/rae-corrected-curves.json
+```
+
+后续闭环方案见 [实验计划最新增补](EXPERIMENT_PLAN.md#2026-10-10-rae-宽头与偏移联合验证草案未启动)。
+
+---
+
+## 以下为 2026-10-03 历史原文（结论已撤回）
+
 # RAE 偏移实验结果：处方不能按名义维度套用
 
 日期：2026-10-03。研究：`rae-shift-20261003`。状态：**已实测**。

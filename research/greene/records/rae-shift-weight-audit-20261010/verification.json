@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-10",
+  "scope": "CPU algebra and synthetic native-loss tests only",
+  "no_experiment_started": true,
+  "python": "3.12.3",
+  "torch": "2.14.1+cpu",
+  "source_host": "shenlong-gpu-02.cs.illinois.edu",
+  "verified_sources": [
+    {
+      "remote": "/home/zifanz4/openwam-runtime/curve-raw768_native-seed42.json",
+      "local": "research/greene/records/rae-shift-weight-audit-20261010/originals/curve-raw768_native-seed42.json",
+      "sha256": "57301f11e7f9929c423d2f710e615949270642b83447299004497e82f3a2f7e6"
+    },
+    {
+      "remote": "/home/zifanz4/openwam-runtime/curve-raw768_native-seed43.json",
+      "local": "research/greene/records/rae-shift-weight-audit-20261010/originals/curve-raw768_native-seed43.json",
+      "sha256": "5f8455495471fe02657c8c4469a493c583fe92b2212d559492724fd6c6d3a95d"
+    },
+    {
+      "remote": "/home/zifanz4/openwam-runtime/curve-raw768_shift16-seed42.json",
+      "local": "research/greene/records/rae-shift-weight-audit-20261010/originals/curve-raw768_shift16-seed42.json",
+      "sha256": "02cdca7df6433f0e707f2e56dbff760c77115aed0e7caffbad8b0f7e27f0dba0"
+    },
+    {
+      "remote": "/home/zifanz4/openwam-runtime/curve-raw768_shift16-seed43.json",
+      "local": "research/greene/records/rae-shift-weight-audit-20261010/originals/curve-raw768_shift16-seed43.json",
+      "sha256": "b7e41254a7d4b55187d13dc6919dcad5e66a2967db72efcdfa24588a17fe3c02"
+    },
+    {
+      "remote": "/home/zifanz4/openwam-runtime/rae-shift-20261003/common.py",
+      "local": "research/greene/records/rae-shift-weight-audit-20261010/originals/common.py",
+      "sha256": "289d8b19e104b145ce986cb825e6d8713dd9d3127ded590b72a6478ce98ee437"
+    },
+    {
+      "remote": "/home/zifanz4/openwam-rae-research/openwam/model/video_backbone/wan/shared/diffusion/flow_match.py",
+      "local": "research/greene/records/rae-shift-weight-audit-20261010/originals/flow_match.py",
+      "sha256": "aacfac9bb614fed6cc142a8a90eab0fce54c4dbf8efec8b3c37a73d8b4756201"
+    }
+  ],
+  "tests": {
+    "command": "python -m pytest tests/test_rae_sigma_metrics.py -q",
+    "passed": 15,
+    "log": "cpu-tests.log"
+  },
+  "lint": "ruff check and format checks passed for the three new scripts and test file",
+  "limits": [
+    "No checkpoint inference has validated eval_sigma_curve_v2 yet.",
+    "No new RoboTwin closed-loop success evidence.",
+    "Original curves retain nearest-grid sigma and BF16 rounding differences.",
+    "Per-window original losses were not retained; uncertainty cannot be reconstructed."
+  ],
+  "artifact_sha256": {
+    "research/greene/records/rae-shift-weight-audit-20261010/corrected-curves.json": "2901e3b93aba93d9d7f7d048e1ed4a437d25ab212cd5f00cc1e627c0e3c4a057",
+    "research/greene/records/rae-shift-weight-audit-20261010/cpu-tests.log": "b78728d1174d7fa5a28274d20baef723db7afdbc399e87aa34a13f1f725d961d",
+    "research/greene/cross-cluster/sigma_metrics.py": "78ad0052a47b48ab569403e5312a67666c8f9942d3121a19d9a4314026a9d428",
+    "research/greene/cross-cluster/audit_sigma_weights.py": "353dc1862de561e81a668e14d9449bba15d5c0cad5e589209204fdcb195761c9",
+    "research/greene/cross-cluster/eval_sigma_curve_v2.py": "0e75ba1698bf62372e1c3265f94cb98f97a517832960fb8bce5570c6ab0b5753",
+    "tests/test_rae_sigma_metrics.py": "6d5602d33ecbd7e98b3ee9f4b9d3e27fa7d8eac9ab421459c6967ef9eb92c947"
+  }
+}

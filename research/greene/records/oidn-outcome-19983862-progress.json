@@ -4,23 +4,73 @@
  "job": 19983862,
  "slurm": [
   "RUNNING",
-  "00:10:05",
+  "00:20:08",
   "gl010"
  ],
  "tasks": {
   "handover_block": {
-   "completed": 0,
-   "successes": 0,
-   "scenes": [],
+   "completed": 7,
+   "successes": 7,
+   "scenes": [
+    {
+     "scene_seed": 1101000,
+     "success": true,
+     "steps": 281,
+     "initial_render_mae_max": 0.5732,
+     "action_seed": 3797595328
+    },
+    {
+     "scene_seed": 1101001,
+     "success": true,
+     "steps": 290,
+     "initial_render_mae_max": 0.5957,
+     "action_seed": 3862900371
+    },
+    {
+     "scene_seed": 1101002,
+     "success": true,
+     "steps": 305,
+     "initial_render_mae_max": 0.5833,
+     "action_seed": 250471019
+    },
+    {
+     "scene_seed": 1101003,
+     "success": true,
+     "steps": 295,
+     "initial_render_mae_max": 0.5698,
+     "action_seed": 1219133474
+    },
+    {
+     "scene_seed": 1101004,
+     "success": true,
+     "steps": 335,
+     "initial_render_mae_max": 0.5206,
+     "action_seed": 1126427600
+    },
+    {
+     "scene_seed": 1101005,
+     "success": true,
+     "steps": 288,
+     "initial_render_mae_max": 0.566,
+     "action_seed": 2389364362
+    },
+    {
+     "scene_seed": 1101006,
+     "success": true,
+     "steps": 330,
+     "initial_render_mae_max": 0.513,
+     "action_seed": 3540750946
+    }
+   ],
    "run_log_tail": [
-    "step: \u001b[92m142 / 800\u001b[0m",
-    "step: \u001b[92m143 / 800\u001b[0m",
-    "step: \u001b[92m144 / 800\u001b[0m",
-    "step: \u001b[92m145 / 800\u001b[0m",
-    "step: \u001b[92m146 / 800\u001b[0m",
-    "step: \u001b[92m147 / 800\u001b[0m",
-    "step: \u001b[92m148 / 800\u001b[0m",
-    "step: \u001b[92m149 / 800\u001b[0m"
+    "step: \u001b[92m118 / 800\u001b[0m",
+    "step: \u001b[92m119 / 800\u001b[0m",
+    "step: \u001b[92m120 / 800\u001b[0m",
+    "step: \u001b[92m121 / 800\u001b[0m",
+    "step: \u001b[92m122 / 800\u001b[0m",
+    "step: \u001b[92m123 / 800\u001b[0m",
+    "step: \u001b[92m124 / 800\u001b[0m",
+    "step: \u001b[92m125 / 800\u001b[0m"
    ]
   }
  },
@@ -40,5 +90,5 @@
    "place_object_basket": "0/19"
   }
  },
- "updated": "2026-10-15T17:43:56-04:00"
+ "updated": "2026-10-15T17:53:59-04:00"
 }

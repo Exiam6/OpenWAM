@@ -8,7 +8,7 @@
 #SBATCH --time=02:00:00
 #SBATCH --output=/scratch/zz4330/openwam-runtime/logs/%x.%j.out
 # oidn-outcome-20261004 (TORCH_TASK_20261004.md): official checkpoint, same serving as 18771822,
-# adjust_bottle x 20 clean scenes only, simulator with OIDN 2.3.3 preloaded (variant C). Finite; no retry.
+# adjust_bottle x 20 clean scenes by default (override OPENWAM_TASKS=a,b for the follow-up), simulator with OIDN 2.3.3 preloaded (variant C). Finite; no retry.
 set -euo pipefail
 export TZ="America/New_York"
 RUNTIME=/scratch/zz4330/openwam-runtime
@@ -18,7 +18,7 @@ export TMPDIR="${RUNTIME}/tmp" HF_HOME=/scratch/zz4330/hf_cache
 export TORCH_EXTENSIONS_DIR="${RUNTIME}/cache/torch_extensions" TRITON_CACHE_DIR="${OPENWAM_RUN_DIR}/triton"
 export OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 MKL_NUM_THREADS=4
 export CUDA_HOME=/scratch/zz4330/conda/envs/cuda-12.4
-export OPENWAM_TASKS=adjust_bottle OPENWAM_SIM_OIDN_LIB=${RUNTIME}/downloads/oidn-2.3.3.x86_64.linux/lib
+export OPENWAM_TASKS=${OPENWAM_TASKS:-adjust_bottle} OPENWAM_SIM_OIDN_LIB=${RUNTIME}/downloads/oidn-2.3.3.x86_64.linux/lib
 echo "node $(hostname) job ${SLURM_JOB_ID} start $(date -Is) run ${OPENWAM_RUN_DIR}"
 nvidia-smi --query-gpu=name,uuid,pci.bus_id,memory.total --format=csv
 cd /scratch/zz4330/OpenWAM/research/greene/baseline-official/scripts

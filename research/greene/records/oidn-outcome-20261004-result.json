@@ -1,0 +1,495 @@
+{
+ "record": "oidn-outcome-20261004-result",
+ "task": "oidn-outcome-20261004",
+ "spec": "research/greene/TORCH_TASK_20261004.md",
+ "job": 19874615,
+ "node": "gl022",
+ "gpu": "L40S sm_89",
+ "start": "2026-10-15T02:59:42-04:00",
+ "end": "2026-10-15T03:23:16-04:00",
+ "elapsed": "00:23:34",
+ "exit": 0,
+ "runner_commit": "83f6ebc",
+ "checkpoint": "/scratch/zz4330/OpenWAM/assets/openwam_ckpt/openwam_alpha/OpenWAM-Alpha-Sim-RoboTwin-Full/checkpoint_step_118655.safetensors",
+ "sim_oidn_lib": "/scratch/zz4330/openwam-runtime/downloads/oidn-2.3.3.x86_64.linux/lib",
+ "code_sha256": {
+  "/scratch/zz4330/OpenWAM/research/greene/baseline-official/scripts/collect_scene.py": "f71efc2b6ab94d926ec1ace41c6824422dd159eeb1727c0e7178c5808b75b491",
+  "/scratch/zz4330/OpenWAM/research/greene/baseline-official/scripts/evaluate_policy.py": "1f24e1cae22c2c96831b12a4804382cf1c4d87b800229caf647d62dd59ccdd72",
+  "/scratch/zz4330/OpenWAM/research/greene/baseline-official/scripts/migration_render.py": "399be93982f219302362fef7e7e473772c55e57945f28d7505fa5b123b84a4dc",
+  "/scratch/zz4330/OpenWAM/research/greene/baseline-official/scripts/run_baseline.py": "9a5d222b8b5fbaa1914300c7f261a34256544b71ec92f457cbba26d86c236d4f",
+  "/scratch/zz4330/OpenWAM/research/greene/baseline-official/scripts/serve_policy.py": "6eb70f4d2e5b25ebdea2a4a9928272e8a3e965e05ab28db98a288db849beac35",
+  "/scratch/zz4330/OpenWAM/research/greene/baseline-official/scripts/simulation_preflight.py": "23a23b3e2cba213d9b2dd7e547f9aec07a7fc87267d5a4b3d6eddf098ec44600",
+  "/scratch/zz4330/OpenWAM/research/greene/baseline-official/protocol.json": "16a30a2ddafe984084c125d77a8f40f3ef813e80f16117805dba9e72731a1569"
+ },
+ "run_dir": "openwam-runtime/runs/oidn-outcome-19874615 (Torch-local)",
+ "treatment_check": "closed-loop initial_render_mae (three-camera max) equals variant C render-only MAE (job 19114636) on 20/20 scenes to 4 decimals; median 0.5371 vs 18771822 baseline 0.1020",
+ "result": {
+  "episodes": 20,
+  "successes": 20,
+  "technical_failures": 0
+ },
+ "predicted_failures": [
+  1100000,
+  1100001,
+  1100010,
+  1100012,
+  1100014,
+  1100015,
+  1100020
+ ],
+ "predicted_failures_observed": 0,
+ "borderline_failures_observed": 0,
+ "baseline_18771822": {
+  "adjust_bottle_successes": 20,
+  "median_steps": 118
+ },
+ "median_steps": 120,
+ "verdict": "third row of TORCH_TASK_20261004 §1 table: no drop (20/20). OIDN 2.3.3 render divergence alone does NOT reproduce the Shenlong collapse on adjust_bottle; the prediction (failures in the 7 high-MAE scenes) is refuted 0/7.",
+ "scope_limits": [
+  "adjust_bottle only (n=20); handover_block and place_object_basket not run under 2.3.3",
+  "single action seed per scene (same SeedSequence as 18771822)",
+  "L40S sm_89, not Blackwell"
+ ],
+ "scenes": [
+  {
+   "scene_seed": 1100000,
+   "success": true,
+   "steps": 132,
+   "initial_render_mae": {
+    "head_camera": 0.5543142361111111,
+    "left_camera": 0.3364496527777778,
+    "right_camera": 0.35671440972222224
+   },
+   "initial_render_mae_max": 0.5543,
+   "variant_C_render_only_mae": 0.5543,
+   "action_seed": 1359648228,
+   "job": 19874615,
+   "predicted_failure": true,
+   "borderline": false,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 131,
+    "initial_render_mae_max": 0.0885,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100001,
+   "success": true,
+   "steps": 125,
+   "initial_render_mae": {
+    "head_camera": 0.5342795138888888,
+    "left_camera": 0.33719618055555556,
+    "right_camera": 0.3671875
+   },
+   "initial_render_mae_max": 0.5343,
+   "variant_C_render_only_mae": 0.5343,
+   "action_seed": 2308489948,
+   "job": 19874615,
+   "predicted_failure": true,
+   "borderline": false,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 129,
+    "initial_render_mae_max": 0.0972,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100002,
+   "success": true,
+   "steps": 115,
+   "initial_render_mae": {
+    "head_camera": 0.5513758680555556,
+    "left_camera": 0.3325954861111111,
+    "right_camera": 0.3621875
+   },
+   "initial_render_mae_max": 0.5514,
+   "variant_C_render_only_mae": 0.5514,
+   "action_seed": 1374605361,
+   "job": 19874615,
+   "predicted_failure": false,
+   "borderline": false,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 116,
+    "initial_render_mae_max": 0.1017,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100003,
+   "success": true,
+   "steps": 111,
+   "initial_render_mae": {
+    "head_camera": 0.5401128472222222,
+    "left_camera": 0.3332638888888889,
+    "right_camera": 0.361796875
+   },
+   "initial_render_mae_max": 0.5401,
+   "variant_C_render_only_mae": 0.5401,
+   "action_seed": 2852580684,
+   "job": 19874615,
+   "predicted_failure": false,
+   "borderline": false,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 112,
+    "initial_render_mae_max": 0.1088,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100004,
+   "success": true,
+   "steps": 131,
+   "initial_render_mae": {
+    "head_camera": 0.5371484375,
+    "left_camera": 0.3365451388888889,
+    "right_camera": 0.3610199652777778
+   },
+   "initial_render_mae_max": 0.5371,
+   "variant_C_render_only_mae": 0.5371,
+   "action_seed": 415491684,
+   "job": 19874615,
+   "predicted_failure": false,
+   "borderline": true,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 132,
+    "initial_render_mae_max": 0.1066,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100005,
+   "success": true,
+   "steps": 117,
+   "initial_render_mae": {
+    "head_camera": 0.5368619791666667,
+    "left_camera": 0.34065972222222224,
+    "right_camera": 0.3619835069444444
+   },
+   "initial_render_mae_max": 0.5369,
+   "variant_C_render_only_mae": 0.5369,
+   "action_seed": 4048949079,
+   "job": 19874615,
+   "predicted_failure": false,
+   "borderline": true,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 118,
+    "initial_render_mae_max": 0.0958,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100008,
+   "success": true,
+   "steps": 120,
+   "initial_render_mae": {
+    "head_camera": 0.5202039930555555,
+    "left_camera": 0.33837239583333334,
+    "right_camera": 0.37138020833333335
+   },
+   "initial_render_mae_max": 0.5202,
+   "variant_C_render_only_mae": 0.5202,
+   "action_seed": 1032774825,
+   "job": 19874615,
+   "predicted_failure": false,
+   "borderline": false,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 118,
+    "initial_render_mae_max": 0.0873,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100009,
+   "success": true,
+   "steps": 119,
+   "initial_render_mae": {
+    "head_camera": 0.5134027777777778,
+    "left_camera": 0.33698784722222225,
+    "right_camera": 0.37069444444444444
+   },
+   "initial_render_mae_max": 0.5134,
+   "variant_C_render_only_mae": 0.5134,
+   "action_seed": 1418887734,
+   "job": 19874615,
+   "predicted_failure": false,
+   "borderline": false,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 112,
+    "initial_render_mae_max": 0.0765,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100010,
+   "success": true,
+   "steps": 130,
+   "initial_render_mae": {
+    "head_camera": 0.5606163194444445,
+    "left_camera": 0.3323697916666667,
+    "right_camera": 0.3561501736111111
+   },
+   "initial_render_mae_max": 0.5606,
+   "variant_C_render_only_mae": 0.5606,
+   "action_seed": 1446525377,
+   "job": 19874615,
+   "predicted_failure": true,
+   "borderline": false,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 133,
+    "initial_render_mae_max": 0.1003,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100012,
+   "success": true,
+   "steps": 115,
+   "initial_render_mae": {
+    "head_camera": 0.5669053819444444,
+    "left_camera": 0.3352864583333333,
+    "right_camera": 0.36085069444444445
+   },
+   "initial_render_mae_max": 0.5669,
+   "variant_C_render_only_mae": 0.5669,
+   "action_seed": 1967406898,
+   "job": 19874615,
+   "predicted_failure": true,
+   "borderline": false,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 114,
+    "initial_render_mae_max": 0.1054,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100013,
+   "success": true,
+   "steps": 114,
+   "initial_render_mae": {
+    "head_camera": 0.5162109375,
+    "left_camera": 0.33362413194444446,
+    "right_camera": 0.3620486111111111
+   },
+   "initial_render_mae_max": 0.5162,
+   "variant_C_render_only_mae": 0.5162,
+   "action_seed": 300605398,
+   "job": 19874615,
+   "predicted_failure": false,
+   "borderline": false,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 112,
+    "initial_render_mae_max": 0.0999,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100014,
+   "success": true,
+   "steps": 123,
+   "initial_render_mae": {
+    "head_camera": 0.5655685763888889,
+    "left_camera": 0.33694444444444444,
+    "right_camera": 0.35717447916666667
+   },
+   "initial_render_mae_max": 0.5656,
+   "variant_C_render_only_mae": 0.5656,
+   "action_seed": 3389258946,
+   "job": 19874615,
+   "predicted_failure": true,
+   "borderline": false,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 130,
+    "initial_render_mae_max": 0.1022,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100015,
+   "success": true,
+   "steps": 130,
+   "initial_render_mae": {
+    "head_camera": 0.5606380208333334,
+    "left_camera": 0.33639756944444443,
+    "right_camera": 0.3587673611111111
+   },
+   "initial_render_mae_max": 0.5606,
+   "variant_C_render_only_mae": 0.5606,
+   "action_seed": 2375484930,
+   "job": 19874615,
+   "predicted_failure": true,
+   "borderline": false,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 130,
+    "initial_render_mae_max": 0.1196,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100016,
+   "success": true,
+   "steps": 158,
+   "initial_render_mae": {
+    "head_camera": 0.5291276041666667,
+    "left_camera": 0.3453949652777778,
+    "right_camera": 0.3637326388888889
+   },
+   "initial_render_mae_max": 0.5291,
+   "variant_C_render_only_mae": 0.5291,
+   "action_seed": 2679776094,
+   "job": 19874615,
+   "predicted_failure": false,
+   "borderline": true,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 143,
+    "initial_render_mae_max": 0.0961,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100017,
+   "success": true,
+   "steps": 111,
+   "initial_render_mae": {
+    "head_camera": 0.5361284722222223,
+    "left_camera": 0.33736979166666664,
+    "right_camera": 0.35908854166666665
+   },
+   "initial_render_mae_max": 0.5361,
+   "variant_C_render_only_mae": 0.5361,
+   "action_seed": 1763221701,
+   "job": 19874615,
+   "predicted_failure": false,
+   "borderline": false,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 111,
+    "initial_render_mae_max": 0.0959,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100018,
+   "success": true,
+   "steps": 111,
+   "initial_render_mae": {
+    "head_camera": 0.5168098958333334,
+    "left_camera": 0.33157118055555557,
+    "right_camera": 0.36157552083333333
+   },
+   "initial_render_mae_max": 0.5168,
+   "variant_C_render_only_mae": 0.5168,
+   "action_seed": 2637319065,
+   "job": 19874615,
+   "predicted_failure": false,
+   "borderline": false,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 113,
+    "initial_render_mae_max": 0.1137,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100019,
+   "success": true,
+   "steps": 116,
+   "initial_render_mae": {
+    "head_camera": 0.5231467013888889,
+    "left_camera": 0.3355859375,
+    "right_camera": 0.36102430555555554
+   },
+   "initial_render_mae_max": 0.5231,
+   "variant_C_render_only_mae": 0.5231,
+   "action_seed": 2790153730,
+   "job": 19874615,
+   "predicted_failure": false,
+   "borderline": false,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 112,
+    "initial_render_mae_max": 0.1063,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100020,
+   "success": true,
+   "steps": 141,
+   "initial_render_mae": {
+    "head_camera": 0.5561154513888888,
+    "left_camera": 0.3318272569444444,
+    "right_camera": 0.3643576388888889
+   },
+   "initial_render_mae_max": 0.5561,
+   "variant_C_render_only_mae": 0.5561,
+   "action_seed": 309574359,
+   "job": 19874615,
+   "predicted_failure": true,
+   "borderline": false,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 130,
+    "initial_render_mae_max": 0.121,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100021,
+   "success": true,
+   "steps": 115,
+   "initial_render_mae": {
+    "head_camera": 0.51109375,
+    "left_camera": 0.3377821180555556,
+    "right_camera": 0.3639453125
+   },
+   "initial_render_mae_max": 0.5111,
+   "variant_C_render_only_mae": 0.5111,
+   "action_seed": 3244807489,
+   "job": 19874615,
+   "predicted_failure": false,
+   "borderline": false,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 111,
+    "initial_render_mae_max": 0.1037,
+    "same_action_seed": true
+   }
+  },
+  {
+   "scene_seed": 1100022,
+   "success": true,
+   "steps": 122,
+   "initial_render_mae": {
+    "head_camera": 0.5508680555555555,
+    "left_camera": 0.333046875,
+    "right_camera": 0.3598220486111111
+   },
+   "initial_render_mae_max": 0.5509,
+   "variant_C_render_only_mae": 0.5509,
+   "action_seed": 2917430716,
+   "job": 19874615,
+   "predicted_failure": false,
+   "borderline": true,
+   "baseline_18771822": {
+    "success": true,
+    "steps": 123,
+    "initial_render_mae_max": 0.1112,
+    "same_action_seed": true
+   }
+  }
+ ]
+}

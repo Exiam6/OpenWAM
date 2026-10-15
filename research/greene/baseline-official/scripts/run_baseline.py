@@ -35,11 +35,14 @@ def main():
   local=Path(file.replace('/data02/zifanz4/openwam-experiments/',str(ASSETS)+'/'));assert sha(local)==want,local;files[str(local)]=want
  write(out/'cohort-integrity.json',{'passed':True,'time':now(),'source':str(COHORT),'files_sha256':files})
  code={str(p):sha(p) for p in sorted(SCRIPT.glob('*.py'))+[B/'protocol.json']}
- write(out/'run-record.json',{'time':now(),'host':socket.gethostname(),'slurm_job':os.environ.get('SLURM_JOB_ID'),'checkpoint':str(CKPT),'checkpoint_bytes':CKPT.stat().st_size,'code_sha256':code,'protocol':protocol})
+ write(out/'run-record.json',{'time':now(),'host':socket.gethostname(),'slurm_job':os.environ.get('SLURM_JOB_ID'),'checkpoint':str(CKPT),'checkpoint_bytes':CKPT.stat().st_size,'code_sha256':code,'protocol':protocol,'tasks_override':os.environ.get('OPENWAM_TASKS'),'sim_oidn_lib':os.environ.get('OPENWAM_SIM_OIDN_LIB')})
  pci=subprocess.check_output(['nvidia-smi','--query-gpu=pci.bus_id','--format=csv,noheader'],text=True).strip().splitlines();assert len(pci)==1,pci
  port=19400+int(os.environ.get('SLURM_JOB_ID','0'))%500;probe=socket.socket();probe.bind(('127.0.0.1',port));probe.close()
  env=dict(os.environ,PYTHONPATH=str(REPO),HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',TOKENIZERS_PARALLELISM='false',WANDB_MODE='disabled')
  sim=dict(env,EXPECTED_RENDER_PCI=pci[0],WAM_ROOT=str(RUNTIME),ROBOTWIN_PATH=str(RUNTIME/'benchmarks/RoboTwin'),ROBOTWIN_RUNTIME_ROOT=str(out/'runtime'),ROBOTWIN_ENABLE_PLANNER_FALLBACK='1');sim.pop('PYTHONPATH',None)
+ # Optional (oidn-outcome-20261004): preload another OIDN into the simulator only; unset = the 18771822 setup.
+ oidn=os.environ.get('OPENWAM_SIM_OIDN_LIB')
+ if oidn:sim.update(LD_PRELOAD=oidn+'/libOpenImageDenoise.so.2',LD_LIBRARY_PATH=oidn+(':'+sim['LD_LIBRARY_PATH'] if sim.get('LD_LIBRARY_PATH') else ''))
  with (out/'server.log').open('x') as f:
   server=subprocess.Popen([POLICY_PY,'-u',str(SCRIPT/'serve_policy.py'),'--checkpoint',str(CKPT),'--port',str(port),'--log',str(out/'episode-rng.jsonl')],env=env,cwd=REPO,stdout=f,stderr=subprocess.STDOUT,start_new_session=True)
   begin=time.monotonic()
@@ -51,7 +54,8 @@ def main():
    result=json.loads((smoke/'result.json').read_text());assert result['passed'] and result['tasks'][0]['full_development_rollout']['completed']
    write(out/'simulation-preflight-official-42.json',{'passed':True,'time':now(),'checkpoint':str(CKPT),'development_result':str(smoke/'result.json'),'code_sha256':code})
    summaries={}
-   for task in protocol['evaluation']['tasks']:
+   tasks=[t for t in protocol['evaluation']['tasks'] if t in os.environ.get('OPENWAM_TASKS','').split(',')] if os.environ.get('OPENWAM_TASKS') else protocol['evaluation']['tasks'];assert tasks
+   for task in tasks:
     manifest=json.loads((ASSETS/'temporal-20260926/scenes'/task/'manifest.json').read_text());seeds=[int(x['seed']) for x in manifest['accepted']];assert len(seeds)==20
     dest=out/task/'clean';dest.mkdir(parents=True,exist_ok=False)
     child([BENCH_PY,'-u',str(SCRIPT/'evaluate_policy.py'),'--scene-seeds',json.dumps(seeds),'--task',task,'--route','official','--seed','42','--condition','clean','--port',str(port),'--output',str(dest)],sim,dest/'run.log',20*660)

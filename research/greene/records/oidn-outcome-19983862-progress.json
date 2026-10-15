@@ -3,14 +3,14 @@
  "task": "oidn-outcome-20261004 follow-up (handover_block + place_object_basket, OIDN 2.3.3)",
  "job": 19983862,
  "slurm": [
-  "RUNNING",
-  "00:30:11",
+  "COMPLETED",
+  "00:37:39",
   "gl010"
  ],
  "tasks": {
   "handover_block": {
-   "completed": 14,
-   "successes": 14,
+   "completed": 20,
+   "successes": 20,
    "scenes": [
     {
      "scene_seed": 1101000,
@@ -109,25 +109,72 @@
      "steps": 286,
      "initial_render_mae_max": 0.5648,
      "action_seed": 2918927568
+    },
+    {
+     "scene_seed": 1101014,
+     "success": true,
+     "steps": 282,
+     "initial_render_mae_max": 0.5729,
+     "action_seed": 3160696511
+    },
+    {
+     "scene_seed": 1101015,
+     "success": true,
+     "steps": 270,
+     "initial_render_mae_max": 0.5679,
+     "action_seed": 3929137703
+    },
+    {
+     "scene_seed": 1101016,
+     "success": true,
+     "steps": 298,
+     "initial_render_mae_max": 0.5418,
+     "action_seed": 2902997395
+    },
+    {
+     "scene_seed": 1101017,
+     "success": true,
+     "steps": 318,
+     "initial_render_mae_max": 0.529,
+     "action_seed": 1856839976
+    },
+    {
+     "scene_seed": 1101018,
+     "success": true,
+     "steps": 277,
+     "initial_render_mae_max": 0.5746,
+     "action_seed": 3282159928
+    },
+    {
+     "scene_seed": 1101019,
+     "success": true,
+     "steps": 296,
+     "initial_render_mae_max": 0.5952,
+     "action_seed": 1868114600
     }
    ],
    "run_log_tail": [
-    "step: \u001b[92m185 / 800\u001b[0m",
-    "step: \u001b[92m186 / 800\u001b[0m",
-    "step: \u001b[92m187 / 800\u001b[0m",
-    "step: \u001b[92m188 / 800\u001b[0m",
-    "step: \u001b[92m189 / 800\u001b[0m",
-    "step: \u001b[92m190 / 800\u001b[0m",
-    "step: \u001b[92m191 / 800\u001b[0m",
-    "step: \u001b[92m192 / 800\u001b[0m"
+    "step: \u001b[92m290 / 800\u001b[0m",
+    "step: \u001b[92m291 / 800\u001b[0m",
+    "step: \u001b[92m292 / 800\u001b[0m",
+    "step: \u001b[92m293 / 800\u001b[0m",
+    "step: \u001b[92m294 / 800\u001b[0m",
+    "step: \u001b[92m295 / 800\u001b[0m",
+    "step: \u001b[92m296 / 800\u001b[0m",
+    "{\"scene_seed\": 1101019, \"training_seed\": 42, \"route\": \"official\", \"task\": \"handover_block\", \"condition\": \"clean\", \"status\": \"complete\", \"initial_render_mae\": {\"head_camera\": 0.5735416666666666, \"left_camera\": 0.5951822916666667, \"right_camera\": 0.4207942708333333}, \"initial_state\": \"4a00e9ac808c38cd02334e9b28d5f2c59d775c4b243d8cae7d78ae7721ba0d43\", \"step_limit\": 800, \"instruction\": \"Use the left arm to grab the red block, transfer it to the right hand, and set it onto the blue pad.\", \"success\": true, \"steps\": 296, \"seconds\": 84.29431972187012, \"action_seed\": 1868114600}"
    ]
   }
  },
- "exit": null,
+ "exit": {
+  "returncode": 0,
+  "time": "2026-10-15T18:11:29-04:00"
+ },
  "slurm_log_tail": [
   "node gl010.hpc.nyu.edu job 19983862 start 2026-10-15T17:33:52-04:00 run /scratch/zz4330/openwam-runtime/runs/oidn-outcome-19983862",
   "name, uuid, pci.bus_id, memory.total [MiB]",
-  "NVIDIA L40S, GPU-7dd70219-44c3-4a16-c811-debe5d025de4, 00000000:59:00.0, 46068 MiB"
+  "NVIDIA L40S, GPU-7dd70219-44c3-4a16-c811-debe5d025de4, 00000000:59:00.0, 46068 MiB",
+  "handover_block {'episodes': 20, 'successes': 20, 'technical_failures': 0, 'complete': True}",
+  "finished 2026-10-15T18:11:29-04:00 exit 0"
  ],
  "compare": {
   "18771822_oidn_2.0.1": {
@@ -139,5 +186,5 @@
    "place_object_basket": "0/19"
   }
  },
- "updated": "2026-10-15T18:04:02-04:00"
+ "updated": "2026-10-15T18:15:04-04:00"
 }

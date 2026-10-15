@@ -1,0 +1,44 @@
+{
+ "record": "oidn-outcome-19983862-progress",
+ "task": "oidn-outcome-20261004 follow-up (handover_block + place_object_basket, OIDN 2.3.3)",
+ "job": 19983862,
+ "slurm": [
+  "RUNNING",
+  "00:09:51",
+  "gl010"
+ ],
+ "tasks": {
+  "handover_block": {
+   "completed": 0,
+   "successes": 0,
+   "scenes": [],
+   "run_log_tail": [
+    "step: \u001b[92m80 / 800\u001b[0m",
+    "step: \u001b[92m81 / 800\u001b[0m",
+    "step: \u001b[92m82 / 800\u001b[0m",
+    "step: \u001b[92m83 / 800\u001b[0m",
+    "step: \u001b[92m84 / 800\u001b[0m",
+    "step: \u001b[92m85 / 800\u001b[0m",
+    "step: \u001b[92m86 / 800\u001b[0m",
+    "step: \u001b[92m87 / 800\u001b[0m"
+   ]
+  }
+ },
+ "exit": null,
+ "slurm_log_tail": [
+  "node gl010.hpc.nyu.edu job 19983862 start 2026-10-15T17:33:52-04:00 run /scratch/zz4330/openwam-runtime/runs/oidn-outcome-19983862",
+  "name, uuid, pci.bus_id, memory.total [MiB]",
+  "NVIDIA L40S, GPU-7dd70219-44c3-4a16-c811-debe5d025de4, 00000000:59:00.0, 46068 MiB"
+ ],
+ "compare": {
+  "18771822_oidn_2.0.1": {
+   "handover_block": "20/20",
+   "place_object_basket": "18/20"
+  },
+  "shenlong_oidn_2.3.3": {
+   "handover_block": "1/20",
+   "place_object_basket": "0/19"
+  }
+ },
+ "updated": "2026-10-15T17:43:42-04:00"
+}

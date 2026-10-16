@@ -1,0 +1,25 @@
+{
+ "record": "oidn-outcome-20017996-progress",
+ "task": "oidn-outcome-20261004 follow-up (handover_block + place_object_basket, OIDN 2.3.3)",
+ "job": 20017996,
+ "slurm": [
+  "PENDING",
+  "00:00:00",
+  "None",
+  "assigned"
+ ],
+ "tasks": {},
+ "exit": null,
+ "slurm_log_tail": [],
+ "compare": {
+  "18771822_oidn_2.0.1": {
+   "handover_block": "20/20",
+   "place_object_basket": "18/20"
+  },
+  "shenlong_oidn_2.3.3": {
+   "handover_block": "1/20",
+   "place_object_basket": "0/19"
+  }
+ },
+ "updated": "2026-10-16T01:35:22-04:00"
+}

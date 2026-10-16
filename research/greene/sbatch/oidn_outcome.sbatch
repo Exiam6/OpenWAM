@@ -8,7 +8,7 @@
 #SBATCH --time=02:00:00
 #SBATCH --output=/scratch/zz4330/openwam-runtime/logs/%x.%j.out
 # oidn-outcome-20261004 (TORCH_TASK_20261004.md): official checkpoint, same serving as 18771822,
-# adjust_bottle x 20 clean scenes by default (override OPENWAM_TASKS=a,b for the follow-up), simulator with OIDN 2.3.3 preloaded (variant C). Finite; no retry.
+# adjust_bottle x 20 clean scenes by default (override OPENWAM_TASKS=<one task> per job: a comma inside sbatch --export is a variable separator, so OPENWAM_TASKS=a,b silently runs only a — 19983862 lost place_object_basket this way), simulator with OIDN 2.3.3 preloaded (variant C). Finite; no retry.
 set -euo pipefail
 export TZ="America/New_York"
 RUNTIME=/scratch/zz4330/openwam-runtime

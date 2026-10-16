@@ -3,14 +3,17 @@
  "task": "oidn-outcome-20261004 follow-up (handover_block + place_object_basket, OIDN 2.3.3)",
  "job": 20017996,
  "slurm": [
-  "PENDING",
-  "00:00:00",
-  "None",
-  "assigned"
+  "RUNNING",
+  "00:02:09",
+  "gl013"
  ],
  "tasks": {},
  "exit": null,
- "slurm_log_tail": [],
+ "slurm_log_tail": [
+  "node gl013.hpc.nyu.edu job 20017996 start 2026-10-16T02:03:18-04:00 run /scratch/zz4330/openwam-runtime/runs/oidn-outcome-20017996",
+  "name, uuid, pci.bus_id, memory.total [MiB]",
+  "NVIDIA L40S, GPU-20f7ef1d-e4cb-abb3-865b-b8f57bb3885d, 00000000:59:00.0, 46068 MiB"
+ ],
  "compare": {
   "18771822_oidn_2.0.1": {
    "handover_block": "20/20",
@@ -21,5 +24,5 @@
    "place_object_basket": "0/19"
   }
  },
- "updated": "2026-10-16T01:35:22-04:00"
+ "updated": "2026-10-16T02:05:26-04:00"
 }

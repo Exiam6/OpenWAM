@@ -4,10 +4,26 @@
  "job": 20017996,
  "slurm": [
   "RUNNING",
-  "00:02:09",
+  "00:12:13",
   "gl013"
  ],
- "tasks": {},
+ "tasks": {
+  "place_object_basket": {
+   "completed": 0,
+   "successes": 0,
+   "scenes": [],
+   "run_log_tail": [
+    "step: \u001b[92m537 / 700\u001b[0m",
+    "step: \u001b[92m538 / 700\u001b[0m",
+    "step: \u001b[92m539 / 700\u001b[0m",
+    "step: \u001b[92m540 / 700\u001b[0m",
+    "step: \u001b[92m541 / 700\u001b[0m",
+    "step: \u001b[92m542 / 700\u001b[0m",
+    "step: \u001b[92m543 / 700\u001b[0m",
+    "step: \u001b[92m544 / 700\u001b[0m"
+   ]
+  }
+ },
  "exit": null,
  "slurm_log_tail": [
   "node gl013.hpc.nyu.edu job 20017996 start 2026-10-16T02:03:18-04:00 run /scratch/zz4330/openwam-runtime/runs/oidn-outcome-20017996",
@@ -24,5 +40,5 @@
    "place_object_basket": "0/19"
   }
  },
- "updated": "2026-10-16T02:05:26-04:00"
+ "updated": "2026-10-16T02:15:30-04:00"
 }

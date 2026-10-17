@@ -1,0 +1,214 @@
+{
+  "route": "raw768_native",
+  "training_seed": 42,
+  "task": "adjust_bottle",
+  "scenes": 20,
+  "gpu02_successes": 11,
+  "gpu01_successes": 10,
+  "scene_agreement": 17,
+  "initial_state_identical": true,
+  "action_seed_identical": true,
+  "rows": [
+    {
+      "scene_seed": 1100000,
+      "gpu02_success": false,
+      "gpu02_steps": 400,
+      "gpu01_success": true,
+      "gpu01_steps": 178,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100001,
+      "gpu02_success": false,
+      "gpu02_steps": 400,
+      "gpu01_success": false,
+      "gpu01_steps": 400,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100002,
+      "gpu02_success": true,
+      "gpu02_steps": 177,
+      "gpu01_success": true,
+      "gpu01_steps": 177,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100003,
+      "gpu02_success": false,
+      "gpu02_steps": 400,
+      "gpu01_success": false,
+      "gpu01_steps": 400,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100004,
+      "gpu02_success": false,
+      "gpu02_steps": 400,
+      "gpu01_success": false,
+      "gpu01_steps": 400,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100005,
+      "gpu02_success": false,
+      "gpu02_steps": 400,
+      "gpu01_success": false,
+      "gpu01_steps": 400,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100008,
+      "gpu02_success": true,
+      "gpu02_steps": 177,
+      "gpu01_success": true,
+      "gpu01_steps": 179,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100009,
+      "gpu02_success": true,
+      "gpu02_steps": 183,
+      "gpu01_success": true,
+      "gpu01_steps": 185,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100010,
+      "gpu02_success": true,
+      "gpu02_steps": 179,
+      "gpu01_success": false,
+      "gpu01_steps": 400,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100012,
+      "gpu02_success": false,
+      "gpu02_steps": 400,
+      "gpu01_success": false,
+      "gpu01_steps": 400,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100013,
+      "gpu02_success": true,
+      "gpu02_steps": 171,
+      "gpu01_success": true,
+      "gpu01_steps": 171,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100014,
+      "gpu02_success": true,
+      "gpu02_steps": 163,
+      "gpu01_success": true,
+      "gpu01_steps": 169,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100015,
+      "gpu02_success": false,
+      "gpu02_steps": 400,
+      "gpu01_success": false,
+      "gpu01_steps": 400,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100016,
+      "gpu02_success": false,
+      "gpu02_steps": 400,
+      "gpu01_success": false,
+      "gpu01_steps": 400,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100017,
+      "gpu02_success": true,
+      "gpu02_steps": 169,
+      "gpu01_success": true,
+      "gpu01_steps": 169,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100018,
+      "gpu02_success": true,
+      "gpu02_steps": 177,
+      "gpu01_success": true,
+      "gpu01_steps": 177,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100019,
+      "gpu02_success": true,
+      "gpu02_steps": 185,
+      "gpu01_success": true,
+      "gpu01_steps": 177,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100020,
+      "gpu02_success": false,
+      "gpu02_steps": 400,
+      "gpu01_success": false,
+      "gpu01_steps": 400,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100021,
+      "gpu02_success": true,
+      "gpu02_steps": 177,
+      "gpu01_success": true,
+      "gpu01_steps": 177,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    },
+    {
+      "scene_seed": 1100022,
+      "gpu02_success": true,
+      "gpu02_steps": 172,
+      "gpu01_success": false,
+      "gpu01_steps": 400,
+      "gpu01_status": "complete",
+      "initial_state_identical": true,
+      "action_seed_identical": true
+    }
+  ],
+  "note": "Same checkpoint, scenes, server settings and per-episode RNG seeds as ex2 on gpu-02; GPU kernels differ by host so bitwise identity is not expected."
+}

@@ -398,6 +398,9 @@ def main():
         dict(id="H2", parent="Q3", title="H2 ex2-b: wide head on fresh scenes", text=h2_state[1], state=h2_state[0], href="h2"),
         dict(id="H3A", parent="H2", title="H3a ex3-b: wide vs native at shift16", text=h3a_state[1], state=h3a_state[0], href="h3"),
         dict(id="H3B", parent="H1", title="H3b ex3-b: shift16 vs 5 under wide head", text=h3b_state[1], state=h3b_state[0], href="h3"),
+        dict(id="CON", parent="Q", title="ex3 conclusion", text=("all 4 contrasts undecided; stop shift/wide-head at this scale" if summary and summary.get("complete") else "pending"), state=("done" if summary and summary.get("complete") else "wait"), href="conclusion"),
+        dict(id="DIAG", parent="EX0", title="Diagnostics (σ curve, post-hoc)", text="wide head: video MSE ↓ up to 4×; success unchanged", state=("done" if (REC / "ex3-sigma-curve-diagnostic-20261017.json").exists() else "wait"), href="diag"),
+        dict(id="Q5", parent="Q", title="Why are two tasks at zero?", text="official 20/20, 18/20; ours 0/60 every arm; needs user decision", state="wait", href="conclusion"),
         dict(id="Q4", parent="Q", title="Missing control: Wan-VAE latent arm", text="not started; needs user decision", state="wait", href="vae"),
     ]
 
@@ -488,6 +491,30 @@ def main():
         "<p>Three seeds were trained at shift 16.4317 (4,000 steps, 66 demos) and read as 1.7× worse video loss at every σ. The 2026-10-10 audit showed the old evaluator kept each arm's training loss weights, which differ by shift; dividing them out leaves the unweighted MSE ratios below. The 'shift path is closed' conclusion was retracted; closed-loop success (H1) is the remaining test.</p>"
         + shift_table + "<p>Limits recorded with the audit: " + "; ".join(esc(x) for x in load(REC / "rae-shift-weight-audit-20261010/corrected-curves.json")["limits"]) + "</p>"
         + sources_html([str(REC / "rae-shift-weight-audit-20261010/corrected-curves.json"), str(G / "RAE_SHIFT_RESULT.md")])))
+    concl = (HERE.parent.parent / "factorial" / "CONCLUSION_ex3_20261017.md")
+    selfc = (HERE.parent.parent / "factorial" / "SELF_CHECK_ex3_20261017.md")
+    if concl.exists():
+        SOURCES.append(str(concl))
+        views.append(dict(id="conclusion", title="Conclusion (scoped, EXPERIMENT_PROTOCOL rule 27)", html="<pre style='white-space:pre-wrap;font-size:.85rem'>" + esc(concl.read_text()) + "</pre>" + dl("media/CONCLUSION_ex3_20261017.md", "CONCLUSION_ex3_20261017.md")))
+        (MEDIA / "CONCLUSION_ex3_20261017.md").write_text(concl.read_text()); media["media/CONCLUSION_ex3_20261017.md"] = str(MEDIA / "CONCLUSION_ex3_20261017.md")
+    if selfc.exists():
+        SOURCES.append(str(selfc))
+        views.append(dict(id="selfcheck", title="Self-check against research_lab TOP_PRIORITY", html="<pre style='white-space:pre-wrap;font-size:.85rem'>" + esc(selfc.read_text()) + "</pre>" + dl("media/SELF_CHECK_ex3_20261017.md", "SELF_CHECK_ex3_20261017.md")))
+        (MEDIA / "SELF_CHECK_ex3_20261017.md").write_text(selfc.read_text()); media["media/SELF_CHECK_ex3_20261017.md"] = str(MEDIA / "SELF_CHECK_ex3_20261017.md")
+    diag = load(REC / "ex3-sigma-curve-diagnostic-20261017.json")
+    if diag:
+        arms4 = list(diag["arms"])
+        sig = list(diag["arms"][arms4[0]]["42"]["curve"])
+        rows = [[s] + [" / ".join(f"{diag['arms'][a][sd]['curve'][s]:.3f}" for sd in ["42", "43", "44"]) for a in arms4] for s in sig]
+        post = load(REC / "ex3-adjust-bottle-posthoc-20261017.json")
+        prow = [[k, f"{100*c['difference']:+.1f} pp", f"[{100*c['ci95'][0]:+.1f}, {100*c['ci95'][1]:+.1f}]", c["discordant_candidate_only"], c["discordant_baseline_only"]] for k, c in post["contrasts"].items()] if post else []
+        views.append(dict(id="diag", title="Diagnostics (not success claims)", html=
+            "<h3>Unweighted video MSE at shared noise level σ (seeds 42 / 43 / 44)</h3><p>Registered as a diagnostic only. The wide head lowers video error up to about 4× and shift 16.43 trades low-noise for high-noise fit; closed-loop success did not move.</p>"
+            + table(["σ"] + [esc(ARM_LABEL[a]) for a in arms4], rows) + dl("media/ex3-sigma-curve-diagnostic-20261017.json", "ex3-sigma-curve-diagnostic-20261017.json")
+            + "<h3>Post-hoc adjust_bottle-only intervals (NOT registered; shows the detectable effect size)</h3>"
+            + table(["contrast", "adjust_bottle Δ", "bootstrap 95 %", "scene×seed pairs candidate-only", "baseline-only"], prow)))
+        import shutil
+        shutil.copy2(REC / "ex3-sigma-curve-diagnostic-20261017.json", MEDIA / "ex3-sigma-curve-diagnostic-20261017.json"); media["media/ex3-sigma-curve-diagnostic-20261017.json"] = str(MEDIA / "ex3-sigma-curve-diagnostic-20261017.json")
     views.append(dict(id="vae", title="Missing control: Wan-VAE 48-dim latent arm (not started)", html=
         "<p>RAE's claim is 'representation autoencoder instead of VAE'. Every arm so far is DINOv3-based; the VAE-latent arm with the same backbone, steps, data and seeds has not been run. Proposed on 2026-10-02 (stage 2) and 2026-10-07 (official-standard recipe); waiting for the user's decision. Estimated 3 trainings × ~1 h plus 3 evaluation cells.</p>"))
 
@@ -507,6 +534,7 @@ def main():
         + table(["arm", "state", "fresh scenes: adjust_bottle / handover_block / place_object_basket", "earlier reading"], comp_rows)
         + f"<p><b>Now:</b> {done_train}/6 ex3 trainings complete; {len(recs)}/900 evaluation attempts recorded; "
         + ("final scoring done." if summary and summary.get("complete") else "final scoring pending.") + f" Deadline 2026-10-18 12:00 CDT. Host shenlong-gpu-01, 8 GPUs. Page generated {now.strftime('%Y-%m-%d %H:%M')} CDT from run files.</p>"
+        + ("<p><b>Verdict (registered criterion ±5 pp with 95 % interval excluding 0):</b> all four single-variable contrasts are <b>undecided</b>; noise shift +1.1 pp, wide head −1.7 pp, interaction none detected. Every arm scored 0 on handover_block and place_object_basket. <a href='#conclusion'>Conclusion</a> · <a href='#diag'>diagnostics</a> · <a href='#selfcheck'>self-check</a>.</p>" if summary and summary.get("complete") else "")
         + "<p><b>Known gaps:</b> two tasks were at 0 for every arm in ex2; no Wan-VAE control arm yet; 3 seeds only. <a href='#plan'>Registered plan</a> · <a href='#base'>evaluation baseline</a>.</p>")
 
     # ---- data files for download

@@ -37,6 +37,18 @@
  "media/svae48_native__handover_block__median__s43_scene6201010.mp4": "2228846:1792236522",
  "media/svae48_native__place_object_basket__failure__s44_scene6202006.mp4": "2069364:1792236524",
  "media/svae48_native__place_object_basket__median__s43_scene6202002.mp4": "1943536:1792236527",
- "media/PLAN_ex3_20261017.md": "9245:1792236527",
- "media/success-summary.json": "117518:1792236527"
+ "media/PLAN_ex3_20261017.md": "9245:1792240634",
+ "media/success-summary.json": "159032:1792240634",
+ "media/raw768_native__place_object_basket__failure__s44_scene6202033.mp4": "1293023:1792240615",
+ "media/raw768_native__place_object_basket__median__s43_scene6202017.mp4": "2299410:1792240617",
+ "media/raw768_native_shift16__place_object_basket__failure__s44_scene6202033.mp4": "1872781:1792240619",
+ "media/raw768_native_shift16__place_object_basket__median__s43_scene6202017.mp4": "2254596:1792240622",
+ "media/raw768_wide__place_object_basket__failure__s44_scene6202033.mp4": "1288623:1792240624",
+ "media/raw768_wide__place_object_basket__median__s43_scene6202017.mp4": "2420759:1792240626",
+ "media/raw768_wide_shift16__place_object_basket__failure__s44_scene6202033.mp4": "1234656:1792240628",
+ "media/svae48_native__place_object_basket__failure__s44_scene6202033.mp4": "3019771:1792240631",
+ "media/svae48_native__place_object_basket__median__s43_scene6202017.mp4": "3971241:1792240634",
+ "media/CONCLUSION_ex3_20261017.md": "4726:1792240634",
+ "media/SELF_CHECK_ex3_20261017.md": "7813:1792240634",
+ "media/ex3-sigma-curve-diagnostic-20261017.json": "6411:1792240509"
 }

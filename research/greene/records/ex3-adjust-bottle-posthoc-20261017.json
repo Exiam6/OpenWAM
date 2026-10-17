@@ -1,0 +1,71 @@
+{
+ "label": "POST-HOC, not registered: adjust_bottle-only paired difference with scene-cluster bootstrap (10000 draws, seed 20261010); shown only to state the detectable effect size, never as a verdict.",
+ "contrasts": {
+  "H1_shift16": {
+   "candidate": "raw768_native_shift16",
+   "baseline": "raw768_native",
+   "difference": 0.03333333333333333,
+   "ci95": [
+    -0.1,
+    0.16666666666666666
+   ],
+   "discordant_candidate_only": 9,
+   "discordant_baseline_only": 7
+  },
+  "H2_widehead": {
+   "candidate": "raw768_wide",
+   "baseline": "raw768_native",
+   "difference": -0.05,
+   "ci95": [
+    -0.15,
+    0.05
+   ],
+   "discordant_candidate_only": 5,
+   "discordant_baseline_only": 8
+  },
+  "H3a": {
+   "candidate": "raw768_wide_shift16",
+   "baseline": "raw768_native_shift16",
+   "difference": -0.03333333333333333,
+   "ci95": [
+    -0.11666666666666667,
+    0.05
+   ],
+   "discordant_candidate_only": 5,
+   "discordant_baseline_only": 7
+  },
+  "H3b": {
+   "candidate": "raw768_wide_shift16",
+   "baseline": "raw768_wide",
+   "difference": 0.05,
+   "ci95": [
+    -0.06666666666666667,
+    0.16666666666666666
+   ],
+   "discordant_candidate_only": 8,
+   "discordant_baseline_only": 5
+  },
+  "C": {
+   "candidate": "raw768_wide_shift16",
+   "baseline": "raw768_native",
+   "difference": 0.0,
+   "ci95": [
+    -0.1,
+    0.1
+   ],
+   "discordant_candidate_only": 8,
+   "discordant_baseline_only": 8
+  },
+  "S": {
+   "candidate": "svae48_native",
+   "baseline": "raw768_native",
+   "difference": -0.05,
+   "ci95": [
+    -0.21666666666666667,
+    0.13333333333333333
+   ],
+   "discordant_candidate_only": 10,
+   "discordant_baseline_only": 13
+  }
+ }
+}

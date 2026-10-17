@@ -1,0 +1,63 @@
+{
+  "applied_at": "2026-10-17T07:03:39.940849+00:00",
+  "host": "shenlong-gpu-01",
+  "policy": {
+    "host": "shenlong-gpu-01",
+    "timezone": "America/Chicago",
+    "start_hour": 0,
+    "end_hour": 24,
+    "baseline_gpus": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "gpus": {
+      "0": "GPU-17946a0e-e66f-0783-2b57-bf39896fc81e",
+      "1": "GPU-89770bc8-d310-99d8-b3a4-d2b14c93d1a9",
+      "2": "GPU-5588ad46-6e71-bb2c-8f18-80b2e7a14b5e",
+      "3": "GPU-6cddff6e-dafd-6282-972c-024127fe311c",
+      "4": "GPU-4076aefe-7b64-d6e7-8069-d8417062412b",
+      "5": "GPU-ac2ae835-5adb-b321-a466-abd4b289fbb1",
+      "6": "GPU-6af5942c-08a9-5f63-a74b-73083e2f5af6",
+      "7": "GPU-787d15bd-c813-1c42-dd1d-2006123777d5"
+    },
+    "idle_only": false,
+    "allow_shared": true,
+    "shared_max_utilization_percent": 30,
+    "shared_min_free_mib": 40000,
+    "user_message": "明天中午12点前 这些卡全都可以用 充分利用 最大化gpu 自主推进 利用率低的也可以用 / gpu01类似的也可以",
+    "recorded_at": "2026-10-17T07:03:39.934041+00:00",
+    "study_deadline": "2026-10-18T17:00:00+00:00",
+    "max_attempt_cleanup_margin_seconds": 120,
+    "launcher": "setsid-nohup"
+  },
+  "deadline": "2026-10-18T17:00:00+00:00",
+  "changed_files": {
+    "protocol.json": "8510e24f1fc1ee277ecdc1386cce95eff4f89776de843ca34956d29da4738f70",
+    "resource-policy.json": "65bf56cb609b43b9750fca50326dabc14af9639db7a5cb08723e4d3a82d5ceb6",
+    "worker.py": "4bd66ce950679c67b21eeaef93847cf0cc8bd939b894d68c60037049b45c8c39",
+    "monitor.py": "e88e2cd7cac427b02454297f3665d2f359c16939c1323de0d1bb6a54fc5b2ac1",
+    "evaluate_policy.py": "101aa0dc33802e8f5820bba97cd214b95e6238a2497229bb0cc9768f6db6f048",
+    "score.py": "2275f3182cc83d459d2614e38d8ed8f12875b824832847b5f6f6ee6998e871b4"
+  },
+  "archived": "/home/zifanz4/openwam-runtime/rae-factorial-20261010/resource-amendment-20261017-gpu01",
+  "gpu02_preflight_moved": true,
+  "scientific_fields_unchanged": [
+    "tasks",
+    "variants",
+    "evaluation_variants",
+    "seeds",
+    "steps",
+    "training",
+    "head",
+    "data",
+    "episodes",
+    "evaluation",
+    "automatic_retries"
+  ]
+}

@@ -22,6 +22,17 @@ from eval_policy_wrapper import bootstrap_robotwin_module  # noqa: E402
 
 mod = bootstrap_robotwin_module()
 configure_robot_paths()
+if os.environ.get("REPLAY_PLANNER") == "mplib":
+    # Force RoboTwin's planner fallback (mplib) by making cuRobo construction fail; diagnostic only.
+    from envs.robot import planner as _planner_mod
+    def _no_curobo(self, *a, **k):
+        raise RuntimeError("cuRobo disabled for ex4 planner comparison")
+    _planner_mod.CuroboPlanner.__init__ = _no_curobo
+    _orig_mplib_plan = _planner_mod.MplibPlanner.plan_path
+    def _mplib_plan(self, now_qpos, target_pose, *a, constraint_pose=None, **k):
+        return _orig_mplib_plan(self, now_qpos, target_pose, *a, **k)
+    _planner_mod.MplibPlanner.plan_path = _mplib_plan
+    print("REPLAY_PLANNER=mplib: cuRobo disabled", flush=True)
 import openwam2robotwin_interface as interface  # noqa: E402
 import yaml  # noqa: E402
 from execution_trace import track_execution  # noqa: E402
@@ -61,14 +72,59 @@ def main():
             limit = int(env.step_lim)
             row["step_limit"] = limit
             planner = []
+            comp = np.zeros(6)
+            tcp_log = []
+            joint_log = []
+            last_plan = {}
+            if os.environ.get("REPLAY_JOINTS"):
+                _orig_lpp = env.robot.left_plan_path
+                def _lpp(*a, **k):
+                    r = _orig_lpp(*a, **k)
+                    last_plan["left"] = (np.asarray(r["position"])[-1] if r.get("status") == "Success" else None)
+                    return r
+                env.robot.left_plan_path = _lpp
+            prop_log = []
+            if os.environ.get("REPLAY_TCP"):
+                _orig_step = Scene.step
+                def _logged_step(scene, *a, **k):
+                    v = _orig_step(scene, *a, **k)
+                    if scene is env.scene:
+                        lp = env.robot.get_left_tcp_pose(); rp = env.robot.get_right_tcp_pose()
+                        tcp_log.append([env.take_action_cnt] + list(lp[:3]) + list(rp[:3]))
+                    return v
+                Scene.step = _logged_step
             with track_execution(env, Scene) as ex:
                 for t in range(1, len(prop)):
                     before = len(ex["planner_calls"])
-                    env.take_action(conv.eef20d_to_ee16d(np.asarray(prop[t], dtype=np.float64)), action_type="ee")
+                    target = np.asarray(prop[t], dtype=np.float64).copy()
+                    if os.environ.get("REPLAY_COMPENSATE"):
+                        # diagnostic only: shift position targets by the last measured target-vs-reached offset
+                        target[0:3] += comp[0:3]; target[10:13] += comp[3:6]
+                    env.take_action(conv.eef20d_to_ee16d(target), action_type="ee")
+                    if os.environ.get("REPLAY_COMPENSATE"):
+                        now = np.asarray(interface._extract_eef_proprio(env.get_obs()), dtype=np.float64)
+                        comp = comp + np.concatenate([prop[t][0:3] - now[0:3], prop[t][10:13] - now[10:13]])
+                    if os.environ.get("REPLAY_FRAMES"):
+                        from PIL import Image
+                        fd = out / "frames" / st["id"]; fd.mkdir(parents=True, exist_ok=True)
+                        o = env.get_obs()["observation"]
+                        Image.fromarray(np.concatenate([o["head_camera"]["rgb"], o["left_camera"]["rgb"], o["right_camera"]["rgb"]], axis=1)).save(fd / f"{t:04d}.jpg", quality=85)
                     calls = ex["planner_calls"][before:]
+                    if os.environ.get("REPLAY_JOINTS"):
+                        jl = np.asarray(env.robot.get_left_arm_jointState(), dtype=np.float64)
+                        plan_end = last_plan.get("left")
+                        joint_log.append(dict(step=t, actual=jl.tolist(), planned_end=(plan_end.tolist() if plan_end is not None else None)))
+                    if os.environ.get("REPLAY_PROPRIO"):
+                        prop_log.append(np.asarray(interface._extract_eef_proprio(env.get_obs()), dtype=np.float64))
                     planner.append({c["side"]: c.get("status", "EXC") for c in calls})
                     if env.eval_success:
                         break
+            if joint_log:
+                (out / f"{st['id']}-joints.json").write_text(json.dumps(joint_log))
+            if prop_log:
+                np.save(out / f"{st['id']}-proprio.npy", np.asarray(prop_log))
+            if tcp_log:
+                np.save(out / f"{st['id']}-tcp.npy", np.asarray(tcp_log, dtype=np.float64))
             reached = np.asarray(interface._extract_eef_proprio(env.get_obs()))
             row.update(success=bool(env.eval_success), check_success=bool(env.check_success()), steps=int(env.take_action_cnt),
                        physics_ticks=int(ex["physics_ticks"]),

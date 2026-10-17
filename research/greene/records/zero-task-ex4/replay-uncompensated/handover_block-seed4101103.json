@@ -1,0 +1,18 @@
+{
+  "id": "handover_block-seed4101103",
+  "task": "handover_block",
+  "seed": 4101103,
+  "demo_frames": 282,
+  "initial_proprio_max_abs_diff": 0.0,
+  "step_limit": 800,
+  "success": false,
+  "check_success": false,
+  "steps": 281,
+  "physics_ticks": 18314,
+  "left_fail": 0,
+  "right_fail": 0,
+  "first_fail_step": null,
+  "final_pos_err_left": 0.0021134717389941216,
+  "final_pos_err_right": 0.004435188602656126,
+  "seconds": 50.0
+}

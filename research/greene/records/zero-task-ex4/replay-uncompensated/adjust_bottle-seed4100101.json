@@ -1,0 +1,18 @@
+{
+  "id": "adjust_bottle-seed4100101",
+  "task": "adjust_bottle",
+  "seed": 4100101,
+  "demo_frames": 136,
+  "initial_proprio_max_abs_diff": 0.0,
+  "step_limit": 400,
+  "success": true,
+  "check_success": true,
+  "steps": 111,
+  "physics_ticks": 8092,
+  "left_fail": 0,
+  "right_fail": 0,
+  "first_fail_step": null,
+  "final_pos_err_left": 0.0021139199379831553,
+  "final_pos_err_right": 0.00716488528996706,
+  "seconds": 30.1
+}

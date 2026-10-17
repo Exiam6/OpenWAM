@@ -269,6 +269,28 @@ def render_block():
     return ref
 
 
+def replication_block():
+    rows, summaries = [], []
+    for tag, label in [("", "run 1"), ("-repeat2", "run 2 (same host repeat)")]:
+        c = load(R / "controls" / f"replicate-raw768_native-s42-adjust_bottle-gpu01{tag}" / "comparison.json")
+        if c:
+            summaries.append((label, c))
+    if not summaries:
+        return None, "<p class='muted'>Running.</p>"
+    first = summaries[0][1]
+    head = ["scene", "gpu-02 (ex2)"] + [f"gpu-01 {l}" for l, _ in summaries]
+    bys = [{r["scene_seed"]: r for r in c["rows"]} for _, c in summaries]
+    for r in first["rows"]:
+        cells = [r["scene_seed"], f"{'success' if r['gpu02_success'] else 'fail'} ({r['gpu02_steps']})"]
+        for b in bys:
+            x = b.get(r["scene_seed"])
+            cells.append(f"{'success' if x['gpu01_success'] else 'fail'} ({x['gpu01_steps']})" if x else "—")
+        rows.append(cells)
+    stats = [[l, c["gpu02_successes"], c["gpu01_successes"], f"{c['scene_agreement']} / {c['scenes']}", "yes" if c["initial_state_identical"] else "no", "yes" if c["action_seed_identical"] else "no"] for l, c in summaries]
+    return summaries, (table(["gpu-01 run", "gpu-02 successes / 20", "gpu-01 successes / 20", "scenes with the same outcome", "initial state identical", "episode RNG seed identical"], stats)
+                       + "<p>Per scene (success or failure, actions used out of 400):</p>" + table(head, rows))
+
+
 def ex1_numbers():
     text = (G / "EXPERIMENT_PLAN.md").read_text()
     SOURCES.append(str(G / "EXPERIMENT_PLAN.md"))
@@ -356,6 +378,7 @@ def main():
     (rmin, rmax), shift_table = shift_block()
     render_ref = render_block()
     ex1_rows = ex1_numbers()
+    rep_summaries, rep_html = replication_block()
     base_state = ("done", "20 scenes × 3 tasks frozen") if all(r[3] == "complete" for r in srows) else (("run", "screening candidates") if any(r[3] == "in progress" for r in srows) else ("wait", "screening after training"))
 
     tree = [
@@ -367,6 +390,7 @@ def main():
         dict(id="EX1", parent="Q1", title="ex1: 66 demos, 4k steps", text=" · ".join(r[1] for r in ex1_rows) + " (native · wide · S-VAE)", state="done", href="ex1"),
         dict(id="EX2", parent="EX1", title="ex2: 11× data, 20k steps", text=f"adjust_bottle {ex2_succ['raw768_native']['adjust_bottle']['successes']} · {ex2_succ['raw768_wide']['adjust_bottle']['successes']} · {ex2_succ['svae48_native']['adjust_bottle']['successes']} of 60 (native · wide · S-VAE); 2 tasks at 0", state="done", href="ex2"),
         dict(id="B0", parent="EX2", title="Fresh-scene evaluation baseline", text=base_state[1], state=base_state[0], href="base"),
+        dict(id="REP", parent="B0", title="Cross-host reproduction check", text=(" · ".join(f"{l}: {c['gpu01_successes']}/20 vs gpu-02 {c['gpu02_successes']}/20" for l, c in rep_summaries) if rep_summaries else "running"), state=("done" if rep_summaries else "run"), href="rep"),
         dict(id="Q2", parent="Q", title="Does RAE's noise shift help?", text="shift 5 → 16.43", state="root", href=None),
         dict(id="EX0", parent="Q2", title="ex0-shift: MSE audit (corrected)", text=f"unweighted MSE ratio {rmin:.3f}–{rmax:.3f}; old 1.7× reading retracted", state="done", href="shift"),
         dict(id="H1", parent="EX0", title="H1 ex3-a: shift16, native head", text=h1_state[1], state=h1_state[0], href="h1"),
@@ -438,6 +462,11 @@ def main():
         + "<h3>Success rule</h3><p>RoboTwin's native per-task success check at any step within the native step limit (400 / 800 / 700 actions); an episode is a technical failure if the initial render deviates more than 1 uint8 level from the frozen reference, if the 600 s wall limit is hit, or if the simulator errors; technical failures count as unsuccessful in every contrast and are reported separately.</p>"
         + "<h3>Known gaps</h3><ul><li>handover_block and place_object_basket were at zero for every arm in ex2; if they stay at zero here they carry no information and the contrasts rest on adjust_bottle alone.</li><li>Rendering on this host uses OIDN 2.3.3 (the only denoiser that runs on Blackwell); the policies were trained on data collected with the same denoiser on gpu-02.</li><li>Three training seeds; generalization over training randomness is not established.</li></ul>"
         + "<h3>S-VAE 48 arm (secondary)</h3>" + result_table("svae48_native") + contrast_table("S_representation") + video_grid(cards, "svae48_native")))
+    views.append(dict(id="rep", title="Cross-host reproduction check (EXPERIMENT_PROTOCOL rule 23)", html=
+        "<p><b>Question:</b> does the ex2 baseline number reproduce on this host? One ex2 cell (raw768 native, training seed 42, adjust_bottle, the 20 old scenes, clean) was re-run on gpu-01 with the same frozen checkpoint, scenes, policy-server settings and per-episode random seeds, and compared scene by scene with gpu-02's ledger. A second gpu-01 run of the same cell measures how much a single host varies from run to run.</p>"
+        + rep_html
+        + "<p><b>What it means for ex3:</b> every ex3 arm, including the reused ex2 checkpoints, is evaluated on this one host, so a host shift does not bias the paired contrasts. It does mean absolute success rates on gpu-01 are not comparable with ex2's gpu-02 numbers; the home table therefore keeps ex2 in a separate 'earlier reading' column.</p>"
+        + sources_html([str(R / "controls")])))
     views.append(dict(id="ex2", title="ex2 — 11× data and 5× steps, same recipe (rae-policy-expanded-20261006, done 2026-10-08)", html=five_parts(
         "ex1 could not separate arms: 13 successes in 126 cells. The question was whether data volume was the bottleneck.",
         "With 765 train demos and 20,000 steps, do the two zero tasks move, and do the three representations differ?",

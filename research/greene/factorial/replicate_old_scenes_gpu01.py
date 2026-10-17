@@ -23,7 +23,7 @@ LEDGER = Path("/home/zifanz4/openwam-torch-dispatch/research/greene/records/rae-
 ROUTE, SEED, TASK = "raw768_native", 42, "adjust_bottle"
 
 
-def main(gpu, out):
+def main(gpu, out, port=None):
     out = Path(out)
     out.mkdir(parents=True, exist_ok=False)
     work = out / "scripts"
@@ -38,7 +38,7 @@ def main(gpu, out):
     assert e.count(f"E=Path('{OLD}')") == 1 and "seed-exclusion" not in e and "E/'protocol.json'" in e
     (work / "evaluate_policy.py").write_text(e)
     uuid, pci = [l.split(", ") for l in subprocess.check_output(["nvidia-smi", "-i", gpu, "--query-gpu=uuid,pci.bus_id", "--format=csv,noheader"], text=True).splitlines()][0]
-    port = 19900 + int(gpu)
+    port = int(port) if port else 19900 + int(gpu)
     with socket.socket() as sock:
         sock.bind(("127.0.0.1", port))
     checkpoint = S / "runs" / f"{ROUTE}-seed{SEED}" / "checkpoint_step_20000.safetensors"
@@ -96,4 +96,4 @@ def main(gpu, out):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    main(sys.argv[1], sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else None)

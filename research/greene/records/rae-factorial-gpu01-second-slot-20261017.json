@@ -1,0 +1,7 @@
+{
+  "applied_at": "2026-10-17T07:48:55.740630+00:00",
+  "change": "second post-worker slot per GPU (scheduling only)",
+  "post_worker_sha256": "380ddf4e95b06f4cb7755a9404d1d23533e3e05ca061bce107d6c1c680da6877",
+  "archived": "/home/zifanz4/openwam-runtime/rae-factorial-20261010/resource-amendment-20261017-second-slot",
+  "learned_policy_scored": false
+}

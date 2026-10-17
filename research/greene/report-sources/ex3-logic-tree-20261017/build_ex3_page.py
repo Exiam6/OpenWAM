@@ -524,6 +524,8 @@ def main():
     builder = importlib.util.module_from_spec(bspec)
     bspec.loader.exec_module(builder)
     builder.build(spec, PAGE)
+    (HERE / "page2").mkdir(exist_ok=True)
+    (HERE / "page2" / "index.html").write_text((PAGE / "index.html").read_text())  # current-org publish copy
     # incremental publish list: files not yet published or changed since
     published = load(HERE / "published.json", {}) or {}
     pending = {}

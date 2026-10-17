@@ -1,8 +1,8 @@
 {
  "title": "OpenWAM RAE Logic Tree",
  "t0": "2026-10-17T01:50:00",
- "now": "2026-10-17T03:34:05.222249",
- "summary_html": "<p><b>Success rule:</b> RoboTwin's own per-task check within the native step limit, on 20 fresh expert-feasible scenes per task, 3 training seeds, paired across arms; technical failures count as failures.</p><div class=\"tw\"><table><thead><tr><th>arm</th><th>state</th><th>fresh scenes: adjust_bottle / handover_block / place_object_basket</th><th>earlier reading</th></tr></thead><tbody><tr><td><a href=\"#h1\">raw768 native (baseline)</a></td><td>checkpoints reused; evaluation queued</td><td>pending</td><td>ex2 (old scenes): 32/60 / 0/60 / 0/57</td></tr><tr><td><a href=\"#h1\">raw768 native, shift 16.43 (ex3-a)</a></td><td>training: steps 19950, 19375, 18350 / 20000</td><td>pending</td><td>new in ex3</td></tr><tr><td><a href=\"#h2\">raw768 wide head (ex2-b)</a></td><td>checkpoints reused; evaluation queued</td><td>pending</td><td>ex2 (old scenes): 24/60 / 0/60 / 0/57</td></tr><tr><td><a href=\"#h3\">raw768 wide head, shift 16.43 (ex3-b)</a></td><td>training: steps 17675, 18550, 17275 / 20000</td><td>pending</td><td>new in ex3</td></tr><tr><td><a href=\"#base\">S-VAE 48 (ex2-c)</a></td><td>checkpoints reused; evaluation queued</td><td>pending</td><td>ex2 (old scenes): 33/60 / 0/60 / 0/57</td></tr></tbody></table></div><p><b>Now:</b> 0/6 ex3 trainings complete; 0/900 evaluation attempts recorded; final scoring pending. Deadline 2026-10-18 12:00 CDT. Host shenlong-gpu-01, 8 GPUs. Page generated 2026-10-17 03:34 CDT from run files.</p><p><b>Known gaps:</b> two tasks were at 0 for every arm in ex2; no Wan-VAE control arm yet; 3 seeds only. <a href='#plan'>Registered plan</a> \u00b7 <a href='#base'>evaluation baseline</a>.</p>",
+ "now": "2026-10-17T06:27:40.877826",
+ "summary_html": "<p><b>Success rule:</b> RoboTwin's own per-task check within the native step limit, on 20 fresh expert-feasible scenes per task, 3 training seeds, paired across arms; technical failures count as failures.</p><div class=\"tw\"><table><thead><tr><th>arm</th><th>state</th><th>fresh scenes: adjust_bottle / handover_block / place_object_basket</th><th>earlier reading</th></tr></thead><tbody><tr><td><a href=\"#h1\">raw768 native (baseline)</a></td><td>evaluating: 29/140 of 180</td><td>29/60 / 0/60 / 0/20</td><td>ex2 (old scenes): 32/60 / 0/60 / 0/57</td></tr><tr><td><a href=\"#h1\">raw768 native, shift 16.43 (ex3-a)</a></td><td>evaluating: 31/136 of 180</td><td>31/60 / 0/60 / 0/16</td><td>new in ex3</td></tr><tr><td><a href=\"#h2\">raw768 wide head (ex2-b)</a></td><td>evaluating: 26/138 of 180</td><td>26/60 / 0/60 / 0/18</td><td>ex2 (old scenes): 24/60 / 0/60 / 0/57</td></tr><tr><td><a href=\"#h3\">raw768 wide head, shift 16.43 (ex3-b)</a></td><td>evaluating: 29/153 of 180</td><td>29/60 / 0/60 / 0/33</td><td>new in ex3</td></tr><tr><td><a href=\"#base\">S-VAE 48 (ex2-c)</a></td><td>evaluating: 26/137 of 180</td><td>26/60 / 0/60 / 0/17</td><td>ex2 (old scenes): 33/60 / 0/60 / 0/57</td></tr></tbody></table></div><p><b>Now:</b> 6/6 ex3 trainings complete; 704/900 evaluation attempts recorded; final scoring pending. Deadline 2026-10-18 12:00 CDT. Host shenlong-gpu-01, 8 GPUs. Page generated 2026-10-17 06:27 CDT from run files.</p><p><b>Known gaps:</b> two tasks were at 0 for every arm in ex2; no Wan-VAE control arm yet; 3 seeds only. <a href='#plan'>Registered plan</a> \u00b7 <a href='#base'>evaluation baseline</a>.</p>",
  "tree": [
   {
    "id": "Q",
@@ -96,7 +96,7 @@
    "id": "H1",
    "parent": "EX0",
    "title": "H1 ex3-a: shift16, native head",
-   "text": "training: steps 19950, 19375, 18350 / 20000",
+   "text": "evaluating: 31/136 of 180",
    "state": "run",
    "href": "h1"
   },
@@ -112,15 +112,15 @@
    "id": "H2",
    "parent": "Q3",
    "title": "H2 ex2-b: wide head on fresh scenes",
-   "text": "checkpoints reused; evaluation queued",
-   "state": "wait",
+   "text": "evaluating: 26/138 of 180",
+   "state": "run",
    "href": "h2"
   },
   {
    "id": "H3A",
    "parent": "H2",
    "title": "H3a ex3-b: wide vs native at shift16",
-   "text": "training: steps 17675, 18550, 17275 / 20000",
+   "text": "evaluating: 29/153 of 180",
    "state": "run",
    "href": "h3"
   },
@@ -128,7 +128,7 @@
    "id": "H3B",
    "parent": "H1",
    "title": "H3b ex3-b: shift16 vs 5 under wide head",
-   "text": "training: steps 17675, 18550, 17275 / 20000",
+   "text": "evaluating: 29/153 of 180",
    "state": "run",
    "href": "h3"
   },
@@ -146,55 +146,55 @@
    "lane": "ex3-a training",
    "label": "seed 42",
    "start": "2026-10-17T02:08:07.167134",
-   "end": "2026-10-17T03:37:15.014449",
-   "state": "run",
+   "end": "2026-10-17T03:34:48.195790",
+   "state": "done",
    "href": "h1",
-   "projected": true
+   "projected": false
   },
   {
    "lane": "ex3-a training",
    "label": "seed 43",
    "start": "2026-10-17T02:08:08.103298",
-   "end": "2026-10-17T03:39:42.587730",
-   "state": "run",
+   "end": "2026-10-17T03:37:29.346622",
+   "state": "done",
    "href": "h1",
-   "projected": true
+   "projected": false
   },
   {
    "lane": "ex3-a training",
    "label": "seed 44",
    "start": "2026-10-17T02:08:08.317862",
-   "end": "2026-10-17T03:44:37.516843",
-   "state": "run",
+   "end": "2026-10-17T03:42:19.902778",
+   "state": "done",
    "href": "h1",
-   "projected": true
+   "projected": false
   },
   {
    "lane": "ex3-b training",
    "label": "seed 42",
    "start": "2026-10-17T02:08:07.932915",
-   "end": "2026-10-17T03:48:06.443701",
-   "state": "run",
+   "end": "2026-10-17T03:45:49.704743",
+   "state": "done",
    "href": "h3",
-   "projected": true
+   "projected": false
   },
   {
    "lane": "ex3-b training",
    "label": "seed 43",
    "start": "2026-10-17T02:08:08.257583",
-   "end": "2026-10-17T03:43:28.658044",
-   "state": "run",
+   "end": "2026-10-17T03:41:14.697013",
+   "state": "done",
    "href": "h3",
-   "projected": true
+   "projected": false
   },
   {
    "lane": "ex3-b training",
    "label": "seed 44",
    "start": "2026-10-17T02:08:08.372714",
-   "end": "2026-10-17T03:50:11.382577",
-   "state": "run",
+   "end": "2026-10-17T03:47:50.329180",
+   "state": "done",
    "href": "h3",
-   "projected": true
+   "projected": false
   },
   {
    "lane": "scene screening",
@@ -224,13 +224,139 @@
    "projected": false
   },
   {
-   "lane": "evaluation (15 cells, projected)",
-   "label": "15 cells \u00d7 ~2.4 GPU-h on 8 GPUs",
-   "start": "2026-10-17T04:50:11.382577",
-   "end": "2026-10-17T09:50:11.382577",
-   "state": "wait",
+   "lane": "evaluation raw768_native",
+   "label": "seed 42",
+   "start": "2026-10-17T03:48:01.123210",
+   "end": "2026-10-17T06:27:40.877826",
+   "state": "run",
    "href": "h1",
-   "projected": true
+   "projected": false
+  },
+  {
+   "lane": "evaluation raw768_native",
+   "label": "seed 43",
+   "start": "2026-10-17T03:48:06.507990",
+   "end": "2026-10-17T06:27:40.877826",
+   "state": "run",
+   "href": "h1",
+   "projected": false
+  },
+  {
+   "lane": "evaluation raw768_native",
+   "label": "seed 44",
+   "start": "2026-10-17T03:50:03.230836",
+   "end": "2026-10-17T06:27:40.877826",
+   "state": "run",
+   "href": "h1",
+   "projected": false
+  },
+  {
+   "lane": "evaluation raw768_native_shift16",
+   "label": "seed 42",
+   "start": "2026-10-17T03:48:03.618184",
+   "end": "2026-10-17T06:27:40.877826",
+   "state": "run",
+   "href": "h1",
+   "projected": false
+  },
+  {
+   "lane": "evaluation raw768_native_shift16",
+   "label": "seed 43",
+   "start": "2026-10-17T03:49:57.901830",
+   "end": "2026-10-17T06:27:40.877826",
+   "state": "run",
+   "href": "h1",
+   "projected": false
+  },
+  {
+   "lane": "evaluation raw768_native_shift16",
+   "label": "seed 44",
+   "start": "2026-10-17T03:50:06.196587",
+   "end": "2026-10-17T06:27:40.877826",
+   "state": "run",
+   "href": "h1",
+   "projected": false
+  },
+  {
+   "lane": "evaluation raw768_wide",
+   "label": "seed 42",
+   "start": "2026-10-17T03:48:02.336652",
+   "end": "2026-10-17T06:27:40.877826",
+   "state": "run",
+   "href": "h1",
+   "projected": false
+  },
+  {
+   "lane": "evaluation raw768_wide",
+   "label": "seed 43",
+   "start": "2026-10-17T03:48:08.256060",
+   "end": "2026-10-17T06:27:40.877826",
+   "state": "run",
+   "href": "h1",
+   "projected": false
+  },
+  {
+   "lane": "evaluation raw768_wide",
+   "label": "seed 44",
+   "start": "2026-10-17T03:50:04.362570",
+   "end": "2026-10-17T06:27:40.877826",
+   "state": "run",
+   "href": "h1",
+   "projected": false
+  },
+  {
+   "lane": "evaluation raw768_wide_shift16",
+   "label": "seed 42",
+   "start": "2026-10-17T03:48:04.453600",
+   "end": "2026-10-17T06:27:40.877826",
+   "state": "run",
+   "href": "h1",
+   "projected": false
+  },
+  {
+   "lane": "evaluation raw768_wide_shift16",
+   "label": "seed 43",
+   "start": "2026-10-17T03:50:00.839862",
+   "end": "2026-10-17T06:26:51.256416",
+   "state": "done",
+   "href": "h1",
+   "projected": false
+  },
+  {
+   "lane": "evaluation raw768_wide_shift16",
+   "label": "seed 44",
+   "start": "2026-10-17T03:50:06.838196",
+   "end": "2026-10-17T06:27:40.877826",
+   "state": "run",
+   "href": "h1",
+   "projected": false
+  },
+  {
+   "lane": "evaluation svae48_native",
+   "label": "seed 42",
+   "start": "2026-10-17T03:47:57.697440",
+   "end": "2026-10-17T06:27:40.877826",
+   "state": "run",
+   "href": "h1",
+   "projected": false
+  },
+  {
+   "lane": "evaluation svae48_native",
+   "label": "seed 43",
+   "start": "2026-10-17T03:48:05.480303",
+   "end": "2026-10-17T06:27:40.877826",
+   "state": "run",
+   "href": "h1",
+   "projected": false
+  },
+  {
+   "lane": "evaluation svae48_native",
+   "label": "seed 44",
+   "start": "2026-10-17T03:50:02.144832",
+   "end": "2026-10-17T06:27:40.877826",
+   "state": "run",
+   "href": "h1",
+   "projected": false
   }
  ],
  "milestones": [
@@ -256,22 +382,22 @@
   {
    "id": "h1",
    "title": "H1 \u2014 ex3-a: video shift 5 \u2192 16.4317 with the native head",
-   "html": "<h3>Background</h3><p>RAE (Zheng et al. 2025) prescribes a dimension-dependent noise shift \u03b1 = \u221a(m/4096); for our 1,105,920-dim raw768 latent that is 16.43, while OpenWAM uses 5. The corrected 2026-10-10 audit found no fit difference (unweighted MSE ratio 0.997\u20131.022), so success is the only remaining test.</p><h3>Question</h3><p>Does training raw768_native with shift_video 16.4317 instead of 5 change paired fresh-scene success?</p><h3>Single variable, everything else locked</h3><p><code>shift_video: 5.0 \u2192 16.4317</code> in the training config; action shift stays 5. Same 765/76 demonstrations (cache.pt sha256 2f8419ff\u2026), common per-seed initialization, paired batch schedule and noise streams, 20,000 steps, final checkpoint only; same 60 fresh scenes, native success rule, 600 s per episode, one host and renderer for every arm.</p><h3>Criterion (written before the run)</h3><p>Supported if \u0394 \u2265 +5 pp and the 95 % interval excludes 0; refuted if \u0394 \u2264 \u22125 pp and the interval excludes 0; otherwise undecided. Prediction: no detectable change (|\u0394| < 5 pp).</p><h3>What each outcome changes</h3><p>Supported \u2192 the shift prescription transfers to actions and becomes the default for the raw768 route. Refuted \u2192 5 stays and the mechanism is marked as not transferring. Undecided \u2192 the raw768 route is not pursued further through the shift; the next decision is the missing Wan-VAE control.</p><h3>Status</h3><div class=\"tw\"><table><thead><tr><th>arm</th><th>seed</th><th>GPU</th><th>started (CDT)</th><th>finished</th><th>state</th></tr></thead><tbody><tr><td>raw768 native, shift 16.43 (ex3-a)</td><td>42</td><td>6</td><td>10-17 02:08</td><td>\u2014</td><td>step 19950 / 20000, loss 0.903</td></tr><tr><td>raw768 native, shift 16.43 (ex3-a)</td><td>43</td><td>4</td><td>10-17 02:08</td><td>\u2014</td><td>step 19375 / 20000, loss 0.951</td></tr><tr><td>raw768 native, shift 16.43 (ex3-a)</td><td>44</td><td>5</td><td>10-17 02:08</td><td>\u2014</td><td>step 18350 / 20000, loss 0.872</td></tr><tr><td>raw768 wide head, shift 16.43 (ex3-b)</td><td>42</td><td>2</td><td>10-17 02:08</td><td>\u2014</td><td>step 17675 / 20000, loss 0.063</td></tr><tr><td>raw768 wide head, shift 16.43 (ex3-b)</td><td>43</td><td>1</td><td>10-17 02:08</td><td>\u2014</td><td>step 18550 / 20000, loss 0.194</td></tr><tr><td>raw768 wide head, shift 16.43 (ex3-b)</td><td>44</td><td>7</td><td>10-17 02:08</td><td>\u2014</td><td>step 17275 / 20000, loss 0.363</td></tr></tbody></table></div><h3>L1 gate on this host (3-step preflight)</h3><div class=\"tw\"><table><thead><tr><th>arm</th><th>result</th><th>trunk input grad</th><th>action grad</th><th>wide-head grad</th><th>serialization exact</th><th>peak GiB</th></tr></thead><tbody><tr><td>raw768_native_shift16</td><td>pass</td><td>0.2613</td><td>0.2274</td><td>n/a</td><td>yes</td><td>16.4</td></tr><tr><td>raw768_wide_shift16</td><td>pass</td><td>0.2076</td><td>0.2270</td><td>0.0065</td><td>yes</td><td>18.6</td></tr></tbody></table></div><h3>Result: raw768_native_shift16 (candidate)</h3><div class=\"tw\"><table><thead><tr><th>task</th><th>successes / attempted (3 seeds \u00d7 20 fresh scenes)</th><th>rate</th><th>Wilson 95 %</th><th>per seed 42 / 43 / 44</th><th>technical failures</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>handover_block</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>place_object_basket</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr></tbody></table></div><h3>Result: raw768_native (baseline, re-evaluated on the same fresh scenes)</h3><div class=\"tw\"><table><thead><tr><th>task</th><th>successes / attempted (3 seeds \u00d7 20 fresh scenes)</th><th>rate</th><th>Wilson 95 %</th><th>per seed 42 / 43 / 44</th><th>technical failures</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>handover_block</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>place_object_basket</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr></tbody></table></div><h3>Contrast H1</h3><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><h3>Videos (policy input: head | left wrist | right wrist, one frame per policy call)</h3><p class=\"muted\">No evaluation episodes for this arm yet; videos appear here when the first cell finishes.</p><h3>Baseline videos</h3><p class=\"muted\">No evaluation episodes for this arm yet; videos appear here when the first cell finishes.</p>"
+   "html": "<h3>Background</h3><p>RAE (Zheng et al. 2025) prescribes a dimension-dependent noise shift \u03b1 = \u221a(m/4096); for our 1,105,920-dim raw768 latent that is 16.43, while OpenWAM uses 5. The corrected 2026-10-10 audit found no fit difference (unweighted MSE ratio 0.997\u20131.022), so success is the only remaining test.</p><h3>Question</h3><p>Does training raw768_native with shift_video 16.4317 instead of 5 change paired fresh-scene success?</p><h3>Single variable, everything else locked</h3><p><code>shift_video: 5.0 \u2192 16.4317</code> in the training config; action shift stays 5. Same 765/76 demonstrations (cache.pt sha256 2f8419ff\u2026), common per-seed initialization, paired batch schedule and noise streams, 20,000 steps, final checkpoint only; same 60 fresh scenes, native success rule, 600 s per episode, one host and renderer for every arm.</p><h3>Criterion (written before the run)</h3><p>Supported if \u0394 \u2265 +5 pp and the 95 % interval excludes 0; refuted if \u0394 \u2264 \u22125 pp and the interval excludes 0; otherwise undecided. Prediction: no detectable change (|\u0394| < 5 pp).</p><h3>What each outcome changes</h3><p>Supported \u2192 the shift prescription transfers to actions and becomes the default for the raw768 route. Refuted \u2192 5 stays and the mechanism is marked as not transferring. Undecided \u2192 the raw768 route is not pursued further through the shift; the next decision is the missing Wan-VAE control.</p><h3>Status</h3><div class=\"tw\"><table><thead><tr><th>arm</th><th>seed</th><th>GPU</th><th>started (CDT)</th><th>finished</th><th>state</th></tr></thead><tbody><tr><td>raw768 native, shift 16.43 (ex3-a)</td><td>42</td><td>6</td><td>10-17 02:08</td><td>10-17 03:34</td><td>done, 1.43 h, dev action loss 0.0256</td></tr><tr><td>raw768 native, shift 16.43 (ex3-a)</td><td>43</td><td>4</td><td>10-17 02:08</td><td>10-17 03:37</td><td>done, 1.47 h, dev action loss 0.0173</td></tr><tr><td>raw768 native, shift 16.43 (ex3-a)</td><td>44</td><td>5</td><td>10-17 02:08</td><td>10-17 03:42</td><td>done, 1.55 h, dev action loss 0.0206</td></tr><tr><td>raw768 wide head, shift 16.43 (ex3-b)</td><td>42</td><td>2</td><td>10-17 02:08</td><td>10-17 03:45</td><td>done, 1.61 h, dev action loss 0.0260</td></tr><tr><td>raw768 wide head, shift 16.43 (ex3-b)</td><td>43</td><td>1</td><td>10-17 02:08</td><td>10-17 03:41</td><td>done, 1.53 h, dev action loss 0.0189</td></tr><tr><td>raw768 wide head, shift 16.43 (ex3-b)</td><td>44</td><td>7</td><td>10-17 02:08</td><td>10-17 03:47</td><td>done, 1.64 h, dev action loss 0.0224</td></tr></tbody></table></div><h3>L1 gate on this host (3-step preflight)</h3><div class=\"tw\"><table><thead><tr><th>arm</th><th>result</th><th>trunk input grad</th><th>action grad</th><th>wide-head grad</th><th>serialization exact</th><th>peak GiB</th></tr></thead><tbody><tr><td>raw768_native_shift16</td><td>pass</td><td>0.2613</td><td>0.2274</td><td>n/a</td><td>yes</td><td>16.4</td></tr><tr><td>raw768_wide_shift16</td><td>pass</td><td>0.2076</td><td>0.2270</td><td>0.0065</td><td>yes</td><td>18.6</td></tr></tbody></table></div><h3>Result: raw768_native_shift16 (candidate)</h3><div class=\"tw\"><table><thead><tr><th>task</th><th>successes / attempted (3 seeds \u00d7 20 fresh scenes)</th><th>rate</th><th>Wilson 95 %</th><th>per seed 42 / 43 / 44</th><th>technical failures</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>31 / 60</td><td>51.7 %</td><td>39\u201364</td><td>5/20 / 11/20 / 15/20</td><td>0</td></tr><tr><td>handover_block</td><td>0 / 60</td><td>0.0 %</td><td>-0\u20136</td><td>0/20 / 0/20 / 0/20</td><td>0</td></tr><tr><td>place_object_basket</td><td>0 / 16</td><td>0.0 %</td><td>0\u201319</td><td>0/4 / 0/6 / 0/6</td><td>0</td></tr></tbody></table></div><h3>Result: raw768_native (baseline, re-evaluated on the same fresh scenes)</h3><div class=\"tw\"><table><thead><tr><th>task</th><th>successes / attempted (3 seeds \u00d7 20 fresh scenes)</th><th>rate</th><th>Wilson 95 %</th><th>per seed 42 / 43 / 44</th><th>technical failures</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>29 / 60</td><td>48.3 %</td><td>36\u201361</td><td>9/20 / 12/20 / 8/20</td><td>0</td></tr><tr><td>handover_block</td><td>0 / 60</td><td>0.0 %</td><td>-0\u20136</td><td>0/20 / 0/20 / 0/20</td><td>0</td></tr><tr><td>place_object_basket</td><td>0 / 20</td><td>0.0 %</td><td>-0\u201316</td><td>0/6 / 0/8 / 0/6</td><td>0</td></tr></tbody></table></div><h3>Contrast H1</h3><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><h3>Videos (policy input: head | left wrist | right wrist, one frame per policy call)</h3><div class=\"grid\"><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_native_shift16__adjust_bottle__success__s42_scene6200008.mp4\"></video><p class=\"muted\">adjust_bottle \u00b7 success \u00b7 seed 42 \u00b7 scene 6200008 \u00b7 success in 177 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_native_shift16__adjust_bottle__success__s42_scene6200008.mp4\" data-name=\"raw768_native_shift16__adjust_bottle__success__s42_scene6200008.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_native_shift16__adjust_bottle__failure__s44_scene6200024.mp4\"></video><p class=\"muted\">adjust_bottle \u00b7 failure \u00b7 seed 44 \u00b7 scene 6200024 \u00b7 failure in 400 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_native_shift16__adjust_bottle__failure__s44_scene6200024.mp4\" data-name=\"raw768_native_shift16__adjust_bottle__failure__s44_scene6200024.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_native_shift16__adjust_bottle__median__s44_scene6200023.mp4\"></video><p class=\"muted\">adjust_bottle \u00b7 median \u00b7 seed 44 \u00b7 scene 6200023 \u00b7 success in 256 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_native_shift16__adjust_bottle__median__s44_scene6200023.mp4\" data-name=\"raw768_native_shift16__adjust_bottle__median__s44_scene6200023.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_native_shift16__handover_block__failure__s44_scene6201022.mp4\"></video><p class=\"muted\">handover_block \u00b7 failure \u00b7 seed 44 \u00b7 scene 6201022 \u00b7 failure in 800 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_native_shift16__handover_block__failure__s44_scene6201022.mp4\" data-name=\"raw768_native_shift16__handover_block__failure__s44_scene6201022.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_native_shift16__handover_block__median__s43_scene6201010.mp4\"></video><p class=\"muted\">handover_block \u00b7 median \u00b7 seed 43 \u00b7 scene 6201010 \u00b7 failure in 800 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_native_shift16__handover_block__median__s43_scene6201010.mp4\" data-name=\"raw768_native_shift16__handover_block__median__s43_scene6201010.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_native_shift16__place_object_basket__failure__s44_scene6202008.mp4\"></video><p class=\"muted\">place_object_basket \u00b7 failure \u00b7 seed 44 \u00b7 scene 6202008 \u00b7 failure in 700 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_native_shift16__place_object_basket__failure__s44_scene6202008.mp4\" data-name=\"raw768_native_shift16__place_object_basket__failure__s44_scene6202008.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_native_shift16__place_object_basket__median__s43_scene6202007.mp4\"></video><p class=\"muted\">place_object_basket \u00b7 median \u00b7 seed 43 \u00b7 scene 6202007 \u00b7 failure in 700 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_native_shift16__place_object_basket__median__s43_scene6202007.mp4\" data-name=\"raw768_native_shift16__place_object_basket__median__s43_scene6202007.mp4\">Download</button></div></div><h3>Baseline videos</h3><div class=\"grid\"><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_native__adjust_bottle__success__s42_scene6200002.mp4\"></video><p class=\"muted\">adjust_bottle \u00b7 success \u00b7 seed 42 \u00b7 scene 6200002 \u00b7 success in 158 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_native__adjust_bottle__success__s42_scene6200002.mp4\" data-name=\"raw768_native__adjust_bottle__success__s42_scene6200002.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_native__adjust_bottle__failure__s44_scene6200024.mp4\"></video><p class=\"muted\">adjust_bottle \u00b7 failure \u00b7 seed 44 \u00b7 scene 6200024 \u00b7 failure in 400 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_native__adjust_bottle__failure__s44_scene6200024.mp4\" data-name=\"raw768_native__adjust_bottle__failure__s44_scene6200024.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_native__adjust_bottle__median__s42_scene6200006.mp4\"></video><p class=\"muted\">adjust_bottle \u00b7 median \u00b7 seed 42 \u00b7 scene 6200006 \u00b7 failure in 400 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_native__adjust_bottle__median__s42_scene6200006.mp4\" data-name=\"raw768_native__adjust_bottle__median__s42_scene6200006.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_native__handover_block__failure__s44_scene6201022.mp4\"></video><p class=\"muted\">handover_block \u00b7 failure \u00b7 seed 44 \u00b7 scene 6201022 \u00b7 failure in 800 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_native__handover_block__failure__s44_scene6201022.mp4\" data-name=\"raw768_native__handover_block__failure__s44_scene6201022.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_native__handover_block__median__s43_scene6201010.mp4\"></video><p class=\"muted\">handover_block \u00b7 median \u00b7 seed 43 \u00b7 scene 6201010 \u00b7 failure in 800 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_native__handover_block__median__s43_scene6201010.mp4\" data-name=\"raw768_native__handover_block__median__s43_scene6201010.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_native__place_object_basket__failure__s44_scene6202008.mp4\"></video><p class=\"muted\">place_object_basket \u00b7 failure \u00b7 seed 44 \u00b7 scene 6202008 \u00b7 failure in 700 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_native__place_object_basket__failure__s44_scene6202008.mp4\" data-name=\"raw768_native__place_object_basket__failure__s44_scene6202008.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_native__place_object_basket__median__s43_scene6202007.mp4\"></video><p class=\"muted\">place_object_basket \u00b7 median \u00b7 seed 43 \u00b7 scene 6202007 \u00b7 failure in 700 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_native__place_object_basket__median__s43_scene6202007.mp4\" data-name=\"raw768_native__place_object_basket__median__s43_scene6202007.mp4\">Download</button></div></div>"
   },
   {
    "id": "h2",
    "title": "H2 \u2014 ex2-b: RAE wide head at shift 5, re-evaluated on fresh scenes",
-   "html": "<h3>Background</h3><p>ex1 showed the wide head cuts held-out video loss 3.6\u00d7 without changing success; ex2 (60 old scenes) read 24/60 vs 32/60 on adjust_bottle (paired sign test p \u2248 0.10). Those scenes were used repeatedly, so ex3 re-measures on fresh scenes.</p><h3>Question</h3><p>Does the 3072-wide shallow head, with shift 5, change paired fresh-scene success?</p><h3>Single variable, everything else locked</h3><p>the four <code>rae_head_*</code> config lines (width 3072, 24 heads, depth 1, MLP 2). Same 765/76 demonstrations (cache.pt sha256 2f8419ff\u2026), common per-seed initialization, paired batch schedule and noise streams, 20,000 steps, final checkpoint only; same 60 fresh scenes, native success rule, 600 s per episode, one host and renderer for every arm. Checkpoints are the ex2 ones (sha256 verified before each cell).</p><h3>Criterion (written before the run)</h3><p>Same \u00b15 pp / interval criterion. Prediction: zero or negative (\u22125 \u2026 0 pp).</p><h3>What each outcome changes</h3><p>Refuted \u2192 the wide head alone is closed. Undecided \u2192 stays a non-result. Supported \u2192 contradicts ex2 and would need a third independent cohort before any claim.</p><h3>Result: raw768_wide</h3><div class=\"tw\"><table><thead><tr><th>task</th><th>successes / attempted (3 seeds \u00d7 20 fresh scenes)</th><th>rate</th><th>Wilson 95 %</th><th>per seed 42 / 43 / 44</th><th>technical failures</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>handover_block</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>place_object_basket</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr></tbody></table></div><h3>Contrast H2</h3><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><h3>Videos</h3><p class=\"muted\">No evaluation episodes for this arm yet; videos appear here when the first cell finishes.</p>"
+   "html": "<h3>Background</h3><p>ex1 showed the wide head cuts held-out video loss 3.6\u00d7 without changing success; ex2 (60 old scenes) read 24/60 vs 32/60 on adjust_bottle (paired sign test p \u2248 0.10). Those scenes were used repeatedly, so ex3 re-measures on fresh scenes.</p><h3>Question</h3><p>Does the 3072-wide shallow head, with shift 5, change paired fresh-scene success?</p><h3>Single variable, everything else locked</h3><p>the four <code>rae_head_*</code> config lines (width 3072, 24 heads, depth 1, MLP 2). Same 765/76 demonstrations (cache.pt sha256 2f8419ff\u2026), common per-seed initialization, paired batch schedule and noise streams, 20,000 steps, final checkpoint only; same 60 fresh scenes, native success rule, 600 s per episode, one host and renderer for every arm. Checkpoints are the ex2 ones (sha256 verified before each cell).</p><h3>Criterion (written before the run)</h3><p>Same \u00b15 pp / interval criterion. Prediction: zero or negative (\u22125 \u2026 0 pp).</p><h3>What each outcome changes</h3><p>Refuted \u2192 the wide head alone is closed. Undecided \u2192 stays a non-result. Supported \u2192 contradicts ex2 and would need a third independent cohort before any claim.</p><h3>Result: raw768_wide</h3><div class=\"tw\"><table><thead><tr><th>task</th><th>successes / attempted (3 seeds \u00d7 20 fresh scenes)</th><th>rate</th><th>Wilson 95 %</th><th>per seed 42 / 43 / 44</th><th>technical failures</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>26 / 60</td><td>43.3 %</td><td>32\u201356</td><td>9/20 / 9/20 / 8/20</td><td>0</td></tr><tr><td>handover_block</td><td>0 / 60</td><td>0.0 %</td><td>-0\u20136</td><td>0/20 / 0/20 / 0/20</td><td>0</td></tr><tr><td>place_object_basket</td><td>0 / 18</td><td>0.0 %</td><td>0\u201318</td><td>0/6 / 0/6 / 0/6</td><td>0</td></tr></tbody></table></div><h3>Contrast H2</h3><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><h3>Videos</h3><div class=\"grid\"><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_wide__adjust_bottle__success__s42_scene6200002.mp4\"></video><p class=\"muted\">adjust_bottle \u00b7 success \u00b7 seed 42 \u00b7 scene 6200002 \u00b7 success in 143 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_wide__adjust_bottle__success__s42_scene6200002.mp4\" data-name=\"raw768_wide__adjust_bottle__success__s42_scene6200002.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_wide__adjust_bottle__failure__s44_scene6200024.mp4\"></video><p class=\"muted\">adjust_bottle \u00b7 failure \u00b7 seed 44 \u00b7 scene 6200024 \u00b7 failure in 400 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_wide__adjust_bottle__failure__s44_scene6200024.mp4\" data-name=\"raw768_wide__adjust_bottle__failure__s44_scene6200024.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_wide__adjust_bottle__median__s42_scene6200009.mp4\"></video><p class=\"muted\">adjust_bottle \u00b7 median \u00b7 seed 42 \u00b7 scene 6200009 \u00b7 failure in 400 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_wide__adjust_bottle__median__s42_scene6200009.mp4\" data-name=\"raw768_wide__adjust_bottle__median__s42_scene6200009.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_wide__handover_block__failure__s44_scene6201022.mp4\"></video><p class=\"muted\">handover_block \u00b7 failure \u00b7 seed 44 \u00b7 scene 6201022 \u00b7 failure in 800 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_wide__handover_block__failure__s44_scene6201022.mp4\" data-name=\"raw768_wide__handover_block__failure__s44_scene6201022.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_wide__handover_block__median__s43_scene6201010.mp4\"></video><p class=\"muted\">handover_block \u00b7 median \u00b7 seed 43 \u00b7 scene 6201010 \u00b7 failure in 800 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_wide__handover_block__median__s43_scene6201010.mp4\" data-name=\"raw768_wide__handover_block__median__s43_scene6201010.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_wide__place_object_basket__failure__s44_scene6202008.mp4\"></video><p class=\"muted\">place_object_basket \u00b7 failure \u00b7 seed 44 \u00b7 scene 6202008 \u00b7 failure in 700 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_wide__place_object_basket__failure__s44_scene6202008.mp4\" data-name=\"raw768_wide__place_object_basket__failure__s44_scene6202008.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_wide__place_object_basket__median__s43_scene6202006.mp4\"></video><p class=\"muted\">place_object_basket \u00b7 median \u00b7 seed 43 \u00b7 scene 6202006 \u00b7 failure in 700 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_wide__place_object_basket__median__s43_scene6202006.mp4\" data-name=\"raw768_wide__place_object_basket__median__s43_scene6202006.mp4\">Download</button></div></div>"
   },
   {
    "id": "h3",
    "title": "H3 \u2014 ex3-b: wide head and shift 16.4317 together (two single-variable contrasts)",
-   "html": "<h3>Background</h3><p>The RAE paper uses the wide head together with the shift; either might need the other. ex3-b is the fourth cell of the 2\u00d72 design.</p><h3>Question</h3><p>H3a: at shift 16.4317, does the wide head change success (vs raw768_native_shift16)? H3b: under the wide head, does shift 16.4317 change success (vs raw768_wide)?</p><h3>Single variable, everything else locked</h3><p>H3a changes only the head; H3b changes only the shift. Same 765/76 demonstrations (cache.pt sha256 2f8419ff\u2026), common per-seed initialization, paired batch schedule and noise streams, 20,000 steps, final checkpoint only; same 60 fresh scenes, native success rule, 600 s per episode, one host and renderer for every arm.</p><h3>Criterion (written before the run)</h3><p>Same \u00b15 pp / interval criterion for each contrast. The two-variable diagonal (wide+shift16 vs native) is reported but labelled confounded. Prediction: undecided.</p><h3>What each outcome changes</h3><p>If H3a or H3b is supported while H1 and H2 are not, the effect is an interaction and needs a replication cohort before being used. If none is supported, the RAE transfer to this policy is closed at this scale.</p><h3>Result: raw768_wide_shift16</h3><div class=\"tw\"><table><thead><tr><th>task</th><th>successes / attempted (3 seeds \u00d7 20 fresh scenes)</th><th>rate</th><th>Wilson 95 %</th><th>per seed 42 / 43 / 44</th><th>technical failures</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>handover_block</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>place_object_basket</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr></tbody></table></div><h3>Contrast H3a</h3><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><h3>Contrast H3b</h3><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><h3>Confounded diagonal (two variables)</h3><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><h3>Videos</h3><p class=\"muted\">No evaluation episodes for this arm yet; videos appear here when the first cell finishes.</p>"
+   "html": "<h3>Background</h3><p>The RAE paper uses the wide head together with the shift; either might need the other. ex3-b is the fourth cell of the 2\u00d72 design.</p><h3>Question</h3><p>H3a: at shift 16.4317, does the wide head change success (vs raw768_native_shift16)? H3b: under the wide head, does shift 16.4317 change success (vs raw768_wide)?</p><h3>Single variable, everything else locked</h3><p>H3a changes only the head; H3b changes only the shift. Same 765/76 demonstrations (cache.pt sha256 2f8419ff\u2026), common per-seed initialization, paired batch schedule and noise streams, 20,000 steps, final checkpoint only; same 60 fresh scenes, native success rule, 600 s per episode, one host and renderer for every arm.</p><h3>Criterion (written before the run)</h3><p>Same \u00b15 pp / interval criterion for each contrast. The two-variable diagonal (wide+shift16 vs native) is reported but labelled confounded. Prediction: undecided.</p><h3>What each outcome changes</h3><p>If H3a or H3b is supported while H1 and H2 are not, the effect is an interaction and needs a replication cohort before being used. If none is supported, the RAE transfer to this policy is closed at this scale.</p><h3>Result: raw768_wide_shift16</h3><div class=\"tw\"><table><thead><tr><th>task</th><th>successes / attempted (3 seeds \u00d7 20 fresh scenes)</th><th>rate</th><th>Wilson 95 %</th><th>per seed 42 / 43 / 44</th><th>technical failures</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>29 / 60</td><td>48.3 %</td><td>36\u201361</td><td>8/20 / 9/20 / 12/20</td><td>0</td></tr><tr><td>handover_block</td><td>0 / 60</td><td>0.0 %</td><td>-0\u20136</td><td>0/20 / 0/20 / 0/20</td><td>0</td></tr><tr><td>place_object_basket</td><td>0 / 33</td><td>0.0 %</td><td>0\u201310</td><td>0/6 / 0/20 / 0/7</td><td>0</td></tr></tbody></table></div><h3>Contrast H3a</h3><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><h3>Contrast H3b</h3><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><h3>Confounded diagonal (two variables)</h3><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><h3>Videos</h3><div class=\"grid\"><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_wide_shift16__adjust_bottle__success__s42_scene6200002.mp4\"></video><p class=\"muted\">adjust_bottle \u00b7 success \u00b7 seed 42 \u00b7 scene 6200002 \u00b7 success in 145 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_wide_shift16__adjust_bottle__success__s42_scene6200002.mp4\" data-name=\"raw768_wide_shift16__adjust_bottle__success__s42_scene6200002.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_wide_shift16__adjust_bottle__failure__s44_scene6200024.mp4\"></video><p class=\"muted\">adjust_bottle \u00b7 failure \u00b7 seed 44 \u00b7 scene 6200024 \u00b7 failure in 400 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_wide_shift16__adjust_bottle__failure__s44_scene6200024.mp4\" data-name=\"raw768_wide_shift16__adjust_bottle__failure__s44_scene6200024.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_wide_shift16__adjust_bottle__median__s42_scene6200006.mp4\"></video><p class=\"muted\">adjust_bottle \u00b7 median \u00b7 seed 42 \u00b7 scene 6200006 \u00b7 failure in 400 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_wide_shift16__adjust_bottle__median__s42_scene6200006.mp4\" data-name=\"raw768_wide_shift16__adjust_bottle__median__s42_scene6200006.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_wide_shift16__handover_block__failure__s44_scene6201022.mp4\"></video><p class=\"muted\">handover_block \u00b7 failure \u00b7 seed 44 \u00b7 scene 6201022 \u00b7 failure in 800 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_wide_shift16__handover_block__failure__s44_scene6201022.mp4\" data-name=\"raw768_wide_shift16__handover_block__failure__s44_scene6201022.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_wide_shift16__handover_block__median__s43_scene6201010.mp4\"></video><p class=\"muted\">handover_block \u00b7 median \u00b7 seed 43 \u00b7 scene 6201010 \u00b7 failure in 800 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_wide_shift16__handover_block__median__s43_scene6201010.mp4\" data-name=\"raw768_wide_shift16__handover_block__median__s43_scene6201010.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_wide_shift16__place_object_basket__failure__s44_scene6202009.mp4\"></video><p class=\"muted\">place_object_basket \u00b7 failure \u00b7 seed 44 \u00b7 scene 6202009 \u00b7 failure in 700 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_wide_shift16__place_object_basket__failure__s44_scene6202009.mp4\" data-name=\"raw768_wide_shift16__place_object_basket__failure__s44_scene6202009.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/raw768_wide_shift16__place_object_basket__median__s43_scene6202017.mp4\"></video><p class=\"muted\">place_object_basket \u00b7 median \u00b7 seed 43 \u00b7 scene 6202017 \u00b7 failure in 700 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/raw768_wide_shift16__place_object_basket__median__s43_scene6202017.mp4\" data-name=\"raw768_wide_shift16__place_object_basket__median__s43_scene6202017.mp4\">Download</button></div></div>"
   },
   {
    "id": "base",
    "title": "Fresh-scene evaluation baseline (frozen before any policy is scored)",
-   "html": "<p>20 expert-feasible scenes per task, taken in order from 40 fixed candidate seeds (6200000+, 6201000+, 6202000+). The expert planner, not any learned policy, decides feasibility; infeasible candidates are retained in the manifest. Overlap with every known training/evaluation seed list was checked (<code>seed-exclusion.json</code>).</p><div class=\"tw\"><table><thead><tr><th>task</th><th>accepted</th><th>attempted candidates</th><th>state</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>20</td><td>0</td><td>complete</td></tr><tr><td>handover_block</td><td>20</td><td>0</td><td>complete</td></tr><tr><td>place_object_basket</td><td>20</td><td>0</td><td>complete</td></tr></tbody></table></div><h3>Success rule</h3><p>RoboTwin's native per-task success check at any step within the native step limit (400 / 800 / 700 actions); an episode is a technical failure if the initial render deviates more than 1 uint8 level from the frozen reference, if the 600 s wall limit is hit, or if the simulator errors; technical failures count as unsuccessful in every contrast and are reported separately.</p><h3>Known gaps</h3><ul><li>handover_block and place_object_basket were at zero for every arm in ex2; if they stay at zero here they carry no information and the contrasts rest on adjust_bottle alone.</li><li>Rendering on this host uses OIDN 2.3.3 (the only denoiser that runs on Blackwell); the policies were trained on data collected with the same denoiser on gpu-02.</li><li>Three training seeds; generalization over training randomness is not established.</li></ul><h3>S-VAE 48 arm (secondary)</h3><div class=\"tw\"><table><thead><tr><th>task</th><th>successes / attempted (3 seeds \u00d7 20 fresh scenes)</th><th>rate</th><th>Wilson 95 %</th><th>per seed 42 / 43 / 44</th><th>technical failures</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>handover_block</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>place_object_basket</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr></tbody></table></div><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><p class=\"muted\">No evaluation episodes for this arm yet; videos appear here when the first cell finishes.</p>"
+   "html": "<p>20 expert-feasible scenes per task, taken in order from 40 fixed candidate seeds (6200000+, 6201000+, 6202000+). The expert planner, not any learned policy, decides feasibility; infeasible candidates are retained in the manifest. Overlap with every known training/evaluation seed list was checked (<code>seed-exclusion.json</code>).</p><div class=\"tw\"><table><thead><tr><th>task</th><th>accepted</th><th>attempted candidates</th><th>state</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>20</td><td>0</td><td>complete</td></tr><tr><td>handover_block</td><td>20</td><td>0</td><td>complete</td></tr><tr><td>place_object_basket</td><td>20</td><td>0</td><td>complete</td></tr></tbody></table></div><h3>Success rule</h3><p>RoboTwin's native per-task success check at any step within the native step limit (400 / 800 / 700 actions); an episode is a technical failure if the initial render deviates more than 1 uint8 level from the frozen reference, if the 600 s wall limit is hit, or if the simulator errors; technical failures count as unsuccessful in every contrast and are reported separately.</p><h3>Known gaps</h3><ul><li>handover_block and place_object_basket were at zero for every arm in ex2; if they stay at zero here they carry no information and the contrasts rest on adjust_bottle alone.</li><li>Rendering on this host uses OIDN 2.3.3 (the only denoiser that runs on Blackwell); the policies were trained on data collected with the same denoiser on gpu-02.</li><li>Three training seeds; generalization over training randomness is not established.</li></ul><h3>S-VAE 48 arm (secondary)</h3><div class=\"tw\"><table><thead><tr><th>task</th><th>successes / attempted (3 seeds \u00d7 20 fresh scenes)</th><th>rate</th><th>Wilson 95 %</th><th>per seed 42 / 43 / 44</th><th>technical failures</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>26 / 60</td><td>43.3 %</td><td>32\u201356</td><td>11/20 / 9/20 / 6/20</td><td>0</td></tr><tr><td>handover_block</td><td>0 / 60</td><td>0.0 %</td><td>-0\u20136</td><td>0/20 / 0/20 / 0/20</td><td>0</td></tr><tr><td>place_object_basket</td><td>0 / 17</td><td>0.0 %</td><td>0\u201318</td><td>0/7 / 0/6 / 0/4</td><td>0</td></tr></tbody></table></div><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><div class=\"grid\"><div class=\"card\"><video controls preload=\"metadata\" src=\"media/svae48_native__adjust_bottle__success__s42_scene6200001.mp4\"></video><p class=\"muted\">adjust_bottle \u00b7 success \u00b7 seed 42 \u00b7 scene 6200001 \u00b7 success in 134 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/svae48_native__adjust_bottle__success__s42_scene6200001.mp4\" data-name=\"svae48_native__adjust_bottle__success__s42_scene6200001.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/svae48_native__adjust_bottle__failure__s44_scene6200025.mp4\"></video><p class=\"muted\">adjust_bottle \u00b7 failure \u00b7 seed 44 \u00b7 scene 6200025 \u00b7 failure in 400 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/svae48_native__adjust_bottle__failure__s44_scene6200025.mp4\" data-name=\"svae48_native__adjust_bottle__failure__s44_scene6200025.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/svae48_native__adjust_bottle__median__s42_scene6200010.mp4\"></video><p class=\"muted\">adjust_bottle \u00b7 median \u00b7 seed 42 \u00b7 scene 6200010 \u00b7 failure in 400 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/svae48_native__adjust_bottle__median__s42_scene6200010.mp4\" data-name=\"svae48_native__adjust_bottle__median__s42_scene6200010.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/svae48_native__handover_block__failure__s44_scene6201022.mp4\"></video><p class=\"muted\">handover_block \u00b7 failure \u00b7 seed 44 \u00b7 scene 6201022 \u00b7 failure in 800 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/svae48_native__handover_block__failure__s44_scene6201022.mp4\" data-name=\"svae48_native__handover_block__failure__s44_scene6201022.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/svae48_native__handover_block__median__s43_scene6201010.mp4\"></video><p class=\"muted\">handover_block \u00b7 median \u00b7 seed 43 \u00b7 scene 6201010 \u00b7 failure in 800 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/svae48_native__handover_block__median__s43_scene6201010.mp4\" data-name=\"svae48_native__handover_block__median__s43_scene6201010.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/svae48_native__place_object_basket__failure__s44_scene6202006.mp4\"></video><p class=\"muted\">place_object_basket \u00b7 failure \u00b7 seed 44 \u00b7 scene 6202006 \u00b7 failure in 700 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/svae48_native__place_object_basket__failure__s44_scene6202006.mp4\" data-name=\"svae48_native__place_object_basket__failure__s44_scene6202006.mp4\">Download</button></div><div class=\"card\"><video controls preload=\"metadata\" src=\"media/svae48_native__place_object_basket__median__s43_scene6202002.mp4\"></video><p class=\"muted\">place_object_basket \u00b7 median \u00b7 seed 43 \u00b7 scene 6202002 \u00b7 failure in 700 actions</p><button type=\"button\" class=\"dl\" data-src=\"media/svae48_native__place_object_basket__median__s43_scene6202002.mp4\" data-name=\"svae48_native__place_object_basket__median__s43_scene6202002.mp4\">Download</button></div></div>"
   },
   {
    "id": "rep",
@@ -310,6 +436,42 @@
   }
  ],
  "media": {
-  "media/PLAN_ex3_20261017.md": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/PLAN_ex3_20261017.md"
+  "media/raw768_native__adjust_bottle__success__s42_scene6200002.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_native__adjust_bottle__success__s42_scene6200002.mp4",
+  "media/raw768_native__adjust_bottle__failure__s44_scene6200024.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_native__adjust_bottle__failure__s44_scene6200024.mp4",
+  "media/raw768_native__adjust_bottle__median__s42_scene6200006.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_native__adjust_bottle__median__s42_scene6200006.mp4",
+  "media/raw768_native__handover_block__failure__s44_scene6201022.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_native__handover_block__failure__s44_scene6201022.mp4",
+  "media/raw768_native__handover_block__median__s43_scene6201010.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_native__handover_block__median__s43_scene6201010.mp4",
+  "media/raw768_native__place_object_basket__failure__s44_scene6202008.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_native__place_object_basket__failure__s44_scene6202008.mp4",
+  "media/raw768_native__place_object_basket__median__s43_scene6202007.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_native__place_object_basket__median__s43_scene6202007.mp4",
+  "media/raw768_native_shift16__adjust_bottle__success__s42_scene6200008.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_native_shift16__adjust_bottle__success__s42_scene6200008.mp4",
+  "media/raw768_native_shift16__adjust_bottle__failure__s44_scene6200024.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_native_shift16__adjust_bottle__failure__s44_scene6200024.mp4",
+  "media/raw768_native_shift16__adjust_bottle__median__s44_scene6200023.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_native_shift16__adjust_bottle__median__s44_scene6200023.mp4",
+  "media/raw768_native_shift16__handover_block__failure__s44_scene6201022.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_native_shift16__handover_block__failure__s44_scene6201022.mp4",
+  "media/raw768_native_shift16__handover_block__median__s43_scene6201010.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_native_shift16__handover_block__median__s43_scene6201010.mp4",
+  "media/raw768_native_shift16__place_object_basket__failure__s44_scene6202008.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_native_shift16__place_object_basket__failure__s44_scene6202008.mp4",
+  "media/raw768_native_shift16__place_object_basket__median__s43_scene6202007.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_native_shift16__place_object_basket__median__s43_scene6202007.mp4",
+  "media/raw768_wide__adjust_bottle__success__s42_scene6200002.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_wide__adjust_bottle__success__s42_scene6200002.mp4",
+  "media/raw768_wide__adjust_bottle__failure__s44_scene6200024.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_wide__adjust_bottle__failure__s44_scene6200024.mp4",
+  "media/raw768_wide__adjust_bottle__median__s42_scene6200009.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_wide__adjust_bottle__median__s42_scene6200009.mp4",
+  "media/raw768_wide__handover_block__failure__s44_scene6201022.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_wide__handover_block__failure__s44_scene6201022.mp4",
+  "media/raw768_wide__handover_block__median__s43_scene6201010.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_wide__handover_block__median__s43_scene6201010.mp4",
+  "media/raw768_wide__place_object_basket__failure__s44_scene6202008.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_wide__place_object_basket__failure__s44_scene6202008.mp4",
+  "media/raw768_wide__place_object_basket__median__s43_scene6202006.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_wide__place_object_basket__median__s43_scene6202006.mp4",
+  "media/raw768_wide_shift16__adjust_bottle__success__s42_scene6200002.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_wide_shift16__adjust_bottle__success__s42_scene6200002.mp4",
+  "media/raw768_wide_shift16__adjust_bottle__failure__s44_scene6200024.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_wide_shift16__adjust_bottle__failure__s44_scene6200024.mp4",
+  "media/raw768_wide_shift16__adjust_bottle__median__s42_scene6200006.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_wide_shift16__adjust_bottle__median__s42_scene6200006.mp4",
+  "media/raw768_wide_shift16__handover_block__failure__s44_scene6201022.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_wide_shift16__handover_block__failure__s44_scene6201022.mp4",
+  "media/raw768_wide_shift16__handover_block__median__s43_scene6201010.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_wide_shift16__handover_block__median__s43_scene6201010.mp4",
+  "media/raw768_wide_shift16__place_object_basket__failure__s44_scene6202009.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_wide_shift16__place_object_basket__failure__s44_scene6202009.mp4",
+  "media/raw768_wide_shift16__place_object_basket__median__s43_scene6202017.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/raw768_wide_shift16__place_object_basket__median__s43_scene6202017.mp4",
+  "media/svae48_native__adjust_bottle__success__s42_scene6200001.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/svae48_native__adjust_bottle__success__s42_scene6200001.mp4",
+  "media/svae48_native__adjust_bottle__failure__s44_scene6200025.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/svae48_native__adjust_bottle__failure__s44_scene6200025.mp4",
+  "media/svae48_native__adjust_bottle__median__s42_scene6200010.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/svae48_native__adjust_bottle__median__s42_scene6200010.mp4",
+  "media/svae48_native__handover_block__failure__s44_scene6201022.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/svae48_native__handover_block__failure__s44_scene6201022.mp4",
+  "media/svae48_native__handover_block__median__s43_scene6201010.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/svae48_native__handover_block__median__s43_scene6201010.mp4",
+  "media/svae48_native__place_object_basket__failure__s44_scene6202006.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/svae48_native__place_object_basket__failure__s44_scene6202006.mp4",
+  "media/svae48_native__place_object_basket__median__s43_scene6202002.mp4": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/svae48_native__place_object_basket__median__s43_scene6202002.mp4",
+  "media/PLAN_ex3_20261017.md": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/PLAN_ex3_20261017.md",
+  "media/success-summary.json": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/success-summary.json"
  }
 }

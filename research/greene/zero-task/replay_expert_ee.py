@@ -12,12 +12,12 @@ from pathlib import Path
 
 import numpy as np
 
-STUDY = Path("/home/zifanz4/openwam-runtime/rae-factorial-20261010")
+STUDY = Path(os.environ.get("REPLAY_HELPERS", Path(__file__).resolve().parent))
 sys.path.insert(0, str(STUDY))
 from migration_render import configure_robot_paths, pin_renderer  # noqa: E402
 
 pin_renderer()
-sys.path.insert(0, "/home/zifanz4/openwam-runtime/assets-source/temporal-20260926/OpenWAM/benchmarks/robotwin")
+sys.path.insert(0, os.environ.get("ROBOTWIN_BENCH_DIR", "/home/zifanz4/openwam-runtime/assets-source/temporal-20260926/OpenWAM/benchmarks/robotwin"))
 from eval_policy_wrapper import bootstrap_robotwin_module  # noqa: E402
 
 mod = bootstrap_robotwin_module()

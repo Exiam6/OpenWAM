@@ -1,0 +1,17 @@
+{
+  "id": "place_object_basket-seed4102103",
+  "task": "place_object_basket",
+  "seed": 4102103,
+  "split": "dev",
+  "status": "complete",
+  "gpu": "2",
+  "pid": 1712362,
+  "started": "2026-10-06T14:36:54.187413-05:00",
+  "expert_success": true,
+  "frames": 244,
+  "timestep": 0.004000000189989805,
+  "duplicate_tick_intervals": 10,
+  "episode_seconds": 13.168000625446439,
+  "sha256": "8b57e81611a5d328e5d169baa89aa1c47c2c7b05ba29ac99dbf5e6edf3bc3e53",
+  "seconds": 43.853714185999706
+}

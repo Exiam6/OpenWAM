@@ -1,0 +1,17 @@
+{
+  "id": "handover_block-seed4101103",
+  "task": "handover_block",
+  "seed": 4101103,
+  "split": "dev",
+  "status": "complete",
+  "gpu": "2",
+  "pid": 1712362,
+  "started": "2026-10-06T14:36:02.333822-05:00",
+  "expert_success": true,
+  "frames": 282,
+  "timestep": 0.004000000189989805,
+  "duplicate_tick_intervals": 14,
+  "episode_seconds": 14.928000709041953,
+  "sha256": "45721e2c05f9d0ba93d5ed5add888743c1141cd1cc0de7ea2973fb51259abe9a",
+  "seconds": 51.847671474912204
+}

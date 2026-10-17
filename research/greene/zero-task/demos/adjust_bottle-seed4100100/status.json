@@ -1,0 +1,17 @@
+{
+  "id": "adjust_bottle-seed4100100",
+  "task": "adjust_bottle",
+  "seed": 4100100,
+  "split": "dev",
+  "status": "complete",
+  "gpu": "2",
+  "pid": 1712362,
+  "started": "2026-10-06T14:28:20.846328-05:00",
+  "expert_success": true,
+  "frames": 147,
+  "timestep": 0.004000000189989805,
+  "duplicate_tick_intervals": 5,
+  "episode_seconds": 7.972000378649682,
+  "sha256": "6408fc46e7fdcbb7c3004d4db9b78057507e60f11180c38f4067ad86f97d9ebb",
+  "seconds": 31.04298436595127
+}

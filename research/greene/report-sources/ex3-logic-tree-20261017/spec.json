@@ -1,0 +1,302 @@
+{
+ "title": "OpenWAM RAE Logic Tree",
+ "t0": "2026-10-17T01:50:00",
+ "now": "2026-10-17T02:14:09.145943",
+ "summary_html": "<p><b>Success rule:</b> RoboTwin's own per-task check within the native step limit, on 20 fresh expert-feasible scenes per task, 3 training seeds, paired across arms; technical failures count as failures.</p><div class=\"tw\"><table><thead><tr><th>arm</th><th>state</th><th>fresh scenes: adjust_bottle / handover_block / place_object_basket</th><th>earlier reading</th></tr></thead><tbody><tr><td><a href=\"#h1\">raw768 native (baseline)</a></td><td>checkpoints reused; evaluation queued</td><td>pending</td><td>ex2 (old scenes): 32/60 / 0/60 / 0/57</td></tr><tr><td><a href=\"#h1\">raw768 native, shift 16.43 (ex3-a)</a></td><td>training: steps 1150, 1100, 1150 / 20000</td><td>pending</td><td>new in ex3</td></tr><tr><td><a href=\"#h2\">raw768 wide head (ex2-b)</a></td><td>checkpoints reused; evaluation queued</td><td>pending</td><td>ex2 (old scenes): 24/60 / 0/60 / 0/57</td></tr><tr><td><a href=\"#h3\">raw768 wide head, shift 16.43 (ex3-b)</a></td><td>training: steps 1050, 1050, 925 / 20000</td><td>pending</td><td>new in ex3</td></tr><tr><td><a href=\"#base\">S-VAE 48 (ex2-c)</a></td><td>checkpoints reused; evaluation queued</td><td>pending</td><td>ex2 (old scenes): 33/60 / 0/60 / 0/57</td></tr></tbody></table></div><p><b>Now:</b> 0/6 ex3 trainings complete; 0/900 evaluation attempts recorded; final scoring pending. Deadline 2026-10-18 12:00 CDT. Host shenlong-gpu-01, 8 GPUs. Page generated 2026-10-17 02:14 CDT from run files.</p><p><b>Known gaps:</b> two tasks were at 0 for every arm in ex2; no Wan-VAE control arm yet; 3 seeds only. <a href='#plan'>Registered plan</a> \u00b7 <a href='#base'>evaluation baseline</a>.</p>",
+ "tree": [
+  {
+   "id": "Q",
+   "parent": null,
+   "title": "Can RAE ideas raise RoboTwin success?",
+   "text": "research question (user, 2026-10-02)",
+   "state": "root",
+   "href": "plan"
+  },
+  {
+   "id": "Q0",
+   "parent": "Q",
+   "title": "Is the benchmark doable at all?",
+   "text": "answered: yes (official 58/60)",
+   "state": "root",
+   "href": null
+  },
+  {
+   "id": "OFF",
+   "parent": "Q0",
+   "title": "Official checkpoint (Torch)",
+   "text": "58/60 on the 60 old scenes",
+   "state": "done",
+   "href": "official"
+  },
+  {
+   "id": "REN",
+   "parent": "OFF",
+   "title": "Renderer divergence (OIDN)",
+   "text": "0.51\u20131.03 uint8 vs reference PNGs",
+   "state": "done",
+   "href": "render"
+  },
+  {
+   "id": "Q1",
+   "parent": "Q",
+   "title": "Does the latent width matter?",
+   "text": "768-dim vs 48-dim",
+   "state": "root",
+   "href": null
+  },
+  {
+   "id": "EX1",
+   "parent": "Q1",
+   "title": "ex1: 66 demos, 4k steps",
+   "text": "5/42 \u00b7 5/42 \u00b7 3/42 (native \u00b7 wide \u00b7 S-VAE)",
+   "state": "done",
+   "href": "ex1"
+  },
+  {
+   "id": "EX2",
+   "parent": "EX1",
+   "title": "ex2: 11\u00d7 data, 20k steps",
+   "text": "adjust_bottle 32 \u00b7 24 \u00b7 33 of 60 (native \u00b7 wide \u00b7 S-VAE); 2 tasks at 0",
+   "state": "done",
+   "href": "ex2"
+  },
+  {
+   "id": "B0",
+   "parent": "EX2",
+   "title": "Fresh-scene evaluation baseline",
+   "text": "screening after training",
+   "state": "wait",
+   "href": "base"
+  },
+  {
+   "id": "Q2",
+   "parent": "Q",
+   "title": "Does RAE's noise shift help?",
+   "text": "shift 5 \u2192 16.43",
+   "state": "root",
+   "href": null
+  },
+  {
+   "id": "EX0",
+   "parent": "Q2",
+   "title": "ex0-shift: MSE audit (corrected)",
+   "text": "unweighted MSE ratio 0.997\u20131.022; old 1.7\u00d7 reading retracted",
+   "state": "done",
+   "href": "shift"
+  },
+  {
+   "id": "H1",
+   "parent": "EX0",
+   "title": "H1 ex3-a: shift16, native head",
+   "text": "training: steps 1150, 1100, 1150 / 20000",
+   "state": "run",
+   "href": "h1"
+  },
+  {
+   "id": "Q3",
+   "parent": "Q",
+   "title": "Does the RAE wide head help?",
+   "text": "native head \u2192 3072-wide head",
+   "state": "root",
+   "href": null
+  },
+  {
+   "id": "H2",
+   "parent": "Q3",
+   "title": "H2 ex2-b: wide head on fresh scenes",
+   "text": "checkpoints reused; evaluation queued",
+   "state": "wait",
+   "href": "h2"
+  },
+  {
+   "id": "H3A",
+   "parent": "H2",
+   "title": "H3a ex3-b: wide vs native at shift16",
+   "text": "training: steps 1050, 1050, 925 / 20000",
+   "state": "run",
+   "href": "h3"
+  },
+  {
+   "id": "H3B",
+   "parent": "H1",
+   "title": "H3b ex3-b: shift16 vs 5 under wide head",
+   "text": "training: steps 1050, 1050, 925 / 20000",
+   "state": "run",
+   "href": "h3"
+  },
+  {
+   "id": "Q4",
+   "parent": "Q",
+   "title": "Missing control: Wan-VAE latent arm",
+   "text": "not started; needs user decision",
+   "state": "wait",
+   "href": "vae"
+  }
+ ],
+ "lanes": [
+  {
+   "lane": "ex3-a training",
+   "label": "seed 42",
+   "start": "2026-10-17T02:08:07.167134",
+   "end": "2026-10-17T03:38:02.075246",
+   "state": "run",
+   "href": "h1",
+   "projected": true
+  },
+  {
+   "lane": "ex3-a training",
+   "label": "seed 43",
+   "start": "2026-10-17T02:08:08.103298",
+   "end": "2026-10-17T03:40:13.603637",
+   "state": "run",
+   "href": "h1",
+   "projected": true
+  },
+  {
+   "lane": "ex3-a training",
+   "label": "seed 44",
+   "start": "2026-10-17T02:08:08.317862",
+   "end": "2026-10-17T03:38:06.348865",
+   "state": "run",
+   "href": "h1",
+   "projected": true
+  },
+  {
+   "lane": "ex3-b training",
+   "label": "seed 42",
+   "start": "2026-10-17T02:08:07.932915",
+   "end": "2026-10-17T03:44:37.089866",
+   "state": "run",
+   "href": "h3",
+   "projected": true
+  },
+  {
+   "lane": "ex3-b training",
+   "label": "seed 43",
+   "start": "2026-10-17T02:08:08.257583",
+   "end": "2026-10-17T03:43:21.720862",
+   "state": "run",
+   "href": "h3",
+   "projected": true
+  },
+  {
+   "lane": "ex3-b training",
+   "label": "seed 44",
+   "start": "2026-10-17T02:08:08.372714",
+   "end": "2026-10-17T03:55:59.971485",
+   "state": "run",
+   "href": "h3",
+   "projected": true
+  },
+  {
+   "lane": "scene screening",
+   "label": "adjust_bottle (projected)",
+   "start": "2026-10-17T03:55:59.971485",
+   "end": "2026-10-17T04:55:59.971485",
+   "state": "wait",
+   "href": "base",
+   "projected": true
+  },
+  {
+   "lane": "scene screening",
+   "label": "handover_block (projected)",
+   "start": "2026-10-17T03:55:59.971485",
+   "end": "2026-10-17T04:55:59.971485",
+   "state": "wait",
+   "href": "base",
+   "projected": true
+  },
+  {
+   "lane": "scene screening",
+   "label": "place_object_basket (projected)",
+   "start": "2026-10-17T03:55:59.971485",
+   "end": "2026-10-17T04:55:59.971485",
+   "state": "wait",
+   "href": "base",
+   "projected": true
+  },
+  {
+   "lane": "evaluation (15 cells, projected)",
+   "label": "15 cells \u00d7 ~2.4 GPU-h on 8 GPUs",
+   "start": "2026-10-17T04:55:59.971485",
+   "end": "2026-10-17T09:55:59.971485",
+   "state": "wait",
+   "href": "h1",
+   "projected": true
+  }
+ ],
+ "milestones": [
+  {
+   "at": "2026-10-17T01:50:00",
+   "label": "authorization"
+  },
+  {
+   "at": "2026-10-18T12:00:00",
+   "label": "deadline 12:00"
+  },
+  {
+   "at": "2026-10-17T02:07:58.580932",
+   "label": "L1 preflight passed"
+  }
+ ],
+ "views": [
+  {
+   "id": "plan",
+   "title": "Registered plan (PLAN_ex3_20261017.md, committed before launch)",
+   "html": "<pre style='white-space:pre-wrap;font-size:.85rem'># PLAN \u2014 ex3: does RAE's dimension-dependent noise shift, alone or with the wide head, raise RoboTwin closed-loop success?\n\nRegistered 2026-10-17 before launch on shenlong-gpu-01 (authorization: all eight GPUs until 2026-10-18 12:00 America/Chicago).\nWritten to satisfy `research_lab/TOP_PRIORITY/EXPERIMENT_PROTOCOL.md` \u00a72. Study runtime: `/home/zifanz4/openwam-runtime/rae-factorial-20261010`\n(mirrored from gpu-02; the 2026-10-10 preregistration in `EXPERIMENT_PLAN.md` is the parent of this file; amendments are listed at the end).\n\n## Question and research question it serves\n\nResearch question (user's words, 2026-10-02): can the RAE representation-autoencoder ideas raise the OpenWAM policy's RoboTwin closed-loop success?\n\nThis experiment answers, yes / no / by how much, for the 768-dim DINOv3 (\"raw768\") route:\n\n- **H1** Does changing the training video-noise shift from 5 to 16.4317 (RAE prescription for m = 1,105,920 nominal dims), with the native head, change paired fresh-scene success?\n- **H2** Does the RAE wide head (3072 / 24 heads / depth 1 / MLP 2), at shift 5, change paired fresh-scene success? (Replication on fresh scenes of the ex2 reading 24/60 vs 32/60 on adjust_bottle.)\n- **H3** Is there an interaction: wide head at shift 16.4317 vs native head at shift 16.4317 (H3a), and shift 16.4317 vs 5 under the wide head (H3b)?\n\nWhat it cannot answer: whether these changes help a Wan-VAE latent policy (no VAE arm), whether they help at official scale (20k steps, 765 demos, 12-layer 1024-dim DiT only), and anything about the two tasks that were at zero for every arm in ex2 if they stay at zero here (then only adjust_bottle carries information).\n\n## Baseline\n\n`raw768_native` from study `rae-policy-expanded-20261006` (ex2): 20,000 steps on 765 train / 76 dev demos, seeds 42/43/44, source commit `openwam-rae-research@e983676b`.\nTrusted evaluation: 60 old scenes \u00d7 3 seeds, adjust_bottle 32/60, handover_block 0/60, place_object_basket 0/57; results in\n`research/greene/records/rae-factorial-preparation-20261010/originals/evaluation-ledger.json`. Its three checkpoints are reused here unchanged (sha256 in each run's `result.json`); they are re-evaluated on the fresh scenes so every number on one table comes from one protocol (REPORTING rule 19).\n\n## Hypotheses and competing explanations\n\n- H1 (shift): RAE's shift mechanism says high-dimensional latents need more noise during training; the prescription for our latent is 16.43. Competing explanation: the effective dimension of DINOv3 features is far below nominal, so 5 is already adequate and 16.43 only wastes training on near-pure-noise samples. The corrected sigma-curve audit of 2026-10-10 (unweighted MSE ratio 0.997\u20131.022 across \u03c3) already suggests the two settings fit equally; closed-loop success decides.\n- H2 (wide head): a 3072-wide shallow head relieves the 1024-dim trunk bottleneck for 3072-dim patches. Competing explanation: the head fits the video target (dev video loss 3.6\u00d7 lower in ex1) without changing the action stream, so success is unchanged or lower (ex2: lower).\n- H3 (interaction): the RAE paper combines both; either may need the other. The 2\u00d72 design separates them: H3a/H3b are single-variable contrasts at the other factor's new level.\n\n## Intervention (single change per contrast; L0 verified 2026-10-17)\n\n`diff templates/raw768_native/config.yaml templates/raw768_native_shift16/config.yaml` \u2192 only `shift_video: 5.0 \u2192 16.4317` (plus output paths).\n`diff templates/raw768_wide/config.yaml templates/raw768_wide_shift16/config.yaml` \u2192 the same single line.\n`diff templates/raw768_native/config.yaml templates/raw768_wide/config.yaml` \u2192 only the four `rae_head_*` lines.\nAction shift stays 5. Loss, weights, normalization, horizon, deployment steps unchanged.\n\n## Held fixed\n\nData: `cache.pt` sha256 `2f8419ff\u2026` (6120 train / 304 dev windows), normalization stats `c3012523\u2026`; common initialization per seed (`initialization/common-seed{42,43,44}.safetensors`, hashes in `input-freeze.json`); batch schedule and noise streams paired by seed; 20,000 steps, batch 3 \u00d7 accumulation 2, AdamW 3e-5, cosine with 1000 warmup; final checkpoint only (no selection by dev loss). Evaluation: the first 20 expert-feasible scenes among 40 fixed candidates per task (seeds 6200000+, 6201000+, 6202000+; overlap with every known protocol checked in `seed-exclusion.json`), clean condition, native success rule, 600 s per episode, frozen policy server (10 denoise steps, horizon 8), one host and one renderer for all 900 attempts. Training uses precomputed latents, so the host change does not touch the training inputs.\n\n## Metrics\n\nPrimary: task-balanced paired success-rate difference (candidate \u2212 baseline) over 3 tasks \u00d7 20 scenes \u00d7 3 training seeds, scene-cluster bootstrap 95 % interval (10,000 draws, seed 20261010), per-seed differences reported (`score.py`). Technical failures count as unsuccessful and are reported separately. Secondary: per-task counts, the two-variable diagonal (wide+shift16 vs native, labelled confounded), S-VAE vs raw768. Diagnostic only, never a success claim: fixed-sigma unweighted video MSE and action flow loss (`eval_sigma_curve_v2.py`).\n\n## Predictions\n\n| contrast | predicted direction | rough size |\n| --- | --- | --- |\n| H1 shift16 vs 5 (native head) | no detectable change | \\|\u0394\\| &lt; 5 pp |\n| H2 wide vs native (shift 5) | zero or negative, as in ex2 | \u22125 \u2026 0 pp |\n| H3a wide vs native at shift16 | undecided; the paper's claim predicts positive | unknown |\n| H3b shift16 vs 5 under wide head | undecided | unknown |\n\n## Criterion (fixed before any result)\n\nSupported: \u0394 \u2265 +5 pp and the interval's lower bound &gt; 0. Refuted: \u0394 \u2264 \u22125 pp and upper bound &lt; 0. Otherwise undecided; no extra scenes are added to reach significance. Three training seeds do not establish generalization over training randomness; the report says so.\n\n## Budget, deadline, stop and rollback\n\nEstimated: 6 trainings \u00d7 ~1.5 GPU-h (ex2 measured), 3 scene screenings \u2264 2 h each, 15 evaluation cells \u00d7 ~2.4 GPU-h \u2248 45 GPU-h; on eight free gpu-01 cards \u2248 8\u201310 h wall. Hard deadline 2026-10-18 17:00 UTC written into `protocol.json`; every child process is killed at it. Stop and report (no silent fix) when: a preflight fails; a training run fails (no automatic retry, per protocol); a scene screening hits an infrastructure error; the baseline checkpoint fails strict reload or its sha256; the simulator gate (`simulation_smoke.py`) fails on this host; the deadline would be exceeded. Rollback: nothing is merged; the study directory is retained whole.\n\n## Stages (EXPERIMENT_PROTOCOL \u00a74)\n\n| stage | here | pass |\n| --- | --- | --- |\n| L0 static | config diffs above | done 2026-10-17 |\n| L1 one batch | `train.py --preflight` 3 steps per new arm: finite losses, non-zero trunk/action/wide-head gradients, exact serialization | required on gpu-01 before any training (gpu-02's 10-11 pass is archived, not reused) |\n| L2 tiny | not applicable to a fixed-recipe retrain; covered by L1 plus `initial-dev.json` | \u2014 |\n| L3 subset | simulator gate on one training scene per task before each evaluation cell; manual renderer check on this host before the post-workers start | required |\n| L4 full | 6 trainings, 3 screenings, 15 cells | the comparison |\n\n## Expected outputs\n\n`runs/&lt;arm&gt;-seed&lt;s&gt;/{result.json, metrics.jsonl, final-dev.json, checkpoint_step_20000.safetensors}`; `scenes/&lt;task&gt;/manifest.json`; `evaluation/fresh/&lt;arm&gt;-seed&lt;s&gt;/&lt;task&gt;/clean/seed-&lt;n&gt;/{result.json, trace.jsonl, frames/}`; `success-summary.json`; a generated logic-tree page with per-contrast tables, policy-input videos (success / median / failure per arm and task) and download buttons.\n\n## Names (EXPERIMENT_NAMING)\n\n| run | name | setup | purpose |\n| --- | --- | --- | --- |\n| raw768_native_shift16 \u00d73 seeds | `ex3-a_shift16_1017` | native head, shift_video 16.4317 | H1 |\n| raw768_wide_shift16 \u00d73 seeds | `ex3-b_wideshift16_1017` | wide head, shift_video 16.4317 | H3 |\n| reused ex2 arms | `ex2-a_raw768native_1006`, `ex2-b_widehead_1006`, `ex2-c_svae48_1006` | from `rae-policy-expanded-20261006` | baseline, H2, S |\n\nHistory table (old name \u2192 standard name): `rae-policy-20261001` \u2192 ex1 (3 arms, 4000 steps, 66 demos); `rae-policy-expanded-20261006` \u2192 ex2; `rae-shift-20261003` \u2192 ex0-shift (retracted reading, see `RAE_SHIFT_RESULT.md`).\n\n## Amendments to the 2026-10-10 preregistration (all before launch, none after a result)\n\n1. Host moved from gpu-02 (GPU1/2 idle-only) to gpu-01 (all eight GPUs, shared low-utilization cards allowed); deadline 2026-10-18 17:00 UTC; polling 3 \u00d7 60 s; training attempt limit 4 h. (`amend_gpu01_20261017.py`, `resource-amendment-gpu01.json`.)\n2. Primary comparison re-registered from the two-variable diagonal to the four single-variable contrasts H1/H2/H3a/H3b (rule 12); the diagonal stays as a labelled confounded secondary. (`score.py`.)\n3. Evaluation logs every policy-input frame (JPEG per policy call, three cameras) for the report's videos; success rule and control flow unchanged. (`evaluate_policy.py` patch inside the amendment script.)\n4. gpu-02's two preflight passes are archived; preflight is rerun on gpu-01 as the L1 gate for this host.\n</pre><button type=\"button\" class=\"dl\" data-src=\"media/PLAN_ex3_20261017.md\" data-name=\"PLAN_ex3_20261017.md\">Download</button>"
+  },
+  {
+   "id": "h1",
+   "title": "H1 \u2014 ex3-a: video shift 5 \u2192 16.4317 with the native head",
+   "html": "<h3>Background</h3><p>RAE (Zheng et al. 2025) prescribes a dimension-dependent noise shift \u03b1 = \u221a(m/4096); for our 1,105,920-dim raw768 latent that is 16.43, while OpenWAM uses 5. The corrected 2026-10-10 audit found no fit difference (unweighted MSE ratio 0.997\u20131.022), so success is the only remaining test.</p><h3>Question</h3><p>Does training raw768_native with shift_video 16.4317 instead of 5 change paired fresh-scene success?</p><h3>Single variable, everything else locked</h3><p><code>shift_video: 5.0 \u2192 16.4317</code> in the training config; action shift stays 5. Same 765/76 demonstrations (cache.pt sha256 2f8419ff\u2026), common per-seed initialization, paired batch schedule and noise streams, 20,000 steps, final checkpoint only; same 60 fresh scenes, native success rule, 600 s per episode, one host and renderer for every arm.</p><h3>Criterion (written before the run)</h3><p>Supported if \u0394 \u2265 +5 pp and the 95 % interval excludes 0; refuted if \u0394 \u2264 \u22125 pp and the interval excludes 0; otherwise undecided. Prediction: no detectable change (|\u0394| < 5 pp).</p><h3>What each outcome changes</h3><p>Supported \u2192 the shift prescription transfers to actions and becomes the default for the raw768 route. Refuted \u2192 5 stays and the mechanism is marked as not transferring. Undecided \u2192 the raw768 route is not pursued further through the shift; the next decision is the missing Wan-VAE control.</p><h3>Status</h3><div class=\"tw\"><table><thead><tr><th>arm</th><th>seed</th><th>GPU</th><th>started (CDT)</th><th>finished</th><th>state</th></tr></thead><tbody><tr><td>raw768 native, shift 16.43 (ex3-a)</td><td>42</td><td>6</td><td>10-17 02:08</td><td>\u2014</td><td>step 1150 / 20000, loss 1.340</td></tr><tr><td>raw768 native, shift 16.43 (ex3-a)</td><td>43</td><td>4</td><td>10-17 02:08</td><td>\u2014</td><td>step 1100 / 20000, loss 1.367</td></tr><tr><td>raw768 native, shift 16.43 (ex3-a)</td><td>44</td><td>5</td><td>10-17 02:08</td><td>\u2014</td><td>step 1150 / 20000, loss 0.961</td></tr><tr><td>raw768 wide head, shift 16.43 (ex3-b)</td><td>42</td><td>2</td><td>10-17 02:08</td><td>\u2014</td><td>step 1050 / 20000, loss 0.429</td></tr><tr><td>raw768 wide head, shift 16.43 (ex3-b)</td><td>43</td><td>1</td><td>10-17 02:08</td><td>\u2014</td><td>step 1050 / 20000, loss 0.219</td></tr><tr><td>raw768 wide head, shift 16.43 (ex3-b)</td><td>44</td><td>7</td><td>10-17 02:08</td><td>\u2014</td><td>step 925 / 20000, loss 0.643</td></tr></tbody></table></div><h3>L1 gate on this host (3-step preflight)</h3><div class=\"tw\"><table><thead><tr><th>arm</th><th>result</th><th>trunk input grad</th><th>action grad</th><th>wide-head grad</th><th>serialization exact</th><th>peak GiB</th></tr></thead><tbody><tr><td>raw768_native_shift16</td><td>pass</td><td>0.2613</td><td>0.2274</td><td>n/a</td><td>yes</td><td>16.4</td></tr><tr><td>raw768_wide_shift16</td><td>pass</td><td>0.2076</td><td>0.2270</td><td>0.0065</td><td>yes</td><td>18.6</td></tr></tbody></table></div><h3>Result: raw768_native_shift16 (candidate)</h3><div class=\"tw\"><table><thead><tr><th>task</th><th>successes / attempted (3 seeds \u00d7 20 fresh scenes)</th><th>rate</th><th>Wilson 95 %</th><th>per seed 42 / 43 / 44</th><th>technical failures</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>handover_block</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>place_object_basket</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr></tbody></table></div><h3>Result: raw768_native (baseline, re-evaluated on the same fresh scenes)</h3><div class=\"tw\"><table><thead><tr><th>task</th><th>successes / attempted (3 seeds \u00d7 20 fresh scenes)</th><th>rate</th><th>Wilson 95 %</th><th>per seed 42 / 43 / 44</th><th>technical failures</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>handover_block</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>place_object_basket</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr></tbody></table></div><h3>Contrast H1</h3><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><h3>Videos (policy input: head | left wrist | right wrist, one frame per policy call)</h3><p class=\"muted\">No evaluation episodes for this arm yet; videos appear here when the first cell finishes.</p><h3>Baseline videos</h3><p class=\"muted\">No evaluation episodes for this arm yet; videos appear here when the first cell finishes.</p>"
+  },
+  {
+   "id": "h2",
+   "title": "H2 \u2014 ex2-b: RAE wide head at shift 5, re-evaluated on fresh scenes",
+   "html": "<h3>Background</h3><p>ex1 showed the wide head cuts held-out video loss 3.6\u00d7 without changing success; ex2 (60 old scenes) read 24/60 vs 32/60 on adjust_bottle (paired sign test p \u2248 0.10). Those scenes were used repeatedly, so ex3 re-measures on fresh scenes.</p><h3>Question</h3><p>Does the 3072-wide shallow head, with shift 5, change paired fresh-scene success?</p><h3>Single variable, everything else locked</h3><p>the four <code>rae_head_*</code> config lines (width 3072, 24 heads, depth 1, MLP 2). Same 765/76 demonstrations (cache.pt sha256 2f8419ff\u2026), common per-seed initialization, paired batch schedule and noise streams, 20,000 steps, final checkpoint only; same 60 fresh scenes, native success rule, 600 s per episode, one host and renderer for every arm. Checkpoints are the ex2 ones (sha256 verified before each cell).</p><h3>Criterion (written before the run)</h3><p>Same \u00b15 pp / interval criterion. Prediction: zero or negative (\u22125 \u2026 0 pp).</p><h3>What each outcome changes</h3><p>Refuted \u2192 the wide head alone is closed. Undecided \u2192 stays a non-result. Supported \u2192 contradicts ex2 and would need a third independent cohort before any claim.</p><h3>Result: raw768_wide</h3><div class=\"tw\"><table><thead><tr><th>task</th><th>successes / attempted (3 seeds \u00d7 20 fresh scenes)</th><th>rate</th><th>Wilson 95 %</th><th>per seed 42 / 43 / 44</th><th>technical failures</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>handover_block</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>place_object_basket</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr></tbody></table></div><h3>Contrast H2</h3><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><h3>Videos</h3><p class=\"muted\">No evaluation episodes for this arm yet; videos appear here when the first cell finishes.</p>"
+  },
+  {
+   "id": "h3",
+   "title": "H3 \u2014 ex3-b: wide head and shift 16.4317 together (two single-variable contrasts)",
+   "html": "<h3>Background</h3><p>The RAE paper uses the wide head together with the shift; either might need the other. ex3-b is the fourth cell of the 2\u00d72 design.</p><h3>Question</h3><p>H3a: at shift 16.4317, does the wide head change success (vs raw768_native_shift16)? H3b: under the wide head, does shift 16.4317 change success (vs raw768_wide)?</p><h3>Single variable, everything else locked</h3><p>H3a changes only the head; H3b changes only the shift. Same 765/76 demonstrations (cache.pt sha256 2f8419ff\u2026), common per-seed initialization, paired batch schedule and noise streams, 20,000 steps, final checkpoint only; same 60 fresh scenes, native success rule, 600 s per episode, one host and renderer for every arm.</p><h3>Criterion (written before the run)</h3><p>Same \u00b15 pp / interval criterion for each contrast. The two-variable diagonal (wide+shift16 vs native) is reported but labelled confounded. Prediction: undecided.</p><h3>What each outcome changes</h3><p>If H3a or H3b is supported while H1 and H2 are not, the effect is an interaction and needs a replication cohort before being used. If none is supported, the RAE transfer to this policy is closed at this scale.</p><h3>Result: raw768_wide_shift16</h3><div class=\"tw\"><table><thead><tr><th>task</th><th>successes / attempted (3 seeds \u00d7 20 fresh scenes)</th><th>rate</th><th>Wilson 95 %</th><th>per seed 42 / 43 / 44</th><th>technical failures</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>handover_block</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>place_object_basket</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr></tbody></table></div><h3>Contrast H3a</h3><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><h3>Contrast H3b</h3><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><h3>Confounded diagonal (two variables)</h3><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><h3>Videos</h3><p class=\"muted\">No evaluation episodes for this arm yet; videos appear here when the first cell finishes.</p>"
+  },
+  {
+   "id": "base",
+   "title": "Fresh-scene evaluation baseline (frozen before any policy is scored)",
+   "html": "<p>20 expert-feasible scenes per task, taken in order from 40 fixed candidate seeds (6200000+, 6201000+, 6202000+). The expert planner, not any learned policy, decides feasibility; infeasible candidates are retained in the manifest. Overlap with every known training/evaluation seed list was checked (<code>seed-exclusion.json</code>).</p><div class=\"tw\"><table><thead><tr><th>task</th><th>accepted</th><th>attempted candidates</th><th>state</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>0</td><td>0</td><td>not started</td></tr><tr><td>handover_block</td><td>0</td><td>0</td><td>not started</td></tr><tr><td>place_object_basket</td><td>0</td><td>0</td><td>not started</td></tr></tbody></table></div><h3>Success rule</h3><p>RoboTwin's native per-task success check at any step within the native step limit (400 / 800 / 700 actions); an episode is a technical failure if the initial render deviates more than 1 uint8 level from the frozen reference, if the 600 s wall limit is hit, or if the simulator errors; technical failures count as unsuccessful in every contrast and are reported separately.</p><h3>Known gaps</h3><ul><li>handover_block and place_object_basket were at zero for every arm in ex2; if they stay at zero here they carry no information and the contrasts rest on adjust_bottle alone.</li><li>Rendering on this host uses OIDN 2.3.3 (the only denoiser that runs on Blackwell); the policies were trained on data collected with the same denoiser on gpu-02.</li><li>Three training seeds; generalization over training randomness is not established.</li></ul><h3>S-VAE 48 arm (secondary)</h3><div class=\"tw\"><table><thead><tr><th>task</th><th>successes / attempted (3 seeds \u00d7 20 fresh scenes)</th><th>rate</th><th>Wilson 95 %</th><th>per seed 42 / 43 / 44</th><th>technical failures</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>handover_block</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr><tr><td>place_object_basket</td><td>pending</td><td>\u2014</td><td>\u2014</td><td>\u2014</td><td>\u2014</td></tr></tbody></table></div><p class='muted'>Contrast pending: the cohort is scored only when all 900 attempts are terminal (score.py).</p><p class=\"muted\">No evaluation episodes for this arm yet; videos appear here when the first cell finishes.</p>"
+  },
+  {
+   "id": "ex2",
+   "title": "ex2 \u2014 11\u00d7 data and 5\u00d7 steps, same recipe (rae-policy-expanded-20261006, done 2026-10-08)",
+   "html": "<h3>Background</h3><p>ex1 could not separate arms: 13 successes in 126 cells. The question was whether data volume was the bottleneck.</p><h3>Question</h3><p>With 765 train demos and 20,000 steps, do the two zero tasks move, and do the three representations differ?</p><h3>Single variable, everything else locked</h3><p>Demo count and steps were raised together (confounded by design; both marked). Arms, seeds, evaluation scenes unchanged.</p><h3>Criterion (written before the run)</h3><p>Per-task success on 60 scenes \u00d7 3 seeds; paired sign test between arms.</p><h3>What each outcome changes</h3><p>Observed: both zero tasks stayed at zero; 768-dim vs 48-dim indistinguishable; wide head lower (p \u2248 0.10, not below the registered threshold). Decision taken: stop scaling data; test the RAE mechanisms directly (ex3).</p><div class=\"tw\"><table><thead><tr><th>arm</th><th>adjust_bottle</th><th>handover_block</th><th>place_object_basket</th></tr></thead><tbody><tr><td>S-VAE 48 (ex2-c)</td><td>33 / 60 (55.0 %; per seed 12 / 13 / 8)</td><td>0 / 60 (0.0 %; per seed 0 / 0 / 0)</td><td>0 / 57 (0.0 %; per seed 0 / 0 / 0)</td></tr><tr><td>raw768 native (baseline)</td><td>32 / 60 (53.3 %; per seed 11 / 11 / 10)</td><td>0 / 60 (0.0 %; per seed 0 / 0 / 0)</td><td>0 / 57 (0.0 %; per seed 0 / 0 / 0)</td></tr><tr><td>raw768 wide head (ex2-b)</td><td>24 / 60 (40.0 %; per seed 8 / 11 / 5)</td><td>0 / 60 (0.0 %; per seed 0 / 0 / 0)</td><td>0 / 57 (0.0 %; per seed 0 / 0 / 0)</td></tr></tbody></table></div><p>Paired sign test on the 177 valid scene\u00d7seed pairs (arm-only successes vs base-only successes):</p><div class=\"tw\"><table><thead><tr><th>arm</th><th>base</th><th>valid pairs</th><th>arm only</th><th>base only</th><th>two-sided exact p</th></tr></thead><tbody><tr><td>raw768_wide</td><td>raw768_native</td><td>177</td><td>5</td><td>13</td><td>0.096</td></tr><tr><td>raw768_native</td><td>svae48_native</td><td>177</td><td>13</td><td>14</td><td>1.000</td></tr><tr><td>raw768_wide</td><td>svae48_native</td><td>177</td><td>6</td><td>15</td><td>0.078</td></tr></tbody></table></div><h3>Files the numbers come from</h3><ul><li><code>/home/zifanz4/openwam-torch-dispatch/research/greene/records/expanded-20261006-audit-20261009.json</code></li></ul>"
+  },
+  {
+   "id": "ex1",
+   "title": "ex1 \u2014 three representations, 66 demos, 4,000 steps (rae-policy-20261001)",
+   "html": "<p>First controlled comparison of raw768 native, raw768 wide head and S-VAE 48 (3 seeds, 15 scenes \u00d7 3 tasks). Numbers below are copied from the 2026-10-02 report table in EXPERIMENT_PLAN.md \u00a71 (the study's ledger lives on gpu-02).</p><div class=\"tw\"><table><thead><tr><th>arm</th><th>closed-loop successes / 42 valid cells</th></tr></thead><tbody><tr><td>raw768 native (baseline)</td><td>5/42</td></tr><tr><td>raw768 wide head (ex2-b)</td><td>5/42</td></tr><tr><td>S-VAE 48 (ex2-c)</td><td>3/42</td></tr></tbody></table></div><p>Reading: all 13 successes came from adjust_bottle; the wide head lowered dev video loss 3.6\u00d7 without changing success; cheap proxies (dev losses) did not predict the endpoint.</p>"
+  },
+  {
+   "id": "official",
+   "title": "Official checkpoint on the same 60 scenes (Torch cluster, 2026-09-29)",
+   "html": "<p>Question: are the two zero tasks solvable at all under our evaluation? The released OpenWAM-Alpha-Sim-RoboTwin-Full checkpoint (118,655 steps, Wan-VAE latent, 30-layer DiT) was run on byte-identical scenes with the same clean condition.</p><div class=\"tw\"><table><thead><tr><th>task</th><th>official checkpoint, 60 old scenes</th></tr></thead><tbody><tr><td>adjust_bottle</td><td>20 / 20</td></tr><tr><td>handover_block</td><td>20 / 20</td></tr><tr><td>place_object_basket</td><td>18 / 20</td></tr><tr><td>total</td><td>58 / 60</td></tr></tbody></table></div><p>Both zero-success tasks are solvable by the official checkpoint: handover_block 20/20, place_object_basket 18/20 (paired subset 5/5 each). The zeros in rae-policy-20261001 are not a task/eval-environment defect; scale/model is the leading explanation.</p><h3>Files the numbers come from</h3><ul><li><code>/home/zifanz4/openwam-torch-dispatch/research/greene/records/official-baseline-20261002-result.json</code></li></ul>"
+  },
+  {
+   "id": "render",
+   "title": "Renderer divergence: OIDN 2.3.3 vs the 2.0.1 reference renders",
+   "html": "<p>Same physics state, same camera: renders on gpu-02 differ from the reference PNGs by 0.51\u20131.03 uint8 levels (median 0.57). Torch reproduced the deviation to 3\u20134 decimals by preloading OIDN 2.3.3 on an L40S, so the cause is the denoiser version, not the GPU or driver. OIDN 2.0.1 cannot run on Blackwell (no sm_120 kernels). Consequence: every arm in ex2/ex3 is evaluated with the same 2.3.3 renderer it was trained with; the official checkpoint still reached 58/60 under it.</p><h3>Files the numbers come from</h3><ul><li><code>/home/zifanz4/openwam-torch-dispatch/research/greene/records/oidn-ab-20261003.json</code></li><li><code>/home/zifanz4/openwam-torch-dispatch/research/greene/OIDN_AB_RESULT_20261003.md</code></li></ul>"
+  },
+  {
+   "id": "shift",
+   "title": "ex0-shift \u2014 the 2026-10-03 shift experiment and its 2026-10-10 correction",
+   "html": "<p>Three seeds were trained at shift 16.4317 (4,000 steps, 66 demos) and read as 1.7\u00d7 worse video loss at every \u03c3. The 2026-10-10 audit showed the old evaluator kept each arm's training loss weights, which differ by shift; dividing them out leaves the unweighted MSE ratios below. The 'shift path is closed' conclusion was retracted; closed-loop success (H1) is the remaining test.</p><div class=\"tw\"><table><thead><tr><th>target \u03c3</th><th>old weighted loss ratio (s42)</th><th>training-weight ratio</th><th>unweighted MSE ratio s42</th><th>s43</th></tr></thead><tbody><tr><td>0.10</td><td>1.740</td><td>1.709</td><td>1.0178</td><td>1.0176</td></tr><tr><td>0.20</td><td>1.692</td><td>1.658</td><td>1.0207</td><td>1.0209</td></tr><tr><td>0.30</td><td>1.687</td><td>1.652</td><td>1.0212</td><td>1.0218</td></tr><tr><td>0.40</td><td>1.694</td><td>1.665</td><td>1.0172</td><td>1.0188</td></tr><tr><td>0.50</td><td>1.690</td><td>1.666</td><td>1.0144</td><td>1.0159</td></tr><tr><td>0.60</td><td>1.684</td><td>1.665</td><td>1.0115</td><td>1.0130</td></tr><tr><td>0.70</td><td>1.683</td><td>1.668</td><td>1.0089</td><td>1.0101</td></tr><tr><td>0.80</td><td>1.672</td><td>1.662</td><td>1.0060</td><td>1.0074</td></tr><tr><td>0.90</td><td>1.671</td><td>1.666</td><td>1.0026</td><td>1.0045</td></tr><tr><td>0.95</td><td>1.671</td><td>1.671</td><td>1.0000</td><td>1.0023</td></tr><tr><td>0.99</td><td>1.659</td><td>1.664</td><td>0.9969</td><td>0.9999</td></tr></tbody></table></div><p>Limits recorded with the audit: Recovered values retain the old nearest-grid sigma mismatch and model-dtype rounding.; Original per-window values were not saved, so paired uncertainty cannot be reconstructed.; Video MSE does not establish robot closed-loop success.</p><h3>Files the numbers come from</h3><ul><li><code>/home/zifanz4/openwam-torch-dispatch/research/greene/records/rae-shift-weight-audit-20261010/corrected-curves.json</code></li><li><code>/home/zifanz4/openwam-torch-dispatch/research/greene/RAE_SHIFT_RESULT.md</code></li></ul>"
+  },
+  {
+   "id": "vae",
+   "title": "Missing control: Wan-VAE 48-dim latent arm (not started)",
+   "html": "<p>RAE's claim is 'representation autoencoder instead of VAE'. Every arm so far is DINOv3-based; the VAE-latent arm with the same backbone, steps, data and seeds has not been run. Proposed on 2026-10-02 (stage 2) and 2026-10-07 (official-standard recipe); waiting for the user's decision. Estimated 3 trainings \u00d7 ~1 h plus 3 evaluation cells.</p>"
+  }
+ ],
+ "media": {
+  "media/PLAN_ex3_20261017.md": "/home/zifanz4/openwam-torch-dispatch/research/greene/report-sources/ex3-logic-tree-20261017/page/media/PLAN_ex3_20261017.md"
+ }
+}

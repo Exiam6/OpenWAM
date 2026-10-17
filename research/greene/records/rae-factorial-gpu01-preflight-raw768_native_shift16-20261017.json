@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "variant": "raw768_native_shift16",
+  "seed": 42,
+  "steps": 3,
+  "gradients": {
+    "video_backbone.dit.patch_embedding.weight": 0.2612696588039398,
+    "video_backbone.dit.blocks.0.self_attn.q.weight": 0.00044420594349503517,
+    "action": {
+      "name": "action_backbone.action_encoder.weight",
+      "norm": 0.2273525893688202
+    }
+  },
+  "serialization_exact": true,
+  "peak_gib": 16.41843843460083,
+  "seconds": 45.10745893698186
+}

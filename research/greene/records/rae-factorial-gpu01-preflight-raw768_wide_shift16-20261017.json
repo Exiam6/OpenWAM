@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "variant": "raw768_wide_shift16",
+  "seed": 42,
+  "steps": 3,
+  "gradients": {
+    "video_backbone.dit.patch_embedding.weight": 0.20762832462787628,
+    "video_backbone.dit.blocks.0.self_attn.q.weight": 0.00033253786386922,
+    "video_backbone.dit.rae_head.raw_projection.weight": 0.006480651441961527,
+    "video_backbone.dit.rae_head.output.weight": 0.14753605425357819,
+    "action": {
+      "name": "action_backbone.action_encoder.weight",
+      "norm": 0.22702354192733765
+    }
+  },
+  "serialization_exact": true,
+  "peak_gib": 18.59973382949829,
+  "seconds": 48.15290009602904
+}

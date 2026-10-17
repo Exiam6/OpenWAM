@@ -1,0 +1,368 @@
+{
+ "adjust_bottle|raw768_native": {
+  "episodes": 60,
+  "successes": 29,
+  "mean_steps": 282.75,
+  "left_planner_fail_rate": 0.07904509283819629,
+  "right_planner_fail_rate": 0.015030946065428824,
+  "statuses": {
+   "right:Success": 16710,
+   "left:Success": 15624,
+   "left:Fail": 1341,
+   "right:Fail": 255
+  },
+  "left_ever_closed": 4,
+  "right_ever_closed": 30,
+  "top_contacts": {
+   "left_camera": 25305,
+   "right_camera": 16079,
+   "fr_link7": 14825,
+   "fr_link8": 14230,
+   "fl_link8": 13614,
+   "fl_link7": 13561
+  },
+  "mean_travel_left_m": 1.8914709093129363,
+  "mean_travel_right_m": 1.3768893030312581
+ },
+ "adjust_bottle|raw768_native_shift16": {
+  "episodes": 60,
+  "successes": 31,
+  "mean_steps": 277.15,
+  "left_planner_fail_rate": 0.07402730170184617,
+  "right_planner_fail_rate": 0.0,
+  "statuses": {
+   "right:Success": 16629,
+   "left:Success": 15398,
+   "left:Fail": 1231
+  },
+  "left_ever_closed": 9,
+  "right_ever_closed": 30,
+  "top_contacts": {
+   "left_camera": 23730,
+   "right_camera": 16949,
+   "fr_link7": 15473,
+   "001_bottle": 15243,
+   "fl_link8": 14466,
+   "fr_link8": 14459
+  },
+  "mean_travel_left_m": 1.674242577573903,
+  "mean_travel_right_m": 1.327308932361469
+ },
+ "adjust_bottle|raw768_wide": {
+  "episodes": 60,
+  "successes": 26,
+  "mean_steps": 297.06666666666666,
+  "left_planner_fail_rate": 0.11299371633752245,
+  "right_planner_fail_rate": 0.0,
+  "statuses": {
+   "right:Success": 17824,
+   "left:Success": 15810,
+   "left:Fail": 2014
+  },
+  "left_ever_closed": 3,
+  "right_ever_closed": 30,
+  "top_contacts": {
+   "left_camera": 18579,
+   "001_bottle": 16358,
+   "fl_link8": 14371,
+   "fr_link7": 12601,
+   "fr_link8": 11855,
+   "right_camera": 11791
+  },
+  "mean_travel_left_m": 1.8099246283469397,
+  "mean_travel_right_m": 1.3580440481830018
+ },
+ "adjust_bottle|raw768_wide_shift16": {
+  "episodes": 60,
+  "successes": 29,
+  "mean_steps": 291.28333333333336,
+  "left_planner_fail_rate": 0.21090576185844254,
+  "right_planner_fail_rate": 0.0,
+  "statuses": {
+   "right:Success": 17477,
+   "left:Success": 13791,
+   "left:Fail": 3686
+  },
+  "left_ever_closed": 5,
+  "right_ever_closed": 30,
+  "top_contacts": {
+   "left_camera": 21812,
+   "right_camera": 18699,
+   "fr_link7": 17015,
+   "fr_link8": 16021,
+   "001_bottle": 14532,
+   "fl_link8": 12331
+  },
+  "mean_travel_left_m": 1.4980700535460123,
+  "mean_travel_right_m": 1.3538970285160616
+ },
+ "adjust_bottle|svae48_native": {
+  "episodes": 60,
+  "successes": 26,
+  "mean_steps": 293.93333333333334,
+  "left_planner_fail_rate": 0.018768428215014742,
+  "right_planner_fail_rate": 0.0,
+  "statuses": {
+   "right:Success": 17636,
+   "left:Success": 17305,
+   "left:Fail": 331
+  },
+  "left_ever_closed": 28,
+  "right_ever_closed": 30,
+  "top_contacts": {
+   "001_bottle": 29101,
+   "fr_link7": 22526,
+   "left_camera": 20861,
+   "fr_link8": 19815,
+   "fl_link8": 18260,
+   "fl_link7": 17230
+  },
+  "mean_travel_left_m": 2.106278144414114,
+  "mean_travel_right_m": 1.619867727183938
+ },
+ "handover_block|raw768_native": {
+  "episodes": 60,
+  "successes": 0,
+  "mean_steps": 800.0,
+  "left_planner_fail_rate": 0.05454166666666667,
+  "right_planner_fail_rate": 0.0,
+  "statuses": {
+   "right:Success": 48000,
+   "left:Success": 45382,
+   "left:Fail": 2618
+  },
+  "left_ever_closed": 10,
+  "right_ever_closed": 1,
+  "top_contacts": {
+   "left_camera": 89553,
+   "fl_link8": 57037,
+   "fl_link7": 55621,
+   "right_camera": 41260,
+   "fr_link7": 20855,
+   "fr_link8": 20599
+  },
+  "mean_travel_left_m": 7.278413828503698,
+  "mean_travel_right_m": 2.773442722694392
+ },
+ "handover_block|raw768_native_shift16": {
+  "episodes": 60,
+  "successes": 0,
+  "mean_steps": 800.0,
+  "left_planner_fail_rate": 0.095625,
+  "right_planner_fail_rate": 0.0,
+  "statuses": {
+   "right:Success": 48000,
+   "left:Success": 43410,
+   "left:Fail": 4590
+  },
+  "left_ever_closed": 21,
+  "right_ever_closed": 0,
+  "top_contacts": {
+   "left_camera": 88050,
+   "fl_link8": 61473,
+   "fl_link7": 59583,
+   "right_camera": 18542,
+   "box": 14382,
+   "fr_link7": 9329
+  },
+  "mean_travel_left_m": 6.465452108046846,
+  "mean_travel_right_m": 2.50405773454491
+ },
+ "handover_block|raw768_wide": {
+  "episodes": 60,
+  "successes": 0,
+  "mean_steps": 800.0,
+  "left_planner_fail_rate": 0.0085625,
+  "right_planner_fail_rate": 0.0,
+  "statuses": {
+   "right:Success": 48000,
+   "left:Success": 47589,
+   "left:Fail": 411
+  },
+  "left_ever_closed": 2,
+  "right_ever_closed": 0,
+  "top_contacts": {
+   "left_camera": 64743,
+   "fl_link8": 53501,
+   "fl_link7": 46554,
+   "box": 35312,
+   "right_camera": 6153,
+   "fr_link8": 3086
+  },
+  "mean_travel_left_m": 7.044398300631667,
+  "mean_travel_right_m": 2.5156619235668654
+ },
+ "handover_block|raw768_wide_shift16": {
+  "episodes": 60,
+  "successes": 0,
+  "mean_steps": 800.0,
+  "left_planner_fail_rate": 0.0013333333333333333,
+  "right_planner_fail_rate": 0.0,
+  "statuses": {
+   "right:Success": 48000,
+   "left:Success": 47936,
+   "left:Fail": 64
+  },
+  "left_ever_closed": 10,
+  "right_ever_closed": 0,
+  "top_contacts": {
+   "left_camera": 68873,
+   "fl_link8": 51523,
+   "fl_link7": 49137,
+   "box": 25805,
+   "right_camera": 15730,
+   "fr_link7": 8033
+  },
+  "mean_travel_left_m": 7.084856711816772,
+  "mean_travel_right_m": 2.4057305178717674
+ },
+ "handover_block|svae48_native": {
+  "episodes": 60,
+  "successes": 0,
+  "mean_steps": 800.0,
+  "left_planner_fail_rate": 0.058291666666666665,
+  "right_planner_fail_rate": 0.0,
+  "statuses": {
+   "right:Success": 48000,
+   "left:Success": 45202,
+   "left:Fail": 2798
+  },
+  "left_ever_closed": 25,
+  "right_ever_closed": 0,
+  "top_contacts": {
+   "left_camera": 84302,
+   "fl_link8": 63804,
+   "fl_link7": 63025,
+   "right_camera": 40664,
+   "box": 35455,
+   "fr_link7": 20401
+  },
+  "mean_travel_left_m": 6.067886845169455,
+  "mean_travel_right_m": 2.727768461806897
+ },
+ "place_object_basket|raw768_native": {
+  "episodes": 60,
+  "successes": 0,
+  "mean_steps": 700.0,
+  "left_planner_fail_rate": 0.28904761904761905,
+  "right_planner_fail_rate": 0.3984761904761905,
+  "statuses": {
+   "left:Success": 29860,
+   "right:Success": 25264,
+   "right:Fail": 16736,
+   "left:Fail": 12140
+  },
+  "left_ever_closed": 8,
+  "right_ever_closed": 35,
+  "top_contacts": {
+   "left_camera": 60940,
+   "right_camera": 54742,
+   "fr_link7": 47051,
+   "fr_link8": 42481,
+   "fl_link8": 34359,
+   "fl_link7": 33905
+  },
+  "mean_travel_left_m": 3.1741459165888584,
+  "mean_travel_right_m": 2.179442102600463
+ },
+ "place_object_basket|raw768_native_shift16": {
+  "episodes": 60,
+  "successes": 0,
+  "mean_steps": 700.0,
+  "left_planner_fail_rate": 0.25783333333333336,
+  "right_planner_fail_rate": 0.31152380952380954,
+  "statuses": {
+   "left:Success": 31171,
+   "right:Success": 28916,
+   "right:Fail": 13084,
+   "left:Fail": 10829
+  },
+  "left_ever_closed": 15,
+  "right_ever_closed": 36,
+  "top_contacts": {
+   "left_camera": 57965,
+   "fr_link7": 57911,
+   "fr_link8": 56782,
+   "right_camera": 50760,
+   "110_basket": 43149,
+   "fl_link8": 42777
+  },
+  "mean_travel_left_m": 3.321426954393517,
+  "mean_travel_right_m": 2.5180574618947054
+ },
+ "place_object_basket|raw768_wide": {
+  "episodes": 60,
+  "successes": 0,
+  "mean_steps": 700.0,
+  "left_planner_fail_rate": 0.2909761904761905,
+  "right_planner_fail_rate": 0.3028571428571429,
+  "statuses": {
+   "left:Success": 29779,
+   "right:Success": 29280,
+   "right:Fail": 12720,
+   "left:Fail": 12221
+  },
+  "left_ever_closed": 4,
+  "right_ever_closed": 28,
+  "top_contacts": {
+   "left_camera": 56365,
+   "fr_link7": 55533,
+   "fr_link8": 45659,
+   "right_camera": 45589,
+   "fl_link8": 36125,
+   "fl_link7": 35337
+  },
+  "mean_travel_left_m": 2.7585157615695843,
+  "mean_travel_right_m": 2.4611831669207183
+ },
+ "place_object_basket|raw768_wide_shift16": {
+  "episodes": 60,
+  "successes": 0,
+  "mean_steps": 700.0,
+  "left_planner_fail_rate": 0.3,
+  "right_planner_fail_rate": 0.31023809523809526,
+  "statuses": {
+   "left:Success": 29400,
+   "right:Success": 28970,
+   "right:Fail": 13030,
+   "left:Fail": 12600
+  },
+  "left_ever_closed": 4,
+  "right_ever_closed": 31,
+  "top_contacts": {
+   "right_camera": 54380,
+   "fr_link8": 51922,
+   "fr_link7": 51711,
+   "left_camera": 51347,
+   "fl_link7": 39283,
+   "fl_link8": 38587
+  },
+  "mean_travel_left_m": 2.865664257015944,
+  "mean_travel_right_m": 2.4341751024671643
+ },
+ "place_object_basket|svae48_native": {
+  "episodes": 60,
+  "successes": 0,
+  "mean_steps": 700.0,
+  "left_planner_fail_rate": 0.010642857142857143,
+  "right_planner_fail_rate": 0.03580952380952381,
+  "statuses": {
+   "left:Success": 41553,
+   "right:Success": 40496,
+   "right:Fail": 1504,
+   "left:Fail": 447
+  },
+  "left_ever_closed": 24,
+  "right_ever_closed": 37,
+  "top_contacts": {
+   "fr_link7": 64575,
+   "110_basket": 58337,
+   "fr_link8": 55383,
+   "left_camera": 46008,
+   "right_camera": 39775,
+   "fl_link7": 33385
+  },
+  "mean_travel_left_m": 4.424763466346091,
+  "mean_travel_right_m": 4.020426285395042
+ }
+}

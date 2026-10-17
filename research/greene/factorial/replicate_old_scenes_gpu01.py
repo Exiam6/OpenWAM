@@ -35,7 +35,7 @@ def main(gpu, out):
     e = e.replace("S=Path(__file__).resolve().parent;E=S", f"S=Path(__file__).resolve().parent;E=Path('{OLD}')")
     e = e.replace("E/'scene-protocol.json'", "E/'protocol.json'")
     e = e.replace(" assert json.loads((S/'seed-exclusion.json').read_text())['passed']\n", " # old sealed cohort: fresh-cohort exclusion check not applicable\n")
-    assert e.count(str(OLD)) == 1 and "seed-exclusion" not in e
+    assert e.count(f"E=Path('{OLD}')") == 1 and "seed-exclusion" not in e and "E/'protocol.json'" in e
     (work / "evaluate_policy.py").write_text(e)
     uuid, pci = [l.split(", ") for l in subprocess.check_output(["nvidia-smi", "-i", gpu, "--query-gpu=uuid,pci.bus_id", "--format=csv,noheader"], text=True).splitlines()][0]
     port = 19900 + int(gpu)

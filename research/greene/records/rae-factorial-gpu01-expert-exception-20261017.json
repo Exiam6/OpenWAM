@@ -1,0 +1,15 @@
+{
+  "applied_at": "2026-10-17T08:06:22.539837+00:00",
+  "trigger": "expert AssertionError in play_once at place_object_basket seed 6202023",
+  "change": "exception inside the expert's play_once -> outcome expert_exception, candidate skipped (RoboTwin collect_data.py rule)",
+  "rescreened": [
+    "place_object_basket"
+  ],
+  "kept": [
+    "adjust_bottle",
+    "handover_block"
+  ],
+  "collect_fresh_sha256": "682f2fb456f750d833d626c199d8a4a54bd40b2eb30c00b1b14c84b1d394bd3d",
+  "archived": "/home/zifanz4/openwam-runtime/rae-factorial-20261010/resource-amendment-20261017-expert-exception",
+  "learned_policy_scored": false
+}

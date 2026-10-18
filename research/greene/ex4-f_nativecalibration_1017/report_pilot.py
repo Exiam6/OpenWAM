@@ -13,6 +13,11 @@ def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def main():
     p=json.loads((ROOT/'registration.json').read_text())
     summary=json.loads((ROOT/'pilot-summary.json').read_text());assert summary['complete']
+    handoff=json.loads((ROOT/'resource-handoff/status.json').read_text());assert handoff['phase']=='complete'
+    old_seconds=sum(x['final_record']['active_seconds'] for x in handoff['stopped'].values())
+    lanes=[json.loads(path.read_text()) for path in ROOT.glob('lane-gpu*-*-seed*.json')];assert len(lanes)==4 and all(x['phase']=='complete' for x in lanes)
+    occupied=old_seconds+sum(x['active_seconds'] for x in lanes);assert occupied<=6*3600
+    budget=dict(occupied_seconds=occupied,occupied_gpu_hours=occupied/3600,cap_gpu_hours=6,seed42_seconds=old_seconds,remaining_cell_seconds=sum(x['active_seconds'] for x in lanes),handoff_source=str(ROOT/'resource-handoff/status.json'))
     audit=json.loads((ROOT/'independent-result-audit.json').read_text());assert audit['verified_finished_episodes'] and audit['inspected']==96 and not audit['issues']
     visual=json.loads((ROOT/'pilot-visual-review.json').read_text());assert visual['selected_contactsheets_inspected']
     expected={(f'{v}-seed{s}',t,scene) for v in p['variants'] for s in p['seeds'] for t,scenes in p['selected'].items() for scene in scenes}
@@ -49,9 +54,10 @@ def main():
         'The intervention preserves the ALOHA filename marker when relocating numerically identical planner configurations. '
         'Checkpoints at step20000, native inference, prompts, RNG, first-five frozen scenes per task, cameras and task success rules are unchanged. '
         'This is a development pilot with three training seeds and five shared scene IDs per task, not 90 independent scenes or an unseen test.', '',
-        'The preregistered primary criterion is at least two handover successes out of15 for either model. Zero for both leaves a policy-learning obstacle after the execution fix; one success is undecided. '
+        'The preregistered primary criterion is at least two handover successes out of15 for either model. Zero for both leaves unresolved learned-policy behavior after the execution fix; one success is undecided. '
         'An adjust success drop of at least20 percentage points is flagged as regression. Place is exploratory. '
-        'This pilot cannot rank RAE architectures or invalidate the separate successful expert-execution repair.', '',
+        'This pilot cannot rank RAE architectures or invalidate the separate successful expert-execution repair. It does not isolate training, model choice, input handling or deployment feedback as the cause of remaining failures.', '',
+        f"Actual occupied GPU time: {occupied/3600:.3f}hours, within the registered6-hour cap. Seed42 cells and the four safely handed-off continuation cells are counted once; idle admission waits are excluded.", '',
         '| Model | Task | Historical old execution | Restored calibration | Gains | Losses | Regression flag |','|---|---|---:|---:|---:|---:|---|']
     for x in aggregates:lines.append(f"| {x['variant']} | {x['task']} | {x['old']/x['n']:.0%} ({x['old']}/{x['n']}) | {x['fixed']/x['n']:.0%} ({x['fixed']}/{x['n']}) | {x['gains']} | {x['losses']} | {x['adjust_regression_flag']} |")
     lines+=['','Next: follow the separately registered corrected factorial to compare the existing architectures under the same repaired executor. '
@@ -73,14 +79,15 @@ def main():
         'The archive includes every paired clip, contact sheet, per-episode result and independent audit, registered provenance and the sampled visual review.']
     readme='\n'.join(lines)+'\n';out=ROOT/'complete-pilot-evidence.zip';assert not out.exists(),'Never replace frozen evidence'
     with zipfile.ZipFile(out,'x',compression=zipfile.ZIP_STORED) as z:
-        z.writestr('README.md',readme);z.writestr('data.json',json.dumps(dict(verdict=verdict,aggregates=aggregates,episodes=episodes),indent=2)+'\n')
+        z.writestr('README.md',readme);z.writestr('data.json',json.dumps(dict(verdict=verdict,aggregates=aggregates,episodes=episodes,budget=budget),indent=2)+'\n')
         for name in ['registration.json','pilot-summary.json','independent-result-audit.json','pilot-visual-review.json']:z.write(ROOT/name,name)
+        z.writestr('budget.json',json.dumps(budget,indent=2)+'\n');z.write(ROOT/'resource-handoff/status.json','resource-handoff-status.json')
         for name in ['PLAN.md','registry.json','report_pilot.py','make_pairs.py','audit_results.py']:z.write(SOURCE/name,'source/'+name)
         for x in media:
             video=Path(x['video']);prefix=f"videos/{x['cell']}/{x['task']}/seed-{x['scene_seed']}"
             for ext in ['.mp4','.jpg','.json']:z.write(video.with_suffix(ext),prefix+ext)
     with zipfile.ZipFile(out) as z:assert z.testzip() is None
-    record=dict(time=dt.datetime.now(dt.timezone.utc).isoformat(),path=str(out),sha256=sha(out),bytes=out.stat().st_size,videos=90,paired_episodes=90,zip_crc_passed=True,verdict=verdict,aggregates=aggregates)
+    record=dict(time=dt.datetime.now(dt.timezone.utc).isoformat(),path=str(out),sha256=sha(out),bytes=out.stat().st_size,videos=90,paired_episodes=90,zip_crc_passed=True,verdict=verdict,aggregates=aggregates,budget=budget)
     (ROOT/'complete-pilot-bundle.json').write_text(json.dumps(record,indent=2)+'\n')
     report=readme
     for x in media:report=report.replace(f"](videos/{x['cell']}/{x['task']}/seed-{x['scene_seed']}.mp4)",f"]({x['video']})")

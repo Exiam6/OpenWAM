@@ -51,3 +51,26 @@ rollout fixture and corrupted camera/state/action/seed values. Separate real CPU
 child tests cover completion, failure, pause/deadline refusal, timeout/grandchild
 cleanup, health failure and concurrent batch accounting. Resource admission is
 mocked in the batch tests; none of these tests validates VAE GPU behavior.
+
+Pilot evidence and continuation gate are prepared in make_pilot_pairs.py and
+release_evaluation.py. All 15 Raw/VAE pairs use audited result and trace hashes,
+matching training seed, scene and initial state. The three actual camera views
+are shown for both policies, aligned by action index; shorter episodes hold their
+final frame. Every video is decoded completely. The first scene of each task has
+six sampled action indices for actual manual review, recorded with preview hashes.
+This does not claim exhaustive visual inspection or an external whole-robot view.
+
+Before the remaining 45 evaluations, the gate charges the parent's actual pilot
+process lifetime. For each task it projects all 15 remaining episodes at the full
+native action cap, using the median measured action-loop wall time per action
+with a 10% reserve, plus maximum measured setup time. It adds the greater of 300s
+or measured pilot non-episode overhead, and requires another 60s below the
+remaining shared 10800s budget. Frame modification times measure the loop only;
+inconsistent or nonfinite timings fail admission. This is a resource estimate,
+not a guarantee or a success-rate extrapolation. A refusal preserves results and
+requires diagnosis; no budget increase, truncated endpoint or automatic retry.
+
+CPU tests exercise real short video encoding/decoding, shorter-episode alignment,
+corrupted preview rejection, full native action caps despite early fixture stops,
+and invalid/nonfinite timing rejection. Historical Raw timing is only a sanity
+input for this calculation, never evidence about VAE runtime or task performance.

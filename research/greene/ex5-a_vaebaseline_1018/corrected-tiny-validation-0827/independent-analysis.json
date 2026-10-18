@@ -1,0 +1,42 @@
+{
+  "time": "2026-10-18T08:30:38.189810+00:00",
+  "passed": true,
+  "criteria_recomputed": {
+    "flow_action_loss": true,
+    "mean_generated_mse": true,
+    "task_adjust_bottle": true,
+    "task_handover_block": true,
+    "task_place_object_basket": true
+  },
+  "after_to_before_ratios": {
+    "flow_action_loss": 0.005543158303939756,
+    "mean_generated_mse": 0.002003970427677563,
+    "task_adjust_bottle": 0.00239509321748768,
+    "task_handover_block": 0.0021333104396064856,
+    "task_place_object_basket": 0.001515156214489658
+  },
+  "training_indices": [
+    304,
+    312,
+    336
+  ],
+  "steps": 512,
+  "training_projection_seconds_per_seed": 6736.920836154604,
+  "training_projection_within_original_10740s_guard": true,
+  "projection_scope": "Maximum of last eight 32-step intervals times20000 plus900s fixed reserve; operational estimate, not guaranteed runtime.",
+  "combined_noncache_occupied_seconds": 431.9609258649871,
+  "combined_noncache_cap": 1800,
+  "costs": {
+    "original_preflight": 564.931298075011,
+    "policy_input_diagnostic": 56.51861921604723,
+    "encoder_context_diagnostic": 9.220478540984914,
+    "fixed_policy_diagnostic": 55.31634644907899,
+    "corrected_tiny_validation": 198.03045098902658
+  },
+  "total_occupied_gpu_seconds": 884.0171932701487,
+  "result_sha256": "f4b53ba830bb6524e7da92d685dadf2f24cb9c59b96a221b6573d433370b71cd",
+  "metrics_sha256": "ac03fcfce0af7df2fe21f4d9ddcdf419122c4e72f98c306fdc5090764b7f9942",
+  "original_preflight_status": "failed",
+  "full_training_released": false,
+  "scope": "Independent recomputation of all original tiny-fit criteria. These three training windows are not held-out or closed-loop evaluations. Full training requires a separately registered corrected protocol, fresh initialization and current full endpoint capacity/deadline checks."
+}

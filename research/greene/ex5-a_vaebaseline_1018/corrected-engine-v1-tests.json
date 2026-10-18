@@ -1,0 +1,10 @@
+{
+  "time": "2026-10-18T08:32:17.575418+00:00",
+  "module": "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/corrected-engine-v1/openwam/model/video_backbone/wan/models/vae.py",
+  "module_sha256": "738c631c5b81359effd239a5c32e3f6642d75a2dda26ce944a7548acaa6fc9c5",
+  "test_source": "/home/zifanz4/openwam-vae-control/tests/test_wan_batch_encode_precision_context.py",
+  "test_sha256": "feb75b678d1e89175bccbabd70cb1f74f21f3a5556603a0653e1ed94ef722592",
+  "tests_run": 2,
+  "passed": true,
+  "full_training_released": false
+}

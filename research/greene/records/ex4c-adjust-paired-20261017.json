@@ -1,0 +1,33 @@
+{
+ "note": "ex4c offset compensation vs ex3 (no compensation), adjust_bottle, same 20 fresh scenes x 3 training seeds; scene-cluster bootstrap 10000 draws seed 20261017. Secondary result of ex4c (registered control).",
+ "arms": {
+  "raw768_native": {
+   "diff": 0.2,
+   "ci": [
+    0.05,
+    0.35
+   ],
+   "per_seed": [
+    0.2,
+    0.1,
+    0.3
+   ],
+   "comp_only": 15,
+   "base_only": 3
+  },
+  "svae48_native": {
+   "diff": 0.2,
+   "ci": [
+    0.05,
+    0.35
+   ],
+   "per_seed": [
+    0.15,
+    0.0,
+    0.45
+   ],
+   "comp_only": 17,
+   "base_only": 5
+  }
+ }
+}

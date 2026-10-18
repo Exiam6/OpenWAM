@@ -1,8 +1,9 @@
 # Matched VAE full evidence preparation
 
-CPU postprocessing only, separate from frozen GPU runtime de4cf44. The training,
+CPU postprocessing only, separate from the frozen corrected-protocol-v1 and
+corrected-engine-v1 runtime. The training,
 cache, evaluator, endpoints and admission registration remain unchanged. No VAE
-GPU numerical result exists yet. Freeze these postprocessing sources separately
+GPU numerical result is inferred by this postprocessing. Freeze these sources separately
 before starting the queue, after the first actual VAE pilot task audit exists.
 
 There are360video pairs:180Raw/VAE primary and180Compact/VAE secondary. The
@@ -31,6 +32,16 @@ releases and budgets, pilot media and visual reviews, parent results, reference
 actions and independent episode audits. A gate-evidence index maps original
 paths to archive paths and SHA256 hashes. Large model/cache binaries remain
 external artifacts identified by the registered/result hashes.
+
+The final archive also retains the registered CPU pilot queue, immutable plan and
+source hashes, test evidence, launch record, completed per-seed parent results and
+logs. Each queue result must match the actual 15-episode pilot and its successful
+parent claim. The independent final-training audit and its source/observer-only
+correction history are included, with final model identity and training-file
+hashes rechecked against the actual outputs. The completed CPU media process and
+its original source are retained. These additions change archive provenance only;
+the frozen training, evaluation, video generation and statistical endpoints stay
+unchanged.
 
 The full-readout primary is Raw minus VAE; Compact is a secondary dimensionality
 control, never a replacement primary. Use the unchanged10000crossed bootstrap,

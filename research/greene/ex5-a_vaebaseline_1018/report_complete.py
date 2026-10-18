@@ -56,6 +56,62 @@ def gate_evidence(root,seeds):
     return sorted(paths)
 
 
+def pilot_dispatch_evidence(root):
+    """Retain the completed CPU pilot queue and its independently checked inputs."""
+    root=Path(root);plan_path=root/'pilot-capacity-queue-v1-plan.json'
+    if not plan_path.exists():return []
+    paths=set()
+    def include(path,digest=None):
+        path=Path(path);assert path.is_file(),path
+        if digest is not None:assert sha(path)==digest,path
+        paths.add(path)
+        return json.loads(path.read_text()) if path.suffix=='.json' else None
+    plan=include(plan_path)
+    assert plan['status']=='registered_resource_only' and plan['seeds']==[42,43,44]
+    assert plan['phase']=='pilot_evaluation' and plan['full_evaluation_automatically_released'] is False
+    for path,digest in plan['files'].items():include(path,digest)
+    include(root/'corrected-protocol-v1/protocol.json',plan['protocol_sha256'])
+    include(root/'corrected-engine-v1-manifest.json',plan['runtime_manifest_sha256'])
+    launch=include(root/'pilot-capacity-queue-v1-launch.json')
+    queue=include(root/'pilot-capacity-queue-v1/result.json')
+    assert launch['plan_sha256']==queue['plan_sha256']==sha(plan_path)
+    assert launch['pid']==queue['pid'] and queue['status']=='complete'
+    assert queue['full_evaluation_automatically_released'] is False
+    assert set(queue['seeds'])=={'42','43','44'} and queue['active_bounded_parents']=={}
+    include(root/'pilot-capacity-queue-v1.log')
+    audit=include(root/'full-training-independent-audit-v1.json')
+    assert audit['passed'] and audit['policy_success_claim'] is False
+    assert len(audit['rows'])==3 and {x['seed'] for x in audit['rows']}=={42,43,44}
+    for seed in [42,43,44]:
+        row=queue['seeds'][str(seed)];assert row['status']=='complete' and row['returncode']==0
+        result_path=root/f'evaluation/seed{seed}/pilot/result.json'
+        assert Path(row['result']).resolve()==result_path.resolve()
+        pilot=include(result_path,row['result_sha256'])
+        claim=include(root/f'phase-claims/pilot_evaluation-seed{seed}.json',row['parent_claim_sha256'])
+        assert pilot['complete'] and pilot['episodes']==15 and claim['complete'] and claim['exit_code']==0
+        assert pilot['seed']==claim['seed']==seed and claim['result_sha256']==sha(result_path)
+        include(root/f'pilot-capacity-queue-v1/seed{seed}.log')
+        for path in (root/f'batches/pilot_evaluation-{seed}').rglob('*'):
+            if path.is_file():include(path)
+        training=next(x for x in audit['rows'] if x['seed']==seed)
+        assert training['passed'] and training['steps']==20000 and training['checkpoint_hash_independently_recomputed']
+        run=root/f'runs/vae48_native-seed{seed}'
+        trained=include(run/'result.json',training['evidence']['result_sha256'])
+        assert training['checkpoint_sha256']==trained['checkpoint_sha256']
+        include(run/'initialization.json',plan['initialization_sha256'][str(seed)])
+        for name,digest in training['file_sha256'].items():include(run/name,digest)
+    # Observer-only implementation errors are retained beside the passed audit.
+    for path in (root/'full-training-independent-audit-observer-fix-v1').glob('*'):
+        if path.is_file():include(path)
+    media_path=root/'full-media-process-v8.json'
+    if media_path.exists():
+        media=include(media_path);include(media['command'][-1],media['source_sha256'])
+        state=include(root/'full-media/queue.json')
+        assert state['status']=='complete' and state['pid']==media['pid'] and state['completed']==360
+        include(root/'full-media-v8.log')
+    return sorted(paths)
+
+
 def resource_evidence(root):
     """Retain the CPU-only amendment separately from the frozen GPU registration."""
     root=Path(root)
@@ -115,6 +171,7 @@ def resource_evidence(root):
                 path=Path(path);assert sha(path)==digest,path;paths.add(path)
             paths.update(groot.glob('worker-gpu*-dedicated-v4.json'))
             paths.add(groot/'dedicated-dispatchers-v4.json')
+    paths.update(pilot_dispatch_evidence(root))
     assert all(path.is_file() for path in paths)
     return sorted(paths)
 

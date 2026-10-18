@@ -1,0 +1,24 @@
+{
+  "time": "2026-10-18T08:07:33.743834+00:00",
+  "scope": "diagnostic_only_no_release",
+  "seconds_limit": 600,
+  "gpu": 1,
+  "deadline": "2026-10-18T16:59:00+00:00",
+  "hypotheses": [
+    "Outer autocast changes image-path first-frame encoding relative to cached BF16 encoding.",
+    "Equivalent inputs produce a repeat-inference difference.",
+    "Another preprocessing field differs between image and cached pathways."
+  ],
+  "protocol": "One read-only inference diagnostic from the retained step3 smoke checkpoint; first registered adjust_bottle training window; same image/cached/repeated ordering, fixed seeds and original tolerance. Capture first-forward tensors and all action arrays before any assertion. No optimization, endpoint evaluation, tiny-fit retry or training release. Original failed artifacts must stay byte-identical.",
+  "diagnostic_code_sha256": "fb1bc8585a0fb153c6923482d83c5af7ee9a4a74f9e78ea493e207cf0beeff97",
+  "frozen_files": {
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/gpu-registration.json": "64be983e057d58cd467dea4e7b807687414910c3edf52e4f1fba2f65e436e35f",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/dedicated-preflight-run.json": "5d637ec157078add8339023377fbb963de054bba4f53fcfec85232f6d9b5df9b",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/deployment-contract/result.json": "fa8898ccd7b4ee897a7a904fb5948c4c06c79075169ac1f6ba97f5a4dbc31e72",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/dedicated-preflight-logs/deployment_contract.log": "ffe7ccfcf7954f794a25f9fd723d04427b407567df5c26ff66b93e570ec778da",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/training-smoke/vae48_native-seed42/result.json": "b14aefbff95ceb052d66436b33cdb99d7cc17c21945b0ac61eb8cc607793e455",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/vae-cache/result.json": "b48ed3cb3840d9e674bdd75f00d1bd11d956ce56999a0ceaceeb22a1e9e6120c",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/independent-cache-audit-0802.json": "65542e57a2d6beb9bb82dcc3df558fbde6ba345504703790931a94cd2f48e78b",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/code/deployment_contract.py": "8cf5b1dcffd8c7899b926fae16621cb7fd429e55482a24883c4c4af0be2bfe48"
+  }
+}

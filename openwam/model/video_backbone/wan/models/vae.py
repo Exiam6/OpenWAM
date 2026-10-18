@@ -1148,7 +1148,10 @@ class WanVideoVAE(nn.Module):
             (B, z_dim, T_lat, H_lat, W_lat) latent tensor, z-score normalized.
         """
         videos = videos.to(device)
-        with torch.no_grad():
+        # Cache creation and online image conditioning must use the same
+        # encoder arithmetic. An outer policy autocast context can otherwise
+        # promote normalization ops and change the frozen BF16 VAE latents.
+        with torch.no_grad(), torch.autocast(device_type=videos.device.type, enabled=False):
             return self.model.encode(videos, self.scale)
 
     def single_encode(self, video, device):

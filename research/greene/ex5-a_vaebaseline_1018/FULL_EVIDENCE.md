@@ -25,6 +25,13 @@ all360hash-verified decoded videos, and18actual first-scene contact-sheet review
 Nine primary reviews may be inherited from the actual pilot reviews only after
 matching the same preview hash and sampled indices. Decode is not visual review.
 
+The archive includes the small evidence files behind every release: cache and
+smoke results, tiny-fit metrics, deployment action traces, per-seed evaluation
+releases and budgets, pilot media and visual reviews, parent results, reference
+actions and independent episode audits. A gate-evidence index maps original
+paths to archive paths and SHA256 hashes. Large model/cache binaries remain
+external artifacts identified by the registered/result hashes.
+
 The full-readout primary is Raw minus VAE; Compact is a secondary dimensionality
 control, never a replacement primary. Use the unchanged10000crossed bootstrap,
 RNG921018, and registered5pp/two-positive-seeds/positive-lower-bound criterion.

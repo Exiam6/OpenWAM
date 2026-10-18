@@ -78,4 +78,56 @@ class EvidenceTests(unittest.TestCase):
         with patch.object(report_complete,'ROOT',self.root):path=report_complete.training_figure(destination,dict(fixture=record))
         self.assertGreater(path.stat().st_size,10000)
 
+class GateArchiveTests(unittest.TestCase):
+    def setUp(self):
+        self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup);self.root=Path(self.temp.name)
+        def put(name,value):
+            path=self.root/name;path.parent.mkdir(parents=True,exist_ok=True)
+            path.write_text(json.dumps(value));return path
+        self.trace=self.root/'deployment-contract/actions.npz';self.trace.parent.mkdir();self.trace.write_bytes(b'fixture action trace')
+        contract=put('deployment-contract/result.json',dict(rows=[dict(trace=str(self.trace),trace_sha256=sha(self.trace))]))
+        cache=put('vae-cache/result.json',dict(passed=True));tiny=put('tiny-fit/metrics.jsonl',dict(step=512))
+        put('full-training-release.json',dict(evidence_sha256={str(p):sha(p) for p in [contract,cache,tiny]}))
+        self.reference=put('evaluation/seed42/reference-actions.json',dict(passed=True,rows=[]))
+        for phase,stage in [('training','training'),('pilot_evaluation','pilot'),('full_evaluation','full')]:
+            if stage=='training':result=put('runs/vae48_native-seed42/result.json',dict(complete=True))
+            else:
+                audit=put(f'evaluation/seed42/{stage}/episodes/adjust_bottle/independent-audit.json',dict(passed=True,rows=[]))
+                put(f'evaluation/seed42/{stage}/smoke/result.json',dict(passed=True))
+                result=put(f'evaluation/seed42/{stage}/result.json',dict(reference_sha256=sha(self.reference),groups=[dict(audit=str(audit))]))
+            put(f'phase-claims/{phase}-seed42.json',dict(result_path=str(result),result_sha256=sha(result)))
+        review=put('pilot-visual-review-seed42.json',dict(visually_inspected=True))
+        put('pilot-media/seed42/scene.json',dict(full_decode_passed=True))
+        media=put('pilot-media-seed42.json',dict(records=[dict(video=str(self.root/'pilot-media/seed42/scene.mp4'))]))
+        put('evaluation-budget-seed42.json',dict(remaining_seconds=7000))
+        put('evaluation-release-seed42.json',dict(visual_review=str(review),visual_review_sha256=sha(review),media_sha256=sha(media),parent_claim_sha256=sha(self.root/'phase-claims/pilot_evaluation-seed42.json')))
+
+    def test_all_small_release_dependencies_are_archived(self):
+        from report_complete import gate_evidence,add_asset
+        import zipfile
+        paths=gate_evidence(self.root,[42]);expected={p for p in self.root.rglob('*') if p.is_file()}
+        self.assertEqual(set(paths),expected)
+        assets={}
+        for path in paths:add_asset(assets,path,str(path.relative_to(self.root)))
+        with zipfile.ZipFile(self.root/'fixture.zip','x') as archive:
+            for name,path in assets.items():archive.write(path,name)
+        with zipfile.ZipFile(self.root/'fixture.zip') as archive:
+            self.assertIsNone(archive.testzip());self.assertEqual(set(archive.namelist()),set(assets))
+
+    def test_missing_deployment_trace_rejected(self):
+        from report_complete import gate_evidence
+        self.trace.unlink()
+        with self.assertRaises(AssertionError):gate_evidence(self.root,[42])
+
+    def test_changed_native_reference_rejected(self):
+        from report_complete import gate_evidence
+        self.reference.write_text('{}')
+        with self.assertRaises(AssertionError):gate_evidence(self.root,[42])
+
+    def test_changed_parent_result_rejected(self):
+        from report_complete import gate_evidence
+        (self.root/'evaluation/seed42/full/result.json').write_text('{}')
+        with self.assertRaises(AssertionError):gate_evidence(self.root,[42])
+
+
 if __name__=='__main__':unittest.main()

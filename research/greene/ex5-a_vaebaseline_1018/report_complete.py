@@ -23,6 +23,35 @@ def add_asset(assets,path,name):
     return name
 
 
+def gate_evidence(root,seeds):
+    """Small evidence behind release decisions; model/cache binaries stay external."""
+    root=Path(root);paths=set()
+    def include(path,digest=None):
+        path=Path(path);assert path.is_file(),path
+        if digest is not None:assert sha(path)==digest,path
+        paths.add(path);return json.loads(path.read_text()) if path.suffix=='.json' else None
+    release=include(root/'full-training-release.json')
+    for path,digest in release['evidence_sha256'].items():include(path,digest)
+    contract=include(root/'deployment-contract/result.json')
+    for row in contract['rows']:include(row['trace'],row['trace_sha256'])
+    for seed in seeds:
+        release=include(root/f'evaluation-release-seed{seed}.json')
+        include(root/f'evaluation-budget-seed{seed}.json')
+        include(release['visual_review'],release['visual_review_sha256'])
+        media=include(root/f'pilot-media-seed{seed}.json',release['media_sha256'])
+        for record in media['records']:include(Path(record['video']).with_suffix('.json'))
+        for phase in ['training','pilot_evaluation','full_evaluation']:
+            claim_path=root/'phase-claims'/f'{phase}-seed{seed}.json'
+            claim=include(claim_path,release['parent_claim_sha256'] if phase=='pilot_evaluation' else None)
+            result=include(claim['result_path'],claim['result_sha256'])
+            if phase=='training':continue
+            directory=Path(claim['result_path']).parent
+            include(directory.parent/'reference-actions.json',result['reference_sha256'])
+            include(directory/'smoke/result.json')
+            for group in result['groups']:include(group['audit'])
+    return sorted(paths)
+
+
 def readiness():
     for script in [G/'code/readout.py',ROOT/'code/readout.py']:subprocess.run([sys.executable,str(script)],check=True,capture_output=True,text=True)
     summary=json.loads((ROOT/'success-summary.json').read_text());assert summary['complete'] and all(x==180 for x in summary['verified_by_variant'].values()),'Complete matched180-evaluation endpoints required'
@@ -66,6 +95,7 @@ def readiness():
     assert len(review['records'])==18 and {x['key'] for x in review['records']}==sampled
     for item in review['records']:
         record=records[item['key']];assert item['preview_sha256']==record['preview_sha256'] and item['indices']==record['preview_indices'] and item['observations'].strip()
+    gate_evidence(ROOT,p['seeds'])
     return p,summary,records,occupied,costs,claims,review_path
 
 
@@ -101,6 +131,10 @@ def generate():
             path=Path(record[side]['result_path'])
             for item in [path,path.parent/'trace.jsonl']:add(item,'evidence/'+str(item.relative_to(ROOT.parent)))
     for path in [ROOT/'gpu-registration.json',ROOT/'gpu-registration-audit.json',ROOT/'success-summary.json',ROOT/'full-training-release.json',ROOT/'preflight-run.json',ROOT/'full-media/manifest.json',review,*claims]:add(path,'evidence/'+str(path.relative_to(ROOT.parent)))
+    gate_index=[]
+    for path in gate_evidence(ROOT,p['seeds']):
+        name=add(path,'evidence/'+str(path.relative_to(ROOT.parent)))
+        gate_index.append(dict(source_path=str(path),archive_path=name,sha256=sha(path)))
     for seed in p['seeds']:
         run=ROOT/'runs'/f'vae48_native-seed{seed}'
         for name in ['metrics.jsonl','result.json','initial-dev.json','final-dev.json','batches.npy','config.yaml']:add(run/name,f'training/seed{seed}/{name}')
@@ -127,7 +161,7 @@ def generate():
     secondary=summary['comparisons']['secondary_compact_minus_vae'];body+=f"\nSecondary Compact-minus-VAE difference: {secondary['difference']*100:+.2f}pp,95%interval [{secondary['ci95'][0]*100:+.2f}, {secondary['ci95'][1]*100:+.2f}]pp. This descriptive control does not replace the primary endpoint.\n\n"
     body+=f'New study occupation: **{occupied/3600:.3f} GPU-hours**, within the20.5-hour cap, including preflight, training and evaluation parent lifetimes. Baseline training/evaluation is historical and not charged again. Equal data/steps do not imply equal FLOPs or wall time.\n\n| VAE seed | Training GPUh | Pilot+remaining evaluation GPUh |\n|---|---|---|\n'
     for cost in costs:body+=f"| {cost['seed']} | {cost['training']/3600:.3f} | {(cost['pilot_evaluation']+cost['full_evaluation'])/3600:.3f} |\n"
-    body+='\n![Training losses and paired rollout sample](training-and-rollout.png)\n\n[Download figure](training-and-rollout.png) · [Interactive videos](index.html) · [Download index](index.json)\n\n'
+    body+='\n![Training losses and paired rollout sample](training-and-rollout.png)\n\n[Download figure](training-and-rollout.png) · [Interactive videos](index.html) · [Download index](index.json) · [Gate evidence and hashes](gate-evidence-index.json)\n\n'
     body+='All360paired videos were fully decoded/hash checked. Actual visual review samples six indices on each comparison/task/seed first scene (18sheets), not every frame. The baseline is on top, VAE below; numerical effects are baseline minus VAE. All three policy cameras are shown, aligned by action index with final-frame hold. No external whole-robot view was captured. Wrist occlusion and cropped objects remain visible.\n\n'
     body+='The180evaluations per arm cross60distinct development scenes with three training seeds. These known scenes cannot establish unseen-benchmark generalization; three seeds cannot establish broad population equivalence. Encoder pretraining and representation are not independently identified. Policy failure remains an outcome, and no checkpoint or scene was selected by success.\n\n| Comparison | Task | Seed | Scene | Outcome | Video |\n|---|---|---|---|---|---|\n'
     for entry in entries:body+=f"| {entry['comparison']} | {entry['task']} | {entry['seed']} | {entry['scene']} | {entry['outcome']} | [Download]({entry['video']}) |\n"
@@ -135,14 +169,17 @@ def generate():
     for name,path in assets.items():
         target=destination/name;target.parent.mkdir(parents=True,exist_ok=True);target.symlink_to(path)
     figure=training_figure(destination,records)
+    (destination/'gate-evidence-index.json').write_text(json.dumps(gate_index,indent=2)+'\n')
     (destination/'RESULTS.md').write_text(body);(destination/'index.json').write_text(json.dumps(entries,indent=2));page=render_html(entries,summary,True).replace('<header>','<header><p><a href="training-and-rollout.png" download>Download training figure</a></p>');(destination/'index.html').write_text(page)
     for entry in entries:
         for field in ['video','preview','metadata']:assert (destination/entry[field]).is_file()
     with zipfile.ZipFile(bundle,'x') as z:
         for name,path in sorted(assets.items()):z.write(path,name,compress_type=zipfile.ZIP_STORED if path.suffix in ['.mp4','.jpg'] else zipfile.ZIP_DEFLATED,compresslevel=1)
         z.write(figure,figure.name);z.writestr('README.md',body);z.writestr('RESULTS.md',body);z.writestr('index.json',json.dumps(entries,indent=2));z.writestr('index.html',render_html(entries,summary,False))
+        z.writestr('gate-evidence-index.json',json.dumps(gate_index,indent=2))
     with zipfile.ZipFile(bundle) as z:
         assert z.testzip() is None;names=set(z.namelist());assert all(entry[field] in names for entry in entries for field in ['video','preview','metadata'])
+        assert all(item['archive_path'] in names for item in gate_index)
     result=dict(time=dt.datetime.now(dt.timezone.utc).isoformat(),complete=True,evaluations_per_arm=180,paired_videos=360,visually_reviewed_sheets=18,occupied_gpu_hours=occupied/3600,report=str(destination/'RESULTS.md'),page=str(destination/'index.html'),bundle=str(bundle),bytes=bundle.stat().st_size,sha256=sha(bundle),zip_crc_passed=True)
     with (ROOT/'complete-evidence.json').open('x') as f:json.dump(result,f,indent=2);f.write('\n')
     print(json.dumps(result))

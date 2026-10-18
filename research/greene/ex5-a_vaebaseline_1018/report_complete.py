@@ -109,10 +109,11 @@ def pilot_dispatch_evidence(root):
         state=include(root/'full-media/queue.json')
         assert state['status']=='complete' and state['pid']==media['pid'] and state['completed']==360
         include(root/'full-media-v8.log')
-    for version in [9,10]:
+    for version in [9,10,11]:
         manifest_path=root/f'full-evidence-code-v{version}-manifest.json'
         if not manifest_path.exists():continue
-        manifest=include(manifest_path);assert manifest['archive_provenance_only']
+        manifest=include(manifest_path)
+        assert manifest.get('archive_provenance_only') or manifest.get('presentation_only')
         for path,digest in manifest['files'].items():include(path,digest)
         tests=include(manifest['tests_record'],manifest['tests_record_sha256'])
         assert tests['passed'] and tests['returncode']==0

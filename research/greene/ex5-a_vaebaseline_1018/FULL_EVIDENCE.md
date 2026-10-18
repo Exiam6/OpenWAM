@@ -9,6 +9,10 @@ before starting the queue, after the first actual VAE pilot task audit exists.
 There are360video pairs:180Raw/VAE primary and180Compact/VAE secondary. The
 baseline is on top and VAE below. Numerical effects are baseline minus VAE;
 left-only success favors the baseline. All scenes, seeds and failures stay.
+The browser labels one-sided successes by model name (Raw, Compact or VAE),
+because the paired camera views are stacked top/bottom. Internal outcome values
+and numerical signs remain unchanged; the shared filter calls the top model
+Baseline.
 The45primary pilot videos are reused only after their complete frozen pilot media
 manifests exist and all result/video/preview hashes match. Other pairs encode the
 three policy cameras for both sides, aligned by action index with final-frame

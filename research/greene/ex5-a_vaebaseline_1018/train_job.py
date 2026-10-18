@@ -71,7 +71,7 @@ def main(seed,stage):
                     (values['loss']/2).backward()
                     for key in totals:totals[key]+=float(values[key])/2
                 if stage=='smoke' and step==steps:
-                    wanted=['video_backbone.dit.patch_embedding.weight','video_backbone.dit.blocks.0.self_attn.q.weight','action_backbone.action_embedding.weight']
+                    wanted=['video_backbone.dit.patch_embedding.weight','video_backbone.dit.blocks.0.self_attn.q.weight','action_backbone.action_encoder.weight']
                     named=dict(model.named_parameters())
                     for name in wanted:
                         value=named[name].grad;assert value is not None and torch.isfinite(value).all() and value.float().norm()>0

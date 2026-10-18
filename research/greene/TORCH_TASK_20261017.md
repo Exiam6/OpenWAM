@@ -1,3 +1,5 @@
+> **2026-10-17 22:10 CDT 撤回，不需要执行。** 根因已在 Shenlong 本机定位并验证（另一会话 ex4-e，`/home/zifanz4/openwam-runtime/ex4-e_plannerpath_1017/RESULTS.md`）：Shenlong 评测把 cuRobo 配置换到不含 `aloha-agilex` 的路径，RoboTwin 规划器据此跳过 ALOHA 底座偏航校准（左 +0.02、右 +0.01 rad）。恢复路径标记后专家回放 handover 0/5→5/5、官方 checkpoint handover 0/5→5/5。Torch 不做此替换，所以官方在 Torch 上成功。
+
 # Torch 任务：专家末端轨迹回放（ex4d，约 20 分钟，1 × L40S）
 
 任务 ID：`ex4d-expert-replay-20261017`。调度方：Shenlong。执行方：NYU Torch。

@@ -1,0 +1,61 @@
+{
+  "seed": 43,
+  "common_initialization": "/home/zifanz4/openwam-runtime/rae-factorial-20261010/initialization/common-seed43.safetensors",
+  "matched_trainable_tensors": 676,
+  "dimension_specific_exclusions": [
+    {
+      "name": "video_backbone.dit.patch_embedding.weight",
+      "raw_shape": [
+        1024,
+        768,
+        1,
+        2,
+        2
+      ],
+      "vae_shape": [
+        1024,
+        48,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "name": "video_backbone.dit.head.head.weight",
+      "raw_shape": [
+        3072,
+        1024
+      ],
+      "vae_shape": [
+        192,
+        1024
+      ]
+    },
+    {
+      "name": "video_backbone.dit.head.head.bias",
+      "raw_shape": [
+        3072
+      ],
+      "vae_shape": [
+        192
+      ]
+    }
+  ],
+  "frozen_vae_tensors": 196,
+  "frozen_text_tensors": 242,
+  "trainable_parameters": 295035604,
+  "total_parameters": 6680634608,
+  "trained_official_policy_weights_loaded": false,
+  "cuda_initialized": false,
+  "time": "2026-10-18T08:57:53.944742+00:00",
+  "dimension_specific_initial_sha256": {
+    "video_backbone.dit.patch_embedding.weight": "f84d56c6311163a36224ac34f731aafeac36dbe3d43b7156a5a00d1e7547ce90",
+    "video_backbone.dit.head.head.weight": "4c4c5ee0465182f281e06d5ff2512e5b90be77cecc66e98d48f006ef480cd9c9",
+    "video_backbone.dit.head.head.bias": "cbd73aa7a6d72c518cb52c0e0685c83bae1b3b1157755babb01d36b9d1e063b7"
+  },
+  "corrected_protocol_sha256": "c70a4b6efc90cd5820573b85cb80894b8e0ea58231730b0579eb8549e1fe6439",
+  "runtime_manifest_sha256": "f60b532daecdf09df53fe134ba08d5a02c8cdb043f4b942d9b6ec4e55eb4d742",
+  "cpu_only": true,
+  "weights_saved": false,
+  "checkpoint_reused": false
+}

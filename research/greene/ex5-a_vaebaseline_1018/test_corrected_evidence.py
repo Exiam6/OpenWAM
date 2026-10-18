@@ -40,3 +40,28 @@ class CorrectedEvidenceTests(unittest.TestCase):
 
 
 if __name__=='__main__':unittest.main()
+
+
+class InitializationEvidenceTests(unittest.TestCase):
+    def setUp(self):
+        self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup);self.parent=Path(self.temp.name);self.root=self.parent/'study';self.root.mkdir()
+        self.source=self.parent/'rae-factorial-20261010/initialization/common-seed42.safetensors';self.source.parent.mkdir(parents=True);self.source.write_bytes(b'frozen shared initialization')
+        (self.root/'gpu-registration.json').write_text(json.dumps({'asset_files':{str(self.source):sha(self.source)}}))
+        self.path=self.root/'runs/vae48_native-seed42/initialization.json';self.path.parent.mkdir(parents=True)
+        self.record={'seed':42,'trained_official_policy_weights_loaded':False,'cuda_initialized':False,'matched_trainable_tensors':676,'common_initialization':str(self.source),'dimension_specific_exclusions':[dict(name=x,raw_shape=[768],vae_shape=[48]) for x in ['video_backbone.dit.patch_embedding.weight','video_backbone.dit.head.head.weight','video_backbone.dit.head.head.bias']]}
+        self.path.write_text(json.dumps(self.record))
+
+    def test_fresh_correct_seed_is_archivable(self):
+        from corrected_evidence import verify_initialization
+        self.assertEqual(verify_initialization(self.root,42),self.path)
+
+    def test_wrong_seed_or_trained_weights_rejected(self):
+        from corrected_evidence import verify_initialization
+        for field,value in [('seed',43),('trained_official_policy_weights_loaded',True),('matched_trainable_tensors',675)]:
+            self.path.write_text(json.dumps(dict(self.record,**{field:value})))
+            with self.assertRaises(AssertionError):verify_initialization(self.root,42)
+
+    def test_changed_shared_initialization_rejected(self):
+        from corrected_evidence import verify_initialization
+        self.source.write_bytes(b'changed')
+        with self.assertRaises(AssertionError):verify_initialization(self.root,42)

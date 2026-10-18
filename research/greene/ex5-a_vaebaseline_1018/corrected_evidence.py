@@ -51,5 +51,30 @@ def extra_evidence(root,release):
     assert sha(bundle['bundle'])==bundle['sha256'];paths.update([bundle_path,Path(bundle['bundle'])])
     wait=read(root/'corrected-training-capacity-wait-v1.json')
     assert wait['status']=='complete' and wait['protocol_sha256']==sha(protocol)
+    cpu=root/'corrected-cpu-construction-audit-0857'
+    construction=read(cpu/'result.json')
+    assert construction['passed'] and construction['gpu_seconds']==0 and construction['seeds']==[42,43,44]
+    assert len(construction['rows'])==3
+    for row in construction['rows']:
+        assert row['cpu_only'] and not row['weights_saved'] and not row['checkpoint_reused'] and not row['cuda_initialized']
+        assert row['corrected_protocol_sha256']==sha(protocol)
+        paths.add(cpu/f"seed{row['seed']}.json")
+    paths.add(cpu/'result.json')
     assert all(path.is_file() for path in paths)
     return paths
+
+
+def verify_initialization(root,seed):
+    root=Path(root);path=root/'runs'/f'vae48_native-seed{seed}'/'initialization.json';record=read(path)
+    assert record['seed']==seed
+    assert record['trained_official_policy_weights_loaded'] is False and record['cuda_initialized'] is False
+    assert record['matched_trainable_tensors']==676
+    expected={'video_backbone.dit.patch_embedding.weight','video_backbone.dit.head.head.weight','video_backbone.dit.head.head.bias'}
+    excluded=record['dimension_specific_exclusions']
+    assert len(excluded)==3 and {x['name'] for x in excluded}==expected
+    assert all(x['raw_shape']!=x['vae_shape'] for x in excluded)
+    source=root.parent/'rae-factorial-20261010/initialization'/f'common-seed{seed}.safetensors'
+    assert Path(record['common_initialization']).resolve()==source.resolve()
+    registration=read(root/'gpu-registration.json')
+    assert sha(source)==registration['asset_files'][str(source)]
+    return path

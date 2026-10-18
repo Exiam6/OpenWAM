@@ -1,0 +1,14 @@
+{
+  "time": "2026-10-18T09:02:31.702891+00:00",
+  "files": {
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/corrected-cpu-construction-audit-0857/result.json": "f810b1722c307fe78ac458980e44c3135106edf8713caa78e80df8cdb422b905",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/corrected-cpu-construction-audit-0857/seed42.json": "c4e61a88a80e71271359030395059aeb577f20934237144562278c64a0605610",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/corrected-cpu-construction-audit-0857/seed43.json": "973afba94d909eeb92c0c84567fa8d3a07e2f15c4c71dafeb4b647de81b630b9",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/corrected-cpu-construction-audit-0857/seed44.json": "85a11422e4089c22055dec0b1267d91b44f49ac0b8894dc44354211ecebc6a80"
+  },
+  "matched_model_source_sha256": "d7a231ae3958304a31819c0cfd6696e98db312f6690a046184f543b10aa6bf57",
+  "protocol_sha256": "c70a4b6efc90cd5820573b85cb80894b8e0ea58231730b0579eb8549e1fe6439",
+  "passed": true,
+  "cpu_only": true,
+  "weights_saved": false
+}

@@ -11,7 +11,7 @@ import zipfile
 from build_cache import sha
 from full_media import ROOT,G,COMPARISONS
 from render_index import render_html
-from corrected_evidence import release_path, prior_cost, extra_evidence
+from corrected_evidence import release_path, prior_cost, extra_evidence, verify_initialization
 
 SOURCE=Path(__file__).parent
 
@@ -31,7 +31,7 @@ def gate_evidence(root,seeds):
         path=Path(path);assert path.is_file(),path
         if digest is not None:assert sha(path)==digest,path
         paths.add(path);return json.loads(path.read_text()) if path.suffix=='.json' else None
-    release=include(release_path(root))
+    release=include(release_path(root));corrected='corrected_protocol_sha256' in release
     paths.update(extra_evidence(root,release))
     for path,digest in release['evidence_sha256'].items():include(path,digest)
     contract=include(root/('fixed-policy-diagnostic-0825/observations/result.json' if 'corrected_protocol_sha256' in release else 'deployment-contract/result.json'))
@@ -46,7 +46,9 @@ def gate_evidence(root,seeds):
             claim_path=root/'phase-claims'/f'{phase}-seed{seed}.json'
             claim=include(claim_path,release['parent_claim_sha256'] if phase=='pilot_evaluation' else None)
             result=include(claim['result_path'],claim['result_sha256'])
-            if phase=='training':continue
+            if phase=='training':
+                if corrected:include(verify_initialization(root,seed))
+                continue
             directory=Path(claim['result_path']).parent
             include(directory.parent/'reference-actions.json',result['reference_sha256'])
             include(directory/'smoke/result.json')
@@ -225,7 +227,7 @@ def generate():
         gate_index.append(dict(source_path=str(path),archive_path=name,sha256=sha(path)))
     for seed in p['seeds']:
         run=ROOT/'runs'/f'vae48_native-seed{seed}'
-        for name in ['metrics.jsonl','result.json','initial-dev.json','final-dev.json','batches.npy','config.yaml']:add(run/name,f'training/seed{seed}/{name}')
+        for name in ['metrics.jsonl','result.json','initialization.json','initial-dev.json','final-dev.json','batches.npy','config.yaml']:add(run/name,f'training/seed{seed}/{name}')
     for name,digest in p['files'].items():assert sha(name)==digest;add(name,f'frozen/{digest}-{Path(name).name}')
     for name in ['report_complete.py','corrected_evidence.py','full_media.py','paired_video.py','render_index.py','FULL_EVIDENCE.md']:add(SOURCE/name,'source/'+name)
     primary=summary['comparisons']['primary_raw_minus_vae']

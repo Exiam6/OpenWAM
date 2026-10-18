@@ -30,6 +30,7 @@ def admission():
     for name,digest in p['launcher_files'].items():assert sha(name)==digest,name
     assert str(Path(__file__).resolve()) in p['launcher_files'] and str(SOURCE/'stage_runner.py') in p['launcher_files']
     for name,digest in p['predecessor_files'].items():assert sha(name)==digest,name
+    for name,digest in p['asset_files'].items():assert sha(name)==digest,name
     h=ROOT.parent/'ex4-h_officialcalibration_1017';g=ROOT.parent/'ex4-g_calibratedfactorial_1017'
     summary=json.loads((h/'success-summary.json').read_text());bundle=json.loads((h/'final-bundle.json').read_text())
     assert summary['complete'] and summary['verdict']=='predicted_calibration_transfer_supported'
@@ -87,8 +88,10 @@ def main(gpu):
         logs=ROOT/'preflight-logs';logs.mkdir(exist_ok=False)
         def execute(name,script,args,limit,result_path):
             state['active_stage']=name;write(path,state)
-            execution=run_child([sys.executable,'-u',str(SOURCE/script),*args],log=logs/f'{name}.log',seconds=limit,deadline=end,pause_paths=p['pause_paths'],env=env,cwd=str(ENGINE))
-            state['stages'].append(dict(name=name,execution=execution));write(path,state)
+            def record_child(pid):
+                state['active_child_pid']=pid;write(path,state)
+            execution=run_child([sys.executable,'-u',str(SOURCE/script),*args],log=logs/f'{name}.log',seconds=limit,deadline=end,pause_paths=p['pause_paths'],env=env,cwd=str(ENGINE),on_started=record_child)
+            state['stages'].append(dict(name=name,execution=execution));state['active_child_pid']=None;write(path,state)
             assert execution['complete'] and not execution.get('error'),execution
             result=json.loads(result_path.read_text());assert result.get('passed',result.get('complete',False)),result
             return result

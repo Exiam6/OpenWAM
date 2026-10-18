@@ -30,6 +30,7 @@ def admission(phase,seeds):
     for file,digest in p['batch_files'].items():assert sha(file)==digest,file
     assert str(Path(__file__).resolve()) in p['batch_files'] and str(SOURCE/'stage_runner.py') in p['batch_files']
     if phase=='training':
+        for file,digest in p['asset_files'].items():assert sha(file)==digest,file
         assert set(seeds)=={42,43,44},'Allthree registered training seeds required'
         from train_job import admission as check
         check('full')

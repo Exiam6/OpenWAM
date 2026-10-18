@@ -43,6 +43,14 @@ its original source are retained. These additions change archive provenance only
 the frozen training, evaluation, video generation and statistical endpoints stay
 unchanged.
 
+The archive also retains the original seed42/43 remaining-endpoint budget
+refusals, their measured cost observations, and the immutable pending amendment
+proposal with its referenced evidence hashes. These records remain refusals and
+a proposal: collecting them grants no launch authority and changes no cap.
+The complete report still requires the original releases and per-seed budget
+checks. Any later authorized amendment needs a separately verified implementation
+and explicit report provenance; this archive-only addition does not supply it.
+
 The full-readout primary is Raw minus VAE; Compact is a secondary dimensionality
 control, never a replacement primary. Use the unchanged10000crossed bootstrap,
 RNG921018, and registered5pp/two-positive-seeds/positive-lower-bound criterion.

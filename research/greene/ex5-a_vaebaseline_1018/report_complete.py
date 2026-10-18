@@ -109,12 +109,47 @@ def pilot_dispatch_evidence(root):
         state=include(root/'full-media/queue.json')
         assert state['status']=='complete' and state['pid']==media['pid'] and state['completed']==360
         include(root/'full-media-v8.log')
-    manifest_path=root/'full-evidence-code-v9-manifest.json'
-    if manifest_path.exists():
+    for version in [9,10]:
+        manifest_path=root/f'full-evidence-code-v{version}-manifest.json'
+        if not manifest_path.exists():continue
         manifest=include(manifest_path);assert manifest['archive_provenance_only']
         for path,digest in manifest['files'].items():include(path,digest)
         tests=include(manifest['tests_record'],manifest['tests_record_sha256'])
         assert tests['passed'] and tests['returncode']==0
+    return sorted(paths)
+
+
+def budget_refusal_evidence(root):
+    """Archive original refusals and the proposal; neither authorizes a launch."""
+    root=Path(root);proposal_path=root/'evaluation-budget-amendment-proposal-v1.json'
+    refusals=[root/f'evaluation-readiness-seed{seed}-original.json' for seed in [42,43]]
+    if not proposal_path.exists() and not any(path.exists() for path in refusals):return []
+    proposal=json.loads(proposal_path.read_text())
+    assert proposal['status']=='proposal_only_pending_user_decision'
+    assert proposal['gpu_launch_authorized_by_proposal'] is False
+    assert proposal['affected_seeds']==[42,43]
+    assert proposal['total_gpu_cap_seconds']==73800
+    assert proposal['seed44_continues_original_limit_seconds']==10800
+    paths={proposal_path}
+    for name,digest in proposal['evidence_sha256'].items():
+        path=Path(name);assert path.is_file() and sha(path)==digest,path;paths.add(path)
+    for seed,path in zip([42,43],refusals):
+        assert str(path) in proposal['evidence_sha256']
+        refusal=json.loads(path.read_text())
+        assert refusal['seed']==seed and refusal['exit_code']==2
+        assert refusal['stdout'].strip()=='Remaining fixed endpoint does not fit per-seed evaluation budget'
+        assert refusal['original_gate_preserved'] is True
+        assert refusal['full_evaluation_launched'] is False and refusal['release_exists'] is False
+        command=refusal['command']
+        assert str(root/'corrected-protocol-v1/release_evaluation.py') in command
+        assert command[-1]=='--check-readiness' and command[command.index('--seed')+1]==str(seed)
+        cost_path=root/f'pilot-cost-observation-seed{seed}.json'
+        assert str(cost_path) in proposal['evidence_sha256'] and Path(refusal['budget_observation'])==cost_path
+        cost=json.loads(cost_path.read_text());assert cost['seed']==seed
+        assert cost['kind']=='cost_observation_only_not_a_release'
+        assert cost['headroom_after_required60s']<0
+        assert math.isclose(cost['pilot_occupied_seconds']+cost['remaining_seconds'],10800,abs_tol=1e-6)
+        assert math.isclose(cost['headroom_after_required60s'],cost['remaining_seconds']-60-cost['projection']['projected_remaining_seconds'],abs_tol=1e-6)
     return sorted(paths)
 
 
@@ -178,6 +213,7 @@ def resource_evidence(root):
             paths.update(groot.glob('worker-gpu*-dedicated-v4.json'))
             paths.add(groot/'dedicated-dispatchers-v4.json')
     paths.update(pilot_dispatch_evidence(root))
+    paths.update(budget_refusal_evidence(root))
     assert all(path.is_file() for path in paths)
     return sorted(paths)
 

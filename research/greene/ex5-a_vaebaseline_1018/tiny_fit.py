@@ -18,7 +18,10 @@ def main():
     assert s['complete'] and s['steps']==3 and s['strict_reload']
     assert sha(s['checkpoint'])==s['checkpoint_sha256']
     # The parent launcher owns the combined smoke+tiny1800s cap; this child uses its remaining allowance.
-    allowance=p['tiny_remaining_seconds'];assert 0<allowance<=1800
+    budget=json.loads((ROOT/'tiny-budget.json').read_text())
+    assert p['tiny_total_seconds']==1800 and budget['smoke_result_sha256']==sha(smoke/'result.json')
+    assert budget['prior_occupied_seconds']>=s['occupied_seconds']
+    allowance=budget['remaining_seconds'];assert 60<allowance<=1800-budget['prior_occupied_seconds']
     import numpy as np
     import torch
     from openwam.deploy.model_loader import load_from_checkpoint_dir

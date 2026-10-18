@@ -1,0 +1,9 @@
+{
+  "group": "ex4: why do two RoboTwin tasks score zero?",
+  "name": "ex4-f_nativecalibration_1017",
+  "baseline": "ex3 rae-factorial-20261010 original execution path",
+  "setup": "Two fixed endpoint models x three training seeds x first five frozen scenes per task; six rerun controls.",
+  "purpose": "Measure whether restoring native planner calibration transfers expert replay recovery to learned policies.",
+  "variable": "relocated config loses ALOHA branch -> relocated config preserves native ALOHA branch",
+  "state": "registered_before_launch"
+}

@@ -11,6 +11,7 @@ import zipfile
 from build_cache import sha
 from full_media import ROOT,G,COMPARISONS
 from render_index import render_html
+from corrected_evidence import release_path, prior_cost, extra_evidence
 
 SOURCE=Path(__file__).parent
 
@@ -30,9 +31,10 @@ def gate_evidence(root,seeds):
         path=Path(path);assert path.is_file(),path
         if digest is not None:assert sha(path)==digest,path
         paths.add(path);return json.loads(path.read_text()) if path.suffix=='.json' else None
-    release=include(root/'full-training-release.json')
+    release=include(release_path(root))
+    paths.update(extra_evidence(root,release))
     for path,digest in release['evidence_sha256'].items():include(path,digest)
-    contract=include(root/'deployment-contract/result.json')
+    contract=include(root/('fixed-policy-diagnostic-0825/observations/result.json' if 'corrected_protocol_sha256' in release else 'deployment-contract/result.json'))
     for row in contract['rows']:include(row['trace'],row['trace_sha256'])
     for seed in seeds:
         release=include(root/f'evaluation-release-seed{seed}.json')
@@ -117,6 +119,11 @@ def resource_evidence(root):
 
 def selected_preflight(root,release):
     root=Path(root)
+    if 'corrected_protocol_sha256' in release:
+        path=root/'dedicated-preflight-run.json'
+        assert sha(path)==release['evidence_sha256'][str(path)]
+        assert json.loads(path.read_text())['status']=='failed'
+        return path
     path=Path(release.get('preflight_state_path',str(root/'preflight-run.json')))
     assert path in [root/'preflight-run.json',root/'dedicated-preflight-run.json'],'Unregistered preflight state path'
     assert sha(path)==release['evidence_sha256'][str(path)],'Released preflight evidence changed'
@@ -133,10 +140,13 @@ def readiness():
     for script in [G/'full-report-code-v2/readout.py',ROOT/'code/readout.py']:subprocess.run([sys.executable,str(script)],check=True,capture_output=True,text=True)
     summary=json.loads((ROOT/'success-summary.json').read_text());assert summary['complete'] and all(x==180 for x in summary['verified_by_variant'].values()),'Complete matched180-evaluation endpoints required'
     p=json.loads((ROOT/'gpu-registration.json').read_text());rows={tuple(x['identity']):x for x in summary['rows']};assert len(rows)==540
-    release=json.loads((ROOT/'full-training-release.json').read_text());assert release['passed']
+    release=json.loads(release_path(ROOT).read_text());assert release['passed']
     for path,digest in release['evidence_sha256'].items():assert sha(path)==digest,path
-    preflight=json.loads(selected_preflight(ROOT,release).read_text());assert preflight['passed'] and preflight['status']=='complete' and 0<preflight['occupied_seconds']<=9000
-    occupied=preflight['occupied_seconds'];costs=[];claims=[]
+    occupied=prior_cost(ROOT,release);costs=[];claims=[]
+    if 'corrected_protocol_sha256' in release:
+        sys.path.insert(0,str(ROOT/'corrected-protocol-v1'))
+        from corrected_protocol import load_registration,verify_training_release,verify_training_lineage
+        p=load_registration();verify_training_release()
     for seed in p['seeds']:
         cost=dict(seed=seed)
         for phase in ['training','pilot_evaluation','full_evaluation']:
@@ -148,6 +158,7 @@ def readiness():
             assert sha(claim['result_path'])==claim['result_sha256'];cost[phase]=seconds;occupied+=seconds;claims.append(path)
         assert cost['training']<=10800 and cost['pilot_evaluation']<=3600 and cost['pilot_evaluation']+cost['full_evaluation']<=10800
         costs.append(cost)
+        if 'corrected_protocol_sha256' in release:verify_training_lineage(json.loads((ROOT/'runs'/f'vae48_native-seed{seed}'/'result.json').read_text()))
     assert occupied<=p['max_occupied_seconds']==73800
     manifest=json.loads((ROOT/'full-media/manifest.json').read_text());assert manifest['complete'] and manifest['paired_videos']==360
     records={x['key']:x for x in manifest['records']};expected=set();sampled=set()
@@ -207,7 +218,7 @@ def generate():
         for side in ['left','right']:
             path=Path(record[side]['result_path'])
             for item in [path,path.parent/'trace.jsonl']:add(item,'evidence/'+str(item.relative_to(ROOT.parent)))
-    for path in [ROOT/'gpu-registration.json',ROOT/'gpu-registration-audit.json',ROOT/'success-summary.json',ROOT/'full-training-release.json',selected_preflight(ROOT,json.loads((ROOT/'full-training-release.json').read_text())),ROOT/'preflight-run.json',ROOT/'full-media/manifest.json',review,*claims]:add(path,'evidence/'+str(path.relative_to(ROOT.parent)))
+    for path in [ROOT/'gpu-registration.json',ROOT/'gpu-registration-audit.json',ROOT/'success-summary.json',release_path(ROOT),selected_preflight(ROOT,json.loads(release_path(ROOT).read_text())),ROOT/'preflight-run.json',ROOT/'full-media/manifest.json',review,*claims]:add(path,'evidence/'+str(path.relative_to(ROOT.parent)))
     gate_index=[]
     for path in sorted(set(gate_evidence(ROOT,p['seeds'])+resource_evidence(ROOT))):
         name=add(path,'evidence/'+str(path.relative_to(ROOT.parent)))
@@ -216,11 +227,13 @@ def generate():
         run=ROOT/'runs'/f'vae48_native-seed{seed}'
         for name in ['metrics.jsonl','result.json','initial-dev.json','final-dev.json','batches.npy','config.yaml']:add(run/name,f'training/seed{seed}/{name}')
     for name,digest in p['files'].items():assert sha(name)==digest;add(name,f'frozen/{digest}-{Path(name).name}')
-    for name in ['report_complete.py','full_media.py','paired_video.py','render_index.py','FULL_EVIDENCE.md']:add(SOURCE/name,'source/'+name)
+    for name in ['report_complete.py','corrected_evidence.py','full_media.py','paired_video.py','render_index.py','FULL_EVIDENCE.md']:add(SOURCE/name,'source/'+name)
     primary=summary['comparisons']['primary_raw_minus_vae']
     verdict={'useful_raw_dino_benefit_supported':'The registered useful Raw-DINO benefit is supported on this development cohort.','positive_benefit_refuted_on_this_cohort':'A positive Raw-DINO benefit is refuted on this development cohort.','undecided':'The registered Raw-DINO benefit remains undecided on this development cohort.'}[primary['verdict']]
     body='# Matched DINO / Wan VAE: complete evidence\n\n'+verdict+'\n\n'
     body+='Question: does Raw DINO improve native closed-loop success over Wan VAE under matched data, initialization where shapes agree, minibatches, training steps and calibrated evaluation? The intervention changes the frozen visual encoder and latent channels. The12-layer1024-wide video core,512-wide action model,20Dstate/action, native heads/shifts5, batch3with accumulation2, seeds42/43/44 and fixed20000-step endpoint are held. Dimension-specific projections and frozen pretraining necessarily differ. The official larger policy is not included.\n\n'
+    if release_path(ROOT).name=='corrected-full-training-release-v1.json':
+        body+='The original VAE deployment preflight failed image/cache action agreement and remains a recorded failure. A separately registered correction isolates the frozen VAE encoding precision from outer autocast. Corrected image/cache and repeated inference matched exactly on the first training window of each of three tasks; the original512-step tiny-fit criteria then passed. The corrected runtime changes only that encoder method relative to the frozen production commit. All earlier occupied costs are included below. These training-window checks are not held-out or closed-loop evidence. Full training starts fresh for each seed, with no tiny-fit checkpoint reuse.\n\n'
     body+='Criterion registered before GPU work: Raw-minus-VAE at least5percentage points, positive in at least two training seeds, with positive lower95%paired bootstrap bound. A nonpositive upper bound refutes positive benefit; otherwise undecided.10000crossed seed/within-task-scene draws use RNG921018.\n\n'
     body+=f"Primary difference: **{primary['difference']*100:+.2f} pp**,95%interval **[{primary['ci95'][0]*100:+.2f}, {primary['ci95'][1]*100:+.2f}] pp**. Per-seed differences: "+', '.join(f'{x*100:+.2f}pp' for x in primary['per_seed_difference'])+'.\n\n'
     body+='| Corrected model | Adjust | Handover | Placement | Overall |\n|---|---|---|---|---|\n'
@@ -236,7 +249,7 @@ def generate():
             n=sum(x['result']['success'] for x in summary['rows'] if x['identity'][:2]==[variant,seed]);values.append(f'{n/60:.1%} ({n}/60)')
         body+='| '+variant+' | '+' | '.join(values)+' |\n'
     secondary=summary['comparisons']['secondary_compact_minus_vae'];body+=f"\nSecondary Compact-minus-VAE difference: {secondary['difference']*100:+.2f}pp,95%interval [{secondary['ci95'][0]*100:+.2f}, {secondary['ci95'][1]*100:+.2f}]pp. This descriptive control does not replace the primary endpoint.\n\n"
-    body+=f'New study occupation: **{occupied/3600:.3f} GPU-hours**, within the20.5-hour cap, including preflight, training and evaluation parent lifetimes. Baseline training/evaluation is historical and not charged again. Equal data/steps do not imply equal FLOPs or wall time.\n\n| VAE seed | Training GPUh | Pilot+remaining evaluation GPUh |\n|---|---|---|\n'
+    body+=f'New study occupation: **{occupied/3600:.3f} GPU-hours**, within the20.5-hour cap, including retained failed preflight, diagnostic validation, training and evaluation parent lifetimes. Baseline training/evaluation is historical and not charged again. Equal data/steps do not imply equal FLOPs or wall time.\n\n| VAE seed | Training GPUh | Pilot+remaining evaluation GPUh |\n|---|---|---|\n'
     for cost in costs:body+=f"| {cost['seed']} | {cost['training']/3600:.3f} | {(cost['pilot_evaluation']+cost['full_evaluation'])/3600:.3f} |\n"
     body+='\n![Training losses and paired rollout sample](training-and-rollout.png)\n\n[Download figure](training-and-rollout.png) · [Interactive videos](index.html) · [Download index](index.json) · [Gate evidence and hashes](gate-evidence-index.json)\n\n'
     body+='All360paired videos were fully decoded/hash checked. Actual visual review samples six indices on each comparison/task/seed first scene (18sheets), not every frame. The baseline is on top, VAE below; numerical effects are baseline minus VAE. All three policy cameras are shown, aligned by action index with final-frame hold. No external whole-robot view was captured. Wrist occlusion and cropped objects remain visible.\n\n'

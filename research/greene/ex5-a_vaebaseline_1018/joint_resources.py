@@ -9,7 +9,7 @@ import subprocess
 R=Path('/home/zifanz4/openwam-runtime')
 G=R/'ex4-g_calibratedfactorial_1017'
 V=R/'ex5-a_vaebaseline_1018'
-PLAN=V/'joint-allocation-plan.json'
+PLAN=V/'joint-allocation-plan-v2.json'
 ASSIGNMENT=V/'joint-allocation.json'
 END=dt.datetime.fromisoformat('2026-10-18T16:59:00+00:00')
 

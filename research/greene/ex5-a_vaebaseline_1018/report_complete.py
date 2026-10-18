@@ -85,6 +85,15 @@ def resource_evidence(root):
         assert expired['scientific_gpu_attempt_started'] is False and expired['occupied_gpu_seconds']==0
         for name,field in [('preflight-run.json','preflight_state_sha256'),('preflight-schedule-v2.json','scheduler_state_sha256'),('scheduled-preflight-v2.log','log_sha256')]:
             path=vroot/name;assert sha(path)==expired[field];paths.add(path)
+    joint_v2=root.parent/'ex5-a_vaebaseline_1018'/'joint-allocation-plan-v2.json'
+    if joint_v2.exists():
+        plan=json.loads(joint_v2.read_text());vroot=joint_v2.parent;groot=root.parent/'ex4-g_calibratedfactorial_1017'
+        assert sha(groot/'registration.json')==plan['g_registration_sha256']
+        assert sha(vroot/'gpu-registration.json')==plan['v_registration_sha256']
+        paths.update([joint_v2,groot/'joint-allocation-process-v2.json',groot/'worker-gpu-joint-allocation-v2.json',groot/'joint-reservation-migration-v2.json',groot/'dedicated-dispatchers-v3.json'])
+        for path,digest in plan['files'].items():
+            path=Path(path);assert sha(path)==digest,path;paths.add(path)
+        paths.update(groot.glob('worker-gpu*-dedicated-v3.json'))
     assert all(path.is_file() for path in paths)
     return sorted(paths)
 
@@ -95,7 +104,8 @@ def selected_preflight(root,release):
     assert path in [root/'preflight-run.json',root/'dedicated-preflight-run.json'],'Unregistered preflight state path'
     assert sha(path)==release['evidence_sha256'][str(path)],'Released preflight evidence changed'
     if path.name=='dedicated-preflight-run.json':
-        plan=root/'joint-allocation-plan.json';assignment=root/'joint-allocation.json'
+        plan=Path(release.get('joint_plan_path',str(root/'joint-allocation-plan.json')));assignment=root/'joint-allocation.json'
+        assert plan in [root/'joint-allocation-plan.json',root/'joint-allocation-plan-v2.json'],'Unregistered resource plan path'
         state=json.loads(path.read_text())
         assert release['joint_plan_sha256']==state['resource_plan_sha256']==sha(plan)
         assert state['assignment_sha256']==sha(assignment)

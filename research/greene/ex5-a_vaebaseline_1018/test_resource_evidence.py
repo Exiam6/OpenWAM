@@ -49,6 +49,16 @@ class ResourceEvidenceTests(unittest.TestCase):
         cpu.write_bytes(before);old.write_text('changed')
         with self.assertRaises(AssertionError):report.resource_evidence(self.root)
 
+    def test_v2_namespace_migration_and_dispatcher_history_retained(self):
+        self.joint_fixture();groot=self.root.parent/'ex4-g_calibratedfactorial_1017'
+        for name in ['joint-allocation-process-v2.json','worker-gpu-joint-allocation-v2.json','joint-reservation-migration-v2.json','dedicated-dispatchers-v3.json','worker-gpu1-dedicated-v3.json']:(groot/name).write_text('{}')
+        archive=groot/'held-v3-fixture.json';archive.write_text('{"status":"resource_held_v3"}')
+        self.put('joint-allocation-plan-v2.json',dict(g_registration_sha256=report.sha(groot/'registration.json'),v_registration_sha256=report.sha(self.root/'gpu-registration.json'),files={str(archive):report.sha(archive)}))
+        paths=set(report.resource_evidence(self.root))
+        self.assertTrue({archive,groot/'joint-reservation-migration-v2.json',groot/'worker-gpu1-dedicated-v3.json'}<=paths)
+        archive.write_text('changed')
+        with self.assertRaises(AssertionError):report.resource_evidence(self.root)
+
     def test_numerical_file_mutation_rejected(self):
         self.numeric.write_text('changed')
         with self.assertRaises(AssertionError):report.resource_evidence(self.root)

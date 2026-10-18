@@ -77,7 +77,7 @@ def readiness():
     measured=max(rates)*20000+900
     assert abs(measured-projection['training_seconds_per_seed'])<1e-6
     paths=[registration,preflight_path,cache_path,smoke_path,contract_path,tiny_path,ROOT/'tiny-fit/metrics.jsonl']
-    return dict(time=dt.datetime.now(dt.timezone.utc).isoformat(),passed=True,preflight_state_path=str(preflight_path),joint_plan_sha256=sha(j.PLAN),reserved_gpus=assignment['vae_gpus'],native_deployment_contract_passed=True,tiny_fit_passed=True,budget_projection_passed=True,
+    return dict(time=dt.datetime.now(dt.timezone.utc).isoformat(),passed=True,preflight_state_path=str(preflight_path),joint_plan_path=str(j.PLAN),joint_plan_sha256=sha(j.PLAN),reserved_gpus=assignment['vae_gpus'],native_deployment_contract_passed=True,tiny_fit_passed=True,budget_projection_passed=True,
         native_deployment_contract_sha256=sha(contract_path),tiny_fit_sha256=sha(tiny_path),evidence_sha256={str(path):sha(path) for path in paths},
         planned_training_seeds=[42,43,44],fixed_training_steps=20000,training_seconds_per_seed=10800,projected_training_seconds_per_seed=measured,
         fresh_initialization_required=True,tiny_checkpoint_reused=False,

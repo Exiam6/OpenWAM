@@ -30,7 +30,7 @@ class DedicatedPreflightTests(unittest.TestCase):
         new.body=[x for x in new.body if not (isinstance(x,ast.Assign) and any(isinstance(t,ast.Name) and t.id in ['plan','assignment'] for t in x.targets))
             and not (isinstance(x,ast.Expr) and isinstance(x.value,ast.Call) and ast.unparse(x.value.func)=='j.legacy_failed')
             and not (isinstance(x,ast.Assert) and "preflight['resource_plan_sha256']" in ast.unparse(x))]
-        new.body[-1].value.keywords=[x for x in new.body[-1].value.keywords if x.arg not in ['preflight_state_path','joint_plan_sha256','reserved_gpus']]
+        new.body[-1].value.keywords=[x for x in new.body[-1].value.keywords if x.arg not in ['preflight_state_path','joint_plan_path','joint_plan_sha256','reserved_gpus']]
         self.assertEqual(ast.dump(old,include_attributes=False),ast.dump(new,include_attributes=False))
 
     def test_report_selects_hashed_new_state_and_rejects_tampering(self):
@@ -43,6 +43,18 @@ class DedicatedPreflightTests(unittest.TestCase):
             state.write_text('{}')
             with self.assertRaises(AssertionError):report.selected_preflight(root,release)
             release['preflight_state_path']=str(root/'unregistered.json')
+            with self.assertRaises(AssertionError):report.selected_preflight(root,release)
+
+    def test_report_requires_explicit_registered_v2_plan(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);plan=root/'joint-allocation-plan-v2.json';assignment=root/'joint-allocation.json'
+            plan.write_text('{"version":2}');assignment.write_text('{}')
+            state=root/'dedicated-preflight-run.json';state.write_text(json.dumps(dict(resource_plan_sha256=report.sha(plan),assignment_sha256=report.sha(assignment))))
+            release=dict(preflight_state_path=str(state),joint_plan_path=str(plan),joint_plan_sha256=report.sha(plan),evidence_sha256={str(state):report.sha(state)})
+            self.assertEqual(report.selected_preflight(root,release),state)
+            plan.write_text('changed')
+            with self.assertRaises(AssertionError):report.selected_preflight(root,release)
+            release['joint_plan_path']=str(root/'unregistered-plan.json')
             with self.assertRaises(AssertionError):report.selected_preflight(root,release)
 
     def test_report_preserves_legacy_path_default(self):

@@ -25,6 +25,32 @@ def pin_renderer():
     print('RENDER_DEVICE_PINNED',device.pci_string,flush=True)
 
 
+def remap_robot_config(path, config_root):
+    """Relocate YAML without changing RoboTwin's path-selected calibration."""
+    from pathlib import Path
+    source = Path(path)
+    root = Path(config_root)
+    if source.name not in ('curobo_left.yml', 'curobo_right.yml'):
+        return path
+    target = root / source.name
+    native_aloha = 'aloha-agilex' in str(source)
+    if native_aloha and 'aloha-agilex' not in str(target):
+        alias = root / 'aloha-agilex' / source.name
+        alias.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            alias.symlink_to(target.absolute())
+        except FileExistsError:
+            pass
+        if alias.read_bytes() != target.read_bytes():
+            raise ValueError(f'Existing robot-config alias differs: {alias}')
+        target = alias
+    if ('aloha-agilex' in str(target)) != native_aloha:
+        raise ValueError(f'Relocation would change robot calibration: {source} -> {target}')
+    # Do not resolve symlinks: planner.py uses the literal pathname in both
+    # plan_path and plan_batch to select the ALOHA base-frame rotation.
+    return str(target)
+
+
 def configure_robot_paths():
     from pathlib import Path
     from envs.robot.planner import CuroboPlanner
@@ -33,9 +59,12 @@ def configure_robot_paths():
     config_root=Path(os.environ.get('ROBOT_CONFIG_ROOT','/home/zifanz4/openwam-runtime/migration-20260927/robot-configs'))
     if not config_root.exists():
         print('configure_robot_paths: no remap (RoboTwin native curobo configs)',flush=True);return
+    import inspect
+    signature = inspect.signature(original)
     def initialize(self,*args,**kwargs):
-        path=kwargs.get('yml_path')
-        if path is not None and Path(path).name in ['curobo_left.yml','curobo_right.yml']:
-            kwargs['yml_path']=str(config_root/Path(path).name)
-        return original(self,*args,**kwargs)
+        bound = signature.bind(self, *args, **kwargs)
+        path = bound.arguments.get('yml_path')
+        if path is not None:
+            bound.arguments['yml_path'] = remap_robot_config(path, config_root)
+        return original(*bound.args, **bound.kwargs)
     CuroboPlanner.__init__=initialize

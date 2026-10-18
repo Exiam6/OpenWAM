@@ -56,4 +56,12 @@ class RunnerTests(unittest.TestCase):
             self.assertFalse(result['complete']);self.assertIn('deadline',result['error']);self.assertNotIn('pid',result)
 
 
+    def test_health_failure_stops_a_running_child(self):
+        with tempfile.TemporaryDirectory() as d:
+            start=time.monotonic()
+            result=self.run_case('import time;time.sleep(60)',d,health_check=lambda:'server disappeared' if time.monotonic()-start>.1 else None)
+            self.assertFalse(result['complete']);self.assertEqual(result['error'],'server disappeared')
+            self.assertIn('pid',result);self.assertLess(result['occupied_seconds'],1.)
+
+
 if __name__=='__main__':unittest.main()

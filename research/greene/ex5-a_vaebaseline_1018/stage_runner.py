@@ -7,12 +7,16 @@ import subprocess
 import time
 
 
-def run_child(command, *, log, seconds, deadline, pause_paths=(), env=None, cwd=None, cleanup_seconds=10., poll_seconds=.2):
+def run_child(command, *, log, seconds, deadline, pause_paths=(), env=None, cwd=None, cleanup_seconds=10., poll_seconds=.2, health_check=None, on_started=None):
     assert seconds > cleanup_seconds > 0 and poll_seconds > 0
     started = time.monotonic()
     child = None
     record = dict(command=list(command), started=dt.datetime.now(dt.timezone.utc).isoformat(), limit_seconds=seconds, complete=False)
     def reason():
+        if health_check is not None:
+            health = health_check()
+            if health:
+                return str(health)
         if time.monotonic()-started >= seconds-cleanup_seconds:
             return 'elapsed budget reached; cleanup reserve'
         if dt.datetime.now(dt.timezone.utc) >= deadline-dt.timedelta(seconds=cleanup_seconds):
@@ -30,6 +34,8 @@ def run_child(command, *, log, seconds, deadline, pause_paths=(), env=None, cwd=
             child = subprocess.Popen(command, stdin=subprocess.DEVNULL, stdout=stream, stderr=subprocess.STDOUT,
                 start_new_session=True, env=env, cwd=cwd)
             record['pid'] = child.pid
+            if on_started is not None:
+                on_started(child.pid)
             while child.poll() is None:
                 stop = reason()
                 if stop:

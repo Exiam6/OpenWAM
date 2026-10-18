@@ -45,7 +45,7 @@ def window(p,current=None):
     start=dt.datetime.fromisoformat(p['extra_window_start'])
     end=min(dt.datetime.fromisoformat(p['extra_window_end']),dt.datetime.fromisoformat(p['deadline']))-dt.timedelta(seconds=60)
     # Preserve the full endpoint: worst-case cache+tiny, then three parallel training/evaluation jobs.
-    assert start<=current and (end-current).total_seconds()>7200+1800+10800+10800+60
+    assert start<=current and (end-current).total_seconds()>7200+1800+10800+10800+900+60
     return end
 
 
@@ -71,12 +71,17 @@ def main(gpu):
     def stop(*_):raise RuntimeError('Preflight supervisor termination')
     signal.signal(signal.SIGTERM,stop);signal.signal(signal.SIGINT,stop);signal.signal(signal.SIGALRM,stop)
     try:
-        for _ in range(3):
-            samples=idle_gpus(p);state['capacity_sample']=samples;write(path,state)
-            assert sum(x['idle'] for x in samples)>=3 and next(x for x in samples if x['gpu']==gpu)['idle'],'At least three truly idle extra GPUs required'
+        streak=0
+        while True:
+            end=window(p);samples=idle_gpus(p)
+            eligible=sum(x['idle'] for x in samples)>=3 and next(x for x in samples if x['gpu']==gpu)['idle']
+            streak=streak+1 if eligible else 0
+            state.update(status='waiting_capacity',capacity_sample=samples,admitted_samples=streak);write(path,state)
+            if streak>=3:
+                samples=idle_gpus(p)
+                if sum(x['idle'] for x in samples)>=3 and next(x for x in samples if x['gpu']==gpu)['idle']:break
+                streak=0
             time.sleep(5)
-        end=window(p);samples=idle_gpus(p)
-        assert sum(x['idle'] for x in samples)>=3 and next(x for x in samples if x['gpu']==gpu)['idle'],'Capacity changed before launch'
         state['capacity_sample']=samples;started=time.monotonic();signal.alarm(8990);state['status']='running';state['allocation_end']=end.isoformat();write(path,state)
         env=dict(os.environ,CUDA_VISIBLE_DEVICES=p['gpus'][str(gpu)],PYTHONPATH=str(ENGINE),OMP_NUM_THREADS='4',OPENBLAS_NUM_THREADS='4',MKL_NUM_THREADS='4')
         logs=ROOT/'preflight-logs';logs.mkdir(exist_ok=False)
@@ -107,7 +112,7 @@ def main(gpu):
         projection=dict(max_tail_seconds_per_step=max(rates),training_seconds_per_seed=projected_training,fixed_overhead_reserve_seconds=900,
             training_fits=projected_training<10740,remaining_wall_seconds=(end-dt.datetime.now(dt.timezone.utc)).total_seconds(),
             endpoint_worst_remaining_seconds=21600,note='900s planning reserve covers initialization, two dev-loss passes and checkpoint I/O; measured feasibility is not a guaranteed runtime bound.')
-        assert projection['training_fits'] and projection['remaining_wall_seconds']>21660,projection
+        assert projection['training_fits'] and projection['remaining_wall_seconds']>22560,projection
         state.update(status='complete',passed=True,cache_seconds=state['stages'][0]['execution']['occupied_seconds'],tiny_combined_seconds=total_tiny,
             projection=projection,full_training_released=False,full_training_requires_separate_evidence_review=True)
     except BaseException as error:

@@ -9,7 +9,7 @@ extra-GPU window. Three extra GPUs must be idle at each of three admission polls
 and again immediately before launch, because the complete endpoint requires
 three parallel training and evaluation jobs later. This is an availability check,
 not a promise that other users will leave those GPUs free. The remaining window
-must fit the full worst-case8.5-hour serial/parallel chain plus cleanup reserves.
+must fit the full worst-case8.5-hour serial/parallel chain,15minutes of video review and cleanup reserves.
 
 The parent counts entire child lifetimes, including imports, asset checks, model
 loading, inference and cleanup. It runs cache (7200s), then the3-step smoke,

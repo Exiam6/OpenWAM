@@ -34,9 +34,11 @@ measured complete-stage projection. Do not substitute flow loss for closed-loop
 success, or use development success to select a checkpoint.
 
 Worst-case serial cache+tiny then parallel three-seed training then parallel
-three-seed evaluation needs8.5hours if three idle GPUs are available throughout.
+three-seed evaluation needs8.5hours plus a15-minute per-seed video-review allowance if three idle GPUs are available throughout.
 The09-hour extra-GPU window could fit with a small reserve, but availability is
 not guaranteed. Use actual remaining time and measured stage costs before each
 admission; if the complete registered endpoint cannot fit, preserve preparation
 instead of silently reducing seeds, steps or scenes. Do not promise an overnight
 result before real cost and resource gates have passed.
+
+Evaluation implementation preparation is detailed in EVALUATION_PREPARATION.md: each seed uses15pilot plus45remaining evaluations under its unchanged3-hour cumulative cap; allthree seeds and180evaluations remain required. Phase progress is independent per seed to avoid idle barriers.

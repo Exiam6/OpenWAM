@@ -95,5 +95,15 @@ class PilotDispatchArchiveTests(unittest.TestCase):
         self.put('full-media/queue.json',dict(pid=456,status='encoding',completed=359))
         with self.assertRaises(AssertionError):pilot_dispatch_evidence(self.root)
 
+    def test_report_snapshot_and_tests_are_hash_checked_and_archived(self):
+        source=self.put('full-evidence-code-v9/report_complete.py','report source')
+        tests=self.put('full-evidence-v9-tests.json',dict(passed=True,returncode=0))
+        self.put('full-evidence-code-v9-manifest.json',dict(archive_provenance_only=True,
+            files={str(source):sha(source)},tests_record=str(tests),tests_record_sha256=sha(tests)))
+        paths=set(pilot_dispatch_evidence(self.root))
+        self.assertTrue({source,tests,self.root/'full-evidence-code-v9-manifest.json'}<=paths)
+        source.write_text('changed source')
+        with self.assertRaises(AssertionError):pilot_dispatch_evidence(self.root)
+
 
 if __name__=='__main__':unittest.main()

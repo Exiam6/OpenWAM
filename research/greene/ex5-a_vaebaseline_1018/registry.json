@@ -1,1 +1,12 @@
-{"name":"ex5-a_vaebaseline_1018","status":"cpu_preparation","question":"Does raw DINO improve over Wan VAE under matched data, training steps and calibrated evaluation?","intervention":"DINO raw768 -> pretrained Wan VAE48","baseline":"raw768_native seeds42/43/44 step20000; corrected ex4-g evaluation pending","gpu_hours_current_stage":0,"cpu_threads_max":4,"cpu_wall_hours_max":3,"gpu_launch_permitted":false}
+{
+  "name": "ex5-a_vaebaseline_1018",
+  "status": "cpu_inputs_ready",
+  "question": "Does raw DINO improve over Wan VAE under matched data, training steps and calibrated evaluation?",
+  "intervention": "DINO raw768 -> pretrained Wan VAE48",
+  "baseline": "raw768_native seeds42/43/44 step20000; corrected ex4-g evaluation pending",
+  "gpu_hours_current_stage": 0,
+  "cpu_threads_max": 4,
+  "cpu_wall_hours_max": 3,
+  "gpu_launch_permitted": false,
+  "input_audit": "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/attempt-data-restored/input-audit.json"
+}

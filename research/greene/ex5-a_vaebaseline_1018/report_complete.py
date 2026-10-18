@@ -94,6 +94,23 @@ def resource_evidence(root):
         for path,digest in plan['files'].items():
             path=Path(path);assert sha(path)==digest,path;paths.add(path)
         paths.update(groot.glob('worker-gpu*-dedicated-v3.json'))
+    joint_v3=root.parent/'ex5-a_vaebaseline_1018/joint-allocation-plan-v3.json'
+    if joint_v3.exists():
+        plan=json.loads(joint_v3.read_text());vroot=joint_v3.parent;groot=root.parent/'ex4-g_calibratedfactorial_1017'
+        assert sha(groot/'registration.json')==plan['g_registration_sha256']
+        assert sha(vroot/'gpu-registration.json')==plan['v_registration_sha256']
+        paths.update([joint_v3,groot/'joint-allocation-process-v3.json',groot/'worker-gpu-joint-allocation-v3.json',groot/'joint-reservation-migration-v3.json',vroot/'joint-allocation-v3.json',vroot/'dedicated-preflight-parent-v3.log'])
+        for path,digest in plan['files'].items():
+            path=Path(path);assert sha(path)==digest,path;paths.add(path)
+        archive=groot/'infrastructure-attempts/port-0747'
+        paths.update(p for p in archive.rglob('*') if p.is_file() and not p.is_symlink())
+        fallback=groot/'dedicated-handoff-v4.json'
+        if fallback.exists():
+            record=json.loads(fallback.read_text());paths.add(fallback)
+            for path,digest in record['recovery_files'].items():
+                path=Path(path);assert sha(path)==digest,path;paths.add(path)
+            paths.update(groot.glob('worker-gpu*-dedicated-v4.json'))
+            paths.add(groot/'dedicated-dispatchers-v4.json')
     assert all(path.is_file() for path in paths)
     return sorted(paths)
 
@@ -104,8 +121,8 @@ def selected_preflight(root,release):
     assert path in [root/'preflight-run.json',root/'dedicated-preflight-run.json'],'Unregistered preflight state path'
     assert sha(path)==release['evidence_sha256'][str(path)],'Released preflight evidence changed'
     if path.name=='dedicated-preflight-run.json':
-        plan=Path(release.get('joint_plan_path',str(root/'joint-allocation-plan.json')));assignment=root/'joint-allocation.json'
-        assert plan in [root/'joint-allocation-plan.json',root/'joint-allocation-plan-v2.json'],'Unregistered resource plan path'
+        plan=Path(release.get('joint_plan_path',str(root/'joint-allocation-plan.json')));assignment=root/('joint-allocation-v3.json' if plan.name=='joint-allocation-plan-v3.json' else 'joint-allocation.json')
+        assert plan in [root/'joint-allocation-plan.json',root/'joint-allocation-plan-v2.json',root/'joint-allocation-plan-v3.json'],'Unregistered resource plan path'
         state=json.loads(path.read_text())
         assert release['joint_plan_sha256']==state['resource_plan_sha256']==sha(plan)
         assert state['assignment_sha256']==sha(assignment)
@@ -113,7 +130,7 @@ def selected_preflight(root,release):
 
 
 def readiness():
-    for script in [G/'code/readout.py',ROOT/'code/readout.py']:subprocess.run([sys.executable,str(script)],check=True,capture_output=True,text=True)
+    for script in [G/'full-report-code-v2/readout.py',ROOT/'code/readout.py']:subprocess.run([sys.executable,str(script)],check=True,capture_output=True,text=True)
     summary=json.loads((ROOT/'success-summary.json').read_text());assert summary['complete'] and all(x==180 for x in summary['verified_by_variant'].values()),'Complete matched180-evaluation endpoints required'
     p=json.loads((ROOT/'gpu-registration.json').read_text());rows={tuple(x['identity']):x for x in summary['rows']};assert len(rows)==540
     release=json.loads((ROOT/'full-training-release.json').read_text());assert release['passed']

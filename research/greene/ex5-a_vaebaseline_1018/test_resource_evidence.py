@@ -68,3 +68,16 @@ class ResourceEvidenceTests(unittest.TestCase):
         with self.assertRaises(AssertionError):report.resource_evidence(self.root)
 
 if __name__=='__main__':unittest.main()
+
+class V3AssignmentTests(unittest.TestCase):
+    def test_v3_requires_matching_new_assignment(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);plan=root/'joint-allocation-plan-v3.json';plan.write_text('{}')
+            (root/'joint-allocation.json').write_text('{"old":true}')
+            assignment=root/'joint-allocation-v3.json';assignment.write_text('{"version":3}')
+            state=root/'dedicated-preflight-run.json'
+            state.write_text(json.dumps(dict(resource_plan_sha256=report.sha(plan),assignment_sha256=report.sha(assignment))))
+            release=dict(preflight_state_path=str(state),joint_plan_path=str(plan),joint_plan_sha256=report.sha(plan),evidence_sha256={str(state):report.sha(state)})
+            self.assertEqual(report.selected_preflight(root,release),state)
+            assignment.write_text('{}')
+            with self.assertRaises(AssertionError):report.selected_preflight(root,release)

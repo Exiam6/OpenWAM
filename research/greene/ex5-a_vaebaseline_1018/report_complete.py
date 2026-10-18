@@ -52,6 +52,28 @@ def gate_evidence(root,seeds):
     return sorted(paths)
 
 
+def resource_evidence(root):
+    """Retain the CPU-only amendment separately from the frozen GPU registration."""
+    root=Path(root)
+    manifest=root/'resource-registration-v2.json'
+    amendment=json.loads(manifest.read_text())
+    assert amendment['numerical_stage_files_unchanged'] and amendment['actual_used_memory_limit_mib']==256
+    assert sha(root/'gpu-registration.json')==amendment['gpu_registration_sha256']
+    paths={manifest,root/'gpu-registration.json'}
+    for field in ['files','original_runtime_files']:
+        for path,digest in amendment[field].items():
+            path=Path(path);assert sha(path)==digest,path;paths.add(path)
+    replacement=root/'resource-scheduler-replacement-v2.json'
+    record=json.loads(replacement.read_text())
+    assert record['resource_registration_sha256']==sha(manifest)
+    assert record['registration_sha256']==amendment['gpu_registration_sha256']
+    assert not record['scientific_attempt_started'] and record['admission_full_asset_hash_check_passed']
+    old=Path(record['old_state_path']);assert sha(old)==record['old_state_sha256'];paths.add(old)
+    paths.update([replacement,root/'preflight-schedule-v2.json'])
+    assert all(path.is_file() for path in paths)
+    return sorted(paths)
+
+
 def readiness():
     for script in [G/'code/readout.py',ROOT/'code/readout.py']:subprocess.run([sys.executable,str(script)],check=True,capture_output=True,text=True)
     summary=json.loads((ROOT/'success-summary.json').read_text());assert summary['complete'] and all(x==180 for x in summary['verified_by_variant'].values()),'Complete matched180-evaluation endpoints required'
@@ -95,7 +117,7 @@ def readiness():
     assert len(review['records'])==18 and {x['key'] for x in review['records']}==sampled
     for item in review['records']:
         record=records[item['key']];assert item['preview_sha256']==record['preview_sha256'] and item['indices']==record['preview_indices'] and item['observations'].strip()
-    gate_evidence(ROOT,p['seeds'])
+    gate_evidence(ROOT,p['seeds']);resource_evidence(ROOT)
     return p,summary,records,occupied,costs,claims,review_path
 
 
@@ -132,7 +154,7 @@ def generate():
             for item in [path,path.parent/'trace.jsonl']:add(item,'evidence/'+str(item.relative_to(ROOT.parent)))
     for path in [ROOT/'gpu-registration.json',ROOT/'gpu-registration-audit.json',ROOT/'success-summary.json',ROOT/'full-training-release.json',ROOT/'preflight-run.json',ROOT/'full-media/manifest.json',review,*claims]:add(path,'evidence/'+str(path.relative_to(ROOT.parent)))
     gate_index=[]
-    for path in gate_evidence(ROOT,p['seeds']):
+    for path in sorted(set(gate_evidence(ROOT,p['seeds'])+resource_evidence(ROOT))):
         name=add(path,'evidence/'+str(path.relative_to(ROOT.parent)))
         gate_index.append(dict(source_path=str(path),archive_path=name,sha256=sha(path)))
     for seed in p['seeds']:

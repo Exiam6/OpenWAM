@@ -1,4 +1,5 @@
 """Independent CPU audit before constructing a matched VAE cache."""
+import argparse
 import collections
 import datetime as dt
 import hashlib
@@ -16,6 +17,7 @@ ROOT = Path('/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018')
 BASE = ROOT.parent/'rae-factorial-20261010'
 DATA = ROOT.parent/'rae-policy-expanded-20261006'
 OFFICIAL = ROOT.parent/'ex4-h_officialcalibration_1017/checkpoint/checkpoint_step_118655.safetensors'
+TRAJECTORIES = DATA/'data'
 
 def sha(path):
     h = hashlib.sha256()
@@ -52,7 +54,7 @@ def main():
         manifest=[]; sources=[]; max_action=max_proprio=0.
         for n,(episode,windows) in enumerate(by_episode.items()):
             assert time.monotonic()-began < 3*3600
-            path=DATA/'data'/episode/'full-trajectory.npz'
+            path=TRAJECTORIES/episode/'full-trajectory.npz'
             digest=sha(path); assert digest == old['source_hashes'][episode], episode
             with zipfile.ZipFile(path) as z, z.open('images.npy') as f:
                 version=np.lib.format.read_magic(f)
@@ -105,4 +107,9 @@ def main():
     assert not result['gpu_initialized']
     print(json.dumps({k:v for k,v in result.items() if k not in ['schedules','official_vae_tensor_inventory']}))
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--output',type=Path,default=ROOT)
+    parser.add_argument('--trajectory-root',type=Path,default=TRAJECTORIES)
+    args=parser.parse_args();ROOT=args.output;TRAJECTORIES=args.trajectory_root
+    main()

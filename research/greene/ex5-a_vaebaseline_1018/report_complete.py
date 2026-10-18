@@ -70,8 +70,36 @@ def resource_evidence(root):
     assert not record['scientific_attempt_started'] and record['admission_full_asset_hash_check_passed']
     old=Path(record['old_state_path']);assert sha(old)==record['old_state_sha256'];paths.add(old)
     paths.update([replacement,root/'preflight-schedule-v2.json'])
+    joint=root.parent/'ex5-a_vaebaseline_1018'/'joint-allocation-plan.json'
+    if joint.exists():
+        plan=json.loads(joint.read_text());vroot=joint.parent;groot=root.parent/'ex4-g_calibratedfactorial_1017'
+        assert plan['status']=='registered_resource_only'
+        assert sha(groot/'registration.json')==plan['g_registration_sha256']
+        assert sha(vroot/'gpu-registration.json')==plan['v_registration_sha256']
+        paths.update([joint,groot/'joint-allocation-process.json',groot/'worker-gpu-joint-allocation.json'])
+        for name in ['joint-allocation.json','dedicated-preflight-run.json','dedicated-preflight-parent.log']:
+            if (vroot/name).exists():paths.add(vroot/name)
+        for path,digest in plan['files'].items():
+            path=Path(path);assert sha(path)==digest,path;paths.add(path)
+        expired=json.loads((vroot/'extra-window-admission-expired.json').read_text())
+        assert expired['scientific_gpu_attempt_started'] is False and expired['occupied_gpu_seconds']==0
+        for name,field in [('preflight-run.json','preflight_state_sha256'),('preflight-schedule-v2.json','scheduler_state_sha256'),('scheduled-preflight-v2.log','log_sha256')]:
+            path=vroot/name;assert sha(path)==expired[field];paths.add(path)
     assert all(path.is_file() for path in paths)
     return sorted(paths)
+
+
+def selected_preflight(root,release):
+    root=Path(root)
+    path=Path(release.get('preflight_state_path',str(root/'preflight-run.json')))
+    assert path in [root/'preflight-run.json',root/'dedicated-preflight-run.json'],'Unregistered preflight state path'
+    assert sha(path)==release['evidence_sha256'][str(path)],'Released preflight evidence changed'
+    if path.name=='dedicated-preflight-run.json':
+        plan=root/'joint-allocation-plan.json';assignment=root/'joint-allocation.json'
+        state=json.loads(path.read_text())
+        assert release['joint_plan_sha256']==state['resource_plan_sha256']==sha(plan)
+        assert state['assignment_sha256']==sha(assignment)
+    return path
 
 
 def readiness():
@@ -80,7 +108,7 @@ def readiness():
     p=json.loads((ROOT/'gpu-registration.json').read_text());rows={tuple(x['identity']):x for x in summary['rows']};assert len(rows)==540
     release=json.loads((ROOT/'full-training-release.json').read_text());assert release['passed']
     for path,digest in release['evidence_sha256'].items():assert sha(path)==digest,path
-    preflight=json.loads((ROOT/'preflight-run.json').read_text());assert preflight['passed'] and preflight['status']=='complete' and 0<preflight['occupied_seconds']<=9000
+    preflight=json.loads(selected_preflight(ROOT,release).read_text());assert preflight['passed'] and preflight['status']=='complete' and 0<preflight['occupied_seconds']<=9000
     occupied=preflight['occupied_seconds'];costs=[];claims=[]
     for seed in p['seeds']:
         cost=dict(seed=seed)
@@ -152,7 +180,7 @@ def generate():
         for side in ['left','right']:
             path=Path(record[side]['result_path'])
             for item in [path,path.parent/'trace.jsonl']:add(item,'evidence/'+str(item.relative_to(ROOT.parent)))
-    for path in [ROOT/'gpu-registration.json',ROOT/'gpu-registration-audit.json',ROOT/'success-summary.json',ROOT/'full-training-release.json',ROOT/'preflight-run.json',ROOT/'full-media/manifest.json',review,*claims]:add(path,'evidence/'+str(path.relative_to(ROOT.parent)))
+    for path in [ROOT/'gpu-registration.json',ROOT/'gpu-registration-audit.json',ROOT/'success-summary.json',ROOT/'full-training-release.json',selected_preflight(ROOT,json.loads((ROOT/'full-training-release.json').read_text())),ROOT/'preflight-run.json',ROOT/'full-media/manifest.json',review,*claims]:add(path,'evidence/'+str(path.relative_to(ROOT.parent)))
     gate_index=[]
     for path in sorted(set(gate_evidence(ROOT,p['seeds'])+resource_evidence(ROOT))):
         name=add(path,'evidence/'+str(path.relative_to(ROOT.parent)))

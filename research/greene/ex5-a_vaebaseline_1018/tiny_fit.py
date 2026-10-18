@@ -52,6 +52,9 @@ def main():
         tasks=common.P['tasks'];ids=[next(i for i,m in enumerate(cache['metadata']) if m['task']==task and m['split']=='train') for task in tasks]
         cfg,model=load_from_checkpoint_dir(str(smoke),device='cuda:0',ckpt_name=Path(s['checkpoint']).name)
         assert not model.binary_command_dims
+        # Deployment loading restores tensors, not training requires_grad flags.
+        # Freeze before activate promotes trainable master weights toFP32.
+        model.freeze_modules(list(cfg.model.freeze))
         common.activate(model)
         prompt_cache={}
         def measure():

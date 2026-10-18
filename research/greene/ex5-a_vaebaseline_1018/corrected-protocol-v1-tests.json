@@ -1,0 +1,9 @@
+{
+  "time": "2026-10-18T08:40:19.699090+00:00",
+  "passed": true,
+  "tests_run": 24,
+  "log": "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/corrected-protocol-v1-tests.log",
+  "log_sha256": "aac4f5fa5e1f42e5d89b7325ce8db220a53f361f0971f02a96303df550d4934b",
+  "protocol_sha256": "c70a4b6efc90cd5820573b85cb80894b8e0ea58231730b0579eb8549e1fe6439",
+  "scope": "CPU tests: source AST fidelity for training/evaluation main bodies, full-window admission, idleGPU reserved-memory handling, lineage, extraGPU eligibility, pilot cost, deterministic rollout checks, process deadlines and failed-child preservation. Mock GPU identifiers in logs refer only to CPU fixtures."
+}

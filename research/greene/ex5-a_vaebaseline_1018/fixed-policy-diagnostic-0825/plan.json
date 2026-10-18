@@ -1,0 +1,34 @@
+{
+  "time": "2026-10-18T08:23:19.248822+00:00",
+  "scope": "fixed_policy_diagnostic_no_release",
+  "seconds_limit": 600,
+  "gpu": 1,
+  "deadline": "2026-10-18T16:59:00+00:00",
+  "hypotheses": [
+    "Isolating frozen encoder precision restores image/cache action agreement at the original 1e-5 threshold for the first training window of all three tasks."
+  ],
+  "protocol": "One diagnostic attempt, GPU1 only if freshly idle. Load retained step3 smoke checkpoint with original runtime; bind only isolated candidate batch_encode method to the loaded VAE instance. Three tasks, first registered train window each, original schedules/seeds/image-cached-repeated order and tolerances. Capture independent first-forward inputs per task and save action arrays before evaluating tolerances. No optimizer, tiny-fit, closed-loop evaluation or scientific release. Preserve original failed preflight and prior diagnoses byte-for-byte.",
+  "diagnostic_code_sha256": "c9a677bdbf9fdb7a6049fa090b39024b7845a9c1c5de0dbac8a289daed6b5df6",
+  "frozen_files": {
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/gpu-registration.json": "64be983e057d58cd467dea4e7b807687414910c3edf52e4f1fba2f65e436e35f",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/dedicated-preflight-run.json": "5d637ec157078add8339023377fbb963de054bba4f53fcfec85232f6d9b5df9b",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/deployment-contract/result.json": "fa8898ccd7b4ee897a7a904fb5948c4c06c79075169ac1f6ba97f5a4dbc31e72",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/dedicated-preflight-logs/deployment_contract.log": "ffe7ccfcf7954f794a25f9fd723d04427b407567df5c26ff66b93e570ec778da",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/training-smoke/vae48_native-seed42/result.json": "b14aefbff95ceb052d66436b33cdb99d7cc17c21945b0ac61eb8cc607793e455",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/vae-cache/result.json": "b48ed3cb3840d9e674bdd75f00d1bd11d956ce56999a0ceaceeb22a1e9e6120c",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/independent-cache-audit-0802.json": "65542e57a2d6beb9bb82dcc3df558fbde6ba345504703790931a94cd2f48e78b",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/code/deployment_contract.py": "8cf5b1dcffd8c7899b926fae16621cb7fd429e55482a24883c4c4af0be2bfe48",
+    "/home/zifanz4/openwam-vae-control/openwam/model/video_backbone/wan/models/vae.py": "738c631c5b81359effd239a5c32e3f6642d75a2dda26ce944a7548acaa6fc9c5",
+    "/home/zifanz4/openwam-rae-research/openwam/model/video_backbone/wan/models/vae.py": "2821a28dc146f57b1cf73a555da516f5a5e37436b8f044a52fcba947d89a8bd5",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/encoder-precision-diagnostic-0812/independent-analysis.json": "a4ac94f1856b090fafd60f183d669227308d75618039e46766b6421b356b0906",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/encoder-precision-diagnostic-0812/execution.json": "2e1e31fafe0bddb0f65baa02f2b03d164ca48bb49815065a883aa6234a8e16b6",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/deployment-diagnostic-0807/observations/result.json": "d986f4ed39a636e62270fafebd6cfe371ce5b5bd459ef9e0e1ec135a0d2dbe32",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/deployment-diagnostic-0807/execution.json": "55deca7897683500e634ac596c7130ef826c7428e815249da5a29b1d5928de81",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/code/stage_runner.py": "5869c050d1d5b059c268f31864b369ef5b70294a1f6e390bf38a9fa1d3f79d15",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/code/build_cache.py": "c47d1209681cb211c82f91cd50b51cff610279047b4e5174c7f0a8f23f9b06e4"
+  },
+  "prior_occupied_gpu_seconds": 630.6703958320431,
+  "isolated_fix_commit": "00319e8c",
+  "fixed_module": "/home/zifanz4/openwam-vae-control/openwam/model/video_backbone/wan/models/vae.py",
+  "launch_code_sha256": "e09e9e1bcfccd3a572bb0baac4bb5c421eae723e7031acb1347608059d9587d5"
+}

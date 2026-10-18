@@ -1,0 +1,19 @@
+{
+  "time": "2026-10-18T08:13:30.812359+00:00",
+  "scope": "encoder_precision_diagnostic_no_release",
+  "seconds_limit": 180,
+  "gpu": 1,
+  "deadline": "2026-10-18T16:59:00+00:00",
+  "fixed_module": "/home/zifanz4/openwam-vae-control/openwam/model/video_backbone/wan/models/vae.py",
+  "diagnostic_code_sha256": "f408495fc8c9ae8482a65415903ed57f3300286170973df6222b318ebf8cf852",
+  "frozen_files": {
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/dedicated-preflight-run.json": "5d637ec157078add8339023377fbb963de054bba4f53fcfec85232f6d9b5df9b",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/deployment-contract/result.json": "fa8898ccd7b4ee897a7a904fb5948c4c06c79075169ac1f6ba97f5a4dbc31e72",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/deployment-diagnostic-0807/independent-analysis.json": "28aba1633070cfdadc305f7b30112155f8483f060b09eea78569f3759c0cc95c",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/vae-cache/result.json": "b48ed3cb3840d9e674bdd75f00d1bd11d956ce56999a0ceaceeb22a1e9e6120c",
+    "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/gpu-registration.json": "64be983e057d58cd467dea4e7b807687414910c3edf52e4f1fba2f65e436e35f",
+    "/home/zifanz4/openwam-vae-control/openwam/model/video_backbone/wan/models/vae.py": "738c631c5b81359effd239a5c32e3f6642d75a2dda26ce944a7548acaa6fc9c5",
+    "/home/zifanz4/openwam-rae-research/openwam/model/video_backbone/wan/models/vae.py": "2821a28dc146f57b1cf73a555da516f5a5e37436b8f044a52fcba947d89a8bd5"
+  },
+  "protocol": "Encoder-only controlled precision comparison on first registered train window of each task: original without autocast, original with outer BF16 autocast, isolated context-guard fix with the same outer autocast, and original repeat. Frozen pretrained VAE only; no policy load, training, simulator, tiny fit or scientific gate rerun. Preserve original V failure and never write a release."
+}

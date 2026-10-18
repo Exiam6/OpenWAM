@@ -1,4 +1,5 @@
 """Training-only tiny-fit gate; this checkpoint is never reused by the full runs."""
+import argparse
 import datetime as dt
 import importlib.util
 import json
@@ -8,7 +9,7 @@ import time
 
 ROOT=Path('/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018');BASE=ROOT.parent/'rae-factorial-20261010'
 
-def main():
+def admission():
     from build_cache import sha
     path=ROOT/'gpu-registration.json';assert path.exists(),'CPU-only: no GPU registration'
     p=json.loads(path.read_text());assert p['gpu_launch_permitted'] and 'tiny_fit' in p['released_stages']
@@ -20,8 +21,20 @@ def main():
     # The parent launcher owns the combined smoke+tiny1800s cap; this child uses its remaining allowance.
     budget=json.loads((ROOT/'tiny-budget.json').read_text())
     assert p['tiny_total_seconds']==1800 and budget['smoke_result_sha256']==sha(smoke/'result.json')
-    assert budget['prior_occupied_seconds']>=s['occupied_seconds']
+    contract_path=ROOT/'deployment-contract/result.json'
+    contract=json.loads(contract_path.read_text())
+    assert contract['passed'] and contract['native_deployment_reload'] and len(contract['rows'])==3
+    assert contract['checkpoint_sha256']==s['checkpoint_sha256']
+    assert budget['deployment_result_sha256']==sha(contract_path)
+    assert budget['prior_occupied_seconds']>=s['occupied_seconds']+contract['occupied_seconds']
     allowance=budget['remaining_seconds'];assert 60<allowance<=1800-budget['prior_occupied_seconds']
+    assert dt.datetime.now(dt.timezone.utc)<dt.datetime.fromisoformat(p['deadline'])
+    for name in p['pause_paths']:assert not Path(name).exists()
+    return p,s,allowance
+
+def main():
+    p,s,allowance=admission()
+    smoke=ROOT/'training-smoke/vae48_native-seed42'
     import numpy as np
     import torch
     from openwam.deploy.model_loader import load_from_checkpoint_dir
@@ -76,4 +89,9 @@ def main():
         signal.alarm(0);result['occupied_seconds']=time.monotonic()-start;(out/'result.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result))
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser();parser.add_argument('--check-admission',action='store_true');args=parser.parse_args()
+    if args.check_admission:
+        try:admission();print('admitted')
+        except AssertionError as error:print(str(error));raise SystemExit(2)
+    else:main()

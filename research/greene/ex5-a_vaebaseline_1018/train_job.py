@@ -26,6 +26,9 @@ def admission(stage):
         gate=json.loads((ROOT/'full-training-release.json').read_text())
         assert gate['passed'] and gate['native_deployment_contract_passed'] and gate['tiny_fit_passed'] and gate['budget_projection_passed']
         assert p['training_seconds_per_seed']==10800
+        for key,relative in [('native_deployment_contract','deployment-contract/result.json'),('tiny_fit','tiny-fit/result.json')]:
+            result_path=ROOT/relative;result=json.loads(result_path.read_text())
+            assert result['passed'] and sha(result_path)==gate[key+'_sha256']
     for path in p['pause_paths']:assert not Path(path).exists()
     return p
 

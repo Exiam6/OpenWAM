@@ -8,7 +8,11 @@ failure records, cost cap, or authorize duplicate attempts.
 
 The controller samples both hosts every10seconds, rotates the order of extra-card
 selection, and prioritizes gpu-01 GPU1/2. A card needs zero utilization, no compute
-process and less than256MiB used for1800seconds. Missing/error samples, changed
+or user graphics process and less than256MiB used for1800seconds. The inventory
+uses NVIDIA's complete process list. Only the system-owned(root/gdm) Xorg display
+daemon at its exact system path, graphics-only and at most16MiB, is treated as
+background; it remains visible in the audit. Other users' graphics/render jobs
+are busy even when utilization is zero. Missing/error samples, changed
 UUID/policy, clock reversal or a gap above25seconds reset the history. Sampling
 cannot prove absence of sub-sample activity. Eligibility is never inferred from
 a single idle snapshot. The entire registered job plus120seconds must fit before

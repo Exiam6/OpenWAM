@@ -61,3 +61,16 @@ RNG921018, and registered5pp/two-positive-seeds/positive-lower-bound criterion.
 Report measured per-stage occupation, data/training/model differences and the
 known-development-cohort limitation. Equal data/steps do not mean equal FLOPs.
 The larger official policy is a functional control, not part of this comparison.
+
+After a terminal media queue, `prepare_media_resume.py` can prepare a read-only
+reuse inventory. Supply the registered `--root`, prior independent `--audit`,
+its expected `--audit-sha256`, and a new `--output` path. It verifies the original
+queue has failed, has no active children and has no live PID. It checks every
+available audited pair against the prior inventory, including result/trace hashes,
+pairing conditions, metadata/video/preview hashes, frame counts, camera order and
+recorded decode attestation. It lists exactly which registered pairs are missing.
+An existing output is never overwritten; changed, duplicate, unknown or omitted
+available pairs are rejected. It does not decode again, encode, launch a queue,
+change deadlines, or authorize continuation. Its evidence must be revalidated
+when a separately authorized continuation consumes it. The original failed queue
+and incomplete-study status remain unchanged.

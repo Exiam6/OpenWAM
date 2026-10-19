@@ -1,0 +1,19 @@
+{
+  "name": "ex5-a_vaebaseline_1018",
+  "status": "gpu_amendment_committed_runtime_registration_required",
+  "question": "Does raw DINO improve over Wan VAE under matched data, training steps and calibrated evaluation?",
+  "intervention": "DINO raw768 -> pretrained Wan VAE48",
+  "baseline": "raw768_native seeds42/43/44 step20000; corrected ex4-g evaluation pending",
+  "gpu_hours_current_stage": 20.5,
+  "cpu_threads_max": 4,
+  "cpu_wall_hours_max": 3,
+  "gpu_launch_permitted": false,
+  "input_audit": "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/attempt-data-restored/input-audit.json",
+  "model_audit": "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/model-cpu-audit.json",
+  "preflight_launcher_static_audit": "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/preflight-launcher-static-audit-v3.json",
+  "native_contract_static_audit": "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/native-contract-static-audit.json",
+  "positive_official_control": "/home/zifanz4/openwam-runtime/ex4-h_officialcalibration_1017/final-bundle.json",
+  "gpu_execution_performed": false,
+  "gpu_admission_amendment": "GPU_ADMISSION.md",
+  "gpu_admission_rule": "Only the one-time frozen runtime gpu-registration.json permits a staged launch; source registry alone does not."
+}

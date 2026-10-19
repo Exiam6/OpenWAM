@@ -74,3 +74,20 @@ available pairs are rejected. It does not decode again, encode, launch a queue,
 change deadlines, or authorize continuation. Its evidence must be revalidated
 when a separately authorized continuation consumes it. The original failed queue
 and incomplete-study status remain unchanged.
+
+The explicitly authorized2026-10-19 continuation uses a separately frozen
+`resumption-code-v1` for only the unstarted45episodes of seeds42/43, on GPUs1/2.
+The authorization records a six-hour window and10920s cumulative evaluation caps
+for42/43; seed44 remains10800s and the global cap remains73800s. Scientific code,
+the original protocol, completed models, pilots, refusals and failed media queue
+are retained. The new runtime checks these original bytes and the amendment.
+
+`resume_full_media.py` starts a separate CPU queue, verifies all180reused pairs,
+and generates only missing pairs with the original encoder. It preserves partial
+outputs and stops rather than retrying them. `watch_resumption.py` observes actual
+parent PIDs, records GPU state every1800seconds, and launches the complete report
+once both the evaluation batch and media queue have finished successfully. The
+report still requires all540matched rows and360pairs; it checks revised cumulative
+costs and archives the explicit amendment alongside the original failed queue.
+The observer has no GPU launch or retry capability. All work remains bounded by
+the authorized window, and pause markers retain their original behavior.

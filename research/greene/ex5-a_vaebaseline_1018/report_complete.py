@@ -107,7 +107,12 @@ def pilot_dispatch_evidence(root):
     if media_path.exists():
         media=include(media_path);include(media['command'][-1],media['source_sha256'])
         state=include(root/'full-media/queue.json')
-        assert state['status']=='complete' and state['pid']==media['pid'] and state['completed']==360
+        assert state['pid']==media['pid']
+        if (root/'resumption-20261019-v1/authorization.json').exists():
+            assert state['status']=='failed' and state['completed']==180 and not state['active']
+            from resumption_evidence import evidence
+            paths.update(evidence(root))
+        else:assert state['status']=='complete' and state['completed']==360
         include(root/'full-media-v8.log')
     for version in [9,10,11]:
         manifest_path=root/f'full-evidence-code-v{version}-manifest.json'
@@ -215,6 +220,8 @@ def resource_evidence(root):
             paths.add(groot/'dedicated-dispatchers-v4.json')
     paths.update(pilot_dispatch_evidence(root))
     paths.update(budget_refusal_evidence(root))
+    from resumption_evidence import evidence
+    paths.update(evidence(root))
     assert all(path.is_file() for path in paths)
     return sorted(paths)
 
@@ -246,9 +253,10 @@ def readiness():
     for path,digest in release['evidence_sha256'].items():assert sha(path)==digest,path
     occupied=prior_cost(ROOT,release);costs=[];claims=[]
     if 'corrected_protocol_sha256' in release:
-        sys.path.insert(0,str(ROOT/'corrected-protocol-v1'))
+        resumed=(ROOT/'resumption-20261019-v1/authorization.json').exists()
+        sys.path.insert(0,str(ROOT/('resumption-code-v1' if resumed else 'corrected-protocol-v1')))
         from corrected_protocol import load_registration,verify_training_release,verify_training_lineage
-        p=load_registration();verify_training_release()
+        p=load_registration(require_current_window=False) if resumed else load_registration();verify_training_release()
     for seed in p['seeds']:
         cost=dict(seed=seed)
         for phase in ['training','pilot_evaluation','full_evaluation']:
@@ -258,7 +266,8 @@ def readiness():
             assert Path(claim['result_path'])==expected_result
             seconds=claim['occupied_seconds'];assert math.isfinite(seconds) and seconds>0
             assert sha(claim['result_path'])==claim['result_sha256'];cost[phase]=seconds;occupied+=seconds;claims.append(path)
-        assert cost['training']<=10800 and cost['pilot_evaluation']<=3600 and cost['pilot_evaluation']+cost['full_evaluation']<=10800
+        from resumption_evidence import evaluation_cap
+        assert cost['training']<=10800 and cost['pilot_evaluation']<=3600 and cost['pilot_evaluation']+cost['full_evaluation']<=evaluation_cap(ROOT,seed)
         costs.append(cost)
         if 'corrected_protocol_sha256' in release:verify_training_lineage(json.loads((ROOT/'runs'/f'vae48_native-seed{seed}'/'result.json').read_text()))
     assert occupied<=p['max_occupied_seconds']==73800
@@ -353,6 +362,9 @@ def generate():
     secondary=summary['comparisons']['secondary_compact_minus_vae'];body+=f"\nSecondary Compact-minus-VAE difference: {secondary['difference']*100:+.2f}pp,95%interval [{secondary['ci95'][0]*100:+.2f}, {secondary['ci95'][1]*100:+.2f}]pp. This descriptive control does not replace the primary endpoint.\n\n"
     body+=f'New study occupation: **{occupied/3600:.3f} GPU-hours**, within the20.5-hour cap, including retained failed preflight, diagnostic validation, training and evaluation parent lifetimes. Baseline training/evaluation is historical and not charged again. Equal data/steps do not imply equal FLOPs or wall time.\n\n| VAE seed | Training GPUh | Pilot+remaining evaluation GPUh |\n|---|---|---|\n'
     for cost in costs:body+=f"| {cost['seed']} | {cost['training']/3600:.3f} | {(cost['pilot_evaluation']+cost['full_evaluation'])/3600:.3f} |\n"
+    if (ROOT/'resumption-20261019-v1/authorization.json').exists():
+        auth=json.loads((ROOT/'resumption-20261019-v1/authorization.json').read_text())
+        body+=f"\nResource amendment: original seed42/43 budget refusals and the media queue's original deadline failure are retained. User-authorized continuation ran within {auth['start']} to {auth['deadline']}; cumulative evaluation caps were10920s for seeds42/43 and10800s for seed44. The73800s study cap, fixed checkpoints, scenes, cost estimator and statistical endpoint were unchanged. The continuation reused180verified pairs and generated180missing pairs.\n\n"
     body+='\n![Training losses and paired rollout sample](training-and-rollout.png)\n\n[Download figure](training-and-rollout.png) · [Interactive videos](index.html) · [Download index](index.json) · [Gate evidence and hashes](gate-evidence-index.json)\n\n'
     body+='All360paired videos were fully decoded/hash checked. Actual visual review samples six indices on each comparison/task/seed first scene (18sheets), not every frame. The baseline is on top, VAE below; numerical effects are baseline minus VAE. All three policy cameras are shown, aligned by action index with final-frame hold. No external whole-robot view was captured. Wrist occlusion and cropped objects remain visible.\n\n'
     body+='The180evaluations per arm cross60distinct development scenes with three training seeds. These known scenes cannot establish unseen-benchmark generalization; three seeds cannot establish broad population equivalence. Encoder pretraining and representation are not independently identified. Policy failure remains an outcome, and no checkpoint or scene was selected by success.\n\n| Comparison | Task | Seed | Scene | Outcome | Video |\n|---|---|---|---|---|---|\n'

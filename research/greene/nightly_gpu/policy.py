@@ -29,13 +29,19 @@ def advance(previous, sample, now, policy_hash, max_gap=25):
     return result
 
 
-def eligible(row, now, max_seconds):
+def dedicated(policy, host, index):
+    return ((host, index) in [('gpu01', 1), ('gpu01', 2)]
+            and [host, index] in policy.get('always_available', []))
+
+
+def eligible(row, now, max_seconds, policy=None, host=None):
     _, end, inside = window(now)
-    return (inside and row.get('qualified') is True and row.get('idle') is True
+    priority = dedicated(policy or {}, host, row.get('index'))
+    return ((inside or priority) and row.get('qualified') is True and row.get('idle') is True
             and not row['processes'] and row['utilization']==0 and row['used_mib']<256
             and 0<=now.timestamp()-row['last']<=25
             and math.isfinite(max_seconds) and max_seconds>0
-            and (end-now).total_seconds()>max_seconds+120)
+            and (priority or (end-now).total_seconds()>max_seconds+120))
 
 
 def validate_job(job):

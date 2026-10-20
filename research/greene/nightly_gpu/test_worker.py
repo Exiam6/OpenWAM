@@ -58,5 +58,26 @@ class WorkerTests(unittest.TestCase):
             self.assertFalse(owned_process(1,child.pid))
         finally:child.terminate();child.wait(timeout=5)
 
+    def test_priority_worker_outside_nightly_window(self):
+        policy={'always_available':[['gpu01',1],['gpu01',2]],
+                'hosts':{'gpu01':{'gpus':{'1':'CPU-FIXTURE'}}}}
+        (self.root/'policy.json').write_text(json.dumps(policy))
+        end=dt.datetime.now(dt.timezone.utc)+dt.timedelta(seconds=300)
+        with patch('worker.window',return_value=(self.now,self.now,False)),\
+             patch('worker.probe',return_value={'gpus':[dict(self.row,index=1)]}),\
+             patch('worker.time.sleep',return_value=None):
+            run(self.spec,'gpu01','CPU-FIXTURE',end.isoformat(),self.root)
+        self.assertEqual(json.loads((self.root/'runs/fixture/result.json').read_text())['status'],'complete')
+
+    def test_other_gpu_worker_refuses_daytime(self):
+        policy={'always_available':[['gpu01',1],['gpu01',2]],
+                'hosts':{'gpu01':{'gpus':{'3':'CPU-FIXTURE'}}}}
+        (self.root/'policy.json').write_text(json.dumps(policy))
+        end=dt.datetime.now(dt.timezone.utc)+dt.timedelta(seconds=300)
+        with patch('worker.window',return_value=(self.now,self.now,False)),patch('worker.probe') as probe:
+            run(self.spec,'gpu01','CPU-FIXTURE',end.isoformat(),self.root)
+            probe.assert_not_called()
+        self.assertFalse((self.root/'child-output').exists())
+
 
 if __name__=='__main__':unittest.main()

@@ -52,5 +52,16 @@ class PolicyTests(unittest.TestCase):
         self.assertTrue(eligible(row,now,1679))
         self.assertFalse(eligible(row,now,1680))
 
+    def test_only_two_priority_cards_admitted_during_day(self):
+        now=dt.datetime.fromisoformat('2026-10-20T21:00:00+00:00')
+        policy={'always_available':[['gpu01',1],['gpu01',2]]}
+        row=dict(self.qualified()['3'],last=now.timestamp(),index=1)
+        self.assertTrue(eligible(row,now,14400,policy,'gpu01'))
+        self.assertTrue(eligible(dict(row,index=2),now,14400,policy,'gpu01'))
+        self.assertFalse(eligible(dict(row,index=3),now,14400,policy,'gpu01'))
+        self.assertFalse(eligible(row,now,14400,policy,'gpu02'))
+        self.assertFalse(eligible(dict(row,qualified=False),now,14400,policy,'gpu01'))
+        self.assertFalse(eligible(dict(row,processes=[{'pid':1}]),now,14400,policy,'gpu01'))
+
 
 if __name__=='__main__':unittest.main()

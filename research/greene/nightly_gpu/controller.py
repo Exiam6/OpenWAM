@@ -11,7 +11,7 @@ import shlex
 import subprocess
 import time
 
-from policy import advance,eligible,validate_job,window
+from policy import advance,dedicated,eligible,validate_job,window
 from worker import sha,write
 
 ROOT=Path('/home/zifanz4/openwam-runtime/nightly-gpu')
@@ -61,8 +61,10 @@ def refresh_claim(policy,path):
 
 def dispatch(policy,job,host,gpu,row):
     now=dt.datetime.now(dt.timezone.utc)
-    assert eligible(row,now,job['max_seconds'])
+    assert eligible(row,now,job['max_seconds'],policy,host)
     _,end,_=window(now)
+    if dedicated(policy,host,gpu):
+        end=now+dt.timedelta(seconds=job['max_seconds']+240)
     claim=dict(id=job['id'],scientific_identity=job['scientific_identity'],status='reserved',host=host,
                gpu_index=gpu,gpu_uuid=row['uuid'],created=now.isoformat(),idle_evidence=row,
                policy_sha256=sha(ROOT/'policy.json'),job_sha256=sha(ROOT/'jobs'/f"{job['id']}.json"))
@@ -102,6 +104,13 @@ def main():
         for path,digest in manifest['files'].items():assert sha(path)==digest,path
         previous_path=ROOT/'latest.json';previous=json.loads(previous_path.read_text()) if previous_path.exists() else {}
         histories=previous.get('hosts',{}) if previous.get('policy_sha256')==policy_hash else {}
+        if (not histories and previous.get('policy_sha256')
+                ==policy.get('idle_history_compatible_policy_sha256')):
+            histories=previous.get('hosts',{})
+            for rows in histories.values():
+                for row in rows.values():
+                    assert row['policy_hash']==previous['policy_sha256']
+                    row['policy_hash']=policy_hash
         rotation=0
         with ThreadPoolExecutor(max_workers=2) as pool:
             while True:
@@ -143,7 +152,7 @@ def main():
                         assert sha(job['authorization_evidence'])==job['authorization_sha256']
                         pending.append(job['id'])
                         for host,index,row in list(candidates):
-                            if host in job['host_commands'] and eligible(row,dt.datetime.now(dt.timezone.utc),job['max_seconds']):
+                            if host in job['host_commands'] and eligible(row,dt.datetime.now(dt.timezone.utc),job['max_seconds'],policy,host):
                                 claim=dispatch(policy,job,host,index,row);claims.append(claim)
                                 claimed_ids.add(job['id']);claimed_science.add(job['scientific_identity'])
                                 candidates.remove((host,index,row));pending.remove(job['id']);break

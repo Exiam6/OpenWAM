@@ -10,7 +10,7 @@ import signal
 import subprocess
 import time
 
-from policy import validate_job, window
+from policy import dedicated, validate_job, window
 from probe import probe
 
 
@@ -62,7 +62,14 @@ def run(spec_path, host, gpu_uuid, end_string, runtime):
         for path,digest in manifest['files'].items():assert sha(path)==digest,path
         end=dt.datetime.fromisoformat(end_string)
         now=dt.datetime.now(dt.timezone.utc);_,window_end,inside=window(now)
-        assert inside and end<=window_end-dt.timedelta(seconds=60)
+        policy_path=runtime/'policy.json'
+        policy=json.loads(policy_path.read_text()) if policy_path.exists() else {}
+        priority=any(uuid==gpu_uuid and dedicated(policy,host,int(index))
+                     for index,uuid in policy.get('hosts',{}).get(host,{}).get('gpus',{}).items())
+        if priority:
+            assert end<=now+dt.timedelta(seconds=job['max_seconds']+240)
+        else:
+            assert inside and end<=window_end-dt.timedelta(seconds=60)
         assert (end-now).total_seconds()>job['max_seconds']+30
         assert sha(job['authorization_evidence'])==job['authorization_sha256']
         command=job['host_commands'][host]

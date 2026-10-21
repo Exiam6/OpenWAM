@@ -1,0 +1,25 @@
+{
+  "candidate_revision": "7809345cd391436ef789234b31eec3f8163f9a9a",
+  "candidate_basis": "installed __init__.pyi embeds 7809345c",
+  "exact_binary_build_revision_proven": false,
+  "installed_version": "3.0.0b1",
+  "sources": {
+    "src/device.cpp": {
+      "url": "https://raw.githubusercontent.com/haosulab/SAPIEN/7809345cd391436ef789234b31eec3f8163f9a9a/src/device.cpp",
+      "sha256": "15cb27b4e0948c8ce0aa544a22917f40ae2a1335f770bf2677c0ab3f8d2fd35a"
+    },
+    "include/sapien/device.h": {
+      "url": "https://raw.githubusercontent.com/haosulab/SAPIEN/7809345cd391436ef789234b31eec3f8163f9a9a/include/sapien/device.h",
+      "sha256": "be4b70624df37ba1869d8e76a40a909e6b944ec101fd93dc526b3a01c3e369dc",
+      "matches_installed_header": true
+    },
+    "python/pybind.cpp": {
+      "url": "https://raw.githubusercontent.com/haosulab/SAPIEN/7809345cd391436ef789234b31eec3f8163f9a9a/python/pybind.cpp",
+      "error": "<HTTPError 404: 'Not Found'>"
+    }
+  },
+  "native_sha256": {
+    "/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien.libs/libsapien.so": "2941d67f23a0955d80f5808d47aa9b65d4a9d974626183c3c6b42d77794a099d",
+    "/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien.libs/libsvulkan2.so": "685c7e733b1385bf2c5385ddac0c1ff43b62692dd39bbefb0e14a9a0aec561dc"
+  }
+}

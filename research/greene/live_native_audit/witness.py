@@ -63,6 +63,9 @@ def audit():
   classified=classify_full(client,state['task']); assert not classified['fatal'], classified
   episodes=score(client); assert episodes[:len(state['episodes'])]==state['episodes']
   checks.append(dict(job_id=claim['id'],key=key,row_status=state['status'],observed_episodes=len(episodes),server_markers=markers,classifier=classified,processes=matching,client_log_sha256=sha(out/'client.log'),server_log_sha256=sha(out/'server.log'),log_digest_note='Live logs can grow after this read; digests are snapshot evidence only.'))
+ for check in checks:
+  for proc in check['processes']:
+   proc['gpu_contexts']=[dict(host=host,index=int(index),type=context['type'],memory_mib=context['memory_mib']) for host,devices in inventory['hosts'].items() for index,gpu in devices.items() for context in gpu['processes'] if host=='gpu01' and context['pid']==proc['pid']]
  return dict(updated=dt.datetime.now(dt.timezone.utc).isoformat(),kind='CPU_ONLY_LIVE_NATIVE_EXECUTION_WITNESS',inventory_time=inventory['time'],checks=checks,new_gpu_hours=0,full_endpoint_complete=False,full_paper_reproduced=False,source_sha256=sha(pathlib.Path(__file__)))
 
 if __name__=='__main__':

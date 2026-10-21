@@ -1,0 +1,10 @@
+{
+  "files": {
+    "/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien.libs/libsvulkan2.so": "685c7e733b1385bf2c5385ddac0c1ff43b62692dd39bbefb0e14a9a0aec561dc",
+    "/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien/include/svulkan2/core/instance.h": "8d7391bf77725ca2f230c53dac7049eb44dfdaf607fde4ff93edf7b0817bb31c",
+    "/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien/include/svulkan2/core/physical_device.h": "7d475f63b5f81b93b1a6412edc3c2138236b499367a4a293e1faa70379766954",
+    "/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien/include/svulkan2/core/device.h": "5ec0d19f4e95db921a68e45976bea513cb69f8d2414a1162925b14fd13d900e8"
+  },
+  "shared_library_loaded": false,
+  "exact_source_revision_proven": false
+}

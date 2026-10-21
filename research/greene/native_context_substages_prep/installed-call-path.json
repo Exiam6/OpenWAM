@@ -1,0 +1,20 @@
+{
+  "command": [
+    "objdump",
+    "-d",
+    "-C",
+    "--start-address=0x49acc0",
+    "--stop-address=0x49b400",
+    "/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien.libs/libsvulkan2.so"
+  ],
+  "library_sha256": "685c7e733b1385bf2c5385ddac0c1ff43b62692dd39bbefb0e14a9a0aec561dc",
+  "observed_calls": [
+    "49ad8c:\te8 2f 69 eb ff       \tcall   3516c0 <svulkan2::core::Instance::Get(unsigned int, unsigned int, unsigned int)@plt>",
+    "49ae4f:\te8 cc ef eb ff       \tcall   359e20 <svulkan2::core::Instance::createPhysicalDevice(std::string const&)@plt>",
+    "49af0b:\te8 50 d1 eb ff       \tcall   358060 <svulkan2::core::PhysicalDevice::createDevice()@plt>",
+    "49afe3:\te8 c8 8f eb ff       \tcall   353fb0 <svulkan2::core::Context::createDescriptorPool()@plt>",
+    "49afe8:\te8 a3 87 eb ff       \tcall   353790 <svulkan2::GLSLCompiler::InitializeProcess()@plt>"
+  ],
+  "interpretation": "Installed binary directly calls native Instance, physical selection, logical Device and descriptor pool from Context constructor. This supports subdividing that actual binary path; exact source revision and GPU cause remain unproven.",
+  "GPU_executed": false
+}

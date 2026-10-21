@@ -1,0 +1,80 @@
+{
+  "kind": "DRAFT_NATIVE_RENDER_PROBE_NOT_REGISTERED",
+  "registered_for_dispatch": false,
+  "scientific_registration_complete": false,
+  "created": "2026-10-21T20:23:05.216481+00:00",
+  "purpose": "Validate explicit renderer and subsequent default native scene PCI plus observed all-GPU graphics contexts; no scored episodes",
+  "max_seconds": 180,
+  "deadline": "2026-10-28T18:20:27.005560+00:00",
+  "proposed_host": "gpu01",
+  "pause_paths": [
+    "/home/zifanz4/.local/state/openwam-selfcheck/paused.json",
+    "/home/zifanz4/openwam-runtime/ex8-a_officialrepro_1021/paused.json",
+    "/home/zifanz4/openwam-runtime/ex8-b_candidatefilter_1021/paused.json",
+    "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/paused.json",
+    "/home/zifanz4/openwam-runtime/ex8-e_rowrecovery_1021/paused.json"
+  ],
+  "input_sha256": {
+    "/home/zifanz4/openwam-runtime/ex8-a_officialrepro_1021/official/benchmarks/robotwin/eval_policy_wrapper.py": "ec80fc436f5e31dd29a1ae7800f979c0d5346353e43820f5946c67496b566347",
+    "/home/zifanz4/openwam-runtime/ex8-a_officialrepro_1021/RoboTwin/envs/_base_task.py": "448f7152b65cb9102217cf5463aa821d72810ca56f63d5a797ec7bd43e23e101",
+    "/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien/wrapper/scene.py": "9b318264e83475534d56701191ae055b366d4245b2e4e535e90b3e1ffaa01e46",
+    "/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien/wrapper/renderer.py": "af0990f96331191e6ff8c260f8126ea8f81086b2376807b175fecc0ec405dbc2",
+    "/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien/pysapien/render.pyi": "97c627854dee46991d110b8d8be180b81b3816d0c6aa1a8c2df24e6b96821fbe",
+    "/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien/pysapien/__init__.pyi": "c6e2c0603cf0cfbcbec9a4a8c9cf5b3f85451b7e5d5fc21b2add99be94764b24",
+    "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/code/run_full.py": "4b9094a29bb60011d77aa6ee0ed1cdcaa3edc6bba80a8cc63347c9f8073a8b3c",
+    "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/code/classify_log.py": "0f6f8f185dc23b72cd08c665bf833c708db2a2d3282eeddea8208d689a6dfcde",
+    "/home/zifanz4/openwam-runtime/nightly-gpu/code-v3/probe.py": "9c6e4731b29d2814f6f797ad62fd91ecfc82e98f2508caafe5c75690a373e2b5",
+    "/home/zifanz4/openwam-render-binding-prep/research/greene/native_render_binding/adapter.py": "620425157c64768046dba8420b71d18d6f46ead4c6ebcbb2778a7a887044f463",
+    "/home/zifanz4/openwam-render-binding-prep/research/greene/native_render_binding/probe_candidate.py": "ddf08a585615f045b439aee6c7490dfca5ef4426c4590ff86888942cfca785d7",
+    "/home/zifanz4/openwam-render-binding-prep/research/greene/native_render_binding/test_adapter.py": "cb17279e2badd80338ef2cb6aa2664d479959c8b0bb9817d753ccb3212a1ad37",
+    "/home/zifanz4/openwam-render-binding-prep/research/greene/native_render_binding/PLAN.md": "b179ce5b5f7ed9f3bb7ce0becb393be93cf7d42ea8cec6000cfd5678ad4e4a1e",
+    "/home/zifanz4/openwam-render-binding-prep/research/greene/native_render_binding/audit_cpu.py": "f9ae45079a164c387e81bc3d8a9df11291563da234fd72ff28ba925d85acc79b",
+    "/home/zifanz4/openwam-runtime/ex8-a_officialrepro_1021/official/benchmarks/robotwin/single_eval.sh": "b6f4b9d95018fcddcd8c977af218b0918392444a8f870254c5df859c5119c5a2"
+  },
+  "candidate_argv": [
+    "/home/zifanz4/openwam-runtime/benchmark-env/bin/python",
+    "/home/zifanz4/openwam-render-binding-prep/research/greene/native_render_binding/probe_candidate.py",
+    "--registration",
+    "UNCREATED_FROZEN_PROBE_REGISTRATION.json",
+    "--output",
+    "UNCREATED_SEPARATE_PROBE_RUNTIME/result.json"
+  ],
+  "required_environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/home/zifanz4/openwam-runtime/ex8-a_officialrepro_1021/official:/home/zifanz4/openwam-runtime/ex8-a_officialrepro_1021/RoboTwin/envs/curobo/src",
+    "LD_LIBRARY_PATH": "/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien/oidn_library",
+    "__EGL_VENDOR_LIBRARY_FILENAMES": "/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien/vulkan_library/10_nvidia.json"
+  },
+  "required_dispatcher_variables": [
+    "CUDA_VISIBLE_DEVICES",
+    "OPENWAM_ALLOCATION_END",
+    "OPENWAM_GPU_HOST"
+  ],
+  "pre_dispatch_gates": [
+    "Current native recovery continues untouched; no overlapping native peer worker",
+    "Freeze separate probe runtime with committed source snapshots and hashed authorization through existing dispatcher",
+    "Exact idle30min and priority/window policy retained",
+    "Recheck official source sync and all pauses immediately before registration",
+    "Recompute actual occupied time and conditional recovery reserve within280GPUh"
+  ],
+  "staged_validation": {
+    "L0_static": true,
+    "L1_CPU_controls": true,
+    "L1_GPU_render_device": false,
+    "L2_L3_native_episodes": false,
+    "L4_full_recovery_dispatch": false
+  },
+  "cost": {
+    "conditional_recovery_reserved_seconds": 1007796,
+    "proposed_probe_cap_seconds": 180,
+    "proposed_reserved_gpu_hours": 279.99333333333334,
+    "remaining_headroom_seconds": 24,
+    "existing_caps_unchanged": true
+  },
+  "limitations": [
+    "This JSON is a preparation artifact, never a ready dispatcher job",
+    "Sampling may miss contexts between observations; a selected-device log alone cannot establish isolation",
+    "Renderer-only probe does not validate policy inputs or scores; native episode evidence required before scaling",
+    "No registered running/completed cap or source changed"
+  ]
+}

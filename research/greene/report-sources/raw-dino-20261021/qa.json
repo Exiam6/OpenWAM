@@ -1,0 +1,51 @@
+{
+  "home": {
+    "title": "OpenWAM · Representation Evidence",
+    "nodes": 10,
+    "visible": "v-home",
+    "overflow": false
+  },
+  "routes": [
+    "#plan",
+    "#baseline",
+    "#audit",
+    "#compact",
+    "#capacity",
+    "#transfer",
+    "#pilot",
+    "#world",
+    "#scale",
+    "#integration"
+  ],
+  "counts": "180 of 180 pairs · Improved: 14 / Regressed: 0 / Unchanged failure: 125 / Unchanged success: 41",
+  "filter": "14 of 180 pairs · Improved: 14 / Regressed: 0 / Unchanged failure: 0 / Unchanged success: 0",
+  "media": {
+    "duration": 33.416667,
+    "width": 640,
+    "played": 0.297234
+  },
+  "downloads": [
+    {
+      "href": "media/003.mp4",
+      "ok": true
+    },
+    {
+      "href": "data/pair-003.json",
+      "ok": true
+    },
+    {
+      "href": "media/003.jpg",
+      "ok": true
+    }
+  ],
+  "tree_interactions": {
+    "zoom": "51.74009423859494 34.307768827639705 690.4347826086957 643.4782608695654",
+    "drag": "0.7227457699721072 -5.90962247670813 690.4347826086957 643.4782608695654",
+    "slider": {
+      "before": "0 0 1400 151.82481751824818",
+      "after": "259 0 1400 151.82481751824818"
+    }
+  },
+  "mobile": true,
+  "errors": []
+}

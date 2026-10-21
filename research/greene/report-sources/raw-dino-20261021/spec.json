@@ -1,0 +1,186 @@
+{
+  "title": "OpenWAM \u00b7 Representation Evidence",
+  "summary_html": "<div class=\"eyebrow\">OPENWAM / REPRESENTATION RESEARCH</div><h2 class=\"headline\">Does Raw DINO help control?</h2><p>Measured benefit is confined to one task. Next: establish broader learnability, then isolate the mechanism.</p><div class=\"leadline\"><strong>+7.78 pp</strong> Raw DINO \u2212 Wan VAE \u00b7 paired 95% CI [2.22, 13.89] pp</div><div class=\"featured\"><article class=\"clip\"><video controls playsinline preload=\"none\" poster=\"media/003.jpg\" src=\"media/003.mp4\"></video><p>adjust bottle \u00b7 Left-only success<br><small>Seed 42 \u00b7 scene 6200006</small></p><a class=\"download\" href=\"media/003.mp4\" download>Download video \u2193</a> <a class=\"download\" href=\"data/pair-003.json\" download>Download record \u2193</a> <a class=\"download\" href=\"media/003.jpg\" download>Download image \u2193</a></article><article class=\"clip\"><video controls playsinline preload=\"none\" poster=\"media/006.jpg\" src=\"media/006.mp4\"></video><p>adjust bottle \u00b7 Both fail<br><small>Seed 42 \u00b7 scene 6200009</small></p><a class=\"download\" href=\"media/006.mp4\" download>Download video \u2193</a> <a class=\"download\" href=\"data/pair-006.json\" download>Download record \u2193</a> <a class=\"download\" href=\"media/006.jpg\" download>Download image \u2193</a></article><article class=\"clip\"><video controls playsinline preload=\"none\" poster=\"media/000.jpg\" src=\"media/000.mp4\"></video><p>adjust bottle \u00b7 Both succeed<br><small>Seed 42 \u00b7 scene 6200001</small></p><a class=\"download\" href=\"media/000.mp4\" download>Download video \u2193</a> <a class=\"download\" href=\"data/pair-000.json\" download>Download record \u2193</a> <a class=\"download\" href=\"media/000.jpg\" download>Download image \u2193</a></article></div><p class=\"caption\">Top: Raw DINO. Bottom: Wan VAE. Three actual policy cameras; full episodes. Illustrative pairs above; <a href=\"#baseline\">all pairs and failures \u2192</a></p><div class=\"tw\"><table><thead><tr><th>Route</th><th>Success</th><th>Wilson 95% interval</th><th>Scope</th></tr></thead><tbody><tr><td>Raw DINO</td><td>55/180 \u00b7 30.56%</td><td>24.29%\u201337.63%</td><td>Known development scenes</td></tr><tr><td>Compact DINO</td><td>50/180 \u00b7 27.78%</td><td>21.75%\u201334.73%</td><td>Known development scenes</td></tr><tr><td>Wan VAE</td><td>41/180 \u00b7 22.78%</td><td>17.26%\u201329.44%</td><td>Known development scenes</td></tr></tbody></table></div><p class=\"caption\">Success = native task completion within its fixed step limit. All gains are on adjust bottle. No broad transfer or official-scale advantage established. External whole-robot views were not recorded.</p>",
+  "tree": [
+    {
+      "id": "root",
+      "parent": null,
+      "title": "Does Raw DINO help?",
+      "text": "Which contribution survives controls?",
+      "state": "root",
+      "href": "plan"
+    },
+    {
+      "id": "baseline",
+      "parent": "root",
+      "title": "ex5-a \u00b7 Encoder effect",
+      "text": "+7.78 pp vs Wan VAE",
+      "state": "done",
+      "href": "baseline"
+    },
+    {
+      "id": "audit",
+      "parent": "baseline",
+      "title": "ex6-b \u00b7 Attribution",
+      "text": "1080 verified; one positive task",
+      "state": "done",
+      "href": "audit"
+    },
+    {
+      "id": "compact",
+      "parent": "audit",
+      "title": "Compact reference",
+      "text": "Raw superiority not established",
+      "state": "done",
+      "href": "compact"
+    },
+    {
+      "id": "capacity",
+      "parent": "compact",
+      "title": "Information / capacity",
+      "text": "Matched-interface controls pending",
+      "state": "wait",
+      "href": "capacity"
+    },
+    {
+      "id": "transfer",
+      "parent": "root",
+      "title": "ex6-a/c \u00b7 Transfer",
+      "text": "131/140 verified; incomplete",
+      "state": "run",
+      "href": "transfer"
+    },
+    {
+      "id": "pilot",
+      "parent": "transfer",
+      "title": "ex7-b \u00b7 Dataset readiness",
+      "text": "10 tasks; registered collection",
+      "state": "run",
+      "href": "pilot"
+    },
+    {
+      "id": "world",
+      "parent": "pilot",
+      "title": "Observation / future",
+      "text": "Factorial comparison pending",
+      "state": "wait",
+      "href": "world"
+    },
+    {
+      "id": "scale",
+      "parent": "root",
+      "title": "Official-scale concern",
+      "text": "Pretraining transfer unresolved",
+      "state": "wait",
+      "href": "scale"
+    },
+    {
+      "id": "integration",
+      "parent": "scale",
+      "title": "ReWAM / R\u00b2-WAM",
+      "text": "Independent adaptations pending",
+      "state": "wait",
+      "href": "integration"
+    }
+  ],
+  "lanes": [
+    {
+      "lane": "Matched baseline",
+      "label": "Corrected protocol \u2192 audit",
+      "start": "2026-10-18T08:39:45.926399+00:00",
+      "end": "2026-10-20T08:01:36.847096+00:00",
+      "state": "done",
+      "href": "baseline",
+      "projected": false
+    },
+    {
+      "lane": "Transfer audit",
+      "label": "Partial readout",
+      "start": "2026-10-21T00:14:00.754149+00:00",
+      "end": "2026-10-21T00:14:00.754149+00:00",
+      "state": "run",
+      "href": "transfer",
+      "projected": false
+    },
+    {
+      "lane": "Dataset readiness",
+      "label": "Collection",
+      "start": "2026-10-21T06:24:43.466423+00:00",
+      "end": "2026-10-21T06:42:34.540507+00:00",
+      "state": "run",
+      "href": "pilot",
+      "projected": false
+    },
+    {
+      "lane": "Dataset readiness",
+      "label": "Budget window, not completion ETA",
+      "start": "2026-10-21T06:42:34.540507+00:00",
+      "end": "2026-10-22T06:24:43.466437+00:00",
+      "state": "wait",
+      "href": "pilot",
+      "projected": true
+    }
+  ],
+  "milestones": [],
+  "t0": "2026-10-18T08:39:45.926399+00:00",
+  "now": "2026-10-21T06:42:34.540507+00:00",
+  "views": [
+    {
+      "id": "baseline",
+      "title": "ex5-a \u00b7 Raw DINO vs Wan VAE",
+      "html": "<p class=\"status done\">COMPLETE \u00b7 corrected protocol</p><p><strong>+7.78 pp</strong>, paired 95% CI [2.22, 13.89] pp. All gains occur on adjust bottle.</p><div class=\"gallery\" data-comparison=\"primary_raw_minus_vae\"></div><div class=\"tw\"><table><thead><tr><th>Route</th><th>Success</th><th>Wilson 95% interval</th><th>Scope</th></tr></thead><tbody><tr><td>Raw DINO</td><td>55/180 \u00b7 30.56%</td><td>24.29%\u201337.63%</td><td>Known development scenes</td></tr><tr><td>Compact DINO</td><td>50/180 \u00b7 27.78%</td><td>21.75%\u201334.73%</td><td>Known development scenes</td></tr><tr><td>Wan VAE</td><td>41/180 \u00b7 22.78%</td><td>17.26%\u201329.44%</td><td>Known development scenes</td></tr></tbody></table></div><div class=\"five\"><div><h3>Background</h3><p>Frozen visual encoders may provide different control-relevant information.</p></div><div><h3>Question</h3><p>Does replacing Wan VAE with raw DINO improve closed-loop success on this fixed development cohort?</p></div><div><h3>Method</h3><p>Encoder route changes; matched demonstrations, minibatches, common initialization, backbone and final checkpoint. Dimension-specific projections differ.</p></div><div><h3>Decision rule</h3><p>Registered: effect \u22655 pp, positive in at least two training seeds, paired bootstrap lower bound above zero.</p></div><div><h3>Outcome & next step</h3><p>The registered cohort criterion passes. Task and seed generalization remain unproven; removing adjust bottle removes the benefit.</p></div></div><a class=\"download\" href=\"data/baseline-plan.md\" download>Download original plan \u2193</a><a class=\"download\" href=\"data/corrected-protocol.json\" download>Download admitted correction \u2193</a><a class=\"download\" href=\"data/audit.json\" download>Download data \u2193</a><p class=\"caption\">Original VAE autocast failure is preserved; this table uses the separately registered corrected attempt. The initial preparation plan alone did not authorize training. No training time-lapse was recorded; this was supervised training, not RL.</p>"
+    },
+    {
+      "id": "compact",
+      "title": "ex5-a secondary \u00b7 Is raw better than compact?",
+      "html": "<div class=\"gallery\" data-comparison=\"secondary_compact_minus_vae\"></div><div class=\"five\"><div><h3>Background</h3><p>Compact DINO may retain information while reducing the model interface.</p></div><div><h3>Question</h3><p>Is uncompressed DINO necessary for the observed benefit?</p></div><div><h3>Method</h3><p>Use the prespecified compact DINO secondary reference; no best-arm selection. The gallery compares compact DINO (top) with Wan VAE (bottom).</p></div><div><h3>Decision rule</h3><p>Secondary descriptive comparison; no independently registered raw-versus-compact superiority claim.</p></div><div><h3>Outcome & next step</h3><p>Raw-versus-compact uncertainty includes zero. Raw-is-always-best is unsupported. The complete gallery retains compact regressions.</p></div></div><div class=\"tw\"><table><thead><tr><th>Contrast</th><th>Difference</th><th>Registered paired 95% CI</th></tr></thead><tbody><tr><td>Compact \u2212 VAE</td><td>+5.00 pp</td><td>[-6.67, 15.0] pp</td></tr><tr><td>Raw \u2212 compact</td><td>+2.78 pp</td><td>[-3.33, 11.11] pp</td></tr></tbody></table></div><a class=\"download\" href=\"data/audit.json\" download>Download data \u2193</a>"
+    },
+    {
+      "id": "transfer",
+      "title": "ex6-a / ex6-c \u00b7 Transfer beyond the training tasks",
+      "html": "<p class=\"status run\">INCOMPLETE \u00b7 131/140 episodes verified across all arms</p><div class=\"gallery\" data-comparison=\"transfer_raw_minus_vae\"></div><div class=\"tw\"><table><thead><tr><th>Task</th><th>Raw DINO</th><th>Compact DINO</th><th>Wan VAE</th></tr></thead><tbody><tr><td>click bell</td><td>0/5 \u00b7 0.00%<br><small>0.00%\u201343.45%</small></td><td>0/5 \u00b7 0.00%<br><small>0.00%\u201343.45%</small></td><td>0/5 \u00b7 0.00%<br><small>0.00%\u201343.45%</small></td></tr><tr><td>press stapler</td><td>0/5 \u00b7 0.00%<br><small>0.00%\u201343.45%</small></td><td>0/5 \u00b7 0.00%<br><small>0.00%\u201343.45%</small></td><td>1/5 \u00b7 20.00%<br><small>3.62%\u201362.45%</small></td></tr><tr><td>open laptop</td><td>1/5 \u00b7 20.00%<br><small>3.62%\u201362.45%</small></td><td>0/5 \u00b7 0.00%<br><small>0.00%\u201343.45%</small></td><td>0/5 \u00b7 0.00%<br><small>0.00%\u201343.45%</small></td></tr><tr><td>pick dual bottles</td><td>0/5 \u00b7 0.00%<br><small>0.00%\u201343.45%</small></td><td>0/5 \u00b7 0.00%<br><small>0.00%\u201343.45%</small></td><td>0/5 \u00b7 0.00%<br><small>0.00%\u201343.45%</small></td></tr><tr><td>lift pot</td><td>0/5 \u00b7 0.00%<br><small>0.00%\u201343.45%</small></td><td>0/5 \u00b7 0.00%<br><small>0.00%\u201343.45%</small></td><td>0/5 \u00b7 0.00%<br><small>0.00%\u201343.45%</small></td></tr><tr><td>stack blocks two</td><td>0/5 \u00b7 0.00%<br><small>0.00%\u201343.45%</small></td><td>pending (1/5 verified)</td><td>pending (0/5 verified)</td></tr><tr><td>place bread basket</td><td>0/5 \u00b7 0.00%<br><small>0.00%\u201343.45%</small></td><td>0/5 \u00b7 0.00%<br><small>0.00%\u201343.45%</small></td><td>0/5 \u00b7 0.00%<br><small>0.00%\u201343.45%</small></td></tr></tbody></table></div><div class=\"five\"><div><h3>Background</h3><p>The original training corpus covers only the original tasks.</p></div><div><h3>Question</h3><p>Do frozen checkpoints transfer to additional tasks?</p></div><div><h3>Method</h3><p>Same fixed expert-feasible scenes and paired action-noise streams; no checkpoint retuning.</p></div><div><h3>Decision rule</h3><p>Development feasibility pilot; missing episodes never become failures. No confirmatory superiority threshold.</p></div><div><h3>Outcome & next step</h3><p>No broad advantage demonstrated. Learn the additional tasks before testing the representation claim at broader coverage.</p></div></div><p>The official checkpoint is a functional diagnostic only. Its native paper score has not been reproduced, so it is excluded from this comparison table. Resource interruptions and missing episodes remain visible. Fully rendered sets are shown only for complete tasks.</p><a class=\"download\" href=\"data/transfer.json\" download>Download data \u2193</a>"
+    },
+    {
+      "id": "audit",
+      "title": "ex6-b \u00b7 Does the effect survive an attribution audit?",
+      "html": "<div class=\"five\"><div><h3>Background</h3><p>A positive aggregate score can hide task concentration and capacity differences.</p></div><div><h3>Question</h3><p>Which claim is actually supported by the completed comparison?</p></div><div><h3>Method</h3><p>Independently verify result and trace hashes; inspect task, seed and capacity sensitivity. This is post-hoc analysis.</p></div><div><h3>Decision rule</h3><p>Audit requires consistent identities and hashes. Exploratory sensitivity cannot replace the registered primary test.</p></div><div><h3>Outcome & next step</h3><p>The cohort effect is verified; broad transfer, raw superiority over compact, a wider output head benefit and a noise-shift benefit are not established.</p></div></div><div class=\"tw\"><table><thead><tr><th>Route</th><th>Trainable parameters</th></tr></thead><tbody><tr><td>Raw DINO</td><td>300,936,724</td></tr><tr><td>Compact DINO</td><td>295,035,604</td></tr><tr><td>Wan VAE</td><td>295,035,604</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Training seed</th><th>Raw \u2212 VAE</th></tr></thead><tbody><tr><td>42</td><td>+10.00 pp</td></tr><tr><td>43</td><td>+10.00 pp</td></tr><tr><td>44</td><td>+3.33 pp</td></tr></tbody></table></div><p>Verified episode identities: 1080. Video-only wide-head and noise-shift results remain in the audit download; no positive claim is made for them.</p><a class=\"download\" href=\"data/audit.json\" download>Download data \u2193</a><p><a href=\"#baseline\">Complete paired visual evidence \u2192</a></p>"
+    },
+    {
+      "id": "pilot",
+      "title": "ex7-b \u00b7 Can the expanded dataset support learning?",
+      "html": "<p class=\"status run\">REGISTERED \u00b7 collection in progress at snapshot</p><div class=\"five\"><div><h3>Background</h3><p>Near-zero downstream success can reflect inadequate task coverage or faulty data.</p></div><div><h3>Question</h3><p>Can the frozen collector produce valid image/state/time trajectories on every preselected task?</p></div><div><h3>Method</h3><p>Fixed train/dev candidate seeds; same simulator and three-camera layout. No final-test data and no favorable-seed replacement.</p></div><div><h3>Decision rule</h3><p>At least one valid trajectory among the initial fixed candidates gates continuation. Native expert success, finite states and timestamp contracts must pass.</p></div><div><h3>Outcome & next step</h3><p>Expert trajectories are being collected. This does not measure learned-policy success or authorize full training; dataset audit and model-readiness gates follow.</p></div></div><div class=\"tw\"><table><thead><tr><th>Task</th><th>Planned candidates</th><th>Locally observed</th><th>Valid local trajectories</th></tr></thead><tbody><tr><td>adjust bottle</td><td>25</td><td>24</td><td>19</td></tr><tr><td>handover block</td><td>25</td><td>20</td><td>16</td></tr><tr><td>place object basket</td><td>25</td><td>0</td><td>0</td></tr><tr><td>click bell</td><td>25</td><td>0</td><td>0</td></tr><tr><td>press stapler</td><td>25</td><td>0</td><td>0</td></tr><tr><td>open laptop</td><td>25</td><td>0</td><td>0</td></tr><tr><td>pick dual bottles</td><td>25</td><td>0</td><td>0</td></tr><tr><td>lift pot</td><td>25</td><td>0</td><td>0</td></tr><tr><td>stack blocks two</td><td>25</td><td>0</td><td>0</td></tr><tr><td>place bread basket</td><td>25</td><td>0</td><td>0</td></tr></tbody></table></div><p>Remote trajectory counts are not yet consolidated. Missing local files are not failures. Planned total: 250 candidates. No policy-evaluation video exists for this data-readiness stage.</p><a class=\"download\" href=\"data/pilot-snapshot.json\" download>Download data \u2193</a><a class=\"download\" href=\"data/pilot-protocol.json\" download>Download data \u2193</a><a class=\"download\" href=\"data/pilot-plan.md\" download>Download plan \u2193</a>"
+    },
+    {
+      "id": "plan",
+      "title": "Research plan \u00b7 Evidence before attribution",
+      "html": "<p class=\"status wait\">DRAFT \u00b7 new scientific comparisons are not yet registered</p><div class=\"five\"><div><h3>Background</h3><p>Existing evidence is too narrow to establish a general representation advantage.</p></div><div><h3>Question</h3><p>Where, why and at what scale does DINO help control?</p></div><div><h3>Method</h3><p>First broaden learnability and reproduce the native official baseline. Then compare encoders, information-preserving interfaces and world-supervision factors.</p></div><div><h3>Decision rule</h3><p>Freeze data, seeds, budget, checkpoint selection, primary endpoint and power analysis before each launch.</p></div><div><h3>Outcome & next step</h3><p>Positive, null and negative results determine the next branch. No task subset will be selected after seeing final-test scores.</p></div></div><ol><li>Finish data feasibility and interrupted evaluation recovery.</li><li>Pass multi-task learning gates and reproduce the official native baseline.</li><li>Compare Raw DINO and Wan VAE on independent test scenes.</li><li>Control the learned interface; separate current observation from future targets.</li><li>Repeat the decisive contrast at larger data/model scales.</li></ol><a class=\"download\" href=\"data/design.json\" download>Download full draft \u2193</a>"
+    },
+    {
+      "id": "capacity",
+      "title": "ex7-a draft \u00b7 Information loss or larger interface?",
+      "html": "<p class=\"status wait\">WAITING \u00b7 not registered</p><div class=\"five\"><div><h3>Background</h3><p>Raw and compact routes differ in both information and learned projections.</p></div><div><h3>Question</h3><p>Does compression remove information needed for control?</p></div><div><h3>Method</h3><p>Train-only low-rank projections lifted back to the original channel count; include fixed random subspaces and an information-preserving rotation. Match learned tensor shapes and initialization.</p></div><div><h3>Decision rule</h3><p>Pending registration and power/cost gates. Diagnose normalization, noise scale and gradient differences before interpretation.</p></div><div><h3>Outcome & next step</h3><p>If compact controls match raw, reject the claim that raw dimensions are necessary. A gap alone does not isolate semantics from optimization.</p></div></div><a class=\"download\" href=\"data/design.json\" download>Download data \u2193</a><p>No experiment video or result exists yet.</p>"
+    },
+    {
+      "id": "world",
+      "title": "ex7-a draft \u00b7 Observation or future prediction?",
+      "html": "<p class=\"status wait\">WAITING \u00b7 not registered</p><div class=\"five\"><div><h3>Background</h3><p>The existing route changes both current conditioning and future targets.</p></div><div><h3>Question</h3><p>Which part improves actions?</p></div><div><h3>Method</h3><p>Cross current encoder {VAE, DINO} with future target {VAE, DINO}; add a genuine current-only policy and a separate no-world-loss control.</p></div><div><h3>Decision rule</h3><p>Current-only action outputs and gradients must be invariant to future ground truth; the existing zero-world-loss flag does not prove this.</p></div><div><h3>Outcome & next step</h3><p>Estimate the interaction directly. Do not infer an interaction from one significant and one nonsignificant result.</p></div></div><div class=\"pipeline\">Images \u2192 <b>current encoder</b> \u2192 action policy<br>Future frames \u2192 <b>future target encoder</b> \u2192 auxiliary prediction</div><p>These are the two intended replacement points. The action network remains controlled. Adapting input/output projections is necessary when the latent shape changes.</p><a class=\"download\" href=\"data/design.json\" download>Download data \u2193</a><p>No experiment video or result exists yet.</p>"
+    },
+    {
+      "id": "scale",
+      "title": "User concern \u00b7 Does the conclusion survive official scale?",
+      "html": "<p class=\"status wait\">OPEN QUESTION \u00b7 official-scale replacement not tested</p><div class=\"tw\"><table><thead><tr><th>Official released RoboTwin-Full checkpoint</th><th>Training provenance</th></tr></thead><tbody><tr><td>Video initialization</td><td>Wan2.2-TI2V-5B</td></tr><tr><td>Embodied pretraining</td><td>518,500,000 frames / 6,369 hours</td></tr><tr><td>Pretraining compute</td><td>128 H200 GPUs \u00d7 approximately 7 days</td></tr><tr><td>Pretraining updates</td><td>155,862; batch 3,072</td></tr><tr><td>RoboTwin-Full demonstrations</td><td>2,500 clean + 25,000 randomized</td></tr><tr><td>RoboTwin-Full SFT</td><td>5 epochs; 118,655 steps; batch 256</td></tr></tbody></table></div><p>Source: <a href=\"https://arxiv.org/abs/2609.07398\">OpenWAM paper, Tables 4, 9 and 10</a>; <a href=\"https://huggingface.co/OpenWAM/OpenWAM-Alpha-Sim-RoboTwin-Full\">released model card</a>. These are provenance facts, not scores in our comparison protocol. Wan upstream pretraining and downstream SFT are additional to the embodied pretraining compute.</p><div class=\"five\"><div><h3>Background</h3><p>The present controlled study is substantially smaller and lacks the official video-generative initialization.</p></div><div><h3>Question</h3><p>Does a representation benefit persist when pretrained knowledge and model/data scale change?</p></div><div><h3>Method</h3><p>Use a staged data/model scale ladder with matched controls. Test retaining VAE future prediction while adding DINO observation features; separately test latent-space replacement.</p></div><div><h3>Decision rule</h3><p>Pending feasibility, fixed compute budgets and native baseline reproduction. Do not assume the original video weights remain valid after changing their latent space.</p></div><div><h3>Outcome & next step</h3><p>A benefit confined to a small model must be reported as such. Official-scale claims require official-scale evidence.</p></div></div><p>Current Raw DINO trainable parameters: 300,936,724; completed training steps: 20,000. Model name strings are not parameter counts. Official \u201c5B\u201d describes the video backbone, not the total system.</p><a class=\"download\" href=\"data/official-scale.json\" download>Download data \u2193</a><a class=\"download\" href=\"data/dataset-audit.json\" download>Download data \u2193</a><a class=\"download\" href=\"data/audit.json\" download>Download data \u2193</a>"
+    },
+    {
+      "id": "integration",
+      "title": "Candidate contribution \u00b7 ReWAM / R\u00b2-WAM in OpenWAM",
+      "html": "<p class=\"status wait\">WAITING \u00b7 adaptation proposal, not a reproduction</p><div class=\"five\"><div><h3>Background</h3><p>Existing work already studies DINO features, compression and representation integration.</p></div><div><h3>Question</h3><p>Can faithful adaptations preserve or improve OpenWAM control under matched budgets?</p></div><div><h3>Method</h3><p>Implement and verify each route separately against the original method description, then test a combination only if individual routes justify it.</p></div><div><h3>Decision rule</h3><p>Engineering integration requires usable code and reproduced behavior; a scientific contribution requires independent controlled evidence and a clear mechanism or boundary.</p></div><div><h3>Outcome & next step</h3><p>A working integration is useful engineering. A renamed combination alone does not establish methodological novelty.</p></div></div><p><a href=\"https://arxiv.org/html/2609.38163v1\">ReWAM</a> \u00b7 <a href=\"https://arxiv.org/html/2610.13024v1\">R\u00b2-WAM</a> \u00b7 <a href=\"https://github.com/hustvl/ReWAM\">ReWAM official repository</a>. At the literature check, ReWAM code was announced but not released. No adaptation result is claimed.</p><a class=\"download\" href=\"data/design.json\" download>Download data \u2193</a><p>No experiment video or result exists yet.</p>"
+    },
+    {
+      "id": "evidence",
+      "title": "Evidence, history & downloads",
+      "html": "<p>Web clips preserve every frame and the complete episode duration, at reduced spatial/encoding quality. Full-quality originals are retained in the local bundle listed below. Cameras are the actual policy inputs; no external whole-robot view or exhaustive manual framing review is claimed.</p><a class=\"download\" href=\"data/all-clips.json\" download>Download complete video index \u2193</a><a class=\"download\" href=\"data/provenance.json\" download>Download source hashes \u2193</a><a class=\"download\" href=\"data/official-sync.json\" download>Download official sync record \u2193</a><p><code>/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/complete-vae-evidence.zip</code></p><p>This local original-quality archive is not hosted by this page. The reply provides its file link. Transfer originals are retained separately.</p><p><a href=\"https://claude.ai/artifact/VF8j1hFihQXwL71oaANxq7\">Historical page \u2192</a> Earlier uncorrected execution results are superseded by the separately registered correction, not overwritten. Do not combine their scores.</p><p>Google Sheet registration is not claimed: no existing OpenWAM project sheet was found in research_lab. Experiment protocols are available as local registry artifacts.</p>"
+    }
+  ],
+  "media": {},
+  "plan_url": "#plan"
+}

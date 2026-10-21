@@ -1,0 +1,12 @@
+{
+  "url": "https://openwam-evidence-20261021.mhedgeciweiz.chatgpt.site",
+  "project_id": "appgprj_6ad859a2cba8819199059ceeb7c6aff8",
+  "commit_sha": "239d527c50a4701a15c1c3be1d2434ea3bca6c11",
+  "deployment_id": "appgdep_6ad85ffba54881918bd12566aca0e1d5",
+  "status": "succeeded",
+  "audience": "owner-private",
+  "user_explicitly_approved_upload": true,
+  "full_quality_bundle": "/home/zifanz4/openwam-runtime/complete-logic-tree-evidence-20261021.zip",
+  "web_clips": 390,
+  "media_scope": "Complete episodes, reduced web encoding quality; no external whole-robot view recorded"
+}

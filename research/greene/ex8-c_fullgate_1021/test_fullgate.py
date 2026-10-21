@@ -16,6 +16,9 @@ class FailureClassification(unittest.TestCase):
  def test_planner_errors_still_fatal(self):
   for error in ['CUDA/Curobo prewarm failed:', 'planner fallback engaged:']:
    self.assertTrue(run_full.classify_full(self.text+error,'place_object_basket',True)['fatal'])
+ def test_planner_error_inside_candidate_traceback_is_fatal(self):
+  text=self.text.replace('AssertionError: target_pose', 'planner fallback engaged: forbidden\nAssertionError: target_pose')
+  self.assertTrue(run_full.classify_full(text,'place_object_basket',True)['fatal'])
  def test_changed_exception_fatal(self):
   self.assertTrue(run_full.classify_full(self.text.replace('AssertionError: target_pose cannot be None for move action.','RuntimeError: other error'),'place_object_basket',True)['fatal'])
  def test_missing_native_catch_final_fatal(self):
@@ -52,10 +55,19 @@ class CountsAndCosts(unittest.TestCase):
  def test_zero_recovery_lower_bound_exceeds_existing_budget(self):
   groups=prepare.read(prepare.A/'pilot/result.json')['groups']
   self.assertGreater(sum(g['seconds'] for g in groups)/30*10000/3600+5,200)
+ def test_manifest_duplicate_row_rejected(self):
+  rows=prepare.allocation(prepare.read(prepare.A/'protocol.json'),200);rows[-1]=rows[0]
+  with self.assertRaises(AssertionError):run_full.validate_full_suite({'rows':rows,'planned_episodes':10000})
+ def test_manifest_changed_seed_rejected(self):
+  rows=prepare.allocation(prepare.read(prepare.A/'protocol.json'),200);rows[0]['seed']=1
+  with self.assertRaises(AssertionError):run_full.validate_full_suite({'rows':rows,'planned_episodes':10000})
+ def test_manifest_wrong_task_rejected(self):
+  rows=prepare.allocation(prepare.read(prepare.A/'protocol.json'),200);rows[0]['task']='other'
+  with self.assertRaises(AssertionError):run_full.validate_full_suite({'rows':rows,'planned_episodes':10000})
  def test_incomplete_aggregate_no_headline(self):
   previous=aggregate_full.ROOT
   with tempfile.TemporaryDirectory() as d:
-   aggregate_full.ROOT=pathlib.Path(d);(aggregate_full.ROOT/'protocol.json').write_text(json.dumps({'rows':[{'key':'absent'}]}))
+   aggregate_full.ROOT=pathlib.Path(d);(aggregate_full.ROOT/'protocol.json').write_text(json.dumps({'rows':prepare.allocation(prepare.read(prepare.A/'protocol.json'),200),'planned_episodes':10000}))
    try:
     r=aggregate_full.main();self.assertFalse(r['full_endpoint_complete']);self.assertNotIn('rates_pct',r)
    finally:aggregate_full.ROOT=previous

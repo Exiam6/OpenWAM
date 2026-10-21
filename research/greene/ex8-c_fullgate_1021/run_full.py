@@ -23,9 +23,19 @@ def native_environment_guard():
  assert not os.environ.get('ROBOTWIN_LABTASKER_OPERATION'),'Native full run cannot inherit manifest/batched evaluation mode'
  assert os.environ.get('ROBOTWIN_SKIP_VERSION_CHECK')!='1','Native version check must remain enabled'
 
+def validate_full_suite(p):
+ base=read(ROOT/'protocol.json')
+ expected={(m,t) for m in base['full_modes'] for t in base['full_tasks']}
+ rows=p['rows'];assert len(rows)==100 and len({r['key'] for r in rows})==100
+ assert {(r['mode'],r['task']) for r in rows}==expected
+ assert all(r['episodes']==100 and r['seed']==0 and r['key']==f"{r['mode']}-{r['task']}" for r in rows)
+ assert p['planned_episodes']==10000
+
 def admit(key):
  native_environment_guard()
- p=read(FULL/'protocol.json');row=next(x for x in p['rows'] if x['key']==key)
+ p=read(FULL/'protocol.json');validate_full_suite(p)
+ assert p.get('full_registered_for_dispatch') is True,'Conditional draft is not dispatch authorization'
+ row=next(x for x in p['rows'] if x['key']==key)
  assert not (FULL/'runs'/key).exists();assert not (FULL/'paused.json').exists()
  assert dt.datetime.now(dt.timezone.utc)<dt.datetime.fromisoformat(p['deadline'])
  assert shutil.disk_usage(ROOT).free>80*(1<<30)
@@ -67,8 +77,8 @@ def main(key):
  signal.signal(signal.SIGTERM,terminated);signal.signal(signal.SIGINT,terminated);save()
  try:
   assert sha(pathlib.Path(base['checkpoint']))==base['checkpoint_sha256']
-  env=dict(os.environ);env.update(PYTHONPATH=str(ROOT/'official'),PYTHONDONTWRITEBYTECODE='1',OMP_NUM_THREADS='4',OPENBLAS_NUM_THREADS='4',MKL_NUM_THREADS='4',MAX_JOBS='2',TORCHINDUCTOR_COMPILE_THREADS='2',TOKENIZERS_PARALLELISM='false',HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',WANDB_MODE='disabled',CUDA_HOME=str(R/'cuda-toolkit'),TORCH_CUDA_ARCH_LIST='12.0',CPATH=str(R/'cuda-toolkit/targets/x86_64-linux/include'),TMPDIR=str(out/'tmp'),TORCH_EXTENSIONS_DIR=str(ROOT/'cache/extensions'),TRITON_CACHE_DIR=str(out/'cache/triton'),TORCHINDUCTOR_CACHE_DIR=str(out/'cache/inductor'),PATH=f'{ROOT}/bin:{R}/policy-env/bin:{R}/cuda-toolkit/bin:/usr/bin:/bin')
-  for f in ['tmp','cache/triton','cache/inductor']:(out/f).mkdir(parents=True,exist_ok=True)
+  env=dict(os.environ);env.update(PYTHONPATH=str(ROOT/'official'),PYTHONDONTWRITEBYTECODE='1',OMP_NUM_THREADS='4',OPENBLAS_NUM_THREADS='4',MKL_NUM_THREADS='4',MAX_JOBS='2',TORCHINDUCTOR_COMPILE_THREADS='2',TOKENIZERS_PARALLELISM='false',HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',WANDB_MODE='disabled',CUDA_HOME=str(R/'cuda-toolkit'),TORCH_CUDA_ARCH_LIST='12.0',CPATH=str(R/'cuda-toolkit/targets/x86_64-linux/include'),TMPDIR=str(out/'tmp'),TORCH_EXTENSIONS_DIR=str(out/'cache/extensions'),TRITON_CACHE_DIR=str(out/'cache/triton'),TORCHINDUCTOR_CACHE_DIR=str(out/'cache/inductor'),PATH=f'{ROOT}/bin:{R}/policy-env/bin:{R}/cuda-toolkit/bin:/usr/bin:/bin')
+  for f in ['tmp','cache/triton','cache/inductor','cache/extensions']:(out/f).mkdir(parents=True,exist_ok=True)
   for k in ['ROBOTWIN_ENABLE_PLANNER_FALLBACK','ROBOT_CONFIG_ROOT','EXPECTED_RENDER_PCI','ROBOTWIN_TEST_NUM']:env.pop(k,None)
   with socket.socket() as sock:sock.bind(('127.0.0.1',0));port=sock.getsockname()[1]
   server_argv=[str(R/'policy-env/bin/python'),'-u',str(ROOT/'official/scripts/deploy.py'),'--ckpt-dir',str(pathlib.Path(base['checkpoint']).parent),'--host','127.0.0.1','--port',str(port)]
@@ -95,7 +105,7 @@ def main(key):
    guard();subprocess.run([str(ROOT/'bin/ffmpeg'),'-v','error','-i',str(f),'-f','null','-'],check=True,timeout=60,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE)
   scores=list((out/'simulator/eval_result').rglob('_result.txt'));assert len(scores)==1
   native_rate=float(scores[0].read_text().strip().splitlines()[-1]);successes=sum(x['success'] for x in rows);assert abs(native_rate-successes/100)<1e-8
-  state.update(status='complete',episodes=rows,successes=successes,scored_episodes=100,success_rate_pct=successes,native_result_crosscheck=True,video_full_decode_passed=100,client_log_sha256=sha(out/'client.log'))
+  state.update(status='complete',episodes=rows,successes=successes,scored_episodes=100,success_rate_pct=successes,native_result_crosscheck=True,video_full_decode_passed=100,client_log_sha256=sha(out/'client.log'),video_sha256={str(f):sha(f) for f in videos})
  except BaseException as exc:
   state.update(status='failed',error=repr(exc));raise
  finally:

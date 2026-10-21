@@ -8,6 +8,7 @@ def classify(text, final=False):
  blocks=[]
  def remove(m):
   block=m.group(0)
+  if any(marker in block for marker in ['CUDA/Curobo prewarm failed:', 'planner fallback engaged:']):return block
   if 'in grasp_actor' not in block or 'in __init__' not in block or 'in play_once' not in block or block.count('Traceback (most recent call last):')!=1:return block
   exceptions=[x for x in block.splitlines() if re.match(r'^[A-Za-z_][\w.]*(?:Error|Exception|Interrupt):',x)]
   if exceptions!=[EXPECTED]:return block

@@ -55,6 +55,17 @@ class Tests(unittest.TestCase):
         self.assertEqual(pci("00000000:AB:00.0"),pci("0000:ab:00.0"))
         for value in ["ab:00",None,"0000:xx:00.0"]:
             with self.assertRaises(AssertionError):pci(value)
+    def test_unregistered_probe_cannot_import_gpu(self):
+        import json, tempfile, sys
+        from pathlib import Path
+        from probe_candidate import run
+        with tempfile.TemporaryDirectory() as tmp:
+            p=Path(tmp)/"registration.json";out=Path(tmp)/"out.json"
+            p.write_text(json.dumps({"kind":"FROZEN_NATIVE_RENDER_PROBE","registered_for_dispatch":False}))
+            with self.assertRaises(AssertionError):run(p,out)
+            self.assertFalse(out.exists())
+            self.assertNotIn("sapien",sys.modules)
+            self.assertNotIn("torch",sys.modules)
     def test_prewarm_failure_never_imports_renderer(self):
         w,orig,f,events=self.harness()
         def fail():raise RuntimeError("prewarm failure")

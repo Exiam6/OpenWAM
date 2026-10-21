@@ -37,6 +37,7 @@ def run(registration, output):
     inventory=load("frozen_probe",R/"nightly-gpu/code-v3/probe.py")
     samples=[];errors=[];done=threading.Event();start=time.monotonic()
     own_group=Path("/proc/self/cgroup").read_text()
+    assert "openwam-nightly-job-" in own_group, "Dispatcher systemd unit required"
     def observe():
         while not done.is_set():
             try:
@@ -78,7 +79,9 @@ def run(registration, output):
         done.set();monitor.join(timeout=10);signal.alarm(0)
         result.update(samples=samples,monitor_errors=errors,occupied_seconds=time.monotonic()-start)
         assert not Path("/home/zifanz4/.local/state/openwam-selfcheck/paused.json").exists()
+        if errors:result.update(status="failed",error="Context monitor failed")
         output.write_text(json.dumps(result,indent=2)+"\n")
+        if errors:raise RuntimeError("Context monitor failed")
 
 if __name__=="__main__":
     parser=argparse.ArgumentParser();parser.add_argument("--registration",required=True,type=Path);parser.add_argument("--output",required=True,type=Path)

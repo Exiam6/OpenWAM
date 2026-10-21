@@ -13,7 +13,7 @@ def guard(env, argv):
     assert not any(k.startswith("ROBOTWIN_LABTASKER_") for k in env), "Labtasker forbidden"
     assert argv and argv[0] == "--config" and len(argv) == 2, "Native config only"
     uuid = env.get("CUDA_VISIBLE_DEVICES", "")
-    assert re.fullmatch(r"GPU-[0-9a-fA-F-]{36}", uuid), "One assigned GPU UUID required"
+    assert re.fullmatch(r"GPU-[0-9a-fA-F]{8}(?:-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}", uuid), "One assigned GPU UUID required"
     assert env.get("OPENWAM_GPU_HOST"), "Dispatcher allocation required"
     assert env.get("OPENWAM_ALLOCATION_END"), "Bounded dispatcher allocation required"
     return uuid
@@ -30,13 +30,23 @@ def verify_device(device, expected_pci):
     assert pci(device.pci_string) == pci(expected_pci), "Renderer outside assigned allocation"
     return {"cuda_id": device.cuda_id, "pci": device.pci_string, "name": device.name}
 
-def delegate(wrapper, argv, env, expected_pci, render_factory, record):
+def native_render_factory(**kwargs):
+    # The official prewarm function logs and swallows failures. Check CUDA again
+    # before importing SAPIEN instead of treating its return as proof of success.
+    import torch
+    assert torch.cuda.is_available() and torch.cuda.device_count() == 1
+    warm_tensor = torch.zeros(1, device="cuda")
+    from sapien.render import RenderSystem
+    return RenderSystem(**kwargs)
+
+def delegate(wrapper, argv, env, expected_pci, render_factory=None, record=print):
     """Factory import must occur inside the hook, after native prewarm returns.
 
     This proves control flow only. Default native scenes and peer graphics
     contexts must be independently checked by a separately registered GPU probe.
     """
     guard(env, argv)
+    render_factory = render_factory or native_render_factory
     original = wrapper._prewarm_cuda_for_curobo
     anchor = []
     def prewarm_then_bind():

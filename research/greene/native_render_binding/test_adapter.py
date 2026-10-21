@@ -33,7 +33,7 @@ class Tests(unittest.TestCase):
         for key in BLOCKED|{"ROBOTWIN_LABTASKER_OPERATION","ROBOTWIN_LABTASKER_RESULT"}:
             with self.subTest(key=key),self.assertRaises(AssertionError):guard(dict(ENV,**{key:"0"}),ARGS)
     def test_bad_gpu_assignments(self):
-        for value in ["", "0", UUID+",GPU-other", "GPU-nope"]:
+        for value in ["", "0", UUID+",GPU-other", "GPU-nope", "GPU-"+"-"*36]:
             with self.subTest(value=value),self.assertRaises(AssertionError):guard(dict(ENV,CUDA_VISIBLE_DEVICES=value),ARGS)
     def test_missing_dispatch_allocation(self):
         for key in ["OPENWAM_GPU_HOST","OPENWAM_ALLOCATION_END"]:
@@ -55,6 +55,23 @@ class Tests(unittest.TestCase):
         self.assertEqual(pci("00000000:AB:00.0"),pci("0000:ab:00.0"))
         for value in ["ab:00",None,"0000:xx:00.0"]:
             with self.assertRaises(AssertionError):pci(value)
+    def test_swallowed_prewarm_failure_cannot_import_sapien(self):
+        import sys
+        from unittest.mock import patch
+        from adapter import native_render_factory
+        bad_torch=types.SimpleNamespace(cuda=types.SimpleNamespace(is_available=lambda:False))
+        with patch.dict(sys.modules,{"torch":bad_torch}):
+            with self.assertRaises(AssertionError):native_render_factory(device="cuda:0")
+            self.assertNotIn("sapien",sys.modules)
+    def test_factory_cuda_before_sapien(self):
+        import ast
+        import inspect
+        from adapter import native_render_factory
+        tree=ast.parse(inspect.getsource(native_render_factory))
+        torch_line=min(n.lineno for n in ast.walk(tree) if isinstance(n,ast.Import) and any(a.name=="torch" for a in n.names))
+        assert_line=min(n.lineno for n in ast.walk(tree) if isinstance(n,ast.Assert))
+        sapien_line=min(n.lineno for n in ast.walk(tree) if isinstance(n,ast.ImportFrom) and n.module=="sapien.render")
+        self.assertLess(torch_line,assert_line);self.assertLess(assert_line,sapien_line)
     def test_unregistered_probe_cannot_import_gpu(self):
         import json, tempfile, sys
         from pathlib import Path

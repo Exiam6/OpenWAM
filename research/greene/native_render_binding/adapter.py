@@ -11,7 +11,14 @@ BLOCKED = {
 def guard(env, argv):
     assert not any(k in env for k in BLOCKED), "Unexpected evaluator override"
     assert not any(k.startswith("ROBOTWIN_LABTASKER_") for k in env), "Labtasker forbidden"
-    assert argv and argv[0] == "--config" and len(argv) == 2, "Native config only"
+    assert len(argv) >= 2 and argv[0] == "--config", "Native config required"
+    if len(argv) > 2:
+        flags = ["--task_name", "--task_config", "--ckpt_setting", "--seed", "--policy_name"]
+        assert argv[2] == "--overrides" and list(argv[3::2]) == flags and len(argv) == 13, "Unexpected native overrides"
+        values = dict(zip(flags, argv[4::2]))
+        assert re.fullmatch(r"[A-Za-z0-9_]+", values["--task_name"])
+        assert values["--task_config"] in ["demo_clean", "demo_randomized"]
+        assert values["--seed"] == "0" and values["--policy_name"] == "openwam2robotwin_interface"
     uuid = env.get("CUDA_VISIBLE_DEVICES", "")
     assert re.fullmatch(r"GPU-[0-9a-fA-F]{8}(?:-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}", uuid), "One assigned GPU UUID required"
     assert env.get("OPENWAM_GPU_HOST"), "Dispatcher allocation required"

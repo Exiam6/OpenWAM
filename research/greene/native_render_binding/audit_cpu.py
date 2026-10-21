@@ -16,6 +16,7 @@ def main(output):
     paths=[Path("/home/zifanz4/.local/state/openwam-selfcheck/paused.json")]+[R/n/"paused.json" for n in ["ex8-a_officialrepro_1021","ex8-b_candidatefilter_1021","ex8-d_nativefull_1021","ex8-e_rowrecovery_1021"]]
     assert not any(p.exists() for p in paths)
     files=[ROOT/"official/benchmarks/robotwin/eval_policy_wrapper.py",ROOT/"RoboTwin/envs/_base_task.py",S/"wrapper/scene.py",S/"wrapper/renderer.py",S/"pysapien/render.pyi",S/"pysapien/__init__.pyi",R/"ex8-d_nativefull_1021/code/run_full.py",R/"ex8-d_nativefull_1021/code/classify_log.py",R/"nightly-gpu/code-v3/probe.py",B/"adapter.py",B/"probe_candidate.py",B/"test_adapter.py",B/"PLAN.md",Path(__file__)]
+    files.append(ROOT/"official/benchmarks/robotwin/single_eval.sh")
     hashes={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
     source=files[0].read_text();tree=ast.parse(source)
     bootstrap=next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=="bootstrap_robotwin_module")

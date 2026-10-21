@@ -5,7 +5,7 @@ from adapter import delegate, guard, pci
 
 UUID="GPU-89770bc8-d310-99d8-b3a4-d2b14c93d1a9"
 ENV={"CUDA_VISIBLE_DEVICES":UUID,"OPENWAM_GPU_HOST":"gpu01","OPENWAM_ALLOCATION_END":"2026-10-21T23:00:00+00:00"}
-ARGS=["--config","native.yml"]
+ARGS=["--config","native.yml","--overrides","--task_name","adjust_bottle","--task_config","demo_clean","--ckpt_setting","ex8d-native-full","--seed","0","--policy_name","openwam2robotwin_interface"]
 class Tests(unittest.TestCase):
     def harness(self, mutate=None, raises=False):
         events=[]
@@ -63,6 +63,20 @@ class Tests(unittest.TestCase):
         with patch.dict(sys.modules,{"torch":bad_torch}):
             with self.assertRaises(AssertionError):native_render_factory(device="cuda:0")
             self.assertNotIn("sapien",sys.modules)
+    def test_preserved_actual_native_argv(self):
+        import json
+        from pathlib import Path
+        p=Path("/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261021T2000Z-live-runtime-after-interruption.json")
+        data=json.loads(p.read_text());seen=0
+        for row in data["checks"]:
+            for proc in row["processes"]:
+                if proc["role"]=="benchmark":
+                    guard(ENV,proc["argv"][2:]);seen+=1
+        self.assertGreater(seen,0)
+    def test_non_native_overrides_rejected(self):
+        for flag,value in [("--seed","1"),("--policy_name","other"),("--task_config","custom")]:
+            args=list(ARGS);args[args.index(flag)+1]=value
+            with self.assertRaises(AssertionError):guard(ENV,args)
     def test_factory_cuda_before_sapien(self):
         import ast
         import inspect

@@ -1,0 +1,12 @@
+{
+  "runtime": "/home/zifanz4/openwam-runtime",
+  "state_dir": "/home/zifanz4/.local/state/openwam-selfcheck",
+  "worktree": "/home/zifanz4/openwam-selfcheck-bot",
+  "codex_binary": "/home/zifanz4/.nvm/versions/node/v24.19.0/bin/codex",
+  "job_prefixes": ["ex8"],
+  "job_experiments": {"ex8a-native-official-pilot": "ex8-a_officialrepro_1021"},
+  "recoveries": {"ex8a-native-official-pilot": "ex8b-native-candidate-recovery"},
+  "stall_seconds": 1800,
+  "agent_timeout_seconds": 600,
+  "agent_min_interval_seconds": 850
+}

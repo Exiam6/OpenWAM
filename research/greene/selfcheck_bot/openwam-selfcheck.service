@@ -1,0 +1,20 @@
+[Unit]
+Description=OpenWAM 15-minute research self-check and bounded failure takeover
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/zifanz4/openwam-selfcheck-bot
+ExecStart=/usr/bin/python3 /home/zifanz4/openwam-selfcheck-bot/research/greene/selfcheck_bot/bot.py
+Environment=PATH=/home/zifanz4/.nvm/versions/node/v24.19.0/bin:/home/zifanz4/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=CUDA_VISIBLE_DEVICES=
+Environment=OMP_NUM_THREADS=2
+Environment=OPENBLAS_NUM_THREADS=2
+UMask=0077
+Nice=10
+TimeoutStartSec=13min
+TimeoutStopSec=20
+KillMode=control-group
+StandardOutput=append:/home/zifanz4/.local/state/openwam-selfcheck/service.log
+StandardError=append:/home/zifanz4/.local/state/openwam-selfcheck/service.log

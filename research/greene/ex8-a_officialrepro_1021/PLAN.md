@@ -1,0 +1,21 @@
+# Native released-checkpoint reproduction
+
+Question: does the released OpenWAM-Alpha-Sim-RoboTwin-Full checkpoint reproduce the authors' RoboTwin2.0-Full scores when served and evaluated with the official native recipe?
+
+Priority: the user explicitly requested official reproduction before representation comparisons on 2026-10-21. This is an evaluation reproduction, not retraining the foundation model and not an encoder ablation. Defer unclaimed ancillary jobs; retain all earlier outcomes and running attempts.
+
+Reference: OpenWAM main 782e3133f674449e2986754cfc5f7c4e204835a2; RoboTwin 0aeea2d669c0f8516f4d5785f0aa33ba812c14b4; released RoboTwin-Full checkpoint_step_118655.safetensors. Published targets: clean 93.74%, randomized 93.46%, mean 93.60%. Source: benchmarks/robotwin/README.md. Previous local diagnostic is not a trusted reproduction because fallback, inference settings and scene selection differed.
+
+Hypothesis: native released inference and evaluation will recover the published success range. Competing explanations for a gap are environment/planner differences, incorrect action/observation mapping, numerical implementation differences and missing assets. No representation-superiority conclusion follows from this reproduction alone.
+
+Held fixed: official checkpoint and normalization hashes; original config; 10 synchronous denoising steps; DiT cache enabled (0.99, max_skips 3); compile enabled; native full action horizon; native seed 0, unseen instructions, candidate screening and per-task step limits; clean and randomized task configs; native cuRobo with fallback disabled. Only asset-path relocation and optional native debug observation recording are allowed. Record exact software and hardware. Local benchmark torch 2.7.0+cu128 differs from documented 2.4.1 on Blackwell; this remains a disclosed compatibility difference, not an exact software replication.
+
+Stages: L0 verify code, assets, configuration and hashes on CPU. L1/L2/L3 use fixed adjust_bottle, handover_block, place_object_basket, in clean then randomized environments, five accepted episodes per task/mode. First request and first episode are the technical gate. Stop on a broken transport, absent planner, NaN/action shape mismatch, compilation failure, or simulator error; do not hide errors through fallback. Require at least one clean success among the fixed pilot tasks before full scaling. Report every pilot failure. Pilot scores are diagnostics and do not replace full-suite results. Do not use a capped run's _result.txt denominator (upstream writes against 100); parse native success-count logs and validate the actual episode count.
+
+L1-L3 budget: one bounded GPU allocation, at most 10,800 seconds, deadline 2026-10-22T15:00:00Z. Server readiness at most 1,800 seconds; total bounded by allocation and protocol. Resource interruption retains partial evidence. No automatic retry.
+
+Full endpoint after readiness: 50 official tasks × 100 accepted episodes × 2 conditions = 10,000 scored episodes. Measure pilot throughput first; freeze a separate L4 allocation manifest before dispatch. Initial full-run planning ceiling 200 GPU hours, 7 calendar days; if projected cost exceeds it, report the estimate rather than silently expanding the budget. Full-run stages must fit the user's GPU availability policy. Full scores are based only on complete endpoint rows; do not promote pilot subsets to full reproduction.
+
+Criterion fixed before native results: practical aggregate agreement requires absolute differences <=2 percentage points for both clean and randomized and their mean, with complete 50-task coverage and no invalid episodes. Report per-task rates, macro rates, differences from paper and task-bootstrap intervals; the tolerance is a local operational criterion, not the authors' stated reproducibility margin. A smaller subset or incomplete run remains undecided. A gap triggers diagnosis before any representation comparison.
+
+Outputs: immutable code/config/asset provenance; resolved native commands; server/client logs; native episode videos; raw three-camera debug images with state/action records; missing and failed attempts; measured stage cost and a full-suite manifest. External whole-robot recording is absent in the native renderer and must be disclosed. No policy training happens in this study.

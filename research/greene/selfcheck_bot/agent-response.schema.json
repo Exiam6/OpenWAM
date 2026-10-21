@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "advanced",
+        "waiting_for_gpu",
+        "healthy",
+        "needs_user",
+        "failed"
+      ]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_step": {
+      "type": "string"
+    },
+    "decision_basis": {
+      "type": "string",
+      "enum": [
+        "none",
+        "explicit_user_constraint",
+        "automatic_approval_rejection",
+        "missing_credentials",
+        "external_dependency"
+      ]
+    },
+    "decision_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "status",
+    "summary",
+    "actions",
+    "evidence",
+    "next_step",
+    "decision_basis",
+    "decision_evidence"
+  ],
+  "additionalProperties": false
+}

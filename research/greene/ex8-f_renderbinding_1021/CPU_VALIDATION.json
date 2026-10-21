@@ -1,0 +1,35 @@
+{
+  "time": "2026-10-21T20:33:21.854964+00:00",
+  "tests_passed": 19,
+  "tests": "test_alternate_argv (test_adapter.Tests.test_alternate_argv) ... ok\ntest_bad_gpu_assignments (test_adapter.Tests.test_bad_gpu_assignments) ... ok\ntest_contaminated_overrides (test_adapter.Tests.test_contaminated_overrides) ... ok\ntest_factory_cuda_before_sapien (test_adapter.Tests.test_factory_cuda_before_sapien) ... ok\ntest_missing_dispatch_allocation (test_adapter.Tests.test_missing_dispatch_allocation) ... ok\ntest_native_exception_propagates (test_adapter.Tests.test_native_exception_propagates) ... ok\ntest_native_order_and_restoration (test_adapter.Tests.test_native_order_and_restoration) ... ok\ntest_non_native_overrides_rejected (test_adapter.Tests.test_non_native_overrides_rejected) ... ok\ntest_pci_identity (test_adapter.Tests.test_pci_identity) ... ok\ntest_preserved_actual_native_argv (test_adapter.Tests.test_preserved_actual_native_argv) ... ok\ntest_prewarm_failure_never_imports_renderer (test_adapter.Tests.test_prewarm_failure_never_imports_renderer) ... ok\ntest_swallowed_prewarm_failure_cannot_import_sapien (test_adapter.Tests.test_swallowed_prewarm_failure_cannot_import_sapien) ... ok\ntest_unregistered_probe_cannot_import_gpu (test_adapter.Tests.test_unregistered_probe_cannot_import_gpu) ... ok\ntest_wrong_device_fail_closed_and_restore (test_adapter.Tests.test_wrong_device_fail_closed_and_restore) ... ok\ntest_round_occupied_time_up (test_registration.Safety.test_round_occupied_time_up) ... ok\ntest_terminal_peers_clear (test_registration.Safety.test_terminal_peers_clear) ... ok\ntest_uncertain_peer_blocks (test_registration.Safety.test_uncertain_peer_blocks) ... ok\ntest_unfinished_or_nonresource_rejected (test_registration.Safety.test_unfinished_or_nonresource_rejected) ... ok\ntest_unrelated_job_not_native_peer (test_registration.Safety.test_unrelated_job_not_native_peer) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.017s\n\nOK\n",
+  "L0_static_passed": true,
+  "L1_CPU_passed": true,
+  "L1_GPU_passed": false,
+  "L2_L3_native_passed": false,
+  "new_gpu_hours": 0,
+  "probe_alarm_seconds": 90,
+  "worker_first_runtime_guard_seconds": 135,
+  "dispatcher_cap_seconds": 180,
+  "official_sync": {
+    "time": "2026-10-21T20:30:30.970299+00:00",
+    "checkout": "/home/zifanz4/openwam-official-main",
+    "official_url": "https://github.com/OpenWAM-Official/OpenWAM.git",
+    "command": [
+      "git",
+      "-C",
+      "/home/zifanz4/openwam-official-main",
+      "pull",
+      "--ff-only",
+      "origin",
+      "main"
+    ],
+    "passed": true,
+    "before": "782e3133f674449e2986754cfc5f7c4e204835a2",
+    "output": "From https://github.com/OpenWAM-Official/OpenWAM\n * branch              main       -> FETCH_HEAD\nAlready up to date.",
+    "after": "782e3133f674449e2986754cfc5f7c4e204835a2",
+    "changed_files": [],
+    "source_date": "2026-10-21T12:55:20+08:00",
+    "note": "Official source synchronized. Frozen experiment worktrees are not merged or rebased. New scientific runtimes require a recorded compatibility check."
+  },
+  "scientific_scope": "Renderer-only; no scored episodes; full endpoint unvalidated"
+}

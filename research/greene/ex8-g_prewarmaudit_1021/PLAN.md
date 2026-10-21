@@ -1,0 +1,19 @@
+# ex8-g_prewarmaudit_1021 — native prewarm environment diagnostic
+
+Question: with the exact native evaluator build-tool environment restored, does native Curobo prewarm succeed, and at which initialization phase is a peer GPU context first observed?
+
+Baseline: failed ex8-f renderer probe, frozen source b387ffc263f621d13fe46e3dc22b0c7af45c5400. Preserved result has assigned/default PCI 0000:07:00.0 but own PID3757142 on peer GPU2 with8MiB graphics context; prewarm log also has undefined Curobo extension symbol followed by Ninja-not-found. The peer cause is unresolved. Explicit renderer priming did not satisfy isolation. ex8-f is never retried or edited.
+
+Hypothesis: restoring the already used ex8-d client PATH/CUDA_HOME/CPATH/architecture build settings makes native prewarm actually succeed. Competing explanations: incompatible extension cannot rebuild, or peer Vulkan context remains even when prewarm succeeds. Per-phase passive samples localize earliest observed peer context; they do not establish exact sub-call causality or absence between samples.
+
+Single compatibility correction: probe prewarm environment → exact frozen ex8-d native client build environment, with this attempt's separate writable extension/tmp cache. No package installation, native planner/inference/scene/physics/checkpoint changes. Diagnostic instrumentation requires the upstream prewarm success message and no failure message before SAPIEN. Sample all8 cards before prewarm and after prewarm, import, explicit RenderSystem, Engine, SapienRenderer, default scene, >=3 complete samples per boundary. Stop at first peer or monitor error. No tasks, policy server, videos or scored episodes.
+
+Held fixed: official782e3133f674449e2986754cfc5f7c4e204835a2, ex8-f adapter and CUDA UUID admission, installed SAPIEN3.0.0b1, native wrapper and constructors, GPU idle30min and permitted windows. Current source is synchronized, not an upgrade of previous frozen experiments. CUDA/Curobo numerical semantics remain unchanged. No inference optimizations disabled.
+
+Metric: native prewarm success; earliest phase of own peer context; explicit/default scene PCI; all-card samples. Prediction: build path resolves Ninja; peer isolation remains uncertain. Pass requires successful native prewarm, >=3 complete samples at every boundary, assigned context observed, no peer, both PCI matching and terminal worker success. Any failure is retained and cannot release97 held jobs. This zero-episode diagnostic cannot pass native L2/L3 or full reproduction.
+
+L0: diff and exact source/environment/hash checks. L1 CPU: swallowed/silent/mixed prewarm failures fail closed, original exceptions retained, original adapter tests and job validation. GPU dispatch is only through existing controller with one unique claim and no active/uncertain native work. No blind retries. Remaining native L2/L3 and changed-runner full recovery require separate bounded registrations; old preparation conditional on ex8-f passing is now unsatisfied.
+
+Budget:300 occupied seconds including startup/build/monitor/cleanup;210s child alarm,230s launcher timeout within dispatcher255s guard. Deadline unchanged2026-10-28T18:20:27.005560+00:00. Before registration recompute sum of rounded terminal ex8-d/e/f worker occupancy +97 held job caps +18749s conditional blocks reserve +300s new cap under280GPUh. Preserve every original cap; any subsequent validation must fit remaining headroom. New probe is not yet a scientific result.
+
+Stop: any global/job pause, stale inventory, source drift, technical prewarm failure, peer context, bad PCI, native peer claim, incomplete samples, deadline/cap or budget excess. Stop only own job. Keep failed original23 partial episodes excluded and all scientific identities intact. No external publication or uploads. Outputs: frozen protocol/local registry, prepared dispatcher job, phase-tagged all-context evidence and retained stdout/error.

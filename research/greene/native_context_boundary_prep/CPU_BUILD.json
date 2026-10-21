@@ -1,0 +1,43 @@
+{
+  "preparation_only": true,
+  "scientific_attempt_registered": false,
+  "GPU_dispatch_allowed": false,
+  "build": {
+    "command": [
+      "g++",
+      "-std=c++20",
+      "-shared",
+      "-fPIC",
+      "-D_GLIBCXX_USE_CXX11_ABI=0",
+      "-I/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien/include",
+      "/home/zifanz4/openwam-context-boundary-prep/research/greene/native_context_boundary_prep/context_boundary.cpp",
+      "-L/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien.libs",
+      "-Wl,-rpath,/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien.libs",
+      "-Wl,-z,defs",
+      "-lsapien",
+      "-lsvulkan2",
+      "-o",
+      "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261021T2230Z/libcontext_boundary.so"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "cpu_only": true,
+    "library_loaded": false,
+    "gpu_executed": false
+  },
+  "shared_object_sha256": "57f61fedb620424ebc91ebc9e3935d8691575b65086885e18f9d50c527e31c2b",
+  "sources": {
+    "/home/zifanz4/openwam-context-boundary-prep/research/greene/native_context_boundary_prep/context_boundary.cpp": "8bf220b4c0e14079a922cec26baefd0c5a67be5f77c7ec313ce8757723daa25e",
+    "/home/zifanz4/openwam-context-boundary-prep/research/greene/native_context_boundary_prep/DRAFT_PLAN.md": "870ec5f049c27e916c073ac6f6b7ce0412be3284e46d9a03eae7a3352eac5bb6",
+    "/home/zifanz4/openwam-context-boundary-prep/research/greene/native_context_boundary_prep/audit_boundary.py": "616d662229a57137f934f7a5341ddab4c3b484c0a0e359396862f474a1e81b3b",
+    "/home/zifanz4/openwam-context-boundary-prep/research/greene/native_context_boundary_prep/svulkan-src-core-instance.cpp": "e5b14de071837cd47b62feaefc07f736d50ce5c986ce0e8dd473a197c6f57e89",
+    "/home/zifanz4/openwam-context-boundary-prep/research/greene/native_context_boundary_prep/svulkan-src-core-context.cpp": "1c29f42e988ffed9ec9e56a0f33f08e637c9e0f12a13bb84c629abb99b0d17bb",
+    "/home/zifanz4/openwam-context-boundary-prep/research/greene/native_context_boundary_prep/svulkan-src-core-device.cpp": "2a351f71d9c3608a1bb72205e15caa615b102a61e9ff49284adebd98b30bce78",
+    "/home/zifanz4/openwam-context-boundary-prep/research/greene/native_context_boundary_prep/svulkan-src-resource-manager.cpp": "f2ce2c4f05cd3f65a8111daeb6af0256146af79c87be209e821b74ac1af7be5e",
+    "/home/zifanz4/openwam-context-boundary-prep/research/greene/native_context_boundary_prep/sapien-src-sapien_renderer-sapien_renderer_system.cpp": "951a35dd4837db7eaf43d0fe5c60fb9610a775ad1c6c9a255d97c0d467c1810a"
+  },
+  "candidate_SAPIEN_revision": "7809345cd391436ef789234b31eec3f8163f9a9a",
+  "candidate_svulkan_revision": "d764f627e784bcd4fc5a6271d211bea6744270b4",
+  "exact_binary_revision_proven": false
+}

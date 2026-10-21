@@ -1,0 +1,454 @@
+{
+  "kind": "CPU_ONLY_CONDITIONAL_ROW_RECOVERY_PREPARATION_NOT_REGISTERED",
+  "created": "2026-10-21T20:06:37.215232+00:00",
+  "dispatch_allowed": false,
+  "key": "demo_clean-blocks_ranking_rgb",
+  "planned_episodes": 100,
+  "same_native_row": {
+    "key": "demo_clean-blocks_ranking_rgb",
+    "task": "blocks_ranking_rgb",
+    "mode": "demo_clean",
+    "episodes": 100,
+    "seed": 0,
+    "native_step_limit": 1200,
+    "max_seconds": 18749,
+    "allocation_basis": "Unmeasured task; residual pool proportional to native step limit"
+  },
+  "original_failed_worker": "/home/zifanz4/openwam-runtime/nightly-gpu/runs/ex8d-full-002-blocks-ranking-rgb/result.json",
+  "original_failed_row": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-blocks_ranking_rgb/result.json",
+  "original_failed_episodes_excluded": 0,
+  "existing_adjust_bottle_recovery_unchanged": true,
+  "original_caps_unchanged": true,
+  "replacement_cap_seconds": 18749,
+  "additional_failed_usage_seconds_rounded_up": 268,
+  "existing_combined_reserved_seconds": 1007528,
+  "proposed_combined_reserved_seconds": 1007796,
+  "proposed_combined_reserved_gpu_hours": 279.9433333333333,
+  "unchanged_ceiling_gpu_hours": 280,
+  "remaining_headroom_seconds": 204,
+  "deadline": "2026-10-28T18:20:27.005560+00:00",
+  "conditional_selector": [
+    {
+      "key": "demo_clean-adjust_bottle",
+      "result": "/home/zifanz4/openwam-runtime/ex8-e_rowrecovery_1021/runs/demo_clean-adjust_bottle/result.json"
+    },
+    {
+      "key": "demo_clean-beat_block_hammer",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-beat_block_hammer/result.json"
+    },
+    {
+      "key": "demo_clean-blocks_ranking_rgb",
+      "result": "UNFROZEN_NEW_RECOVERY_RUNTIME/runs/demo_clean-blocks_ranking_rgb/result.json"
+    },
+    {
+      "key": "demo_clean-blocks_ranking_size",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-blocks_ranking_size/result.json"
+    },
+    {
+      "key": "demo_clean-click_alarmclock",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-click_alarmclock/result.json"
+    },
+    {
+      "key": "demo_clean-click_bell",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-click_bell/result.json"
+    },
+    {
+      "key": "demo_clean-dump_bin_bigbin",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-dump_bin_bigbin/result.json"
+    },
+    {
+      "key": "demo_clean-grab_roller",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-grab_roller/result.json"
+    },
+    {
+      "key": "demo_clean-handover_block",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-handover_block/result.json"
+    },
+    {
+      "key": "demo_clean-handover_mic",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-handover_mic/result.json"
+    },
+    {
+      "key": "demo_clean-hanging_mug",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-hanging_mug/result.json"
+    },
+    {
+      "key": "demo_clean-lift_pot",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-lift_pot/result.json"
+    },
+    {
+      "key": "demo_clean-move_can_pot",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-move_can_pot/result.json"
+    },
+    {
+      "key": "demo_clean-move_pillbottle_pad",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-move_pillbottle_pad/result.json"
+    },
+    {
+      "key": "demo_clean-move_playingcard_away",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-move_playingcard_away/result.json"
+    },
+    {
+      "key": "demo_clean-move_stapler_pad",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-move_stapler_pad/result.json"
+    },
+    {
+      "key": "demo_clean-open_laptop",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-open_laptop/result.json"
+    },
+    {
+      "key": "demo_clean-open_microwave",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-open_microwave/result.json"
+    },
+    {
+      "key": "demo_clean-pick_diverse_bottles",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-pick_diverse_bottles/result.json"
+    },
+    {
+      "key": "demo_clean-pick_dual_bottles",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-pick_dual_bottles/result.json"
+    },
+    {
+      "key": "demo_clean-place_a2b_left",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-place_a2b_left/result.json"
+    },
+    {
+      "key": "demo_clean-place_a2b_right",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-place_a2b_right/result.json"
+    },
+    {
+      "key": "demo_clean-place_bread_basket",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-place_bread_basket/result.json"
+    },
+    {
+      "key": "demo_clean-place_bread_skillet",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-place_bread_skillet/result.json"
+    },
+    {
+      "key": "demo_clean-place_burger_fries",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-place_burger_fries/result.json"
+    },
+    {
+      "key": "demo_clean-place_can_basket",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-place_can_basket/result.json"
+    },
+    {
+      "key": "demo_clean-place_cans_plasticbox",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-place_cans_plasticbox/result.json"
+    },
+    {
+      "key": "demo_clean-place_container_plate",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-place_container_plate/result.json"
+    },
+    {
+      "key": "demo_clean-place_dual_shoes",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-place_dual_shoes/result.json"
+    },
+    {
+      "key": "demo_clean-place_empty_cup",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-place_empty_cup/result.json"
+    },
+    {
+      "key": "demo_clean-place_fan",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-place_fan/result.json"
+    },
+    {
+      "key": "demo_clean-place_mouse_pad",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-place_mouse_pad/result.json"
+    },
+    {
+      "key": "demo_clean-place_object_basket",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-place_object_basket/result.json"
+    },
+    {
+      "key": "demo_clean-place_object_scale",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-place_object_scale/result.json"
+    },
+    {
+      "key": "demo_clean-place_object_stand",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-place_object_stand/result.json"
+    },
+    {
+      "key": "demo_clean-place_phone_stand",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-place_phone_stand/result.json"
+    },
+    {
+      "key": "demo_clean-place_shoe",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-place_shoe/result.json"
+    },
+    {
+      "key": "demo_clean-press_stapler",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-press_stapler/result.json"
+    },
+    {
+      "key": "demo_clean-put_bottles_dustbin",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-put_bottles_dustbin/result.json"
+    },
+    {
+      "key": "demo_clean-put_object_cabinet",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-put_object_cabinet/result.json"
+    },
+    {
+      "key": "demo_clean-rotate_qrcode",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-rotate_qrcode/result.json"
+    },
+    {
+      "key": "demo_clean-scan_object",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-scan_object/result.json"
+    },
+    {
+      "key": "demo_clean-shake_bottle_horizontally",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-shake_bottle_horizontally/result.json"
+    },
+    {
+      "key": "demo_clean-shake_bottle",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-shake_bottle/result.json"
+    },
+    {
+      "key": "demo_clean-stack_blocks_three",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-stack_blocks_three/result.json"
+    },
+    {
+      "key": "demo_clean-stack_blocks_two",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-stack_blocks_two/result.json"
+    },
+    {
+      "key": "demo_clean-stack_bowls_three",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-stack_bowls_three/result.json"
+    },
+    {
+      "key": "demo_clean-stack_bowls_two",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-stack_bowls_two/result.json"
+    },
+    {
+      "key": "demo_clean-stamp_seal",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-stamp_seal/result.json"
+    },
+    {
+      "key": "demo_clean-turn_switch",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-turn_switch/result.json"
+    },
+    {
+      "key": "demo_randomized-adjust_bottle",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-adjust_bottle/result.json"
+    },
+    {
+      "key": "demo_randomized-beat_block_hammer",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-beat_block_hammer/result.json"
+    },
+    {
+      "key": "demo_randomized-blocks_ranking_rgb",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-blocks_ranking_rgb/result.json"
+    },
+    {
+      "key": "demo_randomized-blocks_ranking_size",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-blocks_ranking_size/result.json"
+    },
+    {
+      "key": "demo_randomized-click_alarmclock",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-click_alarmclock/result.json"
+    },
+    {
+      "key": "demo_randomized-click_bell",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-click_bell/result.json"
+    },
+    {
+      "key": "demo_randomized-dump_bin_bigbin",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-dump_bin_bigbin/result.json"
+    },
+    {
+      "key": "demo_randomized-grab_roller",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-grab_roller/result.json"
+    },
+    {
+      "key": "demo_randomized-handover_block",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-handover_block/result.json"
+    },
+    {
+      "key": "demo_randomized-handover_mic",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-handover_mic/result.json"
+    },
+    {
+      "key": "demo_randomized-hanging_mug",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-hanging_mug/result.json"
+    },
+    {
+      "key": "demo_randomized-lift_pot",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-lift_pot/result.json"
+    },
+    {
+      "key": "demo_randomized-move_can_pot",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-move_can_pot/result.json"
+    },
+    {
+      "key": "demo_randomized-move_pillbottle_pad",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-move_pillbottle_pad/result.json"
+    },
+    {
+      "key": "demo_randomized-move_playingcard_away",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-move_playingcard_away/result.json"
+    },
+    {
+      "key": "demo_randomized-move_stapler_pad",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-move_stapler_pad/result.json"
+    },
+    {
+      "key": "demo_randomized-open_laptop",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-open_laptop/result.json"
+    },
+    {
+      "key": "demo_randomized-open_microwave",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-open_microwave/result.json"
+    },
+    {
+      "key": "demo_randomized-pick_diverse_bottles",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-pick_diverse_bottles/result.json"
+    },
+    {
+      "key": "demo_randomized-pick_dual_bottles",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-pick_dual_bottles/result.json"
+    },
+    {
+      "key": "demo_randomized-place_a2b_left",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-place_a2b_left/result.json"
+    },
+    {
+      "key": "demo_randomized-place_a2b_right",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-place_a2b_right/result.json"
+    },
+    {
+      "key": "demo_randomized-place_bread_basket",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-place_bread_basket/result.json"
+    },
+    {
+      "key": "demo_randomized-place_bread_skillet",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-place_bread_skillet/result.json"
+    },
+    {
+      "key": "demo_randomized-place_burger_fries",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-place_burger_fries/result.json"
+    },
+    {
+      "key": "demo_randomized-place_can_basket",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-place_can_basket/result.json"
+    },
+    {
+      "key": "demo_randomized-place_cans_plasticbox",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-place_cans_plasticbox/result.json"
+    },
+    {
+      "key": "demo_randomized-place_container_plate",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-place_container_plate/result.json"
+    },
+    {
+      "key": "demo_randomized-place_dual_shoes",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-place_dual_shoes/result.json"
+    },
+    {
+      "key": "demo_randomized-place_empty_cup",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-place_empty_cup/result.json"
+    },
+    {
+      "key": "demo_randomized-place_fan",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-place_fan/result.json"
+    },
+    {
+      "key": "demo_randomized-place_mouse_pad",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-place_mouse_pad/result.json"
+    },
+    {
+      "key": "demo_randomized-place_object_basket",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-place_object_basket/result.json"
+    },
+    {
+      "key": "demo_randomized-place_object_scale",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-place_object_scale/result.json"
+    },
+    {
+      "key": "demo_randomized-place_object_stand",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-place_object_stand/result.json"
+    },
+    {
+      "key": "demo_randomized-place_phone_stand",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-place_phone_stand/result.json"
+    },
+    {
+      "key": "demo_randomized-place_shoe",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-place_shoe/result.json"
+    },
+    {
+      "key": "demo_randomized-press_stapler",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-press_stapler/result.json"
+    },
+    {
+      "key": "demo_randomized-put_bottles_dustbin",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-put_bottles_dustbin/result.json"
+    },
+    {
+      "key": "demo_randomized-put_object_cabinet",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-put_object_cabinet/result.json"
+    },
+    {
+      "key": "demo_randomized-rotate_qrcode",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-rotate_qrcode/result.json"
+    },
+    {
+      "key": "demo_randomized-scan_object",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-scan_object/result.json"
+    },
+    {
+      "key": "demo_randomized-shake_bottle_horizontally",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-shake_bottle_horizontally/result.json"
+    },
+    {
+      "key": "demo_randomized-shake_bottle",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-shake_bottle/result.json"
+    },
+    {
+      "key": "demo_randomized-stack_blocks_three",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-stack_blocks_three/result.json"
+    },
+    {
+      "key": "demo_randomized-stack_blocks_two",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-stack_blocks_two/result.json"
+    },
+    {
+      "key": "demo_randomized-stack_bowls_three",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-stack_bowls_three/result.json"
+    },
+    {
+      "key": "demo_randomized-stack_bowls_two",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-stack_bowls_two/result.json"
+    },
+    {
+      "key": "demo_randomized-stamp_seal",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-stamp_seal/result.json"
+    },
+    {
+      "key": "demo_randomized-turn_switch",
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_randomized-turn_switch/result.json"
+    }
+  ],
+  "excluded_attempts": [
+    {
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-adjust_bottle/result.json",
+      "reason": "Resource interruption; all23 partial episodes excluded from complete endpoint",
+      "episodes": 23
+    },
+    {
+      "result": "/home/zifanz4/openwam-runtime/ex8-d_nativefull_1021/runs/demo_clean-blocks_ranking_rgb/result.json",
+      "reason": "Own peer graphics context triggered resource guard; zero accepted episodes",
+      "episodes": 0
+    }
+  ],
+  "blocking_gates": [
+    "Diagnose and validate prevention of peer graphics contexts; do not bypass worker guard",
+    "Freeze an isolated one-row source/branch/plan and actual new runtime path before dispatch",
+    "Prove source/seed/checkpoint/native inference/scene protocol unchanged or explicitly register and validate any hardware-binding intervention",
+    "Update separate composite auditor to fixed D98/E1/new1 selection while preserving both failed originals",
+    "CPU accounting/hash tests and dispatcher-only L1 resource validation before native row dispatch"
+  ],
+  "authorization_basis": "Existing official reproduction authorization; no new user approval requested",
+  "full_endpoint_complete": false,
+  "full_paper_reproduced": false
+}

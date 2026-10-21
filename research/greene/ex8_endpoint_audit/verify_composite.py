@@ -7,6 +7,7 @@ import json
 import pathlib
 import random
 import re
+from worker_completion import confirm_rows, select_completed
 
 R = pathlib.Path('/home/zifanz4/openwam-runtime')
 D = R / 'ex8-d_nativefull_1021'
@@ -124,6 +125,9 @@ def audit():
                   audit_kind='CPU_ONLY_FROZEN_COMPOSITE_CROSSCHECK',
                   software_difference='Benchmark torch2.7.0+cu128 vs documented2.4.1; Blackwell hardware',
                   full_paper_reproduced=False)
+    confirmed, worker_checks = confirm_rows(result['per_task'], R)
+    select_completed(result, confirmed, worker_checks)
+    result['worker_completion_source_sha256'] = digest(pathlib.Path(__file__).with_name('worker_completion.py'))
     if result['full_endpoint_complete']:
         result.update(statistics(result['per_task'], original['full_tasks']))
     else:

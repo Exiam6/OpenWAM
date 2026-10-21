@@ -32,3 +32,14 @@ must fit it before dispatch. A larger proposal is for user review only. Stop
 before L4 when over budget or readiness incomplete; retain failures, no retries.
 Paper targets remain 93.74/93.46/93.60%, local tolerance 2 percentage points;
 complete suite required. No RAE superiority claim before reproduction.
+
+## CPU continuation, 2026-10-21 17:46 UTC
+
+Recovery is now complete. Before L4 registration, independently audit all six
+complete groups against their actual client logs, action/state/camera records,
+video decodes and immutable input manifests. Preserve previous CPU outputs;
+write a dated audit and conditional (non-dispatchable) full manifest. Review
+sampled recovery frames with explicit visual limitations. Recompute measured
+cost and a per-row allocation that fits the observed pilot times, including
+runner shutdown guard. No budget/deadline expansion or GPU experiment is
+registered or launched by this CPU continuation.

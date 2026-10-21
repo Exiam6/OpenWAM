@@ -1,0 +1,8 @@
+{
+  "checked": "2026-10-21T22:48:09.961594+00:00",
+  "new_diagnostic_checks": 29,
+  "original_full_runner_classifier_checks": 21,
+  "passed": true,
+  "log": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261021T2245Z/cpu-validation.json",
+  "GPU_executed": false
+}

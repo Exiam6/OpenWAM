@@ -1,0 +1,42 @@
+{
+  "preparation_only": true,
+  "scientific_attempt_registered": false,
+  "GPU_dispatch_allowed": false,
+  "source_commit": "0a56ba2429e07f7beb002e617dc4fce878cc55ec",
+  "official_commit": "782e3133f674449e2986754cfc5f7c4e204835a2",
+  "official_sync": "/home/zifanz4/openwam-runtime/official-sync/20261021T230024800227Z.json",
+  "exact_installed_binary_revision_proven": false,
+  "helper_build": {
+    "command": [
+      "g++",
+      "-std=c++20",
+      "-shared",
+      "-fPIC",
+      "-D_GLIBCXX_USE_CXX11_ABI=0",
+      "-I/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien/include",
+      "/home/zifanz4/openwam-context-substages-prep/research/greene/native_context_substages_prep/instance_boundary.cpp",
+      "-L/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien.libs",
+      "-Wl,-rpath,/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien.libs",
+      "-Wl,-z,defs",
+      "-lsapien",
+      "-lsvulkan2",
+      "-o",
+      "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261021T2300Z/libinstance_boundary.so"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "cpu_only": true,
+    "library_loaded": false,
+    "GPU_executed": false
+  },
+  "cpu_tests_passed": 60,
+  "endpoint_audit": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261021T2300Z/endpoint-audit.json",
+  "files": {
+    "/home/zifanz4/openwam-context-substages-prep/research/greene/native_context_substages_prep/instance_boundary.cpp": "4f9eb5529347c2c37e5f1844fec631081d0c8a2668af806a768cf831923b4345",
+    "/home/zifanz4/openwam-context-substages-prep/research/greene/native_context_substages_prep/DRAFT_PLAN.md": "cbf0935b19d3e100e4510f2467a3aed43d1b8b960ffef24512123dd8d89a2099",
+    "/home/zifanz4/openwam-context-substages-prep/research/greene/native_context_substages_prep/outcome.py": "203b5c332bd4a48addee711b81c0aaa05358fa69c0fb8cbddbbc6ea8e75e8bbf",
+    "/home/zifanz4/openwam-context-substages-prep/research/greene/native_context_substages_prep/test_outcome.py": "593952fa6e1194eb027274d08eff4d53157a5cb1c3bc59dd02fe723251a0fe9e",
+    "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261021T2300Z/libinstance_boundary.so": "f09203d6d7db4f34bec1df774441a68bc13710d7e717b11519dcc5b332e83557"
+  }
+}

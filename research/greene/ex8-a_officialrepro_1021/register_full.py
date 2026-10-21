@@ -15,10 +15,11 @@ def main():
  pilot=read(ROOT/'pilot/result.json');assert pilot['readiness_passed']
  assert sum(g['successes'] for g in pilot['groups'] if g['mode']=='demo_clean')>0
  assert (ROOT/'independent-audit/first-episode-three-cameras.png').is_file()
+ visual=read(ROOT/'independent-audit/visual-review.json');assert visual['video_full_decode_passed'] and len(visual['cameras'])==3
  subprocess.run(['/usr/bin/python3','/home/zifanz4/openwam-vae-control/research/greene/scripts/sync_official.py'],check=True)
  base=read(ROOT/'protocol.json');sync=read(R/'official-sync/latest.json');assert sync['passed'] and sync['after']==base['official_sync']['after'],'Review new official source compatibility before registration'
  # The committed phase plan and orchestration source must exist before dispatch.
- tracked=['L4_PLAN.md','run_full.py','register_full.py','audit_native.py']
+ tracked=['L4_PLAN.md','run_full.py','register_full.py','audit_native.py','aggregate_full.py']
  for name in tracked:
   subprocess.run(['git','-C',str(SOURCE),'ls-files','--error-unmatch',str(SOURCE/name)],check=True,stdout=subprocess.DEVNULL)
   assert not subprocess.check_output(['git','-C',str(SOURCE),'diff','HEAD','--',str(SOURCE/name)],text=True)
@@ -47,5 +48,6 @@ def main():
   validate_job(job);assert not (R/'nightly-gpu/jobs'/f'{job["id"]}.json').exists();assert not (R/'nightly-gpu/claims'/f'{job["id"]}.json').exists()
  write(FULL/'registry.json',dict(stage='registered_L4',protocol_sha256=sha(FULL/'protocol.json'),jobs=jobs))
  for job in jobs:write(R/'nightly-gpu/jobs'/f'{job["id"]}.json',job)
+ subprocess.run(['systemd-run','--user','--collect','--unit','openwam-ex8a-full-audit','--property=RuntimeMaxSec=604800','/usr/bin/python3',str(FULL/'code/aggregate_full.py'),'--watch'],check=True)
  print(json.dumps(dict(registered=len(jobs),episodes=10000,reserved_gpu_hours=p['reserved_gpu_hours'])))
 if __name__=='__main__':main()

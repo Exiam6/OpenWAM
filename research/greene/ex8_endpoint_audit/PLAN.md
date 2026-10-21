@@ -25,3 +25,17 @@ native counts, outcome disagreement, missing/duplicate task coverage and paired
 bootstrap arithmetic before auditing live state. Outputs go only to self-check
 evidence, never to running/completed experiment directories. Every write checks
 global pause and registered pause paths. No upload or external communication.
+
+
+CPU audit addition, 2026-10-21T19:45 takeover (before execution):
+The frozen row result may become complete before its supervising worker has
+finished shutdown. Require successful final dispatcher claim AND worker, zero
+exit code, matching scientific identity/job/spec/command/GPU, qualified idle
+evidence and ordered finish timestamps before including a row. Pending worker
+cleanup remains pending; a failed worker remains failed even if row artifacts
+exist. Keep artifact completion distinct from dispatcher-confirmed completion.
+This is a read-only audit correction, no new scientific attempt, no changes to
+100-row selector, native inference, frozen runtimes, registered caps or controller.
+Test pending cleanup, worker failure, claim lag, identity mismatch, nonzero exit,
+hash mismatch and valid terminal completion on CPU fixtures before live audit.
+Output remains self-check evidence; no partial headline.

@@ -1,0 +1,102 @@
+{
+  "status": "research_design_not_registered_not_gpu_ready",
+  "user_request": "思考更加solide的contribution 怎么最严谨地证明raw dino有效",
+  "objective": "Identify whether, where, and why frozen Raw DINO improves closed-loop WAM control; permit null and negative conclusions.",
+  "candidate_contribution": "An experimentally supported boundary between information preservation, task-required geometric precision, and the utility of future-feature supervision at a fixed WAM budget. Novelty remains conditional on a broader literature comparison and positive independent evidence.",
+  "not_novel_by_itself": [
+    "Using DINO features for a robot world model",
+    "Replacing reconstruction-oriented VAE latents with DINO",
+    "Comparing current-feature conditioning with future-feature prediction",
+    "Adding an action-supervised representation bottleneck"
+  ],
+  "literature_checked": [
+    {"title": "DINO-WM", "url": "https://arxiv.org/abs/2411.04983", "overlap": "Planning through future DINO patch-feature prediction."},
+    {"title": "ReWAM", "url": "https://arxiv.org/html/2609.38163v1", "overlap": "Raw DINO versus Video-VAE; calibrated and compressed DINO; action-supervised bottlenecks; world-loss ablation. Its compact representations can outperform raw features, so raw-is-always-best is not a justified starting assumption."},
+    {"title": "What Visual Representations Do World Action Models Need?", "url": "https://arxiv.org/html/2610.13024v1", "overlap": "Representation and integration comparison; current-only, future-only and joint DINO configurations."},
+    {"title": "EgoWAM", "url": "https://arxiv.org/abs/2607.08436", "overlap": "Controlled world-target comparison for human-to-robot transfer."},
+    {"title": "Deep Reinforcement Learning at the Edge of the Statistical Precipice", "url": "https://arxiv.org/abs/2108.13264", "relevance": "Finite-training-run uncertainty, interval estimates, aggregate evaluation."}
+  ],
+  "current_evidence": {
+    "existing_tasks_raw_minus_vae_pp": 7.7777777778,
+    "registered_fixed_task_ci95_pp": [2.2222222222, 13.8888888889],
+    "positive_task": "adjust_bottle",
+    "other_two_task_differences_pp": [0, 0],
+    "raw_minus_compact_pp": 2.7777777778,
+    "raw_minus_compact_ci95_pp": [-3.3333333333, 11.1111111111],
+    "raw_trainable_parameters": 300936724,
+    "vae_and_compact_trainable_parameters": 295035604,
+    "transfer_readout": "/home/zifanz4/openwam-runtime/ex6-c_resourcerecovery_1020/transfer-status.json",
+    "transfer_verified_episodes_at_design": 131,
+    "transfer_complete_tasks": 6,
+    "complete_task_transfer_raw_successes": "1/30",
+    "complete_task_transfer_vae_successes": "1/30",
+    "complete_task_transfer_compact_successes": "0/30",
+    "limitation": "All existing outcomes are development evidence. Transfer checkpoints were trained only on the original three tasks; no broad zero-shot advantage is established. Missing outcomes are not failures."
+  },
+  "stage_1_independent_effect": {
+    "question": "Does Raw DINO improve task-macro success on a fixed, newly trained ten-task benchmark?",
+    "tasks": ["adjust_bottle", "handover_block", "place_object_basket", "click_bell", "press_stapler", "open_laptop", "pick_dual_bottles", "lift_pot", "stack_blocks_two", "place_bread_basket"],
+    "primary_contrast": "Raw DINO minus Wan VAE",
+    "training": "Both models train on the same ten-task demonstration corpus, with identical trajectories, splits, ordering, shared-parameter initialization and action pipeline. This is not a rerun of three-task checkpoints on seven unseen tasks.",
+    "splits": "Partition complete trajectories and object instances before cache construction. Train/dev/final-test scenes disjoint. Current pilot scenes are development-only. Fit all normalizers, PCA bases, reducers and probes using training data only.",
+    "fairness": [
+      "Same action head, backbone blocks, camera streams, image resolution, token grid, temporal sampling, language/proprioception and inference horizon",
+      "Same effective batch and demonstration exposure; equal validation tuning budget including latent normalization, world-loss weight and noise schedule",
+      "Predefine one final checkpoint rule without looking at final-test success",
+      "Report matched-update efficacy and a separately defined matched-compute comparison; do not claim both are identical by construction",
+      "Account for frozen encoder pretraining provenance and feature extraction cost; a comparison of pretrained encoders cannot isolate the pretraining objective from the pretraining corpus"
+    ],
+    "candidate_scale_not_power_validated": {"paired_training_seeds": 8, "scenes_per_task_per_seed": 50, "arms": 2, "primary_evaluation_episodes": 8000, "joint_multitask_training_runs": 16},
+    "power_gate": "Before registration, use separate development runs to simulate clustered paired effects across conservative variance and task-heterogeneity scenarios. Target at least 80% power for a prespecified 5pp alternative against zero, and verify type-I error. Eight seeds and fifty scenes are a planning example, not a guarantee of adequate power.",
+    "secondary_endpoints": ["Per-task and per-seed results", "Paired background/lighting perturbations on the same physical scene", "Sample-efficiency curves using nested 10/25/50/100 percent training subsets", "Peak GPU memory and measured end-to-end inference latency"],
+    "go_no_go": "If development readiness fails or final primary evidence is null, report the failure or limited scope. Do not select a better-looking subset of tasks and relabel it confirmatory."
+  },
+  "stage_2_information_identification": {
+    "question": "Is the apparent raw-feature advantage caused by losing task-relevant information during compression, rather than by a larger learned interface?",
+    "interventions": [
+      {"arm": "raw768", "transform": "Identity on the frozen normalized DINO representation"},
+      {"arm": "rank48_lift768", "transform": "Training-only PCA projection to 48 dimensions, lifted back through its fixed basis to 768 dimensions"},
+      {"arm": "rank192_lift768", "transform": "Same construction at rank 192"},
+      {"arm": "rank384_lift768", "transform": "Same construction at rank 384"},
+      {"arm": "random_subspace_controls", "transform": "Frozen orthogonal subspaces at matching ranks, with projection seeds fixed in advance"},
+      {"arm": "full_rank_rotation_control", "transform": "Fixed orthogonal change of basis that preserves information and Euclidean distances"},
+      {"arm": "native_compact_reference", "transform": "Existing frozen S-VAE48 route, kept as a separate practical compression baseline"}
+    ],
+    "common_interface": "All lifted interventions enter and predict 768 channels, with identical trainable tensor shapes, token counts, shared initialization and backbone. Train each policy with its assigned transform; test-time feature deletion alone is not adequate evidence.",
+    "normalization_and_loss": "Freeze transform order, centering/scaling, loss reduction and diffusion noise conventions using training/dev only. Report signal/noise variance and loss/gradient scales; equal channel count does not guarantee equal conditioning or effective SNR.",
+    "caveat": "Equal trainable parameter count does not equal equal effective functional capacity. Rank reduction also changes covariance and optimization. Multiple projection controls and controlled rescue are needed; no single rank ablation proves semantic causation.",
+    "diagnostics": "Fit matched-capacity probes for object-relative gripper position/orientation and contact transitions on disjoint episodes; evaluate on heldout objects/trajectories. Do not substitute frame-random splits or t-SNE plots for closed-loop evidence.",
+    "destroy_and_rescue": "Choose candidate action-relevant subspaces only on training/development data. Compare removing them versus rank- and norm-matched random subspaces, then restore the removed content without changing channel count. Retrain and evaluate on independent scenes. A rescue supports the specified information mechanism; it does not prove all alternatives false.",
+    "refutation": "If information-preserving or well-designed compact baselines match raw, abandon the claim that uncompressed 768D features are necessary. If only covariance or scale controls remove the gap, investigate optimization rather than claim lost control information."
+  },
+  "stage_3_world_supervision": {
+    "question": "Does future-feature supervision add value beyond a stronger current-observation representation?",
+    "factorial_design": "Current-observation encoder {VAE,DINO} crossed with future target {VAE,DINO}; add separately specified no-world-loss and genuine current-only baselines.",
+    "important_code_hazard": {
+      "file": "/home/zifanz4/openwam-runtime/ex5-a_vaebaseline_1018/corrected-engine-v1/openwam/model/architectures/base.py",
+      "finding": "training_loss constructs noisy ground-truth future video latents and performs joint forward before dropping the video loss when lambda_video==0. This flag alone is a no-world-loss ablation, not a current-only policy.",
+      "required_tests": ["For genuine current-only controls, changing future ground-truth frames while holding current observations and RNG fixed cannot change action predictions or action-loss gradients", "Verify current/future mask boundaries and equal train/deploy conditioning contracts", "Separate a training-supervision removal from a test-time modality deletion"]
+    },
+    "interpretation": "Report the interaction contrast directly with uncertainty. A significant DINO result and nonsignificant VAE result do not by themselves establish different world-supervision effects.",
+    "novelty_limit": "This conditioning-versus-prediction distinction already appears in prior WAM work; here it is a necessary identification check, not sufficient novelty."
+  },
+  "statistics": {
+    "primary_estimand": "Mean over the ten fixed tasks of paired Raw-minus-VAE success-rate differences, averaged over independently trained seed pairs and heldout scenes.",
+    "dependence": "One joint multitask training seed is a block across all tasks. Resample training-seed blocks and scene IDs within tasks while preserving model pairing and shared scene IDs across seeds. Do not treat all episodes or repeated policy-noise draws as independent training replicas.",
+    "scope": "Primary inference concerns the fixed ten-task suite. A task-resampling sensitivity analysis does not turn these hand-selected tasks into a random sample of all robotics tasks. Broad claims require an independent benchmark or heldout task families.",
+    "thresholds": "A 95% lower confidence bound above zero supports positive average effect in the declared scope. To claim an effect of at least 5pp, the lower bound itself must exceed 5pp. A point estimate above 5pp is insufficient for that stronger claim.",
+    "multiplicity": "One primary contrast and endpoint. Fix a small secondary contrast family and its Holm or simultaneous-interval procedure before final-test access; label unregistered analyses exploratory.",
+    "heterogeneity": "Report all task/seed effects, worst-task degradation and leave-one-task-out sensitivity. If removing adjust_bottle removes the gain, retain a task-specific conclusion.",
+    "missingness": "Retain every attempt. Recover only documented technical/resource interruptions under a bounded rule fixed before final outcomes. Report coverage and paired worst-case bounds when unresolved outcomes remain.",
+    "stopping": "Freeze training/evaluation budgets, sample counts, checkpoint selection and statistical analysis before accessing the final test. No repeated peeking until significance."
+  },
+  "priority": [
+    "Build the matched ten-task dataset and fresh splits, then validate training/evaluation contracts",
+    "Run a small development pilot to estimate variance, runtime and baseline learnability; do not inspect final-test outcomes",
+    "Confirm Raw-versus-VAE on the registered fixed suite",
+    "Use rank-lift and world-supervision controls to identify any surviving effect",
+    "Confirm the specified mechanism on independent task families or another benchmark before a broad contribution claim"
+  ],
+  "launch_gates": ["Matched ten-task corpus and feature caches", "Fresh heldout evaluation set", "Verified common architecture and feature interventions", "Baseline training convergence checks on development data", "Power and GPU-hour budget estimates", "Frozen preregistered contrasts and stopping rules"],
+  "gpu_jobs_registered": false
+}

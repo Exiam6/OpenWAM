@@ -7,9 +7,9 @@
 #include <stdexcept>
 #include <cstdio>
 namespace {
-std::shared_ptr<svulkan2::core::Instance> instance;
-std::shared_ptr<svulkan2::core::PhysicalDevice> physical;
-std::shared_ptr<svulkan2::core::Device> logical;
+std::shared_ptr<svulkan2::core::Instance> &instance=*new std::shared_ptr<svulkan2::core::Instance>;
+std::shared_ptr<svulkan2::core::PhysicalDevice> &physical=*new std::shared_ptr<svulkan2::core::PhysicalDevice>;
+std::shared_ptr<svulkan2::core::Device> &logical=*new std::shared_ptr<svulkan2::core::Device>;
 std::string error;
 int stage=0;
 }
@@ -45,7 +45,9 @@ extern "C" int instance_boundary_logical() {
  } catch(std::exception const &e) { error=e.what(); return -1; }
 }
 // Deliberately stops before Context::Create, avoiding duplicate logical devices.
-// Holding native shared_ptrs keeps sampled objects alive until process exit.
+// Heap-owned holders deliberately survive C++/Python teardown; the OS reclaims them.
+// This diagnostic-only lifetime choice avoids destructor-order ambiguity.
+// No scene, policy or CUDA/Vulkan default is changed; no cleanup result is measured.
 
 extern "C" const char *instance_boundary_selected() {
  static std::string selected;

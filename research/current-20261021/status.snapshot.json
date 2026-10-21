@@ -1,0 +1,134 @@
+{
+  "snapshot_time_utc": "2026-10-21T19:25:09.347037+00:00",
+  "snapshot_only": true,
+  "official_score_reproduced": false,
+  "priority": "Official released-checkpoint reproduction before RAE claims",
+  "official_targets_pct": {
+    "clean": 93.74,
+    "randomized": 93.46,
+    "mean": 93.6
+  },
+  "official_commit": "782e3133f674449e2986754cfc5f7c4e204835a2",
+  "robotwin_commit": "0aeea2d669c0f8516f4d5785f0aa33ba812c14b4",
+  "checkpoint_repo": "OpenWAM/OpenWAM-Alpha-Sim-RoboTwin-Full",
+  "checkpoint_source_path": "/home/zifanz4/openwam-runtime/ex4-h_officialcalibration_1017/checkpoint/checkpoint_step_118655.safetensors",
+  "checkpoint_sha256": "d07ff6f8cfb627ebf47313e65af38773fabcb3861d52fdc7c3bc5e7bee33f6fe",
+  "checkpoint_directory_bytes": 24835229433,
+  "phase_sources": {
+    "ex8-a_officialrepro_1021": "bee8370d7162b864e1ddf0c81ee24de180b8d2df",
+    "ex8-b_candidatefilter_1021": "7f1f7861f80bac24d368c48513408fe104bc35f2",
+    "ex8-d_nativefull_1021": "c6689da34daa701c7381df83eb7c766f057e8593",
+    "ex8-e_rowrecovery_1021": "cd7b4775e80d8c2e378c54ff9d9f8ca3e6b6613b"
+  },
+  "readiness": {
+    "episodes": 30,
+    "successes": 27,
+    "finite_20d_records": 7670,
+    "all_30_videos_decoded": true,
+    "original_failure_retained": true,
+    "original_partial_duplicates_excluded": 2
+  },
+  "full_status": {
+    "updated": "2026-10-21T19:24:43.685398+00:00",
+    "completed_task_mode_rows": 0,
+    "total_task_mode_rows": 100,
+    "scored_episodes": 0,
+    "failed": [
+      {
+        "key": "demo_clean-adjust_bottle",
+        "error": "RuntimeError('Resource interruption; retain partial attempt')",
+        "partial_episodes": 23
+      }
+    ],
+    "full_endpoint_complete": false,
+    "practical_agreement_passed": false,
+    "exact_published_numbers_matched": false,
+    "pilot_excluded": true
+  },
+  "current_rows": [
+    {
+      "key": "demo_clean-adjust_bottle",
+      "task": "adjust_bottle",
+      "mode": "demo_clean",
+      "episodes": 100,
+      "seed": 0,
+      "max_seconds": 9000,
+      "source_job_id": "ex8d-full-000-adjust-bottle-recovery",
+      "source_job_sha256": "4dd18ce518ccbacdd9e6d8a183b90306cd3e5afda530e2d412420670acb2ab1b",
+      "current_owner": "Shenlong source dispatcher",
+      "claim_status": "unclaimed_queued",
+      "eligible_for_transfer_at_snapshot": true,
+      "ownership_transferred": false,
+      "selected_attempt": "ex8-e_rowrecovery_1021",
+      "observed_episode_count": 0,
+      "observed_successes": 0,
+      "result_status": "not_started"
+    },
+    {
+      "key": "demo_clean-beat_block_hammer",
+      "task": "beat_block_hammer",
+      "mode": "demo_clean",
+      "episodes": 100,
+      "seed": 0,
+      "max_seconds": 6729,
+      "source_job_id": "ex8d-full-001-beat-block-hammer",
+      "source_job_sha256": "debc5dcdb9e398bfefb95a4a12d27966ae3b127d9c79a8c67546d2bc07fffa8a",
+      "current_owner": "Shenlong source dispatcher",
+      "claim_status": "running",
+      "eligible_for_transfer_at_snapshot": false,
+      "ownership_transferred": false,
+      "selected_attempt": "ex8-d_nativefull_1021",
+      "observed_episode_count": 90,
+      "observed_successes": 90,
+      "result_status": "native_evaluation"
+    }
+  ],
+  "cost": {
+    "full_planning_estimate_gpu_hours": 267.68176920992255,
+    "full_ceiling_gpu_hours": 280,
+    "combined_remaining_and_recovery_reservation_gpu_hours": 279.8688888888889,
+    "deadline_utc": "2026-10-28T18:20:27.005560+00:00",
+    "deadline_is_not_reset_on_migration": true
+  },
+  "additional_resources": {
+    "a100_count": 8,
+    "a100_memory_gb": null,
+    "h100_count": null,
+    "host_or_cluster": null,
+    "rendering_compatibility": "Not yet tested",
+    "ownership_transfer_done": false
+  },
+  "software": {
+    "policy": {
+      "torch": "2.7.0+cu128",
+      "transformers": "5.17.0",
+      "diffusers": "0.40.0",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "1.32.0",
+      "numpy": "2.2.6"
+    },
+    "benchmark": {
+      "python": "3.10",
+      "torch": "2.7.0+cu128",
+      "sapien": "3.0.0b1",
+      "warp-lang": "1.13.0",
+      "mplib": "0.2.1",
+      "numpy": "1.26.4"
+    },
+    "deviation": "Benchmark torch2.7.0 vs documented2.4.1 on source Blackwell; target adaptation needs its own verification"
+  },
+  "frozen_protocol_sha256": {
+    "ex8-a_officialrepro_1021": "44a564c62f6db851081157cdad9b78887ee48227ea8be58e974d697233f7e531",
+    "ex8-b_candidatefilter_1021": "8a742488089edbb10c960a7ba891361a802a977749ed6d9b7fc7f151806fa95d",
+    "ex8-d_nativefull_1021": "8ffa31ac7c467e8bcccd8345f3d2b93668442627d65c91d8db77ea7fee51ea39",
+    "ex8-e_rowrecovery_1021": "57f5fc890207bf105e4228bacfa868376febc72171f6e2d0ec47fad645a3874f"
+  },
+  "known_operational_issue": "SAPIEN may leave a small graphics context on another physical GPU; strict idle detection then excludes that card. Do not relax source admission or patch a running attempt; verify target device binding in a separate deployment.",
+  "selfcheck": {
+    "timer": "openwam-selfcheck.timer",
+    "cadence_minutes": 15,
+    "local_state": "/home/zifanz4/.local/state/openwam-selfcheck",
+    "pushes_into_current_chat": false
+  },
+  "git_scope": "Plans and selected orchestration/audit source only. No checkpoint, video, texture corpus, credentials or live claim files."
+}

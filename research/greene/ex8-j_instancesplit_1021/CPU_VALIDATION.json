@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-10-21T23:17:52.058188+00:00",
+  "diagnostic_CPU_tests": {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/zifanz4/openwam-instance-split/research/greene/ex8-j_instancesplit_1021",
+      "-v"
+    ],
+    "passed": 41,
+    "returncode": 0
+  },
+  "full_runner_and_classifier_tests": {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/zifanz4/openwam-native-full/research/greene/ex8-d_nativefull_1021",
+      "-v"
+    ],
+    "passed": 21,
+    "returncode": 0
+  },
+  "GPU_libraries_loaded": false,
+  "GPU_attempt_run": false,
+  "L0_static": true,
+  "L1_CPU": true,
+  "L1_GPU": false,
+  "L2_L3_native": false,
+  "full_release_allowed": false
+}

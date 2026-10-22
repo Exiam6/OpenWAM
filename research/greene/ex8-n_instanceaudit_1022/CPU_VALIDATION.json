@@ -1,0 +1,54 @@
+{
+  "time": "2026-10-22T05:04:15.317250+00:00",
+  "passed": true,
+  "native_executed": false,
+  "GPU_seconds": 0,
+  "interpreters": [
+    "/usr/bin/python3",
+    "benchmark-env/bin/python"
+  ],
+  "tests_per_interpreter": 67,
+  "isolated_modules_required": "Inherited fixture modifies sys.path; unittest discovery collision retained; individual module execution is used",
+  "results": [
+    {
+      "test": "test_admission.py",
+      "exit_code": 0,
+      "tests": 2
+    },
+    {
+      "test": "test_host_identity.py",
+      "exit_code": 0,
+      "tests": 4
+    },
+    {
+      "test": "test_instance_boundary.py",
+      "exit_code": 0,
+      "tests": 2
+    },
+    {
+      "test": "test_integration.py",
+      "exit_code": 0,
+      "tests": 7
+    },
+    {
+      "test": "test_native_backend.py",
+      "exit_code": 0,
+      "tests": 4
+    },
+    {
+      "test": "test_supervisor.py",
+      "exit_code": 0,
+      "tests": 17
+    },
+    {
+      "test": "test_verify_chain.py",
+      "exit_code": 0,
+      "tests": 18
+    },
+    {
+      "test": "test_verify_raw.py",
+      "exit_code": 0,
+      "tests": 13
+    }
+  ]
+}

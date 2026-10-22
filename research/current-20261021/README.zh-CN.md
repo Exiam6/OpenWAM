@@ -4,6 +4,7 @@
 成绩，再讨论 Raw DINO / RAE 的方法收益。本分支是计划、需求与代码交接；
 运行结果在变化，请查看 [带时间戳的状态快照](status.snapshot.json)，不要把快照当实时监控。
 
+- [10-21夜至10-22上午执行计划](TONIGHT_20261021.zh-CN.md)
 - [新增 8×A100 / H100 的资源需求、部署与分工](REQUIREMENTS_AND_MIGRATION.zh-CN.md)
 - [完整 100 项 task/mode 清单与当前所有权快照](tasks.snapshot.json)
 - [冻结全量计划](../greene/ex8-d_nativefull_1021/PLAN.md)

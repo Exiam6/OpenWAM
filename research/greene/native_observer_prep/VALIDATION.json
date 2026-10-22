@@ -1,0 +1,14 @@
+{
+  "preparation_only": true,
+  "native_GPU_experiment_registered": false,
+  "CPU_tests_per_Python": 43,
+  "observer_tests": 19,
+  "inventory_tests": 24,
+  "Python_versions": [
+    "3.12",
+    "3.10"
+  ],
+  "evidence": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0145Z",
+  "outer_production_deadline_validated": false,
+  "native_scene_L2_L3_passed": false
+}

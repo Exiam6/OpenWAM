@@ -50,7 +50,7 @@ def process_group(pid, proc=Path("/proc")):
     except (OSError, ValueError, IndexError) as exc:
         raise InventoryError("Unavailable process ownership") from exc
 
-def snapshot(xml_text, csv_text, expected, assigned, own_group, read_group=process_group):
+def snapshot(xml_text, csv_text, expected, assigned, own_group, read_group=process_group, verify_display=None):
     """Validate one host's complete eight-card snapshot; retain all own contexts.
 
     expected is a frozen index->UUID map, not inferred from these observations.
@@ -70,7 +70,7 @@ def snapshot(xml_text, csv_text, expected, assigned, own_group, read_group=proce
         require(len(rows) == 8 and all(len(r) == 2 for r in rows), "Incomplete CSV identities")
         pairs = [(int(r[0].strip()), r[1].strip()) for r in rows]
         require(len(set(i for i, _ in pairs)) == 8 and dict(pairs) == expected, "CSV device identity mismatch")
-        contexts, foreign, seen = [], [], set()
+        contexts, foreign, displays, seen = [], [], [], set()
         for gpu in nodes:
             uuid = gpu.findtext("uuid")
             process_list = gpu.find("processes")
@@ -95,13 +95,15 @@ def snapshot(xml_text, csv_text, expected, assigned, own_group, read_group=proce
                 row = dict(uuid=uuid, pid=pid, type=kind, memory_mib=int(memory.split()[0]), name=name)
                 if owned:
                     contexts.append(row)
+                elif verify_display is not None and verify_display(row):
+                    displays.append(row)
                 else:
                     foreign.append(row)
-        # Raw XML lacks trusted UID. An assigned-card foreign display also
-        # fails closed until a future adapter verifies the root/gdm exemption.
+        # Raw XML lacks trusted UID. Only an independent identity verifier
+        # may exempt a system display; default behavior remains fail closed.
         require(not any(p["uuid"] == assigned for p in foreign),
                 "Foreign or unverified process on assigned card")
         return dict(complete=True, contexts=contexts, foreign_contexts=foreign,
-                    device_map=dict(pairs), own_unit=own_unit)
+                    device_map=dict(pairs), own_unit=own_unit, system_displays=displays)
     except (ET.ParseError, ValueError, TypeError, IndexError, OSError) as exc:
         raise InventoryError("Malformed or unavailable inventory") from exc

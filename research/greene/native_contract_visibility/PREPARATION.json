@@ -1,0 +1,21 @@
+{
+  "scope": "CPU_AND_REAL_READ_ONLY_SERVICE_PREPARATION",
+  "source_commit": "9b4f6098deee5ad395bc1fbabbfdf3378c00e5c2",
+  "plan_commit": "4d7a715",
+  "observer_dependency_manifest": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0315Z/service-input-manifest.json",
+  "input_sha256": {
+    "/home/zifanz4/openwam-native-contract-visibility/research/greene/native_contract_visibility/audit_service.py": "02b1b4c6b78b95e7acaddaa620bcd089dbf8c8c12c2084c5983929e7e66a5aad",
+    "/home/zifanz4/openwam-native-contract-visibility/research/greene/native_observer_worker/worker.py": "56c96d9b4e0a5288a1643133eb08ee8fe7d26a0e7b4e5ef9faa4b92da975296f",
+    "/home/zifanz4/openwam-native-contract-visibility/research/greene/native_observer_prep/observer.py": "c4cd9ed05cb5f98600280b1218f9cf8533a105305273624193b5e91d0b3a77e3",
+    "/home/zifanz4/openwam-native-contract-visibility/research/greene/native_inventory_prep/inventory.py": "422b36715967879fec893a5f4f8d28c014f864bf8653eb5813c71551e6a94385",
+    "/home/zifanz4/openwam-native-contract-visibility/research/greene/native_evidence_adapter/adapter.py": "5727228179fc7bc75e7ac0f2406047eca806c4a6a5fb59f051bcb28cab6e2b5b",
+    "/home/zifanz4/openwam-native-contract-visibility/research/greene/native_sample_contract/contract.py": "691382d4a326aa7a3c42fd3f89be7914847ee16ed5e1491e0f56b01a5d00bde1",
+    "/home/zifanz4/openwam-native-contract-visibility/research/greene/native_sample_supervision/supervise.py": "bac3598297012988e7cfb3c358f5d7b21cf8f2193446c2057dd9fc6c966194f3"
+  },
+  "official_commit": "782e3133f674449e2986754cfc5f7c4e204835a2",
+  "compatibility": "Official unchanged; corrected serialized observer representation only. Frozen native runtimes unchanged.",
+  "GPU_seconds": 0,
+  "native_L2_L3_passed": false,
+  "full_release_allowed": false,
+  "evidence_directory": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0315Z"
+}

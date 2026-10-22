@@ -1,0 +1,402 @@
+{
+  "scope": "CPU_AND_REAL_READ_ONLY_SERVICE_PREPARATION",
+  "source_commit": "9b4f6098deee5ad395bc1fbabbfdf3378c00e5c2",
+  "plan_commit": "4d7a715",
+  "test_count_each_python": 121,
+  "new_regressions": 7,
+  "python_tests": [
+    [
+      {
+        "suite": "native_contract_visibility",
+        "returncode": 0,
+        "tail": "_visibility.VisibilityTests.test_wrong_host_map_unit) ... ok\n\n----------------------------------------------------------------------\nRan 25 tests in 0.252s\n\nOK\n"
+      },
+      {
+        "suite": "native_observer_policy",
+        "returncode": 0,
+        "tail": "olicy.PolicyTests.test_readable_mismatch_never_exempt) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.002s\n\nOK\n"
+      },
+      {
+        "suite": "native_observer_worker",
+        "returncode": 0,
+        "tail": ".test_unmodified_cli_rejects_bad_hash_before_queries) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 0.352s\n\nOK\n"
+      },
+      {
+        "suite": "native_observer_prep",
+        "returncode": 0,
+        "tail": "test_observer.ObserverTests.test_wrong_host_no_query) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.035s\n\nOK\n"
+      },
+      {
+        "suite": "native_inventory_prep",
+        "returncode": 0,
+        "tail": "tory.InventoryTests.test_unverified_display_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 0.004s\n\nOK\n"
+      },
+      {
+        "suite": "native_evidence_adapter",
+        "returncode": 0,
+        "tail": "t_serialize_failure_stops_without_inventing_evidence) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 3.834s\n\nOK\n"
+      },
+      {
+        "suite": "native_sample_supervision",
+        "returncode": 0,
+        "tail": "pervise.SampleTests.test_unrelated_sibling_untouched) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 1.380s\n\nOK\n"
+      }
+    ],
+    [
+      {
+        "suite": "native_contract_visibility",
+        "returncode": 0,
+        "tail": "wrong_host_map_unit (test_visibility.VisibilityTests) ... ok\n\n----------------------------------------------------------------------\nRan 25 tests in 0.238s\n\nOK\n"
+      },
+      {
+        "suite": "native_observer_policy",
+        "returncode": 0,
+        "tail": "adable_mismatch_never_exempt (test_policy.PolicyTests) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.002s\n\nOK\n"
+      },
+      {
+        "suite": "native_observer_worker",
+        "returncode": 0,
+        "tail": "cts_bad_hash_before_queries (test_worker.WorkerTests) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 0.335s\n\nOK\n"
+      },
+      {
+        "suite": "native_observer_prep",
+        "returncode": 0,
+        "tail": "est_wrong_host_no_query (test_observer.ObserverTests) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.036s\n\nOK\n"
+      },
+      {
+        "suite": "native_inventory_prep",
+        "returncode": 0,
+        "tail": "fied_display_rejected (test_inventory.InventoryTests) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 0.004s\n\nOK\n"
+      },
+      {
+        "suite": "native_evidence_adapter",
+        "returncode": 0,
+        "tail": "ithout_inventing_evidence (test_adapter.AdapterTests) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 3.563s\n\nOK\n"
+      },
+      {
+        "suite": "native_sample_supervision",
+        "returncode": 0,
+        "tail": "elated_sibling_untouched (test_supervise.SampleTests) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 1.398s\n\nOK\n"
+      }
+    ]
+  ],
+  "real_services": [
+    {
+      "scope": "REAL_READ_ONLY_CPU_TRANSIENT_SERVICE",
+      "time": "2026-10-22T03:19:31.767539+00:00",
+      "cgroup": "0::/user.slice/user-1330359.slice/user@1330359.service/app.slice/openwam-nightly-job-cpu-contract-py312-20261022T0315Z.service\n",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "host": "shenlong-gpu-01.cs.illinois.edu",
+      "native_executed": false,
+      "GPU_seconds": 0,
+      "native_L2_L3_passed": false,
+      "dispatcher_deployment_validated": false,
+      "full_release_allowed": false,
+      "observation": {
+        "complete": true,
+        "contexts": [],
+        "foreign_contexts": [
+          {
+            "uuid": "GPU-17946a0e-e66f-0783-2b57-bf39896fc81e",
+            "pid": 4082532,
+            "type": "C",
+            "memory_mib": 18136,
+            "name": "/home/tcheng12/code/4D_dev/.envs/actionmesh/bin/python"
+          },
+          {
+            "uuid": "GPU-89770bc8-d310-99d8-b3a4-d2b14c93d1a9",
+            "pid": 3006395,
+            "type": "C",
+            "memory_mib": 1308,
+            "name": "/home/tcheng12/code/Simulator4D/.work/cloth_bowl_realism_20261021/build/variant_01/source_code/../../../../../.venv/bin/python"
+          },
+          {
+            "uuid": "GPU-89770bc8-d310-99d8-b3a4-d2b14c93d1a9",
+            "pid": 3077390,
+            "type": "C",
+            "memory_mib": 10434,
+            "name": "/home/tcheng12/miniconda3/envs/aa/bin/python"
+          },
+          {
+            "uuid": "GPU-6cddff6e-dafd-6282-972c-024127fe311c",
+            "pid": 2809184,
+            "type": "C",
+            "memory_mib": 51524,
+            "name": "/home/azhai2/dsf/.venv/bin/python3"
+          },
+          {
+            "uuid": "GPU-ac2ae835-5adb-b321-a466-abd4b289fbb1",
+            "pid": 3006394,
+            "type": "C",
+            "memory_mib": 1308,
+            "name": "/home/tcheng12/code/Simulator4D/.work/cloth_bowl_realism_20261021/build/variant_02/source_code/../../../../../.venv/bin/python"
+          },
+          {
+            "uuid": "GPU-6af5942c-08a9-5f63-a74b-73083e2f5af6",
+            "pid": 3197711,
+            "type": "C",
+            "memory_mib": 29312,
+            "name": "/home/tcheng12/code/4D_dev/.envs/actionmesh/bin/python"
+          },
+          {
+            "uuid": "GPU-787d15bd-c813-1c42-dd1d-2006123777d5",
+            "pid": 3200201,
+            "type": "C",
+            "memory_mib": 29012,
+            "name": "/home/tcheng12/code/4D_dev/.envs/actionmesh/bin/python"
+          }
+        ],
+        "device_map": {
+          "0": "GPU-17946a0e-e66f-0783-2b57-bf39896fc81e",
+          "1": "GPU-89770bc8-d310-99d8-b3a4-d2b14c93d1a9",
+          "2": "GPU-5588ad46-6e71-bb2c-8f18-80b2e7a14b5e",
+          "3": "GPU-6cddff6e-dafd-6282-972c-024127fe311c",
+          "4": "GPU-4076aefe-7b64-d6e7-8069-d8417062412b",
+          "5": "GPU-ac2ae835-5adb-b321-a466-abd4b289fbb1",
+          "6": "GPU-6af5942c-08a9-5f63-a74b-73083e2f5af6",
+          "7": "GPU-787d15bd-c813-1c42-dd1d-2006123777d5"
+        },
+        "own_unit": "/user.slice/user-1330359.slice/user@1330359.service/app.slice/openwam-nightly-job-cpu-contract-py312-20261022T0315Z.service",
+        "system_displays": [
+          {
+            "uuid": "GPU-17946a0e-e66f-0783-2b57-bf39896fc81e",
+            "pid": 6142,
+            "type": "G",
+            "memory_mib": 4,
+            "name": "/usr/lib/xorg/Xorg"
+          },
+          {
+            "uuid": "GPU-89770bc8-d310-99d8-b3a4-d2b14c93d1a9",
+            "pid": 6142,
+            "type": "G",
+            "memory_mib": 4,
+            "name": "/usr/lib/xorg/Xorg"
+          },
+          {
+            "uuid": "GPU-5588ad46-6e71-bb2c-8f18-80b2e7a14b5e",
+            "pid": 6142,
+            "type": "G",
+            "memory_mib": 4,
+            "name": "/usr/lib/xorg/Xorg"
+          },
+          {
+            "uuid": "GPU-6cddff6e-dafd-6282-972c-024127fe311c",
+            "pid": 6142,
+            "type": "G",
+            "memory_mib": 4,
+            "name": "/usr/lib/xorg/Xorg"
+          },
+          {
+            "uuid": "GPU-4076aefe-7b64-d6e7-8069-d8417062412b",
+            "pid": 6142,
+            "type": "G",
+            "memory_mib": 4,
+            "name": "/usr/lib/xorg/Xorg"
+          },
+          {
+            "uuid": "GPU-ac2ae835-5adb-b321-a466-abd4b289fbb1",
+            "pid": 6142,
+            "type": "G",
+            "memory_mib": 4,
+            "name": "/usr/lib/xorg/Xorg"
+          },
+          {
+            "uuid": "GPU-6af5942c-08a9-5f63-a74b-73083e2f5af6",
+            "pid": 6142,
+            "type": "G",
+            "memory_mib": 4,
+            "name": "/usr/lib/xorg/Xorg"
+          },
+          {
+            "uuid": "GPU-787d15bd-c813-1c42-dd1d-2006123777d5",
+            "pid": 6142,
+            "type": "G",
+            "memory_mib": 4,
+            "name": "/usr/lib/xorg/Xorg"
+          }
+        ],
+        "evidence_receipt": {
+          "path": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0315Z/service-py312-result.journal/0000.json",
+          "sha256": "c6466c591695b6f1c6be65a75596549a914ae23b5528238a9aaeed604892a782",
+          "bytes": 709050
+        }
+      },
+      "passed": true,
+      "dependency_hashes_unchanged": true,
+      "journals": [
+        "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0315Z/service-py312-result.journal/0000.json"
+      ]
+    },
+    {
+      "scope": "REAL_READ_ONLY_CPU_TRANSIENT_SERVICE",
+      "time": "2026-10-22T03:20:01.459566+00:00",
+      "cgroup": "0::/user.slice/user-1330359.slice/user@1330359.service/app.slice/openwam-nightly-job-cpu-contract-py310-20261022T0315Z.service\n",
+      "python": "3.10.21 | packaged by conda-forge | (main, Aug 21 2026, 22:42:31) [GCC 14.4.0]",
+      "host": "shenlong-gpu-01.cs.illinois.edu",
+      "native_executed": false,
+      "GPU_seconds": 0,
+      "native_L2_L3_passed": false,
+      "dispatcher_deployment_validated": false,
+      "full_release_allowed": false,
+      "observation": {
+        "complete": true,
+        "contexts": [],
+        "foreign_contexts": [
+          {
+            "uuid": "GPU-17946a0e-e66f-0783-2b57-bf39896fc81e",
+            "pid": 4082532,
+            "type": "C",
+            "memory_mib": 18136,
+            "name": "/home/tcheng12/code/4D_dev/.envs/actionmesh/bin/python"
+          },
+          {
+            "uuid": "GPU-89770bc8-d310-99d8-b3a4-d2b14c93d1a9",
+            "pid": 3006395,
+            "type": "C",
+            "memory_mib": 1308,
+            "name": "/home/tcheng12/code/Simulator4D/.work/cloth_bowl_realism_20261021/build/variant_01/source_code/../../../../../.venv/bin/python"
+          },
+          {
+            "uuid": "GPU-6cddff6e-dafd-6282-972c-024127fe311c",
+            "pid": 2809184,
+            "type": "C",
+            "memory_mib": 51524,
+            "name": "/home/azhai2/dsf/.venv/bin/python3"
+          },
+          {
+            "uuid": "GPU-ac2ae835-5adb-b321-a466-abd4b289fbb1",
+            "pid": 3006394,
+            "type": "C",
+            "memory_mib": 1308,
+            "name": "/home/tcheng12/code/Simulator4D/.work/cloth_bowl_realism_20261021/build/variant_02/source_code/../../../../../.venv/bin/python"
+          },
+          {
+            "uuid": "GPU-6af5942c-08a9-5f63-a74b-73083e2f5af6",
+            "pid": 3197711,
+            "type": "C",
+            "memory_mib": 29312,
+            "name": "/home/tcheng12/code/4D_dev/.envs/actionmesh/bin/python"
+          },
+          {
+            "uuid": "GPU-787d15bd-c813-1c42-dd1d-2006123777d5",
+            "pid": 3200201,
+            "type": "C",
+            "memory_mib": 29012,
+            "name": "/home/tcheng12/code/4D_dev/.envs/actionmesh/bin/python"
+          }
+        ],
+        "device_map": {
+          "0": "GPU-17946a0e-e66f-0783-2b57-bf39896fc81e",
+          "1": "GPU-89770bc8-d310-99d8-b3a4-d2b14c93d1a9",
+          "2": "GPU-5588ad46-6e71-bb2c-8f18-80b2e7a14b5e",
+          "3": "GPU-6cddff6e-dafd-6282-972c-024127fe311c",
+          "4": "GPU-4076aefe-7b64-d6e7-8069-d8417062412b",
+          "5": "GPU-ac2ae835-5adb-b321-a466-abd4b289fbb1",
+          "6": "GPU-6af5942c-08a9-5f63-a74b-73083e2f5af6",
+          "7": "GPU-787d15bd-c813-1c42-dd1d-2006123777d5"
+        },
+        "own_unit": "/user.slice/user-1330359.slice/user@1330359.service/app.slice/openwam-nightly-job-cpu-contract-py310-20261022T0315Z.service",
+        "system_displays": [
+          {
+            "uuid": "GPU-17946a0e-e66f-0783-2b57-bf39896fc81e",
+            "pid": 6142,
+            "type": "G",
+            "memory_mib": 4,
+            "name": "/usr/lib/xorg/Xorg"
+          },
+          {
+            "uuid": "GPU-89770bc8-d310-99d8-b3a4-d2b14c93d1a9",
+            "pid": 6142,
+            "type": "G",
+            "memory_mib": 4,
+            "name": "/usr/lib/xorg/Xorg"
+          },
+          {
+            "uuid": "GPU-5588ad46-6e71-bb2c-8f18-80b2e7a14b5e",
+            "pid": 6142,
+            "type": "G",
+            "memory_mib": 4,
+            "name": "/usr/lib/xorg/Xorg"
+          },
+          {
+            "uuid": "GPU-6cddff6e-dafd-6282-972c-024127fe311c",
+            "pid": 6142,
+            "type": "G",
+            "memory_mib": 4,
+            "name": "/usr/lib/xorg/Xorg"
+          },
+          {
+            "uuid": "GPU-4076aefe-7b64-d6e7-8069-d8417062412b",
+            "pid": 6142,
+            "type": "G",
+            "memory_mib": 4,
+            "name": "/usr/lib/xorg/Xorg"
+          },
+          {
+            "uuid": "GPU-ac2ae835-5adb-b321-a466-abd4b289fbb1",
+            "pid": 6142,
+            "type": "G",
+            "memory_mib": 4,
+            "name": "/usr/lib/xorg/Xorg"
+          },
+          {
+            "uuid": "GPU-6af5942c-08a9-5f63-a74b-73083e2f5af6",
+            "pid": 6142,
+            "type": "G",
+            "memory_mib": 4,
+            "name": "/usr/lib/xorg/Xorg"
+          },
+          {
+            "uuid": "GPU-787d15bd-c813-1c42-dd1d-2006123777d5",
+            "pid": 6142,
+            "type": "G",
+            "memory_mib": 4,
+            "name": "/usr/lib/xorg/Xorg"
+          }
+        ],
+        "evidence_receipt": {
+          "path": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0315Z/service-py310-result.journal/0000.json",
+          "sha256": "681c212397b34e14b035259bfe5cf7adc0c0f82d8511e8e45b2bae53f54a8b59",
+          "bytes": 707565
+        }
+      },
+      "passed": true,
+      "dependency_hashes_unchanged": true,
+      "journals": [
+        "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0315Z/service-py310-result.journal/0000.json"
+      ]
+    }
+  ],
+  "before_after": [
+    {
+      "tag": "py312",
+      "journal": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0315Z/service-py312-result.journal/0000.json",
+      "journal_sha256": "c6466c591695b6f1c6be65a75596549a914ae23b5528238a9aaeed604892a782",
+      "scope": "OFFLINE_REPLAY_USING_CAPTURED_SAMPLE_TIMES",
+      "baseline": {
+        "passed": false,
+        "error": "ContractError('Invalid executable')"
+      },
+      "corrected": {
+        "passed": true
+      }
+    },
+    {
+      "tag": "py310",
+      "journal": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0315Z/service-py310-result.journal/0000.json",
+      "journal_sha256": "681c212397b34e14b035259bfe5cf7adc0c0f82d8511e8e45b2bae53f54a8b59",
+      "scope": "OFFLINE_REPLAY_USING_CAPTURED_SAMPLE_TIMES",
+      "baseline": {
+        "passed": false,
+        "error": "ContractError('Invalid executable')"
+      },
+      "corrected": {
+        "passed": true
+      }
+    }
+  ],
+  "GPU_seconds": 0,
+  "native_L2_L3_passed": false,
+  "full_release_allowed": false,
+  "dispatcher_deployment_validated": false
+}

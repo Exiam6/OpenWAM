@@ -62,8 +62,15 @@ def validate(packet, *, host, device_map, assigned, own_group, gdm_uid,
             uids = identity['uids']
             check(type(uids) in (list, tuple) and len(uids) == 4
                   and all(type(u) is int and u >= 0 for u in uids), 'Invalid UID identity')
-            check(type(identity['executable']) is str and identity['executable'].startswith('/'),
-                  'Invalid executable')
+            executable = identity['executable']
+            denied = identity.get('executable_permission_denied', False)
+            # Preserve the corrected observer's explicit ptrace denial. This
+            # represents unavailable evidence; ownership/display rules below
+            # still reconstruct every raw context independently.
+            check(type(denied) is bool and (
+                  (executable is None and denied is True) or
+                  (type(executable) is str and executable.startswith('/') and denied is False)),
+                  'Invalid executable visibility')
             check(type(identity['cgroup']) is str, 'Invalid cgroup')
         used = set()
         def group(pid):

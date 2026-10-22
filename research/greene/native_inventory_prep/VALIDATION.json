@@ -1,0 +1,18 @@
+{
+  "kind": "CPU_ONLY_PREPARATION",
+  "tests_each_python": 24,
+  "python_versions": [
+    "3.12",
+    "3.10"
+  ],
+  "evidence_directory": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0130Z",
+  "GPU_attempt_registered": false,
+  "native_validation_passed": false,
+  "full_release_allowed": false,
+  "files_sha256": {
+    "PLAN.md": "63e854ff0a304de71912ca795b8042baeaf0ed3bb6979dea3ecbbb8a571358fa",
+    "inventory.py": "495eb71b10c41975e55c3f93e1606201d0f8212acceefc90245ee13042d5cd61",
+    "test_inventory.py": "ea368a1088f3e021a609106b2dbda98c0be25a4530981690515ff7a1f1591def",
+    "FINDINGS.md": "cabeefd0a4663b669e3016053cf46397b494c1e1f389727937abc60b2dccd596"
+  }
+}

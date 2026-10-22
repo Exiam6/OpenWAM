@@ -1,9 +1,10 @@
 """Unique frozen dispatcher-only native headless prefix attempt."""
-import datetime as dt,hashlib,json,os,pwd,socket,subprocess,sys,time
+import datetime as dt,hashlib,json,os,pwd,socket,subprocess,sys,time,traceback
+from host_identity import checked_host
 from pathlib import Path
 from integration import NativeBackend,run,observer,DEPENDENCIES
 from native_adapter import guard as native_guard
-R=Path('/home/zifanz4/openwam-runtime');F=R/'ex8-l_headlessprefix_1022'
+R=Path('/home/zifanz4/openwam-runtime');F=R/'ex8-m_hostidentity_1022'
 def check_pause(p):
  assert not any(Path(x).exists() for x in p['pause_paths']),'Paused'
 def main():
@@ -21,7 +22,7 @@ def main():
   own_group=Path('/proc/self/cgroup').read_text()
   from inventory import unit_path
   unit_path(own_group)
-  host=socket.gethostname();assert host==os.environ['OPENWAM_GPU_HOST']=='gpu01'
+  host=checked_host(socket.gethostname(),os.environ['OPENWAM_GPU_HOST'],p['hostnames'])
   mapping=p['device_map'];assert assigned in mapping.values()
   config=dict(host=host,device_map=mapping,assigned=assigned,own_group=own_group,gdm_uid=pwd.getpwnam('gdm').pw_uid,seconds=3,pause_paths=p['pause_paths'])
   check_pause(p)
@@ -32,7 +33,9 @@ def main():
   expected=dict(line.strip().split(', ') for line in bus.stdout.splitlines())[assigned]
   backend=NativeBackend(F/'code/libheadless.so',expected)
   result=run(backend,obs,lambda:check_pause(p),assigned,seconds=70,sample_timeout=14)
- except BaseException as exc:result.update(status='failed',error=repr(exc))
+ except BaseException as exc:
+  traceback.print_exc()
+  result.update(status='failed',error=repr(exc),traceback=traceback.format_exc())
  finally:
   if backend is not None:result['native_details']=backend.details
   result.update(occupied_seconds_including_setup=time.monotonic()-start,scored_episodes=0,native_L2_L3_passed=False,full_release_allowed=False,full_paper_reproduced=False)

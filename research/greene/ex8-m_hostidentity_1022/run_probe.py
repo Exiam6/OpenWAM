@@ -1,7 +1,7 @@
 """CPU admission; native child starts only inside existing dispatcher."""
 import argparse,datetime as dt,hashlib,json,os,pathlib,subprocess,sys
 from native_adapter import BLOCKED
-R=pathlib.Path('/home/zifanz4/openwam-runtime');F=R/'ex8-l_headlessprefix_1022';N=R/'nightly-gpu'
+R=pathlib.Path('/home/zifanz4/openwam-runtime');F=R/'ex8-m_hostidentity_1022';N=R/'nightly-gpu'
 def read(p):return json.loads(p.read_text())
 def sha(p):return hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()
 def admit():
@@ -14,7 +14,7 @@ def admit():
  for name,digest in p['input_sha256'].items():assert sha(name)==digest,name
  inv=read(N/'latest.json');age=(dt.datetime.now(dt.timezone.utc)-dt.datetime.fromisoformat(inv['time'])).total_seconds()
  assert 0<=age<25 and not inv['errors'],'Inventory stale or incomplete'
- peers=[c['id'] for x in (N/'claims').glob('*.json') for c in [read(x)] if c['id'].startswith('ex8') and c['id']!='ex8l-native-headless-prefix' and c['status'] not in ['complete','failed']]
+ peers=[c['id'] for x in (N/'claims').glob('*.json') for c in [read(x)] if c['id'].startswith('ex8') and c['id']!='ex8m-native-host-identity' and c['status'] not in ['complete','failed']]
  assert not peers,peers
  assert not any(k.startswith('ROBOTWIN_LABTASKER_') for k in os.environ)
  assert not BLOCKED.intersection(os.environ)

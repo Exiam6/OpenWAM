@@ -3,7 +3,7 @@ import json,sys
 from pathlib import Path
 from integration import outcome
 from native_adapter import pci
-R=Path('/home/zifanz4/openwam-runtime');F=R/'ex8-l_headlessprefix_1022';J='ex8l-native-headless-prefix'
+R=Path('/home/zifanz4/openwam-runtime');F=R/'ex8-m_hostidentity_1022';J='ex8m-native-host-identity'
 def audit():
  def read(p):return json.loads(p.read_text()) if p.exists() else None
  s,w,c=read(F/'result.json'),read(R/'nightly-gpu/runs'/J/'result.json'),read(R/'nightly-gpu/claims'/(J+'.json'))

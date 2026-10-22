@@ -1,0 +1,18 @@
+{
+  "kind": "CPU_ONLY",
+  "integration_and_supervisor_tests_per_interpreter": 24,
+  "backend_and_admission_tests": 6,
+  "raw_composition_records": 39,
+  "logs_sha256": {
+    "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0345Z/py312-integration.log": "cd0cc427af208a25ffa4f90818150ac069aef6d96a61c7b3bd533239277b119f",
+    "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0345Z/py310-integration.log": "e13fba5fa333e9447ef63b24080006f5da3f1aa89ebf1dca0b1b283f67d1882e",
+    "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0345Z/registered-py312.log": "650463728af58b0bce90e35d215f40a31508c8ef5ef082afae0a3bd8449c78b8",
+    "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0345Z/registered-py310.log": "d2feef3785ec639d074a7e94dd7d8af5aa4442369eb13e8f5d57ec3591afef25",
+    "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0345Z/admission-backend.log": "6e22cefe4aacdda8fcb974cbe67674819ca8c936023c6a64bae307380bbd5789"
+  },
+  "composition": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0345Z/durable-composition.json",
+  "native_production_loaded": false,
+  "GPU_seconds": 0,
+  "native_L2_L3_passed": false,
+  "full_release_allowed": false
+}

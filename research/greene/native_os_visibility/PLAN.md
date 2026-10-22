@@ -1,0 +1,9 @@
+# Native observer OS visibility audit (CPU only)
+
+Question: can the real unprivileged research user read every trusted process identity required by the frozen observer on a live shared host? Baseline7489a7a passed17 CPU fixtures but production /proc visibility remains unvalidated. Hypothesis: real identities satisfy observer.identity; competing explanation: Linux ptrace restrictions reject executable links for unrelated users or gdm even while ordinary cgroup/UID metadata is readable. Read-only per-field measurements plus the unchanged identity function distinguish these.
+
+Single intervention: execute a CPU-only read-only OS visibility audit, no native imports, GPU allocations, signals, services, dispatcher changes or new scientific attempt. Inputs are the existing controller policy and fresh controller inventory; record their exact hashes and every per-field exception. Check local host identity, inventory age and process start-time stability. Audit self, controller, foreign GPU PIDs and system display PIDs from the real eight-card inventory. Re-read pause before output mutations. Stop on global or ex8-k/ex8-d pause.
+
+Criterion fixed before execution: original observer.identity returns a full stable identity for each extant sampled PID; record transient disappearance separately; pass only if all required identities are readable. Failure remains a deployment blocker, never silently omit a process or broaden the system-display exemption. This read-only audit cannot validate actual dispatcher cgroup containment, worker cancellation, native renderer isolation or L2/L3.
+
+Official sync2026-10-22T03:00:29UTC succeeded unchanged782e3133; no frozen runtime upgraded. Zero GPU seconds; CPU <=90seconds; total reservation unchanged279.998611GPUh and existing ex8-k pending. Deliver exact raw per-field evidence, machine result and concrete recovery requirements. Commit plan before execution.

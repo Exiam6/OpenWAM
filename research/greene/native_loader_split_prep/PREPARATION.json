@@ -1,0 +1,35 @@
+{
+  "kind": "CONDITIONAL_CPU_PREPARATION_NOT_SCIENTIFIC_REGISTRATION",
+  "plan_commit": "62b5090",
+  "baseline_pending_runtime": "/home/zifanz4/openwam-runtime/ex8-k_glfwprefix_1021",
+  "source_sha256": {
+    "PLAN.md": "d127f06f1ebb4047f4609249aeaffa181ed6396184152911e6d658c5c2a757b8",
+    "loader_split.cpp": "fb785bff37959e9b81f49ef96993a1f38ef63b66bdb3ec82f1458c7b2c92f210",
+    "mock_driver.cpp": "f0e10b73a847767ac5c4d3227389d8ddf90f886d525f78cb0339cf5d656a4ef3",
+    "validate_cpu.py": "0393046770c5a2ef398552606f567918f041e98560129ad6954601592a1dd24a",
+    "FINDINGS.md": "564e073262cababa93c8a985a1259789a1440175cf39047ed3784e54080f79b9",
+    "CPU_VALIDATION.json": "5aa8c372cabd22a45a4d42fa55e87b8811829f13f80967ca4689eb893fc58122"
+  },
+  "evidence_directory": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0100Z",
+  "GPU_attempt_registered": false,
+  "GPU_dispatch_prepared": false,
+  "required_before_registration": [
+    "Actual ex8-k terminal chain audited",
+    "Choose follow-up from observed boundary",
+    "Fresh official sync/compatibility",
+    "Actual occupancy plus original held caps/reserves fits bounded stage",
+    "Unique committed scientific plan and freeze",
+    "Native prewarm/device/sampler/cap wrapper implemented and reviewed"
+  ],
+  "cost": {
+    "terminal_seconds": 8150,
+    "held_cap_seconds": 971996,
+    "conditional_blocks_recovery_seconds": 18749,
+    "native_validation_reserve_seconds": 9000,
+    "pending_k_cap_seconds": 100,
+    "total_reserved_seconds": 1007995,
+    "total_reserved_gpu_hours": 279.99861111111113,
+    "headroom_seconds": 5
+  },
+  "full_release_allowed": false
+}

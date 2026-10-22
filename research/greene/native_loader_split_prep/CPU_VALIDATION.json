@@ -1,0 +1,40 @@
+{
+  "kind": "CPU_MOCK_VALIDATION_ONLY",
+  "updated": "2026-10-22T01:02:56.344556+00:00",
+  "checks": [
+    "mock scenario 0 passed; real driver calls=0",
+    "mock scenario 1 passed; real driver calls=0",
+    "mock scenario 2 passed; real driver calls=0",
+    "mock scenario 3 passed; real driver calls=0",
+    "mock scenario 4 passed; real driver calls=0",
+    "mock scenario 5 passed; real driver calls=0",
+    "mock scenario 6 passed; real driver calls=0",
+    "mock scenario 7 passed; real driver calls=0",
+    "mock scenario 8 passed; real driver calls=0",
+    "mock scenario 10 passed; real driver calls=0",
+    "mock scenario 11 passed; real driver calls=0",
+    "mock scenario 12 passed; real driver calls=0",
+    "mock scenario 13 passed; real driver calls=0",
+    "mock scenario 14 passed; real driver calls=0"
+  ],
+  "checks_passed": 14,
+  "input_sha256": {
+    "/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien/include/vulkan/vulkan_core.h": "ce0a0c0212956816bbad9cdc69ffde35ec348bd2bdf592c18e39050ec7f83944",
+    "/home/zifanz4/openwam-runtime/benchmark-env/lib/python3.10/site-packages/sapien/include/vulkan/vk_platform.h": "c2aa81456e5d24f5931f9b2052aaeb85d1a6362abac9ee5fb2029a57579e03a7",
+    "/home/zifanz4/openwam-loader-split-prep/research/greene/native_loader_split_prep/loader_split.cpp": "fb785bff37959e9b81f49ef96993a1f38ef63b66bdb3ec82f1458c7b2c92f210",
+    "/home/zifanz4/openwam-loader-split-prep/research/greene/native_loader_split_prep/mock_driver.cpp": "f0e10b73a847767ac5c4d3227389d8ddf90f886d525f78cb0339cf5d656a4ef3",
+    "/home/zifanz4/openwam-loader-split-prep/research/greene/native_loader_split_prep/validate_cpu.py": "0393046770c5a2ef398552606f567918f041e98560129ad6954601592a1dd24a"
+  },
+  "native_elf_sha256": "685c7e733b1385bf2c5385ddac0c1ff43b62692dd39bbefb0e14a9a0aec561dc",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "dependencies": "\nDynamic section at offset 0x3d98 contains 27 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x1000\n 0x000000000000000d (FINI)               0x1d20\n 0x0000000000000019 (INIT_ARRAY)         0x4d88\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x4d90\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x3b0\n 0x0000000000000005 (STRTAB)             0x510\n 0x0000000000000006 (SYMTAB)             0x3d8\n 0x000000000000000a (STRSZ)              208 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000015 (DEBUG)              0x0\n 0x0000000000000003 (PLTGOT)             0x4f88\n 0x0000000000000002 (PLTRELSZ)           168 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x718\n 0x0000000000000007 (RELA)               0x640\n 0x0000000000000008 (RELASZ)             216 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000000000001e (FLAGS)              BIND_NOW\n 0x000000006ffffffb (FLAGS_1)            Flags: NOW PIE\n 0x000000006ffffffe (VERNEED)            0x600\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x5e0\n 0x000000006ffffff9 (RELACOUNT)          4\n 0x0000000000000000 (NULL)               0x0\n",
+  "undefined_symbols": "                 w _ITM_deregisterTMCloneTable\n                 w _ITM_registerTMCloneTable\n                 U __assert_fail@GLIBC_2.2.5\n                 w __cxa_finalize@GLIBC_2.2.5\n                 w __gmon_start__\n                 U __libc_start_main@GLIBC_2.34\n                 U __stack_chk_fail@GLIBC_2.4\n                 U atoi@GLIBC_2.2.5\n                 U calloc@GLIBC_2.2.5\n                 U free@GLIBC_2.2.5\n                 U printf@GLIBC_2.2.5\n                 U strcmp@GLIBC_2.2.5\n",
+  "object_sha256": "88c10b9d60259efc7e21772693bf658a47db6923f51ccf8945d42082081f843c",
+  "mock_executable_sha256": "6e3f7dc51956afcacfe604eb14555e6da050e956fdcadc5797c37c20aafd4499",
+  "real_GPU_driver_calls": 0,
+  "GPU_execution_validated": false,
+  "registered_GPU_attempt": false,
+  "native_L2_L3_passed": false,
+  "full_release_allowed": false,
+  "full_paper_reproduced": false
+}

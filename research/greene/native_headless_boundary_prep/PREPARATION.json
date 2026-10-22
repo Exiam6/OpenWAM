@@ -1,0 +1,35 @@
+{
+  "kind": "CPU_PREPARATION_NOT_GPU_REGISTRATION",
+  "plan_commit": "9e0e61a4",
+  "source_commit": "fb2665f54d557a2e977fabc0943ba8f0c40e96fe",
+  "official_commit": "782e3133f674449e2986754cfc5f7c4e204835a2",
+  "compatibility": "Official unchanged; release-mode prefix layout verified against installed ELF. Exact upstream binary build revision unproven.",
+  "input_sha256": {
+    "/home/zifanz4/openwam-headless-boundary-prep/research/greene/native_headless_boundary_prep/PLAN.md": "47924082b040fc644c1030365480b8a00edb8b47db5bd7259b2ae3632aa12a29",
+    "/home/zifanz4/openwam-headless-boundary-prep/research/greene/native_headless_boundary_prep/headless.cpp": "8addcbe4c94f8acc0c7474c2b4c20d74ee84c11c7101c1226b54dc641c249003",
+    "/home/zifanz4/openwam-headless-boundary-prep/research/greene/native_headless_boundary_prep/mock_driver.cpp": "b02b56fe53ead3b2a6d1c699e5bd2fb879533a52a578c3ae358ad6d326a4a038",
+    "/home/zifanz4/openwam-headless-boundary-prep/research/greene/native_headless_boundary_prep/validate_cpu.py": "1b1b4b88432bf7e0f4226dcffa26b798a625f3bc4c0c29a77eb021aefd07b45d",
+    "/home/zifanz4/openwam-headless-boundary-prep/research/greene/native_headless_boundary_prep/ABI_REVIEW.md": "d71ffbf34276febc7aee334f553261e9aa6ef5e0363d1bb86532f57b7bb045f6",
+    "/home/zifanz4/openwam-headless-boundary-prep/research/greene/native_headless_boundary_prep/FINDINGS.md": "f5af57d3e751daf32baf1c53e3ccccab5d448815c8493e9002acba270b720c6c"
+  },
+  "production_artifact": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0330Z/headless-validation-v3/libheadless.so",
+  "production_sha256": "1eff01c75d5c6c24765dfe576e5d8a51114102b09e1b4951bee22be03cd86a5c",
+  "CPU_validation": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0330Z/headless-validation-v3/validation.json",
+  "ABI_evidence": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0330Z/abi-check.json",
+  "observer_dependency_closure": {
+    "/home/zifanz4/openwam-native-contract-visibility/research/greene/native_contract_visibility/audit_service.py": "02b1b4c6b78b95e7acaddaa620bcd089dbf8c8c12c2084c5983929e7e66a5aad",
+    "/home/zifanz4/openwam-native-contract-visibility/research/greene/native_observer_worker/worker.py": "56c96d9b4e0a5288a1643133eb08ee8fe7d26a0e7b4e5ef9faa4b92da975296f",
+    "/home/zifanz4/openwam-native-contract-visibility/research/greene/native_observer_prep/observer.py": "c4cd9ed05cb5f98600280b1218f9cf8533a105305273624193b5e91d0b3a77e3",
+    "/home/zifanz4/openwam-native-contract-visibility/research/greene/native_inventory_prep/inventory.py": "422b36715967879fec893a5f4f8d28c014f864bf8653eb5813c71551e6a94385",
+    "/home/zifanz4/openwam-native-contract-visibility/research/greene/native_evidence_adapter/adapter.py": "5727228179fc7bc75e7ac0f2406047eca806c4a6a5fb59f051bcb28cab6e2b5b",
+    "/home/zifanz4/openwam-native-contract-visibility/research/greene/native_sample_contract/contract.py": "691382d4a326aa7a3c42fd3f89be7914847ee16ed5e1491e0f56b01a5d00bde1",
+    "/home/zifanz4/openwam-native-contract-visibility/research/greene/native_sample_supervision/supervise.py": "bac3598297012988e7cfb3c358f5d7b21cf8f2193446c2057dd9fc6c966194f3"
+  },
+  "GPU_seconds": 0,
+  "registered_for_dispatch": false,
+  "native_L2_L3_passed": false,
+  "full_release_allowed": false,
+  "full_paper_reproduced": false,
+  "next_diagnostic_maximum_unallocated_seconds": 72,
+  "scene_validation_reserve_unchanged_seconds": 9000
+}

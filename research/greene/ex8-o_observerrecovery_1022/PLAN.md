@@ -1,0 +1,15 @@
+# ex8-o_observerrecovery_1022 — bounded observation latency recovery
+
+Question: can the unchanged ex8-n native Instance diagnostic reach its constructor boundary when the complete host observation has an adequate bounded latency allowance?
+
+Baseline: ex8-n frozen source d4c5f4cd, failed result and raw journal0009, dispatcher claim/worker retained under /home/zifanz4/openwam-runtime. That packet documents nvidia-smi -q -x timeout at3s after SAPIEN import; the constructor was not reached. Independently validated ex8-m prefix and ex8-j ABI helpers remain the trusted prefix/native inputs.
+
+Hypothesis: the premature ex8-n exit was an observation latency failure. Competing explanations: persistent telemetry stall, unsafe peer graphics contexts at a later native boundary, or native constructor failure. A single unchanged native sequence with a larger bounded observation allowance separates these outcomes; failure is not policy performance evidence.
+
+Single intervention: observation latency allowance: inner total3→8s, outer worker4→9s, stable phase wait14→30s. No retry, cached sample reuse, incomplete-packet acceptance, peer exception or success-rule change. The worker maximum is8s; existing observer/contract/sampler already support up to10s. Audit reconstructs freshness against the frozen inner+1 outer limit. All native operations, ordering, installed libraries, prewarm, helpers, device policy, seeds, model and evaluation settings remain fixed. Freeze every input hash; original runtimes remain untouched.
+
+Prediction: normal packet cadence remains about1.4s and the prefix proceeds past after_sapien_import; measured negative outcomes are retained. Primary criterion unchanged: three distinct complete raw samples per15 stable phases; no own peer context; exact Instance return0, assigned PCI and CUDA witness; terminal scientific/worker/claim agreement and idle30min chain. Missing/invalid data, foreign assigned-card process, peer context, any error, pause, drift or timeout fail closed. This answers only the constructor diagnostic; native scenes, L2/L3 and full release remain false.
+
+L0: inspect the diff and native provenance. L1 CPU: existing67 diagnostic regression checks plus delayed and over-limit observation checks on both Python interpreters, before queue registration. L1 GPU: one dispatcher allocation on gpu01, max180 occupied seconds (0.05GPUh), internal95s, child115s; no automatic retry. Expected45 stable packets at~1.4s plus~15s native/setup and45s dispatcher margin ≈123s, within180s. Slower telemetry may still fail safely; no budget extension. Deadline2026-10-28T18:20:27.005560+00:00. Original280GPUh full cap and every old cap unchanged. Window and idle admission unchanged.
+
+Outputs: committed plan/code/local registry, CPU logs, frozen protocol/command/environment/hashes, durable raw journal, native error and terminal result, independent raw+claim verification. Zero scored episodes. Native success does not release held full rows; next separately registered native real-scene small validation must pass first. On failure retain everything and diagnose; never reset a claim.

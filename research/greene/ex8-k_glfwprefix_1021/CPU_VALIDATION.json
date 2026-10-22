@@ -1,0 +1,23 @@
+{
+  "tests_passed": 36,
+  "GPU_executed": false,
+  "native_library_loaded": false,
+  "helper_sha256": "eb03f54b605daab7471f916d1896c0c697d5958c152f46a63ba61642358acc28",
+  "compile_command": [
+    "g++",
+    "-std=c++17",
+    "-D_GLIBCXX_USE_CXX11_ABI=0",
+    "-DNDEBUG",
+    "-shared",
+    "-fPIC",
+    "glfw_prefix.cpp",
+    "-L<installed-sapien.libs>",
+    "-Wl,-rpath,<installed-sapien.libs>",
+    "-lsvulkan2"
+  ],
+  "source_compatibility": "official782e3133 unchanged; frozen baseline remains unchanged",
+  "native_helper_dependency": "libsvulkan2.so; only native GLFW init/support undefined entry points",
+  "GPU_diagnostic_validated": false,
+  "native_L2_L3_passed": false,
+  "full_release_allowed": false
+}

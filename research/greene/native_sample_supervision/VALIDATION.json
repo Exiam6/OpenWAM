@@ -1,0 +1,36 @@
+{
+  "kind": "CPU_ONLY_PREPARATION",
+  "plan_commit": "8a0f2bd",
+  "tests_per_python": 59,
+  "tests_new_per_python": 16,
+  "checks": {
+    "native_inventory_prep-py312": {
+      "exit_code": 0,
+      "evidence": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0200Z/native_inventory_prep-py312.json"
+    },
+    "native_observer_prep-py312": {
+      "exit_code": 0,
+      "evidence": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0200Z/native_observer_prep-py312.json"
+    },
+    "native_sample_supervision-py312": {
+      "exit_code": 0,
+      "evidence": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0200Z/native_sample_supervision-py312.json"
+    },
+    "native_inventory_prep-py310": {
+      "exit_code": 0,
+      "evidence": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0200Z/native_inventory_prep-py310.json"
+    },
+    "native_observer_prep-py310": {
+      "exit_code": 0,
+      "evidence": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0200Z/native_observer_prep-py310.json"
+    },
+    "native_sample_supervision-py310": {
+      "exit_code": 0,
+      "evidence": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0200Z/native_sample_supervision-py310.json"
+    }
+  },
+  "GPU_attempt_registered": false,
+  "production_integration": false,
+  "native_L1": false,
+  "native_L2_L3": false
+}

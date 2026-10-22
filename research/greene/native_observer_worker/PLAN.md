@@ -1,0 +1,13 @@
+# Frozen-assignment observer worker preparation (CPU only)
+
+Question: can the prepared complete-inventory observer run as a separately bounded child of DurableObserver, consuming a hash-verified frozen assignment and checking dispatcher ownership and pause paths before any query and again before returning? Baseline b01ff2d has durable packet persistence but tests invoke test fixtures directly; no concrete trusted observer worker connects the read-only inventory to the prepared evidence adapter.
+
+Hypothesis: one worker wrapper can preserve existing inventory semantics while rejecting altered config, host/unit/UID mismatch and pause without executing further callbacks. Competing explanation: tests of individual pieces conceal wiring mistakes or lost failed observation evidence. Actual subprocess composition and adversarial entrypoint tests distinguish these. Single intervention: read-only observer worker wrapper, plus tests. Existing observer, parser, sample supervisor, contract and evidence adapter remain unchanged.
+
+Hold fixed all scientific source, checkpoint, native planner/inference/scenes/seeds, claims, queue, caps and pending ex8-k. Official pull 2026-10-22T02:45:28UTC succeeded unchanged782e3133; compatibility unchanged, no frozen runtime upgraded. No new scientific attempt, native import, GPU allocation, service or dispatcher deployment. This preparation alone never permits L2/L3/full release.
+
+Criteria fixed before checks: verified config is required, exact schema rejects malformed values; trusted current host, dispatcher cgroup unit and OS gdm UID match frozen criteria; mandatory global pause plus each job pause checked before and after observation; worker emits one success JSON or exits nonzero retaining structured observer failure; composed real subprocess packet validates and is durably persisted; foreign/peer/malformed/paused failures never advance prepared native callbacks. Both system3.12 and benchmark3.10 checks pass. Test injection occurs only in CPU test harnesses, no production test switches.
+
+Budget zero GPU seconds; CPU under this ten-minute invocation. No native execution or scientific registration, existing 279.998611GPUh reservation unchanged. Stop on global pause or unexplained failed checks. Plan committed before implementation checks. Deliver committed worker/tests/findings, durable evidence/handoff.
+
+Limits: no authentication against hostile trusted worker/config owner, atomic GPU visibility, continuous isolation, kernel-stall guarantee or escaping-descendant containment. Real /proc visibility and OS identity under dispatcher, installed worker freeze, native scene L2/L3 and actual ex8-k result remain prerequisites to a separate bounded scientific adapter registration.

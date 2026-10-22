@@ -1,0 +1,21 @@
+{
+  "kind": "CPU_SUPERVISOR_PREPARATION_ONLY",
+  "updated": "2026-10-22T01:22:05.146538+00:00",
+  "baseline_commit": "c2a3baa6c74e88ced6de4b866bd45da09247b175",
+  "plan_commit": "b21e823",
+  "tests_python312": 17,
+  "tests_benchmark_python310": 17,
+  "source_sha256": {
+    "/home/zifanz4/openwam-loader-supervisor-prep/research/greene/native_loader_supervisor_prep/supervisor.py": "cd7dbc78676e09ae4e6fa65e250aa62332e75b5cf34c143dd34306106bafecd2",
+    "/home/zifanz4/openwam-loader-supervisor-prep/research/greene/native_loader_supervisor_prep/test_supervisor.py": "43eb4dbcce8da6d66a0cebeec8bc981a11a98d0a629b746d5f33037db2c0e73c"
+  },
+  "evidence": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0115Z",
+  "real_GPU_calls": 0,
+  "registered_GPU_attempt": false,
+  "production_native_adapter_implemented": false,
+  "GPU_validation_passed": false,
+  "native_L2_L3_passed": false,
+  "full_release_allowed": false,
+  "full_paper_reproduced": false,
+  "prior_test_failure_preserved": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0115Z/preparation-test-failure.json"
+}

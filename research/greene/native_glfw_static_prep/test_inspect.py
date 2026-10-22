@@ -1,11 +1,15 @@
 import struct
 import unittest
 from pathlib import Path
-from inspect_elf import symbol,literal,destination
+from inspect_elf import symbol,literal,destination,tail_transfers
 
 class EvidenceChecks(unittest.TestCase):
     def test_actual_dynamic_symbol_format(self):
         self.assertEqual(symbol('0000000000c8a680 g DF .text 0000000000000106 Base glfwInit','glfwInit'),(0xc8a680,0x106))
+    def test_native_tail_call_is_preserved(self):
+        text='c8f372: e9 19 0e 6c ff  jmp 350190 <_glfwInitVulkan@plt>\n c8f36b: 74 13 je c8f380 <glfwVulkanSupported+0x20>'
+        self.assertEqual(len(tail_transfers(text)),1)
+        self.assertIn('_glfwInitVulkan@plt',tail_transfers(text)[0])
     def test_missing_or_ambiguous_rejected(self):
         line='0000000000c8a680 g DF .text 0000000000000106 Base glfwInit'
         for table in ['',line+'\n'+line]:

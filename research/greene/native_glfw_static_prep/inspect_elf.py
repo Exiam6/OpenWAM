@@ -45,6 +45,9 @@ def literal(raw, address):
             return value.decode('ascii') if value and all(32<=x<127 for x in value) else None
     return None
 
+def tail_transfers(text):
+    return [line.strip() for line in text.splitlines() if re.search(r'\bjmp[q]?\s',line) and '@plt>' in line]
+
 def destination(path):
     path=path.resolve()
     assert path.is_relative_to(ROOT.resolve()) and path!=ROOT.resolve(), 'Evidence output only'
@@ -75,7 +78,7 @@ def inspect(output):
             if match:
                 addr=int(match[1],16);value=literal(raw,addr)
                 if value:refs.append(dict(address=hex(addr),value=value,instruction=line.strip()))
-        result['functions'][name]=dict(address=hex(start),size=length,calls=calls,referenced_literals=refs,disassembly_sha256=sha(text.encode()))
+        result['functions'][name]=dict(address=hex(start),size=length,calls=calls,tail_transfers=tail_transfers(text),referenced_literals=refs,disassembly_sha256=sha(text.encode()))
         write(output/(name+'.asm'),text)
     assert sha(LIB.read_bytes())==result['library_sha256'], 'Binary changed during inspection'
     result['limitations']='Static direct instructions only; not an executed trace. Indirect and transitive execution, exact driver causality, runtime loader resolution and matching upstream binary source revision remain unproven.'

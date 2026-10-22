@@ -1,0 +1,13 @@
+# Evidence-preserving observer integration (CPU only)
+
+Question: can an independently bounded serialized observer be validated and its raw packet made durable before a prepared supervisor reduces an exception to repr? Baseline259e86e contains a contract but leaves persistence to each caller. The native ex8-j failure retained only summary contexts; exact driver attribution remains unresolved. This CPU preparation does not replace the pending immutable ex8-k probe.
+
+Hypothesis: one callable connecting existing sample(), validate() and exclusive bounded evidence files preserves raw successful/failed packets before any next callback. Competing explanation: disk/serialization failures or a generic exception path silently lose evidence and allow subsequent work. Fault-injection and actual subprocess-to-supervisor fixtures distinguish these.
+
+Single intervention: evidence-preserving observation callable, leaving inventory, observer, sample supervisor, validator and native supervisor unchanged. Hold all frozen scientific runtimes, source, planner, inference, checkpoint, seeds, scene, GPU policy/claims and budgets fixed. Official sync2026-10-22T02:30:54UTC succeeded unchanged782e3133; compatibility unchanged; no experiment upgrade.
+
+Preregistered criteria: actual assigned-only worker output accepted and durably journaled; actual peer output rejected before prepared operation callbacks with raw XML and UUID retained on disk; worker nonzero/timeout/output limits retain bounded raw failure; contract malformed/replay failures retained; exclusive write never overwrites; I/O/serialization/cumulative-byte/count failures stop before next callback; inherited tests pass in benchmark Python3.10 and system Python3.12. Stable-phase acceptance remains the existing supervisor's responsibility; per-call monotonic starts prevent stale packet replay. No identity trust upgrade is claimed.
+
+Budget: zero GPU seconds; CPU checks under this ten-minute takeover, no native imports, no production entrypoint/dispatch, no new scientific attempt. Evidence per record <=4MiB, session <=64MiB and <=128records; bounds stop the observation chain, never relax scientific limits. Files use exclusive creation and fsync(file+directory); partial writes remain on disk as failures and are never overwritten. Stop on global pause or unexplained failed tests.
+
+Deliverables: plan committed before tests; adapter and adversarial meaningful CPU integration checks; committed findings and durable handoff. Full_release/native_L2_L3/full_paper flags remain false. Next scientific decision depends on actual ex8-k outcome and separately frozen native adapter plus dispatcher containment, with native scene L2/L3 required before97 held rows release.

@@ -1,0 +1,3 @@
+# CPU preparation result
+
+Both Python interpreters passed75 checks each. Real kernel enforcement over synthetic inputs rejects denied files, symlink and /proc aliases and inherited child reads; the already running observer thread remains unrestricted. PCI/minor/DRM mapping and missing/wrong identity rejection checked without GPU opens/imports. The first benchmark fixture failed because the child interpreter runtime was outside its synthetic allowlist; corrected only that fixture, retained failure logs and reran affected tests successfully. Native scene correctness and full release remain unvalidated.

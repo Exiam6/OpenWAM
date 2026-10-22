@@ -28,6 +28,8 @@ def verify_samples(scientific, config, journal):
     journal=Path(journal).resolve()
     phases=['before_prewarm']+['after_'+n for n in OPERATIONS]
     counts={name:0 for name in phases}
+    ranks={'before_prewarm':0}
+    for i,name in enumerate(OPERATIONS):ranks[name]=2*i+1;ranks['after_'+name]=2*i+2
     samples=scientific['samples']
     check(type(samples) is list and 39<=len(samples)<=128,'Invalid sample count')
     seen=set();previous=-math.inf;last_stable=-1;witness=False
@@ -47,12 +49,16 @@ def verify_samples(scientific, config, journal):
         check(outer['monotonic_start']>=previous,'Overlapping or replayed raw sample')
         rebuilt=validate(packet,**criteria,phase_started=outer['monotonic_start'],now=stamp,max_age=4)
         previous=stamp
-        for field,value in rebuilt.items():check(row.get(field)==value,'Raw/summary mismatch: '+field)
+        for field,value in rebuilt.items():
+            if field=='device_map':value={str(k):v for k,v in value.items()}
+            check(row.get(field)==value,'Raw/summary mismatch: '+field)
         check(row.get('stable_phase') is (row['phase']==row['finished_phase']),'Incorrect phase stability')
+        check(row['phase'] in ranks and row['finished_phase'] in ranks,'Unexpected phase')
+        check(ranks[row['phase']]<=ranks[row['finished_phase']],'Reversed sample phase')
         if row['stable_phase']:
-            check(row['phase'] in phases,'Unexpected stable phase')
-            ordinal=phases.index(row['phase']);check(ordinal>=last_stable,'Replayed phase order')
-            last_stable=ordinal;counts[row['phase']]+=1
+            ordinal=ranks[row['phase']];check(ordinal>=last_stable,'Replayed phase order')
+            last_stable=ordinal
+            if row['phase'] in counts:counts[row['phase']]+=1
         witness=witness or bool(rebuilt['contexts'])
     check(set(str(x.resolve()) for x in journal.glob('*.json'))==seen,'Unreferenced journal evidence')
     check(all(n>=3 for n in counts.values()),'Missing distinct stable samples')

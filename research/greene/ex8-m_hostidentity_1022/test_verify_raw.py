@@ -26,11 +26,11 @@ class RawAuditTests(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):cls.temp.cleanup()
     def test_real_subprocess_journal_reconstructs(self):
-        proof=verify_samples(self.science,self.cfg,self.root/'journal')
+        proof=verify_samples(json.loads(json.dumps(self.science)),self.cfg,self.root/'journal')
         self.assertGreaterEqual(proof['distinct_raw_packets'],39)
         self.assertFalse(proof['continuous_isolation_proven'])
     def reject(self,science=None,config=None,journal=None):
-        with self.assertRaises(Exception):verify_samples(science or self.science,config or self.cfg,journal or self.root/'journal')
+        with self.assertRaises(Exception):verify_samples(json.loads(json.dumps(science or self.science)),config or self.cfg,journal or self.root/'journal')
     def baseline_accepts(self,s):
         terminal=dict(id='fixture',scientific_identity='fixture/attempt1',gpu_uuid=fixtures.MAP[0],status='complete',exit_code=0)
         self.assertTrue(outcome(s,terminal,terminal)['GPU_diagnostic_validated'])
@@ -56,6 +56,16 @@ class RawAuditTests(unittest.TestCase):
         raw=json.dumps(packet).encode();f.write_bytes(raw);receipt.update(sha256=hashlib.sha256(raw).hexdigest(),bytes=len(raw))
         try:self.reject(s)
         finally:f.write_bytes(original)
+    def test_persisted_wrong_map_rejected(self):
+        s=json.loads(json.dumps(self.science));s['samples'][0]['device_map']['0']='GPU-wrong'
+        self.reject(s)
+    def test_real_persisted_native_packets(self):
+        from verify_raw import F
+        s=json.loads((F/'result.json').read_text());cfg=json.loads((F/'observer-config.json').read_text())
+        proof=verify_samples(s,cfg,F/'journal');self.assertEqual(proof['distinct_raw_packets'],42)
+        self.assertTrue(all(n>=3 for n in proof['phase_counts'].values()))
+    def test_unknown_phase_rejected(self):
+        s=copy.deepcopy(self.science);s['samples'][0].update(phase='unknown',finished_phase='unknown');self.reject(s)
     def test_pending_never_releases_stage(self):
         out=audit();self.assertFalse(out['full_release_allowed']);self.assertFalse(out['native_L2_L3_passed'])
 

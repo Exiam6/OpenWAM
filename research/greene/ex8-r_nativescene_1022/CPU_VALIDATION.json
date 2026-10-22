@@ -1,0 +1,162 @@
+{
+  "time": "2026-10-22T07:16:28.659930+00:00",
+  "passed": true,
+  "native_executed": false,
+  "GPU_seconds": 0,
+  "results": [
+    {
+      "interpreter": "/usr/bin/python3",
+      "test": "test_admission.py",
+      "exit_code": 0,
+      "tests": 2,
+      "log": "/tmp/ex8r-validation/system-test_admission.log"
+    },
+    {
+      "interpreter": "/usr/bin/python3",
+      "test": "test_device_access.py",
+      "exit_code": 0,
+      "tests": 4,
+      "log": "/tmp/ex8r-validation/system-test_device_access.log"
+    },
+    {
+      "interpreter": "/usr/bin/python3",
+      "test": "test_host_identity.py",
+      "exit_code": 0,
+      "tests": 4,
+      "log": "/tmp/ex8r-validation/system-test_host_identity.log"
+    },
+    {
+      "interpreter": "/usr/bin/python3",
+      "test": "test_instance_boundary.py",
+      "exit_code": 0,
+      "tests": 2,
+      "log": "/tmp/ex8r-validation/system-test_instance_boundary.log"
+    },
+    {
+      "interpreter": "/usr/bin/python3",
+      "test": "test_integration.py",
+      "exit_code": 0,
+      "tests": 7,
+      "log": "/tmp/ex8r-validation/system-test_integration.log"
+    },
+    {
+      "interpreter": "/usr/bin/python3",
+      "test": "test_native_backend.py",
+      "exit_code": 0,
+      "tests": 4,
+      "log": "/tmp/ex8r-validation/system-test_native_backend.log"
+    },
+    {
+      "interpreter": "/usr/bin/python3",
+      "test": "test_observation_latency.py",
+      "exit_code": 0,
+      "tests": 4,
+      "log": "/tmp/ex8r-validation/system-test_observation_latency.log"
+    },
+    {
+      "interpreter": "/usr/bin/python3",
+      "test": "test_scene_probe.py",
+      "exit_code": 0,
+      "tests": 4,
+      "log": "/tmp/ex8r-validation/system-test_scene_probe.log"
+    },
+    {
+      "interpreter": "/usr/bin/python3",
+      "test": "test_supervisor.py",
+      "exit_code": 0,
+      "tests": 17,
+      "log": "/tmp/ex8r-validation/system-test_supervisor.log"
+    },
+    {
+      "interpreter": "/usr/bin/python3",
+      "test": "test_verify_chain.py",
+      "exit_code": 0,
+      "tests": 18,
+      "log": "/tmp/ex8r-validation/system-test_verify_chain.log"
+    },
+    {
+      "interpreter": "/usr/bin/python3",
+      "test": "test_verify_raw.py",
+      "exit_code": 0,
+      "tests": 13,
+      "log": "/tmp/ex8r-validation/system-test_verify_raw.log"
+    },
+    {
+      "interpreter": "/home/zifanz4/openwam-runtime/benchmark-env/bin/python",
+      "test": "test_admission.py",
+      "exit_code": 0,
+      "tests": 2,
+      "log": "/tmp/ex8r-validation/benchmark-test_admission.log"
+    },
+    {
+      "interpreter": "/home/zifanz4/openwam-runtime/benchmark-env/bin/python",
+      "test": "test_device_access.py",
+      "exit_code": 0,
+      "tests": 4,
+      "log": "/tmp/ex8r-validation/benchmark-test_device_access.log"
+    },
+    {
+      "interpreter": "/home/zifanz4/openwam-runtime/benchmark-env/bin/python",
+      "test": "test_host_identity.py",
+      "exit_code": 0,
+      "tests": 4,
+      "log": "/tmp/ex8r-validation/benchmark-test_host_identity.log"
+    },
+    {
+      "interpreter": "/home/zifanz4/openwam-runtime/benchmark-env/bin/python",
+      "test": "test_instance_boundary.py",
+      "exit_code": 0,
+      "tests": 2,
+      "log": "/tmp/ex8r-validation/benchmark-test_instance_boundary.log"
+    },
+    {
+      "interpreter": "/home/zifanz4/openwam-runtime/benchmark-env/bin/python",
+      "test": "test_integration.py",
+      "exit_code": 0,
+      "tests": 7,
+      "log": "/tmp/ex8r-validation/benchmark-test_integration.log"
+    },
+    {
+      "interpreter": "/home/zifanz4/openwam-runtime/benchmark-env/bin/python",
+      "test": "test_native_backend.py",
+      "exit_code": 0,
+      "tests": 4,
+      "log": "/tmp/ex8r-validation/benchmark-test_native_backend.log"
+    },
+    {
+      "interpreter": "/home/zifanz4/openwam-runtime/benchmark-env/bin/python",
+      "test": "test_observation_latency.py",
+      "exit_code": 0,
+      "tests": 4,
+      "log": "/tmp/ex8r-validation/benchmark-test_observation_latency.log"
+    },
+    {
+      "interpreter": "/home/zifanz4/openwam-runtime/benchmark-env/bin/python",
+      "test": "test_scene_probe.py",
+      "exit_code": 0,
+      "tests": 4,
+      "log": "/tmp/ex8r-validation/benchmark-test_scene_probe.log"
+    },
+    {
+      "interpreter": "/home/zifanz4/openwam-runtime/benchmark-env/bin/python",
+      "test": "test_supervisor.py",
+      "exit_code": 0,
+      "tests": 17,
+      "log": "/tmp/ex8r-validation/benchmark-test_supervisor.log"
+    },
+    {
+      "interpreter": "/home/zifanz4/openwam-runtime/benchmark-env/bin/python",
+      "test": "test_verify_chain.py",
+      "exit_code": 0,
+      "tests": 18,
+      "log": "/tmp/ex8r-validation/benchmark-test_verify_chain.log"
+    },
+    {
+      "interpreter": "/home/zifanz4/openwam-runtime/benchmark-env/bin/python",
+      "test": "test_verify_raw.py",
+      "exit_code": 0,
+      "tests": 13,
+      "log": "/tmp/ex8r-validation/benchmark-test_verify_raw.log"
+    }
+  ]
+}

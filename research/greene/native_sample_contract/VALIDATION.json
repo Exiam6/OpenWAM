@@ -1,0 +1,10 @@
+{
+  "scope": "CPU_ONLY_NOT_NATIVE_DEPLOYMENT",
+  "tests": {
+    "py310": 77,
+    "py312": 77
+  },
+  "new_contract_tests_per_python": 18,
+  "evidence": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0215Z",
+  "GPU_seconds": 0
+}

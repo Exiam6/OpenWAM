@@ -1,0 +1,22 @@
+{
+  "scope": "CPU_ONLY_NOT_NATIVE_DEPLOYMENT",
+  "checks": [
+    {
+      "python": "py312",
+      "checks": 17,
+      "returncode": 0
+    },
+    {
+      "python": "py310",
+      "checks": 17,
+      "returncode": 0
+    }
+  ],
+  "frozen_fullgate_checks": 21,
+  "GPU_seconds": 0,
+  "native_L2_L3_passed": false,
+  "full_release_allowed": false,
+  "plan_commit": "5b37ae0",
+  "deployed": false,
+  "evidence_directory": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0245Z"
+}

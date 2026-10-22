@@ -26,10 +26,18 @@ def identity(pid, proc=Path("/proc")):
         rows = [r.split()[1:] for r in status.splitlines() if r.startswith("Uid:")]
         require(len(rows) == 1 and len(rows[0]) == 4, "Missing UID identity")
         uids = tuple(int(v) for v in rows[0])
-        executable = str((root / "exe").resolve(strict=True))
+        # Foreign exe links are ptrace-gated on the actual shared host.
+        # Keep kernel UID/cgroup identity and explicitly preserve this absence.
+        exe_denied = False
+        try:
+            executable = str((root / "exe").resolve(strict=True))
+        except PermissionError:
+            executable = None
+            exe_denied = True
         second = start_ticks((root / "stat").read_text(), pid)
         require(first == second, "PID reused during identity read")
-        return dict(pid=pid, start_ticks=first, cgroup=group, uids=uids, executable=executable)
+        return dict(pid=pid, start_ticks=first, cgroup=group, uids=uids, executable=executable,
+                    executable_permission_denied=exe_denied)
     except (OSError, ValueError, IndexError) as exc:
         raise InventoryError("Unavailable trusted process identity") from exc
 
@@ -37,7 +45,10 @@ def system_display(row, process, gdm_uid):
     # Ownership is checked by snapshot before this exemption is considered.
     return (isinstance(gdm_uid, int) and not isinstance(gdm_uid, bool) and gdm_uid > 0
             and row["type"] == "G" and row["name"] == XORG
-            and process["executable"] == XORG
+            and type(row["memory_mib"]) is int and 0 <= row["memory_mib"] <= 16
+            and (process["executable"] == XORG or
+                 (process["executable"] is None and
+                  process.get("executable_permission_denied") is True))
             and len(process["uids"]) == 4
             and (all(uid == 0 for uid in process["uids"])
                  or all(uid == gdm_uid for uid in process["uids"])))

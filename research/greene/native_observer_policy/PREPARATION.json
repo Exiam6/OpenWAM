@@ -1,0 +1,19 @@
+{
+  "scope": "CPU_PREPARATION_ONLY",
+  "plan_commit": "d7caf3c",
+  "baseline": "7489a7a300ddaed2d151728b7f5d5dbaca4bfb92",
+  "official_sync": "2026-10-22T03:00:29.713662+00:00",
+  "official_commit": "782e3133f674449e2986754cfc5f7c4e204835a2",
+  "compatibility": "Official unchanged; prepared observer policy correction only; no frozen runtime upgraded",
+  "files": {
+    "/home/zifanz4/openwam-native-observer-policy/research/greene/native_observer_prep/observer.py": "c4cd9ed05cb5f98600280b1218f9cf8533a105305273624193b5e91d0b3a77e3",
+    "/home/zifanz4/openwam-native-observer-policy/research/greene/native_observer_policy/PLAN.md": "9c8df6527a45369a1ff8df2d09f47e2af7d747a56f6ac219d20fdfda36dfc186",
+    "/home/zifanz4/openwam-native-observer-policy/research/greene/native_observer_policy/test_policy.py": "60ccb533821a54653d60ef4014b584cd3917785fad82bbe0f16ada2c4e34ca03",
+    "/home/zifanz4/openwam-native-observer-policy/research/greene/native_observer_policy/live_read.py": "0317550eb70bf7253bb67a62bc0c8d786e7b737bbdf94ffadc185b4627c80019",
+    "/home/zifanz4/openwam-native-observer-policy/research/greene/native_observer_policy/FINDINGS.md": "4ca2b1e68806f1fd82112fcc8fe4f95185f2e2057a721298224a9354ade7b7c2",
+    "/home/zifanz4/openwam-native-observer-policy/research/greene/native_observer_policy/VALIDATION.json": "8b8dee678b703387c2652638ccc29e1c10c44da0fd1eb62fd94788c89340526e"
+  },
+  "full_release_allowed": false,
+  "native_L2_L3_passed": false,
+  "evidence_directory": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0300Z"
+}

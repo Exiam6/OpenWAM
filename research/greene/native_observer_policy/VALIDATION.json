@@ -1,0 +1,85 @@
+{
+  "scope": "CPU_AND_REAL_READ_ONLY_LOCAL_NVML_NOT_NATIVE_DEPLOYMENT",
+  "checked_at": "2026-10-22T03:07:38.359638+00:00",
+  "checks": [
+    {
+      "python": "py312",
+      "suite": "native_observer_policy",
+      "returncode": 0,
+      "tail": "retained) ... ok\ntest_readable_mismatch_never_exempt (test_policy.PolicyTests.test_readable_mismatch_never_exempt) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.001s\n\nOK\n"
+    },
+    {
+      "python": "py312",
+      "suite": "native_observer_prep",
+      "returncode": 0,
+      "tail": "unavailable_proc_rejected) ... ok\ntest_wrong_host_no_query (test_observer.ObserverTests.test_wrong_host_no_query) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.035s\n\nOK\n"
+    },
+    {
+      "python": "py312",
+      "suite": "native_observer_worker",
+      "returncode": 0,
+      "tail": "cli_rejects_bad_hash_before_queries (test_worker.WorkerTests.test_unmodified_cli_rejects_bad_hash_before_queries) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 0.350s\n\nOK\n"
+    },
+    {
+      "python": "py312",
+      "suite": "native_inventory_prep",
+      "returncode": 0,
+      "tail": "ventory) ... ok\ntest_unverified_display_rejected (test_inventory.InventoryTests.test_unverified_display_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 0.004s\n\nOK\n"
+    },
+    {
+      "python": "py310",
+      "suite": "native_observer_policy",
+      "returncode": 0,
+      "tail": "d_identity_retained (test_policy.PolicyTests) ... ok\ntest_readable_mismatch_never_exempt (test_policy.PolicyTests) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.002s\n\nOK\n"
+    },
+    {
+      "python": "py310",
+      "suite": "native_observer_prep",
+      "returncode": 0,
+      "tail": "ailable_proc_rejected (test_observer.ObserverTests) ... ok\ntest_wrong_host_no_query (test_observer.ObserverTests) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.035s\n\nOK\n"
+    },
+    {
+      "python": "py310",
+      "suite": "native_observer_worker",
+      "returncode": 0,
+      "tail": "er (test_worker.WorkerTests) ... ok\ntest_unmodified_cli_rejects_bad_hash_before_queries (test_worker.WorkerTests) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 0.319s\n\nOK\n"
+    },
+    {
+      "python": "py310",
+      "suite": "native_inventory_prep",
+      "returncode": 0,
+      "tail": "inventory (test_inventory.InventoryTests) ... ok\ntest_unverified_display_rejected (test_inventory.InventoryTests) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 0.004s\n\nOK\n"
+    }
+  ],
+  "unique_tests_each_python": 68,
+  "new_policy_tests_each_python": 8,
+  "boundary_combinations": 108,
+  "frozen_fullgate_tests": 21,
+  "real_reads": {
+    "py312": {
+      "original_passed": false,
+      "original_error": "ObservationError('Unavailable trusted process identity')",
+      "corrected_passed": true,
+      "complete": true,
+      "system_display_contexts": 8,
+      "foreign_contexts": 4,
+      "original_file": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0300Z/live-original-py312.json",
+      "corrected_file": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0300Z/live-corrected-py312.json"
+    },
+    "py310": {
+      "original_passed": false,
+      "original_error": "ObservationError('Unavailable trusted process identity')",
+      "corrected_passed": true,
+      "complete": true,
+      "system_display_contexts": 8,
+      "foreign_contexts": 4,
+      "original_file": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0300Z/live-original-py310.json",
+      "corrected_file": "/home/zifanz4/.local/state/openwam-selfcheck/evidence/20261022T0300Z/live-corrected-py310.json"
+    }
+  },
+  "native_L2_L3_passed": false,
+  "dispatcher_service_validated": false,
+  "full_release_allowed": false,
+  "GPU_seconds": 0,
+  "policy_sha256": "0cd732a7ae92f2cbf585e9fc1c7ed4e9ffab304830e3e2c3a621e551d56cbcdc"
+}

@@ -98,6 +98,17 @@ This host has CUDA A100s but currently cannot initialize SAPIEN's required
 Vulkan RT renderer. Native closed-loop reproduction and the final paired
 success-rate evaluation remain gated on a working RT host.
 
+The matched single-seed pilots are registered under
+`/root/zifan/openwam-runs/wam_pilot_20261023`. A detached
+`research/rae/continue_pilot.py` process waits for the running RAE training,
+verifies its final checkpoint, releases only the SHA-verified reproducible
+graft weight file for disk space, and trains the VAE control. It then uses
+`eval_teacher_forced.py` on the same 100 dev windows with four noise draws
+each and `compare_teacher_forced.py` for per-task paired action-loss deltas.
+The state file is `continuation_state.json`; any failure stops the sequence
+and preserves logs. The video losses have different latent targets and are
+not compared across variants.
+
 ## Related primary work
 
 - Zheng et al., *Diffusion Transformers with Representation Autoencoders*,

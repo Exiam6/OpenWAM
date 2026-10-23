@@ -52,6 +52,9 @@ def build(args: argparse.Namespace) -> None:
     weight_output = output / "checkpoint_step_0.safetensors"
     if weight_output.exists():
         raise FileExistsError(weight_output)
+    temporary_weights = output / "checkpoint_step_0.safetensors.tmp"
+    if temporary_weights.exists():
+        raise FileExistsError(f"Incomplete earlier save requires inspection: {temporary_weights}")
 
     cfg = OmegaConf.load(args.donor / "config.yaml")
     with open_dict(cfg):
@@ -98,7 +101,8 @@ def build(args: argparse.Namespace) -> None:
     model.video_backbone.video_encoder._m.load_state_dict(vit.state_dict(), strict=True)
     del vit
     reset_names = reset_visual_projections(model, args.seed + 1009)
-    model.save_checkpoint(str(weight_output))
+    model.save_checkpoint(str(temporary_weights))
+    temporary_weights.replace(weight_output)
     record = {
         "donor_sha256": DONOR_SHA256,
         "dino_sha256": DINO_SHA256,

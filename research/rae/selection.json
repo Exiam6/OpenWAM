@@ -1,0 +1,19 @@
+{
+  "repo_id": "TianxingChen/RoboTwin2.0",
+  "revision": "3dc3b798668feb99ac61cc9086d84cbcc3d79186",
+  "embodiment": "aloha-agilex",
+  "variant": "clean_50",
+  "selection_salt": "openwam-rae-20261023:",
+  "tasks": {
+    "stack_blocks_three": {"bytes": 950507257, "sha256": "d8b3de21979e1a89b1f8b4dbc9d95ea9622e66c1db62c4d6736be996976b0a90"},
+    "place_burger_fries": {"bytes": 689932579, "sha256": "23ebeffcb668e55ef6d560a169c3a68032017a080a8228d97da57538844de0b1"},
+    "hanging_mug": {"bytes": 735324234, "sha256": "d854cbe1e70563417a05bffc9295e3b46e993287e43294f9575a5d4cbf8d2b09"},
+    "shake_bottle_horizontally": {"bytes": 483114791, "sha256": "605c099234ba3a1f471fce6d5339adc8ff816e926cac2ce782579af1f3ab555d"},
+    "stack_bowls_two": {"bytes": 622234585, "sha256": "e3fbb78738e195387a14e80cdfd7270db4743271a951400be2a21e8ecddb9f9a"},
+    "open_microwave": {"bytes": 982663234, "sha256": "8cf14879560849a76738fb05a1842608fe79831efac625b81aa4c886edeff132"},
+    "beat_block_hammer": {"bytes": 229401324, "sha256": "a135ad233bdcffff65fb636780f95ec34abc36ccf2bd0ff26ab07c9c464cc6af"},
+    "stack_bowls_three": {"bytes": 1018303066, "sha256": "46ecebaaa1828c7f4c941a6761324cf445c7a66e91161d6fbf13c43a214c26ea"},
+    "place_bread_skillet": {"bytes": 394729396, "sha256": "f0570822c1286b7610a3bec1018f421548df0002c98b9392a0f809cf5245cfb3"},
+    "place_dual_shoes": {"bytes": 627881534, "sha256": "0cdb0e5c03a30332c928cce1c430a21da8248adc01608706487709283168f703"}
+  }
+}

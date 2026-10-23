@@ -121,6 +121,8 @@ class DinoV3VideoEncoder(VideoEncoder):
     defaults raise ``NotImplementedError`` with a contract-aware message.
     """
 
+    _checkpoint_subdir = _DINOV3_CKPT_SUBDIR
+
     def __init__(
         self,
         vit: nn.Module,
@@ -420,7 +422,7 @@ class DinoV3VideoEncoder(VideoEncoder):
                 "config.json (deploy reads it only from ckpt_dir)."
             )
         src = os.path.join(str(model_path), "config.json")
-        dst = os.path.join(output_dir, _DINOV3_CKPT_SUBDIR, "config.json")
+        dst = os.path.join(output_dir, type(self)._checkpoint_subdir, "config.json")
         if not os.path.isfile(src):
             raise FileNotFoundError(f"DinoV3VideoEncoder.save_deploy_assets: config.json not found at {src}.")
         if os.path.abspath(src) == os.path.abspath(dst):
@@ -459,17 +461,17 @@ class DinoV3VideoEncoder(VideoEncoder):
         num_register_tokens = int(getattr(config, "num_register_tokens", 0))
         return embed_dim, patch_size, num_register_tokens
 
-    @staticmethod
-    def _resolve_config_dir(ckpt_dir: str | None) -> str:
+    @classmethod
+    def _resolve_config_dir(cls, ckpt_dir: str | None) -> str:
         """Return the dir holding a readable DINOv3 ``config.json`` at deploy time.
 
         Strictly self-contained: only ``<ckpt_dir>/dinov3/config.json`` (written
         by :meth:`save_deploy_assets`) is consulted; there is no
         ``encoder.model_path`` fallback. A missing config is a hard error.
         """
-        ckpt_cfg = os.path.join(ckpt_dir, _DINOV3_CKPT_SUBDIR, "config.json") if ckpt_dir else None
+        ckpt_cfg = os.path.join(ckpt_dir, cls._checkpoint_subdir, "config.json") if ckpt_dir else None
         if ckpt_cfg and os.path.isfile(ckpt_cfg):
-            return os.path.join(str(ckpt_dir), _DINOV3_CKPT_SUBDIR)
+            return os.path.join(str(ckpt_dir), cls._checkpoint_subdir)
         raise FileNotFoundError(
             "DinoV3VideoEncoder.from_skeleton: no readable config.json at "
             f"ckpt_dir={ckpt_cfg!r}. Re-save the checkpoint with the current "

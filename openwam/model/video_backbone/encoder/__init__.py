@@ -39,6 +39,7 @@ __all__ = [
     "VideoEncoder",
     "VideoEncoderProperties",
     "DinoV3VideoEncoder",
+    "DinoV2VideoEncoder",
     "FluxVAEVideoEncoder",
     "VJEPA21VideoEncoder",
     "WanVideoVAEEncoder",
@@ -50,6 +51,7 @@ __all__ = [
 # Built-in registrations (kept at the bottom so implementations can import from
 # ``registry`` / ``base`` without circular issues). Adding a new
 # encoder = adding a new line here and a new file alongside.
+from openwam.model.video_backbone.encoder.dinov2 import DinoV2VideoEncoder  # noqa: E402, F401
 from openwam.model.video_backbone.encoder.dinov3 import DinoV3VideoEncoder  # noqa: E402, F401
 from openwam.model.video_backbone.encoder.flux2_vae import FluxVAEVideoEncoder  # noqa: E402, F401
 from openwam.model.video_backbone.encoder.vjepa21 import VJEPA21VideoEncoder  # noqa: E402, F401

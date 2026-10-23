@@ -15,9 +15,13 @@ training, or different demonstrations. Record and control each difference.
 
 ## Proposed method
 
-1. Use the existing `DinoV3VideoEncoder` interface as the representation
-   encoder. Pin a public DINOv3 snapshot, hash every weight file, freeze the
-   encoder, and keep the three RoboTwin camera order and frame timing fixed.
+1. Start with the public `facebook/dinov2-base` snapshot at
+   `f9e44c814b77203eaa57a6bdbbd535f21ede1415` (model SHA256
+   `d73036b56966966d07975d696bde331762f37297e2f095de8cea0040c3aa0841`).
+   The DINOv3 candidate requires manual access approval. Freeze DINOv2,
+   preserve the three RoboTwin camera order and frame timing, pad only the
+   patch border, and resample its 14-pixel grid to the released model's
+   16-pixel latent grid. Record that spatial resampling as a method choice.
 2. Fit per-channel latent normalization on the **training split only**. Keep
    the existing per-token normalization as a separate baseline; do not silently
    change it in a resumed run.
@@ -39,6 +43,7 @@ training, or different demonstrations. Record and control each difference.
   released-checkpoint evaluation must be audited before claiming improvement.
 - Data: freeze train/dev/test demonstration manifests and content hashes;
   inspect episode and scene overlap; fit statistics only on train.
+  The bounded ten-task archive selection is frozen in `DATA_SELECTION.md`.
 - Numerical: one batch with finite latents, actions and losses; check shapes,
   nonzero intended gradients, save/reload equality, and raw video/action loss
   at matched noise/timestep/dtype.
@@ -49,8 +54,8 @@ training, or different demonstrations. Record and control each difference.
   A trained model is not evidence of a visual-representation benefit until this
   comparison is complete.
 
-The evaluation hardware, data manifests, GPU time limit, stop rule, exact DINO
-snapshot, and model initialization hashes must be recorded in a separate run
+The evaluation hardware, data manifests, GPU time limit, stop rule, and model
+initialization hashes must be recorded in a separate run
 registration before allocating a training GPU. No GPU run is registered here.
 
 ## Related primary work

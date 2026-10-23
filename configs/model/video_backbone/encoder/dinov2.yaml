@@ -1,0 +1,6 @@
+# Raw DINOv2 representation baseline. The RAE decoder is trained separately.
+# Keep from_scratch=true so the DiT input/output projections match 768 channels.
+name: dinov2
+model_path: /path/to/facebook-dinov2-base
+svae_path: null
+svae_target_dim: null

@@ -55,6 +55,8 @@ export MASTER_PORT="${MASTER_PORT:-29617}"
 export OMP_NUM_THREADS=4
 
 cd "$repo"
+# OpenWAM only writes final weights when save_steps is truthy; 2000 > max_steps
+# gives one final checkpoint at step 1000 without periodic checkpoint disk use.
 exec bash scripts/train.sh \
   dataloader=robotwin \
   "dataloader.dataset_dir=$data" \
@@ -69,7 +71,7 @@ exec bash scripts/train.sh \
   training.action_lr=1e-4 \
   training.video_lr=1e-5 \
   training.initialize_model_on_cpu=true \
-  training.save_steps=0 \
+  training.save_steps=2000 \
   training.save_full_states_for_resume=false \
   "training.finetune_ckpt_path=$source" \
   "training.reset_visual_projections=$reset_projections" \

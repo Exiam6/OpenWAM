@@ -16,10 +16,10 @@ fi
 
 foundation=/root/zifan/openwam-assets/foundation-checkpoint
 graft=/root/zifan/openwam-runs/rae_foundation_graft_calibrated_seed42
-data=/root/zifan/openwam-assets/robotwin-splits/train
+data=/root/zifan/openwam-assets/robotwin-splits/train/dataset
 run_root=/root/zifan/openwam-runs/wam_pilot_20261023
 
-if [[ ! -f "$data/../split_manifest.json" ]]; then
+if [[ ! -f "$data/../../split_manifest.json" ]]; then
   echo "Missing episode split manifest" >&2
   exit 1
 fi

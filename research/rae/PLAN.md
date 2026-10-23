@@ -22,9 +22,14 @@ training, or different demonstrations. Record and control each difference.
    preserve the three RoboTwin camera order and frame timing, pad only the
    patch border, and resample its 14-pixel grid to the released model's
    16-pixel latent grid. Record that spatial resampling as a method choice.
-2. Fit per-channel latent normalization on the **training split only**. Keep
-   the existing per-token normalization as a separate baseline; do not silently
-   change it in a resumed run.
+2. Fit per-channel latent normalization on the **training split only**. The
+   7,985-frame stride-16 pass yielded statistics at
+   `/root/zifan/openwam-runs/rae_feature_stats_stride16.pt`, SHA256
+   `c582c0c8dca54f0944d4d5a99dd1fc34a25948bd61313ba17ba61fd92d54b838`.
+   Raw channel means span -5.407 to 4.874 and standard deviations span
+   0.122 to 6.419. The calibrated DINOv2 path stores the mean/std as frozen
+   checkpoint buffers; the earlier per-token normalization stays a separate
+   ablation. Do not change normalization in a resumed run.
 3. Train a pixel decoder from frozen DINO patch features on training videos to
    make a representation autoencoder. Validate reconstruction on held-out
    demonstration videos. The decoder must not consume actions or test frames.
@@ -60,6 +65,8 @@ It trained for 1,000 steps on train-only frames; the selected step-1,000
 checkpoint reached dev normalized L1 0.12870. A single test read after
 selection gave RGB MAE 0.02844 and PSNR 23.15 dB over 1,002 sampled frames.
 These are reconstruction metrics, not robot-task improvement.
+That first decoder used per-token-normalized features. A calibrated RAE
+requires a separately trained decoder on the calibrated features.
 
 The released RoboTwin-Full checkpoint was trained on RoboTwin and may contain
 the ten selected tasks or episodes. It is therefore the **evaluation

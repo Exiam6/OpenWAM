@@ -25,6 +25,7 @@ from openwam.train.utils.visual_projection_reset import reset_visual_projections
 
 DONOR_SHA256 = "180a02653118b0f96da28a9cae9ec7b4c1c1e6cd0e4608b56c7b4884f8001d3d"
 DINO_SHA256 = "d73036b56966966d07975d696bde331762f37297e2f095de8cea0040c3aa0841"
+FEATURE_STATS_SHA256 = "c582c0c8dca54f0944d4d5a99dd1fc34a25948bd61313ba17ba61fd92d54b838"
 PROJECTIONS = (
     "video_backbone.dit.patch_embedding.",
     "video_backbone.dit.head.head.",
@@ -47,6 +48,8 @@ def build(args: argparse.Namespace) -> None:
         raise ValueError("Released donor checkpoint hash mismatch")
     if sha256(args.dino / "model.safetensors") != DINO_SHA256:
         raise ValueError("DINOv2 checkpoint hash mismatch")
+    if args.feature_stats is not None and sha256(args.feature_stats) != FEATURE_STATS_SHA256:
+        raise ValueError("Train-only feature statistics hash mismatch")
     output = args.output
     output.mkdir(parents=True, exist_ok=True)
     weight_output = output / "checkpoint_step_0.safetensors"
@@ -59,7 +62,11 @@ def build(args: argparse.Namespace) -> None:
     cfg = OmegaConf.load(args.donor / "config.yaml")
     with open_dict(cfg):
         cfg.model.video_backbone.from_scratch = True
-        cfg.model.video_backbone.encoder = {"name": "dinov2", "model_path": str(args.dino)}
+        cfg.model.video_backbone.encoder = {
+            "name": "dinov2",
+            "model_path": str(args.dino),
+            "feature_stats_path": str(args.feature_stats) if args.feature_stats else None,
+        }
     OmegaConf.save(cfg, output / "config.yaml")
     tokenizer = output / "tokenizer"
     if not tokenizer.exists():
@@ -100,12 +107,16 @@ def build(args: argparse.Namespace) -> None:
     vit = AutoModel.from_pretrained(str(args.dino), torch_dtype=torch.bfloat16).eval()
     model.video_backbone.video_encoder._m.load_state_dict(vit.state_dict(), strict=True)
     del vit
+    if args.feature_stats is not None:
+        stats = torch.load(args.feature_stats, map_location="cpu", weights_only=True)
+        model.video_backbone.video_encoder._set_feature_stats(stats["mean"], stats["std"])
     reset_names = reset_visual_projections(model, args.seed + 1009)
     model.save_checkpoint(str(temporary_weights))
     temporary_weights.replace(weight_output)
     record = {
         "donor_sha256": DONOR_SHA256,
         "dino_sha256": DINO_SHA256,
+        "feature_stats_sha256": FEATURE_STATS_SHA256 if args.feature_stats else None,
         "seed": args.seed,
         "matched_shared_tensors": len(matched),
         "dropped_native_vae_and_projection_tensors": len(donor_skipped),
@@ -126,6 +137,7 @@ if __name__ == "__main__":
         default=Path("/root/zifan/openwam-assets/foundation-checkpoint"),
     )
     parser.add_argument("--dino", type=Path, default=Path("/root/zifan/openwam-assets/dinov2-base"))
+    parser.add_argument("--feature-stats", type=Path, default=None)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--seed", type=int, default=42)
     build(parser.parse_args())

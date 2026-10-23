@@ -124,7 +124,14 @@ def train(args) -> None:
         generator=torch.Generator().manual_seed(args.seed),
     )
     dev_loader = DataLoader(dev_data, batch_size=args.batch_size, shuffle=False, num_workers=args.workers)
-    encoder = DinoV2VideoEncoder.from_pretrained(str(args.encoder)).to(device).eval()
+    encoder = (
+        DinoV2VideoEncoder.from_pretrained(
+            str(args.encoder),
+            feature_stats_path=str(args.feature_stats) if args.feature_stats else None,
+        )
+        .to(device)
+        .eval()
+    )
     encoder.requires_grad_(False)
     decoder = RepresentationPixelDecoder(in_channels=encoder.properties.z_dim, width=args.width).to(device).train()
     optimizer = torch.optim.AdamW(decoder.parameters(), lr=args.lr, weight_decay=0.01)
@@ -141,6 +148,7 @@ def train(args) -> None:
         "dev_frames": len(dev_data),
         "split_manifest_sha256": sha256(manifest),
         "dino_model_sha256": DINO_SHA256,
+        "feature_stats_sha256": sha256(args.feature_stats) if args.feature_stats else None,
         "source_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=repo, text=True).strip(),
     }
     (args.output / "run.json").write_text(json.dumps(run, indent=2, sort_keys=True) + "\n")
@@ -182,6 +190,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--splits", type=Path, default=Path("/root/zifan/openwam-assets/robotwin-splits"))
     parser.add_argument("--encoder", type=Path, default=Path("/root/zifan/openwam-assets/dinov2-base"))
+    parser.add_argument("--feature-stats", type=Path, default=None)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--steps", type=int, default=1000)
     parser.add_argument("--eval-every", type=int, default=100)

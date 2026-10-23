@@ -4,3 +4,4 @@ name: dinov2
 model_path: /path/to/facebook-dinov2-base
 svae_path: null
 svae_target_dim: null
+feature_stats_path: null  # optional train-only per-channel statistics; stored as checkpoint buffers

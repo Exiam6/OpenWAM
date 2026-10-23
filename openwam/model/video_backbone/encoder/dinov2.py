@@ -9,7 +9,9 @@ the DiT token count fixed. The resampling has no trainable parameters.
 from __future__ import annotations
 
 import math
+from pathlib import Path
 
+import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from einops import rearrange
@@ -54,6 +56,8 @@ class DinoV2VideoEncoder(DinoV3VideoEncoder):
             svae_config=svae_config,
         )
         self._vit_patch_size = int(patch_size)
+        self.register_buffer("_feature_mean", None)
+        self.register_buffer("_feature_std", None)
         self._m.requires_grad_(False)
         self._spec = VideoEncoderProperties(
             z_dim=self._spec.z_dim,
@@ -63,6 +67,49 @@ class DinoV2VideoEncoder(DinoV3VideoEncoder):
             pixel_decode=False,
             dit_patch_size=(1, 2, 2),
         )
+
+    def _set_feature_stats(self, mean: Tensor, std: Tensor) -> None:
+        channels = self.properties.z_dim
+        if tuple(mean.shape) != (channels,) or tuple(std.shape) != (channels,):
+            raise ValueError(f"Feature statistics must have {channels} channels")
+        if not torch.isfinite(mean).all() or not torch.isfinite(std).all() or (std <= 0).any():
+            raise ValueError("Feature statistics must be finite with positive standard deviations")
+        self._feature_mean = mean.detach().float().view(1, channels, 1, 1, 1)
+        self._feature_std = std.detach().float().view(1, channels, 1, 1, 1)
+
+    def batch_encode(self, video: Tensor) -> Tensor:
+        z = self._apply_svae(self._batch_encode_pooled_raw(video))
+        if self._feature_mean is None:
+            return self._apply_feature_norm(z)
+        return ((z.float() - self._feature_mean) / self._feature_std).to(z.dtype)
+
+    @classmethod
+    def from_pretrained(
+        cls, model_path: str, *, feature_stats_path: str | None = None, **kwargs
+    ) -> "DinoV2VideoEncoder":
+        model = super().from_pretrained(model_path, **kwargs)
+        if feature_stats_path is not None:
+            stats = torch.load(Path(feature_stats_path), map_location="cpu", weights_only=True)
+            model._set_feature_stats(stats["mean"], stats["std"])
+        return model
+
+    @classmethod
+    def from_skeleton(cls, components_entry: dict, *, device: str = "cpu", encoder_cfg=None, ckpt_dir=None):
+        model = super().from_skeleton(
+            components_entry,
+            device=device,
+            encoder_cfg=encoder_cfg,
+            ckpt_dir=ckpt_dir,
+        )
+        stats_path = (
+            encoder_cfg.get("feature_stats_path")
+            if isinstance(encoder_cfg, dict)
+            else getattr(encoder_cfg, "feature_stats_path", None)
+        )
+        if stats_path is not None:
+            channels = model.properties.z_dim
+            model._set_feature_stats(torch.zeros(channels), torch.ones(channels))
+        return model
 
     def _batch_encode_pooled_raw(self, video: Tensor) -> Tensor:
         if video.ndim != 5 or video.shape[1] != 3:

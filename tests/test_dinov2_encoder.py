@@ -76,3 +76,16 @@ def test_deploy_config_uses_dinov2_namespace(tmp_path):
     encoder.save_deploy_assets(str(target), cfg)
     assert (target / "dinov2" / "config.json").is_file()
     assert DinoV2VideoEncoder._resolve_config_dir(str(target)) == str(target / "dinov2")
+
+
+def test_train_only_channel_calibration_and_checkpoint_buffers():
+    encoder, _ = make_encoder()
+    encoder._set_feature_stats(torch.zeros(8), torch.full((8,), 2.0))
+    x = torch.ones(1, 3, 1, 384, 320)
+    actual = encoder.batch_encode(x)
+    torch.testing.assert_close(actual, torch.full_like(actual, 0.5))
+    assert "_feature_mean" in encoder.state_dict()
+    assert "_feature_std" in encoder.state_dict()
+
+    with pytest.raises(ValueError, match="positive standard deviations"):
+        encoder._set_feature_stats(torch.zeros(8), torch.zeros(8))

@@ -49,3 +49,8 @@ SHA256 `eaa21a50053e846057617aff7b0c1f2d019ed66e6ed34165130ec5148f72f91e`.
 The official reader finds 124,103 train windows over ten tasks. The separate
 dev root yields 14,228 validation windows with an **explicit reference** to
 this train statistics file; it does not calculate statistics on dev episodes.
+The selected HDF5 files expose no scene identifier or random seed in their
+root or top-level group attributes. Episode content hashes in the manifest
+establish file disjointness, but scene-level overlap cannot be proven from
+the released files alone. The future closed-loop evaluation must use fixed,
+documented task/scene seeds and report this limitation.

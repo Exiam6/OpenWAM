@@ -72,6 +72,10 @@ RGB MAE 0.02880 / PSNR 22.75 dB on the same 1,002-frame test sampling.
 Calibration did not improve this pixel-reconstruction metric. Its effect on
 WAM denoising and task success remains unmeasured; do not infer either from
 decoder reconstruction.
+Both stage-one decoders were trained on single frames. The current DINOv2
+WAM encoder has `pixel_decode=False`; these pilots do not yet reconstruct a
+9-frame generated clip from its 3 temporally pooled latent frames. A temporal
+decoder is required before reporting generated-video quality.
 
 The released RoboTwin-Full checkpoint was trained on RoboTwin and may contain
 the ten selected tasks or episodes. It is therefore the **evaluation

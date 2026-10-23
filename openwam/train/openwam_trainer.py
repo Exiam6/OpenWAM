@@ -131,6 +131,13 @@ class OpenWAMTrainer:
         else:
             resolved_arch = resolve_architecture_config(m)
             self.architecture = build_architecture(resolved_arch.registry_name, resolved_arch.params)
+        if bool(t.get("reset_visual_projections", False)):
+            if finetune_path is None or self._run_seed is None:
+                raise ValueError("reset_visual_projections requires finetune_ckpt_path and project.seed")
+            from openwam.train.utils.visual_projection_reset import reset_visual_projections
+
+            reset_names = reset_visual_projections(self.architecture, self._run_seed + 1009)
+            logger.info("Reset visual projections from seed %d: %s", self._run_seed + 1009, reset_names)
         logger.info(
             "Architecture: %s (framework=%s variant=%s)",
             resolved_arch.registry_name,

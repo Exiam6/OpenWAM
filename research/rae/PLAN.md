@@ -1,4 +1,4 @@
-# RAE visual representation study (preparation; no training run registered)
+# RAE visual representation study
 
 Source: OpenWAM `782e3133f674449e2986754cfc5f7c4e204835a2`.
 Worktree: `research/rae-visual-20261023`. The released RoboTwin-Full checkpoint
@@ -54,9 +54,30 @@ training, or different demonstrations. Record and control each difference.
   A trained model is not evidence of a visual-representation benefit until this
   comparison is complete.
 
-The evaluation hardware, data manifests, GPU time limit, stop rule, and model
-initialization hashes must be recorded in a separate run
-registration before allocating a training GPU. No GPU run is registered here.
+The stage-one decoder pilot was registered at
+`/root/zifan/openwam-runs/rae_decoder_20261023_seed42/registration.json`.
+It trained for 1,000 steps on train-only frames; the selected step-1,000
+checkpoint reached dev normalized L1 0.12870. A single test read after
+selection gave RGB MAE 0.02844 and PSNR 23.15 dB over 1,002 sampled frames.
+These are reconstruction metrics, not robot-task improvement.
+
+The released RoboTwin-Full checkpoint was trained on RoboTwin and may contain
+the ten selected tasks or episodes. It is therefore the **evaluation
+reproduction target only**, not the donor for this controlled comparison.
+The matched VAE/RAE pilot will instead use the released
+`OpenWAM-Alpha-Pretrain-Foundation-Model` checkpoint, revision
+`52df4e66c82c5c8b480adcc8d01f4db7415dfb56`, weight SHA256
+`180a02653118b0f96da28a9cae9ec7b4c1c1e6cd0e4608b56c7b4884f8001d3d`.
+The RAE graft retains every shared trunk tensor and the action head by
+name and shape, removes the native VAE, loads frozen DINOv2, and resets the
+two visual projections. The VAE control resets those same projections with
+the same per-run RNG seed. Width still differs (48 versus 768 channels), so
+projection capacity is a separate required ablation before attributing gains
+to representation quality. Register each WAM GPU run separately.
+
+This host has CUDA A100s but currently cannot initialize SAPIEN's required
+Vulkan RT renderer. Native closed-loop reproduction and the final paired
+success-rate evaluation remain gated on a working RT host.
 
 ## Related primary work
 

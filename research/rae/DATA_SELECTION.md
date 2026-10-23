@@ -34,3 +34,10 @@ assigns each task's 50 episodes by SHA256 of
 episodes. It creates separate symlink-only dataset roots, verifies all archive
 hashes, and writes a manifest with every episode file hash. All normalization
 statistics must be fitted from the train root and reused unchanged for dev/test.
+
+The complete episode manifest was materialized at
+`/root/zifan/openwam-assets/robotwin-splits/split_manifest.json` with SHA256
+`d492addcdd94f41b0c5819561e38bc0f3b0b39cfb650de15161142cd0339a1f2`.
+It contains 400 train, 50 dev, and 50 test episode links with no broken
+links. The archive SHA256 values above were rechecked before extraction and
+again before splitting.

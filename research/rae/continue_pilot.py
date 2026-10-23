@@ -133,7 +133,18 @@ def main() -> None:
             record("evaluating", rae_checkpoint_sha256=rae_sha, vae_checkpoint_sha256=vae_sha)
             evaluate("rae", rae_checkpoint)
             evaluate("vae", vae_checkpoint)
-            record("complete", rae_checkpoint_sha256=rae_sha, vae_checkpoint_sha256=vae_sha)
+            comparison = RUNS / "paired_dev_comparison.json"
+            run_logged(
+                [
+                    str(PYTHON), "research/rae/compare_teacher_forced.py",
+                    "--vae", str(RUNS / "vae/dev_teacher_forced.json"),
+                    "--rae", str(RUNS / "rae/dev_teacher_forced.json"),
+                    "--output", str(comparison),
+                ],
+                RUNS / "paired_dev_comparison.log",
+            )
+            record("complete", rae_checkpoint_sha256=rae_sha,
+                   vae_checkpoint_sha256=vae_sha, comparison=str(comparison))
         except BaseException as exc:
             record("failed", error=f"{type(exc).__name__}: {exc}")
             raise

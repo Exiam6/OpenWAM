@@ -67,6 +67,11 @@ selection gave RGB MAE 0.02844 and PSNR 23.15 dB over 1,002 sampled frames.
 These are reconstruction metrics, not robot-task improvement.
 That first decoder used per-token-normalized features. A calibrated RAE
 requires a separately trained decoder on the calibrated features.
+The matched 1,000-step calibrated decoder reached dev L1 0.12991 and test
+RGB MAE 0.02880 / PSNR 22.75 dB on the same 1,002-frame test sampling.
+Calibration did not improve this pixel-reconstruction metric. Its effect on
+WAM denoising and task success remains unmeasured; do not infer either from
+decoder reconstruction.
 
 The released RoboTwin-Full checkpoint was trained on RoboTwin and may contain
 the ten selected tasks or episodes. It is therefore the **evaluation
@@ -75,6 +80,9 @@ The matched VAE/RAE pilot will instead use the released
 `OpenWAM-Alpha-Pretrain-Foundation-Model` checkpoint, revision
 `52df4e66c82c5c8b480adcc8d01f4db7415dfb56`, weight SHA256
 `180a02653118b0f96da28a9cae9ec7b4c1c1e6cd0e4608b56c7b4884f8001d3d`.
+The released pretraining mixture includes simulation data; episode-level
+membership has not been audited, so this choice removes the known downstream
+RoboTwin fine-tune overlap but does not prove zero pretraining overlap.
 The RAE graft retains every shared trunk tensor and the action head by
 name and shape, removes the native VAE, loads frozen DINOv2, and resets the
 two visual projections. The VAE control resets those same projections with

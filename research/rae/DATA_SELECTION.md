@@ -41,3 +41,11 @@ The complete episode manifest was materialized at
 It contains 400 train, 50 dev, and 50 test episode links with no broken
 links. The archive SHA256 values above were rechecked before extraction and
 again before splitting.
+
+OpenWAM's shared action normalization file was computed from the 400 train
+episodes only (124,503 action timesteps) and saved at
+`/root/zifan/openwam-assets/robotwin-splits/train/dataset/meta/robotwin_clean_50_normalization_stats.npy`,
+SHA256 `eaa21a50053e846057617aff7b0c1f2d019ed66e6ed34165130ec5148f72f91e`.
+The official reader finds 124,103 train windows over ten tasks. The separate
+dev root yields 14,228 validation windows with an **explicit reference** to
+this train statistics file; it does not calculate statistics on dev episodes.

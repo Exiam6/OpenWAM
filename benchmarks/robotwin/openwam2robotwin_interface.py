@@ -58,7 +58,9 @@ from benchmarks.utils import WSPolicyClient, action_conversion, client, transpor
 # upstream task_config/_eval_step_limit.yml without touching the RoboTwin
 # source tree. Missing tasks keep their upstream value (RoboTwin falls back
 # to 1000 when neither side defines one).
-_STEP_LIMITS_PATH = os.path.join(os.path.dirname(__file__), "step_limits.yml")
+_STEP_LIMITS_PATH = os.environ.get(
+    "ROBOTWIN_STEP_LIMITS_PATH", os.path.join(os.path.dirname(__file__), "step_limits.yml")
+)
 
 
 def _load_step_lim_overrides(path: str) -> Dict[str, int]:

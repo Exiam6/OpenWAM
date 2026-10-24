@@ -173,6 +173,51 @@ def _prewarm_cuda_for_curobo() -> None:
         traceback.print_exc()
 
 
+def _configure_software_rt() -> None:
+    """Keep CPU Vulkan rendering off the CUDA-only OIDN interop path.
+
+    RoboTwin requests OIDN for every scene. SAPIEN 3.0.0b1 routes that path
+    through Vulkan/CUDA interop, which cannot map a Lavapipe CPU device to an
+    A100 CUDA device. Only the explicit software-rendering experiment changes
+    the denoiser; the upstream RT shader, samples, and path depth stay intact.
+    """
+    if os.environ.get("ROBOTWIN_SOFTWARE_RT") != "1":
+        return
+    if not os.environ.get("VK_ICD_FILENAMES"):
+        raise RuntimeError("ROBOTWIN_SOFTWARE_RT=1 requires an explicit CPU Vulkan ICD")
+
+    import sapien.render
+
+    original = sapien.render.set_ray_tracing_denoiser
+    original_spp = sapien.render.set_ray_tracing_samples_per_pixel
+    original_depth = sapien.render.set_ray_tracing_path_depth
+    spp = int(os.environ.get("ROBOTWIN_SOFTWARE_RT_SPP", "32"))
+    depth = int(os.environ.get("ROBOTWIN_SOFTWARE_RT_PATH_DEPTH", "8"))
+    if spp <= 0 or depth <= 0:
+        raise ValueError("software RT samples and path depth must be positive")
+
+    def set_denoiser(name: str) -> None:
+        if name == "oidn":
+            print("[render] software RT: OIDN replaced with none (CPU Vulkan cannot use CUDA interop)")
+            name = "none"
+        original(name)
+
+    sapien.render.set_ray_tracing_denoiser = set_denoiser
+
+    def set_spp(requested: int) -> None:
+        if requested != spp:
+            print(f"[render] software RT: samples per pixel {requested} -> {spp}")
+        original_spp(spp)
+
+    def set_depth(requested: int) -> None:
+        if requested != depth:
+            print(f"[render] software RT: path depth {requested} -> {depth}")
+        original_depth(depth)
+
+    sapien.render.set_ray_tracing_samples_per_pixel = set_spp
+    sapien.render.set_ray_tracing_path_depth = set_depth
+
+
 def _patch_warp_torch_namespace() -> None:
     """Provide the legacy ``warp.torch`` namespace expected by this cuRobo fork.
 
@@ -760,6 +805,7 @@ def main(argv: list[str] | None = None) -> int:
     elif argv is not None:
         sys.argv = [sys.argv[0], *raw_args]
     module = bootstrap_robotwin_module()
+    _configure_software_rt()
     operation = os.environ.get("ROBOTWIN_LABTASKER_OPERATION")
     if operation == "build_manifest":
         _install_manifest(module)

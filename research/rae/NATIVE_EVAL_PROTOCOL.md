@@ -7,6 +7,18 @@ RAE, the `dinov2/config.json` sidecar in addition to the `.safetensors` file.
 The current eight-A100 host has no working NVIDIA Vulkan ICD and cannot run
 the native renderer. CPU Lavapipe outcomes remain a separate diagnostic.
 
+The transfer manifest also lists verified RoboTwin and cuRobo Git bundles and
+the complete RoboTwin assets directory and tar archive. Restore cuRobo into
+`RoboTwin/envs/curobo` at tag `v0.7.8` (commit
+`d64c4b005459db10c5dd867d8b30a87d5bda9bdb`), then install it editable
+in the simulator environment with
+`pip install -e envs/curobo --no-build-isolation`. RoboTwin ignores this
+nested checkout, so its main Git bundle alone does not carry cuRobo. The
+official `script/_install.sh` also
+patches mplib's `planner.py` condition to remove `or collide`; apply that
+installer patch in the simulator environment. The native preflight now checks
+the cuRobo commit, import path, and planner patch before accepting the host.
+
 The current host's optional Tailscale userspace client exposes a local SOCKS5
 listener at `127.0.0.1:1055`. After that client has joined Hestia's tailnet,
 use `ssh -o 'ProxyCommand=python research/rae/socks5_ssh_proxy.py %h %p'`

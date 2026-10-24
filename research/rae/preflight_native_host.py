@@ -12,6 +12,7 @@ import sys
 from pathlib import Path
 
 ROBOTWIN_COMMIT = "0aeea2d669c0f8516f4d5785f0aa33ba812c14b4"
+CUROBO_COMMIT = "d64c4b005459db10c5dd867d8b30a87d5bda9bdb"
 POLICY_PACKAGES = {
     "torch": "2.7.1",
     "omegaconf": None,
@@ -79,6 +80,38 @@ def main() -> None:
     dirty_status, dirty_text = command(["git", "status", "--porcelain"], cwd=root)
     record("robotwin_clean", dirty_status == 0 and not dirty_text, dirty_text or "clean")
     record("robotwin_assets", (root / "assets").is_dir(), str(root / "assets"))
+
+    # RoboTwin's installer clones cuRobo into an ignored, nested checkout and
+    # patches mplib in site-packages. Neither change appears in RoboTwin's
+    # Git status or the package-version list, but both affect native planning.
+    curobo_root = root / "envs" / "curobo"
+    curobo_status, curobo_text = command(["git", "rev-parse", "HEAD"], cwd=curobo_root)
+    record("curobo_commit", curobo_status == 0 and curobo_text == CUROBO_COMMIT,
+           {"actual": curobo_text, "expected": CUROBO_COMMIT})
+    curobo_dirty_status, curobo_dirty_text = command(["git", "status", "--porcelain"], cwd=curobo_root)
+    record("curobo_clean", curobo_dirty_status == 0 and not curobo_dirty_text,
+           curobo_dirty_text or "clean")
+
+    simulator_probe = (
+        "import curobo,importlib.util,json,pathlib; "
+        "spec=importlib.util.find_spec('mplib'); "
+        "planner=pathlib.Path(spec.origin).parent/'planner.py' if spec else None; "
+        "source=planner.read_text() if planner and planner.is_file() else ''; "
+        "print(json.dumps({'curobo_file':str(pathlib.Path(curobo.__file__).resolve()),"
+        "'planner_file':str(planner) if planner else '',"
+        "'mplib_patch':'if np.linalg.norm(delta_twist) < 1e-4 or not within_joint_limit:' in source}))"
+    )
+    probe_status, probe_text = command([str(args.robotwin_python.absolute()), "-c", simulator_probe])
+    try:
+        simulator_info = json.loads(probe_text) if probe_status == 0 else {}
+    except json.JSONDecodeError:
+        simulator_info = {}
+    curobo_file = simulator_info.get("curobo_file", "")
+    record("curobo_import", probe_status == 0 and
+           curobo_file.startswith(str(curobo_root.resolve()) + os.sep),
+           curobo_file or probe_text[-500:])
+    record("mplib_planner_patch", simulator_info.get("mplib_patch") is True,
+           simulator_info.get("planner_file", probe_text[-500:]))
 
     def probe_python(label: str, executable: Path, packages: dict[str, str | None],
                      python_version: str) -> None:

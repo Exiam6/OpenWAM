@@ -221,6 +221,10 @@ checkpoints are written to the shared NFS under
 `/dev/shm`. Logs, metrics, and hashes are written persistently under
 `/root/zifan/openwam-runs/wam_multiseed_20261024`. The two additional seeds
 are not yet results and do not replace the native closed-loop success gate.
+After all three seeds have paired offline reports, use
+`research/rae/aggregate_multiseed.py` to verify identical task/window/noise
+settings and report the task-balanced mean across seeds plus a descriptive
+bootstrap over seeds, tasks, and paired windows.
 
 ## Related primary work
 

@@ -55,6 +55,7 @@ def compare(vae: dict, rae: dict) -> dict:
         "split_manifest_sha256": vae["split_manifest_sha256"],
         "action_stats_sha256": vae["action_stats_sha256"],
         "split": vae.get("split", "dev"),
+        "evaluation_noise_seed": vae["seed"],
         "windows": len(paired),
         "noise_repeats_per_window": vae["noise_repeats"],
         "vae_action_mean_across_tasks": vae_mean,

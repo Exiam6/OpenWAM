@@ -102,8 +102,7 @@ def labtasker_rows(registry: dict, *, episodes: int) -> tuple[list[dict], tuple[
                 if result is None:
                     raise ValueError(f"Invalid official Task result: {batch.id}")
                 manifest = load_manifest(Path(args["manifest_path"]), expected_manifest_hash=args["manifest_hash"])
-                if manifest.get("task") != args["task"] or manifest.get("mode") != mode or len(manifest["entries"]) < episodes:
-                    raise ValueError(f"Official manifest setting mismatch: {batch.id}")
+                rt.validate_manifest(manifest, args, minimum_entries=episodes)
                 for episode in result["episodes"]:
                     index = episode["episode"]
                     entry = manifest["entries"][index]

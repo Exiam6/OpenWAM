@@ -28,6 +28,7 @@ SELECTED = (
 MATCHED = tuple(f"seed{seed}_{kind}" for seed in (42, 43, 44) for kind in ("vae", "rae"))
 ABLATIONS = ("seed42_reconstruction_svae48", "seed42_action_svae48")
 MODELS = MATCHED + ABLATIONS + ("official",)
+OFFICIAL_SHA256 = "d07ff6f8cfb627ebf47313e65af38773fabcb3861d52fdc7c3bc5e7bee33f6fe"
 
 
 def digest(path: Path) -> str:
@@ -58,7 +59,12 @@ def load_checkpoints(path: Path, *, verify_bytes: bool) -> dict[str, dict[str, s
         sha = item["checkpoint_sha256"]
         if not isinstance(sha, str) or len(sha) != 64 or any(c not in "0123456789abcdef" for c in sha):
             raise ValueError(f"invalid checkpoint SHA256: {name}")
-        weight = directory / item.get("weights_file", "checkpoint_step_1000.safetensors")
+        expected_file = "checkpoint_step_118655.safetensors" if name == "official" else "checkpoint_step_1000.safetensors"
+        if item.get("weights_file", expected_file) != expected_file:
+            raise ValueError(f"wrong registered checkpoint step: {name}")
+        if name == "official" and sha != OFFICIAL_SHA256:
+            raise ValueError("released official checkpoint SHA256 mismatch")
+        weight = directory / expected_file
         if not weight.is_file() or not (directory / "config.yaml").is_file():
             raise FileNotFoundError(f"incomplete checkpoint directory: {name}: {directory}")
         if not (directory / "normalization_stats.npy").is_file() or not (directory / "tokenizer").is_dir():

@@ -56,6 +56,16 @@ class NativeEvalRunnerTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "SHA256 mismatch"):
                 load_checkpoints(registry, verify_bytes=True)
 
+    def test_wrong_checkpoint_step_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            registry = root / "checkpoints.json"
+            registry.write_text(json.dumps({"seed42_vae": {"directory": str(root),
+                                                           "weights_file": "checkpoint_step_800.safetensors",
+                                                           "checkpoint_sha256": "0" * 64}}))
+            with self.assertRaisesRegex(ValueError, "wrong registered checkpoint step"):
+                load_checkpoints(registry, verify_bytes=False)
+
 
 if __name__ == "__main__":
     unittest.main()

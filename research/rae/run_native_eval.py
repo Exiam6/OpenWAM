@@ -88,6 +88,19 @@ def plan(models: dict | None = None) -> list[tuple[str, str, str]]:
     return stages
 
 
+def reconcile_state(state: dict | None, models: dict) -> dict:
+    """Preserve submitted IDs while adding stages for newly trained checkpoints."""
+    if state is None:
+        state = {"models": {}, "submission_ids": {}, "completed": []}
+    for name, previous in state["models"].items():
+        if models.get(name) != previous:
+            raise ValueError(f"registered checkpoint changed since native submission: {name}")
+    state["models"] = models
+    for name, _, _ in plan(models):
+        state["submission_ids"].setdefault(name, f"native-{uuid.uuid4().hex[:12]}")
+    return state
+
+
 def stage_args(stage: str, operation: str, mode: str, args: argparse.Namespace, models: dict) -> list[str]:
     manifest = args.run_dir / "manifests"
     command = [str(args.orchestrator_python), "benchmarks/robotwin/labtasker_submit.py",
@@ -205,15 +218,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parse(argv)
     models = load_checkpoints(args.checkpoints, verify_bytes=not args.skip_checkpoint_hash)
     state_path = args.run_dir / "controller-state.json"
-    if state_path.exists():
-        state = json.loads(state_path.read_text())
-        for name, previous in state["models"].items():
-            if models.get(name) != previous:
-                raise ValueError(f"registered checkpoint changed since native submission: {name}")
-        state["models"] = models
-    else:
-        state = {"models": models, "submission_ids":
-                 {name: f"native-{uuid.uuid4().hex[:12]}" for name, _, _ in plan()}, "completed": []}
+    state = reconcile_state(json.loads(state_path.read_text()) if state_path.exists() else None, models)
     if not args.dry_run:
         write_json(state_path, state)
     args.submission_ids = state["submission_ids"]

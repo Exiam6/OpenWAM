@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 from types import SimpleNamespace
 
-from research.rae.run_native_eval import MODELS, load_checkpoints, plan, write_registries
+from research.rae.run_native_eval import MODELS, load_checkpoints, plan, reconcile_state, write_registries
 
 
 class NativeEvalRunnerTests(unittest.TestCase):
@@ -22,6 +22,18 @@ class NativeEvalRunnerTests(unittest.TestCase):
         self.assertEqual([stage[0] for stage in stages],
                          ["manifest_clean", "manifest_randomized", "seed42_vae", "seed42_rae",
                           "official_clean", "official_randomized"])
+
+    def test_resume_adds_stages_without_changing_submitted_ids(self):
+        first = {"seed42_vae": {"checkpoint_sha256": "a" * 64},
+                 "seed42_rae": {"checkpoint_sha256": "b" * 64}}
+        state = reconcile_state(None, first)
+        submitted = dict(state["submission_ids"])
+        state["completed"] = ["manifest_clean", "manifest_randomized", "seed42_vae"]
+        later = {**first, "seed43_vae": {"checkpoint_sha256": "c" * 64}}
+        resumed = reconcile_state(state, later)
+        self.assertEqual({name: resumed["submission_ids"][name] for name in submitted}, submitted)
+        self.assertIn("seed43_vae", resumed["submission_ids"])
+        self.assertEqual(resumed["completed"], ["manifest_clean", "manifest_randomized", "seed42_vae"])
 
     def test_registries_reuse_seed42_vae_and_official_checkpoint(self):
         with tempfile.TemporaryDirectory() as temporary:

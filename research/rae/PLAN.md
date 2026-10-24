@@ -229,6 +229,13 @@ bootstrap over seeds, tasks, and paired windows.
 to finish and writes the aggregate JSON files and a concise `SUMMARY.md` under
 the persistent multi-seed run directory only if both new seeds completed.
 
+For the visual-head width question, collect frozen DINOv2 train-split features
+from a deterministic 8,192-window subset and fit a frozen 768-to-48-channel
+S-VAE reducer. The collector now records the selected-index SHA256 and keeps
+the full-dataset traversal as its default. A 48-channel DINO/S-VAE WAM is a
+separate ablation against the 48-channel native VAE: its reducer is an added
+learned component, so any difference cannot be assigned solely to head width.
+
 ## Related primary work
 
 - Zheng et al., *Diffusion Transformers with Representation Autoencoders*,

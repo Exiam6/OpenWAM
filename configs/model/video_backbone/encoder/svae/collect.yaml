@@ -9,3 +9,4 @@ defaults:
 
 svae_collect:
   output_dir: outputs/openwam_svae  # script writes <encoder_name>_<timestamp>/ with feature shards + stats.pt
+  max_clips: null  # optional deterministic train-only subset; null traverses the full dataset

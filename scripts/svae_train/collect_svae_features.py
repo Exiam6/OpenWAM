@@ -2,7 +2,8 @@
 
 Builds the same encoder + dataloader production training uses (via the
 ``configs/model/video_backbone/encoder/svae/collect.yaml`` Hydra chain), then iterates the
-FULL dataset exactly once — the same single-epoch traversal training does — and
+full dataset once by default. ``svae_collect.max_clips`` selects a fixed
+train-only subset when the full feature archive would exceed storage. It
 runs every clip through ``encoder.batch_encode_pooled_for_svae_training`` to
 harvest the POST-POOL, pre-feature_norm features the S-VAE compresses. Each clip
 yields a ``(raw_dim, T_lat, h, w)`` tensor — 1 un-pooled cond latent + the
@@ -13,8 +14,8 @@ Traversal matches training: the dataset, ``collate_fn=list``, ``num_workers``
 and the ``cfg.project.seed`` worker-seeding (so the train-time augmentation in
 ``openwam/dataloader/transforms/video.py`` is reproduced) are all inherited from
 ``train.yaml``. Across ranks the dataset is partitioned by a *non-padding*
-strided sampler over one shared shuffled permutation, so the union is the full
-dataset with no duplicates (unlike ``DistributedSampler``, which pads).
+strided sampler over one shared shuffled permutation, so the union is the
+selected set with no duplicates (unlike ``DistributedSampler``, which pads).
 
 Features are written in bounded-size chunks (``features_rank{r}_part{p}.pt``) so
 a full-dataset collection never has to fit in host RAM; a global per-channel
@@ -37,6 +38,7 @@ Usage (single node, auto-detect GPUs):
 from __future__ import annotations
 
 import datetime
+import hashlib
 import logging
 import os
 import sys
@@ -174,12 +176,22 @@ def main(cfg: DictConfig) -> None:
     bs = int(cfg.training.batch_size)
     nw = int(cfg.training.dataset_num_workers)
 
-    # Full-dataset, single-epoch traversal. One shared shuffled permutation
+    # One shared shuffled permutation, optionally capped to a fixed subset.
     # (same seed on every rank) sliced by a strided non-padding sampler ->
-    # disjoint per-rank shards whose union is the whole dataset, no duplicates.
+    # disjoint per-rank shards whose union is the selected set, no duplicates.
     gen = torch.Generator()
     gen.manual_seed(shuffle_seed)
     perm = torch.randperm(len(dataset), generator=gen).tolist()
+    max_clips = cfg.svae_collect.get("max_clips")
+    if max_clips is not None:
+        max_clips = int(max_clips)
+        if not 1 <= max_clips <= len(dataset):
+            raise ValueError(f"svae_collect.max_clips must be in [1, {len(dataset)}], got {max_clips}")
+        perm = perm[:max_clips]
+    # Hash the exact selected window indices, not merely the seed and cap.
+    selection_sha256 = hashlib.sha256(
+        torch.tensor(perm, dtype=torch.int64).numpy().astype("<i8").tobytes()
+    ).hexdigest()
     my_indices = perm[rank::world_size]
 
     loader_kwargs: dict = dict(
@@ -281,6 +293,9 @@ def main(cfg: DictConfig) -> None:
                 "encoder_name": encoder_name,
                 "world_size": world_size,
                 "seed": shuffle_seed,
+                "dataset_total_clips": len(dataset),
+                "selected_clips": len(perm),
+                "selected_indices_sha256": selection_sha256,
                 "wallclock_seconds": time.time() - t0,
             },
             str(stats_path),

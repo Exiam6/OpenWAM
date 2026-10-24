@@ -12,6 +12,16 @@ the native renderer. CPU Lavapipe outcomes remain a separate diagnostic.
 - Build one sealed RoboTwin manifest per task with the native RTX renderer.
   Reuse **the same manifest hash** for all six matched checkpoints: native
   VAE and DINOv2 RAE at training seeds 42, 43, and 44.
+- The original 50 demonstrations per selected task have scene seeds in
+  `[0, 167]`; `seed.txt` maps episode order to those seeds. The frozen
+  train/dev/test split has no episode overlap. RoboTwin's evaluator starts
+  candidate scene seeds at `100000`, so its native manifest is scene-disjoint
+  from these demonstrations when that evaluator rule is preserved. The
+  per-task seed-file hashes and split mapping are recorded in
+  `/root/zifan/openwam-runs/robotwin_native_seed_overlap_audit.json`
+  (SHA256 `7fef743052e3ac59155d471f0f0b6d66632c4814a01aa0f824e7009529af3134`).
+  This audit does not establish that the Foundation donor's pretraining
+  mixture excludes the same scenes.
 - Use `checkpoint_step_1000.safetensors` for every matched checkpoint. Verify
   each file against its registered SHA256 and the saved source commit marker.
 - Evaluate the released RoboTwin-Full checkpoint separately on the complete

@@ -1,2 +1,3 @@
 labtasker==2.6.0
+numpy==2.5.3
 PyYAML>=6.0

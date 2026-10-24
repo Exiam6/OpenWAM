@@ -17,7 +17,7 @@ POLICY_PACKAGES = {
     "torch": "2.7.1",
     "omegaconf": None,
 }
-ORCHESTRATOR_PACKAGES = {"labtasker": "2.6.0", "omegaconf": None}
+ORCHESTRATOR_PACKAGES = {"labtasker": "2.6.0", "omegaconf": None, "numpy": "2.5.3"}
 ROBOTWIN_PACKAGES = {
     "torch": "2.4.1",
     "sapien": "3.0.0b1",

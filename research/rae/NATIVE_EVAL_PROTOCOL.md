@@ -60,5 +60,20 @@ the intended NVIDIA GPU. The native path must not set `ROBOTWIN_SOFTWARE_RT`,
 5. Preserve each checkpoint SHA256, source commit, manifest SHA, full Task
    results, simulator logs, and summary tables with the final report.
 
+After all six matched submissions finish, create a registry JSON with keys
+`"42"`, `"43"`, and `"44"`. Each has `"vae"` and `"rae"` entries containing
+`submission_id`, the absolute `checkpoint` file path, and
+`checkpoint_sha256`. Then run:
+
+```bash
+python research/rae/summarize_native_paired.py \
+  --registry /path/to/paired-submissions.json \
+  --output /path/to/native-paired-summary.json
+```
+
+The summarizer rejects incomplete batches, checkpoint hash changes, duplicated
+episodes, manifest or scene mismatches, and incorrect task coverage before
+calculating the three-seed paired success delta and 20,000-draw interval.
+
 Current offline action loss and CPU-rendered episodes do not satisfy this
 native success-rate gate.

@@ -75,6 +75,10 @@ def evaluate(args: argparse.Namespace) -> None:
 
     _, model, _ = build_architecture_from_ckpt_dir(str(args.checkpoint), weights_required=True)
     model.set_dtype_device(torch.bfloat16, torch.device("cuda:0"))
+    if args.video_shift is not None:
+        if args.video_shift <= 0:
+            raise ValueError("--video-shift must be positive")
+        model.video_backbone._shift_video = float(args.video_shift)
     model.init_training_schedulers(1000)
     model.set_training_runtime(
         use_gradient_checkpointing=False,
@@ -126,6 +130,13 @@ def evaluate(args: argparse.Namespace) -> None:
         "windows": results,
         "scope": "Teacher-forced loss proxy only; no closed-loop success conclusion",
     }
+    if args.video_shift is not None:
+        report["evaluation_video_shift"] = float(args.video_shift)
+        report["trained_video_shift"] = float(cfg.model.video_backbone.shift_video)
+        report["scope"] = (
+            "Post-training video-noise shift sensitivity on teacher-forced loss; "
+            "the checkpoint was trained at a different shift and no closed-loop conclusion follows"
+        )
     if args.output.exists():
         raise FileExistsError(args.output)
     args.output.parent.mkdir(parents=True, exist_ok=True)
@@ -141,4 +152,6 @@ if __name__ == "__main__":
     parser.add_argument("--noise-repeats", type=int, default=4)
     parser.add_argument("--seed", type=int, default=20261023)
     parser.add_argument("--split", choices=("dev", "test"), default="dev")
+    parser.add_argument("--video-shift", type=float, default=None,
+                        help="Diagnostic override of video scheduler shift after loading weights")
     evaluate(parser.parse_args())

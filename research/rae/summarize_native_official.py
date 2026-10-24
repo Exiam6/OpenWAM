@@ -11,6 +11,7 @@ from pathlib import Path
 from benchmarks.utils.eval_manifest import load_manifest
 
 MODES = ("demo_clean", "demo_randomized")
+OFFICIAL_CHECKPOINT_SHA256 = "d07ff6f8cfb627ebf47313e65af38773fabcb3861d52fdc7c3bc5e7bee33f6fe"
 
 
 def sha256_file(path: Path) -> str:
@@ -74,7 +75,7 @@ def labtasker_rows(registry: dict, *, episodes: int) -> tuple[list[dict], tuple[
     if len(checkpoint_paths) != 1 or len(checkpoint_hashes) != 1:
         raise ValueError("Both official modes must use the same checkpoint")
     checkpoint = checkpoint_paths.pop()
-    if sha256_file(checkpoint) != checkpoint_hashes.pop():
+    if checkpoint_hashes.pop() != OFFICIAL_CHECKPOINT_SHA256 or sha256_file(checkpoint) != OFFICIAL_CHECKPOINT_SHA256:
         raise ValueError("Released checkpoint SHA256 mismatch")
 
     rows = []

@@ -130,5 +130,20 @@ The summarizer rejects incomplete batches, checkpoint hash changes, duplicated
 episodes, manifest or scene mismatches, and incorrect task coverage before
 calculating the three-seed paired success delta and 20,000-draw interval.
 
+Copy the two audited native summary JSON files back to the A100 host after the
+offline training and ablation report is complete. Then generate the combined
+result document with:
+
+```bash
+python research/rae/build_complete_native_results.py \
+  --paired /path/to/native-paired-summary.json \
+  --official /path/to/native-official-summary.json \
+  --output /root/zifan/openwam-runs/OPENWAM_RAE_COMPLETE_RESULTS.md
+```
+
+This final gate requires the 6,000 matched episode rows and the separate
+10,000-episode official benchmark, along with completed offline and ablation
+states, before writing the combined report.
+
 Current offline action loss and CPU-rendered episodes do not satisfy this
 native success-rate gate.

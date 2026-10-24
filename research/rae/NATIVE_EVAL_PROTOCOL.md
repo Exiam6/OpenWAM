@@ -83,6 +83,22 @@ RoboTwin-Full checkpoint, reusing its mode's manifest directory. This produces
 10,000 attempted episodes in total. Keep these submission IDs separate from
 the six matched-checkpoint submissions.
 
+After both official submissions finish, create a registry JSON with keys
+`"demo_clean"` and `"demo_randomized"`. Each entry contains its
+`submission_id`, the absolute `checkpoint` file path, and its
+`checkpoint_sha256`; both entries must identify the same released checkpoint.
+Then run:
+
+```bash
+python research/rae/summarize_native_official.py \
+  --registry /path/to/official-submissions.json \
+  --output /path/to/native-official-summary.json
+```
+
+This audit requires every one of the 50 tasks and 100 distinct episodes per
+task in each mode, verifies the sealed manifest and checkpoint, and refuses
+partial or technically failed submissions before reporting success rates.
+
 ## Acceptance and reporting
 
 1. Require all expected Labtasker batches to succeed. Technical failures are

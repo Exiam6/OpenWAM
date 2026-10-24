@@ -55,10 +55,29 @@ and remote GPU before transferring checkpoints or starting Workers.
 
 The existing `benchmarks/robotwin/labtasker_submit.py` and
 `labtasker_worker.py` implement sealed manifest construction, exact episode
-selection, bounded batch retries, and structured per-episode results. Install
-`benchmarks/robotwin/requirements-labtasker.txt` in the **RTX host's** OpenWAM
-policy environment and follow `benchmarks/robotwin/LABTASKER.md`. Keep the
-manifest cache, Labtasker database, and run logs on persistent storage.
+selection, bounded batch retries, and structured per-episode results. Use
+three Python environments on the RTX host: an orchestration Python 3.12 with
+`benchmarks/robotwin/requirements-labtasker.txt`, an OpenWAM policy Python
+3.12 with the pinned model dependencies, and a RoboTwin simulator Python 3.10.
+Run the submitter and workers from the orchestration environment; give each
+worker `--server-python /path/to/policy/bin/python` and
+`--robotwin-python /path/to/robotwin/bin/python`. The worker launches the
+policy server in the specified environment. This keeps Labtasker's newer
+OmegaConf dependency away from the pinned policy environment. Follow
+`benchmarks/robotwin/LABTASKER.md` for the queue setup and keep the manifest
+cache, Labtasker database, and run logs on persistent storage.
+
+Before any submission, run this gate from the orchestration environment. It
+checks the NVIDIA Vulkan RT extension, GPU, exact RoboTwin commit and assets,
+and all three Python environments; archive the JSON with the native results.
+
+```bash
+python research/rae/preflight_native_host.py \
+  --robotwin-root /path/to/RoboTwin \
+  --robotwin-python /path/to/robotwin/bin/python \
+  --policy-python /path/to/policy/bin/python \
+  --output /path/to/persistent/native-preflight.json
+```
 
 For the selected 10 tasks, submit the manifest build with:
 

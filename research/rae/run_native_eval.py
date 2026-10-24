@@ -188,6 +188,23 @@ def write_registries(args: argparse.Namespace, models: dict) -> None:
         write_json(args.run_dir / f"{name}-submissions.json", value)
 
 
+def audit_summary(name: str, args: argparse.Namespace) -> None:
+    """Reaudit an existing summary before accepting a resumed controller run."""
+    output = args.run_dir / f"native-{name}-summary.json"
+    candidate = args.run_dir / f".native-{name}-summary.{uuid.uuid4().hex}.json"
+    try:
+        subprocess.run([str(args.orchestrator_python), "-m", f"research.rae.summarize_native_{name}",
+                        "--registry", str(args.run_dir / f"{name}-submissions.json"),
+                        "--output", str(candidate)], cwd=ROOT, check=True)
+        if output.exists():
+            if json.loads(output.read_text()) != json.loads(candidate.read_text()):
+                raise ValueError(f"{name}: existing native summary differs from current audit")
+        else:
+            candidate.replace(output)
+    finally:
+        candidate.unlink(missing_ok=True)
+
+
 def parse(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--checkpoints", type=Path, required=True, help="Host-local registry of available checkpoint directories and SHA256 values")
@@ -254,12 +271,8 @@ def main(argv: list[str] | None = None) -> int:
             print(f"Pending checkpoints: {sorted(set(MODELS) - set(models))}", flush=True)
             return 0
         write_registries(args, models)
-        for name, module in (("paired", "summarize_native_paired"),
-                             ("ablation", "summarize_native_ablation"),
-                             ("official", "summarize_native_official")):
-            subprocess.run([str(args.orchestrator_python), "-m", f"research.rae.{module}",
-                            "--registry", str(args.run_dir / f"{name}-submissions.json"),
-                            "--output", str(args.run_dir / f"native-{name}-summary.json")], cwd=ROOT, check=True)
+        for name in ("paired", "ablation", "official"):
+            audit_summary(name, args)
     finally:
         stop_workers(active_workers)
     return 0

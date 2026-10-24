@@ -5,8 +5,11 @@ import tempfile
 import unittest
 from pathlib import Path
 from types import SimpleNamespace
+from unittest.mock import patch
 
-from research.rae.run_native_eval import MODELS, load_checkpoints, plan, reconcile_state, write_registries
+from research.rae.run_native_eval import (
+    MODELS, audit_summary, load_checkpoints, plan, reconcile_state, write_registries,
+)
 
 
 class NativeEvalRunnerTests(unittest.TestCase):
@@ -34,6 +37,23 @@ class NativeEvalRunnerTests(unittest.TestCase):
         self.assertEqual({name: resumed["submission_ids"][name] for name in submitted}, submitted)
         self.assertIn("seed43_vae", resumed["submission_ids"])
         self.assertEqual(resumed["completed"], ["manifest_clean", "manifest_randomized", "seed42_vae"])
+
+    def test_resume_reaudits_existing_summary(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            output = root / "native-paired-summary.json"
+            args = SimpleNamespace(run_dir=root, orchestrator_python=Path("/python"))
+
+            def summarize(command, **_):
+                Path(command[command.index("--output") + 1]).write_text(json.dumps({"registered_rows": 6000}))
+
+            with patch("research.rae.run_native_eval.subprocess.run", side_effect=summarize):
+                audit_summary("paired", args)
+                self.assertEqual(json.loads(output.read_text()), {"registered_rows": 6000})
+                audit_summary("paired", args)
+                output.write_text(json.dumps({"registered_rows": 5999}))
+                with self.assertRaisesRegex(ValueError, "differs from current audit"):
+                    audit_summary("paired", args)
 
     def test_registries_reuse_seed42_vae_and_official_checkpoint(self):
         with tempfile.TemporaryDirectory() as temporary:

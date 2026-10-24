@@ -184,14 +184,18 @@ the same `vk_meta_get_pipeline_layout` address in `libvulkan_lvp.so`. These
 are technical failures, not policy failures. An isolated Mesa 26.2.5 install
 at `/root/zifan/openwam-envs/lavapipe-rt-2625` completed 100-step repeats of
 `hanging_mug` and `open_microwave` at the same initial scene seed and policy;
-26.2.4 had crashed at steps 51 and 3 respectively. The full paired sweep now
-uses `research/rae/run_robotwin_cpu_oidn_mesa2625.sh` and writes to
+26.2.4 had crashed at steps 51 and 3 respectively. The completed paired sweep
+used `research/rae/run_robotwin_cpu_oidn_mesa2625.sh` and wrote to
 `/root/zifan/openwam-runs/robotwin_rt_eval_20261024/paired_1spp_cpu_oidn_mesa2625`.
 Each task records the number of process attempts; one technical retry is
 allowed, and failed attempts retain their logs. The released-checkpoint
-sanity sweep is queued by `research/rae/continue_official_after_paired_mesa2625.sh`
-after all paired task attempts finish. The summary reports terminal technical
-failures separately from policy success.
+sanity sweep was started by `research/rae/continue_official_after_paired_mesa2625.sh`
+after all paired task attempts finished. The paired summary records 6/20
+completed episodes, 14 terminal technical renderer failures, and two
+matched-scene VAE/RAE task pairs with 0/2 successes for each model. It
+reports terminal technical failures separately from policy success. The
+sample is too small and too far from the native render domain for a
+success-rate claim.
 The 26.2.5 build also crashed in a first full-length `beat_block_hammer`
 attempt at step 97 and a first `hanging_mug` attempt at step 30. A retry
 completed all 400 `beat_block_hammer` steps, and the `hanging_mug` retry
@@ -206,9 +210,9 @@ Mesa 26.1.6 was tested in a separate full-length `beat_block_hammer` process,
 with a separate policy server and GPU pair. It also segfaulted, at step
 354/400. The observed CPU Vulkan failures span 26.1.6, 26.2.4, and 26.2.5;
 short smokes and a single completed retry do not establish simulator
-reliability. The ongoing exploratory sweep continues to record technical
-errors explicitly, while the held-out offline WAM test comparison proceeds
-without the simulator.
+reliability. The exploratory sweep recorded technical errors explicitly;
+the held-out offline WAM test comparison was completed independently of the
+simulator.
 
 Two further matched WAM seeds (43 and 44) are prepared in
 `research/rae/run_additional_seeds.py`. The runner waits for the registered

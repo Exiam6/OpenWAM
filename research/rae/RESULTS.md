@@ -41,6 +41,25 @@ higher on the last 100, consistent with the held-out action-loss ranking.
 The video losses in those logs have different targets and cannot be ranked
 across the two variants.
 
+### Post-training video-noise shift sensitivity
+
+Both checkpoints were trained at video shift 5. Changing only the evaluation
+video scheduler on the same 100 dev windows and four fixed noise draws per
+window gave the following teacher-forced action losses:
+
+| Evaluation shift | VAE | RAE | RAE − VAE |
+|---:|---:|---:|---:|
+| 1 | 0.0190375 | 0.0236975 | +0.0046601 |
+| 5 (training setting) | 0.0201182 | 0.0239227 | +0.0038045 |
+| 10 | 0.0209389 | 0.0241404 | +0.0032015 |
+
+RAE remains worse on this offline metric at every tested shift. The gap
+narrows at shift 10 because both variants' losses increase, so this does not
+show a useful RAE improvement. These are fixed-checkpoint evaluations, not
+models retrained at the alternate shifts or closed-loop results. Registration,
+per-window values, and the comparison are under
+`/root/zifan/openwam-runs/wam_pilot_20261023/video_shift_sensitivity`.
+
 ### Held-out test by task
 
 Each row averages ten windows and four noise draws per window. The difference

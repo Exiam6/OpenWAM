@@ -248,6 +248,14 @@ The extra reducer and its 8,192-window stage-one subset remain explicit
 differences, so this is a width-matched ablation rather than a pure
 representation-only causal comparison.
 
+The post-training video-noise shift sensitivity check is complete on dev.
+Both seed-42 checkpoints were trained at shift 5 and evaluated at shifts 1,
+5, and 10 on the same 100 windows and four noise draws. RAE action loss was
+higher at all three shifts; see `RESULTS.md` and the registered reports under
+`/root/zifan/openwam-runs/wam_pilot_20261023/video_shift_sensitivity`.
+This diagnostic does not replace training a model at a different shift or
+measuring closed-loop success.
+
 ## Related primary work
 
 - Zheng et al., *Diffusion Transformers with Representation Autoencoders*,

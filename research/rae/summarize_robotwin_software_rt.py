@@ -66,13 +66,24 @@ def summarize(root: Path) -> dict:
                     entry["result_files"] = len(result_files)
                 else:
                     value = float(result_files[0].read_text(encoding="utf-8").splitlines()[-1])
-                    if value not in (0.0, 1.0):
-                        raise ValueError(f"Expected one-episode binary rate, got {value}: {result_files[0]}")
-                    entry["state"] = "complete"
-                    entry["success"] = bool(value)
-                    entry["result_file"] = str(result_files[0])
                     log_file = root / variant / f"{task}.log"
                     log = log_file.read_text(encoding="utf-8", errors="replace")
+                    plain_log = re.sub(r"\x1b\[[0-9;]*m", "", log)
+                    rates = re.findall(r"Success rate:\s*(\d+)/(\d+)", plain_log)
+                    if not rates:
+                        raise ValueError(f"Missing success count in {log_file}")
+                    successes, episodes = map(int, rates[-1])
+                    if episodes != 1 or successes not in (0, 1):
+                        raise ValueError(f"Expected one completed episode, got {successes}/{episodes}: {log_file}")
+                    # RoboTwin hardcodes test_num=100 when writing _result.txt,
+                    # although ROBOTWIN_TEST_NUM=1 caps the evaluation loop.
+                    # The log contains the actual completed-episode count.
+                    if not any(abs(value - expected) < 1e-9 for expected in (successes / 100, successes / episodes)):
+                        raise ValueError(f"Result file disagrees with completed episode: {value}: {result_files[0]}")
+                    entry["state"] = "complete"
+                    entry["success"] = bool(successes)
+                    entry["raw_result_rate"] = value
+                    entry["result_file"] = str(result_files[0])
                     seeds = re.findall(r"current seed:\s*\x1b\[[0-9;]*m?(\d+)", log)
                     if not seeds:
                         seeds = re.findall(r"current seed:.*?(\d{5,})", log)

@@ -27,6 +27,24 @@ records and checkpoint hashes are in `paired_dev_comparison.json`,
 `paired_test_comparison.json`, and `paired_test_uncertainty.json` under
 `/root/zifan/openwam-runs/wam_pilot_20261023`.
 
+### Held-out test by task
+
+Each row averages ten windows and four noise draws per window. The difference
+is RAE minus VAE, so a positive value favors VAE on this offline metric.
+
+| Task | VAE | RAE | Difference |
+|---|---:|---:|---:|
+| beat block hammer | 0.0148522 | 0.0233269 | +0.0084747 |
+| hanging mug | 0.0171325 | 0.0202819 | +0.0031495 |
+| open microwave | 0.0088642 | 0.0060661 | −0.0027981 |
+| place bread skillet | 0.0239306 | 0.0338496 | +0.0099190 |
+| place burger fries | 0.0105782 | 0.0181544 | +0.0075762 |
+| place dual shoes | 0.0374516 | 0.0462277 | +0.0087761 |
+| shake bottle horizontally | 0.0246101 | 0.0259697 | +0.0013595 |
+| stack blocks three | 0.0152071 | 0.0219840 | +0.0067768 |
+| stack bowls three | 0.0195595 | 0.0243716 | +0.0048120 |
+| stack bowls two | 0.0115250 | 0.0150292 | +0.0035042 |
+
 ## Closed-loop status
 
 The A100s expose CUDA but no NVIDIA Vulkan graphics device. CPU Mesa Lavapipe

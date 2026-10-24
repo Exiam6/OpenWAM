@@ -57,6 +57,13 @@ workers on the RTX device(s) and verify that the selected Vulkan renderer is
 the intended NVIDIA GPU. The native path must not set `ROBOTWIN_SOFTWARE_RT`,
 `ROBOTWIN_SOFTWARE_RASTER`, or a Lavapipe `VK_ICD_FILENAMES`.
 
+For the released-checkpoint reproduction, build separate manifests for the
+full 50-task `demo_clean` and `demo_randomized` modes, each with `--tasks all`
+and `--episodes 100`. Submit one `run_eval` job per mode against the released
+RoboTwin-Full checkpoint, reusing its mode's manifest directory. This produces
+10,000 attempted episodes in total. Keep these submission IDs separate from
+the six matched-checkpoint submissions.
+
 ## Acceptance and reporting
 
 1. Require all expected Labtasker batches to succeed. Technical failures are

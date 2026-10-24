@@ -60,6 +60,22 @@ models retrained at the alternate shifts or closed-loop results. Registration,
 per-window values, and the comparison are under
 `/root/zifan/openwam-runs/wam_pilot_20261023/video_shift_sensitivity`.
 
+### 48-channel S-VAE reducer validation
+
+A 768-to-48-channel DINOv2 S-VAE was trained for 1,000 steps on a fixed
+8,192-window subset of the training split. On 100 episode-disjoint dev
+windows (10 per task), deterministic posterior-mean reconstruction of its
+standardized DINO features gave MSE **0.18898** and cosine loss **0.08621**.
+A constant zero reconstruction in the same standardized space had MSE
+**0.99139**. These values measure feature reconstruction only; they do not
+measure WAM action prediction or robot success. The per-window report is
+`/root/zifan/openwam-runs/svae48_dev_reconstruction.json`.
+
+The reducer checkpoint retains full-precision training statistics when the
+host model is cast to bf16. The earlier cast path rounded the statistics;
+commit `d9e69ff` fixed this before the width-matched WAM training and an
+exact-value check against the registered feature archive passed.
+
 ### Held-out test by task
 
 Each row averages ten windows and four noise draws per window. The difference

@@ -240,6 +240,14 @@ The single-GPU collector writes its shards under
 8,192-clip, 11,796,480-token archive and then trains a 1,000-step S-VAE on
 GPU 2. This stage-one reducer is only preparation for a later matched WAM
 run and is excluded from task-success claims.
+The reducer checkpoint was saved at
+`/data/zifan-openwam-rae/svae48_runs/svae_20261024_182838/svae.pt`, SHA256
+`76519a1dc5f8199c728d892c7551ceb59432eebd60113f55bc692889b26cd1fe`.
+On 100 episode-disjoint dev windows, its posterior-mean standardized feature
+reconstruction had MSE 0.18898, versus 0.99139 for zero reconstruction;
+cosine loss was 0.08621. See `RESULTS.md`. The S-VAE input-statistics cast
+was corrected before WAM training so bf16 host casts preserve the exact fp32
+stats from the registered train feature archive.
 `continue_svae48_wam.py` then waits for the three-seed controller to release
 all eight GPUs, builds a seed-42 Foundation graft with the frozen reducer,
 trains a 1,000-step WAM under the same seed-42 data and optimizer settings,

@@ -11,6 +11,8 @@ import numpy as np
 
 
 def compare(vae: dict, rae: dict) -> dict:
+    if vae.get("split", "dev") != rae.get("split", "dev"):
+        raise ValueError("Evaluation split mismatch")
     for key in ("split_manifest_sha256", "action_stats_sha256", "seed", "windows_per_task", "noise_repeats"):
         if vae[key] != rae[key]:
             raise ValueError(f"Evaluation setting mismatch: {key}")
@@ -52,6 +54,7 @@ def compare(vae: dict, rae: dict) -> dict:
         "rae_checkpoint_sha256": rae["checkpoint_sha256"],
         "split_manifest_sha256": vae["split_manifest_sha256"],
         "action_stats_sha256": vae["action_stats_sha256"],
+        "split": vae.get("split", "dev"),
         "windows": len(paired),
         "noise_repeats_per_window": vae["noise_repeats"],
         "vae_action_mean_across_tasks": vae_mean,

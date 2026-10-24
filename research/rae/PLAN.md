@@ -124,6 +124,14 @@ The full paired report is
 This single-seed offline proxy does not establish a task-success difference.
 The A100 host still cannot run the native NVIDIA Vulkan RT closed-loop simulator.
 
+After model selection on dev, an identical 100-window, four-noise-repeat
+teacher-forced evaluation is being run on test episodes not used for WAM
+training or checkpoint selection.
+`eval_teacher_forced.py --split test` reuses the frozen training statistics;
+`continue_test_eval.sh` runs VAE and RAE sequentially on GPU 4 and writes
+`paired_test_comparison.json` under the pilot run root. The test split is read
+once for this predeclared comparison, and action loss remains an offline proxy.
+
 ### Software-rendered closed-loop pilot (2026-10-24)
 
 An isolated Mesa Lavapipe 26.2.4 environment at

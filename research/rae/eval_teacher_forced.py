@@ -35,13 +35,13 @@ def sha256(path: Path) -> str:
 
 
 def selected_windows(dataset: MultiTaskRoboTwinDataset, per_task: int) -> list[tuple[str, int]]:
-    """Choose evenly spaced dev windows within each task without reading labels."""
+    """Choose evenly spaced windows within each task without reading labels."""
     selected = []
     offset = 0
     for task_data in dataset._sub_datasets:
         length = len(task_data)
         if length < per_task:
-            raise ValueError(f"Task has only {length} dev windows, need {per_task}")
+            raise ValueError(f"Task has only {length} windows, need {per_task}")
         task = task_data.task_name
         for local in np.linspace(0, length - 1, per_task, dtype=np.int64):
             selected.append((task, offset + int(local)))
@@ -64,7 +64,7 @@ def evaluate(args: argparse.Namespace) -> None:
 
     cfg = OmegaConf.load(args.checkpoint / "config.yaml")
     with open_dict(cfg.dataloader):
-        cfg.dataloader.dataset_dir = str(SPLITS / "dev/dataset")
+        cfg.dataloader.dataset_dir = str(SPLITS / args.split / "dataset")
         cfg.dataloader.variant = "clean_50"
         cfg.dataloader.normalization_stats_path = str(stats)
         cfg.dataloader.color_jitter.enabled = False
@@ -102,7 +102,7 @@ def evaluate(args: argparse.Namespace) -> None:
             losses.append({"action": action, "video": video})
         results.append({"task": task, "window_index": index, "losses": losses})
         if (position + 1) % args.per_task == 0:
-            print(f"evaluated {position + 1}/{len(windows)} dev windows", flush=True)
+            print(f"evaluated {position + 1}/{len(windows)} {args.split} windows", flush=True)
 
     per_task = {}
     for task in sorted({item["task"] for item in results}):
@@ -118,6 +118,7 @@ def evaluate(args: argparse.Namespace) -> None:
         "split_manifest_sha256": SPLIT_SHA256,
         "action_stats_sha256": ACTION_STATS_SHA256,
         "seed": args.seed,
+        "split": args.split,
         "windows_per_task": args.per_task,
         "noise_repeats": args.noise_repeats,
         "action_mean_across_tasks": float(np.mean([r["action_mean"] for r in per_task.values()])),
@@ -139,4 +140,5 @@ if __name__ == "__main__":
     parser.add_argument("--per-task", type=int, default=10)
     parser.add_argument("--noise-repeats", type=int, default=4)
     parser.add_argument("--seed", type=int, default=20261023)
+    parser.add_argument("--split", choices=("dev", "test"), default="dev")
     evaluate(parser.parse_args())

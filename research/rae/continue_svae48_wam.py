@@ -134,6 +134,32 @@ def train_and_evaluate(svae_path: Path, svae_hash: str) -> None:
             "svae48_minus_vae": result["rae_minus_vae"],
         }
         record(f"{split}_evaluated", **comparisons[split])
+    summary = [
+        "# DINO/S-VAE 48-channel WAM ablation",
+        "",
+        "Single seed 42; 1,000 WAM steps. The frozen 768-to-48-channel reducer",
+        "was trained on 8,192 selected train windows. Action loss is a",
+        "teacher-forced offline proxy; lower is better.",
+        "",
+        "| Split | Native VAE 48 | DINO/S-VAE 48 | Difference |",
+        "|---|---:|---:|---:|",
+    ]
+    for split in ("dev", "test"):
+        row = comparisons[split]
+        summary.append(
+            f"| {split} | {row['vae_action_loss']:.7f} | "
+            f"{row['svae48_action_loss']:.7f} | {row['svae48_minus_vae']:+.7f} |"
+        )
+    summary.extend([
+        "", f"Reducer SHA256: `{svae_hash}`.",
+        f"WAM checkpoint SHA256: `{checkpoint_hash}`.", "",
+        "This is a width-matched ablation with an additional trained reducer,",
+        "not a closed-loop success comparison or a pure representation-only control.", "",
+    ])
+    results_file = RUNS / "RESULTS.md"
+    if results_file.exists():
+        raise FileExistsError(results_file)
+    results_file.write_text("\n".join(summary))
     record("complete", checkpoint=str(checkpoint), checkpoint_sha256=checkpoint_hash,
            svae_sha256=svae_hash, comparisons=comparisons,
            scope="Single-seed width-matched offline action loss; no task-success conclusion")

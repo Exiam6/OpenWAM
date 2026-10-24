@@ -109,6 +109,21 @@ The state file is `continuation_state.json`; any failure stops the sequence
 and preserves logs. The video losses have different latent targets and are
 not compared across variants.
 
+### Completed single-seed pilot (2026-10-24)
+
+Both 1,000-step jobs completed and wrote final checkpoints. The RAE checkpoint
+SHA256 is `9005b330d857ff01cb5d11712e5ba593b72afc3ce600e51f0279acc0bcf8a739`;
+the VAE control SHA256 is
+`6aca452aa6f06ed358d685fb220e1a245b00fd422e54bb80436481db6e97b531`.
+On the same 100 episode-disjoint dev windows (10 per task, four noise repeats),
+mean teacher-forced **action** loss across tasks was 0.0239227 for RAE and
+0.0201182 for VAE, so RAE was 0.00380449 higher (18.91%; lower is better).
+RAE was lower on one of ten tasks (`open_microwave`) and higher on nine.
+The full paired report is
+`/root/zifan/openwam-runs/wam_pilot_20261023/paired_dev_comparison.json`.
+This single-seed offline proxy does not establish a task-success difference.
+The A100 host still cannot run the native Vulkan RT closed-loop simulator.
+
 ## Related primary work
 
 - Zheng et al., *Diffusion Transformers with Representation Autoencoders*,

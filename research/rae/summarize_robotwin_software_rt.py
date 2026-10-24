@@ -89,6 +89,12 @@ def summarize(root: Path) -> dict:
         "pairs": pairs,
         "vae_successes_in_pairs": sum(x["vae_success"] for x in pairs),
         "rae_successes_in_pairs": sum(x["rae_success"] for x in pairs),
+        "technical_failures_before_retry": sum(
+            max(0, x.get("attempts", 1) - 1) for x in results
+        ),
+        "episodes_with_terminal_technical_error": sum(
+            x["state"] == "error" for x in results
+        ),
     }
 
 

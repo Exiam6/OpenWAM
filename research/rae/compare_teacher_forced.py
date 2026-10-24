@@ -16,6 +16,9 @@ def compare(vae: dict, rae: dict) -> dict:
     for key in ("split_manifest_sha256", "action_stats_sha256", "seed", "windows_per_task", "noise_repeats"):
         if vae[key] != rae[key]:
             raise ValueError(f"Evaluation setting mismatch: {key}")
+    video_shift = vae.get("evaluation_video_shift")
+    if video_shift != rae.get("evaluation_video_shift"):
+        raise ValueError("Evaluation video shift mismatch")
     vae_rows = vae["windows"]
     rae_rows = rae["windows"]
     if len(vae_rows) != len(rae_rows):
@@ -49,7 +52,7 @@ def compare(vae: dict, rae: dict) -> dict:
         raise ValueError("VAE report aggregate mismatch")
     if not np.isclose(rae_mean, rae["action_mean_across_tasks"], rtol=1e-7):
         raise ValueError("RAE report aggregate mismatch")
-    return {
+    result = {
         "vae_checkpoint_sha256": vae["checkpoint_sha256"],
         "rae_checkpoint_sha256": rae["checkpoint_sha256"],
         "split_manifest_sha256": vae["split_manifest_sha256"],
@@ -66,6 +69,14 @@ def compare(vae: dict, rae: dict) -> dict:
         "paired_windows": paired,
         "scope": "Descriptive, single-seed teacher-forced action loss; no closed-loop success or causal improvement claim",
     }
+    if video_shift is not None:
+        result["evaluation_video_shift"] = video_shift
+        result["trained_video_shift"] = [vae["trained_video_shift"], rae["trained_video_shift"]]
+        result["scope"] = (
+            "Post-training video-noise shift sensitivity on paired offline action loss; "
+            "neither model was retrained at the evaluation shift and no closed-loop claim follows"
+        )
+    return result
 
 
 def main() -> None:

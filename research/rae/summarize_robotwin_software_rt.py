@@ -23,6 +23,15 @@ TASKS = (
 )
 
 
+def renderer_description(root: Path) -> str:
+    name = root.name
+    if "1spp_cpu_oidn" in name:
+        return "Mesa Lavapipe CPU RT; 1 spp; path depth 2; post-render CPU OIDN"
+    if "8spp" in name:
+        return "Mesa Lavapipe CPU RT; 8 spp; path depth 4; OIDN disabled"
+    return "Software RT configuration not recorded in directory name"
+
+
 def summarize(root: Path) -> dict:
     status_file = root / "status.tsv"
     with status_file.open(newline="", encoding="utf-8") as handle:
@@ -81,7 +90,7 @@ def summarize(root: Path) -> dict:
             )
     return {
         "scope": "exploratory; one demo_clean episode per task and checkpoint",
-        "renderer": "Mesa Lavapipe CPU RT; 8 spp; path depth 4; OIDN disabled",
+        "renderer": renderer_description(root),
         "not_official_benchmark": True,
         "tasks_planned": len(TASKS),
         "pairs_complete": len(pairs),

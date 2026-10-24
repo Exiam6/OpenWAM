@@ -1,7 +1,9 @@
 # Native RoboTwin evaluation protocol
 
 Run this on an RTX/Vulkan RT host after the policy and RoboTwin environments,
-source checkout, model assets, and checkpoint files have been copied there.
+source checkout, model assets, and **entire checkpoint directories** have been
+copied there. Each directory includes `config.yaml`, tokenizer files, and, for
+RAE, the `dinov2/config.json` sidecar in addition to the `.safetensors` file.
 The current eight-A100 host has no working NVIDIA Vulkan ICD and cannot run
 the native renderer. CPU Lavapipe outcomes remain a separate diagnostic.
 

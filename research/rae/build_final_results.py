@@ -29,9 +29,10 @@ def require_close(actual: float, expected: float, label: str) -> None:
         raise ValueError(f"{label}: {actual} != {expected}")
 
 
-def load_offline() -> tuple[dict[str, dict], dict[str, list[tuple[int, dict]]]]:
+def load_offline() -> tuple[dict[str, dict], dict[str, list[tuple[int, dict]]], dict[int, str]]:
     aggregates = {}
     pairs = {}
+    source_commits = {}
     for split in ("dev", "test"):
         aggregate = read(MULTISEED / f"aggregate_{split}.json")
         if aggregate["split"] != split or aggregate["training_seeds"] != [42, 43, 44]:
@@ -66,12 +67,18 @@ def load_offline() -> tuple[dict[str, dict], dict[str, list[tuple[int, dict]]]]:
                 state = read(MULTISEED / f"seed{seed}" / "state.json")
                 if state["stage"] != "complete":
                     raise ValueError(f"Seed {seed} training incomplete")
+                markers = []
                 for variant in ("vae", "rae"):
                     if state["checkpoint_hashes"][variant] != report[f"{variant}_checkpoint_sha256"]:
                         raise ValueError(f"Seed {seed} {variant} state/report hash mismatch")
                     checkpoint = Path(state["checkpoints"][variant]) / "checkpoint_step_1000.safetensors"
                     if not checkpoint.is_file() or checkpoint.stat().st_size < 20_000_000_000:
                         raise ValueError(f"Seed {seed} {variant} checkpoint missing or truncated")
+                    marker = Path("/data/zifan-openwam-rae/wam_multiseed_20261024") / f"seed{seed}" / variant / "source_commit_at_launch.txt"
+                    markers.append(marker.read_text(encoding="utf-8").strip())
+                if not markers[0] or markers[0] != markers[1]:
+                    raise ValueError(f"Seed {seed} VAE/RAE source commit mismatch")
+                source_commits[seed] = markers[0]
             reports.append((seed, report))
         for variant in ("vae", "rae"):
             require_close(
@@ -81,7 +88,7 @@ def load_offline() -> tuple[dict[str, dict], dict[str, list[tuple[int, dict]]]]:
             )
         aggregates[split] = aggregate
         pairs[split] = reports
-    return aggregates, pairs
+    return aggregates, pairs, source_commits
 
 
 def load_width() -> tuple[dict, dict[str, dict], dict]:
@@ -91,6 +98,9 @@ def load_width() -> tuple[dict, dict[str, dict], dict]:
     checkpoint = Path(state["checkpoint"]) / "checkpoint_step_1000.safetensors"
     if not checkpoint.is_file() or checkpoint.stat().st_size < 20_000_000_000:
         raise ValueError("48-channel WAM checkpoint missing or truncated")
+    source_marker = Path("/data/zifan-openwam-rae/wam_svae48_seed42/rae/source_commit_at_launch.txt")
+    if not source_marker.read_text(encoding="utf-8").strip():
+        raise ValueError("48-channel WAM source commit missing")
     reconstruction = read(RUNS / "svae48_dev_reconstruction.json")
     if reconstruction["reducer_sha256"] != state["svae_sha256"]:
         raise ValueError("48-channel reducer hash mismatch")
@@ -127,7 +137,7 @@ def load_rollouts() -> dict[str, dict]:
 
 
 def build() -> str:
-    aggregates, pairs = load_offline()
+    aggregates, pairs, source_commits = load_offline()
     width_state, width, reconstruction = load_width()
     rollouts = load_rollouts()
     decoder = read(RUNS / "rae_decoder_20261023_seed42" / "test_metrics.json")
@@ -224,6 +234,8 @@ def build() -> str:
               f"- Width ablation report and checkpoint hash: `{WIDTH}`",
               f"- Seed-42 paired reports and shift sensitivity: `{PILOT}`",
               f"- S-VAE reducer SHA256: `{width_state['svae_sha256']}`",
+              f"- Seed 43 source commit: `{source_commits[43]}`",
+              f"- Seed 44 source commit: `{source_commits[44]}`",
               f"- CPU rollout logs and per-task outcomes: `{ROBOTWIN}`",
               ""]
     return "\n".join(lines)

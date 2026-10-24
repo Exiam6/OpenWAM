@@ -20,6 +20,8 @@ from omegaconf import OmegaConf, open_dict
 from safetensors import safe_open
 from transformers import AutoModel
 
+from openwam.model.video_backbone.encoder.svae.model import load_svae
+from openwam.model.video_backbone.encoder.svae import reducer
 from openwam.train.utils.ckpt_model_loader import build_architecture_from_ckpt_dir
 from openwam.train.utils.visual_projection_reset import reset_visual_projections
 
@@ -50,6 +52,11 @@ def build(args: argparse.Namespace) -> None:
         raise ValueError("DINOv2 checkpoint hash mismatch")
     if args.feature_stats is not None and sha256(args.feature_stats) != FEATURE_STATS_SHA256:
         raise ValueError("Train-only feature statistics hash mismatch")
+    if args.svae_path is not None and args.feature_stats is not None:
+        raise ValueError("Use either calibrated raw DINO features or an S-VAE reducer, not both")
+    svae = load_svae(str(args.svae_path)) if args.svae_path is not None else None
+    if svae is not None and (svae.input_dim, svae.latent_dim) != (768, 48):
+        raise ValueError("Width-matched DINO reducer must map 768 channels to 48")
     output = args.output
     output.mkdir(parents=True, exist_ok=True)
     weight_output = output / "checkpoint_step_0.safetensors"
@@ -66,6 +73,8 @@ def build(args: argparse.Namespace) -> None:
             "name": "dinov2",
             "model_path": str(args.dino),
             "feature_stats_path": str(args.feature_stats) if args.feature_stats else None,
+            "svae_path": str(args.svae_path) if args.svae_path else None,
+            "svae_target_dim": svae.latent_dim if svae is not None else None,
         }
     OmegaConf.save(cfg, output / "config.yaml")
     tokenizer = output / "tokenizer"
@@ -74,6 +83,8 @@ def build(args: argparse.Namespace) -> None:
     sidecar = output / "dinov2" / "config.json"
     sidecar.parent.mkdir(exist_ok=True)
     shutil.copy2(args.dino / "config.json", sidecar)
+    if svae is not None:
+        reducer.write_sidecar(svae, str(output), "DinoV2VideoEncoder")
 
     torch.manual_seed(args.seed)
     _, model, _ = build_architecture_from_ckpt_dir(str(output), weights_required=False)
@@ -107,6 +118,8 @@ def build(args: argparse.Namespace) -> None:
     vit = AutoModel.from_pretrained(str(args.dino), torch_dtype=torch.bfloat16).eval()
     model.video_backbone.video_encoder._m.load_state_dict(vit.state_dict(), strict=True)
     del vit
+    if svae is not None:
+        model.video_backbone.video_encoder._svae.load_state_dict(svae.state_dict(), strict=True)
     if args.feature_stats is not None:
         stats = torch.load(args.feature_stats, map_location="cpu", weights_only=True)
         model.video_backbone.video_encoder._set_feature_stats(stats["mean"], stats["std"])
@@ -117,6 +130,8 @@ def build(args: argparse.Namespace) -> None:
         "donor_sha256": DONOR_SHA256,
         "dino_sha256": DINO_SHA256,
         "feature_stats_sha256": FEATURE_STATS_SHA256 if args.feature_stats else None,
+        "svae_sha256": sha256(args.svae_path) if args.svae_path else None,
+        "svae_latent_dim": svae.latent_dim if svae is not None else None,
         "seed": args.seed,
         "matched_shared_tensors": len(matched),
         "dropped_native_vae_and_projection_tensors": len(donor_skipped),
@@ -138,6 +153,7 @@ if __name__ == "__main__":
     )
     parser.add_argument("--dino", type=Path, default=Path("/root/zifan/openwam-assets/dinov2-base"))
     parser.add_argument("--feature-stats", type=Path, default=None)
+    parser.add_argument("--svae-path", type=Path, default=None)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--seed", type=int, default=42)
     build(parser.parse_args())

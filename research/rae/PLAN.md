@@ -240,6 +240,13 @@ The single-GPU collector writes its shards under
 8,192-clip, 11,796,480-token archive and then trains a 1,000-step S-VAE on
 GPU 2. This stage-one reducer is only preparation for a later matched WAM
 run and is excluded from task-success claims.
+`continue_svae48_wam.py` then waits for the three-seed controller to release
+all eight GPUs, builds a seed-42 Foundation graft with the frozen reducer,
+trains a 1,000-step WAM under the same seed-42 data and optimizer settings,
+and compares its dev/test action loss to the existing 48-channel VAE control.
+The extra reducer and its 8,192-window stage-one subset remain explicit
+differences, so this is a width-matched ablation rather than a pure
+representation-only causal comparison.
 
 ## Related primary work
 

@@ -21,6 +21,7 @@ if [[ ! "$seed" =~ ^[0-9]+$ ]]; then
   exit 2
 fi
 graft="${WAM_PILOT_GRAFT:-/root/zifan/openwam-runs/rae_foundation_graft_calibrated_seed${seed}}"
+svae_path="${WAM_PILOT_RAE_SVAE_PATH:-}"
 data=/root/zifan/openwam-assets/robotwin-splits/train/dataset
 run_root="${WAM_PILOT_RUN_ROOT:-/root/zifan/openwam-runs/wam_pilot_20261023}"
 
@@ -41,19 +42,44 @@ else
     model.video_backbone.encoder.model_path=/root/zifan/openwam-assets/dinov2-base
     model.video_backbone.encoder.feature_stats_path=/root/zifan/openwam-runs/rae_feature_stats_stride16.pt
   )
+  if [[ -n "$svae_path" ]]; then
+    if [[ ! -f "$svae_path" ]]; then
+      echo "Missing S-VAE reducer: $svae_path" >&2
+      exit 1
+    fi
+    encoder_overrides=(
+      model/video_backbone/encoder=dinov2
+      model.video_backbone.from_scratch=true
+      model.video_backbone.encoder.model_path=/root/zifan/openwam-assets/dinov2-base
+      model.video_backbone.encoder.feature_stats_path=null
+      "model.video_backbone.encoder.svae_path=$svae_path"
+      model.video_backbone.encoder.svae_target_dim=48
+    )
+  fi
 fi
 if [[ ! -f "$source/config.yaml" || ! -f "$source/graft_manifest.json" && "$variant" == rae ]]; then
   echo "Missing checkpoint source or graft manifest: $source" >&2
   exit 1
 fi
 if [[ "$variant" == rae ]]; then
-  /root/zifan/openwam-envs/policy/bin/python - "$source/graft_manifest.json" "$seed" <<'PY'
+  /root/zifan/openwam-envs/policy/bin/python - "$source/graft_manifest.json" "$seed" "$svae_path" <<'PY'
+import hashlib
 import json
 import sys
 
 manifest = json.load(open(sys.argv[1], encoding="utf-8"))
 if manifest.get("seed") != int(sys.argv[2]):
     raise SystemExit(f"Graft seed {manifest.get('seed')} does not match run seed {sys.argv[2]}")
+expected = manifest.get("svae_sha256")
+if sys.argv[3]:
+    digest = hashlib.sha256()
+    with open(sys.argv[3], "rb") as stream:
+        for block in iter(lambda: stream.read(8 * 1024 * 1024), b""):
+            digest.update(block)
+    if digest.hexdigest() != expected or manifest.get("svae_latent_dim") != 48:
+        raise SystemExit("Graft S-VAE reducer hash or target width does not match the requested run")
+elif expected is not None:
+    raise SystemExit("Graft includes an S-VAE reducer but the run did not request it")
 PY
 fi
 

@@ -27,6 +27,20 @@ records and checkpoint hashes are in `paired_dev_comparison.json`,
 `paired_test_comparison.json`, and `paired_test_uncertainty.json` under
 `/root/zifan/openwam-runs/wam_pilot_20261023`.
 
+The training logs show that both action losses were still falling at step
+1,000. These are means of the progress-bar action loss over the indicated 100
+training steps, not held-out or paired-window metrics:
+
+| Training steps | VAE action loss | RAE action loss |
+|---|---:|---:|
+| 1–100 | 0.088361 | 0.082933 |
+| 901–1,000 | 0.014388 | 0.017144 |
+
+RAE started lower on the first 100 stochastic training batches but ended
+higher on the last 100, consistent with the held-out action-loss ranking.
+The video losses in those logs have different targets and cannot be ranked
+across the two variants.
+
 ### Held-out test by task
 
 Each row averages ten windows and four noise draws per window. The difference

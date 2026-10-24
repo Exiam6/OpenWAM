@@ -8,6 +8,49 @@ RAE, the `dinov2/config.json` sidecar in addition to the `.safetensors` file.
 The current eight-A100 host has no working NVIDIA Vulkan ICD and cannot run
 the native renderer. CPU Lavapipe outcomes remain a separate diagnostic.
 
+`research/rae/run_native_eval.py` automates the native submissions once this
+host setup is complete. Run it with the **Labtasker orchestration Python** from
+the repository root. It first runs the native host preflight, builds the two
+50-task manifests, then submits each available matched or ablation checkpoint
+on the selected ten tasks and the released checkpoint on both full modes.
+The selected ten reuse their exact `demo_clean` cache entries from the full
+manifest. The runner starts one Worker per requested RTX GPU, checks every
+Labtasker Task for coverage and completion, and writes the three registry JSON
+files and strict native summaries only when all nine checkpoint entries and
+all ten model submissions are complete. Labtasker retries each failed batch up
+to its configured limit; an exhausted batch stops the runner. Inspect and
+requeue that Task, then rerun the same command and state directory.
+
+Create a host-local `checkpoints.json` with a key for each **available** model:
+`seed42_vae`, `seed42_rae`, `seed43_vae`, `seed43_rae`, `seed44_vae`,
+`seed44_rae`, `seed42_reconstruction_svae48`, `seed42_action_svae48`, and
+`official`. Each value needs `directory`, `checkpoint_sha256`, and
+`weights_file` (the latter can be omitted for `checkpoint_step_1000.safetensors`;
+the official file is `checkpoint_step_118655.safetensors`). Add new model entries
+as training finishes; do not change previously registered directories or
+hashes. The runner rereads every checkpoint file and SHA256 before submission.
+For example, after restoring the bundles, assets, complete checkpoint
+directories, and three Python environments on the RTX host:
+
+```bash
+/path/to/orchestrator/bin/python -m research.rae.run_native_eval \
+  --checkpoints /path/to/persistent/checkpoints.json \
+  --run-dir /path/to/persistent/native-eval \
+  --robotwin-root /path/to/RoboTwin \
+  --robotwin-python /path/to/robotwin/bin/python \
+  --policy-python /path/to/policy/bin/python \
+  --gpus 0
+```
+
+Use `--dry-run --skip-checkpoint-hash` to inspect the complete command matrix
+without submitting. The actual run always verifies full weight hashes. Keep
+the repository checkout and its `.labtasker` directory on persistent **local**
+storage when using the runner's local server; the state directory contains
+Worker logs, manifests, submission IDs, registries, and summaries. Start with
+GPU 0 until the native renderer smoke passes; add other verified RTX GPUs to
+`--gpus` on the resumed run to increase throughput. The final combined report
+still runs on the A100 host after copying back the three audited summaries.
+
 The transfer manifest also lists verified RoboTwin and cuRobo Git bundles and
 the complete RoboTwin assets directory and tar archive. Restore cuRobo into
 `RoboTwin/envs/curobo` at tag `v0.7.8` (commit

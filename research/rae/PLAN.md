@@ -172,7 +172,8 @@ uses `research/rae/run_robotwin_cpu_oidn_mesa2625.sh` and writes to
 Each task records the number of process attempts; one technical retry is
 allowed, and failed attempts retain their logs. The released-checkpoint
 sanity sweep is queued by `research/rae/continue_official_after_paired_mesa2625.sh`
-only after the paired sweep completes without technical failures.
+after all paired task attempts finish. The summary reports terminal technical
+failures separately from policy success.
 
 ## Related primary work
 

@@ -16,9 +16,14 @@ import sys
 
 with open(sys.argv[1], newline="", encoding="utf-8") as handle:
     rows = list(csv.DictReader(handle, delimiter="\t"))
-if len(rows) != 20 or any(int(row["exit_code"]) != 0 for row in rows):
-    raise SystemExit(f"paired sweep incomplete or failed: {len(rows)}/20 rows")
-print("paired sweep completed; starting released-checkpoint sanity sweep", flush=True)
+if len(rows) != 20:
+    raise SystemExit(f"paired sweep incomplete: {len(rows)}/20 rows")
+failures = sum(int(row["exit_code"]) != 0 for row in rows)
+print(
+    f"paired sweep ended with {failures} terminal technical failures; "
+    "starting released-checkpoint sanity sweep",
+    flush=True,
+)
 PY
 
 python /root/zifan/OpenWAM-rae/research/rae/summarize_robotwin_software_rt.py \

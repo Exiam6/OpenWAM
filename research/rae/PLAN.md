@@ -210,6 +210,17 @@ reliability. The ongoing exploratory sweep continues to record technical
 errors explicitly, while the held-out offline WAM test comparison proceeds
 without the simulator.
 
+Two further matched WAM seeds (43 and 44) are prepared in
+`research/rae/run_additional_seeds.py`. The runner waits for the registered
+released-checkpoint controller to exit and checks that no RoboTwin evaluation
+process still owns GPUs. It verifies each graft and
+final checkpoint by SHA256, then evaluates both variants on the frozen dev and
+test windows. The training checkpoints must be written to `/dev/shm` because
+the current persistent filesystem has under 15 GB free; that storage is
+ephemeral. Logs, metrics, and hashes are written persistently under
+`/root/zifan/openwam-runs/wam_multiseed_20261024`. The two additional seeds
+are not yet results and do not replace the native closed-loop success gate.
+
 ## Related primary work
 
 - Zheng et al., *Diffusion Transformers with Representation Autoencoders*,

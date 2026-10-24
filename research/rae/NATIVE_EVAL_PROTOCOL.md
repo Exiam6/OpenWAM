@@ -1,6 +1,7 @@
 # Native RoboTwin evaluation protocol
 
-Run this on an RTX/Vulkan RT host after the policy and RoboTwin environments,
+Run every command below from the OpenWAM repository root on an RTX/Vulkan RT
+host after the policy and RoboTwin environments,
 source checkout, model assets, and **entire checkpoint directories** have been
 copied there. Each directory includes `config.yaml`, tokenizer files, and, for
 RAE, the `dinov2/config.json` sidecar in addition to the `.safetensors` file.
@@ -130,7 +131,7 @@ After both official submissions finish, create a registry JSON with keys
 Then run:
 
 ```bash
-python research/rae/summarize_native_official.py \
+python -m research.rae.summarize_native_official \
   --registry /path/to/official-submissions.json \
   --output /path/to/native-official-summary.json
 ```
@@ -161,7 +162,7 @@ After all six matched submissions finish, create a registry JSON with keys
 `checkpoint_sha256`. Then run:
 
 ```bash
-python research/rae/summarize_native_paired.py \
+python -m research.rae.summarize_native_paired \
   --registry /path/to/paired-submissions.json \
   --output /path/to/native-paired-summary.json
 ```
@@ -177,7 +178,7 @@ has `submission_id`, the absolute `checkpoint` file path, and
 registry. Then run:
 
 ```bash
-python research/rae/summarize_native_ablation.py \
+python -m research.rae.summarize_native_ablation \
   --registry /path/to/svae48-submissions.json \
   --output /path/to/native-svae48-summary.json
 ```
@@ -191,7 +192,7 @@ offline training and ablation report is complete. Then generate the combined
 result document with:
 
 ```bash
-python research/rae/build_complete_native_results.py \
+python -m research.rae.build_complete_native_results \
   --paired /path/to/native-paired-summary.json \
   --official /path/to/native-official-summary.json \
   --ablation /path/to/native-svae48-summary.json \

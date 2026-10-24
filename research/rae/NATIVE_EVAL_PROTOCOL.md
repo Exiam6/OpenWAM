@@ -102,6 +102,15 @@ RoboTwin-Full checkpoint, reusing its mode's manifest directory. This produces
 10,000 attempted episodes in total. Keep these submission IDs separate from
 the six matched-checkpoint submissions.
 
+After the width and action-informed S-VAE48 WAM runs finish, evaluate both
+seed-42 checkpoints on the **same selected-10-task manifests** used above:
+`demo_clean`, unseen instructions, 100 episodes per task, and unchanged policy
+settings. Reuse the existing seed-42 VAE submission as the control. The two
+additional policies add 2,000 native episodes; retain their checkpoint hashes
+and separate Labtasker submission IDs. The action-informed reducer used an
+offline auxiliary action loss, so describe this as an exploratory single-seed
+ablation rather than an online ReWAM implementation.
+
 After both official submissions finish, create a registry JSON with keys
 `"demo_clean"` and `"demo_randomized"`. Each entry contains its
 `submission_id`, the absolute `checkpoint` file path, and its
@@ -149,7 +158,23 @@ The summarizer rejects incomplete batches, checkpoint hash changes, duplicated
 episodes, manifest or scene mismatches, and incorrect task coverage before
 calculating the three-seed paired success delta and 20,000-draw interval.
 
-Copy the two audited native summary JSON files back to the A100 host after the
+For the two S-VAE48 submissions, create a registry JSON with key `"42"` and
+entries `"vae"`, `"reconstruction_svae48"`, and `"action_svae48"`. Each entry
+has `submission_id`, the absolute `checkpoint` file path, and
+`checkpoint_sha256`. Copy the exact `"vae"` entry from the three-seed paired
+registry. Then run:
+
+```bash
+python research/rae/summarize_native_ablation.py \
+  --registry /path/to/svae48-submissions.json \
+  --output /path/to/native-svae48-summary.json
+```
+
+This audit requires all 3,000 rows, matching scene seeds and manifest hashes,
+and reports task-balanced rates and paired intervals. Its interval resamples
+tasks and episodes only because these two ablations have one training seed.
+
+Copy the three audited native summary JSON files back to the A100 host after the
 offline training and ablation report is complete. Then generate the combined
 result document with:
 
@@ -157,12 +182,15 @@ result document with:
 python research/rae/build_complete_native_results.py \
   --paired /path/to/native-paired-summary.json \
   --official /path/to/native-official-summary.json \
+  --ablation /path/to/native-svae48-summary.json \
   --output /root/zifan/openwam-runs/OPENWAM_RAE_COMPLETE_RESULTS.md
 ```
 
-This final gate requires the 6,000 matched episode rows and the separate
+This final gate requires the 6,000 matched episode rows, the 3,000-row
+seed-42 S-VAE48 ablation (including its reused VAE control), and the separate
 10,000-episode official benchmark, along with completed offline and ablation
-states, before writing the combined report.
+states, before writing the combined report. There are 18,000 distinct native
+episode attempts because the seed-42 VAE's 1,000 rows are reused.
 
 Current offline action loss and CPU-rendered episodes do not satisfy this
 native success-rate gate.

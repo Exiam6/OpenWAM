@@ -140,7 +140,9 @@ def summarize_rows(
     }
 
 
-def labtasker_rows(registry: dict, *, tasks: tuple[str, ...], episodes: int) -> list[dict]:
+def labtasker_rows(registry: dict, *, tasks: tuple[str, ...], episodes: int,
+                   seeds: tuple[int, ...] = SEEDS,
+                   variants: tuple[str, ...] = VARIANTS) -> list[dict]:
     # Import only on the RTX host: this cluster's active training environment
     # intentionally does not install Labtasker while eight-GPU jobs are live.
     import sys
@@ -151,8 +153,8 @@ def labtasker_rows(registry: dict, *, tasks: tuple[str, ...], episodes: int) -> 
 
     rows = []
     with rt.project_context(), rt.create_client(queue=None, auto_start_local_server=False) as client:
-        for seed in SEEDS:
-            for variant in VARIANTS:
+        for seed in seeds:
+            for variant in variants:
                 spec = registry[str(seed)][variant]
                 checkpoint = Path(spec["checkpoint"]).expanduser().resolve()
                 if file_sha256(checkpoint) != spec["checkpoint_sha256"]:

@@ -178,6 +178,7 @@ def labtasker_rows(registry: dict, *, tasks: tuple[str, ...], episodes: int) -> 
                     manifest = load_manifest(
                         Path(args["manifest_path"]), expected_manifest_hash=args["manifest_hash"]
                     )
+                    rt.validate_manifest(manifest, args, minimum_entries=episodes)
                     for episode in result["episodes"]:
                         index = episode["episode"]
                         entry = manifest["entries"][index]

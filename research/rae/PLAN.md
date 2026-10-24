@@ -156,9 +156,23 @@ denoises before display conversion and may use auxiliary render buffers;
 this CPU bridge only uses the display RGB. Evidence and source frame hashes
 are in `/root/zifan/openwam-runs/robotwin_rt_eval_20261024/oidn_image_probe.json`.
 The 8-sample run was stopped mid-first task to avoid mixing render domains.
-The paired one-sample CPU-OIDN sweep is registered in
-`research/rae/run_robotwin_cpu_oidn.sh` and writes to
+The first paired one-sample CPU-OIDN sweep used
+`research/rae/run_robotwin_cpu_oidn.sh` and wrote to
 `/root/zifan/openwam-runs/robotwin_rt_eval_20261024/paired_1spp_cpu_oidn`.
+
+Mesa Lavapipe 26.2.4 proved unstable across tasks: `hanging_mug`,
+`open_microwave`, and `place_bread_skillet` exited 139 with kernel faults at
+the same `vk_meta_get_pipeline_layout` address in `libvulkan_lvp.so`. These
+are technical failures, not policy failures. An isolated Mesa 26.2.5 install
+at `/root/zifan/openwam-envs/lavapipe-rt-2625` completed 100-step repeats of
+`hanging_mug` and `open_microwave` at the same initial scene seed and policy;
+26.2.4 had crashed at steps 51 and 3 respectively. The full paired sweep now
+uses `research/rae/run_robotwin_cpu_oidn_mesa2625.sh` and writes to
+`/root/zifan/openwam-runs/robotwin_rt_eval_20261024/paired_1spp_cpu_oidn_mesa2625`.
+Each task records the number of process attempts; one technical retry is
+allowed, and failed attempts retain their logs. The released-checkpoint
+sanity sweep is queued by `research/rae/continue_official_after_paired_mesa2625.sh`
+only after the paired sweep completes without technical failures.
 
 ## Related primary work
 

@@ -41,6 +41,8 @@ def summarize(root: Path) -> dict:
                     started_utc=row["started_utc"],
                     ended_utc=row["ended_utc"],
                 )
+                if row.get("attempts"):
+                    entry["attempts"] = int(row["attempts"])
                 result_files = list((root / variant / task / "eval_result").rglob("_result.txt"))
                 if entry["exit_code"] != 0 or len(result_files) != 1:
                     entry["state"] = "error"

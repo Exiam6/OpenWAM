@@ -15,9 +15,14 @@ if [[ -n "$(git -C "$repo" status --porcelain)" ]]; then
 fi
 
 foundation=/root/zifan/openwam-assets/foundation-checkpoint
-graft=/root/zifan/openwam-runs/rae_foundation_graft_calibrated_seed42
+seed="${WAM_PILOT_SEED:-42}"
+if [[ ! "$seed" =~ ^[0-9]+$ ]]; then
+  echo "WAM_PILOT_SEED must be a non-negative integer" >&2
+  exit 2
+fi
+graft="${WAM_PILOT_GRAFT:-/root/zifan/openwam-runs/rae_foundation_graft_calibrated_seed${seed}}"
 data=/root/zifan/openwam-assets/robotwin-splits/train/dataset
-run_root=/root/zifan/openwam-runs/wam_pilot_20261023
+run_root="${WAM_PILOT_RUN_ROOT:-/root/zifan/openwam-runs/wam_pilot_20261023}"
 
 if [[ ! -f "$data/../../split_manifest.json" ]]; then
   echo "Missing episode split manifest" >&2
@@ -40,6 +45,16 @@ fi
 if [[ ! -f "$source/config.yaml" || ! -f "$source/graft_manifest.json" && "$variant" == rae ]]; then
   echo "Missing checkpoint source or graft manifest: $source" >&2
   exit 1
+fi
+if [[ "$variant" == rae ]]; then
+  /root/zifan/openwam-envs/policy/bin/python - "$source/graft_manifest.json" "$seed" <<'PY'
+import json
+import sys
+
+manifest = json.load(open(sys.argv[1], encoding="utf-8"))
+if manifest.get("seed") != int(sys.argv[2]):
+    raise SystemExit(f"Graft seed {manifest.get('seed')} does not match run seed {sys.argv[2]}")
+PY
 fi
 
 export PATH=/root/zifan/openwam-envs/policy/bin:"$PATH"
@@ -76,6 +91,6 @@ exec bash scripts/train.sh \
   "training.finetune_ckpt_path=$source" \
   "training.reset_visual_projections=$reset_projections" \
   "training.output_path=$run_root/$variant" \
-  project.seed=42 \
+  "project.seed=$seed" \
   project.wandb.project=null \
   "${encoder_overrides[@]}"

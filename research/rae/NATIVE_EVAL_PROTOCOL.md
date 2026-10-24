@@ -20,8 +20,11 @@ the native renderer. CPU Lavapipe outcomes remain a separate diagnostic.
   per-task seed-file hashes and split mapping are recorded in
   `/root/zifan/openwam-runs/robotwin_native_seed_overlap_audit.json`
   (SHA256 `7fef743052e3ac59155d471f0f0b6d66632c4814a01aa0f824e7009529af3134`).
-  This audit does not establish that the Foundation donor's pretraining
-  mixture excludes the same scenes.
+  The [OpenWAM paper, Table 4](https://arxiv.org/pdf/2609.07398) lists the
+  Foundation donor's five pretraining sources as egocentric video,
+  AgiBotWorld-Beta, RoboCOIN, DROID, and InternData-A1; RoboTwin is not a
+  listed source. That source-level list does not prove that every visual
+  scene or asset in the native evaluation is absent from pretraining.
 - Use `checkpoint_step_1000.safetensors` for every matched checkpoint. Verify
   each file against its registered SHA256 and the saved source commit marker.
 - Evaluate the released RoboTwin-Full checkpoint separately on the complete

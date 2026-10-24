@@ -56,7 +56,10 @@ the fault. A paired one-episode-per-task exploratory sweep is still running
 with Mesa 26.2.5 and at most one technical retry per task. Current attempts,
 successes, and terminal technical errors must be read from
 `/root/zifan/openwam-runs/robotwin_rt_eval_20261024/paired_1spp_cpu_oidn_mesa2625/status.tsv`
-and the task logs. An exit code of 139 is a simulator failure, not a robot-task
-failure. The released RoboTwin-Full checkpoint sanity sweep is queued after
+and the task logs. RoboTwin may skip an initial scene seed when setup fails;
+the summary includes a task in `pairs_complete` only when both checkpoints
+finished and their accepted scene seeds match. An exit code of 139 is a
+simulator failure, not a robot-task failure. The released RoboTwin-Full
+checkpoint sanity sweep is queued after
 the paired sweep. No native released-benchmark reproduction or reliable
 closed-loop RAE-versus-VAE success comparison has been established yet.

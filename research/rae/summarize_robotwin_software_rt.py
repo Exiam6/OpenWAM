@@ -80,21 +80,34 @@ def summarize(root: Path) -> dict:
             results.append(entry)
 
     pairs = []
+    scene_mismatched_completed_pairs = []
     if variants == ("vae", "rae"):
         for task in TASKS:
             vae = next(x for x in results if x["variant"] == "vae" and x["task"] == task)
             rae = next(x for x in results if x["variant"] == "rae" and x["task"] == task)
             if vae["state"] == rae["state"] == "complete":
+                same_seed = (
+                    vae["accepted_seed"] is not None
+                    and vae["accepted_seed"] == rae["accepted_seed"]
+                )
+                if not same_seed:
+                    scene_mismatched_completed_pairs.append(
+                        {
+                            "task": task,
+                            "vae_seed": vae["accepted_seed"],
+                            "rae_seed": rae["accepted_seed"],
+                            "vae_success": vae["success"],
+                            "rae_success": rae["success"],
+                        }
+                    )
+                    continue
                 pairs.append(
                     {
                         "task": task,
                         "vae_success": vae["success"],
                         "rae_success": rae["success"],
                         "rae_minus_vae": int(rae["success"]) - int(vae["success"]),
-                        "same_accepted_seed": (
-                            vae["accepted_seed"] is not None
-                            and vae["accepted_seed"] == rae["accepted_seed"]
-                        ),
+                        "accepted_seed": vae["accepted_seed"],
                     }
                 )
     return {
@@ -106,6 +119,7 @@ def summarize(root: Path) -> dict:
         "episodes_planned": len(TASKS) * len(variants),
         "episodes_complete": sum(x["state"] == "complete" for x in results),
         "pairs_complete": len(pairs),
+        "scene_mismatched_completed_pairs": scene_mismatched_completed_pairs,
         "episodes": results,
         "pairs": pairs,
         "successes_by_variant": {

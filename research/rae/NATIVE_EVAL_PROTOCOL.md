@@ -31,6 +31,22 @@ Create a host-local `checkpoints.json` with a key for each **available** model:
 the official file is `checkpoint_step_118655.safetensors`). Add new model entries
 as training finishes; do not change previously registered directories or
 hashes. The runner rereads every checkpoint file and SHA256 before submission.
+The transfer manifest on the training host provides the expected bytes and
+hashes. Copy each complete checkpoint directory to
+`/path/to/checkpoints/<model-name>/`, including its sidecars, and copy the
+transfer manifest to the RTX host. Generate or extend the registry with:
+
+```bash
+/path/to/orchestrator/bin/python -m research.rae.build_native_checkpoint_registry \
+  --manifest /path/to/transfer_manifest.json \
+  --checkpoint-root /path/to/checkpoints \
+  --output /path/to/persistent/checkpoints.json
+```
+
+This command hashes every present copy, rejects an incomplete copy, and lists
+checkpoint names that are not yet available. Run it again after transferring
+newly trained checkpoints, then resume the controller with the same run
+directory. Existing submission IDs and completed stages are preserved.
 For example, after restoring the bundles, assets, complete checkpoint
 directories, and three Python environments on the RTX host:
 

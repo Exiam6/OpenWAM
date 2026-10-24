@@ -10,7 +10,9 @@ the native renderer. CPU Lavapipe outcomes remain a separate diagnostic.
 
 `research/rae/run_native_eval.py` automates the native submissions once this
 host setup is complete. Run it with the **Labtasker orchestration Python** from
-the repository root. It first runs the native host preflight, builds the two
+the repository root. The submitter resolves policy deployment arguments with
+`--policy-python /path/to/policy/bin/python`, which keeps Torch in the policy
+environment. It first runs the native host preflight, builds the two
 50-task manifests, then submits each available matched or ablation checkpoint
 on the selected ten tasks and the released checkpoint on both full modes.
 The selected ten reuse their exact `demo_clean` cache entries from the full
@@ -146,7 +148,8 @@ python benchmarks/robotwin/labtasker_submit.py --operation build_manifest \
 After all manifest Tasks succeed, submit one `run_eval` job per checkpoint
 with the same `--mode`, `--tasks`, `--episodes 100`,
 `--episode-batch-size 5`, `--instruction-type unseen`, and
-`--manifest-dir`; put `--ckpt-dir /path/to/checkpoint` after `--`. Run
+`--manifest-dir`; set `--policy-python /path/to/policy/bin/python` before
+`--`, then put `--ckpt-dir /path/to/checkpoint` after `--`. Run
 workers on the RTX device(s) and verify that the selected Vulkan renderer is
 the intended NVIDIA GPU. The native path must not set `ROBOTWIN_SOFTWARE_RT`,
 `ROBOTWIN_SOFTWARE_RASTER`, or a Lavapipe `VK_ICD_FILENAMES`.

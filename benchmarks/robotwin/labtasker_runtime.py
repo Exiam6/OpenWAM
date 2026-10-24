@@ -99,6 +99,7 @@ def normalize_paths(args: argparse.Namespace) -> None:
         "robotwin_path",
         "robotwin_python",
         "server_python",
+        "policy_python",
         "ckpt_dir",
     ):
         value = getattr(args, key, None)
@@ -160,7 +161,7 @@ def build_task_inputs(args: argparse.Namespace) -> list[dict[str, Any]]:
         f"python benchmarks/robotwin/labtasker_submit.py --operation build_manifest --mode {args.mode} "
         f"--tasks {task_selector} --episodes {args.episodes} --manifest-dir {str(args.manifest_dir)!r}",
     )
-    model = resolve_policy_model_spec(args.deploy_args)
+    model = resolve_policy_model_spec(args.deploy_args, policy_python=args.policy_python)
     inputs = []
     for item, (path, manifest) in zip(manifests, cached, strict=True):
         validate_manifest(manifest, item, minimum_entries=item["total_episodes"])
@@ -569,6 +570,8 @@ def parser(mode: str = "submit") -> argparse.ArgumentParser:
         result.add_argument("--episode-batch-size", type=positive, default=5)
         result.add_argument("--instruction-type", choices=("seen", "unseen"), default="unseen")
         result.add_argument("--policy-config", type=Path, default=HERE / "policy_config.yml")
+        result.add_argument("--policy-python", type=Path,
+                            help="Python with OpenWAM/Torch for resolving deployment config when submitter uses a separate orchestration environment")
         result.add_argument("--manifest-dir", type=Path, default=ROOT / "outputs/manifest-cache/robotwin")
         result.add_argument("--rebuild", action="store_true")
         result.add_argument("--submission-id")

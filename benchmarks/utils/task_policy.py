@@ -1,6 +1,7 @@
 """Native OpenWAM configuration snapshots and one lazily loaded policy server."""
 
 import argparse
+import json
 import os
 import secrets
 import subprocess
@@ -19,33 +20,26 @@ from benchmarks.utils.transport import WSPolicyClient
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def resolve_policy_model_spec(argv: list[str]) -> dict[str, Any]:
+def resolve_policy_model_spec(argv: list[str], *, policy_python: Path | None = None) -> dict[str, Any]:
     """Resolve native deploy arguments once so Workers agree on config and latest.
 
     Identity covers effective parameters and concrete paths, not file contents.
     Users keep model files fixed; Workers do not reread weights to check reuse.
     """
-    from openwam.deploy.model_loader import _find_latest_checkpoint
-    from openwam.deploy.server import _build_argparser, merge_deploy_cfg, resolve_deploy_args
+    if policy_python is not None:
+        command = [str(policy_python), "-m", "benchmarks.robotwin.resolve_policy_model_spec", *argv]
+        completed = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
+        if completed.returncode:
+            raise ValueError(f"policy config resolver exited {completed.returncode}: {completed.stderr.strip()}")
+        model = json.loads(completed.stdout)
+        if not isinstance(model, dict) or model.get("identity") != content_hash(
+            {key: model[key] for key in ("effective_config", "checkpoint_dir", "checkpoint")}
+        ):
+            raise ValueError("policy interpreter returned an invalid model specification")
+        return model
+    from benchmarks.robotwin.resolve_policy_model_spec import resolve
 
-    args = _build_argparser().parse_args(argv)
-    cfg, directory = resolve_deploy_args(args)
-    directory = Path(directory).expanduser().resolve()
-    checkpoint = (
-        (directory / args.ckpt_name).resolve() if args.ckpt_name else Path(_find_latest_checkpoint(str(directory)))
-    )
-    effective = OmegaConf.to_container(merge_deploy_cfg(OmegaConf.load(directory / "config.yaml"), cfg), resolve=False)
-    if not isinstance(effective, dict):
-        raise ValueError("effective policy configuration must be a mapping")
-    # These are Worker resource settings, not model identity.
-    for key in ("server", "device", "checkpoint_path"):
-        effective.pop(key, None)
-    model = {
-        "effective_config": effective,
-        "checkpoint_dir": str(directory),
-        "checkpoint": str(checkpoint),
-    }
-    return model | {"identity": content_hash(model)}
+    return resolve(argv)
 
 
 def load_policy_config(path: str | Path) -> dict[str, Any]:

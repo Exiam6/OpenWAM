@@ -91,7 +91,8 @@ def stage_args(stage: str, operation: str, mode: str, args: argparse.Namespace, 
                "--submission-id", args.submission_ids[stage]]
     if operation == "run_eval":
         name = "official" if stage.startswith("official_") else stage
-        command += ["--episode-batch-size", "5", "--instruction-type", "unseen", "--",
+        command += ["--episode-batch-size", "5", "--instruction-type", "unseen",
+                    "--policy-python", str(args.policy_python), "--",
                     "--ckpt-dir", models[name]["directory"], "--ckpt-name", Path(models[name]["checkpoint"]).name]
     return command
 

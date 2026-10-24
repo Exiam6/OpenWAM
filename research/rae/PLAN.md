@@ -215,9 +215,10 @@ Two further matched WAM seeds (43 and 44) are prepared in
 released-checkpoint controller to exit and checks that no RoboTwin evaluation
 process still owns GPUs. It verifies each graft and
 final checkpoint by SHA256, then evaluates both variants on the frozen dev and
-test windows. The training checkpoints must be written to `/dev/shm` because
-the current persistent filesystem has under 15 GB free; that storage is
-ephemeral. Logs, metrics, and hashes are written persistently under
+test windows. The local overlay has under 15 GB free, so the final training
+checkpoints are written to the shared NFS under
+`/data/zifan-openwam-rae/wam_multiseed_20261024`; seed grafts temporarily use
+`/dev/shm`. Logs, metrics, and hashes are written persistently under
 `/root/zifan/openwam-runs/wam_multiseed_20261024`. The two additional seeds
 are not yet results and do not replace the native closed-loop success gate.
 

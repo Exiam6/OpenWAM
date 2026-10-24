@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Run matched WAM seeds after the exploratory RoboTwin GPU sweep exits.
 
-Final weights live in /dev/shm because the persistent volume has less than one
-checkpoint of free space. Reports, hashes, and logs live on persistent storage.
-Do not treat a lost tmpfs checkpoint as a completed reproducible artifact.
+Final weights live on the shared NFS /data volume. Its dedicated output
+directory is separate from the nearly full local overlay. Reproducible seed
+grafts use /dev/shm temporarily; reports, hashes, and logs live persistently.
 """
 
 from __future__ import annotations
@@ -22,6 +22,7 @@ from safetensors import safe_open
 REPO = Path("/root/zifan/OpenWAM-rae")
 PYTHON = Path("/root/zifan/openwam-envs/policy/bin/python")
 RUNS = Path("/root/zifan/openwam-runs/wam_multiseed_20261024")
+WEIGHTS = Path("/data/zifan-openwam-rae/wam_multiseed_20261024")
 FEATURE_STATS = Path("/root/zifan/openwam-runs/rae_feature_stats_stride16.pt")
 MIN_FREE_BYTES = 27_000_000_000
 
@@ -75,10 +76,10 @@ def ensure_eval_stopped() -> None:
             raise RuntimeError(f"RoboTwin evaluation still owns GPUs: {line}")
 
 
-def require_tmpfs_space(stage: str) -> None:
-    free = shutil.disk_usage("/dev/shm").free
+def require_space(path: Path, stage: str) -> None:
+    free = shutil.disk_usage(path).free
     if free < MIN_FREE_BYTES:
-        raise RuntimeError(f"Only {free} tmpfs bytes free before {stage}; need {MIN_FREE_BYTES}")
+        raise RuntimeError(f"Only {free} bytes free on {path} before {stage}; need {MIN_FREE_BYTES}")
 
 
 def run_logged(command: list[str], log: Path, *, env: dict[str, str]) -> None:
@@ -145,7 +146,7 @@ def evaluate_pair(seed: int, checkpoints: dict[str, Path], env: dict[str, str]) 
 def run_seed(seed: int) -> None:
     reports = RUNS / f"seed{seed}"
     reports.mkdir(parents=True, exist_ok=True)
-    weights_root = Path(f"/dev/shm/openwam-seed{seed}-wam")
+    weights_root = WEIGHTS / f"seed{seed}"
     graft = Path(f"/dev/shm/openwam-seed{seed}-graft")
     env = os.environ.copy()
     env["PYTHONPATH"] = str(REPO)
@@ -157,7 +158,7 @@ def run_seed(seed: int) -> None:
     env["MASTER_PORT"] = str(29600 + seed)
 
     if not (graft / "graft_manifest.json").is_file():
-        require_tmpfs_space(f"seed{seed} graft")
+        require_space(Path("/dev/shm"), f"seed{seed} graft")
         record(seed, "graft_started", graft=str(graft))
         run_logged(
             [str(PYTHON), "research/rae/build_grafted_checkpoint.py", "--output",
@@ -170,7 +171,7 @@ def run_seed(seed: int) -> None:
     checkpoints: dict[str, Path] = {}
     hashes: dict[str, str] = {}
     for variant in ("rae", "vae"):
-        require_tmpfs_space(f"seed{seed} {variant} training")
+        require_space(WEIGHTS, f"seed{seed} {variant} training")
         log = reports / f"{variant}_train.log"
         record(seed, f"{variant}_training_started", output=str(weights_root / variant))
         run_logged(["bash", "research/rae/launch_wam_pilot.sh", variant], log, env=env)
@@ -186,7 +187,7 @@ def run_seed(seed: int) -> None:
 
     evaluate_pair(seed, checkpoints, env)
     record(seed, "complete", checkpoints={name: str(path) for name, path in checkpoints.items()},
-           checkpoint_hashes=hashes, storage="/dev/shm is ephemeral")
+           checkpoint_hashes=hashes, storage="persistent NFS /data")
 
 
 def main() -> None:
@@ -198,6 +199,7 @@ def main() -> None:
         raise ValueError("Seeds must be distinct non-negative integers")
     wait_for_official_controller(args.after_pid)
     ensure_eval_stopped()
+    WEIGHTS.mkdir(parents=True, exist_ok=True)
     if subprocess.check_output(["git", "status", "--porcelain"], cwd=REPO).strip():
         raise RuntimeError("Commit research code before a GPU training run")
     for seed in args.seeds:

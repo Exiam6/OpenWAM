@@ -36,9 +36,17 @@ def summarize(root: Path) -> dict:
     status_file = root / "status.tsv"
     with status_file.open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle, delimiter="\t"))
+    variants = ("official",) if root.name.startswith("official_") else ("vae", "rae")
+    unexpected = {(r["variant"], r["task"]) for r in rows} - {
+        (variant, task) for variant in variants for task in TASKS
+    }
+    if unexpected:
+        raise ValueError(f"Unexpected variant/task rows: {sorted(unexpected)}")
     status = {(r["variant"], r["task"]): r for r in rows}
+    if len(status) != len(rows):
+        raise ValueError("Duplicate variant/task status rows")
     results = []
-    for variant in ("vae", "rae"):
+    for variant in variants:
         for task in TASKS:
             entry = {"variant": variant, "task": task}
             row = status.get((variant, task))
@@ -72,30 +80,38 @@ def summarize(root: Path) -> dict:
             results.append(entry)
 
     pairs = []
-    for task in TASKS:
-        vae = next(x for x in results if x["variant"] == "vae" and x["task"] == task)
-        rae = next(x for x in results if x["variant"] == "rae" and x["task"] == task)
-        if vae["state"] == rae["state"] == "complete":
-            pairs.append(
-                {
-                    "task": task,
-                    "vae_success": vae["success"],
-                    "rae_success": rae["success"],
-                    "rae_minus_vae": int(rae["success"]) - int(vae["success"]),
-                    "same_accepted_seed": (
-                        vae["accepted_seed"] is not None
-                        and vae["accepted_seed"] == rae["accepted_seed"]
-                    ),
-                }
-            )
+    if variants == ("vae", "rae"):
+        for task in TASKS:
+            vae = next(x for x in results if x["variant"] == "vae" and x["task"] == task)
+            rae = next(x for x in results if x["variant"] == "rae" and x["task"] == task)
+            if vae["state"] == rae["state"] == "complete":
+                pairs.append(
+                    {
+                        "task": task,
+                        "vae_success": vae["success"],
+                        "rae_success": rae["success"],
+                        "rae_minus_vae": int(rae["success"]) - int(vae["success"]),
+                        "same_accepted_seed": (
+                            vae["accepted_seed"] is not None
+                            and vae["accepted_seed"] == rae["accepted_seed"]
+                        ),
+                    }
+                )
     return {
         "scope": "exploratory; one demo_clean episode per task and checkpoint",
         "renderer": renderer_description(root),
         "not_official_benchmark": True,
+        "variants": list(variants),
         "tasks_planned": len(TASKS),
+        "episodes_planned": len(TASKS) * len(variants),
+        "episodes_complete": sum(x["state"] == "complete" for x in results),
         "pairs_complete": len(pairs),
         "episodes": results,
         "pairs": pairs,
+        "successes_by_variant": {
+            variant: sum(x.get("success", False) for x in results if x["variant"] == variant)
+            for variant in variants
+        },
         "vae_successes_in_pairs": sum(x["vae_success"] for x in pairs),
         "rae_successes_in_pairs": sum(x["rae_success"] for x in pairs),
         "technical_failures_before_retry": sum(

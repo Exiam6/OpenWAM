@@ -174,6 +174,13 @@ def build(paired: dict, official: dict, ablation: dict, offline: dict, width: di
         low, high = item["bootstrap_95pct_ci"]
         lines.append(f"| {item['treatment']} − {item['control']} | "
                      f"{item['difference']:+.2%} | [{low:+.2%}, {high:+.2%}] |")
+    lines += ["", "| Task | VAE | Reconstruction S-VAE48 | Action S-VAE48 |",
+              "|---|---:|---:|---:|"]
+    for row in ablation["per_task"]:
+        successes = row["successes"]
+        lines.append(f"| {row['task']} | {successes['vae'] / 100:.1%} | "
+                     f"{successes['reconstruction_svae48'] / 100:.1%} | "
+                     f"{successes['action_svae48'] / 100:.1%} |")
     lines += ["", "## Official released-checkpoint reproduction", "",
               "The released RoboTwin-Full checkpoint is a separate reference; its",
               "training data and model provenance differ from the matched experiment.", "",

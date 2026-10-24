@@ -75,6 +75,9 @@ The reducer checkpoint retains full-precision training statistics when the
 host model is cast to bf16. The earlier cast path rounded the statistics;
 commit `d9e69ff` fixed this before the width-matched WAM training and an
 exact-value check against the registered feature archive passed.
+The bf16 forward still casts statistics to bf16 for arithmetic; the fix
+preserves their stored fp32 values for later dtype changes. A ten-window
+initialization smoke had identical action losses before and after the fix.
 
 ### Held-out test by task
 

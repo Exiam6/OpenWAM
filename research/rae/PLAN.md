@@ -225,6 +225,9 @@ After all three seeds have paired offline reports, use
 `research/rae/aggregate_multiseed.py` to verify identical task/window/noise
 settings and report the task-balanced mean across seeds plus a descriptive
 bootstrap over seeds, tasks, and paired windows.
+`research/rae/continue_multiseed_summary.py` waits for the training controller
+to finish and writes the aggregate JSON files and a concise `SUMMARY.md` under
+the persistent multi-seed run directory only if both new seeds completed.
 
 ## Related primary work
 

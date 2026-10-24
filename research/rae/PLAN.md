@@ -235,6 +235,11 @@ S-VAE reducer. The collector now records the selected-index SHA256 and keeps
 the full-dataset traversal as its default. A 48-channel DINO/S-VAE WAM is a
 separate ablation against the 48-channel native VAE: its reducer is an added
 learned component, so any difference cannot be assigned solely to head width.
+The single-GPU collector writes its shards under
+`/data/zifan-openwam-rae/svae_features`; `continue_svae48.py` verifies the
+8,192-clip, 11,796,480-token archive and then trains a 1,000-step S-VAE on
+GPU 2. This stage-one reducer is only preparation for a later matched WAM
+run and is excluded from task-success claims.
 
 ## Related primary work
 

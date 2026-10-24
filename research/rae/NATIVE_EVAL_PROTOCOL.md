@@ -26,7 +26,11 @@ the native renderer. CPU Lavapipe outcomes remain a separate diagnostic.
   listed source. That source-level list does not prove that every visual
   scene or asset in the native evaluation is absent from pretraining.
 - Use `checkpoint_step_1000.safetensors` for every matched checkpoint. Verify
-  each file against its registered SHA256 and the saved source commit marker.
+  each file against its registered SHA256. Seed 42 predates the automatic
+  launch marker: its RAE and VAE source commits are recorded in the respective
+  `wam_pilot_20261023/{rae,vae}/registration.json` files (the VAE registration
+  also records the shared model-code commit). For seeds 43 and 44, verify
+  `source_commit_at_launch.txt` in each run root.
 - Evaluate the released RoboTwin-Full checkpoint separately on the complete
   official `demo_clean` and `demo_randomized` benchmark: 50 tasks per mode,
   100 episodes per task. Its training/data provenance differs from the matched

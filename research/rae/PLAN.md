@@ -122,7 +122,28 @@ RAE was lower on one of ten tasks (`open_microwave`) and higher on nine.
 The full paired report is
 `/root/zifan/openwam-runs/wam_pilot_20261023/paired_dev_comparison.json`.
 This single-seed offline proxy does not establish a task-success difference.
-The A100 host still cannot run the native Vulkan RT closed-loop simulator.
+The A100 host still cannot run the native NVIDIA Vulkan RT closed-loop simulator.
+
+### Software-rendered closed-loop pilot (2026-10-24)
+
+An isolated Mesa Lavapipe 26.2.4 environment at
+`/root/zifan/openwam-envs/lavapipe-rt` now runs SAPIEN's RT shader on CPU.
+The RoboTwin OIDN path requires Vulkan/CUDA device interop, so
+`ROBOTWIN_SOFTWARE_RT=1` replaces OIDN with no denoiser. The original 32
+samples/pixel and path depth 8 work but were too slow for a task sweep.
+A 1-sample test produced unusably noisy images; the paired exploratory sweep
+uses 8 samples/pixel, path depth 4, one full-length `demo_clean` episode per
+task, and the same initial evaluation seed for VAE and RAE. This renderer has a visible
+domain shift from the released benchmark. Results from it must not be called
+the native released-checkpoint reproduction or the official success rate.
+
+Both matched checkpoints loaded into the policy server and completed a real
+20-step `open_microwave` simulation smoke test at 8 samples/pixel, each with
+0/1 success. The task's real limit is 1,500 steps, so these smokes only prove
+that the policy, camera, cuRobo, and simulator loop runs. The paired ten-task
+sweep is registered in `research/rae/run_robotwin_software_rt.sh`; logs and
+per-task status are under
+`/root/zifan/openwam-runs/robotwin_rt_eval_20261024/paired_8spp`.
 
 ## Related primary work
 

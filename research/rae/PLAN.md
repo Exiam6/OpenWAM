@@ -274,6 +274,13 @@ measuring closed-loop success.
   arXiv:2510.11690; reference implementation `bytetriper/RAE` (MIT), inspected
   at `a4d18c4db766419cbe7cb8c02cd9f7ceb0ec9041`.
 - Jiang et al., *Rethinking Representations for World-Action Modeling*,
-  arXiv:2609.38163. Its feature calibration, temporal bottleneck, and
-  action-grounded shaping are candidate **separate** ablations, not part of the
-  first RAE/VAE comparison.
+  [arXiv:2609.38163](https://arxiv.org/html/2609.38163). Its feature
+  calibration, temporal bottleneck, and action-grounded shaping are candidate
+  **separate** ablations, not part of the first RAE/VAE comparison. The paper's
+  full method uses DINOv3-L features from several layers, a trainable
+  2-frame/2-by-2-patch bottleneck, and action-only gradients into that
+  bottleneck. Our frozen DINOv2-Base and offline-trained S-VAE do not implement
+  that gradient routing, so their outcomes cannot test ReWAM itself. The
+  authors' [repository](https://github.com/hustvl/ReWAM) currently contains
+  only a release placeholder; no reference training code is available to
+  transplant directly.

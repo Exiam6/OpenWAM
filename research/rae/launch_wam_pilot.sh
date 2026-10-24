@@ -96,6 +96,17 @@ export MASTER_PORT="${MASTER_PORT:-29617}"
 export OMP_NUM_THREADS=4
 
 cd "$repo"
+source_commit="$(git rev-parse HEAD)"
+source_marker="$run_root/$variant/source_commit_at_launch.txt"
+mkdir -p "$(dirname "$source_marker")"
+if [[ -f "$source_marker" ]]; then
+  if [[ "$(cat "$source_marker")" != "$source_commit" ]]; then
+    echo "Training output already registered to a different source commit: $source_marker" >&2
+    exit 1
+  fi
+else
+  printf '%s\n' "$source_commit" > "$source_marker"
+fi
 # OpenWAM only writes final weights when save_steps is truthy; 2000 > max_steps
 # gives one final checkpoint at step 1000 without periodic checkpoint disk use.
 exec bash scripts/train.sh \

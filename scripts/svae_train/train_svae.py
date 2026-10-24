@@ -332,7 +332,10 @@ def main(cfg: DictConfig) -> None:
 
     accelerator.wait_for_everyone()
     if accelerator.is_main_process:
-        unwrapped = accelerator.unwrap_model(svae)
+        # Accelerate's generic unwrap helper imports DeepSpeed even for plain
+        # single-GPU/DDP runs. That import requires a local CUDA toolkit on
+        # this host, although this trainer never uses DeepSpeed.
+        unwrapped = svae.module if hasattr(svae, "module") else svae
         unwrapped.eval()
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         out_dir = Path(str(tr.output_dir)) / f"svae_{timestamp}"

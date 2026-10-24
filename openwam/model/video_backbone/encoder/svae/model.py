@@ -163,18 +163,22 @@ class SVAE(nn.Module):
         self.input_std.copy_(std)
 
     def _apply(self, fn, recurse=True):
-        # Keep the per-channel standardisation stats in fp32 across a host
-        # ``.to(dtype)`` (e.g. the deploy-time bf16 cast). They are
-        # applied via an explicit ``.to(x.dtype)`` in ``_standardize``, so fp32
-        # storage preserves their precision (these are dataset statistics, not
-        # compute tensors) without forcing the reduce off the host's bf16 compute
-        # dtype. This keeps the standardisation identical between standalone
-        # S-VAE training (fp32 buffers) and in-pipeline application.
+        # Preserve the *values* before nn.Module._apply casts buffers. Casting
+        # fp32 stats to bf16 and then back to fp32 would leave rounded values.
+        # The features are cast to their compute dtype in _standardize, while
+        # these stored training statistics remain bit-exact across host casts.
+        saved = {
+            name: getattr(self, name).detach().float().clone()
+            for name in ("input_mean", "input_std")
+            if getattr(self, name).device.type != "meta"
+        }
         super()._apply(fn, recurse=recurse)
-        if self.input_mean.dtype != torch.float32:
-            self.input_mean = self.input_mean.float()
-        if self.input_std.dtype != torch.float32:
-            self.input_std = self.input_std.float()
+        for name in ("input_mean", "input_std"):
+            current = getattr(self, name)
+            if name in saved:
+                setattr(self, name, saved[name].to(device=current.device))
+            elif current.dtype != torch.float32:
+                setattr(self, name, current.float())
         return self
 
     # ------------------------------------------------------------------ #

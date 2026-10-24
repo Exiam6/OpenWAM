@@ -90,14 +90,17 @@ def test_set_input_stats_clamps_zero_std():
 
 
 def test_standardisation_stats_stay_fp32_across_dtype_cast():
-    # The deploy host casts the encoder to bf16; the standardisation
-    # buffers must stay fp32 (they are dataset stats, not compute tensors) so
-    # the standardisation matches standalone fp32-buffer training.
+    # The deploy host casts the encoder to bf16. Both dtype and exact values
+    # must survive; converting bf16 stats back to fp32 loses information.
     m = _mk().eval()
-    m.set_input_stats(torch.arange(16).float(), torch.full((16,), 2.0))
+    mean = torch.arange(16).float() + 0.00371
+    std = torch.full((16,), 2.00137)
+    m.set_input_stats(mean, std)
     m.to(torch.bfloat16)
     assert m.input_mean.dtype == torch.float32
     assert m.input_std.dtype == torch.float32
+    assert torch.equal(m.input_mean, mean)
+    assert torch.equal(m.input_std, std)
     assert m.enc_proj.weight.dtype == torch.bfloat16  # params did cast
 
 

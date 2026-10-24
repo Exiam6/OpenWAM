@@ -5,6 +5,13 @@ source checkout, model assets, and checkpoint files have been copied there.
 The current eight-A100 host has no working NVIDIA Vulkan ICD and cannot run
 the native renderer. CPU Lavapipe outcomes remain a separate diagnostic.
 
+The current host's optional Tailscale userspace client exposes a local SOCKS5
+listener at `127.0.0.1:1055`. After that client has joined Hestia's tailnet,
+use `ssh -o 'ProxyCommand=python research/rae/socks5_ssh_proxy.py %h %p'`
+with Hestia's SSH user, key, and Tailscale IP to access the RTX host. This
+proxy leaves the A100 host's system routes unchanged. Verify the SSH host key
+and remote GPU before transferring checkpoints or starting Workers.
+
 ## Frozen comparison
 
 - Evaluate the 10 tasks in `research/rae/DATA_SELECTION.md` with `demo_clean`,

@@ -36,6 +36,13 @@ def evaluate(output: Path, per_task: int) -> None:
     if sha256(stats_path) != FEATURE_STATS_SHA256 or sha256(REDUCER) != REDUCER_SHA256:
         raise ValueError("S-VAE features or reducer checkpoint changed")
     stats = torch.load(stats_path, map_location="cpu", weights_only=True)
+    shards = sorted(FEATURES.glob("features_rank*_part*.pt"))
+    if not shards:
+        raise FileNotFoundError("Missing registered train feature shards")
+    train_shape = tuple(torch.load(shards[0], map_location="cpu", mmap=True,
+                                   weights_only=True)["features"].shape[1:])
+    if train_shape[0] != 768 or np.prod(train_shape[1:]) != 1440:
+        raise ValueError(f"Unexpected registered train feature geometry: {train_shape}")
 
     cfg = OmegaConf.load(FEATURES / "config.yaml")
     with open_dict(cfg.dataloader):
@@ -62,7 +69,7 @@ def evaluate(output: Path, per_task: int) -> None:
         sample = dataset[index]
         video = encoder.preprocess_video(sample["video"])
         raw = encoder.batch_encode_pooled_for_svae_training(video)
-        if tuple(raw.shape[1:]) != (768, 3, 16, 30):
+        if tuple(raw.shape[1:]) != train_shape:
             raise ValueError(f"Unexpected DINO feature geometry: {tuple(raw.shape)}")
         outcome = svae(raw)
         _, metrics = svae_loss(outcome, beta=1e-4)
@@ -100,6 +107,7 @@ def evaluate(output: Path, per_task: int) -> None:
         "feature_stats_sha256": FEATURE_STATS_SHA256,
         "split_manifest_sha256": SPLIT_SHA256,
         "dino_model_sha256": "d73036b56966966d07975d696bde331762f37297e2f095de8cea0040c3aa0841",
+        "train_feature_shape": train_shape,
     }
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")

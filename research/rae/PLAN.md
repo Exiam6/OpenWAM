@@ -125,12 +125,22 @@ This single-seed offline proxy does not establish a task-success difference.
 The A100 host still cannot run the native NVIDIA Vulkan RT closed-loop simulator.
 
 After model selection on dev, an identical 100-window, four-noise-repeat
-teacher-forced evaluation is being run on test episodes not used for WAM
+teacher-forced evaluation was run on test episodes not used for WAM
 training or checkpoint selection.
 `eval_teacher_forced.py --split test` reuses the frozen training statistics;
-`continue_test_eval.sh` runs VAE and RAE sequentially on GPU 4 and writes
+`continue_test_eval.sh` ran VAE and RAE sequentially on GPU 4 and wrote
 `paired_test_comparison.json` under the pilot run root. The test split is read
 once for this predeclared comparison, and action loss remains an offline proxy.
+
+The test comparison completed: on 100 test windows (10 per task, four fixed
+noise draws per window), VAE action loss was 0.0183711 and RAE was 0.0235261,
+a RAE increase of 0.0051550 (28.06%; lower is better). RAE was lower only on
+`open_microwave`; it was higher on the other nine tasks. A hierarchical paired
+bootstrap that resampled tasks and then windows gave a descriptive 95% interval
+of [0.0018641, 0.0085579] for RAE minus VAE action loss (20,000 draws,
+seed 20261024). The raw pair and uncertainty are in
+`paired_test_comparison.json` and `paired_test_uncertainty.json`. These metrics
+still do not establish a closed-loop success-rate difference.
 
 ### Software-rendered closed-loop pilot (2026-10-24)
 
@@ -192,9 +202,13 @@ roughly 10 seconds/action in its early steps. Disabling Lavapipe threading
 with `LP_NUM_THREADS=0` was several times slower than 16 threads and still
 segfaulted at step 84/100 of a `beat_block_hammer` diagnostic. This rules out
 thread count alone as a sufficient stability fix.
-Mesa 26.1.6 is being tested in a separate full-length `beat_block_hammer`
-process, with a separate policy server and GPU pair; its result will determine
-whether an older CPU Vulkan driver is a better fallback.
+Mesa 26.1.6 was tested in a separate full-length `beat_block_hammer` process,
+with a separate policy server and GPU pair. It also segfaulted, at step
+354/400. The observed CPU Vulkan failures span 26.1.6, 26.2.4, and 26.2.5;
+short smokes and a single completed retry do not establish simulator
+reliability. The ongoing exploratory sweep continues to record technical
+errors explicitly, while the held-out offline WAM test comparison proceeds
+without the simulator.
 
 ## Related primary work
 

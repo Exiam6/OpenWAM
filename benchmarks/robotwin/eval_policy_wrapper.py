@@ -217,6 +217,28 @@ def _configure_software_rt() -> None:
     sapien.render.set_ray_tracing_samples_per_pixel = set_spp
     sapien.render.set_ray_tracing_path_depth = set_depth
 
+    if os.environ.get("ROBOTWIN_SOFTWARE_RT_OIDN_CPU") == "1":
+        library = os.environ.get("ROBOTWIN_SOFTWARE_RT_OIDN_LIBRARY")
+        if not library:
+            raise RuntimeError(
+                "ROBOTWIN_SOFTWARE_RT_OIDN_CPU=1 requires "
+                "ROBOTWIN_SOFTWARE_RT_OIDN_LIBRARY"
+            )
+        from benchmarks.robotwin.oidn_cpu import CpuOIDN
+        from envs.camera.camera import Camera
+
+        denoiser = CpuOIDN(library)
+        original_get_rgb = Camera.get_rgb
+
+        def get_rgb(self) -> dict:
+            views = original_get_rgb(self)
+            for camera_data in views.values():
+                camera_data["rgb"] = denoiser.denoise(camera_data["rgb"])
+            return views
+
+        Camera.get_rgb = get_rgb
+        print("[render] software RT: CPU OIDN color-only denoising enabled", flush=True)
+
 
 def _patch_warp_torch_namespace() -> None:
     """Provide the legacy ``warp.torch`` namespace expected by this cuRobo fork.

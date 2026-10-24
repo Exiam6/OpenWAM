@@ -141,9 +141,24 @@ Both matched checkpoints loaded into the policy server and completed a real
 20-step `open_microwave` simulation smoke test at 8 samples/pixel, each with
 0/1 success. The task's real limit is 1,500 steps, so these smokes only prove
 that the policy, camera, cuRobo, and simulator loop runs. The paired ten-task
-sweep is registered in `research/rae/run_robotwin_software_rt.sh`; logs and
-per-task status are under
+sweep was first registered in `research/rae/run_robotwin_software_rt.sh`; logs and
+per-task status for the aborted 8-sample sweep are under
 `/root/zifan/openwam-runs/robotwin_rt_eval_20261024/paired_8spp`.
+
+The CPU Open Image Denoise 2.5.1 color-only RT filter provides a faster,
+clearer exploratory configuration: one RT sample/pixel, path depth 2, then
+LDR/sRGB CPU denoising in `Camera.get_rgb`. On the same initial
+`open_microwave` scene frame, its PSNR against the 32-sample, no-denoiser
+reference was 26.06 dB versus 26.32 dB for the 8-sample, no-denoiser frame.
+Median post-warmup denoise time was 11.8 ms/frame. These are single-scene
+diagnostics, not a guarantee of policy equivalence. The native renderer
+denoises before display conversion and may use auxiliary render buffers;
+this CPU bridge only uses the display RGB. Evidence and source frame hashes
+are in `/root/zifan/openwam-runs/robotwin_rt_eval_20261024/oidn_image_probe.json`.
+The 8-sample run was stopped mid-first task to avoid mixing render domains.
+The paired one-sample CPU-OIDN sweep is registered in
+`research/rae/run_robotwin_cpu_oidn.sh` and writes to
+`/root/zifan/openwam-runs/robotwin_rt_eval_20261024/paired_1spp_cpu_oidn`.
 
 ## Related primary work
 

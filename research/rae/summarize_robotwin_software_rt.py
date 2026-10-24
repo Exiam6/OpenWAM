@@ -71,7 +71,10 @@ def summarize(root: Path) -> dict:
                     "vae_success": vae["success"],
                     "rae_success": rae["success"],
                     "rae_minus_vae": int(rae["success"]) - int(vae["success"]),
-                    "same_accepted_seed": vae["accepted_seed"] == rae["accepted_seed"],
+                    "same_accepted_seed": (
+                        vae["accepted_seed"] is not None
+                        and vae["accepted_seed"] == rae["accepted_seed"]
+                    ),
                 }
             )
     return {

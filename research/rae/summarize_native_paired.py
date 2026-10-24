@@ -50,7 +50,7 @@ def summarize_rows(
         if key in actual:
             raise ValueError(f"Duplicate native episode result: {key}")
         actual.add(key)
-        if type(row["scene_seed"]) is not int or type(row["success"]) is not bool:
+        if type(row["scene_seed"]) is not int or row["scene_seed"] < 100000 or type(row["success"]) is not bool:
             raise ValueError(f"Invalid scene seed or success value: {key}")
         if not isinstance(row["manifest_hash"], str) or not row["manifest_hash"].startswith("sha256:"):
             raise ValueError(f"Invalid manifest hash: {key}")
@@ -61,6 +61,7 @@ def summarize_rows(
 
     tensor = np.empty((len(SEEDS), len(tasks), episodes_per_task, 2), dtype=np.int8)
     manifests = {}
+    scene_seeds = {}
     discordant = {"rae_only": 0, "vae_only": 0, "both_success": 0, "both_failure": 0}
     per_seed_task = []
     for si, seed in enumerate(SEEDS):
@@ -73,6 +74,9 @@ def summarize_rows(
                 prior = manifests.setdefault(task, a["manifest_hash"])
                 if prior != a["manifest_hash"]:
                     raise ValueError(f"Manifest differs across training seeds: {task}")
+                prior_seed = scene_seeds.setdefault((task, episode), a["scene_seed"])
+                if prior_seed != a["scene_seed"]:
+                    raise ValueError(f"Scene seed differs across training seeds: {task}/{episode}")
                 vae, rae = a["success"], b["success"]
                 tensor[si, ti, episode] = (vae, rae)
                 label = (

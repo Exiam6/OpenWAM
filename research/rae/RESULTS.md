@@ -104,14 +104,19 @@ with RT and post-render CPU OIDN can run real RoboTwin scenes, cameras,
 cuRobo, and policy actions. Its images differ from the released renderer.
 Long rollouts intermittently segfault in native rendering code on Mesa
 26.1.6, 26.2.4, and 26.2.5; disabling Lavapipe threading did not eliminate
-the fault. A paired one-episode-per-task exploratory sweep is still running
-with Mesa 26.2.5 and at most one technical retry per task. Current attempts,
-successes, and terminal technical errors must be read from
+the fault. The paired one-episode-per-task exploratory sweep finished with
+Mesa 26.2.5 and at most one technical retry per task. Six of 20 planned
+episodes completed; 14 had terminal technical renderer failures. Of the
+completed episodes, two VAE/RAE task pairs had matching accepted scene seeds
+(`hanging_mug` and `place_dual_shoes`). Both policies failed both episodes,
+so the exploratory paired result is 0/2 versus 0/2. This sample cannot
+support a reliable success-rate comparison. Per-task attempts and outcomes
+are in
 `/root/zifan/openwam-runs/robotwin_rt_eval_20261024/paired_1spp_cpu_oidn_mesa2625/status.tsv`
-and the task logs. RoboTwin may skip an initial scene seed when setup fails;
+and `summary.json`. RoboTwin may skip an initial scene seed when setup fails;
 the summary includes a task in `pairs_complete` only when both checkpoints
 finished and their accepted scene seeds match. An exit code of 139 is a
 simulator failure, not a robot-task failure. The released RoboTwin-Full
-checkpoint sanity sweep is queued after
-the paired sweep. No native released-benchmark reproduction or reliable
-closed-loop RAE-versus-VAE success comparison has been established yet.
+checkpoint sanity sweep is now running. No native released-benchmark
+reproduction or reliable closed-loop RAE-versus-VAE success comparison has
+been established yet.

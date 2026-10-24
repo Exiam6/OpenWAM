@@ -240,6 +240,35 @@ def _configure_software_rt() -> None:
         print("[render] software RT: CPU OIDN color-only denoising enabled", flush=True)
 
 
+def _configure_software_raster() -> None:
+    """Select CPU Vulkan raster rendering for a separate diagnostic rollout."""
+    if os.environ.get("ROBOTWIN_SOFTWARE_RASTER") != "1":
+        return
+    if os.environ.get("ROBOTWIN_SOFTWARE_RT") == "1":
+        raise ValueError("software raster and software RT modes are mutually exclusive")
+    if not os.environ.get("VK_ICD_FILENAMES"):
+        raise RuntimeError("ROBOTWIN_SOFTWARE_RASTER=1 requires an explicit CPU Vulkan ICD")
+
+    import sapien.render
+
+    original_shader = sapien.render.set_camera_shader_dir
+    original_denoiser = sapien.render.set_ray_tracing_denoiser
+
+    def set_shader(name: str) -> None:
+        if name == "rt":
+            print("[render] software raster: RT shader replaced with default", flush=True)
+            name = "default"
+        original_shader(name)
+
+    def set_denoiser(name: str) -> None:
+        if name == "oidn":
+            name = "none"
+        original_denoiser(name)
+
+    sapien.render.set_camera_shader_dir = set_shader
+    sapien.render.set_ray_tracing_denoiser = set_denoiser
+
+
 def _patch_warp_torch_namespace() -> None:
     """Provide the legacy ``warp.torch`` namespace expected by this cuRobo fork.
 
@@ -828,6 +857,7 @@ def main(argv: list[str] | None = None) -> int:
         sys.argv = [sys.argv[0], *raw_args]
     module = bootstrap_robotwin_module()
     _configure_software_rt()
+    _configure_software_raster()
     operation = os.environ.get("ROBOTWIN_LABTASKER_OPERATION")
     if operation == "build_manifest":
         _install_manifest(module)

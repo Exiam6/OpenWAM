@@ -174,6 +174,19 @@ allowed, and failed attempts retain their logs. The released-checkpoint
 sanity sweep is queued by `research/rae/continue_official_after_paired_mesa2625.sh`
 after all paired task attempts finish. The summary reports terminal technical
 failures separately from policy success.
+The 26.2.5 build also crashed in a first full-length `beat_block_hammer`
+attempt at step 97 and a first `hanging_mug` attempt at step 30. A retry
+completed all 400 `beat_block_hammer` steps, and the `hanging_mug` retry
+continued beyond the first fault. The renderer is therefore still being
+treated as failure-prone; a 100-step smoke is not a stability guarantee.
+An isolated CPU raster diagnostic entered a real RoboTwin task but ran at
+roughly 10 seconds/action in its early steps. Disabling Lavapipe threading
+with `LP_NUM_THREADS=0` was several times slower than 16 threads and still
+segfaulted at step 84/100 of a `beat_block_hammer` diagnostic. This rules out
+thread count alone as a sufficient stability fix.
+Mesa 26.1.6 is being tested in a separate full-length `beat_block_hammer`
+process, with a separate policy server and GPU pair; its result will determine
+whether an older CPU Vulkan driver is a better fallback.
 
 ## Related primary work
 

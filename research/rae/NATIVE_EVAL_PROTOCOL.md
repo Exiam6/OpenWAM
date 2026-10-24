@@ -31,6 +31,12 @@ the native renderer. CPU Lavapipe outcomes remain a separate diagnostic.
   `wam_pilot_20261023/{rae,vae}/registration.json` files (the VAE registration
   also records the shared model-code commit). For seeds 43 and 44, verify
   `source_commit_at_launch.txt` in each run root.
+  The registered seed-42 model-code commit is `448ee84d`; the later matched
+  source commit is `c414e853`. Their `openwam/`, `scripts/`, and `configs/`
+  diff changes S-VAE collection/training/reducer files, not the native VAE or
+  raw-DINOv2 forward path. The pilot launcher changes add seed/path overrides,
+  S-VAE opt-in, and provenance checks; the native VAE and raw-DINOv2 training
+  settings remain the same. Keep this source-version distinction in the report.
 - Evaluate the released RoboTwin-Full checkpoint separately on the complete
   official `demo_clean` and `demo_randomized` benchmark: 50 tasks per mode,
   100 episodes per task. Its training/data provenance differs from the matched

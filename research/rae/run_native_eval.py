@@ -27,7 +27,9 @@ SELECTED = (
 )
 MATCHED = tuple(f"seed{seed}_{kind}" for seed in (42, 43, 44) for kind in ("vae", "rae"))
 ABLATIONS = ("seed42_reconstruction_svae48", "seed42_action_svae48")
-MODELS = MATCHED + ABLATIONS + ("official",)
+CORE_MODELS = MATCHED + ABLATIONS + ("official",)
+OPTIONAL_MODELS = ("seed42_online_action",)
+MODELS = CORE_MODELS + OPTIONAL_MODELS
 OFFICIAL_SHA256 = "d07ff6f8cfb627ebf47313e65af38773fabcb3861d52fdc7c3bc5e7bee33f6fe"
 
 
@@ -69,7 +71,7 @@ def load_checkpoints(path: Path, *, verify_bytes: bool) -> dict[str, dict[str, s
             raise FileNotFoundError(f"incomplete checkpoint directory: {name}: {directory}")
         if not (directory / "normalization_stats.npy").is_file() or not (directory / "tokenizer").is_dir():
             raise FileNotFoundError(f"missing checkpoint sidecar: {name}: {directory}")
-        if (name.endswith("rae") or "svae48" in name) and not (directory / "dinov2/config.json").is_file():
+        if (name.endswith("rae") or "svae48" in name or name == "seed42_online_action") and not (directory / "dinov2/config.json").is_file():
             raise FileNotFoundError(f"missing DINOv2 sidecar: {name}: {directory}")
         if verify_bytes and digest(weight) != sha:
             raise ValueError(f"checkpoint SHA256 mismatch: {name}: {weight}")
@@ -85,6 +87,7 @@ def plan(models: dict | None = None) -> list[tuple[str, str, str]]:
     if "official" in available:
         stages += [("official_clean", "run_eval", "demo_clean"),
                    ("official_randomized", "run_eval", "demo_randomized")]
+    stages += [(name, "run_eval", "demo_clean") for name in OPTIONAL_MODELS if name in available]
     return stages
 
 
@@ -186,6 +189,11 @@ def write_registries(args: argparse.Namespace, models: dict) -> None:
                 for mode in ("demo_clean", "demo_randomized")}
     for name, value in (("paired", paired), ("ablation", ablation), ("official", official)):
         write_json(args.run_dir / f"{name}-submissions.json", value)
+    if OPTIONAL_MODELS[0] in models:
+        online = {"42": {"vae": paired["42"]["vae"], "rae": paired["42"]["rae"],
+                         "online_action": {**models[OPTIONAL_MODELS[0]],
+                                           "submission_id": submission[OPTIONAL_MODELS[0]]}}}
+        write_json(args.run_dir / "online-submissions.json", online)
 
 
 def audit_summary(name: str, args: argparse.Namespace) -> None:
@@ -267,12 +275,14 @@ def main(argv: list[str] | None = None) -> int:
             wait_submission(name, operation, args, active_workers)
             state["completed"].append(name)
             write_json(state_path, state)
-        if set(models) != set(MODELS):
-            print(f"Pending checkpoints: {sorted(set(MODELS) - set(models))}", flush=True)
+        if not set(CORE_MODELS) <= set(models):
+            print(f"Pending core checkpoints: {sorted(set(CORE_MODELS) - set(models))}", flush=True)
             return 0
         write_registries(args, models)
         for name in ("paired", "ablation", "official"):
             audit_summary(name, args)
+        if OPTIONAL_MODELS[0] in models:
+            audit_summary("online", args)
     finally:
         stop_workers(active_workers)
     return 0

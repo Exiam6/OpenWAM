@@ -19,11 +19,19 @@ PAIRS = (("reconstruction_svae48", "vae"),
 
 def summarize_rows(rows: list[dict], *, tasks: tuple[str, ...] = TASKS,
                    episodes_per_task: int = 100, draws: int = 20_000,
-                   rng_seed: int = 20261025) -> dict:
+                   rng_seed: int = 20261025,
+                   variants: tuple[str, ...] = VARIANTS,
+                   pairs: tuple[tuple[str, str], ...] = PAIRS,
+                   scope: str = "Native RTX/Vulkan RT manifest-paired single-seed S-VAE48 ablations") -> dict:
     if not tasks or episodes_per_task <= 0 or draws <= 0:
         raise ValueError("Tasks, episodes, and bootstrap draws must be positive")
+    if len(variants) < 2 or len(set(variants)) != len(variants) or any(
+        treatment not in variants or control not in variants or treatment == control
+        for treatment, control in pairs
+    ):
+        raise ValueError("Invalid ablation variants or comparisons")
     expected = {(42, variant, task, episode)
-                for variant in VARIANTS for task in tasks
+                for variant in variants for task in tasks
                 for episode in range(episodes_per_task)}
     indexed: dict[tuple, dict] = {}
     for row in rows:
@@ -40,13 +48,13 @@ def summarize_rows(rows: list[dict], *, tasks: tuple[str, ...] = TASKS,
         raise ValueError(f"Native ablation coverage mismatch: "
                          f"{len(expected - set(indexed))} missing, {len(set(indexed) - expected)} extra")
 
-    values = np.empty((len(tasks), episodes_per_task, len(VARIANTS)), dtype=np.int8)
+    values = np.empty((len(tasks), episodes_per_task, len(variants)), dtype=np.int8)
     manifest_hashes: dict[str, str] = {}
     per_task = []
     for ti, task in enumerate(tasks):
         task_scene_seeds: set[int] = set()
         for episode in range(episodes_per_task):
-            triplet = [indexed[(42, variant, task, episode)] for variant in VARIANTS]
+            triplet = [indexed[(42, variant, task, episode)] for variant in variants]
             identities = {(row["scene_seed"], row["manifest_hash"]) for row in triplet}
             if len(identities) != 1:
                 raise ValueError(f"Scene or manifest mismatch: {task}/{episode}")
@@ -61,12 +69,12 @@ def summarize_rows(rows: list[dict], *, tasks: tuple[str, ...] = TASKS,
             values[ti, episode] = [row["success"] for row in triplet]
         per_task.append({"task": task, "episodes_per_variant": episodes_per_task,
                          "successes": {variant: int(values[ti, :, vi].sum())
-                                       for vi, variant in enumerate(VARIANTS)}})
+                                       for vi, variant in enumerate(variants)}})
 
     rng = np.random.default_rng(rng_seed)
     comparisons = []
-    for treatment, control in PAIRS:
-        treatment_index, control_index = VARIANTS.index(treatment), VARIANTS.index(control)
+    for treatment, control in pairs:
+        treatment_index, control_index = variants.index(treatment), variants.index(control)
         difference = values[:, :, treatment_index].astype(np.int16) - values[:, :, control_index]
         bootstrap = np.empty(draws, dtype=np.float64)
         for start in range(0, draws, 256):
@@ -88,16 +96,16 @@ def summarize_rows(rows: list[dict], *, tasks: tuple[str, ...] = TASKS,
             "bootstrap_95pct_ci": [float(low), float(high)],
         })
     return {
-        "scope": "Native RTX/Vulkan RT manifest-paired single-seed S-VAE48 ablations",
+        "scope": scope,
         "mode": "demo_clean", "instruction_type": "unseen", "training_seed": 42,
-        "tasks": list(tasks), "variants": list(VARIANTS),
+        "tasks": list(tasks), "variants": list(variants),
         "episodes_per_task_per_variant": episodes_per_task,
         "episodes_per_variant": len(tasks) * episodes_per_task,
         "registered_rows": len(rows), "manifest_hashes": manifest_hashes,
         "success_rates": {variant: float(values[:, :, vi].mean())
-                          for vi, variant in enumerate(VARIANTS)},
+                          for vi, variant in enumerate(variants)},
         "successes": {variant: int(values[:, :, vi].sum())
-                      for vi, variant in enumerate(VARIANTS)},
+                      for vi, variant in enumerate(variants)},
         "comparisons": comparisons, "per_task": per_task,
         "bootstrap": {"draws": draws, "rng_seed": rng_seed,
                       "resampling": "task, then paired episode; one training seed"},

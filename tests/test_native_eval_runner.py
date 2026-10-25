@@ -8,17 +8,22 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 from research.rae.run_native_eval import (
-    MODELS, audit_summary, load_checkpoints, plan, reconcile_state, write_registries,
+    CORE_MODELS, MODELS, audit_summary, load_checkpoints, plan, reconcile_state, write_registries,
 )
 
 
 class NativeEvalRunnerTests(unittest.TestCase):
     def test_complete_matrix_has_two_manifests_and_ten_model_submissions(self):
-        stages = plan(dict.fromkeys(MODELS, {}))
+        stages = plan(dict.fromkeys(CORE_MODELS, {}))
         self.assertEqual(len(stages), 12)
         self.assertEqual([stage[0] for stage in stages[:2]], ["manifest_clean", "manifest_randomized"])
         self.assertEqual(sum(stage[1] == "run_eval" for stage in stages), 10)
         self.assertEqual(stages[-1], ("official_randomized", "run_eval", "demo_randomized"))
+
+    def test_optional_online_model_adds_one_submission_after_core(self):
+        stages = plan(dict.fromkeys(MODELS, {}))
+        self.assertEqual(len(stages), 13)
+        self.assertEqual(stages[-1], ("seed42_online_action", "run_eval", "demo_clean"))
 
     def test_available_checkpoints_can_start_before_training_finishes(self):
         stages = plan({"seed42_vae": {}, "seed42_rae": {}, "official": {}})
@@ -67,7 +72,12 @@ class NativeEvalRunnerTests(unittest.TestCase):
             paired = json.loads((root / "paired-submissions.json").read_text())
             ablation = json.loads((root / "ablation-submissions.json").read_text())
             official = json.loads((root / "official-submissions.json").read_text())
+            online = json.loads((root / "online-submissions.json").read_text())
             self.assertEqual(ablation["42"]["vae"], paired["42"]["vae"])
+            self.assertEqual(online["42"]["vae"], paired["42"]["vae"])
+            self.assertEqual(online["42"]["rae"], paired["42"]["rae"])
+            self.assertEqual(online["42"]["online_action"]["submission_id"],
+                             submission_ids["seed42_online_action"])
             self.assertEqual(official["demo_clean"]["checkpoint_sha256"],
                              official["demo_randomized"]["checkpoint_sha256"])
             self.assertNotEqual(official["demo_clean"]["submission_id"],

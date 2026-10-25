@@ -269,3 +269,54 @@ episode attempts because the seed-42 VAE's 1,000 rows are reused.
 
 Current offline action loss and CPU-rendered episodes do not satisfy this
 native success-rate gate.
+
+## Optional online action-adapter ablation
+
+The independent seed-42 online action-adapter experiment has a guarded
+two-step DeepSpeed smoke and 1,000-step training controller. If its final
+checkpoint is verified, create a **separate augmented transfer manifest** with
+`register_online_native_checkpoint.py`; it adds `seed42_online_action` without
+changing the core transfer manifest or its running watcher. Copy the entire
+checkpoint directory to Hestia and regenerate the host-local checkpoint
+registry from the augmented manifest. Use the combined source branch
+`research/native_online_eval_20261025` on Hestia: it includes both the native
+runner and the adapter class needed to load this checkpoint. The original
+18,000-attempt protocol and its three strict summaries remain valid without
+this optional model.
+
+The combined runner submits the online model on the same selected-10-task
+`demo_clean` manifests as seed-42 VAE and raw DINO RAE. This adds 1,000 native
+attempts, with the two existing controls reused, for 19,000 distinct attempts
+when every experiment finishes. It writes `online-submissions.json` and audits
+3,000 matched rows with `summarize_native_online.py`. After copying
+`native-online-summary.json` back to the training host and generating the core
+complete report, create the augmented result document with:
+
+```bash
+/root/zifan/openwam-envs/labtasker-orchestration/bin/python \
+  -m research.rae.register_online_native_checkpoint \
+  --base-manifest /data/zifan-openwam-rae/native_eval_20261024/transfer_manifest.json \
+  --online-state /root/zifan/openwam-runs/wam_online_action_seed42/state.json \
+  --train-log /root/zifan/openwam-runs/wam_online_action_seed42/train.log \
+  --source-marker /data/zifan-openwam-rae/online_action_adapter_20261025/wam_seed42/source_commit_at_launch.txt \
+  --output /data/zifan-openwam-rae/online_action_adapter_20261025/transfer_manifest_with_online.json
+```
+
+Then, once the native online summary is complete:
+
+```bash
+/root/zifan/openwam-envs/labtasker-orchestration/bin/python \
+  -m research.rae.append_online_native_results \
+  --core /root/zifan/openwam-runs/OPENWAM_RAE_COMPLETE_RESULTS.md \
+  --paired /path/to/native-paired-summary.json \
+  --online /path/to/native-online-summary.json \
+  --online-state /root/zifan/openwam-runs/wam_online_action_seed42/state.json \
+  --output /root/zifan/openwam-runs/OPENWAM_RAE_COMPLETE_RESULTS_WITH_ONLINE.md
+```
+
+The online audit requires all 100 episodes per selected task for VAE, raw
+DINO, and online adapter, identical scene seeds and manifest hashes, unchanged
+seed-42 control submission IDs, and checkpoint identity across offline and
+native results. It reports task-balanced success, discordant pairs, and paired
+task/episode bootstrap intervals. This remains a single-seed method ablation,
+not a three-seed conclusion or a full ReWAM TRB reproduction.

@@ -115,7 +115,7 @@ def main() -> None:
                 if outcome.returncode == 0:
                     fingerprint = subprocess.run(["ssh-keygen", "-lf", str(KNOWN_HOSTS)],
                                                  text=True, capture_output=True, check=True).stdout.strip()
-                    record("ssh_audit_complete", peer_name=identity, key=str(key),
+                    record("ssh_audit_complete", peer_name=identity, host_ip=host_ip, key=str(key),
                            host_key_fingerprint=fingerprint, output=outcome.stdout.strip())
                     return
                 failures.append({"key": str(key), "returncode": outcome.returncode,

@@ -54,6 +54,11 @@ def build(args: argparse.Namespace) -> None:
         raise ValueError("Train-only feature statistics hash mismatch")
     if args.svae_path is not None and args.feature_stats is not None:
         raise ValueError("Use either calibrated raw DINO features or an S-VAE reducer, not both")
+    if args.online_action_adapter_hidden_dim is not None:
+        if args.online_action_adapter_hidden_dim <= 0:
+            raise ValueError("Online action adapter hidden dimension must be positive")
+        if args.svae_path is not None or args.feature_stats is None:
+            raise ValueError("Online action adapter ablation requires calibrated raw DINO features")
     svae = load_svae(str(args.svae_path)) if args.svae_path is not None else None
     if svae is not None and (svae.input_dim, svae.latent_dim) != (768, 48):
         raise ValueError("Width-matched DINO reducer must map 768 channels to 48")
@@ -75,7 +80,12 @@ def build(args: argparse.Namespace) -> None:
             "feature_stats_path": str(args.feature_stats) if args.feature_stats else None,
             "svae_path": str(args.svae_path) if args.svae_path else None,
             "svae_target_dim": svae.latent_dim if svae is not None else None,
+            "online_action_adapter_hidden_dim": args.online_action_adapter_hidden_dim,
         }
+        if args.online_action_adapter_hidden_dim is not None:
+            cfg.model.freeze = [
+                name for name in cfg.model.freeze if name != "video_backbone.video_encoder"
+            ]
     OmegaConf.save(cfg, output / "config.yaml")
     tokenizer = output / "tokenizer"
     if not tokenizer.exists():
@@ -132,6 +142,7 @@ def build(args: argparse.Namespace) -> None:
         "feature_stats_sha256": FEATURE_STATS_SHA256 if args.feature_stats else None,
         "svae_sha256": sha256(args.svae_path) if args.svae_path else None,
         "svae_latent_dim": svae.latent_dim if svae is not None else None,
+        "online_action_adapter_hidden_dim": args.online_action_adapter_hidden_dim,
         "seed": args.seed,
         "matched_shared_tensors": len(matched),
         "dropped_native_vae_and_projection_tensors": len(donor_skipped),
@@ -156,4 +167,5 @@ if __name__ == "__main__":
     parser.add_argument("--svae-path", type=Path, default=None)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--online-action-adapter-hidden-dim", type=int, default=None)
     build(parser.parse_args())

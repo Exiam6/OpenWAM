@@ -19,6 +19,7 @@ from torch import Tensor
 
 from openwam.model.video_backbone.encoder.base import VideoEncoderProperties
 from openwam.model.video_backbone.encoder.dinov3 import DinoV3VideoEncoder, _causal_temporal_pool
+from openwam.model.video_backbone.encoder.online_action_adapter import CausalActionAdapter
 from openwam.model.video_backbone.encoder.registry import register_video_encoder
 
 
@@ -45,6 +46,7 @@ class DinoV2VideoEncoder(DinoV3VideoEncoder):
         svae_path: str | None = None,
         svae_target_dim: int | None = None,
         svae_config: dict | None = None,
+        online_action_adapter_hidden_dim: int | None = None,
     ) -> None:
         super().__init__(
             vit,
@@ -59,6 +61,11 @@ class DinoV2VideoEncoder(DinoV3VideoEncoder):
         self.register_buffer("_feature_mean", None)
         self.register_buffer("_feature_std", None)
         self._m.requires_grad_(False)
+        self._online_action_adapter = (
+            CausalActionAdapter(int(self._spec.z_dim), int(online_action_adapter_hidden_dim))
+            if online_action_adapter_hidden_dim is not None
+            else None
+        )
         self._spec = VideoEncoderProperties(
             z_dim=self._spec.z_dim,
             spatial_compression=self._target_spatial_compression,
@@ -80,14 +87,29 @@ class DinoV2VideoEncoder(DinoV3VideoEncoder):
     def batch_encode(self, video: Tensor) -> Tensor:
         z = self._apply_svae(self._batch_encode_pooled_raw(video))
         if self._feature_mean is None:
-            return self._apply_feature_norm(z)
-        return ((z.float() - self._feature_mean) / self._feature_std).to(z.dtype)
+            z = self._apply_feature_norm(z)
+        else:
+            z = ((z.float() - self._feature_mean) / self._feature_std).to(z.dtype)
+        # Train preprocessing runs under @no_grad. Keep the adapter's graph in
+        # architecture.compute_loss; deploy/evaluation use the same weights here.
+        if self._online_action_adapter is not None and not self.training:
+            z = self._online_action_adapter(z)
+        return z
 
     @classmethod
     def from_pretrained(
-        cls, model_path: str, *, feature_stats_path: str | None = None, **kwargs
+        cls,
+        model_path: str,
+        *,
+        feature_stats_path: str | None = None,
+        online_action_adapter_hidden_dim: int | None = None,
+        **kwargs,
     ) -> "DinoV2VideoEncoder":
         model = super().from_pretrained(model_path, **kwargs)
+        if online_action_adapter_hidden_dim is not None:
+            model._online_action_adapter = CausalActionAdapter(
+                model.properties.z_dim, int(online_action_adapter_hidden_dim)
+            )
         if feature_stats_path is not None:
             stats = torch.load(Path(feature_stats_path), map_location="cpu", weights_only=True)
             model._set_feature_stats(stats["mean"], stats["std"])
@@ -109,6 +131,13 @@ class DinoV2VideoEncoder(DinoV3VideoEncoder):
         if stats_path is not None:
             channels = model.properties.z_dim
             model._set_feature_stats(torch.zeros(channels), torch.ones(channels))
+        adapter_width = (
+            encoder_cfg.get("online_action_adapter_hidden_dim")
+            if isinstance(encoder_cfg, dict)
+            else getattr(encoder_cfg, "online_action_adapter_hidden_dim", None)
+        )
+        if adapter_width is not None:
+            model._online_action_adapter = CausalActionAdapter(model.properties.z_dim, int(adapter_width))
         return model
 
     def _batch_encode_pooled_raw(self, video: Tensor) -> Tensor:

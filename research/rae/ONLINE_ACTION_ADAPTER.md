@@ -50,3 +50,17 @@ checkpoint and matched closed-loop evaluation.
 
 The existing seed-42/43/44, width-matched, and offline action-informed queues
 run from their frozen worktrees. This branch does not alter those jobs.
+
+## Registered initialization (2026-10-25)
+
+The seed-42 adapter graft above completed at
+`/data/zifan-openwam-rae/online_action_adapter_20261025/graft_seed42`.
+Weight SHA256: `8521d59e54b50bea0b4a43385b8ddf2384921624ee4a29f24a28dedfdf18d8e4`.
+Its manifest confirms the same donor, DINO weights, train-only feature stats,
+and 1,889 matched shared tensors as the earlier calibrated seed-42 graft.
+The new graft has 235 non-donor tensors versus 229 previously: the six extra
+tensors are the adapter's three convolution weights and biases. Both grafts
+reset the same visual projections with seed 42+1009 using the unchanged
+`reset_visual_projections` helper. The new config sets adapter width 128 and
+removes `video_backbone.video_encoder` from the freeze list. This initialization
+has not yet undergone a real DeepSpeed training step or any evaluation.

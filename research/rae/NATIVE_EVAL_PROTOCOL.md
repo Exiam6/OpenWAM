@@ -5,6 +5,13 @@ host after the policy and RoboTwin environments,
 source checkout, model assets, and **entire checkpoint directories** have been
 copied there. Each directory includes `config.yaml`, tokenizer files, and, for
 RAE, the `dinov2/config.json` sidecar in addition to the `.safetensors` file.
+The matched checkpoints are self-contained at deploy time: the loader builds
+the DINOv2 or Wan VAE skeleton from checkpoint-local component data and
+`dinov2/config.json`, then strictly loads weights and feature-stat buffers from
+the checkpoint. The training-time `encoder.model_path` and
+`feature_stats_path` strings in `config.yaml` do not require those external
+files on the RTX host. Keep the checkpoint-local tokenizer and normalization
+stats; the registry checks their presence.
 The current eight-A100 host has no working NVIDIA Vulkan ICD and cannot run
 the native renderer. CPU Lavapipe outcomes remain a separate diagnostic.
 

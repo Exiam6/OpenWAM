@@ -19,7 +19,19 @@ KNOWN_HOSTS = STATE.parent / "hestia_known_hosts"
 HOST_IP = "100.114.186.17"
 HOST_USER = "grail_zifan"
 KEYS = (Path("/root/.ssh/id_ed25519_xarm"), Path("/root/.ssh/id_rsa"))
-AUDIT = "set -e; hostname; nvidia-smi --query-gpu=index,name,memory.total --format=csv,noheader; df -h /; uname -srm"
+AUDIT = (
+    "set -eu; "
+    "printf 'HOST\\n'; hostname; "
+    "printf 'GPU\\n'; nvidia-smi --query-gpu=index,name,memory.total,driver_version --format=csv,noheader; "
+    "printf 'DISK\\n'; df -h \"$HOME\" /tmp; "
+    "for volume in /data /scratch /mnt /workspace; do "
+    "if [ -d \"$volume\" ]; then df -h \"$volume\"; fi; done; "
+    "printf 'TOOLS\\n'; "
+    "for name in python3.10 python3.12 git rsync conda micromamba uv vulkaninfo; do "
+    "location=$(command -v \"$name\" || true); "
+    "printf '%s: %s\\n' \"$name\" \"${location:-missing}\"; done; "
+    "printf 'OS\\n'; uname -srm"
+)
 
 
 def record(stage: str, **details: object) -> None:

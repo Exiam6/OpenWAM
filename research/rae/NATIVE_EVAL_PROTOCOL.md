@@ -293,7 +293,7 @@ when every experiment finishes. It writes `online-submissions.json` and audits
 complete report, create the augmented result document with:
 
 ```bash
-/root/zifan/openwam-envs/labtasker-orchestration/bin/python \
+/root/zifan/openwam-envs/policy/bin/python \
   -m research.rae.register_online_native_checkpoint \
   --base-manifest /data/zifan-openwam-rae/native_eval_20261024/transfer_manifest.json \
   --online-state /root/zifan/openwam-runs/wam_online_action_seed42/state.json \

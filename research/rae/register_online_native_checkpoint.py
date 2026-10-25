@@ -10,9 +10,9 @@ from pathlib import Path
 
 from safetensors import safe_open
 
-from research.rae.run_native_eval import CORE_MODELS
-
 ONLINE = "seed42_online_action"
+CORE_CHECKPOINTS = ({f"seed{seed}_{variant}" for seed in (42, 43, 44) for variant in ("vae", "rae")}
+                    | {"seed42_reconstruction_svae48", "seed42_action_svae48"})
 REQUIRED_SIDECARS = ("config.yaml", "normalization_stats.npy", "dinov2/config.json", "tokenizer")
 ADAPTER_UP = "video_backbone.video_encoder._online_action_adapter.up.weight"
 
@@ -26,8 +26,7 @@ def sha256(path: Path) -> str:
 
 
 def build_manifest(base: dict, state: dict, *, train_log: Path, source_marker: Path) -> dict:
-    expected_core = set(CORE_MODELS) - {"official"}
-    if set(base["checkpoints"]) != expected_core or base.get("pending_checkpoints"):
+    if set(base["checkpoints"]) != CORE_CHECKPOINTS or base.get("pending_checkpoints"):
         raise ValueError("Core transfer manifest is not complete")
     if ONLINE in base["checkpoints"]:
         raise ValueError("Do not mutate the core transfer manifest")

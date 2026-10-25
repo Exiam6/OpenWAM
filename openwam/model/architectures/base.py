@@ -1081,6 +1081,26 @@ class BaseWAMArchitecture(ABC, nn.Module):
         else:
             inputs.pop("actions", None)
 
+        # Optional online action-grounding ablation. Frozen DINO features were
+        # computed under prepare_inputs()'s no-grad context. Reapply only the
+        # small causal adapter here, where autograd is active. Future video
+        # targets and noisy frames are detached; the clean current frame is the
+        # sole representation path into the joint world/action transformer.
+        online_action_current = None
+        encoder = getattr(vb, "video_encoder", None)
+        adapter = getattr(encoder, "_online_action_adapter", None)
+        if adapter is not None and self.training and torch.is_grad_enabled():
+            if lambda_action <= 0 or actions is None:
+                raise ValueError("Online action adapter requires action-supervised TI2V training")
+            if inputs.get("first_frame_latents") is None:
+                raise ValueError("Online action adapter requires a clean TI2V first-frame latent")
+            if not any(p.requires_grad for p in adapter.parameters()):
+                raise ValueError("Online action adapter is frozen; remove video_backbone.video_encoder from freeze")
+            adapted = adapter(inputs["input_latents"])
+            inputs["input_latents"] = adapted.detach()
+            online_action_current = adapted[:, :, :1]
+            inputs["first_frame_latents"] = online_action_current
+
         max_tb = int(inputs.pop("max_timestep_boundary", 1) * len(vb.scheduler.timesteps))
         min_tb = int(inputs.pop("min_timestep_boundary", 0) * len(vb.scheduler.timesteps))
         B = inputs["input_latents"].shape[0]
@@ -1181,6 +1201,13 @@ class BaseWAMArchitecture(ABC, nn.Module):
             inputs,
             _device,
         )
+
+        if online_action_current is not None:
+            from openwam.model.video_backbone.encoder.online_action_adapter import (
+                action_only_current_latent_gradient,
+            )
+
+            action_only_current_latent_gradient(lambda_action * loss_action, online_action_current)
 
         if lambda_video == 0:
             loss = lambda_action * loss_action

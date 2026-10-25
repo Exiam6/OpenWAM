@@ -16,7 +16,7 @@ TAILSCALE = Path("/root/zifan/openwam-runs/tailscale-userspace/tailscale_1.104.2
 PROXY = ROOT / "research/rae/socks5_ssh_proxy.py"
 POLICY_PYTHON = Path("/root/zifan/openwam-envs/policy/bin/python")
 KNOWN_HOSTS = STATE.parent / "hestia_known_hosts"
-HOST_IP = "100.114.186.17"
+HOST_NAME = "hestia"
 HOST_USER = "grail_zifan"
 KEYS = (Path("/root/.ssh/id_ed25519_xarm"), Path("/root/.ssh/id_rsa"))
 AUDIT = (
@@ -53,18 +53,19 @@ def tailscale_status() -> dict:
 
 def find_hestia(status: dict) -> dict | None:
     for peer in (status.get("Peer") or {}).values():
-        if HOST_IP in peer.get("TailscaleIPs", []):
+        identity = str(peer.get("DNSName") or peer.get("HostName") or "")
+        if identity.split(".", 1)[0].lower() == HOST_NAME:
             return peer
     return None
 
 
-def ssh_audit(key: Path) -> subprocess.CompletedProcess:
+def ssh_audit(key: Path, host_ip: str) -> subprocess.CompletedProcess:
     proxy = f"{POLICY_PYTHON} {PROXY} %h %p"
     command = [
         "ssh", "-i", str(key), "-o", "IdentitiesOnly=yes", "-o", "BatchMode=yes",
         "-o", "ConnectTimeout=15", "-o", "StrictHostKeyChecking=accept-new",
         "-o", f"UserKnownHostsFile={KNOWN_HOSTS}", "-o", f"ProxyCommand={proxy}",
-        f"{HOST_USER}@{HOST_IP}", AUDIT,
+        f"{HOST_USER}@{host_ip}", AUDIT,
     ]
     return subprocess.run(command, text=True, capture_output=True, timeout=40)
 
@@ -75,7 +76,7 @@ def main() -> None:
     args = parser.parse_args()
     if args.poll_seconds < 1:
         parser.error("--poll-seconds must be positive")
-    record("waiting_for_tailscale_login", host_ip=HOST_IP)
+    record("waiting_for_tailscale_login", host_name=HOST_NAME)
     last_state = None
     while True:
         try:
@@ -97,10 +98,12 @@ def main() -> None:
                 time.sleep(args.poll_seconds)
                 continue
             identity = str(peer.get("DNSName") or peer.get("HostName") or peer.get("Name") or "")
-            if "hestia" not in identity.lower():
-                raise RuntimeError(f"Expected Hestia identity at {HOST_IP}, got {identity!r}")
+            host_ips = peer.get("TailscaleIPs") or []
+            host_ip = next((ip for ip in host_ips if "." in ip), None)
+            if host_ip is None:
+                raise RuntimeError(f"Hestia peer has no IPv4 address: {host_ips!r}")
             record("hestia_peer_verified", peer_name=identity,
-                   tailscale_ips=peer.get("TailscaleIPs"), online=peer.get("Online"))
+                   tailscale_ips=host_ips, online=peer.get("Online"))
             if not peer.get("Online", False):
                 time.sleep(args.poll_seconds)
                 continue
@@ -108,7 +111,7 @@ def main() -> None:
             for key in KEYS:
                 if not key.is_file():
                     continue
-                outcome = ssh_audit(key)
+                outcome = ssh_audit(key, host_ip)
                 if outcome.returncode == 0:
                     fingerprint = subprocess.run(["ssh-keygen", "-lf", str(KNOWN_HOSTS)],
                                                  text=True, capture_output=True, check=True).stdout.strip()
@@ -117,7 +120,9 @@ def main() -> None:
                     return
                 failures.append({"key": str(key), "returncode": outcome.returncode,
                                  "stderr": outcome.stderr.strip()[-1000:]})
-            raise RuntimeError(f"Hestia SSH audit failed with available keys: {failures}")
+            record("waiting_for_hestia_ssh", peer_name=identity, host_ip=host_ip,
+                   failures=failures)
+            time.sleep(args.poll_seconds)
         except (subprocess.TimeoutExpired, json.JSONDecodeError) as exc:
             # A transient daemon/status timeout is observation failure, not a
             # terminal login or SSH result. Poll the same daemon again.

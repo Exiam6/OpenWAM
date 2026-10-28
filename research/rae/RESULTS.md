@@ -1,5 +1,13 @@
 # OpenWAM RAE visual representation pilot results
 
+**Latest native evaluation snapshot (2026-10-28):** evaluation stopped at the
+user's request. Seed-42 VAE completed 1,000 native RoboTwin episodes with
+32 successes (3.2%); RAE completed 280 accepted episodes with zero successes.
+The RAE run is incomplete and its task coverage differs from the complete
+VAE run. The official checkpoint has not completed a benchmark baseline.
+See [the handoff](HANDOFF_20261028.md) and the
+[accepted episode records](results/native_stopped_20261028.json).
+
 All results below use the ten preselected RoboTwin `clean_50` tasks and the
 same Foundation donor. The native VAE and frozen-DINOv2 RAE models were each
 trained for 1,000 optimizer steps from the registered matched initialization.
@@ -97,7 +105,7 @@ is RAE minus VAE, so a positive value favors VAE on this offline metric.
 | stack bowls three | 0.0195595 | 0.0243716 | +0.0048120 |
 | stack bowls two | 0.0115250 | 0.0150292 | +0.0035042 |
 
-## Closed-loop status
+## Historical software-rendered evaluation
 
 The A100s expose CUDA but no NVIDIA Vulkan graphics device. CPU Mesa Lavapipe
 with RT and post-render CPU OIDN can run real RoboTwin scenes, cameras,
@@ -116,7 +124,7 @@ are in
 and `summary.json`. RoboTwin may skip an initial scene seed when setup fails;
 the summary includes a task in `pairs_complete` only when both checkpoints
 finished and their accepted scene seeds match. An exit code of 139 is a
-simulator failure, not a robot-task failure. The released RoboTwin-Full
-checkpoint sanity sweep is now running. No native released-benchmark
-reproduction or reliable closed-loop RAE-versus-VAE success comparison has
-been established yet.
+simulator failure, not a robot-task failure. These software-rendered attempts
+predate the native RTX evaluation summarized above. A full released-benchmark
+reproduction and a complete paired native RAE-versus-VAE comparison remain
+unfinished; the historical software attempts are not benchmark evidence.

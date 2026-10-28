@@ -23,7 +23,8 @@ def sha256(path: Path) -> str:
     return value.hexdigest()
 
 
-def build_registry(manifest: dict, checkpoint_root: Path) -> tuple[dict, list[str]]:
+def build_registry(manifest: dict, checkpoint_root: Path,
+                   only: set[str] | None = None) -> tuple[dict, list[str]]:
     entries = dict(manifest["checkpoints"])
     official = manifest["official_checkpoint"]
     if official["registered_sha256"] != OFFICIAL_SHA256:
@@ -32,9 +33,13 @@ def build_registry(manifest: dict, checkpoint_root: Path) -> tuple[dict, list[st
                            "weights_bytes": official["bytes"]}
     if not set(entries) <= set(MODELS):
         raise ValueError(f"Unknown checkpoint names: {sorted(set(entries) - set(MODELS))}")
+    if only is not None and not only <= set(entries):
+        raise ValueError(f"Models absent from transfer manifest: {sorted(only - set(entries))}")
     registered = {}
     missing = []
     for name in MODELS:
+        if only is not None and name not in only:
+            continue
         if name not in entries:
             missing.append(name)
             continue
@@ -67,10 +72,12 @@ def main() -> None:
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--checkpoint-root", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--only", nargs="+", choices=MODELS,
+                        help="Register only these verified models while other copies are in progress")
     args = parser.parse_args()
     manifest = json.loads(args.manifest.read_text())
     root = args.checkpoint_root.expanduser().resolve(strict=True)
-    registry, missing = build_registry(manifest, root)
+    registry, missing = build_registry(manifest, root, set(args.only) if args.only else None)
     if not registry:
         raise ValueError("No complete checkpoint copies found")
     write_json(args.output, registry)

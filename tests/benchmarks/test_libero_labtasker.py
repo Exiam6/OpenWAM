@@ -352,6 +352,23 @@ def test_submission_persists_expected_ranges(server):
         validate_submission_coverage(duplicate_index)
 
 
+def test_manifest_total_does_not_count_as_a_shard(server):
+    inputs = [
+        {"operation": "build_manifest", "task": "adjust_bottle", "total_episodes": 100},
+        {"operation": "build_manifest", "task": "stack_blocks_three", "total_episodes": 100},
+    ]
+    submit_tasks(
+        server, inputs, benchmark="robotwin", submission_id="manifest-unranged",
+        route="test", names=["first", "second"], max_attempts=3, priority=0,
+    )
+    tasks = list_submission_tasks(server, "robotwin", "manifest-unranged")
+    validate_submission_coverage(tasks)
+    malformed = [task.model_copy(deep=True) for task in tasks]
+    malformed[0].args["episode_start"] = 0
+    with pytest.raises(ValueError, match="incomplete persisted range coverage"):
+        validate_submission_coverage(malformed)
+
+
 def test_submission_supports_per_task_names(server):
     inputs = [{"case": 0}, {"case": 1}]
     submit_tasks(

@@ -199,7 +199,9 @@ def validate_submission_coverage(tasks: Sequence[Task], *, skip_coverage_check: 
             "episode": ("episode_start", "num_episodes", "total_episodes"),
             "trial": ("trial_start", "num_trials", "total_trials"),
         }
-        arg_kinds = [kind for kind, keys in range_specs.items() if any(key in task.args for key in keys)]
+        # Manifest Tasks carry a total but no shard start/count. A total alone
+        # does not make the Task a ranged evaluation Task.
+        arg_kinds = [kind for kind, keys in range_specs.items() if any(key in task.args for key in keys[:2])]
         metadata_has_range = any(
             key in metadata for key in ("range_kind", "range_start", "range_count", "range_total")
         )

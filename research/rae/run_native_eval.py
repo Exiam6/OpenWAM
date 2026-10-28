@@ -215,7 +215,8 @@ def audit_summary(name: str, args: argparse.Namespace) -> None:
 
 def parse(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--checkpoints", type=Path, required=True, help="Host-local registry of available checkpoint directories and SHA256 values")
+    parser.add_argument("--checkpoints", type=Path, help="Host-local registry of available checkpoint directories and SHA256 values")
+    parser.add_argument("--manifest-only", action="store_true", help="Build sealed scene manifests before checkpoint transfer finishes")
     parser.add_argument("--run-dir", type=Path, required=True)
     parser.add_argument("--robotwin-root", type=Path, required=True)
     parser.add_argument("--robotwin-python", type=Path, required=True)
@@ -236,12 +237,16 @@ def parse(argv: list[str] | None = None) -> argparse.Namespace:
         parser.error("invalid GPU list or polling interval")
     if args.skip_checkpoint_hash and not args.dry_run:
         parser.error("--skip-checkpoint-hash is permitted only with --dry-run")
+    if args.manifest_only and args.checkpoints is not None:
+        parser.error("--manifest-only does not take --checkpoints")
+    if not args.manifest_only and args.checkpoints is None:
+        parser.error("--checkpoints is required unless --manifest-only is set")
     return args
 
 
 def main(argv: list[str] | None = None) -> int:
     args = parse(argv)
-    models = load_checkpoints(args.checkpoints, verify_bytes=not args.skip_checkpoint_hash)
+    models = {} if args.manifest_only else load_checkpoints(args.checkpoints, verify_bytes=not args.skip_checkpoint_hash)
     state_path = args.run_dir / "controller-state.json"
     state = reconcile_state(json.loads(state_path.read_text()) if state_path.exists() else None, models)
     if not args.dry_run:

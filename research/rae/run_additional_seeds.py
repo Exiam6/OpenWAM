@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import os
 import shutil
 import subprocess
@@ -18,6 +19,8 @@ import time
 from pathlib import Path
 
 from safetensors import safe_open
+
+from research.rae.compare_teacher_forced import compare
 
 REPO = Path("/root/zifan/OpenWAM-rae")
 PYTHON = Path("/root/zifan/openwam-envs/policy/bin/python")
@@ -103,7 +106,8 @@ def verify_graft(graft: Path, seed: int) -> tuple[Path, str]:
     return weights, actual
 
 
-def verify_final(weights_root: Path, variant: str, log: Path) -> tuple[Path, str]:
+def verify_final(weights_root: Path, variant: str, log: Path,
+                 expected_seed: int | None = None) -> tuple[Path, str]:
     candidates = list((weights_root / variant).glob("*/checkpoint_step_1000.safetensors"))
     if len(candidates) != 1:
         raise ValueError(f"Expected one {variant} final checkpoint, found {candidates}")
@@ -112,6 +116,15 @@ def verify_final(weights_root: Path, variant: str, log: Path) -> tuple[Path, str
         raise ValueError(f"Final-save marker missing in {log}")
     if not (weights.parent / "config.yaml").is_file():
         raise FileNotFoundError(weights.parent / "config.yaml")
+    if expected_seed is not None:
+        import yaml
+
+        config = yaml.safe_load((weights.parent / "config.yaml").read_text())
+        if config.get("project", {}).get("seed") != expected_seed:
+            raise ValueError(f"Checkpoint training seed mismatch: {weights}")
+        encoder = config.get("model", {}).get("video_backbone", {}).get("encoder", {}).get("name")
+        if encoder != ("dinov2" if variant == "rae" else "wan22_vae"):
+            raise ValueError(f"Checkpoint encoder mismatch for {variant}: {weights}")
     with safe_open(weights, framework="pt", device="cpu") as stream:
         count = len(stream.keys())
     if count < 1000 or weights.stat().st_size < 20_000_000_000:
@@ -119,25 +132,62 @@ def verify_final(weights_root: Path, variant: str, log: Path) -> tuple[Path, str
     return weights.parent, digest(weights)
 
 
-def evaluate_pair(seed: int, checkpoints: dict[str, Path], env: dict[str, str]) -> None:
+def validate_existing_evaluation(path: Path, checkpoint: Path, checkpoint_hash: str,
+                                 split: str) -> dict:
+    """Reuse only the registered 100-window, four-noise-draw evaluation."""
+    report = json.loads(path.read_text())
+    if (report.get("checkpoint_sha256") != checkpoint_hash
+            or Path(report.get("checkpoint", "")).resolve() != checkpoint.resolve()
+            or report.get("split") != split or report.get("windows_per_task") != 10
+            or report.get("noise_repeats") != 4 or report.get("seed") != 20261023):
+        raise ValueError(f"Existing evaluation settings/checkpoint mismatch: {path}")
+    rows = report.get("windows", [])
+    tasks = report.get("per_task", {})
+    keys = {(row["task"], row["window_index"]) for row in rows}
+    if len(rows) != 100 or len(keys) != 100 or len(tasks) != 10:
+        raise ValueError(f"Existing evaluation coverage mismatch: {path}")
+    for task, stats in tasks.items():
+        selected = [row for row in rows if row["task"] == task]
+        if len(selected) != 10 or any(len(row["losses"]) != 4 for row in selected):
+            raise ValueError(f"Existing evaluation repeat/window mismatch: {path}")
+        values = [loss["action"] for row in selected for loss in row["losses"]]
+        if (not all(isinstance(v, (int, float)) and math.isfinite(v) and v >= 0 for v in values)
+                or not math.isclose(sum(values) / len(values), stats["action_mean"], rel_tol=1e-7)):
+            raise ValueError(f"Existing evaluation action loss mismatch: {path}")
+    if not math.isclose(sum(v["action_mean"] for v in tasks.values()) / 10,
+                        report["action_mean_across_tasks"], rel_tol=1e-7):
+        raise ValueError(f"Existing evaluation aggregate mismatch: {path}")
+    return report
+
+
+def evaluate_pair(seed: int, checkpoints: dict[str, Path], env: dict[str, str],
+                  hashes: dict[str, str] | None = None) -> None:
     reports = RUNS / f"seed{seed}"
+    hashes = hashes or {name: digest(path / "checkpoint_step_1000.safetensors")
+                        for name, path in checkpoints.items()}
     for split in ("dev", "test"):
+        evaluations = {}
         for variant in ("rae", "vae"):
             output = reports / f"{variant}_{split}_teacher_forced.json"
-            run_logged(
-                [str(PYTHON), "research/rae/eval_teacher_forced.py", "--checkpoint",
-                 str(checkpoints[variant]), "--output", str(output), "--split", split,
-                 "--per-task", "10", "--noise-repeats", "4"],
-                reports / f"{variant}_{split}_teacher_forced.log", env=env,
+            if not output.exists():
+                run_logged(
+                    [str(PYTHON), "research/rae/eval_teacher_forced.py", "--checkpoint",
+                     str(checkpoints[variant]), "--output", str(output), "--split", split,
+                     "--per-task", "10", "--noise-repeats", "4"],
+                    reports / f"{variant}_{split}_teacher_forced.log", env=env,
+                )
+            evaluations[variant] = validate_existing_evaluation(
+                output, checkpoints[variant], hashes[variant], split
             )
         comparison = reports / f"paired_{split}_comparison.json"
-        run_logged(
-            [str(PYTHON), "research/rae/compare_teacher_forced.py", "--vae",
-             str(reports / f"vae_{split}_teacher_forced.json"), "--rae",
-             str(reports / f"rae_{split}_teacher_forced.json"), "--output", str(comparison)],
-            reports / f"paired_{split}_comparison.log", env=env,
-        )
-        summary = json.loads(comparison.read_text())
+        summary = compare(evaluations["vae"], evaluations["rae"])
+        if comparison.exists():
+            if json.loads(comparison.read_text()) != summary:
+                raise ValueError(f"Existing paired comparison differs from current audit: {comparison}")
+        else:
+            temporary = comparison.with_suffix(".json.tmp")
+            temporary.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
+            temporary.replace(comparison)
         record(seed, f"{split}_evaluated", comparison=str(comparison),
                vae_action=summary["vae_action_mean_across_tasks"],
                rae_action=summary["rae_action_mean_across_tasks"])
@@ -157,35 +207,57 @@ def run_seed(seed: int) -> None:
     env["WAM_PILOT_RUN_ROOT"] = str(weights_root)
     env["MASTER_PORT"] = str(29600 + seed)
 
-    if not (graft / "graft_manifest.json").is_file():
-        require_space(Path("/dev/shm"), f"seed{seed} graft")
-        record(seed, "graft_started", graft=str(graft))
-        run_logged(
-            [str(PYTHON), "research/rae/build_grafted_checkpoint.py", "--output",
-             str(graft), "--seed", str(seed), "--feature-stats", str(FEATURE_STATS)],
-            reports / "graft.log", env=env,
-        )
-    graft_weights, graft_hash = verify_graft(graft, seed)
-    record(seed, "graft_verified", sha256=graft_hash)
-
     checkpoints: dict[str, Path] = {}
     hashes: dict[str, str] = {}
+    # Inspect final artifacts before considering a graft or another training
+    # launch. In particular, seed 44 already has an RAE checkpoint/evaluations
+    # and its temporary graft weights were deliberately released.
     for variant in ("rae", "vae"):
+        candidates = list((weights_root / variant).glob("*/checkpoint_step_1000.safetensors"))
+        log = reports / f"{variant}_train.log"
+        if candidates:
+            checkpoints[variant], hashes[variant] = verify_final(
+                weights_root, variant, log, expected_seed=seed
+            )
+            record(seed, f"{variant}_checkpoint_reused", checkpoint=str(checkpoints[variant]),
+                   sha256=hashes[variant])
+        elif log.exists():
+            raise RuntimeError(f"Incomplete training attempt at {log}; preserve it and register a new attempt")
+
+    graft_weights, graft_hash = None, None
+    if "rae" not in checkpoints:
+        if not (graft / "graft_manifest.json").is_file():
+            require_space(Path("/dev/shm"), f"seed{seed} graft")
+            record(seed, "graft_started", graft=str(graft))
+            run_logged(
+                [str(PYTHON), "research/rae/build_grafted_checkpoint.py", "--output",
+                 str(graft), "--seed", str(seed), "--feature-stats", str(FEATURE_STATS)],
+                reports / "graft.log", env=env,
+            )
+        graft_weights, graft_hash = verify_graft(graft, seed)
+        record(seed, "graft_verified", sha256=graft_hash)
+
+    for variant in ("rae", "vae"):
+        if variant in checkpoints:
+            continue
         require_space(WEIGHTS, f"seed{seed} {variant} training")
         log = reports / f"{variant}_train.log"
         record(seed, f"{variant}_training_started", output=str(weights_root / variant))
         run_logged(["bash", "research/rae/launch_wam_pilot.sh", variant], log, env=env)
-        checkpoints[variant], hashes[variant] = verify_final(weights_root, variant, log)
+        checkpoints[variant], hashes[variant] = verify_final(
+            weights_root, variant, log, expected_seed=seed
+        )
         record(seed, f"{variant}_checkpoint_verified", checkpoint=str(checkpoints[variant]),
                sha256=hashes[variant])
         if variant == "rae":
+            assert graft_weights is not None
             # The graft can be rebuilt byte-for-byte from its fixed donor and seed.
             if digest(graft_weights) != graft_hash:
                 raise ValueError("Graft changed during RAE training; refusing cleanup")
             graft_weights.unlink()
             record(seed, "graft_weight_released", sha256=graft_hash)
 
-    evaluate_pair(seed, checkpoints, env)
+    evaluate_pair(seed, checkpoints, env, hashes)
     record(seed, "complete", checkpoints={name: str(path) for name, path in checkpoints.items()},
            checkpoint_hashes=hashes, storage="persistent NFS /data")
 

@@ -4,6 +4,9 @@ This is an audit of completed evidence and remaining registered work, not a
 final experiment report. Local GPU use is prohibited and the Hestia evaluation
 was stopped by the user. This audit ran JSON aggregation on CPU only.
 
+Subsequent recovery preparation and the newly reported RTX6000 availability
+are documented in [`RESUME_NOTES_20261030.md`](RESUME_NOTES_20261030.md).
+
 ## Correct comparison of the partial native results
 
 The accepted 2026-10-28 shutdown snapshot contains 1,000 VAE episodes (32

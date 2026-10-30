@@ -1,5 +1,8 @@
 # OpenWAM RAE visual representation pilot results
 
+Experiments are paused. The [new 2026-10-30 execution plan](EXECUTION_PLAN_20261030.md)
+replaces the expired operational plan; the audit below records evidence only.
+
 The [2026-10-30 progress audit](PROGRESS_AUDIT_20261030.md) adds the available
 two-seed offline aggregate and compares the partial native runs on the same
 280 scenes (VAE 1/280, RAE 0/280). It lists all remaining registered work;

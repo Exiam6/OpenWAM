@@ -1,5 +1,10 @@
 # RAE visual representation study
 
+**Execution update, 2026-10-30:** experiments are paused by user instruction.
+The [new execution plan](EXECUTION_PLAN_20261030.md) supersedes the operational
+sequence and expired deadlines. This file preserves the original scientific
+registration and methodological context; registered endpoints are not deleted.
+
 Source: OpenWAM `782e3133f674449e2986754cfc5f7c4e204835a2`.
 Worktree: `research/rae-visual-20261023`. The released RoboTwin-Full checkpoint
 and its 10,000-episode native evaluation remain the reproduction baseline.

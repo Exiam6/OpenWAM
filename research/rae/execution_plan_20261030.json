@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "plan_date": "2026-10-30",
+  "timezone": "Asia/Shanghai",
+  "status": "paused_by_user",
+  "dispatch_enabled": false,
+  "automatic_resume_allowed": false,
+  "resource_information_reply_does_not_resume_experiments": true,
+  "document": "EXECUTION_PLAN_20261030.md",
+  "old_deadline": "2026-10-28",
+  "old_deadline_status": "expired_historical_only",
+  "new_completion_deadline": null,
+  "referenced_external_state": {
+    "path": ".local/state/openwam-selfcheck/tonight-plan.json",
+    "found_in_checked_local_workspaces": false,
+    "modified": false,
+    "timestamp_source": "user-provided account; not independently verified here"
+  },
+  "resource_state": {
+    "local_a100_use_allowed": false,
+    "hestia_evaluation_state": "stopped_by_user",
+    "rtx6000_availability_reported_by_user": true,
+    "rtx6000_host": null,
+    "approved_gpu_indices": null
+  },
+  "resume_prerequisites": [
+    "Explicit user instruction to resume experiments",
+    "Identified RTX host, login, GPU allocation, and availability window",
+    "User decision on retaining evaluation-first order or adopting the proposed small-model-first order"
+  ],
+  "registered_scope": {
+    "matched_models": ["seed42_vae", "seed42_rae", "seed43_vae", "seed43_rae", "seed44_vae", "seed44_rae"],
+    "matched_episodes_per_model": 1000,
+    "additional_ablation_models": ["seed42_reconstruction_svae48", "seed42_action_svae48"],
+    "additional_ablation_episodes_per_model": 1000,
+    "official_modes": ["demo_clean", "demo_randomized"],
+    "official_episodes_per_mode": 5000,
+    "core_episodes_total": 18000,
+    "online_extension_episodes": 1000,
+    "total_including_extension": 19000,
+    "accepted_core_episodes_at_20261028_shutdown": 1280,
+    "remaining_core_episodes_at_shutdown": 16720,
+    "remaining_extension_episodes_at_shutdown": 1000,
+    "scope_reduction_authorized": false
+  },
+  "stages": [
+    {
+      "id": "official_native_diagnostic",
+      "status": "prepared_not_launched",
+      "tasks": ["stack_blocks_three", "open_microwave", "shake_bottle_horizontally"],
+      "episodes_per_task": 10,
+      "total_episodes": 30,
+      "implementation": "run_official_native_probe.py",
+      "default_execution": "plan_only",
+      "worker_timeout_seconds": 7200,
+      "private_route_required": true,
+      "counts_toward_full_registered_endpoint": false
+    },
+    {
+      "id": "frozen_feature_small_policy",
+      "status": "proposed_not_launched",
+      "requires_release_of_prior_eval_first_constraint": true,
+      "trainable_parameter_target_range": [10000000, 50000000],
+      "encoder_variants": ["frozen_wan_vae", "frozen_rae_dino"],
+      "first_screen_training_seeds": 1,
+      "first_screen_training_seed_ids": [42],
+      "first_screen_tasks": 3,
+      "first_screen_episodes_per_task_per_variant": 20,
+      "first_screen_total_episodes": 120,
+      "proposed_training_cap_gpu_hours_per_variant": 4,
+      "cache_and_rollout_costs_accounted_separately": true,
+      "budget_approved": false,
+      "claim_limit": "Representation utility in this policy; not a full RAE-WAM result"
+    },
+    {
+      "id": "small_policy_seed_replication",
+      "status": "conditional_not_launched",
+      "condition": "Promising paired held-out rollout evidence and valid implementation controls",
+      "training_seeds": 3,
+      "training_seed_ids": [42, 43, 44],
+      "tasks": 3,
+      "variants": 2,
+      "episodes_per_task_per_variant_per_seed": 50,
+      "total_episodes": 900
+    },
+    {
+      "id": "compact_world_action_model",
+      "status": "proposed_not_implemented",
+      "condition": "Representation-control evidence merits a joint dynamics/action experiment",
+      "requires_separate_registration": true,
+      "counts_as_original_5b_reproduction": false
+    },
+    {
+      "id": "complete_original_registered_experiments",
+      "status": "incomplete_paused",
+      "counts_from": "registered_scope",
+      "prior_eval_first_constraint_remains_until_user_changes_it": true,
+      "completion_requires_original_full_report_validators": true
+    }
+  ],
+  "not_run_during_this_plan_revision": [
+    "feature extraction", "training", "throughput measurement", "overfit checks", "rollouts", "formal evaluation"
+  ]
+}

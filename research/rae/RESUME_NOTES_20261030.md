@@ -1,5 +1,9 @@
 # Recovery preparation — 2026-10-30
 
+**Latest user instruction:** do not run any experiments; only update and push
+the plan. The [new execution plan](EXECUTION_PLAN_20261030.md) is paused and
+all commands below are reference material rather than active dispatch.
+
 The user has indicated RTX6000 resources are available and requested pushing
 progress before continuing. The concrete host/allocation still needs to be
 identified. The earlier local A100 prohibition and stopped Hestia jobs must

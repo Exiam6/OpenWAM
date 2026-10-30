@@ -1,0 +1,173 @@
+{
+  "accepted_native_episodes_at_stop": 1280,
+  "audit_date": "2026-10-30",
+  "available_seed_aggregates": {
+    "dev": {
+      "bootstrap": {
+        "delta_95pct_ci": [
+          -0.0037844243858061186,
+          0.006116488866658526
+        ],
+        "draws": 20000,
+        "fraction_of_draws_with_rae_loss_higher": 0.69605,
+        "method": "resample training seeds, tasks, then paired windows with replacement",
+        "relative_delta_95pct_ci": [
+          -0.14998922076297094,
+          0.30495291891190046
+        ],
+        "seed": 20261024
+      },
+      "rae_action_loss_mean": 0.023914478646980798,
+      "rae_minus_vae": 0.0012118792790340657,
+      "relative_change": 0.053380639784582976,
+      "training_seeds": [
+        42,
+        43
+      ],
+      "vae_action_loss_mean": 0.022702599367946733
+    },
+    "test": {
+      "bootstrap": {
+        "delta_95pct_ci": [
+          -0.0016565522348715846,
+          0.007331787132868319
+        ],
+        "draws": 20000,
+        "fraction_of_draws_with_rae_loss_higher": 0.89045,
+        "method": "resample training seeds, tasks, then paired windows with replacement",
+        "relative_delta_95pct_ci": [
+          -0.0775010906380686,
+          0.41473425574330886
+        ],
+        "seed": 20261024
+      },
+      "rae_action_loss_mean": 0.023475674231621044,
+      "rae_minus_vae": 0.0028851327508982658,
+      "relative_change": 0.1401193238943899,
+      "training_seeds": [
+        42,
+        43
+      ],
+      "vae_action_loss_mean": 0.020590541480722778
+    }
+  },
+  "missing_work": [
+    "seed44 VAE training and offline evaluations",
+    "reconstruction S-VAE48 WAM training and offline evaluations",
+    "action-informed S-VAE48 training and WAM/offline evaluations",
+    "optional online action adapter training and offline/native evaluations",
+    "remaining RAE seed42 native batches",
+    "native evaluations of seed43/44 pairs and S-VAE48 ablations",
+    "official checkpoint native evaluation on both full 50-task modes",
+    "complete three-seed and ablation reports with required uncertainty and provenance audits"
+  ],
+  "models": [
+    {
+      "checkpoint_bytes": 24813767464,
+      "checkpoint_path": "/root/zifan/openwam-runs/wam_pilot_20261023/vae/2026-10-24_03-16-34/checkpoint_step_1000.safetensors",
+      "checkpoint_present": true,
+      "model": "seed42_vae",
+      "offline_test_action_loss": 0.018371103453723663,
+      "offline_test_report_present": true,
+      "recorded_checkpoint_sha256": "6aca452aa6f06ed358d685fb220e1a245b00fd422e54bb80436481db6e97b531",
+      "weights_rehashed_in_this_audit": false
+    },
+    {
+      "checkpoint_bytes": 23612952664,
+      "checkpoint_path": "/root/zifan/openwam-runs/wam_pilot_20261023/rae/2026-10-23_20-20-35/checkpoint_step_1000.safetensors",
+      "checkpoint_present": true,
+      "model": "seed42_rae",
+      "offline_test_action_loss": 0.023526101727368312,
+      "offline_test_report_present": true,
+      "recorded_checkpoint_sha256": "9005b330d857ff01cb5d11712e5ba593b72afc3ce600e51f0279acc0bcf8a739",
+      "weights_rehashed_in_this_audit": false
+    },
+    {
+      "checkpoint_bytes": 24813767464,
+      "checkpoint_path": "/data/zifan-openwam-rae/wam_multiseed_20261024/seed43/vae/2026-10-25_03-39-03/checkpoint_step_1000.safetensors",
+      "checkpoint_present": true,
+      "model": "seed43_vae",
+      "offline_test_action_loss": 0.022809979507721893,
+      "offline_test_report_present": true,
+      "recorded_checkpoint_sha256": "69c610d671fd31d3296260cff083dbb8d5cfec77efb250c5196100e152131459",
+      "weights_rehashed_in_this_audit": false
+    },
+    {
+      "checkpoint_bytes": 23612952664,
+      "checkpoint_path": "/data/zifan-openwam-rae/wam_multiseed_20261024/seed43/rae/2026-10-24_20-39-14/checkpoint_step_1000.safetensors",
+      "checkpoint_present": true,
+      "model": "seed43_rae",
+      "offline_test_action_loss": 0.023425246735873772,
+      "offline_test_report_present": true,
+      "recorded_checkpoint_sha256": "41d0700a17a7b1606c768ba5928521f45ba200301decbcf2683319d0a4c2df2c",
+      "weights_rehashed_in_this_audit": false
+    },
+    {
+      "model": "seed44_vae",
+      "offline_test_report_present": false
+    },
+    {
+      "checkpoint_bytes": 23612952664,
+      "checkpoint_path": "/data/zifan-openwam-rae/wam_multiseed_20261024/seed44/rae/2026-10-25_10-52-38/checkpoint_step_1000.safetensors",
+      "checkpoint_present": true,
+      "model": "seed44_rae",
+      "offline_test_action_loss": 0.02097986791243784,
+      "offline_test_report_present": true,
+      "recorded_checkpoint_sha256": "fb036c73b73ceffd39732c0a628a33062a245aafc81f1fa408333b83f669a579",
+      "weights_rehashed_in_this_audit": false
+    }
+  ],
+  "native_matched_partial": {
+    "episodes_per_variant": 280,
+    "paired_outcomes": {
+      "both_failure": 279,
+      "both_success": 0,
+      "rae_only": 0,
+      "vae_only": 1
+    },
+    "rae_successes": 0,
+    "scope": "Incomplete, non-balanced task subset; no whole-benchmark comparison",
+    "training_seed": 42,
+    "vae_successes": 1
+  },
+  "native_snapshot_captured_at_utc": "2026-10-28T06:02:03Z",
+  "native_snapshot_refreshed_from_live_host": false,
+  "registered_native_core_episodes": 18000,
+  "registered_native_optional_online_episodes": 1000,
+  "remaining_native_core_episodes_at_stop": 16720,
+  "resources": "Local GPUs unavailable and Hestia evaluation stopped by user; no GPU work authorized",
+  "scope": "Progress audit; not final registered results",
+  "source_evidence": [
+    {
+      "file": "results/offline_evidence_20261030/seed42_paired_dev.json",
+      "sha256": "279d2f04a741a72190f373c3aa4121c930fede7df8c1c8075314cfbd572ed7b5",
+      "source": "/root/zifan/openwam-runs/wam_pilot_20261023/paired_dev_comparison.json"
+    },
+    {
+      "file": "results/offline_evidence_20261030/seed42_paired_test.json",
+      "sha256": "0ef0c3b92b241903cec0863eea809db3e3d7192a2895e80fd54168fd355b844b",
+      "source": "/root/zifan/openwam-runs/wam_pilot_20261023/paired_test_comparison.json"
+    },
+    {
+      "file": "results/offline_evidence_20261030/seed43_paired_dev.json",
+      "sha256": "de527f922eec0d2ddebfd63ab4d4010f49cd5a9f2cbd4aae0046b38df147a49d",
+      "source": "/root/zifan/openwam-runs/wam_multiseed_20261024/seed43/paired_dev_comparison.json"
+    },
+    {
+      "file": "results/offline_evidence_20261030/seed43_paired_test.json",
+      "sha256": "6732f8c350f8e1c65af4ebf9f94d21d4147a446b4b887d0a1d7be1796927feee",
+      "source": "/root/zifan/openwam-runs/wam_multiseed_20261024/seed43/paired_test_comparison.json"
+    },
+    {
+      "file": "results/offline_evidence_20261030/seed44_rae_dev.json",
+      "sha256": "62346094db5fc67f01d011df20fb9edd3f947527740716295ed45a00ce8438fc",
+      "source": "/root/zifan/openwam-runs/wam_multiseed_20261024/seed44/rae_dev_teacher_forced.json"
+    },
+    {
+      "file": "results/offline_evidence_20261030/seed44_rae_test.json",
+      "sha256": "0521308c043a7890c00e52106e7512c3c4dbc4b130a2410582bd3a9122bdee8b",
+      "source": "/root/zifan/openwam-runs/wam_multiseed_20261024/seed44/rae_test_teacher_forced.json"
+    }
+  ],
+  "weights_audit": "Presence and byte size checked; SHA256 values recorded by existing evaluation reports, not rehashed here"
+}

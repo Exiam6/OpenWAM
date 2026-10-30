@@ -1,0 +1,61 @@
+{
+  "action_stats_sha256": "eaa21a50053e846057617aff7b0c1f2d019ed66e6ed34165130ec5148f72f91e",
+  "bootstrap": {
+    "delta_95pct_ci": [
+      -0.0016565522348715846,
+      0.007331787132868319
+    ],
+    "draws": 20000,
+    "fraction_of_draws_with_rae_loss_higher": 0.89045,
+    "method": "resample training seeds, tasks, then paired windows with replacement",
+    "relative_delta_95pct_ci": [
+      -0.0775010906380686,
+      0.41473425574330886
+    ],
+    "seed": 20261024
+  },
+  "evaluation_noise_seed": 20261023,
+  "noise_repeats_per_window": 4,
+  "per_seed": [
+    {
+      "rae_action_loss": 0.023526101727368312,
+      "rae_checkpoint_sha256": "9005b330d857ff01cb5d11712e5ba593b72afc3ce600e51f0279acc0bcf8a739",
+      "rae_minus_vae": 0.0051549982736446495,
+      "training_seed": 42,
+      "vae_action_loss": 0.018371103453723663,
+      "vae_checkpoint_sha256": "6aca452aa6f06ed358d685fb220e1a245b00fd422e54bb80436481db6e97b531"
+    },
+    {
+      "rae_action_loss": 0.023425246735873772,
+      "rae_checkpoint_sha256": "41d0700a17a7b1606c768ba5928521f45ba200301decbcf2683319d0a4c2df2c",
+      "rae_minus_vae": 0.0006152672281518785,
+      "training_seed": 43,
+      "vae_action_loss": 0.022809979507721893,
+      "vae_checkpoint_sha256": "69c610d671fd31d3296260cff083dbb8d5cfec77efb250c5196100e152131459"
+    }
+  ],
+  "rae_action_loss_mean": 0.023475674231621044,
+  "rae_minus_vae": 0.0028851327508982658,
+  "relative_change": 0.1401193238943899,
+  "scope": "Teacher-forced action loss only; no closed-loop success inference",
+  "split": "test",
+  "split_manifest_sha256": "d492addcdd94f41b0c5819561e38bc0f3b0b39cfb650de15161142cd0339a1f2",
+  "tasks": [
+    "beat block hammer",
+    "hanging mug",
+    "open microwave",
+    "place bread skillet",
+    "place burger fries",
+    "place dual shoes",
+    "shake bottle horizontally",
+    "stack blocks three",
+    "stack bowls three",
+    "stack bowls two"
+  ],
+  "training_seeds": [
+    42,
+    43
+  ],
+  "vae_action_loss_mean": 0.020590541480722778,
+  "windows_per_task": 10
+}

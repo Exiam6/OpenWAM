@@ -1,0 +1,779 @@
+{
+  "action_stats_sha256": "eaa21a50053e846057617aff7b0c1f2d019ed66e6ed34165130ec5148f72f91e",
+  "evaluation_noise_seed": 20261023,
+  "lower_is_better": true,
+  "noise_repeats_per_window": 4,
+  "paired_windows": [
+    {
+      "rae_action": 0.06024577561765909,
+      "rae_minus_vae": 0.01901002787053585,
+      "task": "beat block hammer",
+      "vae_action": 0.04123574774712324,
+      "window_index": 0
+    },
+    {
+      "rae_action": 0.01501514032133855,
+      "rae_minus_vae": 0.008171009802026674,
+      "task": "beat block hammer",
+      "vae_action": 0.006844130519311875,
+      "window_index": 45
+    },
+    {
+      "rae_action": 0.006893256271723658,
+      "rae_minus_vae": -0.0019423576886765659,
+      "task": "beat block hammer",
+      "vae_action": 0.008835613960400224,
+      "window_index": 91
+    },
+    {
+      "rae_action": 0.011145155353005975,
+      "rae_minus_vae": 0.003710161370690912,
+      "task": "beat block hammer",
+      "vae_action": 0.0074349939823150635,
+      "window_index": 137
+    },
+    {
+      "rae_action": 0.005480954627273604,
+      "rae_minus_vae": 0.0014446411514654756,
+      "task": "beat block hammer",
+      "vae_action": 0.004036313475808129,
+      "window_index": 183
+    },
+    {
+      "rae_action": 0.007086245226673782,
+      "rae_minus_vae": 0.002553302329033613,
+      "task": "beat block hammer",
+      "vae_action": 0.004532942897640169,
+      "window_index": 228
+    },
+    {
+      "rae_action": 0.01385641878732713,
+      "rae_minus_vae": 0.004523028717812849,
+      "task": "beat block hammer",
+      "vae_action": 0.00933339006951428,
+      "window_index": 274
+    },
+    {
+      "rae_action": 0.008169031505531166,
+      "rae_minus_vae": 0.003730072858161293,
+      "task": "beat block hammer",
+      "vae_action": 0.004438958647369873,
+      "window_index": 320
+    },
+    {
+      "rae_action": 0.02337975916452706,
+      "rae_minus_vae": 0.0040504480712115765,
+      "task": "beat block hammer",
+      "vae_action": 0.019329311093315482,
+      "window_index": 366
+    },
+    {
+      "rae_action": 0.08199677627999336,
+      "rae_minus_vae": 0.03949635021854192,
+      "task": "beat block hammer",
+      "vae_action": 0.042500426061451435,
+      "window_index": 412
+    },
+    {
+      "rae_action": 0.019866553135216236,
+      "rae_minus_vae": -2.0447769202291965e-05,
+      "task": "hanging mug",
+      "vae_action": 0.019887000904418528,
+      "window_index": 413
+    },
+    {
+      "rae_action": 0.018564288853667676,
+      "rae_minus_vae": 0.0022784332977607846,
+      "task": "hanging mug",
+      "vae_action": 0.016285855555906892,
+      "window_index": 583
+    },
+    {
+      "rae_action": 0.01487165444996208,
+      "rae_minus_vae": 0.0046184316743165255,
+      "task": "hanging mug",
+      "vae_action": 0.010253222775645554,
+      "window_index": 753
+    },
+    {
+      "rae_action": 0.013679876690730453,
+      "rae_minus_vae": 0.008945264111389406,
+      "task": "hanging mug",
+      "vae_action": 0.0047346125793410465,
+      "window_index": 923
+    },
+    {
+      "rae_action": 0.017532663885504007,
+      "rae_minus_vae": -0.004750680178403854,
+      "task": "hanging mug",
+      "vae_action": 0.02228334406390786,
+      "window_index": 1093
+    },
+    {
+      "rae_action": 0.042367245303466916,
+      "rae_minus_vae": 0.004022952518425882,
+      "task": "hanging mug",
+      "vae_action": 0.038344292785041034,
+      "window_index": 1264
+    },
+    {
+      "rae_action": 0.02213741943705827,
+      "rae_minus_vae": 0.013967103499453515,
+      "task": "hanging mug",
+      "vae_action": 0.008170315937604755,
+      "window_index": 1434
+    },
+    {
+      "rae_action": 0.032414032611995935,
+      "rae_minus_vae": 0.00627138139680028,
+      "task": "hanging mug",
+      "vae_action": 0.026142651215195656,
+      "window_index": 1604
+    },
+    {
+      "rae_action": 0.0069552484710584395,
+      "rae_minus_vae": -0.003187129412253853,
+      "task": "hanging mug",
+      "vae_action": 0.010142377883312292,
+      "window_index": 1774
+    },
+    {
+      "rae_action": 0.014430412229557987,
+      "rae_minus_vae": -0.0006506579302367754,
+      "task": "hanging mug",
+      "vae_action": 0.015081070159794763,
+      "window_index": 1945
+    },
+    {
+      "rae_action": 0.01866415049880743,
+      "rae_minus_vae": -0.04063856019638479,
+      "task": "open microwave",
+      "vae_action": 0.05930271069519222,
+      "window_index": 1946
+    },
+    {
+      "rae_action": 0.0005661285722453613,
+      "rae_minus_vae": 0.00018893710876000114,
+      "task": "open microwave",
+      "vae_action": 0.00037719146348536015,
+      "window_index": 2210
+    },
+    {
+      "rae_action": 0.002735194352680992,
+      "rae_minus_vae": 9.840615348366555e-06,
+      "task": "open microwave",
+      "vae_action": 0.0027253537373326253,
+      "window_index": 2474
+    },
+    {
+      "rae_action": 0.0017627167799219023,
+      "rae_minus_vae": 0.0003469383591436781,
+      "task": "open microwave",
+      "vae_action": 0.0014157784207782242,
+      "window_index": 2738
+    },
+    {
+      "rae_action": 0.0014949143005651422,
+      "rae_minus_vae": 0.0007644348188478034,
+      "task": "open microwave",
+      "vae_action": 0.0007304794817173388,
+      "window_index": 3002
+    },
+    {
+      "rae_action": 0.0014682255132356659,
+      "rae_minus_vae": 0.00023876825434854254,
+      "task": "open microwave",
+      "vae_action": 0.0012294572588871233,
+      "window_index": 3267
+    },
+    {
+      "rae_action": 0.019325842848047614,
+      "rae_minus_vae": 0.006762885604985058,
+      "task": "open microwave",
+      "vae_action": 0.012562957243062556,
+      "window_index": 3531
+    },
+    {
+      "rae_action": 0.005146113267528563,
+      "rae_minus_vae": 0.0012289985354527744,
+      "task": "open microwave",
+      "vae_action": 0.003917114732075788,
+      "window_index": 3795
+    },
+    {
+      "rae_action": 0.004710943663667422,
+      "rae_minus_vae": 0.002235065105196554,
+      "task": "open microwave",
+      "vae_action": 0.0024758785584708676,
+      "window_index": 4059
+    },
+    {
+      "rae_action": 0.00478723508422263,
+      "rae_minus_vae": 0.0008820612747513223,
+      "task": "open microwave",
+      "vae_action": 0.0039051738094713073,
+      "window_index": 4324
+    },
+    {
+      "rae_action": 0.07258998707402498,
+      "rae_minus_vae": 0.019223471521399915,
+      "task": "place bread skillet",
+      "vae_action": 0.05336651555262506,
+      "window_index": 4325
+    },
+    {
+      "rae_action": 0.026397082023322582,
+      "rae_minus_vae": 0.0036479331320151687,
+      "task": "place bread skillet",
+      "vae_action": 0.022749148891307414,
+      "window_index": 4397
+    },
+    {
+      "rae_action": 0.01833176195214037,
+      "rae_minus_vae": 0.009041035540576559,
+      "task": "place bread skillet",
+      "vae_action": 0.00929072641156381,
+      "window_index": 4469
+    },
+    {
+      "rae_action": 0.043735904415370896,
+      "rae_minus_vae": -0.011125998231364065,
+      "task": "place bread skillet",
+      "vae_action": 0.05486190264673496,
+      "window_index": 4542
+    },
+    {
+      "rae_action": 0.008760555880144238,
+      "rae_minus_vae": -0.0031771448848303407,
+      "task": "place bread skillet",
+      "vae_action": 0.01193770076497458,
+      "window_index": 4614
+    },
+    {
+      "rae_action": 0.05287082679569721,
+      "rae_minus_vae": 0.002042468637228012,
+      "task": "place bread skillet",
+      "vae_action": 0.0508283581584692,
+      "window_index": 4687
+    },
+    {
+      "rae_action": 0.015958276228047907,
+      "rae_minus_vae": 0.005310350792569807,
+      "task": "place bread skillet",
+      "vae_action": 0.0106479254354781,
+      "window_index": 4759
+    },
+    {
+      "rae_action": 0.00910974363796413,
+      "rae_minus_vae": 0.004410816414747387,
+      "task": "place bread skillet",
+      "vae_action": 0.004698927223216742,
+      "window_index": 4832
+    },
+    {
+      "rae_action": 0.011676051224640105,
+      "rae_minus_vae": 0.006074067612644285,
+      "task": "place bread skillet",
+      "vae_action": 0.00560198361199582,
+      "window_index": 4904
+    },
+    {
+      "rae_action": 0.07906566624296829,
+      "rae_minus_vae": 0.06374322215560824,
+      "task": "place bread skillet",
+      "vae_action": 0.015322444087360054,
+      "window_index": 4977
+    },
+    {
+      "rae_action": 0.01914821335230954,
+      "rae_minus_vae": 0.00034857308492064476,
+      "task": "place burger fries",
+      "vae_action": 0.018799640267388895,
+      "window_index": 4978
+    },
+    {
+      "rae_action": 0.015001288455096073,
+      "rae_minus_vae": 0.002935933474873309,
+      "task": "place burger fries",
+      "vae_action": 0.012065354980222764,
+      "window_index": 5094
+    },
+    {
+      "rae_action": 0.010043079397291876,
+      "rae_minus_vae": 0.005966422584606335,
+      "task": "place burger fries",
+      "vae_action": 0.004076656812685542,
+      "window_index": 5210
+    },
+    {
+      "rae_action": 0.030275396013166755,
+      "rae_minus_vae": 0.018266463914187625,
+      "task": "place burger fries",
+      "vae_action": 0.01200893209897913,
+      "window_index": 5326
+    },
+    {
+      "rae_action": 0.0164502349216491,
+      "rae_minus_vae": 0.011352854256983846,
+      "task": "place burger fries",
+      "vae_action": 0.005097380664665252,
+      "window_index": 5442
+    },
+    {
+      "rae_action": 0.030985305085778236,
+      "rae_minus_vae": 0.00486781180370599,
+      "task": "place burger fries",
+      "vae_action": 0.026117493282072246,
+      "window_index": 5559
+    },
+    {
+      "rae_action": 0.0012022550690744538,
+      "rae_minus_vae": -0.00036573511533788405,
+      "task": "place burger fries",
+      "vae_action": 0.0015679901844123378,
+      "window_index": 5675
+    },
+    {
+      "rae_action": 0.013350258668651804,
+      "rae_minus_vae": 0.003766377383726649,
+      "task": "place burger fries",
+      "vae_action": 0.009583881284925155,
+      "window_index": 5791
+    },
+    {
+      "rae_action": 0.008058113435026826,
+      "rae_minus_vae": 0.000987095256732573,
+      "task": "place burger fries",
+      "vae_action": 0.007071018178294253,
+      "window_index": 5907
+    },
+    {
+      "rae_action": 0.03702985821291804,
+      "rae_minus_vae": 0.027635936727165245,
+      "task": "place burger fries",
+      "vae_action": 0.009393921485752799,
+      "window_index": 6024
+    },
+    {
+      "rae_action": 0.07724305894225836,
+      "rae_minus_vae": 0.017211625818163157,
+      "task": "place dual shoes",
+      "vae_action": 0.0600314331240952,
+      "window_index": 6025
+    },
+    {
+      "rae_action": 0.014578830014215782,
+      "rae_minus_vae": -0.022095025808084756,
+      "task": "place dual shoes",
+      "vae_action": 0.03667385582230054,
+      "window_index": 6138
+    },
+    {
+      "rae_action": 0.022314559755614027,
+      "rae_minus_vae": 0.017098995274864137,
+      "task": "place dual shoes",
+      "vae_action": 0.00521556448074989,
+      "window_index": 6252
+    },
+    {
+      "rae_action": 0.08083041082136333,
+      "rae_minus_vae": 0.029193502035923302,
+      "task": "place dual shoes",
+      "vae_action": 0.05163690878544003,
+      "window_index": 6365
+    },
+    {
+      "rae_action": 0.03287416779494379,
+      "rae_minus_vae": 0.012624269731531967,
+      "task": "place dual shoes",
+      "vae_action": 0.02024989806341182,
+      "window_index": 6479
+    },
+    {
+      "rae_action": 0.0933860600925982,
+      "rae_minus_vae": -0.029588756151497364,
+      "task": "place dual shoes",
+      "vae_action": 0.12297481624409556,
+      "window_index": 6592
+    },
+    {
+      "rae_action": 0.026542915031313896,
+      "rae_minus_vae": 0.015140892981435172,
+      "task": "place dual shoes",
+      "vae_action": 0.011402022049878724,
+      "window_index": 6706
+    },
+    {
+      "rae_action": 0.057218252681195736,
+      "rae_minus_vae": 0.023554311133921146,
+      "task": "place dual shoes",
+      "vae_action": 0.03366394154727459,
+      "window_index": 6819
+    },
+    {
+      "rae_action": 0.03134801221312955,
+      "rae_minus_vae": 0.01067280676215887,
+      "task": "place dual shoes",
+      "vae_action": 0.02067520545097068,
+      "window_index": 6933
+    },
+    {
+      "rae_action": 0.025941230938769877,
+      "rae_minus_vae": 0.013948785403044894,
+      "task": "place dual shoes",
+      "vae_action": 0.011992445535724983,
+      "window_index": 7047
+    },
+    {
+      "rae_action": 0.04259870061650872,
+      "rae_minus_vae": 0.02261914312839508,
+      "task": "shake bottle horizontally",
+      "vae_action": 0.019979557488113642,
+      "window_index": 7048
+    },
+    {
+      "rae_action": 0.010909610980888829,
+      "rae_minus_vae": 0.003527299966663122,
+      "task": "shake bottle horizontally",
+      "vae_action": 0.0073823110142257065,
+      "window_index": 7183
+    },
+    {
+      "rae_action": 0.015991203137673438,
+      "rae_minus_vae": 0.015136654779780656,
+      "task": "shake bottle horizontally",
+      "vae_action": 0.0008545483578927815,
+      "window_index": 7319
+    },
+    {
+      "rae_action": 0.03624896355904639,
+      "rae_minus_vae": 0.012435414479114115,
+      "task": "shake bottle horizontally",
+      "vae_action": 0.023813549079932272,
+      "window_index": 7454
+    },
+    {
+      "rae_action": 0.030676652415422723,
+      "rae_minus_vae": -0.011456827924121171,
+      "task": "shake bottle horizontally",
+      "vae_action": 0.042133480339543894,
+      "window_index": 7590
+    },
+    {
+      "rae_action": 0.017911196337081492,
+      "rae_minus_vae": -0.009932572487741709,
+      "task": "shake bottle horizontally",
+      "vae_action": 0.0278437688248232,
+      "window_index": 7725
+    },
+    {
+      "rae_action": 0.04364610614720732,
+      "rae_minus_vae": -0.015378026844700798,
+      "task": "shake bottle horizontally",
+      "vae_action": 0.05902413299190812,
+      "window_index": 7861
+    },
+    {
+      "rae_action": 0.01636557257734239,
+      "rae_minus_vae": 0.0034940698533318937,
+      "task": "shake bottle horizontally",
+      "vae_action": 0.012871502724010497,
+      "window_index": 7996
+    },
+    {
+      "rae_action": 0.029968676913995296,
+      "rae_minus_vae": 0.000341026927344501,
+      "task": "shake bottle horizontally",
+      "vae_action": 0.029627649986650795,
+      "window_index": 8132
+    },
+    {
+      "rae_action": 0.015379983698949218,
+      "rae_minus_vae": -0.007190980017185211,
+      "task": "shake bottle horizontally",
+      "vae_action": 0.02257096371613443,
+      "window_index": 8268
+    },
+    {
+      "rae_action": 0.054599068593233824,
+      "rae_minus_vae": 0.008411002811044455,
+      "task": "stack blocks three",
+      "vae_action": 0.04618806578218937,
+      "window_index": 8269
+    },
+    {
+      "rae_action": 0.03529192437417805,
+      "rae_minus_vae": -0.0002060749102383852,
+      "task": "stack blocks three",
+      "vae_action": 0.03549799928441644,
+      "window_index": 8512
+    },
+    {
+      "rae_action": 0.003240664751501754,
+      "rae_minus_vae": 0.0003250556328566745,
+      "task": "stack blocks three",
+      "vae_action": 0.0029156091186450794,
+      "window_index": 8755
+    },
+    {
+      "rae_action": 0.02602117697824724,
+      "rae_minus_vae": 0.011093272289144807,
+      "task": "stack blocks three",
+      "vae_action": 0.014927904689102434,
+      "window_index": 8998
+    },
+    {
+      "rae_action": 0.026776246959343553,
+      "rae_minus_vae": 0.025459070573560894,
+      "task": "stack blocks three",
+      "vae_action": 0.001317176385782659,
+      "window_index": 9241
+    },
+    {
+      "rae_action": 0.007188871328253299,
+      "rae_minus_vae": 0.0036875830846838653,
+      "task": "stack blocks three",
+      "vae_action": 0.0035012882435694337,
+      "window_index": 9484
+    },
+    {
+      "rae_action": 0.024565579369664192,
+      "rae_minus_vae": -0.0005697438609786332,
+      "task": "stack blocks three",
+      "vae_action": 0.025135323230642825,
+      "window_index": 9727
+    },
+    {
+      "rae_action": 0.012090724078007042,
+      "rae_minus_vae": 0.0015345557549153455,
+      "task": "stack blocks three",
+      "vae_action": 0.010556168323091697,
+      "window_index": 9970
+    },
+    {
+      "rae_action": 0.009683599520940334,
+      "rae_minus_vae": -0.0012002233488601632,
+      "task": "stack blocks three",
+      "vae_action": 0.010883822869800497,
+      "window_index": 10213
+    },
+    {
+      "rae_action": 0.02038167166756466,
+      "rae_minus_vae": 0.019233787192206364,
+      "task": "stack blocks three",
+      "vae_action": 0.0011478844753582962,
+      "window_index": 10457
+    },
+    {
+      "rae_action": 0.03467181930318475,
+      "rae_minus_vae": 0.011983638280071318,
+      "task": "stack bowls three",
+      "vae_action": 0.02268818102311343,
+      "window_index": 10458
+    },
+    {
+      "rae_action": 0.008427155436947942,
+      "rae_minus_vae": 0.0018898467533290386,
+      "task": "stack bowls three",
+      "vae_action": 0.006537308683618903,
+      "window_index": 10698
+    },
+    {
+      "rae_action": 0.0036455073131946847,
+      "rae_minus_vae": -0.0008044545029406436,
+      "task": "stack bowls three",
+      "vae_action": 0.004449961816135328,
+      "window_index": 10939
+    },
+    {
+      "rae_action": 0.006666485052846838,
+      "rae_minus_vae": 0.0019117591118629207,
+      "task": "stack bowls three",
+      "vae_action": 0.004754725940983917,
+      "window_index": 11180
+    },
+    {
+      "rae_action": 0.0027307917189318687,
+      "rae_minus_vae": 0.0010393365955678746,
+      "task": "stack bowls three",
+      "vae_action": 0.001691455123363994,
+      "window_index": 11420
+    },
+    {
+      "rae_action": 0.10993300750851631,
+      "rae_minus_vae": 0.014041239395737648,
+      "task": "stack bowls three",
+      "vae_action": 0.09589176811277866,
+      "window_index": 11661
+    },
+    {
+      "rae_action": 0.02033377718180418,
+      "rae_minus_vae": -0.0028905688086524606,
+      "task": "stack bowls three",
+      "vae_action": 0.02322434599045664,
+      "window_index": 11902
+    },
+    {
+      "rae_action": 0.034145557903684676,
+      "rae_minus_vae": 0.0076516554108820856,
+      "task": "stack bowls three",
+      "vae_action": 0.02649390249280259,
+      "window_index": 12142
+    },
+    {
+      "rae_action": 0.008150600275257602,
+      "rae_minus_vae": 0.00034901547769550234,
+      "task": "stack bowls three",
+      "vae_action": 0.0078015847975621,
+      "window_index": 12383
+    },
+    {
+      "rae_action": 0.015010893694125116,
+      "rae_minus_vae": 0.012948882300406694,
+      "task": "stack bowls three",
+      "vae_action": 0.0020620113937184215,
+      "window_index": 12624
+    },
+    {
+      "rae_action": 0.021773144137114286,
+      "rae_minus_vae": -0.008459792821668088,
+      "task": "stack bowls two",
+      "vae_action": 0.030232936958782375,
+      "window_index": 12625
+    },
+    {
+      "rae_action": 0.0657150442712009,
+      "rae_minus_vae": 0.004102110397070646,
+      "task": "stack bowls two",
+      "vae_action": 0.06161293387413025,
+      "window_index": 12780
+    },
+    {
+      "rae_action": 0.004642536281608045,
+      "rae_minus_vae": 3.7681893445551395e-06,
+      "task": "stack bowls two",
+      "vae_action": 0.00463876809226349,
+      "window_index": 12935
+    },
+    {
+      "rae_action": 0.0038399240729631856,
+      "rae_minus_vae": 0.0013750773723586462,
+      "task": "stack bowls two",
+      "vae_action": 0.0024648467006045394,
+      "window_index": 13090
+    },
+    {
+      "rae_action": 0.003210201764886733,
+      "rae_minus_vae": 0.00042938565820804797,
+      "task": "stack bowls two",
+      "vae_action": 0.002780816106678685,
+      "window_index": 13245
+    },
+    {
+      "rae_action": 0.014471207756287185,
+      "rae_minus_vae": 0.012692198810327682,
+      "task": "stack bowls two",
+      "vae_action": 0.0017790089459595038,
+      "window_index": 13401
+    },
+    {
+      "rae_action": 0.0064158033765124856,
+      "rae_minus_vae": 0.0018464463637428707,
+      "task": "stack bowls two",
+      "vae_action": 0.004569357012769615,
+      "window_index": 13556
+    },
+    {
+      "rae_action": 0.0022920815317775123,
+      "rae_minus_vae": 0.00041641668576630764,
+      "task": "stack bowls two",
+      "vae_action": 0.0018756648460112046,
+      "window_index": 13711
+    },
+    {
+      "rae_action": 0.006351793825160712,
+      "rae_minus_vae": 0.0029898431239416823,
+      "task": "stack bowls two",
+      "vae_action": 0.0033619507012190297,
+      "window_index": 13866
+    },
+    {
+      "rae_action": 0.021579916850896552,
+      "rae_minus_vae": 0.019646467859274708,
+      "task": "stack bowls two",
+      "vae_action": 0.0019334489916218445,
+      "window_index": 14022
+    }
+  ],
+  "per_task": {
+    "beat block hammer": {
+      "rae_action_mean": 0.023326851315505336,
+      "rae_minus_vae": 0.00847466847008036,
+      "vae_action_mean": 0.014852182845424977,
+      "windows": 10
+    },
+    "hanging mug": {
+      "rae_action_mean": 0.0202819395068218,
+      "rae_minus_vae": 0.0031494651208049617,
+      "vae_action_mean": 0.017132474386016838,
+      "windows": 10
+    },
+    "open microwave": {
+      "rae_action_mean": 0.006066146488092272,
+      "rae_minus_vae": -0.0027980630519550687,
+      "vae_action_mean": 0.008864209540047342,
+      "windows": 10
+    },
+    "place bread skillet": {
+      "rae_action_mean": 0.03384958554743207,
+      "rae_minus_vae": 0.009919022269059496,
+      "vae_action_mean": 0.023930563278372573,
+      "windows": 10
+    },
+    "place burger fries": {
+      "rae_action_mean": 0.01815440026109627,
+      "rae_minus_vae": 0.007576173337156433,
+      "vae_action_mean": 0.010578226923939837,
+      "windows": 10
+    },
+    "place dual shoes": {
+      "rae_action_mean": 0.046227749828540256,
+      "rae_minus_vae": 0.008776140718146053,
+      "vae_action_mean": 0.037451609110394204,
+      "windows": 10
+    },
+    "shake bottle horizontally": {
+      "rae_action_mean": 0.025969666638411583,
+      "rae_minus_vae": 0.0013595201860880479,
+      "vae_action_mean": 0.024610146452323532,
+      "windows": 10
+    },
+    "stack blocks three": {
+      "rae_action_mean": 0.021983952762093396,
+      "rae_minus_vae": 0.006776828521833522,
+      "vae_action_mean": 0.015207124240259873,
+      "windows": 10
+    },
+    "stack bowls three": {
+      "rae_action_mean": 0.024371559538849397,
+      "rae_minus_vae": 0.004812035001395998,
+      "vae_action_mean": 0.0195595245374534,
+      "windows": 10
+    },
+    "stack bowls two": {
+      "rae_action_mean": 0.01502916538684076,
+      "rae_minus_vae": 0.0035041921638367056,
+      "vae_action_mean": 0.011524973223004054,
+      "windows": 10
+    }
+  },
+  "rae_action_mean_across_tasks": 0.023526101727368312,
+  "rae_checkpoint_sha256": "9005b330d857ff01cb5d11712e5ba593b72afc3ce600e51f0279acc0bcf8a739",
+  "rae_minus_vae": 0.0051549982736446495,
+  "scope": "Descriptive, single-seed teacher-forced action loss; no closed-loop success or causal improvement claim",
+  "split": "test",
+  "split_manifest_sha256": "d492addcdd94f41b0c5819561e38bc0f3b0b39cfb650de15161142cd0339a1f2",
+  "vae_action_mean_across_tasks": 0.018371103453723663,
+  "vae_checkpoint_sha256": "6aca452aa6f06ed358d685fb220e1a245b00fd422e54bb80436481db6e97b531",
+  "windows": 100
+}

@@ -1,5 +1,10 @@
 # OpenWAM RAE visual representation pilot results
 
+The [2026-10-30 progress audit](PROGRESS_AUDIT_20261030.md) adds the available
+two-seed offline aggregate and compares the partial native runs on the same
+280 scenes (VAE 1/280, RAE 0/280). It lists all remaining registered work;
+neither aggregate is a completed three-seed benchmark result.
+
 **Latest native evaluation snapshot (2026-10-28):** evaluation stopped at the
 user's request. Seed-42 VAE completed 1,000 native RoboTwin episodes with
 32 successes (3.2%); RAE completed 280 accepted episodes with zero successes.

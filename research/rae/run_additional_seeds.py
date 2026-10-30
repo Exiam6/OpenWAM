@@ -138,7 +138,9 @@ def validate_existing_evaluation(path: Path, checkpoint: Path, checkpoint_hash: 
     report = json.loads(path.read_text())
     if (report.get("checkpoint_sha256") != checkpoint_hash
             or Path(report.get("checkpoint", "")).resolve() != checkpoint.resolve()
-            or report.get("split") != split or report.get("windows_per_task") != 10
+            # The original dev-only evaluator omitted this field. Its paired
+            # comparator has always interpreted an absent split as dev.
+            or report.get("split", "dev") != split or report.get("windows_per_task") != 10
             or report.get("noise_repeats") != 4 or report.get("seed") != 20261023):
         raise ValueError(f"Existing evaluation settings/checkpoint mismatch: {path}")
     rows = report.get("windows", [])

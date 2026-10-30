@@ -30,10 +30,13 @@ The controller now:
   evaluation/comparison. No optimizer-state continuation is implied; these
   pilot checkpoints still contain weights rather than full optimizer state.
 
-Six recovery tests plus ten native-runner/checkpoint-registry tests passed
+Seven recovery tests plus ten native-runner/checkpoint-registry tests passed
 on CPU. Ten existing offline dev/test reports passed the reuse validator;
 all four existing seed-42/43 paired comparisons regenerated identically.
 These tests establish controller recovery behavior, not model performance.
+The original dev-only evaluator omitted the `split` field. Its historical
+meaning is preserved as dev; such a report is explicitly rejected for test
+reuse.
 
 The original processes already loaded their old Python code. Do not simply
 send `SIGCONT` to the old queue. After resource authorization and baseline

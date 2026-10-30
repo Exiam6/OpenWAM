@@ -149,6 +149,17 @@ class AdditionalSeedResumeTests(unittest.TestCase):
                     with self.assertRaises(ValueError):
                         runner.validate_existing_evaluation(path, root / "checkpoint", "registered", "test")
 
+    def test_legacy_dev_report_without_split_is_never_reused_as_test(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            path = root / "report.json"
+            report = evaluation(root / "checkpoint", "registered", "dev")
+            del report["split"]
+            path.write_text(json.dumps(report))
+            runner.validate_existing_evaluation(path, root / "checkpoint", "registered", "dev")
+            with self.assertRaisesRegex(ValueError, "settings/checkpoint mismatch"):
+                runner.validate_existing_evaluation(path, root / "checkpoint", "registered", "test")
+
 
 if __name__ == "__main__":
     unittest.main()
